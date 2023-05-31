@@ -1,0 +1,46 @@
+body {
+	background-color: white;
+	color: white;
+	font-family: Arial;
+	padding-bottom: 1000px;
+}
+h1 {
+	background-color: #33807D;
+	padding: 10px;
+	margin: 0px 0px 10px 0px;
+	cursor: pointer;
+}
+h2 {
+	background-color: #207FA2;
+	padding: 10px;
+	margin: 0px 0px 10px 10px;
+	cursor: pointer;
+}
+h3 {
+	background-color: #E9ECEF;
+	padding: 10px;
+	color: black;
+	margin: 0px 0px 10px 20px;
+	cursor: pointer;
+}
+a {
+	text-decoration: none;
+}
+code {
+	color: black;
+	font-size: 120%;
+}
+h4 {
+	padding-left: 10px;
+	margin-left: 20px;
+	color: black;
+}
+p, img {
+	color: black;
+	padding-left: 20px;
+	margin: 0px 0px 10px 20px;
+}
+ul, ol {
+	color: black;
+	margin-left: 20px;
+}

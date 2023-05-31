@@ -1,10 +1,78 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<link rel="stylesheet" href="etusivu.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("h2, h3.avaa").next().hide();
+			$("h2, h3.avaa").click(function() {
+				$(this).next().slideToggle();
+			});
+		});
+	</script>
+</head>
 <body>
   <h1>Yleistä</h1>
-  <h1>Vuosiluokat</h1>
-  <h2>MA7</h2>
-  <h2>MA8</h2>
-  <h2>MA9</h2>
+  <div>
+	<p>Kurssi sisältää yhden opintojakson (koealue). Kurssin materiaaliin kuuluu teoriakirjan ja tehtävien lisäksi aineistoja OPS:n sisältöihin ja tavoitteisiin, aikataulurunko, keskustelualue virheiden raportointia varten sekä kertaus- ja koemateriaalia, joita on käytetty kurssin suorituksen testivaiheessa sekä mahdollisesti muita tehtäviin liittyviä lisämateriaaleja.</p>
+	<h2>Kurssin rakenne</h2>
+	<div>
+		<p>Kurssin tehtävät on jaettu etenemisjärjestyksen ja vaativuustason mukaisesti kolmeen pakettiin; Pronssipakettiin, Hopeapakettiin sekä Kultapakettiin, jotka ovat kurssilla omina lohkoinaan. Näiden lisäksi kurssilla on Yleistä-lohko, joka sisältää yleistä kurssiin liittyvää lukemistoa, sekä Opettajan tiedostoja -lohko, jossa on mahdollista lisämateriaalia kurssiin liittyen, jonka tarkoituksena on lähinnä helpottaa opettajan työtä.</p>
+	</div>
+	<h2>Tehtävätyypit</h2>
+	<div>
+		<h3 class="avaa">Tentti</h3>
+		<div>
+			<p>Tentti-tehtävätyyppi ei nimestään huolimatta ole koe, vaan tehtävätyyppi, jonka avulla voidaan luoda erilaisia automaattisesti pisteytettyjä tehtäviä. Tentin maksimipistemääräksi on asetettu 12 pistettä ja läpipääsyrajaksi 10 pistettä. Tentillä ei ole oletuksena suoritusaikaa eikä suorituskertoja rajoiteta. Edellisen suorituskerran vastaukset ovat pohjana uudelle suoritukselle. Arvosana on suorituskertojen korkein arvosana.</p>
+		</div>
+		<h3 class="avaa">Sähköinen tehtävä</h3>
+		<div>
+			<p>Sähköinen tehtävä on GeoGebralla luotu automaattisesti oppilaan syötteitä tarkistava tehtävä. Tehtävän maksimipistemäärä on 12 ja läpipääsyraja 10 pistettä. Aluksi on tehtävään liittyvä teoria esitetty esimerkein, joita oppilas voi selata haluamassaan tahdissa, ja aloittaa tehtävän kokiessaan olevansa valmis tehtävää yrittämään. Esimerkkiin ei voi myöhemmin palata ellei aloita tehtävää alusta. Tehtävän voi aloittaa alusta painamalla "Submit and finish"-painiketta tai päivittämällä sivu (jos "Save without submitting"-painiketta ei ole painettu).</p>
+			<p>Tehtävä arpoo oppilaalle tietyn määrän laskuja, joihin oppilas vastaa tehtävästä riippuen joko syöttämällä vastauksen tekstikenttään tai painamalla painiketta. Laskussa voi olla useita välivaiheita. Tehtävävä päättyy, kun kaikki laskut on laskettu. Tehtävän päättyessä oppilaalle näytetään yhteenveto tehtävästa saaduista pisteistä. Lopulliseen pistemäärään vaikuttavat oppilaan katsomien vihjeiden lukumäärä sekä tehtyjen virheiden lukumäärä. Tehtävän etenemistä voi seurata alareunassa olevan etenemispalkin avulla. Oikein lasketut laskut muuttuvat vihreiksi, vinkkiä vaatineet laskut keltaiseksi ja virheen tuottaneet laskut punaiseksi. Tehtävän päätyttyä oppilaan on pisteet tallentaakseen painettava "Submit and finish"-painiketta. Keskeneräisen tehtävän voi tallentaa "Save without submitting"-painikkeella, jolloin seuraavan kerran tehtävän avautuu keskeneräisen laskun kohdalta.</p>
+			<p>Tehtävä tarkistaa kunkin laskun ja välivaiheen vastauksen, ja antaa tarvittaessa palautteen oppilaan virheestä tehtävänsisäisenä ponnahdusikkunana. Virheilmoituksen yhteydessä tehtävässä näytetään oletuksena myös vinkki. Virheen jälkeen oppilaan on laskettava lasku tai sen välivaihe uudestaan kunnes vastaus on oikein. Virheet vähentävät tehtävän kokonaispistemäärää oletuksena 0,5 pisteellä. Yksinkertaisia laskuja sisältävässä tehtävässä oppilaalle annetaan anteeksi ensimmäinen virhe. Monivaiheisia laskuja sisältävässä tehtävässä oppilaalle annetaan anteeksi ensimmäinen virhe jokaista laskua kohti. Oppilas voi katsoa vinkkiä laskuun painamalla oikeassa yläkulmassa olevaa ?-painiketta. Vinkin katsominen vähentää tehtävän kokonaispistemäärää oletuksena 0,2 pisteellä.</p>
+		</div>
+		<h3 class="avaa">Vihkotehtävä</h3>
+		<div>
+			<p>Vihkotehtävä on toteutettu Moodlen Tehtävä-työkalun avulla, ja se antaa mahdollisuuden palauttaa tehtävä monilla eri tavoilla tekstinä, kuvina, videona, äänenä tai tiedostona. Tehtävä ei oletuksena sisällä minkäänlaista automaattista tarkistusta, mutta tehtävänantoon on usein upotettu GeoGebralla tehty tarkistusruutu, jonka avulla oppilas voi tarkistaa tehtävän. Tarkistusruudut ovat GeoGebran Materiaalit-pilvipalvelussa, joista ne on upotuskoodin avulla upotettu tehtäväsivulle.</p>
+		</div>
+		<h3 class="avaa">Ohjelmointitehtävä</h3>
+		<div>
+			<p>Tulossa...</p>
+		</div>
+		<h3 class="avaa">GeoGebra-tehtävä</h3>
+		<div>
+			<p>Tulossa...</p>
+		</div>
+	</div>
+  </div>
+  <h1>Kurssit</h1>
+  <div>
+	  <h2>7. luokka</h2>
+	  <div>
+		<a href="ma7/j1/index.html"><h3>Jakso 1: Kokonais- ja desimaaliluvut</h3></a>
+		<a href="ma7/j2/index.html"><h3>Jakso 2: Jaollisuus ja murtoluvut</h3></a>
+		<a href="ma7/j3/index.html"><h3>Jakso 3: Kirjainlaskenta</h3></a>
+		<a href="ma7/j4/index.html"><h3>Jakso 4: Geometria 1</h3></a>
+		<a href="ma7/j5/index.html"><h3>Jakso 5: Geometria 2</h3></a>
+	  </div>
+	  <h2>8. luokka</h2>
+	  <div>
+		<a href="ma8/j1/index.html"><h3>Jakso 1: Yhtälönratkaisu</h3></a>
+		<a href="ma8/j2/index.html"><h3>Jakso 2: Prosenttilaskenta</h3></a>
+		<a href="ma8/j3/index.html"><h3>Jakso 3: Verrannollisuus</h3></a>
+		<a href="ma8/j4/index.html"><h3>Jakso 4: Potenssit ja polynomit</h3></a>
+		<a href="ma8/j5/index.html"><h3>Jakso 5: Pythagoraan lause</h3></a>
+		<a href="ma8/j6/index.html"><h3>Jakso 6: Ympyrä</h3></a>
+	  </div>
+	  <h2>9. luokka</h2>
+	  <div>
+		<a href="ma9/j1/index.html"><h3>Jakso 1: Funktiot</h3></a>
+		<a href="ma9/j2/index.html"><h3>Jakso 2: Trigonometriset funktiot</h3></a>
+		<a href="ma9/j3/index.html"><h3>Jakso 3: Avaruusgeometria</h3></a>
+		<a href="ma9/j4/index.html"><h3>Jakso 4: Yhtälöparit ja epäyhtälöt</h3></a>
+		<a href="ma9/j5/index.html"><h3>Jakso 5: Todennäköisyys ja tilastot</h3></a>
+	  </div>
+  </div>
 </body>
 </html>
