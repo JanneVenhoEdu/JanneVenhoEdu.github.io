@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script>
+		window.MathJax = {
+			tex: {
+				macros: {
+					euro: "\\;\\unicode{0x20AC}"
+				}
+			}
+		};
+	</script>
+	<script>
+		$(document).ready(function() {
+			$("h2, h3").next().hide();
+			$("h2, h3").click(function() {
+				$(this).next().slideToggle();
+			});
+		});
+	</script>
+	<link rel="stylesheet" href="../../dokumentaatio.css">
+	</head>
+	<body>
+		<h1>MA8J1 / Tehtävät</h1>
+		<div>
+			<h2>1. Kertaustehtävät</h2>
+			<div>
+				<h3>Tehtävä 1.1: Termin kerroin ja muuttujaosa (Tentti)</h3>
+				<div>
+					<p>Tehtävä esiintyy alunperin jaksossa <strong>MA7J3 Kirjainlaskenta</strong></p>
+					<h4>Kysymys 1 (Vedä kohde kuvan päälle)</h4>
+					<p>Tehtävän tarkoituksena on raahata termiä vastaava kerroin ja muuttujaosa oikeaan paikkaan taulukossa. Tehtävän tavoitteena on kerrata kertoimen ja muuttujaosan käsitteet varsinkin kertoimet 1 ja -1 sekä vakiotermi.</p>
+					<h4>Kysymys 2 (Vedä kohde kuvan päälle)</h4>
+					<p>Kuten edellinen kysymys, mutta myös termi voi olla tuntematon, jolloin se tulee muodostaa annetusta kertoimesta ja muuttujaosasta.</p>
+				</div>
+
+				<h3>Tehtävä 1.2: Termin sieventäminen (Sähköinen tehtävä)</h3>
+				<div>
+					<p>Tehtävä esiintyy alunperin jaksossa <strong>MA7J3 Kirjainlaskenta</strong></p>
+					<p>Tehtävän tarkoituksena on kerrata termin muodostumista kertoimesta ja muuttujaosasta sieventämällä yksinkertaisia luvun ja muuttujan kertolaskuja (eli jättämällä pilkku, kerroin 1 ja kerroin -1 pois). Esimerkkinä kolme edellä kuvattua sievennystä. Tehtävässä on 12 laskua, joissa oppilaan pitää syöttää sievennetty termi. Vinkkinä oppilas ohjeen mitä merkinnästä on jätettävä pois. Laskuista on kolme variaatiota.</p>
+					<ul>
+					<li>Laskut 1-3 ja 6-10: Kerroin arvotaan väliltä -9...9.</li>
+					<li>Laskut 4 ja 11: Kerroin on 1.</li>
+					<li>Laskut 5 ja 12: Kerroin on -1.</li>
+					</ul>
+					<p>Tiedosto: <code>ma7j3_reppu_termin_sieventaminen.ggb</code></p>
+				</div>
+
+				<h3>Tehtävä 1.3 Samanmuotoiset termit (Tentti)</h3>
+				<div>
+					<p>Tehtävä esiintyy alunperin jaksossa <strong>MA7J3 Kirjainlaskenta</strong></p>
+					<h4>Kysymys 1 (Vedä merkki kuvan päälle)</h4>
+					<p>Tehtävän tarkoituksena on ryhmitellä samanmuotoisia termejä raahaamalla niitä omiin lokeroihinsa.</p>
+				</div>
+
+				<h3>Tehtävä 1.4: Termien yhteen- ja vähennyslasku (samanmuotoiset termit) (Sähköinen tehtävä)</h3>
+				<div>
+					<p>Tehtävä esiintyy alunperin jaksossa <strong>MA7J3 Kirjainlaskenta</strong></p>
+					<p>Tehtävän tarkoituksena on harjoitella samanmuotoisten termien sieventämistä. Esimerkkinä käydään kolme erilaista esimerkkiä, jossa huomoidaan myös kerroin -1, +1 sekä useamman termin sieventäminen. Tehtävässä on 12 laskua, joissa oppilaan pitää syöttää sievennetty termi. Vinkkinä oppilas saa termien kertoimet korostettuna punaisella värillä. Laskuista on viisi variaatiota.</p>
+					<ul>
+					<li>Laskut 1-2: Ensimmäisen termin kerroin arvotaan väliltä 2...9 ja toisen termin kerroin väliltä -9...9 siten, että vastauksen kerroin on epänegatiivinen. Muuttujaosa on x.</li>
+					<li>Laskut 3-4: Termit arvotaan siten, että jomman kumman termin kerroin on 1 tai -1. Muuttujaosa on x.</li>
+					<li>Laskut 5-6: Ensimmäisen termin kerroin arvotaan väliltä 2...9 ja toisen termin kerroin väliltä -9...9 siten, että vastauksen kerroin on epänegatiivinen. Muuttujaosa on voi olla muukin kuin x.</li>
+					<li>Laskut 7-8: Ensimmäisen termin kerroin arvotaan väliltä 2...9 ja toisen termin kerroin väliltä -9...9, mutta ei nolla. Muuttujaosa on voi olla muukin kuin x.</li>
+					<li>Laskut 9-12: Ensimmäisen termin kerroin arvotaan väliltä 1...9 ja toisen sekä kolmannen termin kertoimet väliltä -9...9, muttei 0. Muuttujaosa on voi olla muukin kuin x.</li>
+					</ul>
+					<p>Tiedosto: <code>ma7j3_reppu_termi_summaerotus.ggb</code></p>
+				</div>
+
+				<h3>Tehtävä 1.5: Erimuotoisten termien järjestys (Tentti)</h3>
+				<div>
+					<p>Tehtävä esiintyy alunperin jaksossa <strong>MA7J3 Kirjainlaskenta</strong></p>
+					<h4>Kysymys 1 (Ordering)</h4>
+					<p>Tehtävän tarkoituksena on ryhmitellä kolme erimuotoista termiä oikeaan järjestykseen.</p>
+					<h4>Kysymys 2 (Ordering)</h4>
+					<p>Tehtävän tarkoituksena on ryhmitellä kolme erimuotoista termiä oikeaan järjestykseen.</p>
+					<h4>Kysymys 3 (Ordering)</h4>
+					<p>Tehtävän tarkoituksena on ryhmitellä neljä erimuotoista termiä oikeaan järjestykseen.</p>
+					<h4>Kysymys 4 (Ordering)</h4>
+					<p>Tehtävän tarkoituksena on ryhmitellä neljä erimuotoista termiä oikeaan järjestykseen.</p>
+				</div>
+
+				<h3>Tehtävä 1.6: Termien sieventäminen (Sähköinen tehtävä)</h3>
+				<div>
+					<p>Tehtävä esiintyy alunperin jaksossa <strong>MA7J3 Kirjainlaskenta</strong></p>
+					<p>Tehtävän tarkoituksena on harjoitella termien sieventämistä, kun lausekkeessa on saman- ja erimuotoisia termejä. Esimerkkinä käydään kolme erilaista esimerkkiä, jossa muistutetaan ettei erimuotoisia termejä voi sieventää. Tehtävässä on 12 laskua, joissa oppilaan pitää syöttää sievennetty lauseke. Vinkkinä oppilas saa samanmuotoisten termien kertoimet korostettuna samalla värillä. Laskuista on kaksi variaatiota.</p>
+					<ul>
+					<li>Laskut 1-6: Ensimmäisen termin kerroin on väliltä 2...9 ja muiden väliltä -9...9. 1. ja 2. termi ovat keskenään samanmuotoisia ja 3. ja 4. termi ovat vakiotermejä.</li>
+					<li>Laskut 7-12: Ensimmäisen termin kerroin on väliltä 2...9 ja muiden väliltä -9...9. 1. ja 2. termi ovat keskenään samanmuotoisia ja 3. ja 4. termi ovat keskenään samanmuotoisia.</li>
+					</ul>
+					<p>Tiedosto: <code>ma7j3_reppu_termi_summaerotus2.ggb</code></p>
+				</div>
+
+				<h3>Tehtävä 1.7: Termien kertolasku (Sähköinen tehtävä)</h3>
+				<div>
+					<p>Tehtävä esiintyy alunperin jaksossa <strong>MA7J3 Kirjainlaskenta</strong></p>
+					<p>Tehtävän tarkoituksena on harjoitella kokonaisluvun ja termin kertolaskua. Esimerkkinä käydään kolme erilaista esimerkkiä, jossa myös merkkisäännöistä, laskujärjestyksestä sekä sulkujen käytöstä. Tehtävässä on 12 laskua, joissa oppilaan pitää syöttää sievennetty termi. Vinkkinä oppilas saa termien kertoimet korostettuna punaisella (+) tai sinisellä (-) värillä sekä sievennystaulukon. Laskuista on kaksi variaatiota.</p>
+					<ul>
+					<li>Laskut 1-4: Kokonaisluku on positiivinen ja termin kerroin on positiivinen. Luvut ovat tässä järjetyksessä.</li>
+					<li>Laskut 5-12: Kokonaisluku ja termin kerroin ovat nollasta poikkeavia lukuja väliltä -9...9. Kokonaisluvun ja termin järjestys vaihtuu satunanisesti.</li>
+					</ul>
+					<p>Tiedosto: <code>ma7j3_reppu_termi_tulo.ggb</code></p>
+				</div>
+
+				<h3>Tehtävä 1.8: Termien jakolasku (Sähköinen tehtävä)</h3>
+				<div>
+					<p>Tehtävä esiintyy alunperin jaksossa <strong>MA7J3 Kirjainlaskenta</strong></p>
+					<p>Tehtävän tarkoituksena on harjoitella termin ja kokonaisluvun jakolaskua. Esimerkkinä käydään kaksi erilaista esimerkkiä, joissa muistutetaan vielä merkkisäännöistä. Tehtävässä on 12 laskua, joissa oppilaan pitää syöttää sievennetty termi. Vinkkinä oppilas saa termien kertoimet korostettuna punaisella (+) tai sinisellä (-) värillä sekä sievennystaulukon. Laskuista on kaksi variaatiota.</p>
+					<ul>
+					<li>Laskut 1-6: Jakaja arvotaan väliltä 2...9 ja vastaus väliltä 1...9. Termin kerroin on näiden tulo. Muuttujaosa vaihtelee.</li>
+					<li>Laskut 7-12: Jakaja arvotaan väliltä -9...9 ja vastaus väliltä -9...9. Termin kerroin on näiden tulo. Muuttujaosa vaihtelee.</li>
+					</ul>
+					<p>Tiedosto: <code>ma7j3_reppu_termi_jako.ggb</code></p>
+				</div>
+
+				<h3>Tehtävä 1.9: Muuttujalausekkeen termit (Tentti)</h3>
+				<div>
+					<p>Tehtävä esiintyy alunperin jaksossa <strong>MA7J3 Kirjainlaskenta</strong></p>
+					<h4>Kysymys 1 (Aukkotehtävä)</h4>
+					<p>Tehtävän tarkoituksena on tunnistaa muuttujalausekkeesta termit, termin osat sekä vakiotermi.</p>
+					<h4>Kysymys 2 (Aukkotehtävä)</h4>
+					<p>Tehtävän tarkoituksena on tunnistaa muuttujalausekkeesta termit..</p>
+					<h4>Kysymys 3 (Aukkotehtävä)</h4>
+					<p>Tehtävän tarkoituksena on tunnistaa muuttujalausekkeesta termit, termin osat sekä laskea lausekkeen arvo.</p>
+				</div>
+
+				<h3>Tehtävä 1.10: Muuttujalausekkeen sieventäminen (Sähköinen tehtävä)</h3>
+				<div>
+					<p>Tehtävä esiintyy alunperin jaksossa <strong>MA7J3 Kirjainlaskenta</strong></p>
+					<p>Tehtävän tarkoituksena on harjoitella muuttujalausekkeen sieventämistä, jossa esiintyy sekaisin erilaisia termien välisiä peruslaskutoimituksia. Esimerkkinä käydään kaksi erilaista esimerkkiä, jossa kerrataan laskujärjetystä ja kiinnitetään huomiota etumerkkien vaikutukseen tuloa sievennettäessä. Tehtävässä on 6 laskua, joissa oppilaan pitää syöttää ensin välivaihe ja sitten lopullinen sievennetty termi. Vinkkinä oppilas saa termien kertoimet korostettuna eri väreillä riippuen laskujärjestyksen vaiheesta. Laskuista on kuusi variaatiota.</p>
+					<ul>
+					<li>Lasku 1: Termi (kerroin 1...9) + luku (2...9) * termi (1...9). </li>
+					<li>Lasku 2: Termi (kerroin 1...9) - luku (2...9) * termi (1...9). </li>
+					<li>Lasku 3: Luku (2...9) * termi (1...9) + termi (1...9). </li>
+					<li>Lasku 4: Luku (2...9) * termi (1...9) - termi (1...9). </li>
+					<li>Lasku 5: Termi (2...9) * luku (2...9) + Termi (2...9) * luku (2...9). </li>
+					<li>Lasku 6: Termi (2...9) * luku (2...9) - Termi (1...9) * luku (2...9). </li>
+					</ul>
+					<p>Tiedosto: <code>ma7j3_reppu_laskujarjestys.ggb</code></p>
+				</div>
+
+				<h3>Tehtävä 1.11: Lausekkeen arvon laskeminen (Sähköinen tehtävä)</h3>
+				<div>
+					<p>Tehtävän tarkoituksena on harjoitella muuttujalausekkeen arvon laskemista annetulla muuttujan arvolla. Esimerkkinä käydään kaksi erilaista esimerkkiä, jossa näytetään sekä positiivisen että negatiivisen muuttujan arvon sijoittaminen lausekkeeseen. Tehtävässä on 12 laskua, joissa oppilaan pitää syöttää sijoitus sekä vastaus. Välivaiheita voi laskuvaiheessa syöttää tarvitsemansa määrän. Vinkkinä oppilas saa ensimmäisessä vaiheessa korostuksen muuttujasta sekä sen arvosta ja toisessa vaiheessa muistutuksen laskujärjestyksestä. Laskuista on kuusi variaatiota.</p>
+					<ul>
+					<li>Laskut 1-2: 1. asteen termin kerroin arvotaan väliltä 2...9 ja x väliltä 0...9. Ei vakiotermiä.</li>
+					<li>Laskut 3-4: 1. asteen termin kerroin arvotaan väliltä 2...9 ja x väliltä -9...-1. Ei vakiotermiä.</li>
+					<li>Laskut 5-6: 1. asteen termin kerroin arvotaan väliltä 2...9, vakiotermi väliltä -9...9 ja x väliltä 0...9.</li>
+					<li>Laskut 7-8: 1. asteen termin kerroin arvotaan väliltä -9...9, vakiotermi väliltä -9...9 ja x väliltä -9...9.</li>
+					<li>Laskut 9-10: 1. asteen termin kerroin arvotaan väliltä -9...9, vakiotermi väliltä -20...20 ja x väliltä 0...9.</li>
+					<li>Laskut 11-12: 1. asteen termin kerroin arvotaan väliltä -9...9, vakiotermi väliltä -9...9 ja x väliltä -9...9.</li>
+					</ul>
+					<p>Tiedosto: <code>ma8j1_reppu_lausekkeen_arvo_kokoelma.ggb</code></p>
+				</div>
+
+				<h3>Tehtävä 1.12: Mikä luku sopii x:n paikalle? (Sähköinen tehtävä)</h3>
+				<div>
+					<p>Tehtävä esiintyy alunperin jaksossa <strong>MA7J3 Kirjainlaskenta</strong></p>
+					<p>Tehtävän tarkoituksena on harjoitella yhtälönratkaisua yksinkertaisilla ensimmäisen asteen yhtälöillä päässälaskuna. Esimerkkinä käydään kolme erilaista esimerkkiä, joissa opetetaan erilaisia käänteisiin laskutoimituksiin perustuvia päättelytaitoja. Tehtävässä on 12 laskua, joissa oppilaan pitää syöttää muuttujan x arvo, joka toteuttaa yhtälön. Vinkkinä oppilas saa käänteisen laskutoimituksen, jolla tehtävän voi ratkaista. Laskuista on kolme variaatiota.</p>
+					<ul>
+					<li>Laskut 1-4: Termi = vakio, missä termin kerroin arvotaan väliltä 2...9 ja x arvotaan väliltä -9...9 (ei nolla).</li>
+					<li>Laskut 5-8: Termi + vakio = vakio, missä termin kerroin on 1, ensimmäinen vakio arvotaan väliltä -9...9 (ei nolla) ja x arvotaan väliltä -9...9 (ei nolla).</li>
+					<li>Laskut 9-12: Termi + vakio = vakio, missä kaikki kertoimet ja vakiot arvotaan väliltä -9...9 (ei nolla).</li>
+					</ul>
+					<p>Tiedosto: <code>ma7j3_reppu_yhtalo_paattely.ggb</code></p>
+				</div>
+
+				<h3>Tehtävä 1.13: Luvun ja muuttujalausekkeen tulo (Sähköinen tehtävä)</h3>
+				<div>
+					<p>Tehtävän tarkoituksena on harjoitella muuttujalausekkeen kertomista kokonaisluvulla. Esimerkkinä käydään kolme erilaista esimerkkiä, jossa keskitytään peruidean lisäksi etumerkkien sieventämiseen. Tehtävässä on 6 laskua, joissa oppilaan pitää syöttää kertolaskun tulos tai välivaihe, jossa kertolaskut jäävät vielä näkyviin, kunnes toisessa vaiheessa ne lasketaan ja saadaan sievennetty lauseke vastaukseksi. Tehtävä hyväksyy tietyissä tilanteissa myös ylimääräisen välivaiheen, missä jälkimmäisen kertolaskun ensimmäisen tekijän etumerkkiä ei oteta mukaan tuloon, vaan se sievennetään myöhemmin. Vinkkinä oppilas saa ensimmäisessä vaiheessa kirjaimin esitettynä laskusäännön perusidean ja myöhemmissä vaiheissa kehotuksen laskea kertolaskut. Laskuista on kolme variaatiota.</p>
+					<ul>
+					<li>Laskut 1-2: Lausekkeen a(bx+c) kertoimet ovat positiivisia väliltä 1...10.</li>
+					<li>Laskut 3-4: Lausekkeen a(bx+c) kertoimet a ja b ovat positiivisia väliltä 1...10, mutta vakiotermi c on väliltä -10...10.</li>
+					<li>Laskut 5-6: Lausekkeen a(bx+c) kertoimet a ja c ovat väliltä -10...10, mutta kerroin b on väliltä 1...10. </li>
+					</ul>
+					<p>Tiedosto: <code>ma7j1_reppu_vakio_polynomi_tulo.ggb</code></p>
+				</div>
+
+				<h3>Tehtävä 1.14: Lukusuoran piirtäminen (Vihkotehtävä)</h3>
+				<div>
+					<p>Tehtävän tarkoituksena on harjoitella luvun ja muuttujalausekkeen tulon sieventämistä.</p>
+					<h4>Malliratkaisu:</h4>
+					<p>a) \(\mathsf{2 \cdot (x + 1) = 2x + 2}\)</p>
+					<p>b) \(\mathsf{-1 \cdot (2x + 3) = -2x - 3}\)</p>
+					<p>c) \(\mathsf{(3x - 8) \cdot 4 = 12x - 32}\)</p>
+					<p>d) \(\mathsf{(7x - 2) \cdot (-3) = -21x + 6}\)</p>
+					<p>e) \(\mathsf{5 \cdot (-x + 3) = -5x + 15}\)</p>
+					<p>f) \(\mathsf{-10 \cdot (-6x - 9) = 60x + 90}\)</p>
+				</div>
+
+				<h3>Tehtävä 1.15: Luvun ja muuttujalausekkeen tulo (Sähköinen tehtävä)</h3>
+				<div>
+					<p>Tehtävä esiintyy alunperin jaksossa <strong>MA7J3 Kirjainlaskenta</strong></p>
+					<p>Tehtävän tarkoituksena on harjoitella termien sieventämistä erilaisen tehtävän avulla. Esimerkissä käydään läpi pyramidin toimintaperiaate. Tehtävässä on kaksi pyramidia. Ensimmäisessä pyramidissa koko alarivi on tunnettu. Toisessa pyramidissa on osia kahdesta alimmasta rivistä tunnettu, jolloin oppilas joutuu laskemaan osan ruuduista käänteisesti. Vinkkinä oppilas saa ohjeen pyramidin toimintaperiaatteesta sekä vasemman alanurkan ratkaisun.</p>
+					<p>Tiedosto: <code>ma7j3_reppu_termi_pyramidi.ggb</code></p>
+				</div>
+
+				<h3>Tehtävä 1.16: Termien kertolasku (Sähköinen tehtävä)</h3>
+				<div>
+					<p>Tehtävä esiintyy alunperin jaksossa <strong>MA7J3 Kirjainlaskenta</strong></p>
+					<p>Tehtävän tarkoituksena on harjoitella kokonaisluvun ja termin kertolaskua. Esimerkkinä käydään kolme erilaista esimerkkiä, jossa myös merkkisäännöistä, laskujärjestyksestä sekä sulkujen käytöstä. Tehtävässä on 12 laskua, joissa oppilaan pitää syöttää sievennetty termi. Vinkkinä oppilas saa termien kertoimet korostettuna punaisella (+) tai sinisellä (-) värillä sekä sievennystaulukon. Laskujen kertoimet arvotaan väliltä -9...9 (ei nolla).</p>
+					<p>Tiedosto: <code>ma7j3_reppu_termi_tulo2.ggb</code></p>
+				</div>
+
+				<h3>Tehtävä 1.17: Termien jakolasku (Sähköinen tehtävä)</h3>
+				<div>
+					<p>Tehtävä esiintyy alunperin jaksossa <strong>MA7J3 Kirjainlaskenta</strong></p>
+					<p>Tehtävän tarkoituksena on harjoitella termin ja kokonaisluvun jakolaskua. Esimerkkinä käydään kaksi erilaista esimerkkiä, joissa muistutetaan vielä merkkisäännöistä. Tehtävässä on 12 laskua, joissa oppilaan pitää syöttää sievennetty termi. Vinkkinä oppilas saa termien kertoimet korostettuna punaisella (+) tai sinisellä (-) värillä sekä sievennystaulukon. Laskuista on kaksi variaatiota.</p>
+					<ul>
+					<li>Laskut 1-6: Jakaja arvotaan väliltä -9...9 ja vastaus väliltä -9...9. Termin kerroin on näiden tulo. Jakaja on vakiotermi.</li>
+					<li>Laskut 7-12: Jakaja arvotaan väliltä -9...9 ja vastaus väliltä -9...9. Termin kerroin on näiden tulo. Jakaja on 1. asteen termi.</li>
+					</ul>
+					<p>Tiedosto: <code>ma7j3_reppu_termi_jako2.ggb</code></p>
+				</div>
+
+				<h3>Tehtävä 1.18: Termien sieventäminen (Sähköinen tehtävä)</h3>
+				<div>
+					<p>Tehtävä esiintyy alunperin jaksossa <strong>MA7J3 Kirjainlaskenta</strong></p>
+					<p>Tehtävän tarkoituksena on harjoitella termien sieventämistä, kun lausekkeessa on saman- ja erimuotoisia termejä. Esimerkkinä käydään kolme erilaista esimerkkiä, jossa muistutetaan ettei erimuotoisia termejä voi sieventää, nollaa ei merkitä ja termit on laitettava oikeaan järjestykseen. Tehtävässä on 6 laskua, joissa oppilaan pitää syöttää sievennetty lauseke. Vinkkinä oppilas saa samanmuotoisten termien kertoimet korostettuna samalla värillä. Laskuista on neljä variaatiota.</p>
+					<ul>
+					<li>Laskut 1-3: Ensimmäisen termin kerroin on väliltä 2...9 ja muiden väliltä -9...9. 1. ja 2. termi ovat keskenään samanmuotoisia ja 3. ja 4. termi ovat vakiotermejä.</li>
+					<li>Laskut 4-6: Ensimmäisen termin kerroin on väliltä 2...9 ja muiden väliltä -9...9. 1. ja 2. termi ovat keskenään samanmuotoisia ja 3. ja 4. termi ovat keskenään samanmuotoisia.</li>
+					<li>Laskut 7-9: Ensimmäisen termin kerroin on väliltä 2...9 ja muiden väliltä -9...9. 1. ja 3. termi ovat keskenään samanmuotoisia ja 2. ja 4. termi ovat keskenään samanmuotoisia.</li>
+					<li>Laskut 10-12: Ensimmäisen termin kerroin on väliltä -9...9 ja muiden väliltä -9...9. 1. ja 2. termi ovat keskenään erimuotoisia ja 3. ja 4. termi ovat samanmuotoisia joko 1. tai 2. termin kanssa.</li>
+					</ul>
+					<p>Tiedosto: <code>ma7j3_reppu_termi_summaerotus3.ggb</code></p>
+				</div>
+
+				<h3>Tehtävä 1.19: Luvun ja muuttujalausekkeen tulo (Sähköinen tehtävä)</h3>
+				<div>
+					<p>Sama tehtävä kuin Tehtävä 1.13: Luvun ja muuttujalausekkeen tulo.</p>
+				</div>
+
+				<h3>Tehtävä 1.20: Murtolausekkeen arvon laskeminen (Vihkotehtävä)</h3>
+				<div>
+				<p>Tehtävän tarkoituksena on harjoitella murtolausekkeen arvon laskemista sekä muuttujan arvon sijoittamista murtolausekkeeseen.</p>
+				<h4>Malliratkaisu:</h4>
+				<p>a) \(\mathsf{\dfrac{2x}{3} = \dfrac{2 \cdot 6}{3} = \dfrac{12}{3} = 4}\)</p>
+				<p>b) \(\mathsf{\dfrac{x-8}{2} = \dfrac{6-8}{2} = \dfrac{-2}{2} = -1}\)</p>
+				<p>c) \(\mathsf{\dfrac{-4x-1}{-5} = \dfrac{-4 \cdot 6 - 1}{-5} = \dfrac{-25}{-5} = 5}\)</p>
+				<p>d) \(\mathsf{\dfrac{3x}{-2} = \dfrac{3 \cdot (-8)}{-2} = \dfrac{-24}{-2} = 12}\)</p>
+				<p>e) \(\mathsf{\dfrac{-x + 40}{-6} = \dfrac{-(-8)+40}{-6} = \dfrac{8+40}{-6} = \dfrac{48}{-6} = -8}\)</p>
+				<p>f) \(\mathsf{\dfrac{-4 \cdot (-8) - 2}{5} = \dfrac{32-2}{5} = \dfrac{30}{5} = 6}\)</p>
+				</div>
+
+				<h3>Tehtävä 1.21: Murtoluvun supistaminen yksinkertaisimpaan muotoon (Sähköinen tehtävä)</h3>
+				<div>
+					<p>Tehtävä esiintyy alunperin jaksossa <strong>MA7J2 Jaollisuus ja murtoluvut</strong></p>
+					<p>Tehtävän tarkoituksena on harjoitella murtoluvun supistamista loppuun asti eli yksinkertaisimpaan muotoon joko osissa tai yhdellä supistajalla. Esimerkkinä käydään murtoluvun supistaminen sekä osissa että yhdellä supistajalla. Tehtävässä on 12 laskua, joissa oppilaan pitää syöttää ensin supistaja ja sitten supistettu murtoluku. Tätä jatketaan kunnes murtoluku on supistettu yksinkertaisimpaan muotoon. Vinkkinä oppilas saa murtoluvun osoittajan ja nimittäjän jaettuna tulon tekijöihin. Laskuista on kolme variaatiota.</p>
+					<ul>
+					<li>Laskut 1-4: Supistaja on väliltä 2...5, vastauksen nimittäjä on väliltä 2...4 ja osoittaja on nimittäjää pienempi.</li>
+					<li>Laskut 5-8: Supistaja on väliltä 4...6, vastauksen nimittäjä on väliltä 5...7 ja osoittaja on nimittäjää pienempi.</li>
+					<li>Laskut 9-12: Supistaja on väliltä 5...9, vastauksen nimittäjä on väliltä 2...9 ja osoittaja on nimittäjää pienempi.</li>
+					</ul>
+					<p>Tiedosto: <code>ma7j2_reppu_supistus_yksinkertaisimpaan.ggb</code></p>
+				</div>
+
+				<h3>Tehtävä 1.22: Murtoluvun kertominen kokonaisluvulla (Sähköinen tehtävä)</h3>
+				<div>
+					<p>Tehtävä esiintyy alunperin jaksossa <strong>MA7J2 Jaollisuus ja murtoluvut</strong></p>
+					<p>Tehtävän tarkoituksena on harjoitella luvun ja murtoluvun kertolaskun laskemista sekä vastauksen sieventämistä supistettuun murtolukuun tai sekaluvuksi. Esimerkkinä käydään kaksi erilaista esimerkkiä, joissa toisessa vastaus muutetaan sekaluvuksi, ja toisessa supistetaan. Tehtävässä on 12 laskua, joissa oppilaan pitää syöttää ensin kertolaskun vastauksena saatava murtoluku /-merkkiä käyttäen ja sitten tilanteesta riippuen supistaja ja supistettu murtoluku tai sekaluku. Vinkkinä oppilas saa ensimmäisessä vaiheessa vihjeen luvun kertomisesta osoittajan kanssa. Toisessa vaiheessa oppilas saa osoittajan jaettuna jaolliseen osaan ja jakojäännökseen (sekaluvuksi muuttaminen) tai osoittajan ja nimittäjän jaettuna tulon tekijöihin (supistaminen). Laskuista on kaksi variaatiota.</p>
+					<ul>
+					<li>Laskut 1-6: Kerroin on väliltä 2...5, nimittäjä väliltä 3...10 ja osoittaja arvotaan siten, että vastausta ei jouduta sekä supistamaan että muuttamaan sekaluvuksi.</li>
+					<li>Laskut 7-12: Kerroin on väliltä 4...9, nimittäjä väliltä 5...12 ja osoittaja arvotaan siten, että vastausta ei jouduta sekä supistamaan että muuttamaan sekaluvuksi.</li>
+					</ul>
+					<p>Tiedosto: <code>ma7j2_reppu_murto_kertoZ.ggb</code></p>
+				</div>
+			</div>
+
+			<h2>2. Yhtälö</h2>
+			<div>
+				<h3>Tehtävä 2.1 Johdatus yhtälöihin (Tentti)</h3>
+				<div>
+					<h4>Kysymys 1 (Vedä merkki kuvan päälle)</h4>
+					<p>Tehtävän tarkoituksena on oppia tunnistamaan yhtälöt muuttujalausekkeista.</p>
+					<h4>Kysymys 2 (Aukkotehtävä)</h4>
+					<p>Tehtävän tarkoituksena on vahvistaa ymmärrystä yhtälöstä ja sen ratkaisusta sekä kehittää oppilaan päässälasku- ja ongelmanratkaisutaitoja.</p>
+					<h4>Kysymys 3 (Aukkotehtävä)</h4>
+					<p>Tehtävän tarkoituksena on vahvistaa edellisen tehtävän tapaan yhtälön ratkaisun tutkimista, kun ehdotus ratkaisusta on annettu.</p>
+				</div>
+
+				<h3>Tehtävä 2.2: Yhtälön ratkaisun tutkiminen (Sähköinen tehtävä)</h3>
+				<div>
+					<p>Tehtävän tarkoituksena on harjoitella yhtälön ratkaisun tutkimista annetulla muuttujan arvolla. Tutkimus totuttaa oppilasta yhtälönratkaisumaiseen merkintätapaan ja korostaa yhtäsuuruusmerkin merkitystä. Esimerkissä käydään läpi kaksi erilaista laskua, joissa korostuu ratkaisumenetelmän periaate sijoituksineen ja päätelyineen sekä positiivisella että negatiivisella muuttujan arvolla. Tehtävässä on 6 laskua, joissa oppilas syöttää sijoituksen, ja laskee vasemman ja oikean puolen arvot, kunnes lopuksi tekee johtopäätöksen muuttujan arvon soveltuvuudesta yhtälön ratkaisuksi. Vinkkinä oppilas saa neuvoja sijoitukseen, lausekkeen sieventämiseen sekä loppupäättelyyn. Laskuista on kolme variaatiota.</p>
+					<ul>
+					<li>Laskut 1-2: Yhtälö on muotoa ax = b.</li>
+					<li>Laskut 3-4: Yhtälö on muotoa ax+b = c.</li>
+					<li>Laskut 5-6: Yhtälö on muotoa ax+b = cx+d.</li>
+					</ul>
+					<p>Tiedosto: <code>ma8j1_reppu_onko_yhtalon_ratkaisu.ggb</code></p>
+				</div>
+
+				<h3>Tehtävä 2.3: Yhtälön ratkaisun tutkiminen (Vihkotehtävä)</h3>
+				<div>
+					<p>Tehtävän tarkoituksena on harjoitella yhtälön ratkaisun tutkimista vihkoon, jolloin oppilas joutuu itse kirjoittamaan oikeaoppisesti ratkaisun vaiheittain allekkain ja tekemään loppupäättelyn.</p>
+					<h4>Malliratkaisu:</h4>
+					<p>a) <span style="vertical-align: text-top;">\(\begin{align}\mathsf{2x+4} &= \mathsf{10}\\ \mathsf{2 \cdot 3 + 4} &= \mathsf{10}\\ \mathsf{10} &= \mathsf{10}\end{align}\)</span></p>
+					<p><strong>Vastaus:</strong> x = 3 on yhtälön ratkaisu.</p>
+					<p>b) <span style="vertical-align: text-top;">\(\begin{align}\mathsf{4x-7} &= \mathsf{x+2}\\ \mathsf{4 \cdot 3 - 7} &= \mathsf{3+2}\\ \mathsf{5} &= \mathsf{5}\end{align}\)</span></p>
+					<p><strong>Vastaus:</strong> x = 3 on yhtälön ratkaisu.</p>
+					<p>c) <span style="vertical-align: text-top;">\(\begin{align}\mathsf{-x-1} &= \mathsf{x+1}\\ \mathsf{-(-3)-1} &= \mathsf{-3+1}\\ \mathsf{3-1} &= \mathsf{-2}\\ \mathsf{2} &= \mathsf{-2}\end{align}\)</span></p>
+					<p><strong>Vastaus:</strong> x = -3 ei ole yhtälön ratkaisu.</p>
+					<p>d) <span style="vertical-align: text-top;">\(\begin{align}\mathsf{3x+10} &= \mathsf{-2x-5}\\ \mathsf{3 \cdot (-3) + 10} &= \mathsf{-2 \cdot (-3) - 5}\\ \mathsf{-9 + 10} &= \mathsf{6-5}\\ \mathsf{1} &= \mathsf{1}\end{align}\)</span></p>
+					<p><strong>Vastaus:</strong> x = -3 on yhtälön ratkaisu.</p>
+				</div>
+
+				<h3>Tehtävä 2.4: Yhtälön ratkaisun tutkiminen (Vihkotehtävä)</h3>
+				<div>
+					<p>Tehtävän tarkoituksena on harjoitella yhtälön ratkaisun tutkimista vihkoon haastavammilla yhtälöillä.</p>
+					<h4>Malliratkaisu:</h4>
+					<p>a) <span style="vertical-align: text-top;">\(\begin{align}\mathsf{4x+4} &= \mathsf{x-2}\\ \mathsf{4 \cdot (-2) + 4} &= \mathsf{-2-2}\\ \mathsf{-8 + 4} &= \mathsf{-4}\\ \mathsf{-4} &= \mathsf{-4}\end{align}\)</span></p>
+					<p><strong>Vastaus:</strong> x = -2 on yhtälön ratkaisu.</p>
+					<p>b) <span style="vertical-align: text-top;">\(\begin{align}\mathsf{7x+6} &= \mathsf{5\cdot(x+1)}\\ \mathsf{7 \cdot (-2) + 6} &= \mathsf{5 \cdot (-2+1)}\\ \mathsf{-14+6} &= \mathsf{5 \cdot (-1)}\\ \mathsf{-8} &= \mathsf{-5}\end{align}\)</span></p>
+					<p><strong>Vastaus:</strong> x = -2 ei ole yhtälön ratkaisu.</p>
+					<p>c) <span style="vertical-align: text-top;">\(\begin{align}\mathsf{\dfrac{-x+8}{5}} &= \mathsf{2}\\ \mathsf{\dfrac{-(-2)+8}{5}} &= \mathsf{2}\\ \mathsf{\dfrac{2+8}{5}} &= \mathsf{2}\\ \mathsf{2} &= \mathsf{2}\end{align}\)</span></p>
+					<p><strong>Vastaus:</strong> x = -2 on yhtälön ratkaisu.</p>
+					<p>d) <span style="vertical-align: text-top;">\(\begin{align}\mathsf{\dfrac{x+1}{2}} &= \mathsf{\dfrac{x-1}{6}}\\ \mathsf{\dfrac{-2+1}{2}} &= \mathsf{\dfrac{-2-1}{6}}\\ \mathsf{\dfrac{-1}{2}} &= \mathsf{\dfrac{-3}{6}}\\ \mathsf{-\dfrac{1}{2}} &= \mathsf{-\dfrac{1}{2}}\end{align}\)</span></p>
+					<p><strong>Vastaus:</strong> x = -2 on yhtälön ratkaisu.</p>
+				</div>
+			</div>
+
+			<h2>3. Yhtälönratkaisu</h2>
+			<div>
+				<p>Yhtälönratkaisun harjoittelu on suunniteltu siten, että harjoitellaan tavanomaisen 1. asteen yhtälön ratkaisun vaiheet käänteisessä järjestyksessä.</p>
+				<table>
+				<tr>
+				<td style="text-align:right">\(\mathsf{4x+2}\)</td>
+				<td style="padding: 6px;">\(=\)</td>
+				<td>\(\mathsf{x-1}\)</td>
+				<td style="padding-left: 20px;">\(\mathsf{\| -x}\)</td>
+				<td style="padding-left: 40px;">(1. asteen termin lisääminen / vähentäminen harjoitellaan kolmantena.)</td>
+				</tr>
+				<tr>
+				<td style="text-align:right">\(\mathsf{3x+2}\)</td>
+				<td style="padding: 6px;">\(=\)</td>
+				<td>\(\mathsf{-1}\)</td>
+				<td style="padding-left: 20px;">\(\mathsf{\| -2}\)</td>
+				<td style="padding-left: 40px;">(Vakion lisääminen / vähentäminen harjoitellaan toisena.)</td>
+				</tr>
+				<tr>
+				<td style="text-align:right">\(\mathsf{3x}\)</td>
+				<td style="padding: 6px;">\(=\)</td>
+				<td>\(\mathsf{-3}\)</td>
+				<td style="padding-left: 20px;">\(\mathsf{\| :3}\)</td>
+				<td style="padding-left: 40px;">(Jakaminen x:n kertoimella harjoitellaan ensimmäisenä.)</td>
+				</tr>
+				<tr>
+				<td style="text-align:right">\(\mathsf{x}\)</td>
+				<td style="padding: 6px;">\(=\)</td>
+				<td>\(\mathsf{-1}\)</td>
+				</tr>
+				</table>
+
+				<p>Ensin yhtälönratkaisua harjoitellaan siten, että oppilaan pitää keksiä millaisella puolittaisella operaatiolla yhtälönratkaisu etenee kohti ratkaisua. Myöhemmin oppilas joutuu itse sieventämään yhtälön vasemman ja oikean puolen lausekkeet.</p>
+
+				<h3>Tehtävä 3.1 Käänteiset laskutoimitusket (Tentti)</h3>
+				<div>
+					<h4>Kysymykset 1 - 4 (Aukkotehtävä)</h4>
+					<p>Tehtävien tarkoituksena on tutkia erilaisia peruslaskutoimituksia ja todeta niiden käänteiset laskutoimitukset, jotta päästään askel lähemmäs yhtälönratkaisun perusideaa käänteisenä ongelmana ja ratkaisumenetelmänä.</p>
+				</div>
+
+				<h3>Tehtävä 3.2: Yhtälönratkaisu (jakaminen puolittain) (Sähköinen tehtävä)</h3>
+				<div>
+					<p>Tehtävän tarkoituksena on harjoitella yhtälönratkaisun merkintätapoja sekä yhtälön jakamista puolittain. Esimerkissä käydään läpi yhtälönratkaisun merkintää sekä muuttujan kertoimen poistaminen puolittain jakamalla. Tehtävässä on 12 laskua, joissa oppilas syöttää puolittaisen laskutoimituksen. Vinkkinä oppilas saa sanallisen ohjeen "Jaa x:n kertoimella.". Tehtävästä ei saa virhepisteitä, vaan yhtälöt on ratkaistava päästäkseen eteenpäin. Oppilas voi aloittaa yksittäisen yhtälön ratkaisun alusta painamalla päivityspainiketta. Laskuista on kolme variaatiota.</p>
+					<ul>
+					<li>Laskut 1-4: Kerroin arvotaan väliltä 2...9 ja x väliltä -9...9.</li>
+					<li>Laskut 5-8: Kerroin arvotaan väliltä -9...-1 ja x väliltä -9...9.</li>
+					<li>Laskut 9-12: Kerroin ja x arvotaan väliltä -9...9.</li>
+					</ul>
+					<p>Tiedosto: <code>ma8j1_reppu_yhtalo_jakaminen.ggb</code></p>
+				</div>
+
+				<h3>Tehtävä 3.3: Käänteiset laskutoimitukset (Sähköinen tehtävä)</h3>
+				<div>
+					<p>Tehtävän tarkoituksena on vahvistaa vielä yhteen- ja vähennyslaskun yhteyttä käänteisinä laskutoimituksina. Esimerkissä käydään läpi neljä erilaista esimerkkiä niin vakiotermin kuin 1. asteen termin osalta. Tehtävässä on 12 laskua, joissa oppilas syöttää laskutoimituksen, jolla saadaan annettu vastaus. Vinkkinä oppilas saa laskutoimituksen (+ / -) jolla lasku ratkeaa. Laskuista on kolme variaatiota.</p>
+					<ul>
+					<li>Laskut 1-4: Lasku on muotoa a-a=0. Luku a arvotaan väliltä -9...9</li>
+					<li>Laskut 5-8: Lasku on muotoa ax-ax=0. Termin kerroin a arvotaan väliltä -9...9.</li>
+					<li>Laskut 9-12: Edellisiä variaatioita satunnaisesti.</li>
+					</ul>
+					<p>Tiedosto: <code>ma8j1_reppu_yhtalo_lammittely2.ggb</code></p>
+				</div>
+
+				<h3>Tehtävä 3.4: Yhtälönratkaisu (vakion lisääminen/vähentäminen) (Sähköinen tehtävä)</h3>
+				<div>
+					<p>Tehtävän tarkoituksena on harjoitella yhtälön ratkaisua lisäämällä tai vähentämällä vakioita puolittain. Esimerkissä käydään läpi kaksi esimerkkiä, joista ensimmäisessä yhtälö ratkeaa yhdellä puolittaisella laskuoperaatiolla ja toisessa pitää vielä lopuksi jakaa puolittain. Tehtävässä on 12 laskua, joissa oppilas syöttää puolittaisen laskutoimituksen. Vinkkinä oppilas saa sanallisen ohjeen "Lisää/vähennä vakio x-termin puolelta.". Tehtävästä ei saa virhepisteitä, vaan yhtälöt on ratkaistava päästäkseen eteenpäin. Oppilas voi aloittaa yksittäisen yhtälön ratkaisun alusta painamalla päivityspainiketta. Laskuista on kaksi variaatiota.</p>
+					<ul>
+					<li>Laskut 1-6: Yhtälö on muotoa x + a = b.</li>
+					<li>Laskut 7-12: Yhtälö on muotoa ax + b = c.</li>
+					</ul>
+					<p>Tiedosto: <code>ma8j1_reppu_yhtalo_vakion_lisaaminen.ggb</code></p>
+				</div>
+
+				<h3>Tehtävä 3.5: Yhtälönratkaisu (x-termin lisääminen/vähentäminen) (Sähköinen tehtävä)</h3>
+				<div>
+					<p>Tehtävän tarkoituksena on harjoitella yhtälön ratkaisua lisäämällä tai vähentämällä 1. asteen termi puolittain. Esimerkissä käydään läpi kaksi esimerkkiä, joista ensimmäisessä yhtälö ratkeaa yhdellä puolittaisella laskuoperaatiolla ja toisessa pitää vielä lopuksi jakaa puolittain. Tehtävässä on 12 laskua, joissa oppilas syöttää puolittaisen laskutoimituksen. Vinkkinä oppilas saa sanallisen ohjeen "Lisää/vähennä x-termi toiselta puolelta yhtälöä.". Tehtävästä ei saa virhepisteitä, vaan yhtälöt on ratkaistava päästäkseen eteenpäin. Oppilas voi aloittaa yksittäisen yhtälön ratkaisun alusta painamalla päivityspainiketta. Laskuista on kolme variaatiota.</p>
+					<ul>
+					<li>Laskut 1-3: Yhtälö on muotoa ax = bx + c, missä a - b = 1.</li>
+					<li>Laskut 4-6: Yhtälö on muotoa ax = bx + c, missä 4 &leq; a &leq; 14 ja 2 &leq; b &leq; 9.</li>
+					<li>Laskut 7-12: Yhtälö on muotoa ax = bx + c, missä -18 &leq; a &leq; 18 ja -9 &leq; b &leq; 9.</li>
+					</ul>
+					<p>Tiedosto: <code>ma8j1_reppu_yhtalo_muuttuja_lisays.ggb</code></p>
+				</div>
+
+				<h3>Tehtävä 3.6: Yhtälönratkaisu (Sähköinen tehtävä)</h3>
+				<div>
+					<p>Tehtävän tarkoituksena on harjoitella yhtälön ratkaisua kokonaisuutena. Esimerkissä käydään läpi yksi esimerkki, jossa yhtälön ratkaisussa käytetään kaikkia edellä harjoiteltuja menetelmiä. Tehtävässä on 12 laskua, joissa oppilas syöttää tarvittavat puolittaiset laskutoimitukset. Vinkkinä oppilas saa tilanteeseen sopivan sanallisen ohjeen. Tehtävästä ei saa virhepisteitä, vaan yhtälöt on ratkaistava päästäkseen eteenpäin. Oppilas voi aloittaa yksittäisen yhtälön ratkaisun alusta painamalla päivityspainiketta. Laskuista on yksi variaatio, jossa yhtälö on muotoa ax + b = cx + d.</p>
+					<p>Tiedosto: <code>ma8j1_reppu_yhtalo.ggb</code></p>
+				</div>
+
+				<h3>Tehtävä 3.7: Vihkotehtäviä yhtälönratkaisusta (Vihkotehtävä)</h3>
+				<div>
+					<p>Tehtävän tarkoituksena on harjoitella yhtälönratkaisua vihkoon.</p>
+					<h4>Malliratkaisu:</h4>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">a)</td>
+							<td style="text-align:right">\(\mathsf{2x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-6}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :2}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-3}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">b)</td>
+							<td style="text-align:right">\(\mathsf{2x-3}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{17}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| +3}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{2x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{20}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :2}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{10}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">c)</td>
+							<td style="text-align:right">\(\mathsf{6x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{3x+21}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| -3x}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{3x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{21}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :3}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{7}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">d)</td>
+							<td style="text-align:right">\(\mathsf{2x-5}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{x-2}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| -x}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x-5}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-2}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| +5}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{3}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+				</div>
+
+				<h3>Tehtävä 3.8: Vihkotehtäviä yhtälönratkaisusta (Vihkotehtävä)</h3>
+				<div>
+					<p>Tehtävän tarkoituksena on harjoitella yhtälönratkaisua vihkoon.</p>
+					<h4>Malliratkaisu:</h4>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">a)</td>
+							<td style="text-align:right">\(\mathsf{-7x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{49}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :(-7)}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-7}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">b)</td>
+							<td style="text-align:right">\(\mathsf{-5x+4}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{29}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| -4}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{-5x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{25}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :(-5)}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-5}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">c)</td>
+							<td style="text-align:right">\(\mathsf{7x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-2x+36}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| +2x}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{9x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{36}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :9}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{4}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">d)</td>
+							<td style="text-align:right">\(\mathsf{3x-6}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-x+2}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| +x}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{2x-6}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{2}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| +6}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{2x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{8}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :2}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{4}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+				</div>
+
+				<h3>Tehtävä 3.9: Yhtälönratkaisu (jakaminen puolittain) (Sähköinen tehtävä)</h3>
+				<div>
+					<p>Tehtävän tarkoituksena on harjoitella yhtälön ratkaisemista puolittain jakamalla sekä lausekkeiden sieventämistä itse. Esimerkissä käydään läpi kaksi esimerkkiä, joissa tulee kerrattua positiivinen ja negatiivinen jakaja. Tehtävässä on 6 laskua, joissa oppilas syöttää tarvittavat puolittaiset laskutoimitukset sekä sieventää itse yhtälön vasemman ja oikean puolen. Vinkkinä oppilas saa tilanteeseen sopivan sanallisen ohjeen. Oppilas voi aloittaa yksittäisen yhtälön ratkaisun alusta painamalla päivityspainiketta. Laskuista on kolme variaatiota.</p>
+					<ul>
+					<li>Laskut 1-4: Kerroin arvotaan väliltä 2...9 ja x väliltä -9...9.</li>
+					<li>Laskut 5-8: Kerroin arvotaan väliltä -9...-1 ja x väliltä -9...9.</li>
+					<li>Laskut 9-12: Kerroin ja x arvotaan väliltä -9...9.</li>
+					</ul>
+					<p>Tiedosto: <code>ma8j1_reppu_yhtalo_jakaminen_itse.ggb</code></p>
+				</div>
+
+				<h3>Tehtävä 3.10: Yhtälönratkaisu (jakaminen puolittain) (Vihkotehtävä)</h3>
+				<div>
+					<p>Tehtävän tarkoituksena on harjoitella yhtälönratkaisua vihkoon.</p>
+					<h4>Malliratkaisu:</h4>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">a)</td>
+							<td style="text-align:right">\(\mathsf{4x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{12}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :4}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{3}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">b)</td>
+							<td style="text-align:right">\(\mathsf{8x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-16}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :8}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-2}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">c)</td>
+							<td style="text-align:right">\(\mathsf{-3x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{21}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :(-3)}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-7}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">d)</td>
+							<td style="text-align:right">\(\mathsf{-6x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-54}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :(-6)}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{9}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+				</div>
+
+				<h3>Tehtävä 3.11: Yhtälönratkaisu (vakion lisääminen/vähentäminen) (Sähköinen tehtävä)</h3>
+				<div>
+					<p>Tehtävän tarkoituksena on harjoitella yhtälön ratkaisemista lisäämällä tai vähentämällä vakio puolittain sekä lausekkeiden sieventämistä itse. Esimerkissä käydään läpi, jossa ensin vähennetään vakio ja lopuksi vielä jaetaan puolittain. Tehtävässä on 6 laskua, joissa oppilas syöttää tarvittavat puolittaiset laskutoimitukset sekä sieventää itse yhtälön vasemman ja oikean puolen. Vinkkinä oppilas saa tilanteeseen sopivan sanallisen ohjeen. Oppilas voi aloittaa yksittäisen yhtälön ratkaisun alusta painamalla päivityspainiketta. Laskuista on kaksi variaatiota.</p>
+					<ul>
+					<li>Laskut 1-4: Yhtälö on muotoa x + a = b.</li>
+					<li>Laskut 5-12: Yhtälö on muotoa ax + b = c.</li>
+					</ul>
+					<p>Tiedosto: <code>ma8j1_reppu_yhtalo_vakion_lisaaminen_itse.ggb</code></p>
+				</div>
+
+				<h3>Tehtävä 3.12: Yhtälönratkaisu (vakion lisääminen/vähentäminen) (Vihkotehtävä)</h3>
+				<div>
+					<p>Tehtävän tarkoituksena on harjoitella yhtälönratkaisua vihkoon.</p>
+					<h4>Malliratkaisu:</h4>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">a)</td>
+							<td style="text-align:right">\(\mathsf{x-5}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{13}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| +5}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{18}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">b)</td>
+							<td style="text-align:right">\(\mathsf{-x+1}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-6}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| -1}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{-x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-7}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :(-1)}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{7}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">c)</td>
+							<td style="text-align:right">\(\mathsf{2x-7}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-1}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| +7}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{2x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{6}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :2}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{3}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">d)</td>
+							<td style="text-align:right">\(\mathsf{-4x+9}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{1}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| -9}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{-4x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-8}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :(-4)}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{2}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+				</div>
+
+				<h3>Tehtävä 3.13: Yhtälönratkaisu (x-termin lisääminen/vähentäminen) (Sähköinen tehtävä)</h3>
+				<div>
+					<p>Tehtävän tarkoituksena on harjoitella yhtälön ratkaisemista lisäämällä tai vähentämällä 1. asteen termi puolittain sekä lausekkeiden sieventämistä itse. Esimerkissä käydään läpi, jossa ensin vähennetään 1. asteen termi ja lopuksi vielä jaetaan puolittain. Tehtävässä on 6 laskua, joissa oppilas syöttää tarvittavat puolittaiset laskutoimitukset sekä sieventää itse yhtälön vasemman ja oikean puolen. Vinkkinä oppilas saa tilanteeseen sopivan sanallisen ohjeen. Oppilas voi aloittaa yksittäisen yhtälön ratkaisun alusta painamalla päivityspainiketta. Laskuista on kolme variaatiota.</p>
+					<ul>
+					<li>Laskut 1-3: Yhtälö on muotoa ax = bx + c, missä a - b = 1.</li>
+					<li>Laskut 4-6: Yhtälö on muotoa ax = bx + c, missä 4 &leq; a &leq; 14 ja 2 &leq; b &leq; 9.</li>
+					<li>Laskut 7-12: Yhtälö on muotoa ax = bx + c, missä -18 &leq; a &leq; 18 ja -9 &leq; b &leq; 9.</li>
+					</ul>
+					<p>Tiedosto: <code>ma8j1_reppu_yhtalo_vakion_lisaaminen_itse.ggb</code></p>
+				</div>
+
+				<h3>Tehtävä 3.14: Yhtälönratkaisu (x-termin lisääminen/vähentäminen) (Vihkotehtävä)</h3>
+				<div>
+					<p>Tehtävän tarkoituksena on harjoitella yhtälönratkaisua vihkoon.</p>
+					<h4>Malliratkaisu:</h4>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">a)</td>
+							<td style="text-align:right">\(\mathsf{2x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{x-4}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| -x}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-4}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">b)</td>
+							<td style="text-align:right">\(\mathsf{4x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{2x+6}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| -2x}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{2x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{6}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :2}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{3}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">c)</td>
+							<td style="text-align:right">\(\mathsf{-x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{3x-12}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| -3x}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{-4x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-12}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :(-4)}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{3}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">d)</td>
+							<td style="text-align:right">\(\mathsf{-3x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-x+14}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| +x}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{-2x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{14}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :(-2)}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-7}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+				</div>
+
+				<h3>Tehtävä 3.15: Yhtälönratkaisu (Sähköinen tehtävä)</h3>
+				<div>
+					<p>Tehtävän tarkoituksena on harjoitella yhtälön ratkaisemista kokonaisuutena. Esimerkissä käydään läpi yksi esimerkki, jossa yhtälön ratkaisussa käytetään kaikkia edellä harjoiteltuja menetelmiä. Tehtävässä on 6 laskua, joissa oppilas syöttää tarvittavat puolittaiset laskutoimitukset sekä sieventää itse yhtälön vasemman ja oikean puolen. Vinkkinä oppilas saa tilanteeseen sopivan sanallisen ohjeen. Oppilas voi aloittaa yksittäisen yhtälön ratkaisun alusta painamalla päivityspainiketta. Laskuista on yksi variaatio, jossa yhtälö on muotoa ax + b = cx + d.</p>
+					<p>Tiedosto: <code>ma8j1_reppu_yhtalo_itse.ggb</code></p>
+				</div>
+
+				<h3>Tehtävä 3.16: Yhtälönratkaisu (Vihkotehtävä)</h3>
+				<div>
+					<p>Tehtävän tarkoituksena on harjoitella yhtälönratkaisua vihkoon.</p>
+					<h4>Malliratkaisu:</h4>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">a)</td>
+							<td style="text-align:right">\(\mathsf{2x-1}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{x+7}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| -x}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x-1}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{7}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| +1}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{8}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">b)</td>
+							<td style="text-align:right">\(\mathsf{2x-1}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-x-7}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| +x}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{3x-1}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-7}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| +1}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{3x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-6}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :3}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-2}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">c)</td>
+							<td style="text-align:right">\(\mathsf{-x+7}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{9x-13}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| -9x}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{-10x+7}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-13}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| -7}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{-10x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-20}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :(-10)}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{2}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+				</div>
+
+				<h3>Tehtävä 3.17: Yhtälönratkaisu (Vihkotehtävä)</h3>
+				<div>
+					<p>Tehtävän tarkoituksena on harjoitella yhtälönratkaisua vihkoon.</p>
+					<h4>Malliratkaisu:</h4>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">a)</td>
+							<td style="text-align:right">\(\mathsf{3x+2}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{x+6}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| -x}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{2x+2}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{6}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| -2}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{2x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{4}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :2}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{2}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">b)</td>
+							<td style="text-align:right">\(\mathsf{-5x+5}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{2x+19}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| -2x}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{-7x+5}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{19}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| -5)}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{-7x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{14}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :(-7)}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-2}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">c)</td>
+							<td style="text-align:right">\(\mathsf{-6x-3}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-4x+9}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| +4x}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{-2x-3}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{9}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| +3}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{-2x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{12}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :(-2)}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-6}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+				</div>
+
+				<h3>Tehtävä 3.18: Yhtälönratkaisu (vastauksena murtoluku) (Vihkotehtävä)</h3>
+				<div>
+					<p>Tehtävän tarkoituksena on harjoitella yhtälönratkaisua vihkoon ja totutella murtolukuratkaisuun.</p>
+					<h4>Malliratkaisu:</h4>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">a)</td>
+							<td style="text-align:right">\(\mathsf{3x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{2}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :3}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{\dfrac{2}{3}}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">b)</td>
+							<td style="text-align:right">\(\mathsf{4x-2}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-3}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| +2}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{4x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-1}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :4}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-\dfrac{1}{4}}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">c)</td>
+							<td style="text-align:right">\(\mathsf{5x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-x+8}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| +x}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{6x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{8}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :6)}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{\dfrac{8}{6}}\)</td>
+							<td style="padding-left: 20px;"></td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{\dfrac{4}{3}}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">d)</td>
+							<td style="text-align:right">\(\mathsf{-6x-1}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{3x+2}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| -3x}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{-9x-1}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{2}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| +1}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{-9x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{3}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :(-9)}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-\dfrac{3}{9}}\)</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-\dfrac{1}{3}}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+				</div>
+
+				<h3>Tehtävä 3.19: Yhtälönratkaisu (sulkeiden poisto) (Vihkotehtävä)</h3>
+				<div>
+					<p>Tehtävän tarkoituksena on harjoitella yhtälönratkaisua vihkoon, kun yhtälöstä on ensin poistettava sulkeet tai jaettava sulkeiden edessä oleva kerroin pois.</p>
+					<h4>Malliratkaisu:</h4>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">a)</td>
+							<td style="text-align:right">\(\mathsf{3 \cdot (x+2)}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{18}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :3}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x+2}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{6}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| -2}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{4}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">b)</td>
+							<td style="text-align:right">\(\mathsf{-2 \cdot (x-4)}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{22}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :(-2)}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x-4}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-11}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| +4}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-7}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">c)</td>
+							<td style="text-align:right">\(\mathsf{5 \cdot (2x-3)}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{5}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :5}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{2x-3}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{1}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| +3}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{2x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{4}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :2}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{2}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">d)</td>
+							<td style="text-align:right">\(\mathsf{3 \cdot (3x-5)}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-x-35}\)</td>
+							<td style="padding-left: 20px;"></td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{9x-15}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-x-35}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| +x}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{10x-15}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-35}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| +15}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{10x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-20}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :10}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-2}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+				</div>
+
+				<h3>Tehtävä 3.20: Sanallisia tehtäviä (Vihkotehtävä)</h3>
+				<div>
+					<p>Tehtävän tarkoituksena on harjoitella yhtälön muodostamista ja ratkaisemista sanallisessa tehtävässä.</p>
+					<h4>Malliratkaisu:</h4>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">a)</td>
+							<td style="text-align:right">\(\mathsf{3x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{x+18}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| -x}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{2x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{18}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :2}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{9}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<p>b) Merkitään poikien lukumäärää muuttujalla x. Tyttöjä on tällöin 2x.</p>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{2x+x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{18}\)</td>
+							<td style="padding-left: 20px;"></td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{3x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{18}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :3}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{6}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<p><strong>Vastaus:</strong> Luokalla on 6 poikaa.</p>
+					<p>c) Merkitään Antin ikää muuttujalla x. Pekka on tällöin x + 7 vuotta vanha.</p>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x + (x + 7)}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{25}\)</td>
+							<td style="padding-left: 20px;"></td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{2x+7}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{25}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| -7}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{2x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{18}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :2}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{9}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<p><strong>Vastaus:</strong> Antti on 9 vuotta vanha.</p>
+					<p>d) Olkoon ensimmäinen luku x, jolloin seuraavat ovat x + 1 ja x + 2.</p>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x + (x + 1) + (x + 2)}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{84}\)</td>
+							<td style="padding-left: 20px;"></td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{3x + 3}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{84}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| -3}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{3x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{81}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :3}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{27}\)</td>
+							<td style="padding-left: 20px;"></td>
+						</tr>
+					</table><br>
+					<p><strong>Vastaus:</strong> Luvut ovat 27, 28 ja 29.</p>
+				</div>
+
+			</div>
+
+			<h2>4. Murtoyhtälöt</h2>
+			<div>
+				<h3>Tehtävä 4.1: Murtoyhtälö (Sähköinen tehtävä)</h3>
+				<div>
+					<p>Tehtävän tarkoituksena on harjoitella yksinkertaisen murtoyhtälön ratkaisemista puolittain kertomalla. Esimerkissä käydään läpi x/b=c ja ax/b = c -tyyppiset yhtälöt. Tehtävässä on 12 laskua, joissa oppilas syöttää puolittaisen laskutoimituksen. Vinkkinä oppilas saa sanallisen ohjeen "Kerro x:n jakajalla.". Tehtävästä ei saa virhepisteitä, vaan yhtälöt on ratkaistava päästäkseen eteenpäin. Oppilas voi aloittaa yksittäisen yhtälön ratkaisun alusta painamalla päivityspainiketta. Laskuista on kaksi variaatiota.</p>
+					<ul>
+					<li>Laskut 1-6: Yhtälö on muotoa x/b = c.</li>
+					<li>Laskut 7-12: Yhtälö on muotoa ax/b = c.</li>
+					</ul>
+					<p>Tiedosto: <code>ma8j1_reppu_murtoyhtalo0.ggb</code></p>
+				</div>
+
+				<h3>Tehtävä 4.2: Vihkotehtäviä murtoyhtälöistä (Vihkotehtävä)</h3>
+				<div>
+					<p>Tehtävän tarkoituksena on harjoitella yhtälönratkaisua vihkoon ja totutella murtolukuratkaisuun.</p>
+					<h4>Malliratkaisu:</h4>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">a)</td>
+							<td style="text-align:right">\(\mathsf{\dfrac{x}{8}}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{3}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| \cdot 8}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{24}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">b)</td>
+							<td style="text-align:right">\(\mathsf{\dfrac{2x}{5}}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-6}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| \cdot 5}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{2x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-30}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :2}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-15}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">c)</td>
+							<td style="text-align:right">\(\mathsf{\dfrac{-3x}{7}}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{6}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| \cdot 7}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{-3x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{42}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :(-3)}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-14}\)</td>
+							<td style="padding-left: 20px;"></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">d)</td>
+							<td style="text-align:right">\(\mathsf{\dfrac{5x}{-6}}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-10}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| \cdot (-6)}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{5x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{60}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| : 5}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{12}\)</td>
+							<td style="padding-left: 20px;"></td>
+						</tr>
+					</table><br>
+				</div>
+
+				<h3>Tehtävä 4.3: Murtoyhtälö (Sähköinen tehtävä)</h3>
+				<div>
+					<p>Tehtävän tarkoituksena on harjoitella murtoyhtälön ratkaisemista puolittain kertomalla sekä tarvittaessa ensin vakio vähentämällä/lisäämällä. Esimerkissä käydään läpi x/b=d ja ax/b + c = d -tyyppiset yhtälöt sekä negatiivisella luvulla kertominen puolittain. Tehtävässä on 12 laskua, joissa oppilas syöttää puolittaisen laskutoimituksen. Vinkkinä oppilas saa sanallisen ohjeen "Kerro x:n jakajalla. Muista miinusmerkki.". Tehtävästä ei saa virhepisteitä, vaan yhtälöt on ratkaistava päästäkseen eteenpäin. Oppilas voi aloittaa yksittäisen yhtälön ratkaisun alusta painamalla päivityspainiketta. Laskuista on kolme variaatiota.</p>
+					<ul>
+					<li>Laskut 1-4: Yhtälö on muotoa x/b = d, missä b voi olla myös negatiivinen.</li>
+					<li>Laskut 5-8: Yhtälö on muotoa x/b + c = d, missä b voi olla myös negatiivinen.</li>
+					<li>Laskut 9-12: Yhtälö on muotoa ax/b = d, missä a/b voi olla myös negatiivinen.</li>
+					</ul>
+					<p>Tiedosto: <code>ma8j1_reppu_murtoyhtalo1.ggb</code></p>
+				</div>
+
+				<h3>Tehtävä 4.4: Vihkotehtäviä murtoyhtälöistä (Vihkotehtävä)</h3>
+				<div>
+					<p>Tehtävän tarkoituksena on murtoyhtälön ratkaisemista puolittain kertomalla sekä tarvittaessa ensin vakio vähentämällä/lisäämällä.</p>
+					<h4>Malliratkaisu:</h4>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">a)</td>
+							<td style="text-align:right">\(\mathsf{-\dfrac{x}{6}}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{9}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| \cdot (-6)}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-54}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">b)</td>
+							<td style="text-align:right">\(\mathsf{\dfrac{x}{3} - 4}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{2}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| +4}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{\dfrac{x}{3}}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{6}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| \cdot 3}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{18}\)</td>
+							<td></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">c)</td>
+							<td style="text-align:right">\(\mathsf{-\dfrac{x}{4}-6}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-13}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| +6}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{-\dfrac{x}{4}}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-7}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| \cdot (-4)}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{28}\)</td>
+							<td style="padding-left: 20px;"></td>
+						</tr>
+					</table><br>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;">d)</td>
+							<td style="text-align:right">\(\mathsf{\dfrac{x}{5}+6}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{0}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| -6}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{\dfrac{x}{5}}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-6}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| \cdot 5}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{x}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{-30}\)</td>
+							<td style="padding-left: 20px;"></td>
+						</tr>
+					</table><br>
+				</div>
+
+				<h3>Tehtävä 4.5: Sanallisia tehtäviä (Vihkotehtävä)</h3>
+				<div>
+					<p>Tehtävän tarkoituksena on murtoyhtälön ratkaisemista puolittain kertomalla sekä tarvittaessa ensin vakio vähentämällä/lisäämällä.</p>
+					<h4>Malliratkaisu:</h4>
+					<p>a) \(\textsf{s = 450 km, t = 5 h}\)</p>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{v}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td style="padding-bottom: 15px;">\(\mathsf{\dfrac{s}{t}}\)</td>
+							<td style="padding-left: 20px;"></td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{v}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td style="padding-bottom: 15px;">\(\mathsf{\dfrac{450}{5}}\)</td>
+							<td style="padding-left: 20px;"></td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{v}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{90}\)</td>
+							<td></td>
+						</tr>
+					</table>
+					<p><strong>Vastaus:</strong> Auton keskinopeus on 90 km/h.</p>
+					<p>b) \(\textsf{v = 80 km/h, t = 4 h}\)<p>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{v}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td style="padding-bottom: 15px;">\(\mathsf{\dfrac{s}{t}}\)</td>
+							<td style="padding-left: 20px;"></td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{80}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td style="padding-bottom: 15px;">\(\mathsf{\dfrac{s}{4}}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| \cdot 4}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{320}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{s}\)</td>
+							<td></td>
+						</tr>
+					</table>
+					<p><strong>Vastaus:</strong> Auton kulkee 320 km matkan.</p>
+					<p>c) \(\textsf{v = 45 km/h, s = 225 km}\)<p>
+					<table>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{v}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td style="padding-bottom: 15px;">\(\mathsf{\dfrac{s}{t}}\)</td>
+							<td style="padding-left: 20px;"></td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{45}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td style="padding-bottom: 15px;">\(\mathsf{\dfrac{225}{t}}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| \cdot t}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{45t}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{225}\)</td>
+							<td style="padding-left: 20px;">\(\mathsf{\| :45}\)</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 10px;"></td>
+							<td style="text-align:right">\(\mathsf{t}\)</td>
+							<td style="padding: 5px;">\(=\)</td>
+							<td>\(\mathsf{5}\)</td>
+							<td style="padding-left: 20px;"></td>
+						</tr>
+					</table>
+					<p><strong>Vastaus:</strong> Mopoauto pääsee matkan 5 tunnissa.</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
