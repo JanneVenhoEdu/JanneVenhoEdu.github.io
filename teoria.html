@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Teoria- esitysmuoto</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		<link rel="stylesheet" href="esitysmuoto_suuri.css">
+		<script>
+			$(document).ready(function(){
+				$(window).on('beforeunload', function() {
+					$(window).scrollTop(0);
+				});
+				$("#takaisin").attr("href", document.referrer);
+				$("#navigointi").load(document.referrer + " #section-0", () => etsiID());
+			});
+		</script>
+	</head>
+	<body>
+		<div style="display: none">
+		\(
+		   \def\euro{{\;\unicode{0x20AC}}}
+		   \require{colorv2}
+		\)
+		</div>
+		<a id="takaisin">&larr; Takaisin</a>
+		<div id="sisalto"></div>
+		<div id="sisallysluettelo" style="display: none;"></div>
+		<div id="navigointi" style="display: none;"></div>
+		<script>
+		function alusta(){
+		// Muutetaan h5-otsikot h3-otsikoiksi
+			var h5s = $("h5");
+			for (var i = 0; i < h5s.length; i++){
+				$("h5:first").replaceWith("<h3>" + h5s[i].innerHTML + "</h3>");
+			}
+			MathJax.typeset();
+		}
+		// Etsitään kirjan ID-numero
+		function etsiID(){
+			var kirjanID = document.getElementsByClassName("activity book")[0].getAttribute("id").replace("module-", "");
+			$("#sisallysluettelo").load("https://reppu.mmg.fi/mod/book/view.php?id=" + kirjanID + " #block-region-side-pre", () => pura(kirjanID));
+		}
+		// Puretaan kirjan otsikkotiedot
+		function pura(kirjanID){
+			var sisallysluettelo = document.getElementsByClassName("text-truncate");
+			if (sisallysluettelo.length == 0){
+				var lista = document.getElementsByTagName("ul")[0];
+				var linkit = lista.getElementsByTagName("a");
+				var otsikot = [lista.getElementsByTagName("strong")[0].innerHTML];
+				var tunnisteet = [otsikot[0].replace("1. ", "").toLowerCase().replace(/\s/g, "_").replace(/\:/,"").replace(/ä/g,"a").replace(/ö/g,"o")];
+				var lukuLista = [,];
+				for (var i = 0; i < linkit.length; i++){
+					otsikot[i+1] = linkit[i].innerHTML;
+					tunnisteet[i+1] = linkit[i].getAttribute("title").toLowerCase().replace(/\s/g, "_").replace(/\:/,"").replace(/ä/g,"a").replace(/ö/g,"o");
+					lukuLista[i+1] = linkit[i].href.replace("https://reppu.mmg.fi/mod/book/view.php?id=" + kirjanID + "&chapterid=", "");
+				}
+			} else {
+				var otsikot = [];
+				var tunnisteet = [sisallysluettelo[0].innerHTML.replace("1. ", "").toLowerCase().replace(/\s/g, "_").replace(/\:/,"").replace(/ä/g,"a").replace(/ö/g,"o")];
+				var lukuLista = [,];
+				for (var i = 0; i < sisallysluettelo.length; i++){
+					otsikot[i] = sisallysluettelo[i].innerHTML;
+					if (i > 0){
+						tunnisteet[i] = sisallysluettelo[i].getAttribute("title").toLowerCase().replace(/\s/g, "_").replace(/\:/,"").replace(/ä/g,"a").replace(/ö/g,"o");
+						lukuLista[i] = sisallysluettelo[i].href.replace("https://reppu.mmg.fi/mod/book/view.php?id=" + kirjanID + "&chapterid=", "");
+					}
+				}
+			}
+			var sisalto = "";
+			var tunnistaAlaluku = /\d+\.\d+\./;
+			for (var i = 0; i < otsikot.length; i++){
+				if (tunnistaAlaluku.test(otsikot[i])){
+					sisalto = sisalto + "<h2>" + otsikot[i] + "</h2><div id=\"" + tunnisteet[i] + "\"></div>";
+				} else {
+					sisalto = sisalto + "<h1>" + otsikot[i] + "</h1><div id=\"" + tunnisteet[i] + "\"></div>";
+				}
+			}
+			document.getElementById("sisalto").innerHTML = sisalto;
+			$("#"+tunnisteet[0]).load("https://reppu.mmg.fi/mod/book/view.php?id=" + kirjanID + " #esitys", () => alusta());
+			for (var i = 1; i < tunnisteet.length; i++){
+				$("#" + tunnisteet[i]).load("https://reppu.mmg.fi/mod/book/view.php?id=" + kirjanID + "&chapterid=" + lukuLista[i] + " #esitys", () => alusta());
+			}
+			$("h1").click(function(){
+				$(this).nextAll("div:first").slideToggle("slow");
+			});
+			$("h2").click(function(){
+				$(this).nextAll("div:first").slideToggle("slow");
+			});
+			$("div").hide();
+			$("#sisalto").show();
+		}
+		</script>
+	</body>
+</html>
