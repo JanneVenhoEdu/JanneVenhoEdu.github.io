@@ -10,6 +10,7 @@
 				$(window).on('beforeunload', function() {
 					$(window).scrollTop(0);
 				});
+				$("#kutsuja").html(document.referrer);
 				$("#urli").load(document.referrer + " #course-icon", () => etsiURL());
 			});
 		</script>
@@ -21,6 +22,7 @@
 		   \require{colorv2}
 		\)
 		</div>
+		<div id="kutsuja"></div>
 		<div id="urli" style="display: none"></div>
 		<div id="sisalto"></div>
 		<div id="sisallysluettelo" style="display: none;"></div>
