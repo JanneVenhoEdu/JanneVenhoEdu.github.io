@@ -4,18 +4,17 @@ $(document).ready(function () {
 	$("#navbutton").click(function () {
 		if ($("#nav").css("width") == sbInitWidth){
 			$("#nav").css("width", "250px");
-			$("#main").css("margin-left", "260px");
 			$("#bar1").css("transform", "translate(0, 11px) rotate(-45deg)");
 			$("#bar2").css("opacity", "0");
 			$("#bar3").css("transform", "translate(0, -11px) rotate(45deg)");
 			$("#titles").fadeIn(1400);
 		} else {
 			$("#nav").css("width", sbInitWidth);
-			$("#main").css("margin-left", "60px");
 			$("#bar1").css("transform", "translate(0, 0) rotate(0deg)");
 			$("#bar2").css("opacity", "100");
 			$("#bar3").css("transform", "translate(0, 0) rotate(0deg)");
 			$("#titles").hide();
+			
 		}
 	});
 });
