@@ -39,6 +39,11 @@ $(document).ready(function () {
 			closeNav();
 		}
 	});
+	$("#nav").hover(function() {
+		openNav();
+	}, function() {
+		closeNav();
+	});
 	$(".link").click(function() {
 		var id = $(this).attr("id");
 		$("h2").css("display", "none");
