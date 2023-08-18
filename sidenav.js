@@ -1,4 +1,7 @@
 $(document).ready(function () {
+	// Tyylien alustus
+	var activeLinkColor = "#f1f1f1";
+	var passiveLinkColor = "#b1b1b1";
 	// Otsikkotietojen lataaminen
 	var titles = $("h2");
 	var titlesTotal = titles.length;
@@ -12,7 +15,7 @@ $(document).ready(function () {
 	}
 	titles.first().css("display", "block");
 	titles.first().next().css("display", "block");
-	$(".link").first().css("background-color", "#333");
+	$(".link").first().css("color", activeLinkColor);
 	
 	// Funktiot navigaatiopalkin avaamiseen ja sulkemiseen
 	var sbInitWidth = $("#nav").css("width");
@@ -51,7 +54,7 @@ $(document).ready(function () {
 		$("."+id).css("display", "block");
 		$("."+id).next().css("display", "block");
 		closeNav();
-		$(".link").css("background-color", "#111");
-		$(this).css("background-color", "#333");
+		$(".link").css("color", passiveLinkColor);
+		$(this).css("color", activeLinkColor);
 	});
 });

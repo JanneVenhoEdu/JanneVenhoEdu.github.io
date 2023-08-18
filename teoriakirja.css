@@ -28,7 +28,7 @@ body {
 }
 
 .link:hover {
-	color: #f1f1f1;
+	background-color: #555;
 }
 
 #navbutton {
