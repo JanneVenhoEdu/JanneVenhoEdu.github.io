@@ -6,7 +6,7 @@
 		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 		<script src="../../../sidenav.js"></script>
-		<link rel="stylesheet" href="../../../teoriakirja.css">
+		<!--<link rel="stylesheet" href="../../../teoriakirja.css">-->
 		<script>
 			window.MathJax = {
 				tex: {
@@ -24,7 +24,9 @@
 			<div id="bar2"></div>
 			<div id="bar3"></div>
 		  </div>
-		  <div id="titles">
+		  <div id="links">
+		  </div>
+		  <div id="minilinks">
 		  </div>
 		</div>
 		<div id="main">
@@ -155,8 +157,9 @@
 						<p>\(\mathsf{tan\;\alpha = \dfrac{\text{vastainen kateetti}}{\text{viereinen kateetti}}}\)</p>
 					</div>
 					<p>Trigonometrisissa funktioissa ei yleensä käytetä sulkeita kulman \(\alpha\) ympärillä \(\mathsf{sin(\alpha)}\). Seuraavissa luvuissa tutustutaan tarkemmin trigonometristen funktioiden käyttöön tuntemattoman kulman tai sivun ratkaisemisessa.</p>
-
-					<h3>Trigonometrisen funktion arvon laskeminen laskimella</h3>
+				</div>
+				<h3>Trigonometrisen funktion arvon laskeminen laskimella</h3>
+				<div>
 					<p>Laskimen avulla voidaan voidaan laskea trigonometristen funktoiden arvoja. Kaikista funktiolaskimista löytyy sin-, cos- ja tan-funktiot. Ennen laskemista tulee kuitenkin varmistua laskimen käyttämästä kulman yksiköstä. Peruskoulussa käytetään kulman yksikkönä asteita (degrees), jolloin laskimessa pitää lukea D tai DEG laskimen ylärivissä. 2. asteen opinnoissa käytetään asteen lisäksi radiaaneja (R tai RAD) kulman yksikkönä.</p>
 					
 					<div class="example">
@@ -231,43 +234,47 @@
 			</div>
 			<h2>6. Lisätietoa: Sinilause</h2>
 			<div>
-				<p>Trigonometrsia funktioita voidaan soveltaa myös muihinkin kuin suorakulmaisiin kolmioihin. Sinilauseen mukaan kolmion sivun pituuden ja sivun vastaisen kulman sinin suhde on sama kaikille kolmelle sivulle. Mallikuvan ja matemaattisin merkinnöin tämä voidaan kirjoittaa seuraavasti.</p>
-				<div style="margin-left: 30px;">
-					<p><img src="ma9j2_teoria_sinilause.png" alt="" width="398" height="121"></p>
-				</div>
-				<p>Kolmiosta täytyy siis tuntea yksi pari vastakkaisia osia (sivu + kulma) ja lisäksi yksi muu suure, jonka jälkeen kaikki muut kolmion suureet voidaan laskea sinilauseen avulla.</p>
-				<div class="example">
-					<p><strong>Esimerkki:</strong> Laske</p>
+				<p>Trigonometrisia funktioita voidaan soveltaa myös muihinkin kuin suorakulmaisiin kolmioihin. Sinilauseen mukaan kolmion sivun pituuden ja sivun vastaisen kulman sinin suhde on sama kaikille kolmelle sivulle.</p>
+				<h3>Määritelmä</h3>
+				<div>
+					<p>Mallikuvan ja matemaattisin merkinnöin sinilause voidaan kirjoittaa seuraavasti.</p>
 					<div style="margin-left: 30px;">
-						<p>a) kulman \(\beta\) suuruus</p>
-						<p>b) sivun x pituus.</p>
+						<p><img src="ma9j2_teoria_sinilause.png" alt="" width="398" height="121"></p>
+					</div>
+					<p>Kolmiosta täytyy siis tuntea yksi pari vastakkaisia osia (sivu + kulma) ja lisäksi yksi muu suure, jonka jälkeen kaikki muut kolmion suureet voidaan laskea sinilauseen avulla.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Laske</p>
 						<div style="margin-left: 30px;">
-							<p><img src="ma9j2_teoria_sinilause_esimerkki.png" alt="" width="400" height="134"></p>
+							<p>a) kulman \(\beta\) suuruus</p>
+							<p>b) sivun x pituus.</p>
+							<div style="margin-left: 30px;">
+								<p><img src="ma9j2_teoria_sinilause_esimerkki.png" alt="" width="400" height="134"></p>
+							</div>
+							<p>a) Muodostetaan sinilauseen mukainen verranto tunnetuista tiedoista, ja ratkaistaan verranto.</p>
 						</div>
-						<p>a) Muodostetaan sinilauseen mukainen verranto tunnetuista tiedoista, ja ratkaistaan verranto.</p>
-					</div>
-					<div style="margin-left: 30px;">
 						<div style="margin-left: 30px;">
-							<p>\(\begin{align} \mathsf{\dfrac{\text{7,3}}{sin\;84^\circ}} &amp;= \mathsf{\dfrac{\text{5,8}}{sin\;\beta}} &amp;&amp;\| \nwarrow\!\!\!\!\!\!\nearrow\\ \mathsf{\text{7,3} \cdot sin\;\beta} &amp;= \mathsf{\text{5,8} \cdot sin\;84^\circ} &amp;&amp;\| :\textsf{7,3}\rule{0pt}{1.2em}\\ \mathsf{sin\;\beta} &amp;= \mathsf{\dfrac{\text{5,8} \cdot sin\;84^\circ}{\text{7,3}}} &amp;&amp;\| \mathsf{sin^{-1}}\rule{0pt}{2em}\\ \beta &amp;= \mathsf{\text{52,2...}^\circ}\rule{0pt}{1.2em}\\ \beta &amp;\approx \mathsf{52^\circ}\rule{0pt}{1.2em} \end{align}\)</p>
+							<div style="margin-left: 30px;">
+								<p>\(\begin{align} \mathsf{\dfrac{\text{7,3}}{sin\;84^\circ}} &amp;= \mathsf{\dfrac{\text{5,8}}{sin\;\beta}} &amp;&amp;\| \nwarrow\!\!\!\!\!\!\nearrow\\ \mathsf{\text{7,3} \cdot sin\;\beta} &amp;= \mathsf{\text{5,8} \cdot sin\;84^\circ} &amp;&amp;\| :\textsf{7,3}\rule{0pt}{1.2em}\\ \mathsf{sin\;\beta} &amp;= \mathsf{\dfrac{\text{5,8} \cdot sin\;84^\circ}{\text{7,3}}} &amp;&amp;\| \mathsf{sin^{-1}}\rule{0pt}{2em}\\ \beta &amp;= \mathsf{\text{52,2...}^\circ}\rule{0pt}{1.2em}\\ \beta &amp;\approx \mathsf{52^\circ}\rule{0pt}{1.2em} \end{align}\)</p>
+							</div>
 						</div>
-					</div>
-					<div style="margin-left: 30px;">
-						<p><strong>Vastaus:</strong> Kulman \(\beta\) suuruus on 52 astetta.</p>
-						<p>b) Lasketaan sivun x vastaisen kulman suuruus kolmion kulmien summan avulla.</p>
-					</div>
-					<div style="margin-left: 30px;">
 						<div style="margin-left: 30px;">
-							<p>\(\mathsf{\gamma = 180^\circ - 84^\circ - \beta = 180^\circ - 84^\circ - 52,\!2...^\circ = 43,\!7...^\circ}\)</p>
+							<p><strong>Vastaus:</strong> Kulman \(\beta\) suuruus on 52 astetta.</p>
+							<p>b) Lasketaan sivun x vastaisen kulman suuruus kolmion kulmien summan avulla.</p>
 						</div>
-					</div>
-					<div style="margin-left: 30px;">
-						<p>Muodostetaan sinilauseen mukainen verranto ja ratkaistaan tuntemattoman sivun x pituus.</p>
-					</div>
-					<div style="margin-left: 30px;">
-						<p>\(\begin{align} \mathsf{\dfrac{\text{7,3}}{sin\;84^\circ}} &amp;= \mathsf{\dfrac{x}{sin\;43,\!7...^\circ}} &amp;&amp;\| \nwarrow\!\!\!\!\!\!\nearrow\\ \mathsf{x \cdot sin\;84^\circ} &amp;= \mathsf{\text{7,3} \cdot sin\;43,\!7...^\circ} &amp;&amp;\| : \mathsf{sin\;84^\circ}\rule{0pt}{1.2em}\\ \mathsf{x} &amp;= \mathsf{\text{5,08...}}\rule{0pt}{1.2em}\\ x &amp;\approx  \mathsf{\text{5,1}}\rule{0pt}{1.2em} \end{align}\)</p>
-					</div>
-					<div style="margin-left: 30px;">
-						<p><strong>Vastaus:</strong> Sivun x pituus on 5,1 cm.</p>
+						<div style="margin-left: 30px;">
+							<div style="margin-left: 30px;">
+								<p>\(\mathsf{\gamma = 180^\circ - 84^\circ - \beta = 180^\circ - 84^\circ - 52,\!2...^\circ = 43,\!7...^\circ}\)</p>
+							</div>
+						</div>
+						<div style="margin-left: 30px;">
+							<p>Muodostetaan sinilauseen mukainen verranto ja ratkaistaan tuntemattoman sivun x pituus.</p>
+						</div>
+						<div style="margin-left: 30px;">
+							<p>\(\begin{align} \mathsf{\dfrac{\text{7,3}}{sin\;84^\circ}} &amp;= \mathsf{\dfrac{x}{sin\;43,\!7...^\circ}} &amp;&amp;\| \nwarrow\!\!\!\!\!\!\nearrow\\ \mathsf{x \cdot sin\;84^\circ} &amp;= \mathsf{\text{7,3} \cdot sin\;43,\!7...^\circ} &amp;&amp;\| : \mathsf{sin\;84^\circ}\rule{0pt}{1.2em}\\ \mathsf{x} &amp;= \mathsf{\text{5,08...}}\rule{0pt}{1.2em}\\ x &amp;\approx  \mathsf{\text{5,1}}\rule{0pt}{1.2em} \end{align}\)</p>
+						</div>
+						<div style="margin-left: 30px;">
+							<p><strong>Vastaus:</strong> Sivun x pituus on 5,1 cm.</p>
+						</div>
 					</div>
 				</div>
 				<h3>Kolmiomittaus</h3>
@@ -282,34 +289,41 @@
 			</div>
 			<h2>7. Lisätietoa: Kosinilause</h2>
 			<div>
-				<p>Kosinilauseen avulla voidaan ratkaista sinilauseen tavoin kaikenlaisten kolmioiden tuntemattomien sivujen ja kulmien suuruuksia. Kosinilauseella voi esimerkiksi ratkaista kolmion kolmannen sivun pituuden, kun kaksi muuta sivua ja niiden välinen kulma tunnetaan. Toisaalta sen avulla voidaan ratkaista jokin kolmion kulma, vaikka tunnettaisiin vain kolmion sivut. Kosinilause voidaan johtaa Pythagoraan lauseesta sekä trigonometristen funktioiden määritelmästä, ja se näyttää seuraavalta.</p>
-				<div style="margin-left: 30px;">
-					<p><img src="ma9j2_teoria_kosinilause.png" alt="" width="398" height="121"></p>
-				</div>
-				<p>Vaikka kosinilause voidaankin kirjoittaa kaikille kulmille, voidaan selkeyden vuoksi käyttää vain yhtä yhtälöä ja sovittaa se ratkaistavaan ongelmaan. Tärkeintä on ymmärtää, että sivu c on kulman \(\gamma\) vastainen sivu.</p>
-				
-				<div class="example">
-					<p><strong>Esimerkki:</strong> Ratkaise sivun c pituus.</p>
+				<p>Kosinilauseen avulla voidaan ratkaista sinilauseen tavoin kaikenlaisten kolmioiden tuntemattomien sivujen ja kulmien suuruuksia. Kosinilauseella voi esimerkiksi ratkaista kolmion kolmannen sivun pituuden, kun kaksi muuta sivua ja niiden välinen kulma tunnetaan. Toisaalta sen avulla voidaan ratkaista jokin kolmion kulma, vaikka tunnettaisiin vain kolmion sivut.</p>
+				<h3>Määritelmä</h3>
+				<div>
+					<p>Kosinilause voidaan johtaa Pythagoraan lauseesta sekä trigonometristen funktioiden määritelmästä, ja se näyttää seuraavalta.</p>
 					<div style="margin-left: 30px;">
-						<p><img src="ma9j2_teoria_kosinilause_esimerkki.png" alt="" width="398" height="133"></p>
-						<p>\(\begin{align} \mathsf{c^2} &amp;= \mathsf{7,\!3^2 + 5,\!8^2 - 2 \cdot 7,\!3 \cdot 5,\!8 \cdot cos\;43^\circ}\\ \mathsf{c^2} &amp;= \mathsf{24,\!99...} &amp;&amp;\|\sqrt{\rule{1em}{0pt}}\\ \mathsf{c} &amp;= \textsf{4,99...}\\ \mathsf{c} &amp;\approx
-							\textsf{5,0} \end{align}\)</p>
-						<p><strong>Vastaus:</strong> Sivun x pituus on 5,0 cm.</p>
+						<p><img src="ma9j2_teoria_kosinilause.png" alt="" width="398" height="121"></p>
 					</div>
+					<p>Vaikka kosinilause voidaankin kirjoittaa kaikille kulmille, voidaan selkeyden vuoksi käyttää vain yhtä yhtälöä ja sovittaa se ratkaistavaan ongelmaan. Tärkeintä on ymmärtää, että sivu c on kulman \(\gamma\) vastainen sivu.</p>
 				</div>
-				<div class="example">
-					<p><strong>Esimerkki:</strong> Ratkaise kulman \(\gamma\) suuruus.</p>
-					<div style="margin-left: 30px;">
-						<p><img src="ma9j2_teoria_kosinilause_esimerkki2.png" alt="" width="399" height="153"></p>
-						<p>Ratkaistaan kosinilause kulman kosinin suhteen.</p>
+				<h3>Esimerkkejä</h3>
+				<div>
+					<p></p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Ratkaise sivun c pituus.</p>
 						<div style="margin-left: 30px;">
-							<p>\(\begin{align} \mathsf{c^2} &amp;= \mathsf{a^2 + b^2 - 2ab\;cos\;\gamma}\\\\ &amp;\quad\vdots\qquad\small(\texttt{Harjoitustehtävänä})\\\\ \mathsf{cos\;\gamma} &amp;= \mathsf{\dfrac{a^2 + b^2 - c^2}{2ab}}\end{align}\)</p>
+							<p><img src="ma9j2_teoria_kosinilause_esimerkki.png" alt="" width="398" height="133"></p>
+							<p>\(\begin{align} \mathsf{c^2} &amp;= \mathsf{7,\!3^2 + 5,\!8^2 - 2 \cdot 7,\!3 \cdot 5,\!8 \cdot cos\;43^\circ}\\ \mathsf{c^2} &amp;= \mathsf{24,\!99...} &amp;&amp;\|\sqrt{\rule{1em}{0pt}}\\ \mathsf{c} &amp;= \textsf{4,99...}\\ \mathsf{c} &amp;\approx
+								\textsf{5,0} \end{align}\)</p>
+							<p><strong>Vastaus:</strong> Sivun x pituus on 5,0 cm.</p>
 						</div>
-						<p>Ratkaistaan kulma edellä johdetun kaavan avulla.</p>
+					</div>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Ratkaise kulman \(\gamma\) suuruus.</p>
 						<div style="margin-left: 30px;">
-							<p>\(\begin{align}\mathsf{cos\;\gamma} &amp;= \mathsf{\dfrac{6,\!6^2 + 9,\!8^2 - 6,\!5^2}{2 \cdot 6,\!6 \cdot 9,\!8}} &amp;&amp; \| \mathsf{{cos}^{-1}}\\ \gamma &amp;= \textsf{41,188...}^\circ\\ \gamma &amp;\approx \mathsf{41^\circ}\end{align}\)</p>
+							<p><img src="ma9j2_teoria_kosinilause_esimerkki2.png" alt="" width="399" height="153"></p>
+							<p>Ratkaistaan kosinilause kulman kosinin suhteen.</p>
+							<div style="margin-left: 30px;">
+								<p>\(\begin{align} \mathsf{c^2} &amp;= \mathsf{a^2 + b^2 - 2ab\;cos\;\gamma}\\\\ &amp;\quad\vdots\qquad\small(\texttt{Harjoitustehtävänä})\\\\ \mathsf{cos\;\gamma} &amp;= \mathsf{\dfrac{a^2 + b^2 - c^2}{2ab}}\end{align}\)</p>
+							</div>
+							<p>Ratkaistaan kulma edellä johdetun kaavan avulla.</p>
+							<div style="margin-left: 30px;">
+								<p>\(\begin{align}\mathsf{cos\;\gamma} &amp;= \mathsf{\dfrac{6,\!6^2 + 9,\!8^2 - 6,\!5^2}{2 \cdot 6,\!6 \cdot 9,\!8}} &amp;&amp; \| \mathsf{{cos}^{-1}}\\ \gamma &amp;= \textsf{41,188...}^\circ\\ \gamma &amp;\approx \mathsf{41^\circ}\end{align}\)</p>
+							</div>
+							<p><strong>Vastaus:</strong> Kulman \(\gamma\) suuruus on 41 astetta.</p>
 						</div>
-						<p><strong>Vastaus:</strong> Kulman \(\gamma\) suuruus on 41 astetta.</p>
 					</div>
 				</div>
 			</div>
