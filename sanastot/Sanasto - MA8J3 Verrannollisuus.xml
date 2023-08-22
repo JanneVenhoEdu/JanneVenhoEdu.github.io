@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GLOSSARY>
+  <INFO>
+    <NAME>Sanasto - MA8J3 Verrannollisuus</NAME>
+    <INTRO>&lt;p dir=&quot;ltr&quot; style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/p&gt;</INTRO>
+    <INTROFORMAT>1</INTROFORMAT>
+    <ALLOWDUPLICATEDENTRIES>0</ALLOWDUPLICATEDENTRIES>
+    <DISPLAYFORMAT>dictionary</DISPLAYFORMAT>
+    <SHOWSPECIAL>1</SHOWSPECIAL>
+    <SHOWALPHABET>1</SHOWALPHABET>
+    <SHOWALL>1</SHOWALL>
+    <ALLOWCOMMENTS>0</ALLOWCOMMENTS>
+    <USEDYNALINK>1</USEDYNALINK>
+    <DEFAULTAPPROVAL>1</DEFAULTAPPROVAL>
+    <GLOBALGLOSSARY>0</GLOBALGLOSSARY>
+    <ENTBYPAGE>10</ENTBYPAGE>
+    <ENTRIES>
+      <ENTRY>
+        <CONCEPT>Verranto</CONCEPT>
+        <DEFINITION>&lt;p&gt;Verrannolla eli verrantoyhtälöllä tarkoitetaan yhtälöä, jossa kaksi suhdetta on merkitty yhtä suuriksi. Verrantojen avulla voidaan ratkaista monenlaisia ongelmia, joissa tapahtuu suoraviivaista muutosta tai vertailua. Verrantoyhtälö voidaan ratkaista
+    nopeasti kertomalla ristiin.&lt;/p&gt;
+&lt;div class=&quot;editor-indent&quot; style=&quot;margin-left: 30px;&quot;&gt;
+    &lt;p&gt;\(\begin{align}\mathsf{\dfrac{x}{5}} &amp;amp;= \mathsf{\dfrac{12}{15}} &amp;amp;&amp;amp;\mathsf{\|\nearrow\!\!\!\!\!\!\!\nwarrow}\\ \mathsf{15x} &amp;amp;= \mathsf{60} &amp;amp;&amp;amp;\mathsf{\|:15}\\ \mathsf{x} &amp;amp;= \mathsf{4}\end{align}\)&lt;/p&gt;
+&lt;/div&gt;</DEFINITION>
+        <FORMAT>1</FORMAT>
+        <USEDYNALINK>0</USEDYNALINK>
+        <CASESENSITIVE>0</CASESENSITIVE>
+        <FULLMATCH>0</FULLMATCH>
+        <TEACHERENTRY>1</TEACHERENTRY>
+      </ENTRY>
+      <ENTRY>
+        <CONCEPT>Suoraan verrannollisuus</CONCEPT>
+        <DEFINITION>&lt;p&gt;Suoraan verrannollisilla suureilla tarkoitetaan kahta mitattavaa asiaa, jotka kasvavat ja vähenevät samassa suhteessa, eli esimerkiksi toisen kaksinkertaistuessa toinenkin kaksinkertaistuu. Tämä tarkoittaa sitä, että suoraan verrannollisten suureiden osamäärä (eli jakolasku) on aina vakio. Suoraan verrannollisia suureita ovat esimerkiksi aika ja matka kun kuljetaan
+    vakionopeudella, prosentit ja eurot tai banaanien määrä ja hinta.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</DEFINITION>
+        <FORMAT>1</FORMAT>
+        <USEDYNALINK>0</USEDYNALINK>
+        <CASESENSITIVE>0</CASESENSITIVE>
+        <FULLMATCH>0</FULLMATCH>
+        <TEACHERENTRY>1</TEACHERENTRY>
+      </ENTRY>
+      <ENTRY>
+        <CONCEPT>Kääntäen verrannollisuus</CONCEPT>
+        <DEFINITION>&lt;p&gt;Kääntäen verrannollisilla suureilla tarkoitetaan kahta mitattavaa asiaa, joista toisen kasvaessa toinen pienenee samassa suhteessa, eli esimerkiksi toisen kaksinkertaistuessa toinen puolittuu. Tämä johtaa siihen, että kääntäen verrannollisten suureiden tulo (eli kertolasku) on aina vakio. Kääntäen verrannollisia suureita ovat esimerkiksi tietyn vakiomatkan kulkemiseen
+    käytetty aika ja nopeus tai ojan kaivamiseen kulunut aika ja kaivajien määrä (kaivajien työteho oletetaan samaksi).&lt;/p&gt;</DEFINITION>
+        <FORMAT>1</FORMAT>
+        <USEDYNALINK>0</USEDYNALINK>
+        <CASESENSITIVE>0</CASESENSITIVE>
+        <FULLMATCH>0</FULLMATCH>
+        <TEACHERENTRY>1</TEACHERENTRY>
+      </ENTRY>
+    </ENTRIES>
+  </INFO>
+</GLOSSARY>

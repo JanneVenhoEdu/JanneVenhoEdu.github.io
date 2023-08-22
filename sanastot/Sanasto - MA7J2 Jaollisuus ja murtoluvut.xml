@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GLOSSARY>
+  <INFO>
+    <NAME>Sanasto - MA7J2 Jaollisuus ja murtoluvut</NAME>
+    <INTRO></INTRO>
+    <INTROFORMAT>1</INTROFORMAT>
+    <ALLOWDUPLICATEDENTRIES>0</ALLOWDUPLICATEDENTRIES>
+    <DISPLAYFORMAT>dictionary</DISPLAYFORMAT>
+    <SHOWSPECIAL>1</SHOWSPECIAL>
+    <SHOWALPHABET>1</SHOWALPHABET>
+    <SHOWALL>1</SHOWALL>
+    <ALLOWCOMMENTS>0</ALLOWCOMMENTS>
+    <USEDYNALINK>1</USEDYNALINK>
+    <DEFAULTAPPROVAL>1</DEFAULTAPPROVAL>
+    <GLOBALGLOSSARY>0</GLOBALGLOSSARY>
+    <ENTBYPAGE>10</ENTBYPAGE>
+    <ENTRIES>
+      <ENTRY>
+        <CONCEPT>Jakojäännös</CONCEPT>
+        <DEFINITION>&lt;p dir=&quot;ltr&quot; style=&quot;text-align: left;&quot;&gt;Jos jakolasku ei mene tasan, jää jäljelle jakojäännös. Jakolasku menee tasan, jos jakolaskun vastaus on kokonaisluku. Jos jakolasku menee tasan, jakojäännös on nolla. Esimerkiksi&lt;/p&gt;
+&lt;div class=&quot;editor-indent&quot; style=&quot;margin-left: 30px;&quot;&gt;
+    &lt;p dir=&quot;ltr&quot; style=&quot;text-align: left;&quot;&gt;\(\mathsf{\dfrac{12}{4} = 3}\)&lt;/p&gt;
+&lt;p dir=&quot;ltr&quot; style=&quot;text-align: left;&quot;&gt;\(\mathsf{\dfrac{14}{4} = 3\text{ jää }2}\)&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Jakojäännöstä käytetään lukujen välisen jaollisuuden selvittämiseen.&lt;/p&gt;</DEFINITION>
+        <FORMAT>1</FORMAT>
+        <USEDYNALINK>0</USEDYNALINK>
+        <CASESENSITIVE>0</CASESENSITIVE>
+        <FULLMATCH>0</FULLMATCH>
+        <TEACHERENTRY>1</TEACHERENTRY>
+      </ENTRY>
+      <ENTRY>
+        <CONCEPT>Jaollisuus</CONCEPT>
+        <DEFINITION>&lt;p&gt;Luku on jaollinen toisella luvulla, jos jako menee tasan, eli jakolaskusta ei jää jakojäännöstä (jakojäännös on nolla). Jaollisuutta voidaan tutkia jakolaskun laskemisen lisäksi erilaisilla jaollisuussäännöillä.&lt;/p&gt;</DEFINITION>
+        <FORMAT>1</FORMAT>
+        <USEDYNALINK>0</USEDYNALINK>
+        <CASESENSITIVE>0</CASESENSITIVE>
+        <FULLMATCH>0</FULLMATCH>
+        <TEACHERENTRY>1</TEACHERENTRY>
+      </ENTRY>
+      <ENTRY>
+        <CONCEPT>Jaollisuussäännöt</CONCEPT>
+        <DEFINITION>&lt;p&gt;Jokin luku on jaollinen luvulla&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;2, jos luvun viimeinen numero on 0, 2, 4, 6, tai 8&lt;/li&gt;
+        &lt;li&gt;3, jos luvun numeroiden summa on jaollinen luvulla 3&lt;/li&gt;
+        &lt;li&gt;4, jos sen kahden viimeisen numeron muodostama luku on jaollinen neljällä.&lt;/li&gt;
+        &lt;li&gt;5, jos luvun viimeinen numero on 0 tai 5&lt;/li&gt;
+        &lt;li&gt;6, jos se on jaollinen sekä kahdella että kolmella.&lt;/li&gt;
+        &lt;li&gt;7, jos luvun viimeinen numero kerrotaan kahdella, tämä vähennetään jäljelle jääneestä alkuperäisestä luvusta ja saatu erotus on jaollinen seitsemällä.&lt;/li&gt;
+        &lt;li&gt;8, jos sen kolmen viimeisen numeron muodostama luku on jaollinen kahdeksalla.&lt;/li&gt;
+        &lt;li&gt;9, jos luvun numeroiden summa on jaollinen luvulla 9.&lt;/li&gt;
+        &lt;li&gt;10, jos luvun viimeinen numero on 0.&lt;/li&gt;
+    &lt;/ul&gt;</DEFINITION>
+        <FORMAT>1</FORMAT>
+        <USEDYNALINK>0</USEDYNALINK>
+        <CASESENSITIVE>0</CASESENSITIVE>
+        <FULLMATCH>0</FULLMATCH>
+        <TEACHERENTRY>1</TEACHERENTRY>
+      </ENTRY>
+      <ENTRY>
+        <CONCEPT>Tekijöihin jakaminen</CONCEPT>
+        <DEFINITION>&lt;p&gt;Tekijöihin jakamisella tarkoitetaan luvun kirjoittamista kertolaskuna, jonka vastaus alkuperäinen luku on. Tekijöihin jakamalla voidaan etsiä lukuja, joilla alkuperäinen luku on jaollinen. Esimerkiksi&lt;/p&gt;
+&lt;div class=&quot;editor-indent&quot; style=&quot;margin-left: 30px;&quot;&gt;&lt;p&gt;\(\begin{align}\mathsf{12} &amp;amp;= \mathsf{1 \cdot 12}\\  &amp;amp;= \mathsf{2 \cdot 6}\\  &amp;amp;= \mathsf{3 \cdot 4}\end{align}\)&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;Luvun 12 tekijöitä ovat siis 1, 2, 3, 4, 6 ja 12. Luku 12 on myös jaollinen kaikilla edellä luetelluilla luvuilla.&lt;/p&gt;</DEFINITION>
+        <FORMAT>1</FORMAT>
+        <USEDYNALINK>0</USEDYNALINK>
+        <CASESENSITIVE>0</CASESENSITIVE>
+        <FULLMATCH>0</FULLMATCH>
+        <TEACHERENTRY>1</TEACHERENTRY>
+      </ENTRY>
+      <ENTRY>
+        <CONCEPT>Alkuluku</CONCEPT>
+        <DEFINITION>&lt;p&gt;Alkuluku on lukua 2 suurempi luku, joka on jaollinen vain luvulla 1 ja itsellään. Pienimpiä alkulukuja ovat 2, 3, 5, 7, 11,...&lt;/p&gt;</DEFINITION>
+        <FORMAT>1</FORMAT>
+        <USEDYNALINK>0</USEDYNALINK>
+        <CASESENSITIVE>0</CASESENSITIVE>
+        <FULLMATCH>0</FULLMATCH>
+        <TEACHERENTRY>1</TEACHERENTRY>
+      </ENTRY>
+      <ENTRY>
+        <CONCEPT>Alkutekijä</CONCEPT>
+        <DEFINITION>&lt;p&gt;Luvun alkutekijä on alkuluku, jolla jokin luku on jaollinen. Luku voidaan jakaa alkutekijöihin alkutekijäpuun avulla tai jakamalla lukua tekijöihin niin kauan, että kaikki tekijät ovat alkulukuja. Esimerkiksi luvun 12 alkutekijät saadaan seuraavasti:&lt;/p&gt;
+&lt;div class=&quot;editor-indent&quot; style=&quot;margin-left:30px;&quot;&gt;
+    &lt;table style=&quot;text-align:center;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td style=&quot;text-align:center;&quot;&gt;12&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td rowspan=&quot;5&quot; style=&quot;padding-left:20px;&quot;&gt;\(\begin{align}\mathsf{12} &amp;amp;= \mathsf{2 \cdot 6}\\ &amp;amp;= \mathsf{2 \cdot 2\cdot 3}\end{align}\)&lt;/td&gt;
+            &lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;/&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;\&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+            &lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;text-align:right;&quot;&gt;&lt;strong&gt;2&lt;/strong&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td style=&quot;text-align:center;&quot;&gt;6&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+            &lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;/&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;\&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+            &lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td style=&quot;text-align:right;&quot;&gt;&lt;strong&gt;2&lt;/strong&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+                &lt;td style=&quot;text-align:left;&quot;&gt;&lt;strong&gt;3&lt;/strong&gt;&lt;/td&gt;
+            &lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;</DEFINITION>
+        <FORMAT>1</FORMAT>
+        <USEDYNALINK>0</USEDYNALINK>
+        <CASESENSITIVE>0</CASESENSITIVE>
+        <FULLMATCH>0</FULLMATCH>
+        <TEACHERENTRY>1</TEACHERENTRY>
+      </ENTRY>
+      <ENTRY>
+        <CONCEPT>Sekaluku</CONCEPT>
+        <DEFINITION>&lt;p dir=&quot;ltr&quot; style=&quot;text-align:left;&quot;&gt;Jos murtoluvun osoittaja on suurempi kuin nimittäjä, murtolukua voidaan merkitä kokonaisosan ja murto-osan avulla sekalukuna. Sekaluvusta nähdään luvun suuruus helpommin, kun kokonaiset on helpommin hahmotettavissa. Esimerkiksi&lt;/p&gt;
+&lt;div class=&quot;editor-indent&quot; style=&quot;margin-left:30px;&quot;&gt;
+    &lt;p dir=&quot;ltr&quot; style=&quot;text-align:left;&quot;&gt;\(\mathsf{\dfrac{14}{3} = 4 \dfrac{2}{3}}\)&lt;/p&gt;
+&lt;/div&gt;</DEFINITION>
+        <FORMAT>1</FORMAT>
+        <USEDYNALINK>0</USEDYNALINK>
+        <CASESENSITIVE>0</CASESENSITIVE>
+        <FULLMATCH>0</FULLMATCH>
+        <TEACHERENTRY>1</TEACHERENTRY>
+      </ENTRY>
+      <ENTRY>
+        <CONCEPT>Supistaminen</CONCEPT>
+        <DEFINITION>&lt;p dir=&quot;ltr&quot; style=&quot;text-align:left;&quot;&gt;Supistaminen on murtoluvun kirjoittamista yksinkertaisemmassa muodossa. Supistaminen tapahtuu jakamalla osoittajaa ja nimittäjää samalla luvulla, jota kutsutaan supistajaksi. Sekä osoittajan että nimittäjän tulee olla jaollisia supistajalla. Murtoluku on supistettu yksinkertaisimpaan muotoon, jos murtolukua ei voi enää supistaa. Supistaja merkitään murtoluvun oikeaan yläkulmaan kaarella eroteltuna. Esimerkiksi&lt;/p&gt;&lt;div class=&quot;editor-indent&quot; style=&quot;margin-left:30px;&quot;&gt;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:left;&quot;&gt;\(\mathsf{\dfrac{28}{42}^{(2} \!\!= \dfrac{14}{21}^{(7} \!\!= \dfrac{2}{3}}\)&lt;/p&gt;&lt;/div&gt;</DEFINITION>
+        <FORMAT>1</FORMAT>
+        <USEDYNALINK>0</USEDYNALINK>
+        <CASESENSITIVE>0</CASESENSITIVE>
+        <FULLMATCH>0</FULLMATCH>
+        <TEACHERENTRY>1</TEACHERENTRY>
+      </ENTRY>
+      <ENTRY>
+        <CONCEPT>Laventaminen</CONCEPT>
+        <DEFINITION>&lt;p dir=&quot;ltr&quot; style=&quot;text-align:left;&quot;&gt;Laventamista käytetään kun halutaan saada murtoluvulle suurempi nimittäjä. Suurempi nimittäjä voidaan haluta esimerkiksi kun murtolukuja lasketaan yhteen tai vähennetään toisistaan. Tällöin murtolukujen tulee olla samannimisiä, eli niillä pitää olla sama nimittäjä. Laventamisessa murtoluvun osoittaja ja nimittäjä kerrotaan samalla luvulla. Laventaja merkitään murtoluvun vasempaan ylälaitaan kaarella erotettuna. Esimerkiksi&lt;/p&gt;&lt;div class=&quot;editor-indent&quot; style=&quot;margin-left:30px;&quot;&gt;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:left;&quot;&gt;\(\mathsf{\rule{0pt}{1.2em}^{3)}\!\dfrac{2}{5} = \dfrac{6}{15}}\)&lt;/p&gt;&lt;/div&gt;</DEFINITION>
+        <FORMAT>1</FORMAT>
+        <USEDYNALINK>0</USEDYNALINK>
+        <CASESENSITIVE>0</CASESENSITIVE>
+        <FULLMATCH>0</FULLMATCH>
+        <TEACHERENTRY>1</TEACHERENTRY>
+      </ENTRY>
+      <ENTRY>
+        <CONCEPT>Murtolukujen laskutoimitukset</CONCEPT>
+        <DEFINITION>&lt;p&gt;&lt;strong&gt;Murtolukujen yhteenlaskussa ja vähennyslaskussa&lt;/strong&gt; murtolukujen tulee olla samannimisiä, eli niillä pitää olla sama nimittäjä. Kun murtoluvut on lavennettu tai supistettu samannimisiksi yhteen- ja vähennyslasku suoritetaan osoittajien avulla. Nimittäjä ei
+    muutu. Esimerkiksi&lt;/p&gt;
+&lt;div class=&quot;editor-indent&quot; style=&quot;margin-left:30px;&quot;&gt;
+    &lt;p&gt;\(\mathsf{\rule{0pt}{1.2em}^{2)}\!\dfrac{2}{3} + \dfrac{1}{6} = \dfrac{4}{6} + \dfrac{1}{6} = \dfrac{5}{6}}\)&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Murtolukujen kertolaskussa&lt;/strong&gt; osoittajat kerrotaan keskenään ja nimittäjät kerrotaan keskenään. Esimerkiksi&lt;/p&gt;
+&lt;div class=&quot;editor-indent&quot; style=&quot;margin-left:30px;&quot;&gt;
+    &lt;p&gt;\(\mathsf{\dfrac{2}{3} \cdot \dfrac{3}{5} = \dfrac{6}{15}^{(3}\!\! = \dfrac{2}{5}}\)&lt;/p&gt;
+&lt;/div&gt;
+  &lt;p&gt;&lt;strong&gt;Murtolukujen jakolasku&lt;/strong&gt; muutetaan kertolaskuksi muuttamalla jakaja kääteisluvukseen. Esimerkiksi&lt;/p&gt;
+&lt;div class=&quot;editor-indent&quot; style=&quot;margin-left:30px;&quot;&gt;
+    &lt;p&gt;\(\mathsf{\dfrac{6}{7} : \dfrac{3}{2} = \dfrac{6}{7} \cdot \dfrac{2}{3} = \dfrac{12}{21}^{(3}\!\! = \dfrac{4}{7}}\)&lt;/p&gt;
+&lt;/div&gt;</DEFINITION>
+        <FORMAT>1</FORMAT>
+        <USEDYNALINK>0</USEDYNALINK>
+        <CASESENSITIVE>0</CASESENSITIVE>
+        <FULLMATCH>0</FULLMATCH>
+        <TEACHERENTRY>1</TEACHERENTRY>
+      </ENTRY>
+      <ENTRY>
+        <CONCEPT>Samannimisyys</CONCEPT>
+        <DEFINITION>&lt;p dir=&quot;ltr&quot; style=&quot;text-align: left;&quot;&gt;Murtoluvut ovat samannimisiä, jos niillä on sama nimittäjä. Murtolukujen tulee olla samannimisiä, kun murtolukuja lasketaan yhteen tai vähennetään toisistaan.&lt;/p&gt;</DEFINITION>
+        <FORMAT>1</FORMAT>
+        <USEDYNALINK>0</USEDYNALINK>
+        <CASESENSITIVE>0</CASESENSITIVE>
+        <FULLMATCH>0</FULLMATCH>
+        <TEACHERENTRY>1</TEACHERENTRY>
+        <ALIASES>
+          <ALIAS>
+            <NAME>Samannimiset murtoluvut</NAME>
+          </ALIAS>
+          <ALIAS>
+            <NAME>Samanniminen</NAME>
+          </ALIAS>
+        </ALIASES>
+      </ENTRY>
+      <ENTRY>
+        <CONCEPT>Suurin yhteinen tekijä</CONCEPT>
+        <DEFINITION>&lt;p&gt;Kahden tai useamman kokonaisluvun suurin yhteinen tekijä (SYT) on suurin kokonaisluku, jolla kaikki nämä luvut ovat jaollisia. Suurinta yhteistä tekijää käytetään mm. murtolukujen supistamisessa yksinkertaisimpaan muotoonsa. Esimerkiksi lukujen 18 ja
+    24 suurin yhteinen tekijä saadaan selvittämällä lukujen 18 ja 24 tekijät, valitsemalla niistä suurin yhteinen.&lt;/p&gt;
+&lt;div class=&quot;editor-indent&quot; style=&quot;margin-left: 30px;&quot;&gt;
+    &lt;p&gt;\(\mathsf{18 = 1 \cdot 18 = 2 \cdot 9 = 3 \cdot 6}\)&lt;/p&gt;
+&lt;p&gt;Luvun 18 tekijät ovat 1, 2, 3, &lt;strong&gt;6&lt;/strong&gt;, 9 ja 18.&lt;/p&gt;
+&lt;p&gt;\(\mathsf{24 = 1 \cdot 24 = 2 \cdot 12 = 3 \cdot 8 = 4 \cdot 6}\)&lt;/p&gt;
+&lt;p&gt;Luvun 24 tekijät ovat 1, 2, 3, 4, &lt;strong&gt;6&lt;/strong&gt;, 8, 12 ja 24.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Lukujen 18 ja 24 suurin yhteinen tekijä on 6.&lt;/p&gt;</DEFINITION>
+        <FORMAT>1</FORMAT>
+        <USEDYNALINK>0</USEDYNALINK>
+        <CASESENSITIVE>0</CASESENSITIVE>
+        <FULLMATCH>0</FULLMATCH>
+        <TEACHERENTRY>1</TEACHERENTRY>
+      </ENTRY>
+      <ENTRY>
+        <CONCEPT>Pienin yhteinen jaettava</CONCEPT>
+        <DEFINITION>&lt;p&gt;Pienin yhteinen jaettava (PYJ) on nimensä mukaisesti luku, joka on jaollinen kahdella halutulla luvuilla, ja on sen lisäksi pienin mahdollinen. Pienintä yhteistä jaettavaa voidaan käyttää murtolukujen laventamisessa samannimisiksi.&lt;/p&gt;
+&lt;p&gt;Aluksi etsitään lukujen alkutekijät, ja muodostetaan tulo, jossa on tekijöinä kaikkia edellä löydettyjä alkutekijöitä. Esimerkki selventää asiaa. Lukujen 18 ja 30 pienin yhteinen jaettava saadaan seuraavasti:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Jaetaan luku 18 alkutekijöihin: \(\mathsf{18=2 \cdot 3 \cdot 3}\)&lt;/li&gt;
+    &lt;li&gt;Jaetaan luku 30 alkutekijöihin: \(\mathsf{30=2 \cdot 3 \cdot 5}\)&lt;/li&gt;
+    &lt;li&gt;Pienin yhteinen jaettava on \(\mathsf{2 \cdot 3 \cdot 3 \cdot 5 = 90}\)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Mukaan tuloon otetaan siis kaikki erilaiset alkutekijät (2, 3 ja 5) ja luku 3 tulee kahteen kertaan, koska se esiintyy luvun 18 alkutekijänä kaksi kertaa. Luku 90 on siis pienin luku, joka on jaollinen sekä luvulla 18 että luvulla 30.&lt;/p&gt;</DEFINITION>
+        <FORMAT>1</FORMAT>
+        <USEDYNALINK>0</USEDYNALINK>
+        <CASESENSITIVE>0</CASESENSITIVE>
+        <FULLMATCH>0</FULLMATCH>
+        <TEACHERENTRY>1</TEACHERENTRY>
+      </ENTRY>
+      <ENTRY>
+        <CONCEPT>Murtoluku</CONCEPT>
+        <DEFINITION>&lt;p dir=&quot;ltr&quot; style=&quot;text-align:left;&quot;&gt;Murtoluluku on tapa esittää kokonaisen osia. Murtoluvussa on osoittaja, joka osoittaa osien lukumäärän ja nimittäjä, joka nimittää osan suuruuden. Esimerkiksi murtoluku &quot;kaksi kolmasosaa&quot; merkitään&lt;/p&gt;&lt;div class=&quot;editor-indent&quot; style=&quot;margin-left:30px;&quot;&gt;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:left;&quot;&gt;\(\mathsf{\dfrac{2}{3}}\)&lt;/p&gt;&lt;/div&gt;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:left;&quot;&gt;ja siinä on kuvattu siis kaksi kappaletta kolmasosia. Murtoluku on jakolasku, ja sen arvo voidaan laskea esimerkiksi laskimella, jolloin vastaukseksi saadaan usein desimaaliluku.&lt;/p&gt;&lt;div class=&quot;editor-indent&quot; style=&quot;margin-left:30px;&quot;&gt;&lt;p dir=&quot;ltr&quot; style=&quot;text-align:left;&quot;&gt;\(\mathsf{\dfrac{2}{3} = \text{0,666...}}\)&lt;/p&gt;&lt;/div&gt;</DEFINITION>
+        <FORMAT>1</FORMAT>
+        <USEDYNALINK>0</USEDYNALINK>
+        <CASESENSITIVE>0</CASESENSITIVE>
+        <FULLMATCH>0</FULLMATCH>
+        <TEACHERENTRY>1</TEACHERENTRY>
+      </ENTRY>
+    </ENTRIES>
+  </INFO>
+</GLOSSARY>
