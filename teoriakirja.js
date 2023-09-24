@@ -1,12 +1,12 @@
 $(document).ready(function () {
 	// Värien alustus
-	var backgroundColor = "#fafafa";
+	var backgroundColor = "#ffffff";
 	var fontColor = "#191919";
 	var navBackgroundColor = fontColor;
 	var linkFontColor = backgroundColor;
 	var hoverLinkColor = "#00afb975";
 	var activeLinkColor = "#7cf8ff";
-	var exampleBackgroundColor = "#60993e25";
+	var exampleBackgroundColor = "#60993e20";
 	var titleBackgroundColor = "#00afb940";
 	var titleFontColor = fontColor;
 	var subtitleBackgroundColor = "#93162140";
@@ -190,5 +190,11 @@ $(document).ready(function () {
 		$("#"+id).css("color", activeLinkColor);
 		$(".minilink").css("color", linkFontColor);
 		$(this).css("color", activeLinkColor);
+	});
+	
+	// Esimerkkien numerointi
+	$(".example").each(function(i){
+		var exampleText = $(this).find("strong").first();
+		exampleText.html(exampleText.html().replace(":", " " + (i+1) + ":"));
 	});
 });
