@@ -1,0 +1,13 @@
+a|b		a tai b
+[abc]		jokin kirjaimista a, b tai c
+[^a]		muu kuin a
+[0-9]		jokin numero väliltä
+.		jokerimerkki
+\w,\d,\s	kirjain, numero, rivi/väli/tab
+( )		ehtojen ryhmittely
+{5}		5 merkkiä
+*		0 - monta merkkiä
++		1 - monta merkkiä
+^		edessä ei muuta
+$		takana ei muuta
+?		Ei tarvitse olla

@@ -1,0 +1,12 @@
+Tekstikenttien taustat:
+
+Vihreä:		0.5, 1, 0.5
+		128, 255, 128
+
+Punainen:	1, 0.8, 0.8
+		255, 204, 204
+
+GG-upotuksen lisämääreet:
+
+style="width: 672px; padding-top: 453px; position: relative;" 
+style="border: 0px; width="100%"; heigth: 100%; position: absolute; left: 0; top: 0"

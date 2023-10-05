@@ -1,0 +1,247 @@
+<!-- Vihjenappi -->
+<p>a) Tehtävänanto <button class="vihje" style="padding: 0px; border-radius: 100%; width: 20px; height: 20px; font-size: 12px; background-color: #00990032; border: none">?</button></p>
+<div class="editor-indent" style="margin: 0px 0px 10px 30px; display: none; background-color: #33807D16; padding: 10px 10px 5px 10px;">
+	<p>Vihje</p>
+</div>
+
+<!-- Vastauskenttä -->
+<p>a) Vastaus on <input class="tarkista" id="0" size="6"> kappaletta. <span style="display: none; color: #009900;">Virheilmoitus</span></p>
+
+<!-- Vastausalue -->
+<p><strong>2. Tarkista tehtävä kirjoittamalla vastaus tarkistusruutuun.</strong></p>
+<div style="padding: 5px; margin-left: 30px; background-color: #E1F5FE">
+    <p>a) <input class="tarkista" id="0" size="6"></p>
+    <p>b) <input class="tarkista" id="1" size="6"></p>
+    <p>c) <input class="tarkista" id="2" size="6"></p>
+    <p>d) <input class="tarkista" id="3" size="6"></p>
+    <p>e) <input class="tarkista" id="4" size="6"></p>
+    <p>f) <input class="tarkista" id="5" size="6"></p>
+</div>
+
+<!-- Vastauksenkäsittely (useampi oikein) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var correctAnswers = [
+            ["8"],
+            ["12.5", "13"],
+            ["37.5", "38"],
+            ["87.5", "88"]
+        ];	
+        $(".tarkista").keydown(function(e) {
+            if (e.key == "Enter" || e.key == "Tab") {
+                var item = +$(this).attr("id");
+                var corr = correctAnswers[item];
+                var user = $(this).val().replace(/\s/g, "").replace(",", ".");
+                if (corr.includes(user)) {
+                    $(this).css("background-color", "#80FF80");
+                    $(this).nextAll("span").hide();
+                } else {
+                    if (user.length > 0) {
+                        $(this).nextAll("span").show();
+                        $(this).css("background-color", "#FFCCCC");
+                    }
+                }
+            }
+        });
+        $(".vihje").click(function() {
+            $(this).parent().next().slideToggle();
+        });
+    });
+</script>
+
+<!-- Vastausalue -->
+<p><strong>2. Tarkista tehtävä kirjoittamalla vastaus tarkistusruutuun.</strong></p>
+<div style="padding: 5px; margin-left: 30px; background-color: #E1F5FE">
+    <p>a) <input class="tarkista" id="0" size="6"></p>
+    <p>b) <input class="tarkista" id="1" size="6"></p>
+    <p>c) <input class="tarkista" id="2" size="6"></p>
+    <p>d) <input class="tarkista" id="3" size="6"></p>
+    <p>e) <input class="tarkista" id="4" size="6"></p>
+    <p>f) <input class="tarkista" id="5" size="6"></p>
+</div>
+<!-- Vastauksenkäsittely (yksi oikein) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var correctAnswers = ["1", "2", "3", "4", "5", "6"];
+        $(".tarkista").keydown(function(e) {
+            if (e.key == "Enter" || e.key == "Tab") {
+                var item = +$(this).attr("id");
+                var corr = correctAnswers[item];
+                var user = $(this).val().replace(/\s/g, "").replace(",", ".");
+                if (user == corr) {
+                    $(this).css("background-color", "#80FF80");
+                    $(this).nextAll("span").hide();
+                } else {
+                    if (user.length > 0) {
+                        $(this).nextAll("span").show();
+                        $(this).css("background-color", "#FFCCCC");
+                    }
+                }
+            }
+        });
+        $(".vihje").click(function() {
+            $(this).parent().next().slideToggle();
+        });
+    });
+</script>
+
+<!-- Vastausalue -->
+<p><strong>2. Tarkista tehtävä kirjoittamalla vastaus tarkistusruutuun.</strong></p>
+<div style="padding: 5px; margin-left: 30px; background-color: #E1F5FE">
+    <p>a) <input class="tarkista" id="0" size="6"></p>
+    <p>b) <input class="tarkista" id="1" size="6"></p>
+    <p>c) <input class="tarkista" id="2" size="6"></p>
+    <p>d) <input class="tarkista" id="3" size="6"></p>
+    <p>e) <input class="tarkista" id="4" size="6"></p>
+    <p>f) <input class="tarkista" id="5" size="6"></p>
+</div>
+<!-- Vastauksenkäsittely (yksi oikein, väärä pyöristys) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var correctAnswers = ["5.7", "37", "4.7", "41.2"];
+        var incorrectAnswers = [
+            ["6", "5.65"],
+            ["40", "37.1"],
+            ["5", "4.71"],
+            ["41", "41.15"]
+        ];
+        $(".tarkista").keydown(function(e) {
+            if (e.key == "Enter" || e.key == "Tab") {
+                var item = +$(this).attr("id");
+                var corr = correctAnswers[item];
+                var user = $(this).val().replace(/\s/g, "").replace(",", ".");
+                if (user == corr) {
+                    $(this).css("background-color", "#80FF80");
+                    $(this).next().hide();
+                } else {
+                    var incorr = incorrectAnswers[item];
+                    if (incorr.includes(user)) {
+                        $(this).nextAll("span").show();
+                        $(this).css("background-color", "#FFCCCC");
+                    } else if (user.length > 0) {
+						$(this).nextAll("span").hide();
+                        $(this).css("background-color", "#FFCCCC");
+                    }
+                }
+            }
+        });
+        $(".vihje").click(function() {
+            $(this).parent().next().slideToggle();
+        });
+    });
+</script>
+
+<!-- Kevyt taulukko -->
+<table>
+	<thead>
+		<tr>
+			<th class="otsikko vasen">€</th>
+			<th class="otsikko oikea">\(\mathsf{\%}\)</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="vasen">\(\mathsf{}\)</td>
+			<td class="oikea">\(\mathsf{100}\)</td>
+		</tr>
+		<tr>
+			<td class="vasen">\(\mathsf{}\)</td>
+			<td class="oikea">\(\mathsf{}\)</td>
+		</tr>
+	</tbody>
+</table><br>
+<p><strong>2. Tarkista tehtävä kirjoittamalla vastaus tarkistusruutuun.</strong></p>
+<div style="padding: 5px; margin-left: 30px; background-color: #E1F5FE">
+    <p>a) <input class="tarkista" id="0" size="6"> %</p>
+    <p>b) <input class="tarkista" id="1" size="6"> %</p>
+    <p>c) <input class="tarkista" id="2" size="6"> %</p>
+</div>
+<!-- Vastauksenkäsittely (yksi oikein) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var correctAnswers = ["60", "70", "10"];
+        $(".tarkista").keydown(function(e) {
+            if (e.key == "Enter" || e.key == "Tab") {
+                var item = +$(this).attr("id");
+                var corr = correctAnswers[item];
+                var user = $(this).val().replace(/\s/g, "").replace(",", ".");
+                if (user == corr) {
+                    $(this).css("background-color", "#80FF80");
+                    $(this).next("span").hide();
+                } else {
+                    if (user.length > 0) {
+                        $(this).next("span").show();
+                        $(this).css("background-color", "#FFCCCC");
+                    }
+                }
+            }
+        });
+        $(".vihje").click(function() {
+            $(this).parent().next().slideToggle();
+        });
+        $(".otsikko").css({
+            "width": "60px",
+            "text-align": "center",
+            "border-bottom": "1px solid black"
+        });
+        $(".vasen").css({
+            "border-right": "1px solid black",
+            "text-align": "center"
+        });
+        $(".oikea").css({
+            "border-left": "1px solid black",
+            "text-align": "center"
+        });
+    });
+</script>
+
+<!-- Bonustehtäviä ja tarkistus -->
+
+    <p><button class="vihje" style="background-color: #00990032; border: hidden; border-radius: 5px">Bonustehtävä</button></p>
+    <div class="editor-indent" style="margin: 0px 0px 10px 30px; display: none; background-color: #33807D16; padding: 10px 10px 5px 10px;">
+        <p>d) Kuinka monta prosenttia SDP:n edustajamäärä nousi vuodesta 2015 vuoteen 2019?</p>
+        <p>e) Kuinka monta prosenttia Keskustan edustajamäärä laski vuodesta 2015 vuoteen 2019?</p>
+    </div>
+</div>
+<p><strong>2. Tarkista tehtävä kirjoittamalla vastaus tarkistusruutuun.</strong></p>
+<div style="padding: 5px; margin-left: 30px; background-color: #E1F5FE">
+    <p>a) SDP:n edustajamäärä nousi <input class="tarkista" id="0" size="6"> prosenttiyksikköä.</p>
+    <p>b) Keskustan edustajamäärä laski&nbsp;<input class="tarkista" id="1" size="6">&nbsp;prosenttiyksikköä.</p>
+    <p>c) Edustajamäärä 2015: <input class="tarkista" id="2" size="6"> Osuus prosentteina 2015: <input class="tarkista" id="3" size="6">&nbsp;%<br>Edustajamäärä 2019: <input class="tarkista" id="4" size="6"> Osuus prosentteina 2019: <input class="tarkista"
+            id="5" size="6">&nbsp;%</p>
+</div>
+<div style="padding: 5px; margin-left: 30px; background-color: #33807D16">
+    <p>Bonustehtävä:</p>
+    <p>d) SDP:n edustajamäärä nousi <input class="tarkista" id="6" size="6"> prosenttia.</p>
+    <p>e) Keskustan edustajamäärä nousi <input class="tarkista" id="7" size="6"> prosenttia.</p>
+</div>
+<!-- Vastauksenkäsittely (yksi oikein) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var correctAnswers = ["3", "9", "1", "0.5", "2", "1", "18", "37"];
+        $(".tarkista").keydown(function(e) {
+            if (e.key == "Enter" || e.key == "Tab") {
+                var item = +$(this).attr("id");
+                var corr = correctAnswers[item];
+                var user = $(this).val().replace(/\s/g, "").replace(",", ".");
+                if (user == corr) {
+                    $(this).css("background-color", "#80FF80");
+                    $(this).next("span").hide();
+                } else {
+                    if (user.length > 0) {
+                        $(this).next("span").show();
+                        $(this).css("background-color", "#FFCCCC");
+                    }
+                }
+            }
+        });
+        $(".vihje").click(function() {
+            $(this).parent().next().slideToggle();
+        });
+    });
+</script>
