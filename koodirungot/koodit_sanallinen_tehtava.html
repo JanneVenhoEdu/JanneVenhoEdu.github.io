@@ -201,22 +201,20 @@
 
 <!-- Bonustehtäviä ja tarkistus -->
 
-    <p><button class="vihje" style="background-color: #00990032; border: hidden; border-radius: 5px">Bonustehtävä</button></p>
+    <p><button id="bonus" style="background-color: #00990032; border: hidden; border-radius: 5px">Bonustehtävä</button></p>
     <div class="editor-indent" style="margin: 0px 0px 10px 30px; display: none; background-color: #33807D16; padding: 10px 10px 5px 10px;">
-        <p>d) Kuinka monta prosenttia SDP:n edustajamäärä nousi vuodesta 2015 vuoteen 2019?</p>
-        <p>e) Kuinka monta prosenttia Keskustan edustajamäärä laski vuodesta 2015 vuoteen 2019?</p>
+        <p>d) Bonustehtävä</p>
     </div>
 </div>
 <p><strong>2. Tarkista tehtävä kirjoittamalla vastaus tarkistusruutuun.</strong></p>
 <div style="padding: 5px; margin-left: 30px; background-color: #E1F5FE">
-    <p>a) SDP:n edustajamäärä nousi <input class="tarkista" id="0" size="6"> prosenttiyksikköä.</p>
-    <p>b) Keskustan edustajamäärä laski&nbsp;<input class="tarkista" id="1" size="6">&nbsp;prosenttiyksikköä.</p>
-    <p>c) Edustajamäärä 2015: <input class="tarkista" id="2" size="6"> Osuus prosentteina 2015: <input class="tarkista" id="3" size="6">&nbsp;%<br>Edustajamäärä 2019: <input class="tarkista" id="4" size="6"> Osuus prosentteina 2019: <input class="tarkista"
-            id="5" size="6">&nbsp;%</p>
+    <p>a) <input class="tarkista" id="0" size="6"></p>
+    <p>b) <input class="tarkista" id="1" size="6"></p>
+    <p>c) <input class="tarkista" id="2" size="6"></p>
 </div>
-<div style="padding: 5px; margin-left: 30px; background-color: #33807D16">
-    <p>d) SDP:n edustajamäärä nousi <input class="tarkista" id="6" size="6"> prosenttia.</p>
-    <p>e) Keskustan edustajamäärä nousi <input class="tarkista" id="7" size="6"> prosenttia.</p>
+<div style="padding: 5px; margin-left: 30px; background-color: #33807D16; display: none;">
+    <p>d) <input class="tarkista" id="3" size="6"></p>
+    <p>e) <input class="tarkista" id="4" size="6"></p>
 </div>
 <!-- Vastauksenkäsittely (yksi oikein) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -242,5 +240,10 @@
         $(".vihje").click(function() {
             $(this).parent().next().slideToggle();
         });
+        $("#bonus").click(function() {
+            $(this).parent().next().slideToggle();
+			$("#bonus_tarkistus").slideToggle();
+        });
+    });
     });
 </script>
