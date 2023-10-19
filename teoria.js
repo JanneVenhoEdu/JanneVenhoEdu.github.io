@@ -31,6 +31,7 @@ $(document).ready(function() {
 		chapter.hide();
 	}
 	// Näytetään ensimmäinen luku (otsikko + sisältö)
+	titles.first().addClass("activeChapter");
 	titles.first().next().show();
 	// Lisätään ensimmäisen luvun otsikko ja kurssin nimi navigointipalkkiin
 	$("#caption").html(titles.first().html());
