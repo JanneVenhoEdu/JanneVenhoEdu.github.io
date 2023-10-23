@@ -5,9 +5,17 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		<script src="https://www.geogebra.org/apps/deployggb.js"></script>
 		<script src="https://jannevenhoedu.github.io/teoria.js"></script>
 		<link rel="stylesheet" media="screen and (min-width: 350px)" href="https://jannevenhoedu.github.io/teoriakirja.css">
 		<link rel="stylesheet" media="screen and (max-width: 350px)" href="https://jannevenhoedu.github.io/teorialohko.css">
+		<script>  
+			var params = {"appName": "classic", "enableRightClick": "false", "width": "452", "height": "267", "filename":"https://jannevenhoedu.github.io/ma7/j2/t/ma7j1_teoria_jakolasku_allekkain.ggb" };
+			var applet = new GGBApplet(params, true);
+			window.addEventListener("load", function() { 
+				applet.inject('geogebra');
+			});
+		</script>
 	</head>
 	<body>
 		<div id="nav">
@@ -30,7 +38,7 @@
 					<div class="indent">
 						<p>\( \mathsf{\color{blue}{3} \cdot \color{green}{5} = \color{red}{15} \qquad\qquad \dfrac{\color{red}{15}}{\color{blue}{3}} = \color{green}{5} \qquad\qquad \dfrac{\color{red}{15}}{\color{green}{5}} = \color{blue}{3}} \)</p>
 					</div>
-					<p>Jakolaskua voidaan merkitä joko jakoviivalla (eli murtolukuna) kuten yllä, kaksoispisteellä \(\mathsf{15:3=5}\) tai kauttaviivalla \(\mathsf{15/3=5}\).</p>
+					<p style="margin-bottom: 0px">Jakolaskua voidaan merkitä joko jakoviivalla (eli murtolukuna) kuten yllä, kaksoispisteellä \(\mathsf{15:3=5}\) tai kauttaviivalla \(\mathsf{15/3=5}\).</p>
 				</div>
 				<h3>Jakojäännös</h3>
 				<div>
@@ -52,7 +60,7 @@
 						<li>"Kuinka monta kertaa kolme mahtuu 36:een?"<br>\(\mathsf{\quad3+3+3+3+3+3+3+3+3+3+3+3 = 36}\)</li>
 						<li>"36 jaetaan kolmeen yhtä suureen osaan. Kuinka suuri on yksi osa?"<br>\(\mathsf{\quad 12 + 12 + 12 = 36}\)</li>
 					</ul>
-					<p>Näin jakolaskun vastaukseksi saadaan 12.</p>
+					<p style="margin-bottom: 0px">Näin jakolaskun vastaukseksi saadaan 12.</p>
 				</div>
 				<h3>Jakolasku osittain jakamalla</h3>
 				<div>
@@ -71,11 +79,7 @@
 				<div>
 					<p>Jakolasku, jossa jaettava on suuri ja jakaja on pieni, voidaan laskea allekkain tai jakokulmassa. Nämä menetelmät eroavat toisistaan vain hieman erilaisen merkinnän kautta.</p>
 					<p>Ideana on jakaa jaettavan luvun numerot osissa lähtien liikkelle vasemmanpuoleisimmasta numerosta. Seuraava numero lisätään edellisen jakolaskun jakojäännökseen, ja tätä toistetaan kunnes koko luku on käyty läpi. Esimerkki jakolaskusta löytyy kohdasta.</p>
-					<div class="indent">
-						<div class="gg_upotus" style="width: 452px; padding-top: 267px; position: relative;">
-							<iframe scrolling="no" title="ma7j1_reppu_jakolasku_allekkain" src="https://www.geogebra.org/material/iframe/id/rqv7mxh7/width/452/height/267/border/888888/sfsb/false/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false"
-								width="100%" height="100%" style="border:0px; position: absolute; left: 0; top: 0"> </iframe>
-						</div>
+					<div id="geogebra">
 					</div>
 				</div>
 			</div>
