@@ -73,4 +73,16 @@ $(document).ready(function() {
 		closeNav();
 		navOpen = false;
 	});
+	// GeoGebra-upotusten lataaminen
+	$(".ggb-embed").each(function(i){
+		var targetID = $(this).attr("id");
+		var appWidth = $(this).css("width");
+		var appHeight = $(this).css("height");
+		var filename = $(this).attr("src");
+		var params = {"appName": "classic", "enableRightClick": "false", "width": width, "height": height, "filename": filename };
+		var applet = new GGBApplet(params, true);
+		window.addEventListener("load", function() { 
+			applet.inject(targetID);
+		});
+	});
 });
