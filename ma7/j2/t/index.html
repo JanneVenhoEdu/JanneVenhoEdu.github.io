@@ -7,15 +7,34 @@
 		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 		<script src="https://www.geogebra.org/apps/deployggb.js"></script>
 		<script src="https://jannevenhoedu.github.io/teoria.js"></script>
+		<!--<script src="teoria.js"></script>-->
 		<link rel="stylesheet" media="screen and (min-width: 350px)" href="https://jannevenhoedu.github.io/teoriakirja.css">
 		<link rel="stylesheet" media="screen and (max-width: 350px)" href="https://jannevenhoedu.github.io/teorialohko.css">
 		<!--<script>  
 			var params = {"appName": "classic", "enableRightClick": "false", "width": "452", "height": "267", "filename":"https://jannevenhoedu.github.io/ma7/j2/t/ma7j1_teoria_jakolasku_allekkain.ggb" };
 			var applet = new GGBApplet(params, true);
 			window.addEventListener("load", function() { 
-				applet.inject('geogebra');
+				applet.inject('jakolasku_allekkain');
 			});
 		</script>-->
+		<script>
+			$(document).ready(function() {
+				// GeoGebra-upotusten lataaminen
+				$(".ggb-embed").each(function(){
+					alert("Moro");
+					var targetID = $(this).attr("id");
+					var appWidth = $(this).css("width");
+					var appHeight = $(this).css("height");
+					var filename = $(this).html();
+					alert(targetID + "\n" + appWidth + "\n" + appHeight + "\n" + filename);
+					var params = {"appName": "classic", "enableRightClick": "false", "width": appWidth, "height": appHeight, "filename": filename };
+					var applet = new GGBApplet(params, true);
+					window.addEventListener("load", function() { 
+						applet.inject(targetID);
+					});
+				});
+			});
+		</script>
 	</head>
 	<body>
 		<div id="nav">
@@ -79,7 +98,8 @@
 				<div>
 					<p>Jakolasku, jossa jaettava on suuri ja jakaja on pieni, voidaan laskea allekkain tai jakokulmassa. Nämä menetelmät eroavat toisistaan vain hieman erilaisen merkinnän kautta.</p>
 					<p>Ideana on jakaa jaettavan luvun numerot osissa lähtien liikkelle vasemmanpuoleisimmasta numerosta. Seuraava numero lisätään edellisen jakolaskun jakojäännökseen, ja tätä toistetaan kunnes koko luku on käyty läpi. Esimerkki jakolaskusta löytyy kohdasta.</p>
-					<div class="gg_embed" id="jakolasku_allekkain" style="width: 452; height: 267;" src="https://jannevenhoedu.github.io/ma7/j2/t/ma7j1_teoria_jakolasku_allekkain.ggb">
+					<div class="ggb_embed" id="jakolasku_allekkain" style="width: 452; height: 267;">
+						https://jannevenhoedu.github.io/ma7/j2/t/ma7j1_teoria_jakolasku_allekkain.ggb
 					</div>
 				</div>
 			</div>
