@@ -6,10 +6,9 @@
 		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 		<script src="https://www.geogebra.org/apps/deployggb.js"></script>
-		<script src="https://jannevenhoedu.github.io/teoria.js"></script>
-		<!--<script src="teoria.js"></script>-->
-		<link rel="stylesheet" media="screen and (min-width: 350px)" href="https://jannevenhoedu.github.io/teoriakirja.css">
-		<link rel="stylesheet" media="screen and (max-width: 350px)" href="https://jannevenhoedu.github.io/teorialohko.css">
+		<script src="../../../teoria.js"></script>
+		<link rel="stylesheet" media="screen and (min-width: 350px)" href="../../../teoriakirja.css">
+		<link rel="stylesheet" media="screen and (max-width: 350px)" href="../../../teorialohko.css">
 	</head>
 	<body>
 		<div id="nav">
@@ -80,32 +79,39 @@
 			</div>
 			<h2>2. Jaollisuus</h2>
 				<div>
-					<p>Luku on <b>jaollinen</b> toisella luvulla, jos jako menee tasan, eli jakolaskusta ei jää jakojäännöstä. Esimerkiksi<br></p>
-
-					<div class="indent">
-						<p>\( \mathsf{13:4 = 3 \text{ jää } 1 \qquad \therefore \text{Luku 13 } \color{red}{\text{ei ole}} \text{ jaollinen luvulla 4.}}\)</p>
+					<p>Luku on <b>jaollinen</b> toisella luvulla, jos jako menee tasan, eli jakolaskusta ei jää jakojäännöstä.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong></p>
+						<div class="indent">
+							<p>a) Onko luku 13 jaollinen luvulla 4?</p>
+							<div class="indent">
+								<p>\( \mathsf{13:4 = 3 \text{ jää } 1}\)</p>
+							</div>
+							<p><strong>Vastaus:</strong> Luku 13 ei ole jaollinen luvulla 4.</p>
+							<p>b) Onko luku 21 jaollinen luvulla 3?</p>
+							<div class="indent">
+								<p>\(\mathsf{21:3 = 7}\)</p>
+							</div>
+							<p><strong>Vastaus:</strong> Luku 21 on jaollinen luvulla 3.</p>
+						</div>
 					</div>
-
-					<div class="indent">
-						<p>\(\mathsf{21:3 = 7 \qquad \therefore \text{Luku 21 } \color{red}{\text{on}} \text{ jaollinen luvulla 3.}}\)</p>
+					<h3>Jaollisuuden selvittäminen osittain jakamalla</h3>
+					<div>
+						<p>Jakojäännöksen voi selvittää jakamalla jakolasku osiin. Tällöin jakamatta jääneen osan osoittaja kertoo jakojäännöksen.</p>
+						<div class="example">
+							<p><strong>Esimerkki:</strong> Onko luku 2345 jaollinen luvulla 3?</p>
+							<div class="indent">
+								<p>\(\begin{align}\mathsf{\dfrac{2345}{3}} &= \mathsf{\dfrac{2100}{3} + \dfrac{240}{3} + \dfrac{3}{3} + \dfrac{2}{3}}\\ &= \mathsf{700\ +\  80\ +\ 1\ +\  \dfrac{\color{red}{2}}{3}}\\ &= \mathsf{781 \text{ jää } \color{red}{2}}\end{align}\)</p>
+							</div>
+							<p><strong>Vastaus:</strong> Luku 2345 ei ole jaollinen luvulla 3.</p>
+						</div>
 					</div>
-
-					<h3>Jaollisuuden selvittäminen osittain jakamalla</h3><div>
-
-					<p>Jakojäännöksen voi selvittää jakamalla jakolasku osiin. Tällöin jakamatta jääneen osan osoittaja kertoo jakojäännöksen. <b>Esimerkiksi</b></p>
-
-					<div class="indent">
-						<p>\( \mathsf{\dfrac{2345}{3} = \dfrac{2100}{3} + \dfrac{240}{3} + \dfrac{3}{3} + \dfrac{2}{3} = 700 + 80 + 1 + \dfrac{\color{red}{2}}{3} = 781 \text{ jää } \color{red}{2}}\)</p>
-					</div>
-					</div>
-					<h3>Jaollisuuden selvittäminen jakamalla allekkain</h3><div>
-
-					<p>Allekkain jakolaskussa viimeisen jakolaskun jälkeen jäävä jakojäännös on koko jakolaskun jakojäännös. Tällöin laskua ei siis lasketa desimaaliluvuille saakka, vaan laskeminen lopetetaan kun koko jaettava on käyty läpi. Alla on esimerkki jaollisuuden
-						selvittämisestä allekkain jakolaskussa.</p>
-
-					<div class="indent">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/a5vqwnsKWcQ?rel=0" frameborder="0" allowfullscreen=""></iframe>
-					</div>
+					<h3>Jaollisuuden selvittäminen jakamalla allekkain</h3>
+					<div>
+						<p>Allekkain jakolaskussa viimeisen jakolaskun jälkeen jäävä jakojäännös on koko jakolaskun jakojäännös. Tällöin laskua ei siis lasketa desimaaliluvuille saakka, vaan laskeminen lopetetaan kun koko jaettava on käyty läpi. Alla on esimerkki jaollisuuden selvittämisestä allekkain jakolaskussa.</p>
+						<div class="indent">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/a5vqwnsKWcQ?rel=0" frameborder="0" allowfullscreen=""></iframe>
+						</div>
 					</div>
 					<h3>Jaollisuussäännöt</h3><div>
 
