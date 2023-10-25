@@ -45,6 +45,9 @@ h3 {
 	border-radius: 5px;
 	padding: 3px;
 }
+h3:hover {
+	color: var(--green2);
+}
 p {
 	text-align: justify;
 }

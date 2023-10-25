@@ -32,6 +32,9 @@ h3 {
 	cursor: pointer;
 	border-radius: 5px;
 }
+h3:hover {
+	color: var(--green2);
+}
 p {
 	text-align: justify;
 }
