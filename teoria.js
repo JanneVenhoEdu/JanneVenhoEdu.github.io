@@ -6,6 +6,32 @@ window.MathJax = {
 		}
 	}
 };
+// GeoGebra-applettien lataus
+function downloadGG(){
+	var ggInfo = [];
+	$(".gg").each(function() {
+		var target = $(this).attr("id");
+		var width = $(this).css("width").replace("px", "");
+		var height = $(this).css("height").replace("px", "");
+		var file = $(this).html().trim();
+		ggInfo.push({"target": target, "width": width, "height": height, "file": file});
+	});
+	var params = [];
+	var targets = [];
+	ggInfo.forEach(function(item){
+		params.push({"appName": "classic", "enableRightClick": "false", "width": item.width, "height": item.height, "filename": item.file});
+		targets.push(item.target);
+	});
+	var applets = [];
+	for (var i = 0; i < params.length; i++){
+		applets.push(new GGBApplet(params[i], true));
+	}
+	window.addEventListener("load", function() {
+		for (var i = 0; i < applets.length; i++){
+			applets[i].inject(targets[i]);
+		}
+	});
+}
 // Funktiot navigaatiopalkin avaamiseen ja sulkemiseen
 function openNav() {
 	$("#bar1").css("transform", "translate(0, 11px) rotate(-45deg)");
