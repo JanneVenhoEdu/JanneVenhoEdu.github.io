@@ -46,7 +46,7 @@ h3 {
 	padding: 3px;
 }
 h3:hover {
-	color: var(--green2);
+	color: var(--orange2);
 }
 p {
 	text-align: justify;
