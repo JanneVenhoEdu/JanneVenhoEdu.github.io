@@ -269,26 +269,55 @@
 				</div>
 			<h2>4. Alkuluvut</h2>
 				<div>
-					<p><strong>Alkuluvut</strong>&nbsp;ovat sellaisia lukua 1 suurempia positiivisia kokonaislukuja, jotka eivät ole jaollisia millään muilla luvuilla kuin itsellään ja luvulla 1. Alkuluvut ovat siis jaottomia lukuja. <strong>Esimerkiksi</strong></p>
-					<div class="indent">
-						<p><span>\(\mathsf{13 = 1 \cdot 13 \qquad \qquad 14 = 1 \cdot 14 = 2 \cdot 7}\)</span></p>
+					<p><strong>Alkuluvut</strong> ovat sellaisia lukua 1 suurempia positiivisia kokonaislukuja, jotka eivät ole jaollisia millään muilla luvuilla kuin itsellään ja luvulla yksi. Alkuluvut ovat siis jaottomia lukuja.</p>
+					<div class="example">
+						<p><strong>Esimerkki: </strong>Jaa luku tekijöihin ja tutki, onko kyseessä alkuluku.</p>
+						<div class="indent">
+							<p>a) 13</p>
+							<div class="indent">
+								<p>\(\mathsf{13 = 1 \cdot 13}\)</p>
+								<p>Luvun 13 tekijät ovat 1 ja 13.</p>
+							</div>
+							<p><strong>Vastaus:</strong> Luku 13 on alkuluku.</p>
+							<p>b)</p>
+							<div class="indent">
+								<p>\(\mathsf{14 = 1 \cdot 14 = 2 \cdot 7}\)</p>
+								<p>Luvun 14 tekijät ovat 1, 2, 7 ja 14.</p>
+							</div>
+						</div>
 					</div>
-					<p><span>Luvun 13 tekijöinä ovat vain luku 1 ja luku 13 itse, joten luku 13 on alkuluku.<br>Luvun 14 tekijöinä ovat luvut 1, 2, 7 ja 14, joten luku 14 ei ole alkuluku.<br></span></p>
-					<p>Alkulukuja voidaan etsiä mm. <strong>alkulukuseulan</strong> avulla.</p>
-
-					<div class="indent">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/z5aw_j-uYSA?rel=0" frameborder="0" allowfullscreen=""></iframe>
-					</div>
-					<h3>Alkutekijät</h3><div>
-					<p>Kun luku jaetaan tekijöhin siten, että kaikki tekijät ovat alkulukuja, kutsutaan näitä lukuja <strong>alkutekijöiksi</strong>. <strong>Esimerkiksi</strong></p>
-					<div class="indent">
-						<p>\(\mathsf{30 = 2 \cdot 3 \cdot 5}\)</p>
-						<p>\(\mathsf{50 = 2 \cdot 5 \cdot 5}\)</p>
-						<p>\(\mathsf{72 = 2 \cdot 2 \cdot 2 \cdot 3 \cdot 3}\)</p>
-					</div>
-					<p>Alkutekijät voidaan löytää päättelemällä, mutta suurten lukujen tapauksessa tehtävää helpottaa ns. <strong>tekijöihinjakopuu</strong></p>
-					<div class="indent">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/b5H8b6Yla4k?rel=0" frameborder="0" allowfullscreen=""></iframe>
+					<h3>Alkutekijät ja tekijöihinjakopuu</h3>
+					<div>
+						<p>Kun luku jaetaan tekijöhin siten, että kaikki tekijät ovat alkulukuja, kutsutaan näitä lukuja <strong>alkutekijöiksi</strong>.</p>
+						<div class="example">
+							<p><strong>Esimerkki:</strong> Jaa luvut alkutekijöihin.</p>
+							<div class="indent">
+								<p>a) 30</p>
+								<div class="indent">
+									<p>\(\mathsf{30 = 2 \cdot 3 \cdot 5}\)</p>
+								</div>
+								<p><strong>Vastaus:</strong> Luvun 30 alkutekijät ovat 2, 3 ja 5.</p>
+								<p>b) 50</p>
+								<div class="indent">
+									<p>\(\mathsf{50 = 2 \cdot 5 \cdot 5}\)</p>
+								</div>
+								<p><strong>Vastaus:</strong> Luvun 50 alkutekijät ovat 2, 5 ja 5.</p>
+								<p>c) 72</p>
+								<div class="indent">
+									<p>\(\mathsf{72 = 2 \cdot 2 \cdot 2 \cdot 3 \cdot 3}\)</p>
+								</div>
+								<p><strong>Vastaus:</strong> Luvun 72 alkutekijät ovat 2, 2, 2, 3 ja 3.</p>
+							</div>
+						</div>
+						<p>Alkutekijät voidaan löytää päättelemällä, mutta suurten lukujen tapauksessa tehtävää helpottaa ns. <strong>tekijöihinjakopuu</strong>. Puun latvaan, eli ylimpään solmuun, kirjoitetaan luku, jonka alkutekijät halutaan selvittää. Luku jaetaan aina kahdeksi tekijäksi, jotka kirjoitetaan seuraaviin solmuihin. Tätä jatketaan, kunnes kaikki tekijät ovat alkulukuja. Saadut alkuluvut ovat alkuperäisen luvun alkutekijät.</p>
+						<div class="example">
+							<p><strong>Esimerkki: </strong>Etsi luvun 60 alkutekijät, ja kirjoita luku 30 alkutekijöidensä tulona.</p>
+							<div class="gg indent" id="alkutekijapuu" style="width: 380px; height: 390px;">
+								https://jannevenhoedu.github.io/ma7/j2/t/ma7j2_teoria_alkutekijapuu.ggb
+							</div>
+							<p><strong>Vastaus: </strong>\(\mathsf{60 = 2 \cdot 2 \cdot 3 \cdot 5}\)</p>
+						</div>
+						<p>Alkutekijät järjestellään luetteloon ja kertolaskuun aina pienimmästä suurimpaan. Näin nähdään parhaiten eri alkutekijöiden lukumäärä ja voidaan verrata luvun alkutekijöitä toisen luvun alkutekijöihin. Samoja alkutekijöitä voidaan ryhmitellä myös potenssien avulla esimerkiksi \(\mathsf{60 = 2^2 \cdot 3 \cdot 5}\). Potenssit opetetaan kuitenkin vasta myöhemmin, joten 7. luokalla riittää avoin kertolasku.</p>
 					</div>
 				</div>
 			<h2>5. Murtoluku</h2>
