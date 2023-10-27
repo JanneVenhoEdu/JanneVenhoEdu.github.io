@@ -1,6 +1,6 @@
 :root {
 	--red: #931621;
-	--red2: F6C4C8;
+	--red2: #F6C4C8;
 	--red25: #93162125;
 	--green: #60993E;
 	--green2: #DEEED5;
@@ -33,7 +33,7 @@ h3 {
 	border-radius: 5px;
 }
 h3:hover {
-	color: var(--green2);
+	color: var(--orange2);
 }
 p {
 	text-align: justify;
