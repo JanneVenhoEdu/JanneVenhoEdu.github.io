@@ -39,11 +39,11 @@ h2.activeChapter{
 h3 {
 	background-color: var(--green);
 	color: white;
-	margin-bottom: -2px;
+	margin-bottom: -10px;
 	cursor: pointer;
 	font-size: 18px;
 	border-radius: 5px;
-	padding: 3px;
+	padding: 5px;
 }
 h3:hover {
 	color: var(--orange2);
