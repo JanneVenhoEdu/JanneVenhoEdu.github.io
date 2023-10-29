@@ -78,11 +78,15 @@ img, .indent {
 	height: 100%;
 	display: block;
 }
+a {
+	text-decoration: none;
+	color: inherit;
+}
 #course {
 	width: 120px;
 	margin-left: auto;
 	font-size: 16px;
-	text-align: left;
+	text-align: right;
 }
 #links {
 	display: none;
