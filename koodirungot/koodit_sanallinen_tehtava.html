@@ -115,7 +115,7 @@
                 var user = $(this).val().replace(/\s/g, "").replace(",", ".");
                 if (user == corr) {
                     $(this).css("background-color", "#80FF80");
-                    $(this).nextAll().hide();
+                    $(this).nextAll("span").hide();
                 } else {
                     var incorr = incorrectAnswers[item];
                     if (incorr.includes(user)) {
