@@ -111,3 +111,7 @@ img, .indent {
 .link:hover {
 	background-color: var(--purple);
 }
+.flex {
+	display: flex;
+	flex-wrap: wrap;
+}
