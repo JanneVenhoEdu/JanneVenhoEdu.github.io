@@ -115,3 +115,11 @@ img, .indent {
 	display: flex;
 	flex-wrap: wrap;
 }
+table {
+	border-collapse: collapse;
+}
+th, td {
+	border: 1px solid black;
+	text-align: center;
+	padding: 5px;
+}
