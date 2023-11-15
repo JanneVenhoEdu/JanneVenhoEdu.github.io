@@ -25,19 +25,8 @@
 			<h1>MA8 Jakso 3: Jaollisuus ja murtoluvut</h1>
 			<h2>1. Kertausta</h2>
 			<div>
-				<h3>Yhtälönratkaisu</h3>
+				<h3>Yhtälön ratkaiseminen</h3>
 				<div>
-					<p>Yhtälö on matemaattinen merkintä, missä kaksi lauseketta on merkitty yhtä suuriksi.</p>
-					<p class="indent">\(\mathsf{2x + 1 = 45}\)</p>
-					<p>Yhtälön paikkansapitävyyttä jollakin muuttujan x arvolla voidaan tutkia sijoittamalla muuttujan x paikalle tarkasteltava luku.</p>
-					<div class="example">
-						<p><strong>Esimerkki:</strong> Onko \(\mathsf{x = 20}\) yhtälön \(\mathsf{2x + 1 = 45}\) ratkaisu?</p>
-						<div class="indent">
-							<p>\(\begin{align}\mathsf{2x + 1} &= \mathsf{45}\\\mathsf{2 \cdot 20 + 1} &= \mathsf{45}\\\mathsf{41} &= \mathsf{45}\end{align}\)</p>
-							<p>Väite on epätosi.</p>
-						</div>
-						<p><strong>Vastaus:</strong> x = 20 ei ole yhtälön ratkaisu.</p>
-					</div>
 					<p>Yhtälön ratkaisu voidaan myös etsiä muokkaamalla yhtälöä suorittamalla laskutoimituksia yhtälön molemmille puolille. Laskutoimitukset merkitään muokattavan rivin oikealle puolelle \(\mathsf{\|}\)-merkkien jälkeen.</p>
 					<div class="example">
 						<p><strong>Esimerkki:</strong></p>
@@ -52,6 +41,54 @@
 							<p class="indent">\(\begin{align}\mathsf{5x + 6} &= \mathsf{2x-9} && \mathsf{\|-2x}\\\mathsf{3x + 6} &= \mathsf{-9}&&\mathsf{\|-6}\\\mathsf{3x} &= \mathsf{-15}&&\mathsf{\|:3}\\\mathsf{x} &= \mathsf{-5}\end{align}\)</p>
 						</div>
 					</div>
+				</div>
+				<h3>Murtoyhtälö</h3>
+				<div>
+					<p>Jos muuttujaa on jaettu luvulla, päästään jakajasta eroon kertolaskulla.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong></p>
+						<div class="indent">
+							<p>a) Ratkaise yhtälö \(\mathsf{\dfrac{x}{4} = 8}\)</p>
+							<p class="indent">\(\begin{align}\mathsf{\dfrac{x}{4}} &= \mathsf{8} &&\mathsf{\|\cdot 4}\\ \mathsf{x} &= \mathsf{32}\end{align}\)</p>
+							<p>b) Ratkaise yhtälö \(\mathsf{\dfrac{3x}{5} = 6}\)</p>
+							<div class="indent">
+								<p><strong>Tapa 1:</strong> Toimii aina.</p>
+								<p class="indent">\(\begin{align}\mathsf{\dfrac{3x}{5}} &= \mathsf{6} &&\mathsf{\|\cdot 5}\\ \mathsf{3x} &= \mathsf{30} &&\mathsf{\|:3}\\ \mathsf{x} &= \mathsf{10}\end{align}\)</p>
+								<p><strong>Tapa 2:</strong> Helpommat luvut, jos yhtälön oikea puoli on jaollinen osoittajan kertoimella.</p>
+								<p class="indent">\(\begin{align}\mathsf{\dfrac{3x}{5}} &= \mathsf{6} &&\mathsf{\|:3}\\ \mathsf{\dfrac{x}{5}} &= \mathsf{2} &&\mathsf{\|\cdot 5}\\ \mathsf{x} &= \mathsf{10}\end{align}\)</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<h3>Yhtälön ratkaisun tutkiminen</h3>
+				<div>
+					<p>Yhtälö on matemaattinen merkintä, missä kaksi lauseketta on merkitty yhtä suuriksi.</p>
+					<p class="indent">\(\mathsf{2x + 1 = 45}\)</p>
+					<p>Yhtälön paikkansapitävyyttä jollakin muuttujan x arvolla voidaan tutkia sijoittamalla muuttujan x paikalle tarkasteltava luku.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Onko \(\mathsf{x = 20}\) yhtälön \(\mathsf{2x + 1 = 45}\) ratkaisu?</p>
+						<div class="indent">
+							<p>\(\begin{align}\mathsf{2x + 1} &= \mathsf{45}\\\mathsf{2 \cdot 20 + 1} &= \mathsf{45}\\\mathsf{41} &= \mathsf{45}\end{align}\)</p>
+							<p>Väite on epätosi.</p>
+						</div>
+						<p><strong>Vastaus:</strong> x = 20 ei ole yhtälön ratkaisu.</p>
+					</div>
+				</div>
+				<h3>Lisätietoa: Luvun ja muuttujalausekkeen tulo</h3>
+				<div>
+					<p>Muuttujalauseketta kerrottaessa luvulla, kertolasku kohdistuu kaikkiin muuttujalausekkeen termeihin.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong></p>
+						<div class="indent">
+							<p>a) Sievennä \(\mathsf{4 \cdot (2x+3)}\)</p>
+							<p class="indent">\(\begin{align}\mathsf{4 \cdot (2x + 3)} &= \mathsf{\color{gray}4 \cdot 2x + 4 \cdot 3}\\ &= \mathsf{8x + 12}\end{align}\)</p>
+							<p>b) Sievennä \(\mathsf{-2 \cdot (6x-5)}\)</p>
+							<p class="indent">\(\begin{align}\mathsf{-2 \cdot (6x - 5)} &= \mathsf{\color{gray}-2 \cdot 6x - 2 \cdot (-5)}\\ &= \mathsf{-12x + 10}\end{align}\)</p>
+							<p>c) Sievennä \(\mathsf{3 \cdot (-7x+1)}\)</p>
+							<p class="indent">\(\begin{align}\mathsf{3 \cdot (-7x + 1)} &= \mathsf{\color{gray}3 \cdot (-7x) + 3 \cdot 1}\\ &= \mathsf{-21x + 3}\end{align}\)</p>
+						</div>
+					</div>
+					<p>Välivaihetta (harmaalla) ei tarvitse merkitä näkyviin.</p>
 				</div>
 			</div>
 			<h2>2. Suhde</h2>
@@ -70,11 +107,13 @@
 					<p>Merkintä sanotaan "kahden suhde kolmeen". Murtolukumerkintänä suhde voi aiheuttaa sekaannusta, joten on tärkeätä ymmärtää, että suhteen avulla verrataan kahden osan välistä suhdetta tosiinsa eikä osaa jostain kokonaisuudesta.</p>
 					<p>Suhde on myös jakolasku, jonka arvo voidaan laskea. Tätä arvoa kutsutaan <strong>suhdeluvuksi</strong>.</p>
 					<div class="example">
-						<p><strong>Esimerkki: </strong>Laske suhdeluku, kun suhde on 4:5.</p>
+						<p><strong>Esimerkki: </strong>Älypuhelimen leveyden ja korkeuden suhde on \(\mathsf{\dfrac{\text{72 mm}}{\text{160 mm}}}\). Merkitse suhde supistettuna murtolukuna, kaksoispistemerkintänä ja laske suhdeluku.</p>
 						<div class="indent">
-							<p>\(\mathsf{4:5 = 0,\!8}\)</p>
-							<p><strong>Vastaus: </strong>Suhdeluku on 0,8.</p>
+							<p>Supistettu murtoluku: \(\require{cancel}\mathsf{\dfrac{72\;\cancel{mm}}{160\;\cancel{mm}}^{(8} \!\!= \dfrac{9}{20}}\)</p>
+							<p>Kaksoispistemerkintä: \(\mathsf{9 : 20}\)</p>
+							<p>Suhdeluku: \(\mathsf{\dfrac{9}{20} = \text{0,45}}\)</p>
 						</div>
+						<p><strong>Vastaus: </strong>\(\mathsf{\dfrac{9}{20} = 9 : 20 = \text{0,45}}\)</p>
 					</div>
 				</div>
 				<h3>Esimerkkejä suhdelaskuista</h3>
