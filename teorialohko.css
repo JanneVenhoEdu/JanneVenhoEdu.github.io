@@ -139,3 +139,7 @@ th, td {
 	padding: 3px;
 	hyphens: manual;
 }
+.shrink > tbody > tr > td{
+	font-size: 80%;
+	padding: 1px !important;
+}
