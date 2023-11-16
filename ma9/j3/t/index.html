@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+		<script src="../../../teoria.js"></script>
+		<link rel="stylesheet" media="screen and (max-width: 350px)" href="../../../teorialohko.css">
+		<link rel="stylesheet" media="screen and (min-width: 350px)" href="../../../teoriakirja.css">
+	</head>
+	<body>
+		<div id="nav">
+			<div id="button">
+				<div id="bar1"></div>
+				<div id="bar2"></div>
+				<div id="bar3"></div>
+			</div>
+			<div id="links"></div>
+			<div id="caption"></div>
+			<a id="course" href="https://jannevenhoedu.github.io/ma8/j3/t" target="_blank"></a>
+		</div>
+		<div id="main">
+			<h1>MA8 Jakso 3: Jaollisuus ja murtoluvut</h1>
+			<h2>1. Kertausta</h2>
+			<div>
+				<h3>Pituusyksiköt</h3>
+				<div>
+					<p>Pituuden perusyksikkö on <strong>metri</strong>, ja se lyhennetään pienellä \(\textsf{m}\)-kirjaimella. Pienempiä ja suurempia pituusyksiköitä saadaan kertomalla tai jakamalla <strong>luvulla 10</strong>, ja käyttämällä määrättyjä etuliitteitä, kuten
+						milli-, sentti- tai kilo. Perusyksikköä metri lähimmät pituusyksiköt lyhenteineen on esitetty alla olevassa taulukossa.</p>
+					<div class="indent">
+						<table>
+							<tbody>
+								<tr>
+									<td>\(\textsf{km}\)</td>
+									<td>\(\textsf{hm}\)</td>
+									<td>\(\textsf{dam}\)</td>
+									<td>\(\textsf{m}\)</td>
+									<td>\(\textsf{dm}\)</td>
+									<td>\(\textsf{cm}\)</td>
+									<td>\(\textsf{mm}\)</td>
+								</tr>
+								<tr>
+									<td>kilometri</td>
+									<td>hehtometri</td>
+									<td>dekametri</td>
+									<td>metri</td>
+									<td>desimetri</td>
+									<td>senttimetri</td>
+									<td>millimetri</td>
+								</tr>
+								<tr>
+									<td>\(\textsf{1000 m}\)</td>
+									<td>\(\textsf{100 m}\)</td>
+									<td>\(\textsf{10 m}\)</td>
+									<td>\(\textsf{1 m}\)</td>
+									<td>\(\textsf{0,1 m}\)</td>
+									<td>\(\textsf{0,01 m}\)</td>
+									<td>\(\textsf{0,001 m}\)</td>
+								</tr>
+								<tr>
+									<td>\(\rule{5em}{0pt}\)</td>
+									<td>\(\rule{5em}{0pt}\)</td>
+									<td>\(\rule{5em}{0pt}\)</td>
+									<td>\(\rule{5em}{0pt}\)</td>
+									<td>\(\rule{5em}{0pt}\)</td>
+									<td>\(\rule{5em}{0pt}\)</td>
+									<td>\(\rule{5em}{0pt}\)</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<h3>Pinta-alayksiköt</h3>
+				<div>
+					<p>Pinta-alan perusyksikkö on <strong>neliömetri</strong>, ja se lyhennetään merkinnällä \(\mathsf{m^2}\). Neliömetri syntyy, kun lasketaan neliön pinta-ala, jonka sivun pituus on yksi metri (\(\mathsf{1\;m \cdot 1\;m = 1\;m^2}\)). Vastaavasti neliösenttimetri
+						saadaan kun lasketaan nelilön neliön pinta-ala, jonka sivun pituus on yksi senttimetri (\(\mathsf{1\;cm \cdot 1\;cm = 1\;cm^2}\)).</p>
+					<div class="indent">
+						<iframe class="gg_upotus" scrolling="no" title="ma7j6_reppu_pintaala_animaatio" src="https://www.geogebra.org/material/iframe/id/jxuadbdu/width/584/height/219/border/888888/sfsb/false/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false"
+							width="584px" height="219px" style="border:0px;"> </iframe>
+					</div>
+					<p>Pienempiä ja suurempia pinta-alayksiköitä saadaan siis kertomalla tai jakamalla <strong>luvulla 100</strong>, ja käyttämällä määrättyjä etuliitteitä, kuten pituusyksiköissä. Poikkeuksena on neliöhehtometri eli <strong>hehtaari</strong> sekä neliödekametri
+						eli <strong>aari</strong>. Tärkeimmät pinta-alayksiköt lyhenteineen on esitetty alla olevassa taulukossa.</p>
+					<div class="indent">
+						<table>
+							<tbody>
+								<tr>
+									<td>\(\mathsf{km^2}\)</td>
+									<td>\(\mathsf{ha}\)</td>
+									<td>\(\mathsf{a}\)</td>
+									<td>\(\mathsf{m^2}\)</td>
+									<td>\(\mathsf{dm^2}\)</td>
+									<td>\(\mathsf{cm^2}\)</td>
+									<td>\(\mathsf{mm^2}\)</td>
+								</tr>
+								<tr>
+									<td>neliökilometri</td>
+									<td>hehtaari</td>
+									<td>aari</td>
+									<td>metri</td>
+									<td>neliödesimetri</td>
+									<td>neliösenttimetri</td>
+									<td>neliömillimetri</td>
+								</tr>
+								<tr>
+									<td>\(\textsf{1 000 000 m}\mathsf{^2}\)</td>
+									<td>\(\textsf{10 000 m}\mathsf{^2}\)</td>
+									<td>\(\textsf{100 m}\mathsf{^2}\)</td>
+									<td>\(\textsf{1 m}\mathsf{^2}\)</td>
+									<td>\(\textsf{0,01 m}\mathsf{^2}\)</td>
+									<td>\(\textsf{0,0001 m}\mathsf{^2}\)</td>
+									<td>\(\textsf{0,000001 m}\mathsf{^2}\)</td>
+								</tr>
+								<tr>
+									<td>\(\rule{5em}{0pt}\)</td>
+									<td>\(\rule{5em}{0pt}\)</td>
+									<td>\(\rule{5em}{0pt}\)</td>
+									<td>\(\rule{5em}{0pt}\)</td>
+									<td>\(\rule{5em}{0pt}\)</td>
+									<td>\(\rule{5em}{0pt}\)</td>
+									<td>\(\rule{5em}{0pt}\)</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<h3>Erilaisten tasokuvioiden piirejä ja pinta-aloja</h3>
+				<div>
+					<p><strong>Kolmio</strong></p>
+					<div class="indent">
+						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/451997905/ma9j3_teoria_kolmio.png" alt="" width="398" height="175" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+					</div>
+
+					<p><strong>Suorakulmio</strong></p>
+					<div class="indent">
+						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/451997905/ma9j3_teoria_suorakulmio.png?time=1668112712230" alt="" width="398" height="175" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+					</div>
+
+					<p><strong>Suunnikas</strong></p>
+					<div class="indent">
+						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/451997905/ma9j3_teoria_suunnikas.png" alt="" width="398" height="175" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+					</div>
+
+					<p><strong>Ympyrä</strong></p>
+					<div class="indent">
+						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/451997905/ma9j3_teoria_ympyra.png" alt="" width="398" height="175" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+					</div>
+
+					<p><strong>Sektori</strong></p>
+					<div class="indent">
+						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/451997905/ma9j3_teoria_sektori.png" alt="" width="398" height="175" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+					</div>
+				</div>
+			</div>
+			<h2>2. Tilavuusyksiköt</h2>
+			<div>
+				<p>Tilavuus kuvaa kolmiulotteisen kappaleen suuruutta. Kappaleiden viemän tilan lisäksi tilavuutta käytetään kuvaamaan astioiden vetoisuutta, eli sitä, kuinka paljon astiaan mahtuu esimerkiksi nestettä tai jotakin hienojakoista ainetta.</p>
+				<h3>Tilavuusyksiköt</h3>
+				<div>
+					<p>Tilavuuden perusyksikkö on <strong>kuutiometri</strong>, ja se lyhennetään merkinnällä \(\mathsf{m^3}\). Kuutiometri syntyy, kun lasketaan pinta-ala kuutiolle, jonka sivun pituus on yksi metri (\(\mathsf{1\;m \cdot 1\;m \cdot 1\;m}\)). Pienempiä ja
+						suurempia tilavuusyksiköitä saadaan kertomalla tai jakamalla <strong>luvulla 1000</strong>, ja käyttämällä määrättyjä etuliitteitä, kuten pituusyksiköissä. Tärkeimmät tilavuusyksiköt lyhenteineen on esitetty alla olevassa taulukossa.</p>
+					<div class="indent">
+						<table>
+							<tbody>
+								<tr>
+									<td>\(\mathsf{km^3}\)</td>
+									<td>\(\mathsf{hm^3}\)</td>
+									<td>\(\mathsf{dam^3}\)</td>
+									<td>\(\mathsf{m^3}\)</td>
+								</tr>
+								<tr>
+									<td>kuutiokilometri</td>
+									<td>kuutiohehtometri</td>
+									<td>kuutiodekametri</td>
+									<td>kuutiometri</td>
+								</tr>
+								<tr>
+									<td>\(\mathsf{1\;000\;000\;000\; m^3}\)</td>
+									<td>\(\mathsf{1\;000\;000\;m^3}\)</td>
+									<td>\(\mathsf{1\;000\;m^3}\)</td>
+									<td>\(\mathsf{1\;m^3}\)</td>
+								</tr>
+								<tr>
+									<td>\(\rule{10em}{0pt}\)</td>
+									<td>\(\rule{10em}{0pt}\)</td>
+									<td>\(\rule{10em}{0pt}\)</td>
+									<td>\(\rule{10em}{0pt}\)</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="indent">
+						<table>
+							<tbody>
+								<tr>
+									<td>\(\mathsf{m^3}\)</td>
+									<td>\(\mathsf{dm^3}\)</td>
+									<td>\(\mathsf{cm^3}\)</td>
+									<td>\(\mathsf{mm^3}\)</td>
+								</tr>
+								<tr>
+									<td>kuutiometri</td>
+									<td>kuutiodesimetri</td>
+									<td>kuutiosenttimetri</td>
+									<td>kuutiomillimetri</td>
+								</tr>
+								<tr>
+									<td>\(\mathsf{1 m^3}\)</td>
+									<td>\(\mathsf{0,\!001\;m^3}\)</td>
+									<td>\(\mathsf{0,\!000001\;m^3}\)</td>
+									<td>\(\mathsf{0,\!000000001\;m^3}\)</td>
+								</tr>
+								<tr>
+									<td>\(\rule{10em}{0pt}\)</td>
+									<td>\(\rule{10em}{0pt}\)</td>
+									<td>\(\rule{10em}{0pt}\)</td>
+									<td>\(\rule{10em}{0pt}\)</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<h3>Vetomitat</h3>
+				<div>
+					<p>Kuutiometrin ja sen kerrannaisten lisäksi tilavuutta voidaan mitata <strong>litroissa</strong>. Litra lyhennetään joko pienenä (l) tai isona L-kirjaimena (L). Käsin kirjoittaessa voidaan sekaannuksen välttämiseksi käyttää myös kaunokirjoitettua \(\ell\)-kirjainta
+						(pieni L-kirjain). Litroja voidaan muuttaa kuten pituusyksiköitä pienempiin ja suurempiin kerrannaisiin kertomalla ja jakamalla luvulla 10. Litroissa käytetään samoja etuliitteitä kuin muissakin SI-järjestelmän yksiköissä, esimerkiksi desilitra
+						(dl, dL), senttilitra (cl, cL) tai millilitra (ml, mL). Edellä mainitut ovat yleisimmin käytössä olevat vetomitat, eikä esimerkiksi kilolitroista (kl, kL) puhuta, vaikka se periaattessa mahdollinen yksikkö olisikin.</p>
+					<p>Litra on määritelty siten, että se vastaa tilavuudeltaan yhtä kuutiodesimetriä.</p>
+					<div class="indent">
+						<p>\(\mathsf{1\;l = 1\;dm^3}\)</p>
+					</div>
+					<p>Määritelmän avulla voidaan jo muuttaa tilavuusyksiköitä ja vetomittoja keskenään, mutta listataan vielä muita litran kerrannaisia, joiden avulla muunnokset helpottuvat entisestään.</p>
+					<div class="indent">
+						<p>\(\begin{align}\color{red}{\textsf{1000 l}} &\color{red}{=} \color{red}{\mathsf{1\;m^3}} = \mathsf{1000\;dm^3}\\ \textsf{100 l} &= \mathsf{100\;dm^3}\\ \textsf{10 l} &= \mathsf{10\;dm^3}\\ \color{red}{\textsf{1 l}} &\color{red}{=}
+							\color{red}{\mathsf{1\;dm^3}} = \mathsf{1000\;cm^3}\\ \textsf{1 dl} &= \mathsf{100\;cm^3}\\ \textsf{1 cl} &= \mathsf{10\;cm^3}\\ \color{red}{\textsf{1 ml}} &\color{red}{=} \color{red}{\mathsf{1\;cm^3}}\end{align}\)</p>
+					</div>
+				</div>
+			</div>
+			<h2>3. Avaruuskappaleita</h2>
+			<div>
+				<p>Kolmiulotteinen kappale voi olla minkä muotoinen tahansa, mutta matematiikan kannalta yksinkertaisimpia ovat <strong>lieriö</strong>, <strong>kartio</strong> ja <strong>pallo</strong>. Kaikki pallot ovat keskenään yhdenmuotoisia, vain pallon
+					koko (säde) muuttuu. Lieriöitä ja kartioita voidaan luokitella tarkemmin niiden pohjan muodon mukaan (yleensä monikulmio tai ympyrä), ja pohjan muoto vaikuttaakin merkittävästi esimerkiksi kappaleen pinta-alan tai tilavuuden laskemiseen.</p>
+				<div class="indent">
+					<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/501139719/ma9j3_teoria_avaruuskappaleet.png?time=1668382231776" alt="" width="699" height="665" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+				</div>
+				<h3>Lieriö</h3>
+				<div>
+					<p>Lieriöllä on kaksi yhtenevää ja yhdenmuotoista pohjaa sekä niiden välissä oleva vaippa. Pohjien välistä etäisyyttä kutsutaan lieriön korkeudeksi. Suorassa lieriössä pohjat ovat samalla kohtaa, muutoin lieriö on vino.</p>
+					<div class="indent">
+						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/501139719/ma9j3_teoria_lierioita.png?time=1668418800762" alt="" width="699" height="251" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+					</div>
+				</div>
+				<h3>Kartio</h3>
+				<div>
+					<p>Kartiolla on yksi pohja, josta lähtevä vaippa kapenee tasaisesti kohti huippua. Huipun ja pohjan välistä kohtisuoraa etäisyyttä kutsutaan kartion korkeudeksi. Kartio voi myös olla suora tai vino.</p>
+					<div class="indent">
+						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/501139719/ma9j3_teoria_kartioita.png?time=1668391387176" alt="" width="699" height="220" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+					</div>
+				</div>
+				<h3>Pallo</h3>
+				<div>
+					<p>Pallo on kappale, jonka pisteet ovat säteen r etäisyydellä keskipisteestä. Kun pallo halkaistaa kahteen yhtä suureen osaan, muodostuvaa leikkauspintaa kutsutaan <strong>isoympyräksi</strong>. Isoympyrän kehän pituus on yhtä suuri kuin pallon ympärysmitta.
+						Esimerkiksi maapallolla tätä ympärysmittaa kutsutaan päiväntasaajaksi.</p>
+					<div class="indent">
+						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/501139719/ma9j3_teoria_pallo.png" alt="" width="698" height="292" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+					</div>
+				</div>
+				<h3>Kappaleiden piirtäminen</h3>
+				<div>
+					<p>Kun kolmiulotteisia kappaleita piirretään kaksiulotteiselle paperille täytyy aina tehdä päätös miten syvyysvaikutelma luodaan. Taiteen ja tieteen tarkoituksia varten on luotu useita erilaisia perspektiivejä ja projektioita. Matematiikan käyttötarkoitusta
+						palvelee parhaiten ns. yhdensuuntaisprojektiot, joista helpoin on <strong>kavaljeeriprojektio</strong>.</p>
+					<h4>Suorakulmainen särmiö kavaljeeriprojektiolla</h4>
+					<p>Kavaljeeriprojektiossa kolmiulotteisen kappaleen syvyysvaikutus saadaan piirtämällä syvyyteen piirrettävät viivat 45 asteen kulmassa etutasoon nähden ja jakamalla pituudet kahdella. Yksinkertaisin kappale kavaljeeriprojektion avulla piirrettäväksi
+						on suorakulmainen särmiö.</p>
+					<div class="indent">
+						<iframe class="gg_upotus" scrolling="no" title="ma9j3_teoria_kavaljeeriprojektio" src="https://www.geogebra.org/material/iframe/id/aw3fbmky/width/805/height/447/border/888888/sfsb/false/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false"
+							width="805px" height="447px" style="border:0px;"> </iframe>
+					</div>
+
+					<h4>Ympyrälieriön piirtäminen</h4>
+					<p>Ympyrälieriössä syvyysvaikutelma saadaan siten, että ympyrän muotoiset pohjat piirretään soikioina eli matemaattisemmin ilmaistuna ellipsinä. Ellipsin leveys eli pohjaympyrän säde mitataan tarkasti , mutta ellipsin "pulleuden" voi piirtäjä valita
+						vapaasti. Mitä pulleampi ellipsi, sitä ylempää kappaletta katsotaan.</p>
+					<div class="indent">
+						<iframe class="gg_upotus" scrolling="no" title="ma9j3_teoria_ympyralierion_piirtaminen" src="https://www.geogebra.org/material/iframe/id/zqedfxc8/width/805/height/447/border/888888/sfsb/false/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false"
+							width="805px" height="447px" style="border:0px;"> </iframe>
+					</div>
+				</div>
+			</div>
+			<h2>4. Lieriö</h2>
+			<div>
+				<p>Ennen 9. luokkaa geometriassa on opittu mittaamaan ja laskemaan viivojen pituuksia (1 ulottuvuus) sekä tasokuvioiden pinta-aloja (2 ulottuvuutta). Avaruusgeometriassa opitaan laskemaan myös kolmiulotteisten kappaleiden tilavuuksia sekä niiden pinta-aloja.
+					Näin ollaan tultu käsitelleeksi kaikki tärkeimmät kuvioiden ja kappaleiden suuruutta koskevat mitat. Fysiikan opinnot laajentavat tätä vielä esimerkiksi massan ja tiheyden osalta, jolloin saadankin melko kattava kokoelma työkaluja esineiden suuruuden
+					kuvaamiseen sekä niiden keskinäiseen vertailuun.</p>
+				<h3>Lieriö yleisesti</h3>
+				<div>
+					<p><strong>Lieriön tilavuus</strong> lasketaan kertomalla lieriön pohjan pinta-ala \(\mathsf{A_p}\) lieriön korkeudella \(\mathsf{h}\). Tämä pätee niin suoralle kuin vinollekkin lieriölle.</p>
+					<div class="indent">
+						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/105784243/ma9j3_teoria_lierio_yleinen_V.png" alt="" width="400" height="135" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+					</div>
+					<p><strong>Lieriön pinta-ala</strong> saadaan kun kaikki pinnat lasketaan yhteen. Lieriön pinta koostuu kahdesta pohjasta \(\mathsf{A_p}\) sekä vaipasta \(\mathsf{A_v}\). Tarkempiin laskukaavoihin tutustutaan erilaisten kappaleiden yhteydessä seuraavissa
+						luvuissa.
+					</p>
+					<div class="indent">
+						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/105784243/ma9j3_teoria_lierio_yleinen_A.png" alt="" width="397" height="134" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+					</div>
+				</div>
+				<h3>Särmiö</h3>
+				<div>
+					<p><strong>Tilavuus</strong></p>
+					<p>Särmiön pohja on monikulmio. Pohjan muodosta riippuen käytetään joko lieriön tilavuuden yleistä muotoa tai suorakulmaiselle särmiölle ja kuutiolle hieman pidemmälle johdettua laskukaavaa.</p>
+					<div class="indent">
+						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/105784243/ma9j3_teoria_sarmio_V.png" alt="" width="399" height="364" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+					</div>
+					<p><strong>Pinta-ala</strong></p>
+					<p>Suoran särmiön vaippa koostuu suorakulmion muotoisista tahkoista, joiden lukumäärä määräytyy pohjamonikulmion sivujen lukumäärän mukaisesti. Vinolla särmiöllä osa tahkoista on suunnikkaan muotoisia. Vaipan pinta-alaa laskettaessa tulee tahkojen pinta-alat
+						selvittää tapauskohtaisesti erikseen, eikä mitään yleispätevää laskukaavaa kannata antaa kuin suorakulmaiselle särmiölle ja kuutiolle.</p>
+					<div class="indent">
+						<iframe class="gg_upotus" scrolling="no" title="ma9j3_teoria_sarmio_A" src="https://www.geogebra.org/material/iframe/id/bxhtfzm4/width/464/height/437/border/FFFFFF/sfsb/false/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false"
+							width="464px" height="437px" style="border:0px;"> </iframe>
+						<!--<iframe scrolling="no" title="ma9j3_teoria_sarmio_vaippa" src="https://www.geogebra.org/material/iframe/id/z4zkwt8u/width/764/height/448/border/888888/sfsb/false/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false"
+							width="764px" height="448px" style="border:0px;"> </iframe>-->
+						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/105784243/ma9j3_teoria_sarmio_A.png?time=1668496954348" alt="" width="399" height="153" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+					</div>
+				</div>
+				<h3>Ympyrälieriö</h3>
+				<div>
+					<p><strong>Tilavuus</strong></p>
+					<p>Ympyrälieriön pohja on nimensä mukaisesti ympyrä.</p>
+					<div class="indent">
+						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/105784243/ma9j3_teoria_ympyralierio_V.png" alt="" width="399" height="165" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+					</div>
+					<p><strong>Pinta-ala</strong></p>
+					<p>Suoran ympyrälieriön vaippa on tasoon levitettynä suorakulmion muotoinen. Suorakulmion korkeus on sama kuin lieriön korkeus. Suorakulmion leveys on sama kuin pohjaympyrän kehän pituus.
+					</p>
+					<div class="indent">
+						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/105784243/ma9j3_teoria_ympyralierio_A.png" alt="" width="399" height="165" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+						<iframe class="gg_upotus" scrolling="no" title="ma9j3_teoria_yl_vaippa" src="https://www.geogebra.org/material/iframe/id/xs266zpn/width/428/height/162/border/FFFFFF/sfsb/false/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false"
+							width="428px" height="162px" style="border:0px;"> </iframe>
+					</div>
+				</div>
+			</div>
+			<h2>5. Kartio</h2>
+			<div>
+				<p>Lieriön kasvaessa pohjasta tasaisesti ylöspäin, kartio kapenee pohjasta kohti huippua. Arkielämän kartioita ovat esimerkiksi jäätelövohvelit, pyramidit sekä erilaiset suppilot. Juomalasissa, vaaseissa ja muissa kulhoissa ja kipoissa tavataan usein
+					katkaistuja kartioita.
+				</p>
+				<h3>Kartio yleisesti</h3>
+				<div>
+					<p><strong>Kartion tilavuus</strong> on kolmasosa lieriöstä, jolla on sama pohjan pinta-ala ja korkeus. Kartio voi olla suora tai vino.</p>
+					<div class="indent">
+						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/993252782/ma9j3_teoria_kartio_yleinen_V.png" alt="" width="397" height="134" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+					</div>
+					<p><strong>Kartion pinta-ala</strong> koostuu pohjan pinta-alasta \(\mathsf{A_p}\) ja vaipan pinta-alasta \(\mathsf{A_v}\).</p>
+					<div class="indent">
+						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/993252782/ma9j3_teoria_kartio_yleinen_A.png" alt="" width="397" height="134" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+					</div>
+					<p>Kartiot voidaan pohja muodon perusteella luokitella samaan tapaan kuin lieriötkin. Ympyräkartion pohja on ympyrä ja monikulmiopohjaisista kartioista käytetään yleisnimitystä pyramidi. Vaipan muoto tasoon levitettynä riippuu pohjan muodosta. Ympyräkartiolla
+						vaippa on sektorin muotoinen ja pyramidin vaippa koostuu kolmioista.</p>
+				</div>
+				<h3>Pyramidi</h3>
+				<div>
+					<p><strong>Tilavuus</strong></p>
+					<p>Pyramidin pohja on monikulmio. Kartion tilavuuden yleisellä kaavalla pärjää varsin hyvin, mutta malliksi on johdettu myös suorakulmio- ja neliöpohjaiselle pyramdille omat laskukaavat.</p>
+					<div class="indent">
+						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/993252782/ma9j3_teoria_pyramidi_V.png" alt="" width="400" height="365" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+					</div>
+					<p><strong>Pinta-ala</strong></p>
+					<p>Pyramidin vaippa koostuu kolmioista, joiden lukumäärä riippuu pohjan sivujen lukumäärästä ja muoto huipun sijainnista suhteessa pohjaan. Jos pyramidi on suora, niin vaipan kolmiot ovat tasakylkisiä, mutta vinolla pyramidilla voivat kolmiot olla millaisia
+						kolmioita tahansa. Animaatiossa on esitetty neliöpohjaisen pyramidin pinta-alan laskeminen. Huomaa, että vaipan kolmioiden (tahkojen) korkeus \(\mathsf{h_t}\) ei ole sama kuin kolmion korkeus \(\mathsf{h}\).</p>
+					<div class="indent">
+						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/993252782/ma9j3_teoria_pyramidi_A.gif?time=1669075030943" alt="" width="417" height="214" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+					</div>
+				</div>
+				<h3>Ympyräkartio</h3>
+				<div>
+					<p><strong>Tilavuus</strong></p>
+					<p>Ympyräkartion pohja on ympyrä, joten ympyrän pinta-alan kaavan voi sijoittaa tilavuuden laskukaavaan pohjan pinta-alan paikalle.</p>
+					<div class="indent">
+						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/993252782/ma9j3_teoria_ympyrakartio_V.png" alt="" width="399" height="165" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+					</div>
+					<p><strong>Pinta-ala</strong></p>
+					<p>Ympyräkartion vaippa on ympyräsektori, jonka säde on ympyräkartion sivujanan pituus. Sivujana on jana, joka kulkee huipulta pohjaympyrän kehälle. Yhdistämällä ympyrän kehän pituuden sekä sektorin kaaren pituuden ja pinta-alan laskukaavat, voidaan
+						ympyräkartion vaipan pinta-alalle johtaa melko siisti laskulauseke.</p>
+					<div class="indent">
+						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/993252782/ma9j3_teoria_ympyrakartio_A.png" alt="" width="397" height="139" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+						<iframe class="gg_upotus" scrolling="no" title="ma9j3_teoria_yk_vaippa" src="https://www.geogebra.org/material/iframe/id/vywrfedf/width/477/height/499/border/FFFFFF/sfsb/false/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false"
+							width="477px" height="499px" style="border:0px;"> </iframe>
+					</div>
+					<p><strong>Vaipan pinta-alan laskukaavan johtaminen</strong></p>
+					<p>Vaippa on siis sektorin muotoinen, jonka säde on kartion sivujana \(\mathsf{s}\). Keskuskulman määrittäminen kartiosta on vaikeaa, joten pyritään pääsemään siitä eroon. Käytetään hyväksi tietoa, että sektorin kaaren pituus \(\mathsf{b}\) on yhtä pitkä
+						kuin pohjaympyrän kehän pituus \(\mathsf{p = 2\pi r}\).</p>
+					<div class="indent">
+						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/993252782/ma9j3_reppu_yk_vaippa_kuva.png" alt="" width="399" height="164" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+						<p>\(\require{cancel}\begin{align}\mathsf{b} &= \mathsf{p}\\ \mathsf{\dfrac{\alpha}{360^\circ} \cdot \cancel{2\pi} s} &= \mathsf{\cancel{2\pi} r} &&\mathsf{\| : s}\\ \mathsf{\dfrac{\alpha}{360^\circ}} &= \mathsf{\dfrac{r}{s}}\end{align}\)</p>
+					</div>
+					<p>Sijoitetaan sektorin pinta-alan laskukaavaan \(\mathsf{\dfrac{\alpha}{360^\circ}}\) paikalle edellä johdettu \(\mathsf{\dfrac{r}{s}}\) ja sievennetään lauseke.</p>
+					<div class="indent">
+						<p>\(\require{cancel}\begin{align}\mathsf{A_s} &= \mathsf{\dfrac{\alpha}{360^\circ} \cdot \pi s^2}\\ &= \mathsf{\dfrac{r}{\cancel{s}} \cdot \pi s^{\cancel{2}}}\\ &= \mathsf{r\pi s}\\ &= \mathsf{\pi rs}\end{align}\)</p>
+					</div>
+				</div>
+			</div>
+			<h2>6. Pallo</h2>
+			<div>
+				<p>Pallon tilavuuden ja pinta-alan laskemiseen tarvitaan vain pallon säde. Säteen avulla voidaan laskea myös pallon <strong>isoympyrän</strong> pituus, josta käytetään puhekielessä nimitystä ympärysmitta.</p>
+				<div class="indent">
+					<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/899595391/ma9j3_teoria_pallo.png" alt="" width="399" height="180" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+				</div>
+			</div>
+		</div>
+		<script>
+			downloadGG();
+		</script>
+	</body>
+</html>
