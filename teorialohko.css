@@ -143,3 +143,9 @@ th, td {
 	font-size: 80%;
 	padding: 1px !important;
 }
+.narrow {
+	display: block;
+}
+.wide {
+	display: none;
+}

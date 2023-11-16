@@ -123,3 +123,9 @@ th, td {
 	text-align: center;
 	padding: 5px;
 }
+.narrow {
+	display: none;
+}
+.wide {
+	display: block;
+}
