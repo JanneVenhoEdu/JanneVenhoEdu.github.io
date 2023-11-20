@@ -68,7 +68,6 @@ $(document).ready(function() {
 	$("h3").click(function() {
 		$(this).next().slideToggle("slow");
 		window.dispatchEvent(resizeEvent);
-		console.log("resize");
 	});
 	// Navigaatiopalkin avausnappi
 	var navOpen = false;
@@ -102,6 +101,5 @@ $(document).ready(function() {
 		closeNav();
 		navOpen = false;
 		window.dispatchEvent(resizeEvent);
-		console.log("resize");
 	});
 });
