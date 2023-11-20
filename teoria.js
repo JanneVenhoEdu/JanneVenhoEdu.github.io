@@ -19,7 +19,7 @@ function downloadGG(){
 	var params = [];
 	var targets = [];
 	ggInfo.forEach(function(item){
-		params.push({"appName": "classic", "enableRightClick": "false", "width": item.width, "height": item.height, "filename": item.file});
+		params.push({"appName": "classic", "enableRightClick": "false", "width": item.width, "height": item.height, "filename": item.file, "borderColor": "#FFFFFF"});
 		targets.push(item.target);
 	});
 	var applets = [];
