@@ -42,6 +42,10 @@ p {
 img, .indent {
 	margin-left: var(--indent);
 }
+img {
+	height: auto;
+	max-width: 100%;
+}
 .example {
 	margin-left: 0px;
 	background-color: var(--blue25);
