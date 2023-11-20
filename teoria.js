@@ -46,6 +46,7 @@ function closeNav() {
 	$("#links").fadeOut();
 }
 $(document).ready(function() {
+	var resizeEvent = new Event("resize");
 	// Otsikkotietojen lataaminen
 	var titles = $("h2");
 	var titlesTotal = titles.length;
@@ -66,6 +67,7 @@ $(document).ready(function() {
 	$("h3").next().hide();
 	$("h3").click(function() {
 		$(this).next().slideToggle("slow");
+		window.dispatchEvent(resizeEvent);
 	});
 	// Navigaatiopalkin avausnappi
 	var navOpen = false;
@@ -98,5 +100,6 @@ $(document).ready(function() {
 		$("#caption").html($(this).html());
 		closeNav();
 		navOpen = false;
+		window.dispatchEvent(resizeEvent);
 	});
 });
