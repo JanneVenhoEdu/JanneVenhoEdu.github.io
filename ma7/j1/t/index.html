@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="fi">
+	<head>
+		<title>Teoria - Kokonais- ja desimaaliluvut</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+		<script src="../../../teoria.js"></script>
+		<link rel="stylesheet" media="screen and (max-width: 350px)" href="../../../teorialohko.css">
+		<link rel="stylesheet" media="screen and (min-width: 350px)" href="../../../teoriakirja.css">
+	</head>
+	<body>
+		<div id="nav">
+			<div id="button">
+				<div id="bar1"></div>
+				<div id="bar2"></div>
+				<div id="bar3"></div>
+			</div>
+			<div id="links"></div>
+			<div id="caption"></div>
+			<a id="course" href="https://jannevenhoedu.github.io/ma7/j1/t" target="_blank"></a>
+		</div>
+		<div id="main">
+			<h1>MA7 Jakso 1: Kokonais- ja desimaaliluvut</h1>
+			<h2>1. Kymmenjärjestelmä</h2>
+			<div>
+				<p><strong>Desimaalijärjestelmä</strong> on kymmenkantainen paikkajärjestelmä, missä on käytössä siis 10 numeroa (0, 1, 2, 3, 4, 5, 6, 7, 8 ja 9), ja numeron paikalla luvussa on merkitystä.</p>
+				<p><strong>Luonnollisia lukuja </strong>ovat nolla ja sitä suuremmat kokonaiset luvut, joiden avulla voidaan ilmaista esimerkiksi lukumäärää. Mitä enemmän luvussa on numeroita sitä suurempi luku on. Numeroiden määrä kuvastaa siis luvun <strong>suuruusluokkaa</strong>. Suuruusluokkia ovat siis esimerkiksi ykköset, kymmenet, sadat, tuhannet, jne.</p>
+				<img src="https://jannevenhoedu.github.io/ma7/j1/t/ma7j1_teoria_kymmenjarjestelma.png" style="width: 451px;" alt="2 137 046">
+				<p>Luku voidaan ryhmitellä lukemisen selventämiseksi oikealta lähtien kolmen numeron joukoiksi. Näiden kolmen numeron joukkojen mukaisesti luvun suuruus voidaan myös kirjoittaa tai sanoa. Kyseinen luku on siis</p>
+				<img src="https://jannevenhoedu.github.io/ma7/j1/t/ma7j1_teoria_lukusanoin.png" style="width: 399px;" alt="Kaksimiljoonaa satakolmekymmentäseitsemäntuhatta neljäkymmentäkuusi.">
+				<p>Luvut kannattaa selkeyden vuoksi kirjoittaa erikseen, vaikka ne <a href="http://www.kielitoimistonohjepankki.fi/ohje/49" target="_blank">kieliopillisesti</a> yhdyssanoja ovatkin. Tekstin seassa kuitenkin vältetään suurten lukujen kirjoittamista sanoin ja käytetään numeroita. Nyrkkisääntönä voidaan pitää, että kaikki lukua kymmenen suuremmat luvut kirjoitetaan numeroin.</p>
+			</div>
+			<h2>2. Lukusuora</h2>
+			<div>
+				<p><strong>Lukusuora</strong> on viiva, johon on merkitty lukuja tai niiden paikkoja, ja joka kuvaa lukujen suuruusjärjestystä ja etäisyyttä toisistaan. Lukusuoraa käytetään havainnollistamaan lukujen paikkaa suhteessa muihin lukuihin. Lukusuora piirretään usein vaakasuoraan, mutta pystysuora lukusuora mallintaa hyvin esimerkiksi lämpömittaria.</p>
+				<p><strong>Lukusuora kasvaa aina merkityn nuolen suuntaan</strong>. Lukusuora voidaan jakaa tarpeen mukaisiin osiin. <strong>Jako tulee merkitä näkyviin</strong> ilmoittamalla vähintään kaksi tunnettua lukua lukusuoralta. Kahden poikittaisviivan välinen etäisyys voi siis olla tarvittaessa muutakin kuin 1. Suuria lukuja verratessa tai vaikka aikajanaa piirrettäessä jako voi olla esimerkiksi 10, 100 tai 1000.</p>
+				<img src="https://jannevenhoedu.github.io/ma7/j1/t/ma7j1_teoria_lukusuora_osat.png" style="width: 300px;" alt="Lukusuoran kasvusuunta ja jako">
+				<p>Aluksi tutustutaan lukusuoraan luonnollisilla luvuilla. Myöhemmin jakson aikana lukusuoraa laajennetaan kattamaan myös negatiiviset luvut (kokonaisluvut). Lopuksi tutustutaan kokonaisen osia kuvaaviin desimaalilukuihin.</p>
+				<div class="gg" id="lukusuoraN" style="width: 778px; height: 174px;">
+					https://jannevenhoedu.github.io/ma7/j1/t/ma7j1_teoria_lukusuoraN.ggb
+				</div>
+			</div>
+			<h2>3. Peruslaskutoimitukset</h2>
+			<div>
+				<p>Peruslaskutoimituksia ovat<br></p>
+				<ul>
+					<li><strong>summa</strong> (yhteenlasku)</li>
+					<li><strong>erotus</strong> (vähennyslasku)</li>
+					<li><strong>tulo</strong> (kertolasku)</li>
+					<li><strong>osamäärä</strong> (jakolasku)</li>
+				</ul>
+				<p>Peruslaskutoimitusten tunteminen ja hallitseminen on tärkeätä, koska muut koulumatematiikan tiedot ja taidot perustuvat vahvasti peruslaskutoimitusten osaamiselle.</p>
+				<h3>Summa ja erotus</h3>
+				<div>
+					<h4>Summa</h4>
+					<p><strong>Summa </strong>tarkoittaa joko yhteenlaskun tulosta tai yhteenlaskulauseketta. Luku joka esiintyy summassa on nimeltään <strong>summattava</strong> tai <strong>yhteenlaskettava</strong>. Yhteenlaskussa luvun suuruus kasvaa, eli lukusuoralla siirrytään oikealle (nuolen suuntaan).</p>
+					<img src="https://jannevenhoedu.github.io/ma7/j1/t/ma7j1_teoria_summa_osat.png" style="width: 596px;" alt="Summan osat">
+					<h4>Erotus</h4>
+					<p><strong>Erotus</strong> tarkoittaa joko vähennyslaskun tulosta tai vähennyslaskulauseketta. Erotuksen ensimmäinen luku on nimeltään <strong>vähennettävä</strong> ja muut ovat <strong>vähentäjiä</strong>. Vähennyslaskussa luvun suuruus pienenee, eli siirrytään lukusuoralla vasemmalle (vastakkaiseen suuntaan kuin nuoli).</p>
+					<img src="https://jannevenhoedu.github.io/ma7/j1/t/ma7j1_teoria_erotus_osat.png"style="width: 599px;" alt="Erotuksen osat.">
+					<h4>Summan ja erotuksen välinen yhteys</h4>
+					<p>Jos summasta vähennetään toinen yhteenlaskettavista, niin saadaan vastaukseksi toinen yhteenlaskettava.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong></p>
+						<p class="indent">\(\begin{align}\mathsf{\color{green}{8} + \color{blue}{5} = \color{red}{13}}\\ \mathsf{\color{red}{13} - \color{blue}{5} = \color{green}{8}}\\ \mathsf{\color{red}{13} - \color{green}{8} = \color{blue}{5}}\end{align}\)</p>
+					</div>
+				</div>
+				<h3>Tulo ja osamäärä</h3>
+				<div>
+					<h4>Tulo</h4>
+					<p><strong>Tulo</strong> tarkoittaa joko kertolaskun tulosta tai kertolaskulauseketta. Tuloon osallistuvia lukuja kutsutaan tulon <strong>tekijöiksi</strong>. Kertolasku on lyhyempi tapa ilmaista summa, jossa jotakin lukua lasketaan itsensä kanssa yhteen useita kertoja.</p>
+					<div class="indent">
+						<p>\(\mathsf{4 \cdot 2 = 2 + 2 + 2 + 2}\)</p>
+						<p>\(\mathsf{3 \cdot 7 = 7 + 7 + 7}\)</p>
+					</div>
+					<p>Kertolaskua on helppo havainnollistaa suorakulmion muotoisen alueen sisältämien ruutujen laskemisessa.</p>
+					<img src="https://jannevenhoedu.github.io/ma7/j1/t/ma7j1_teoria_kertolasku.gif" style="width: 300px;" alt="Kertolaskun havainnollistaminen ruudukon avulla.">
+					<h4>Osamäärä</h4>
+					<p><strong><br>Osamäärä</strong> eli jakolasku on tulon vastakkainen laskutoimitus. Jakolaskua voidaan merkitä joko</p>
+					<ul>
+						<li>jakoviivalla \( \mathsf{\dfrac{40}{8} = 5} \)<br></li>
+						<li>kaksoispisteellä \( \mathsf{40:8=5} \) tai<br></li>
+						<li>kauttaviivalla \( \mathsf{40/8 = 5} \)</li>
+					</ul>
+					<p>Osamäärän ensimmäistä (ylempää) lukua kutsutaan <strong>jaettavaksi</strong> ja jälkimmäistä <strong>jakajaksi</strong>.</p>
+					<p>Jos jokin tulo jaetaan toisella tulon tekijällä, niin saadaan vastaukseksi toinen tulon tekijöistä.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong></p>
+						<p class="indent">\(\begin{align}&amp;\mathsf{\color{blue}8 \cdot \color{green}5 = \color{red}{40}} \\ &amp;\mathsf{\dfrac{\color{red}{40}}{\color{blue}8} = \color{green}5}\\ &amp;\mathsf{\dfrac{\color{red}{40}}{\color{green}5} = \color{blue}8}\end{align} \)</p>
+					</div>
+				</div>
+				<h3>Osittelu</h3>
+				<div>
+					<h4>Summa</h4>
+					<p>Suuret yhteenlaskettavat voidaan pilkkoa ykkösiksi, kymmeniksi, sadoiksi, jne. ja laskea helpommat yhteenlaskut keskenään. Lopuksi osasummat lasketaan vielä yhteen, jotta saadaan lopullinen vastaus.</p>
+					<p class="indent">\(\begin{align}\mathsf{1391 + 5835} &amp;= \mathsf{\color{red}{1000} + \color{blue}{300} + \color{green}{90} + 1 + \color{red}{5000} + \color{blue}{800} + \color{green}{30} + 5} \\ &amp;=\mathsf{\color{red}{6000} + \color{blue}{1100} + \color{green}{120} + 6}\\ &amp;=\mathsf{7226}\end{align}\)</p>
+					<h4>Erotus</h4>
+					<p>Vastaavalla tavalla vähennyslaskussa vähennettävä voidaan pilkkoa pienempiin osiin, ja vähentää osat yksi kerrallaan vähennettävästä.</p>
+					<p class="indent">\(\begin{align}\mathsf{\quad2329 - 891} &amp;= \mathsf{2329 - \color{red}{800} - \color{blue}{90} - 1} \\&amp;=\mathsf{1529 - \color{blue}{90} - 1}\\ &amp;=\mathsf{1439 - 1}\\ &amp;=\mathsf{1438}\end{align}\)</p>
+					<h4>Tulo</h4>
+					<p>Suurta lukua kerrottaessa luku voidaan pilkkoa suuruusluokkien (ykköset, kymmenet, sadat...) mukaisiin pienempiin osiin (summaksi), ja kertoa niitä erikseen. Lopuksi osatulokset lasketaan yhteen, jolloin saadaan lopullinen vastaus.</p>
+					<p class="indent">\(\begin{align}\mathsf{7 \cdot 497} &amp;= \mathsf{7 \cdot (\color{red}{400} + \color{blue}{90} + \color{green}{7})}\\ &amp;= \mathsf{7 \cdot \color{red}{400} + 7 \cdot \color{blue}{90} + 7 \cdot \color{green}{7}}\\ &amp;=\mathsf{\color{red}{2800} + \color{blue}{630} + \color{green}{49}}\\ &amp;=\mathsf{3479}\end{align}\)</p>
+					<h4>Osamäärä</h4>
+					<p>Jakolaskussa jaettava voidaan jakaa osiin (summaksi), jakaa helpommat jakolaskut erikseen, ja lopuksi laskea yhteenlasku, jolloin saadaan lopullinen vastaus.</p>
+					<p class="indent">\(\begin{align}\mathsf{\dfrac{732}{3}} &amp;= \mathsf{\dfrac{\color{red}{600} + \color{blue}{120} + \color{green}{12}}{3}}\\ &amp;=\mathsf{\dfrac{\color{red}{600}}{3} + \dfrac{\color{blue}{120}}{3} + \dfrac{\color{green}{12}}{3}}\\ &amp;= \mathsf{\color{red}{200} + \color{blue}{40} + \color{green}{4}}\\ &amp;= \mathsf{244}\end{align}\)</p>
+					<p>Osittelun voi tehdä alussa haluamallaan tavalla, kunhan luvut ovat sellaisia, että ne on helppoa jakaa tasan.</p>
+				</div>
+				<h3>Lisätietoa: Allekkainlasku</h3>
+				<div>
+					<h4>Summa ja erotus allekkainlaskuna</h4>
+					<p>Suuria lukuja voidaan laskea yhteen allekkainlaskun avulla. Menetelmä perustuu siihen, että lasketaan kukin suuruusluokka (ykköset, kymmenet, sadat, ...) keskenään yhteen, ja ylimenevät osat lasketaan tarvittaessa seuraavassa vaiheessa. Yhteenlaskua allekkain käytetään myös silloin kun lukuja on paljon.</p>
+					<div class="gg" id="summa_allekkain" style="width: 427px; height: 197px;">
+						https://jannevenhoedu.github.io/ma7/j1/t/ma7j1_teoria_summa_allekkain.ggb
+					</div>
+					<p>Suurten lukujen erotus voidaan myös laskea allekkain. Tässäkin lähdetään ykkösistä liikkeelle ja yritetään vähentää ylemmästä numerosta alempi. Jos se ei onnistu, niin voidaan lainata suuruusluokkaa suuremmista numeroista.</p>
+					<div class="gg" id="erotus_allekkain" style="width: 425px; height: 200px;">
+						https://jannevenhoedu.github.io/ma7/j1/t/ma7j1_teoria_erotus_allekkain.ggb
+					</div>
+					<h4>Tulo ja osamäärä allekkainlaskuna</h4>
+					<p>Allekkain kertolaskun idea perustuu tekijöiden jakamiseen kokonaisiin, kymmeniin, satoihin, jne., jolloin yksittäiset kertolaskut saadaan helpommiksi. Lopuksi kertolaskujen tulokset lasketaan yhteen.</p>
+					<div class="gg" id="kerto_allekkain" style="width: 432px; height: 267px;">
+						https://jannevenhoedu.github.io/ma7/j1/t/ma7j1_teoria_kerto_allekkain.ggb
+					</div>
+					<p>Allekkain jakolaskussa jaettavaa jaetaan numero kerrallaan lähtien vasemmalta. Yksittäisistä jakolaskuista jäävä jakojäännös liitetään seuraavan numeron kymmeniksi. Allekkain jakolaskulla saadaankin kätevästi jakojäännös selville, jota tutkitaan tarkemmin seuraavassa jaksossa.</p>
+					<div class="gg" id="jakolasku_allekkain" style="width: 452px; height: 267px;">
+						https://jannevenhoedu.github.io/ma7/j1/t/ma7j1_teoria_jakolasku_allekkain.ggb
+					</div>
+				</div>
+				<h3>Lisätietoa: Vaihdannaisuus</h3>
+				<div>
+					<p><strong>Vaihdannaisuus</strong> eli kommutatiivisuus on laskutoimituksen ominaisuus, joka kuvaa mahdollisuutta vaihtaa laskutoimituksen luvut toisin päin ilman, että laskun tulos muuttuu. Yhteenlasku on vaihdannainen laskutoimitus, esimerkiksi</p>
+					<div class="indent">
+						<p>\(\mathsf{\color{red}{4} + \color{blue}{3} = 7}\)</p>
+						<p>\(\mathsf{\color{blue}{3} + \color{red}{4} = 7}\)</p>
+					</div>
+					<p>Vähennyslasku puolestaan ei ole vaihdannainen laskutoimitus.</p>
+					<div class="indent">
+						<p>\(\mathsf{\color{red}{4} - \color{blue}{3} = 1}\)</p>
+						<p>\(\mathsf{\color{blue}{3} - \color{red}{4} = -1}\)</p>
+					</div>
+					<p>Kertolasku on vaihdannainen laskutoimitus.</p>
+					<div class="indent">
+						<p>\(\mathsf{\color{red}{4} \cdot \color{blue}{3} = 12}\)</p>
+						<p>\(\mathsf{\color{blue}{3} \cdot \color{red}{4} = 12}\)</p>
+					</div>
+					<p>Jakolasku ei ole vaihdannainen laskutoimitus.</p>
+					<div class="indent">
+						<p>\(\mathsf{\dfrac{\color{red}{6}}{\color{blue}{3}} = 2}\)</p>
+						<p>\(\mathsf{\dfrac{\color{blue}{3}}{\color{red}{6}} = 0{,}5}\)</p>
+					</div>
+				</div>
+				<h3>Lisätietoa: Potenssi</h3>
+				<div>
+					<p>Potenssimerkinnän avulla voidaan lyhentää kertolaskua, missä sama luku esiintyy tulon tekijänä useamman kerran. Potenssimerkinnässä tulon tekijän oikeaan yläkulmaan kirjoitetaan luku, joka kertoo kuinka monta kertaa tekijä kertolaskussa esiintyy.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Merkitse kertolasku potenssina.</p>
+						<p class="indent">a) \(\mathsf{2 \cdot 2 \cdot 2 \cdot 2 = 2^4}\)</p>
+						<p class="indent">b) \(\mathsf{6 \cdot 6 \cdot 6 = 6^3}\)</p>
+					</div>
+					<p>Tulon tekijää (esimerkissä luku 2) kutsutaan <strong>kantaluvuksi</strong>, ja yläkulmassa olevaa lukua (luku 4) kutsutaan <strong>eksponentiksi</strong>. Kyseinen merkintä sanottaisiin "Kaksi potenssiin neljä", "Kaksi neljänteen" tai "Kaksi korotettuna neljänteen potenssiin".</p>
+					<p>Potenssin arvoa laskettaessa potenssimerkintä voidaan kirjoittaa ensin kertolaskuna, ja laskea kertolasku normaalisti tämän jälkeen.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Laske.</p>
+						<div class="editor-indent" style="margin-left: 30px;">
+							<p>a) \(\mathsf{6^2 = 6 \cdot 6 = 36}\)</p>
+							<p>b) \(\mathsf{7^2= 7 \cdot 7 = 49}\)</p>
+							<p>c) \(\mathsf{(-5)^2 = -5 \cdot (-5) = 25}\)</p>
+							<p>d) \(\mathsf{3^4 = 3 \cdot 3 \cdot 3 \cdot 3 = 81}\)</p>
+						</div>
+					</div>
+					<p>Kuten yllä olevasta esimerkistä huomataan, niin kantaluku voi olla myös negatiivinen. Negatiivinen kantaluku tulee kirjoittaa sulkeiden sisään.</p>
+					<p><strong>Laskujärjestyksen osalta</strong> potenssit lasketaan ennen kerto- ja jakolaskuja. Suluilla voidaan potenssienkin kohdalla määrätä laskujärjestystä tarpeen mukaan.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Laske.</p>
+						<div class="editor-indent" style="margin-left: 30px;">
+							<p>a) \(\mathsf{5 \cdot 3^2 = 5 \cdot 9 = 45}\)</p>
+							<p>b) \(\mathsf{6^2 - 11 = 36 - 11 = 35}\)</p>
+							<p>c) \(\mathsf{(-5 \cdot 2)^2 = (-10)^2 = 100}\)</p>
+							<p>d) \(\mathsf{\dfrac{4^2}{2^4} = \dfrac{16}{16} = 1}\)</p>
+						</div>
+					</div>
+					<h4>Neliöjuuri</h4>
+					<p>Kuten peruslaskutoimituksilla aikaisemmin havaittiin, myös potensseilla on olemassa käänteiset laskutoimitukset. Yleisesti niitä voisi kutsua juuri-laskuiksi, mutta keskitytään nyt toiseen potenssiin korottamisen käänteiseen laskutoimitukseen eli <strong>neliöjuureen</strong>.</p>
+					<p class="indent">\(\mathsf{5^2 = 25 \qquad \Rightarrow \qquad \sqrt{25} = 5}\)</p>
+					<div class="example">
+						<p><strong>Esimerkki: </strong>Laske.</p>
+						<div class="editor-indent" style="margin-left: 30px;">
+							<p>a) \(\mathsf{\sqrt{16} = 4}\)</p>
+							<p>b) \(\mathsf{\sqrt{36} = 6}\)</p>
+							<p>c) \(\mathsf{\sqrt{100} = 10}\)</p>
+							<p>d) \(\mathsf{\sqrt{1} = 1}\)</p>
+						</div>
+					</div>
+					<p>Neliöjuuren merkintänä käytetään siis erityistä juuri-merkkiä \(\sqrt{\rule{1em}{0pt}\rule{0pt}{1em}}\). Merkin alla olevaa lukua kutsutaan <strong>juurrettavaksi</strong>. Neliöjuuri vastaa siis kysymykseen "Mikä luku on kerrottu itsellään, että saadaan vastaukseksi juurrettava?".</p>
+				</div>
+			</div>
+			<h2>4. Laskujärjestys</h2>
+			<div>
+				<p>Jos laskulausekkeessa esiintyy useita laskutoimituksia, tulee sopia säännöt, joiden mukaan valitaan laskutoimituksille suoritusjärjestys. Laskujärjestyksen kanssa tulee olla erityisen tarkkana laskulauseketta syötettäessä tietokoneen tai laskimen
+					laskettavaksi. Pääsääntöisesti ne toki yleisesti sovittua laskujärjestystä noudattavat, mutta lukujen ja laskutoimitusten syöttämisessä voi tulla epäselvyyksiä välitulosten kanssa.</p>
+
+				<h3>Laskujärjestys</h3>
+				<div>
+					<p>Toistaiseksi ollaan opiskeltu vain peruslaskutoimituksia, joten tarkastellaan laskujärjestystä niiden osalta. Jos lausekkeen laskutoimitukset ovat samassa vaiheessa laskettavia, suoritetaan lasku oletuksena aina järjestyksessä vasemmalta oikealle.
+						Alle on listattu peruslaskutoimitusten laskujärjestys:</p>
+					<ol>
+						<li>Sulkeet</li>
+						<li>Tulo ja osamäärä (kerto- ja jakolasku)</li>
+						<li>Summa ja erotus (yhteen- ja vähennyslasku)</li>
+					</ol>
+					<p><strong>Esimerkiksi:</strong></p>
+
+					<div class="editor-indent" style="margin-left: 30px;">
+						<p>\( \mathsf{\color{red}{5 \cdot 4} + 16 \color{blue}{ - 8 : 2} \;=\; \color{red}{20} + 16 \color{blue}{ - 4} \;=\; 32}\)</p>
+						<p>\(\mathsf{5 \cdot (\color{red}{ 4 + 16 - 8}) : 2 \;=\; 5 \cdot \color{red}{12} : 2 \;=\; 60 : 2 \;=\; 30} \)</p>
+					</div>
+
+					<p>Sulkeiden avulla voidaan siis lausekkeen laskujärjestystä muuttaa. Kertolaskun laskeminen ennen yhteenlaskua on luonnollista, kun muistetaan, että kertolaskuhan oli vain lyhyempi tapa merkitä tilannetta, jossa samaa lukua summataan useita kertoja.</p>
+				</div>
+				<h3>Murtolauseke</h3>
+				<div>
+					<p>Murtolauseke eli rationaalilauseke tarkoittaa sellaisia lausekkeita, jotka on kirjoitettu käyttäen murtolukumerkintää. Osoittajassa ja nimittäjässä voi siis yksittäisen luvun lisäksi olla lausekkeita. Laskujärjestyksen kannalta osoittajassa ja nimittäjässä
+						olevat lausekkeet tulee laskea ensin, ja mahdollinen murtolukumerkinnän mukainen jakolasku aivan viimeiseksi. Esimerkiksi</p>
+					<div class="editor-indent" style="margin-left: 30px;">
+						<p>\(\mathsf{\dfrac{4+8}{6-3} = \dfrac{12}{3} = 4}\)</p>
+					</div>
+					<p>Tehtävä voitaisiin kirjoittaa ilman murtolukumerkintää seuraavasti:</p>
+					<div class="editor-indent" style="margin-left: 30px;">
+						<p>\(\mathsf{(4+8) : (6-3) = 12 : 3 = 4}\)</p>
+					</div>
+					<p>Murtolauseke siis muuttaa laskujärjestystä ilman tarvetta sulkeiden käytölle.</p>
+				</div>
+				<h3>Esimerkki: Keskiarvo</h3>
+				<div>
+					<p>Lukujen keskiarvo lasketaan jakamalla lukujen summa niiden lukumäärällä. Esimerkiksi lukujen 4, 6, 7, 8 ja 10 keskiarvo lasketaan seuraavasti.</p>
+					<div class="editor-indent" style="margin-left: 30px;">
+						<p>\(\mathsf{\dfrac{4 + 6 + 7 + 8 + 10}{5} = \dfrac{35}{5} = 7}\)</p>
+					</div>
+				</div>
+			</div>
+			<h2>5. Suuruusvertailu</h2>
+			<div>
+				<p>Lukujen suuruutta vertaillaan erilaisten <strong>vertailumerkkien</strong> avulla. Vertailumerkin käyttö muodostaa <strong>väitteen</strong>, joka on joko totta (tosi) tai valhetta (epätosi). Esimerkiksi väite \(\mathsf{2 = 3}\) on epätosi, kun taas
+					\(\mathsf{2 &lt; 3}\) on tosi. Alla olevassa taulukossa on kuvattu erilaisia vertailumerkkejä esimerkkeineen.</p>
+				<div class="editor-indent" style="margin-left: 30px;">
+					<table border="1">
+						<tbody>
+							<tr>
+								<td style="width: 100px; text-align: center;"><strong>Merkki</strong></td>
+								<td style="text-align: center;"><strong>Selitys</strong></td>
+								<td style="width: 200px; text-align: center;"><strong>Esimerkki</strong></td>
+							</tr>
+							<tr>
+								<td style="text-align: center;">\(\mathsf{ = }\)</td>
+								<td>Yhtä suuri kuin</td>
+								<td style="text-align: center;">\(\mathsf{1+1=2}\)</td>
+							</tr>
+							<tr>
+								<td style="text-align: center;">\(\mathsf{&lt;}\)</td>
+								<td>Pienempi kuin</td>
+								<td style="text-align: center;">\(\mathsf{3 &lt; 4}\)</td>
+							</tr>
+							<tr>
+								<td style="text-align: center;">\(\mathsf{&gt;}\)</td>
+								<td>Suurempi kuin</td>
+								<td style="text-align: center;">\(\mathsf{6&gt;5}\)</td>
+							</tr>
+							<tr>
+								<td style="text-align: center;">\(\mathsf{\leq}\)</td>
+								<td>Pienempi tai yhtä suuri kuin</td>
+								<td style="text-align: center;">\(\mathsf{x \leq 7}\)</td>
+							</tr>
+							<tr>
+								<td style="text-align: center;">\(\mathsf{\geq}\)</td>
+								<td>Suurempi tai yhtä suuri kuin</td>
+								<td style="text-align: center;">\(\mathsf{x \geq 8}\)</td>
+							</tr>
+							<tr>
+								<td style="text-align: center;">\(\mathsf{\neq}\)</td>
+								<td>Erisuuri kuin</td>
+								<td style="text-align: center;">\(\mathsf{9\neq 10}\)</td>
+							</tr>
+							<tr>
+								<td style="text-align: center;">\(\mathsf{\approx}\)</td>
+								<td>Likimain yhtä suuri kuin</td>
+								<td style="text-align: center;">\(\mathsf{10{,}8 \approx 11}\)</td>
+							</tr>
+						</tbody>
+					</table>
+					<br>
+				</div>
+				<h3>Yhtäsuuruusmerkin käytöstä</h3>
+				<div>
+					<p>Käytetyin vertailumerkki koulumatematiikassa lienee yhtäsuuruusmerkki (\(\mathsf{=}\)). Sitä käytetään mm. lausekkeen ja tuloksen välissä ilmaisemassa, että lausekkeen arvo on yhtä suuri kuin tulos. Esimerkiksi:</p>
+					<div class="editor-indent" style="margin-left: 30px;">
+						<p>\(\mathsf{4+5=9}\)</p>
+					</div>
+					<p>Toisaalta yhtäsuuruusmerkkiä käytetään myös sievennettyjen lausekkeiden välissä kuvaamaan, että kaksi lauseketta ovat yhtä suuria. Esimerkiksi:</p>
+					<p>
+					</p>
+					<div class="editor-indent" style="margin-left: 30px;">
+						<p>\(\mathsf{3 \cdot 4 + 5 = 12 + 5}\)</p>
+					</div>
+					<p>Yhtäsuuruusmerkin avulla voidaan myös kirjoittaa pidempiä väitteitä, jossa jotakin lauseketta sievennetään useita kertoja. Esimerkiksi</p>
+					<div class="editor-indent" style="margin-left: 30px;">
+						<p>\(\mathsf{3 \cdot 4 + 5 = 12 + 5 = 17}\)</p>
+					</div>
+					<p>Selvyyden vuoksi pidemmät sievennykset kannattaa kirjoittaa useammalle riville siten, että yhtäsuuruusmerkki aloittaa uuden rivin.</p>
+					<div class="editor-indent" style="margin-left: 30px;">
+						<p>\(\begin{align}&amp;\mathsf{5 \cdot 4 + 3 \cdot (5-3)}\\=\;&amp;\mathsf{5 \cdot 4 + 3 \cdot 2}\\=\;&amp;\mathsf{ 20 + 6}\\=\;&amp;\mathsf{ 26}\end{align}\)</p>
+					</div>
+					<p>Yhtäsuuruusmerkkiä käytetään usein myös väärin lisäämällä kesken sievennyksen uusia laskutoimituksia lausekkeeseen. Tällöin yhtäsuuruus ei enää pidä paikkaansa, eli väitteestä tulee epätosi. Alkuperäisen lausekkeen ja viimeisen sievennetyn lausekkeen
+						(vastauksen) tulee olla yhtä suuria. Jokaisessa sievennyksen välivaiheessa tehdään siis vain laskujärjestyksen mukaisia muutoksia edelliseen lausekkeeseen eikä mitään lisätä tai jätetä pois lausekkeesta.</p>
+					<p><strong>Esimerkki:</strong> Timo ja Pekka ostavat rautakaupasta kaksi 25 euron hintaista rautakankea sekä 40 euron hintaisen lapion. He jakavat kustannukset tasan. Kuinka paljon kullekkin tulee maksettavaa.</p>
+					<p>Oikea tapa 1: (Yksi lauseke)</p>
+					<div class="editor-indent" style="margin-left: 30px;">
+						<p>\(\mathsf{\dfrac{2 \cdot 25 + 40}{2}=\dfrac{50 + 40}{2}=\dfrac{90}{2}=45}\)</p>
+						<p><strong>Vastaus:</strong> Maksettavaa tulee 45 euroa.</p>
+					</div>
+					<hr>
+					<p>Oikea tapa 2: (Kaksi lauseketta)</p>
+					<div class="editor-indent" style="margin-left: 30px;">
+						<p>Kokonaishinta:</p>
+						<div class="editor-indent" style="margin-left: 30px;">
+							<p>\(\mathsf{2 \cdot 25 + 40 = 50 + 40 = 90}\)</p>
+						</div>
+						<p>Kustannusten jakautuminen:</p>
+						<div class="editor-indent" style="margin-left: 30px;">
+							<p>\(\mathsf{90 : 2 = 45}\)</p>
+						</div>
+						<p><strong>Vastaus:</strong> Maksettavaa tulee 45 euroa.</p>
+					</div>
+					<hr>
+					<p>Väärä tapa:</p>
+					<div class="editor-indent" style="margin-left: 30px;">
+						<p>\(\begin{align}&amp;\mathsf{2 \cdot 25 + 40}\\ =\;&amp;\mathsf{50 + 40}\\=\;&amp;\mathsf{90 : 2 \qquad \leftarrow \color{red}{\small\text{jakolasku ei voi ilmestyä kesken kaiken}}}\\=\;&amp;\mathsf{45}\end{align}\)</p>
+						<p><strong>Vastaus:</strong> Maksettavaa tulee 45 euroa.</p>
+					</div>
+				</div>
+			</div>
+			<h2>6. Kokonaisluvut</h2>
+			<div>
+				<h3>Kokonaisluvut</h3>
+				<div>
+					<p>Laajennetaan lukualuetta luonnollisista luvuista&nbsp;<strong>kokonaislukuihin</strong>, jolloin ns. <strong>positiivisten kokonaislukujen</strong> (1, 2, 3,...) ja nollan lisäksi on mukana myös <strong>negatiiviset kokonaisluvut</strong> (-1, -2, -3,...).</p>
+					<div class="editor-indent" style="margin-left: 30px;">
+						<p><img src="https://jannevenhoedu.github.io/ma7/j1/t/ma7j1_teoria_kokonaisluvut.png" alt="" width="349" height="280" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+					</div>
+
+					<p>Kokonaislukuja on helpompi ymmärtää lämpömittarin avulla, jonka yhteydessä negatiivisia lukuja ollaan totuttu käsittelemään. Lämpömittari onkin käytännössä sama asia kuin pystyyn nostettu lukusuora. Lämpömittari on kuvattu sivun oikealla laidalla,
+						ja alla on vastaava lukusuora.</p>
+					<div class="editor-indent" style="margin-left: 30px;">
+						<p><img src="https://jannevenhoedu.github.io/ma7/j1/t/ma7j1_teoria_lukusuoraZ.png" alt="" width="500" height="53" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+					</div>
+					<p>Tärkeätä on ymmärtää, että luvut kasvavat lukusuoralla nuolen suuntaan (oikealle), jolloin vastakkaiseen suuntaan (vasemmalle) mentäessä luvut pienenevät. Esimerkiksi luku \(\mathsf{-3}\) on siis pienempi kuin \(\mathsf{-1}\).</p>
+					<div class="editor-indent" style="margin-left: 30px;">
+						<iframe class="gg_upotus" scrolling="no" title="ma7j1_teoria_lukusuoraZ" src="https://www.geogebra.org/material/iframe/id/b5xs3zbb/width/778/height/174/border/888888/sfsb/false/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false"
+							width="778px" height="174px" style="border:0px;"> </iframe>
+					</div>
+				</div>
+				<h3>Vastaluku</h3>
+				<div>
+					<p>Tarkastellaan lukusuoraa. <strong>Luvun vastaluku</strong> on yhtä kaukana nollasta kuin alkuperäinen luku, mutta vastakkaisella puolella. Vastalukua merkitään miinusmerkillä.<br></p>
+					<div class="editor-indent" style="margin-left: 30px;">
+						<p><img src="https://jannevenhoedu.github.io/ma7/j1/t/ma7j1_teoria_vastaluku.png" alt="Luku ja sen vastaluku" width="500" height="86" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+					</div>
+					<p>Esimerkiksi luvun \( \mathsf{2} \)&nbsp;vastaluku on \( \mathsf{-2} \). Eli vastaluku saadaan laittamalla luvun eteen miinusmerkki.<br><br>Toisaalta, luvun \( \mathsf{-2} \)&nbsp;vastaluku on \( \mathsf{2} \)<code></code>​, eli voidaan sanoa, että
+						luvun&nbsp;
+						<strong>vastaluvun vastaluku on luku itse</strong>. Matemaattisin merkinnöin tämä näyttäisi siis seuraavalta \( \mathsf{-(-2) = 2} \)​. Sulkeet luvun \( \mathsf{-2} \) edessä ovat selkeyttämässä peräkkäisten miinumerkkien merkintää sekä pakollinen
+						tyyliseikka.
+					</p>
+					<p>Lisäksi luvulla ja sen vastaluvulla on sellainen ominaisuus, että niiden summa on aina 0. Tätä tietoa käytetään hyväksi mm. lukio-opinnoissa, kun tarkastellaan tai jopa osoitetaan kahden luvun olevan toistensa vastalukuja. Tällöin on toki yleensä
+					käytössä kokonaislukujan monimutkaisemmat lukujoukot.</p>
+				</div>
+				<h3>Itseisarvo</h3>
+				<div>
+					<p>Luvun etäisyyttä nollasta kutsutaan luvun&nbsp;<strong>itseisarvoksi</strong>. Itseisarvoa merkitään kahdella pystyviivalla luvun ympärillä. Koska itseisarvo kuvaa etäisyyttä jostakin, se on aina etumerkitön, eli positiivinen luku.<br></p>
+					<div class="editor-indent" style="margin-left: 30px;">
+						<p><img src="https://jannevenhoedu.github.io/ma7/j1/t/ma7j1_teoria_itseisarvo.png" alt="Luvun itseisarvo" width="499" height="144" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+					</div><br>
+					<h3>Erotuksen itseisarvo</h3>
+					<p>Erotuksella saadaan nimensä mukaisesti selville kahden asian (luku, pituus, paino, rahamäärä, ...) välinen suuruusero. Suuruuseron tulisi olla aina positiivinen luku, mutta erotusta laskiessa vastaus voi olla myös negatiivinen luku, kun pienemmästä
+						luvusta vähennetään suurempi.</p>
+					<p>&nbsp;Esimerkiksi tietokoneella laskettaessa olisi kätevää määritellä suuruuseron laskeminen siten, että lukujen järjestyksellä ei ole väliä, ja vastaus olisi aina positiivinen. Tähän ongelmaan käytetään erotuksen itseisarvoa, jolloin saadaan mahdollinen
+						miinusmerkki pois luvun edestä.</p>
+					<p><strong>Esimerkki</strong>: Laske lukujen</p>
+					<p>a) \(\mathsf{4}\) ja \(\mathsf{7}\)&nbsp;suuruusero.</p>
+					<div class="editor-indent" style="margin-left: 30px;">
+						<p>\(\mathsf{|4-7| = |-3| = 3}\)</p>
+					</div>
+					<p>b) \(\mathsf{-4}\) ja \(\mathsf{7}\)&nbsp;suuruusero.</p>
+					<div class="editor-indent" style="margin-left: 30px;">
+						<p>\(\mathsf{\left|-4-7\right| = |-11| = 11}\)</p>
+					</div>
+					<p>c) \(\mathsf{4}\) ja \(\mathsf{-7}\)&nbsp;suuruusero.</p>
+					<div class="editor-indent" style="margin-left: 30px;">
+						<p>\(\mathsf{\left|\:4-(-7)\right| = |4+7| = |11| = 11}\)</p>
+					</div>
+					<p>d) \(\mathsf{-4}\) ja \(\mathsf{-7}\)&nbsp;suuruusero.</p>
+					<div class="editor-indent" style="margin-left: 30px;">
+						<p>\(\mathsf{\left|-4-(-7)\right| = |-4+7| = |3| = 3}\)</p>
+					</div>
+					<div class="editor-indent" style="margin-left: 30px;">
+						<p><img src="https://jannevenhoedu.github.io/ma7/j1/t/ma7j1_teoria_erotuksen_itseisarvo.gif" alt="" width="500" height="75" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+					</div>
+				</div>
+			</div>
+			<h2>7. Kokonaislukujen summa ja erotus</h2>
+			<div>
+				<h3>Merkkien sieventäminen</h3>
+				<div>
+					<p>Koska miinusmerkki on saanut nyt uuden merkityksen, tulee jatkossa osata sieventää useita perättäisiä etumerkkejä. Sievennyssäännöt ovat seuraavat.</p>
+					<div class="editor-indent" style="margin-left: 30px;">
+						<p><img src="https://jannevenhoedu.github.io/ma7/j1/t/ma7j1_teoria_merkkien_sieventaminen.png" alt="Etumerkkien sieventäminen" width="399" height="128" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+					</div>
+					<p>Käytännössä tällaisia tilanteita tulee vastaan kokonaislukujen yhteen- ja vähennyslaskujen kohdalla. Varsinkin jaksossa 3 (kirjainlaskenta) tulee merkkien sievennyssäännöt olla hyvin muistissa, kun muuttujalausekkeeseen sijoitetaan kokonaislukuja.
+						Vastaavasti 8. luokalla potenssien laskusääntöjen yhteydessä kerrataan merkkisääntöjä, kun negatiivisia lukuja korotetaan potenssiin. Tätä varten on hyvä ymmärtää, että pariton määrä miinusmerkkejä sievenee miinukseksi ja parillinen määrä plussaksi.
+						Esimerkiksi
+					</p>
+					<div class="editor-indent" style="margin-left: 30px;">
+						<p>\( \mathsf{-(-(-(-(-8)))) = -8}\)</p>
+						<p>\(\mathsf{-(+(+(+(-4)))) = 4} \)</p>
+					</div>
+				</div>
+				<h3>Kokonaislukujen summa ja erotus</h3>
+				<div>
+					<p><strong>Kokonaislukujen summan ja erotuksen</strong> eli yhteen- ja vähennyslaskun laskemista voidaan helpottaa lämpömittarin avulla. Esimerkiksi laskutoimitus</p>
+
+					<div class="editor-indent" style="margin-left: 30px;">
+						<p>\( \mathsf{-3 + 7 = 4} \)</p>
+					</div>
+
+					<p>voidaan ajatella, että lämpötila on aluksi \( \mathsf{-3\;^\circ\text{C}} \) ja se nousee tämän jälkeen \( \mathsf{7\;^\circ \text{C}} \). Uusi lämpötila on \( \mathsf{4\;^\circ \text{C}} \).</p>
+
+					<p>Vastaavasti vähennyslaskussa</p>
+
+					<div class="editor-indent" style="margin-left: 30px;">
+						<p>\( \mathsf{3 - 12 = -9} \)</p>
+					</div>
+
+					<p>lämpötila voidaan ajatella olevan aluksi \( \mathsf{3\;^\circ \text{C}} \) ja tämän jälkeen se laskee \( \mathsf{12\;^\circ \text{C}} \). Uusi lämpötila on siis \( \mathsf{-9\;^\circ \text{C}} \).</p>
+
+					<h3>Välimerkistä etumerkiksi</h3>
+
+					<p>Toinen tapa, jolla kokonaislukujen yhteen- ja vähennyslaskua voidaan joissain tilanteissa helpottaa, on vaihtaa lukujen järjestystä. Tämä vaatii ajatusmaailman muuttamista + ja - merkkien roolista. Tähän asti on totuttu, että merkit esiintyvät kahden
+						luvun välissä ilmaisemassa yhteen- tai vähennyslaskua. Nyt ollaan todettu, että kyseessä onkin <strong>etumerkki</strong> eikä välimerkki, joten pidetään merkki kiinni sen jäljessä tulevassa luvussa. Nyt voidaan lukujen järjestystä laskussa vaihtaa esimerkiksi
+						näin
+					</p>
+
+					<div class="editor-indent" style="margin-left: 30px;">
+						<p>\( \begin{align}&amp;\mathsf{\color{blue}{-5} \color{red}{+ 8}}\\ =\;&amp;\mathsf{\color{red}{+ 8} \color{blue}{-5}}\\ =\;&amp;\mathsf{3 }\end{align} \)</p>
+					</div>
+
+					<p>tai näin</p>
+
+					<div class="editor-indent" style="margin-left: 30px;">
+						<p>\( \begin{align}&amp;\mathsf{\color{red}{7}\color{blue}{-2}\color{blue}{-5}\color{red}{+4}}\\ =\;&amp;\mathsf{\color{red}{7}\color{red}{+4}\color{blue}{-2}\color{blue}{-5}}\\ =\;&amp;\mathsf{\color{red}{11}\color{blue}{-7}}\\=\;&amp;\mathsf{4}\end{align}
+							\)
+						</p>
+					</div>
+
+					<h3>Perättäisten + ja - merkkien sieventäminen yhteen- ja vähennyslaskussa</h3>
+
+					<p>Erilaiset laskukaavat ja tietokoneohjelmat eivät välttämättä lähtökohtaisesti tiedä ovatko luvut joita sille syötetään positiivisia vai negatiivisia. Näin ollen voidaan tulla tilanteeseen, missä yritetään esimerkiksi laskea yhteen positiivista ja
+						negatiivista lukua. Ennenkuin tällainen lasku voidaan laskea, on sievennettävä perättäiset merkit yhdeksi aiemmin opittujen sievennyssääntöjen avulla. Esimerkiksi</p>
+
+					<div class="editor-indent" style="margin-left: 30px;">
+						<p>\( \begin{align}&amp;\mathsf{\color{red}{8\:+\:}(\color{blue}{-4})}\\ =\;&amp;\mathsf{\color{red}{8}\color{blue}{-4}}\\ =\;&amp;\mathsf{4}\end{align}\)</p>
+						<p>\(\begin{align}&amp;\mathsf{\color{blue}{-9\:-\:}(\color{blue}{-4})}\\ =\;&amp;\mathsf{\color{blue}{-9}\color{red}{+4}}\\ =\;&amp;\mathsf{-5}\end{align} \)</p>
+					</div>
+
+					<h3>Muista merkkisäännöt:</h3>
+
+					<div class="editor-indent" style="margin-left: 30px;">
+						<p><img src="https://jannevenhoedu.github.io/ma7/j1/t/ma7j1_teoria_merkkien_sieventaminen2.png" alt="Etumerkkien sieventäminen" width="157" height="157" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+					</div>
+				</div>
+			</div>
+			<h2>8. Kokonaislukujen tulo ja osamäärä</h2>
+			<div>
+				<p>Kokonaislukujen kerto- ja jakolaskussa pätevät samat merkkien sievennyssäännöt kuin aikaisemminkin. Kerto- ja jakolaskussa merkit eivät ole perättäisiä vaan nyt tutkitaan laskutoimitukseen osallistuvien lukujen etumerkkiä. Esimerkiksi<br></p>
+				<div class="editor-indent" style="margin-left: 30px;">
+					<table class="left" border="0">
+						<tbody>
+							<tr>
+								<td class="right" style="text-align: right;">\(\mathsf{\color{red}{3}\cdot \color{red}{8}}\)</td>
+								<td class="left">\(\mathsf{\,=\color{red}{24}}\)</td>
+								<td>&nbsp;\(\qquad\)</td>
+								<td class="right" style="text-align: right;">\(\mathsf{\color{red}{32}: \color{red}{8}}\)</td>
+								<td class="left">\(\mathsf{\,= \color{red}{4}}\)</td>
+							</tr>
+							<tr>
+								<td class="right" style="text-align: right;">\(\mathsf{\color{blue}{-3}\cdot \color{red}{8}}\)</td>
+								<td class="left">\(\mathsf{\,=\color{blue}{-24}}\)</td>
+								<td>&nbsp;</td>
+								<td class="right" style="text-align: right;">\(\mathsf{\color{blue}{-32}: \color{red}{8}}\)</td>
+								<td class="left">\(\mathsf{\,= \color{blue}{-4}}\)</td>
+							</tr>
+							<tr>
+								<td class="right" style="text-align: right;">\(\mathsf{\color{red}{3}\cdot (\color{blue}{-8})}\)</td>
+								<td class="left">\(\mathsf{\,=\color{blue}{-24}}\)</td>
+								<td>&nbsp;</td>
+								<td class="right" style="text-align: right;">\(\mathsf{\color{red}{32}: (\color{blue}{-8})}\)</td>
+								<td class="left">\(\mathsf{\,= \color{blue}{-4}}\)</td>
+							</tr>
+							<tr>
+								<td class="right" style="text-align: right;">\(\mathsf{\color{blue}{-3}\cdot (\color{blue}{-8})}\)</td>
+								<td class="left">\(\mathsf{\,=\color{red}{24}}\)</td>
+								<td>&nbsp;</td>
+								<td class="right" style="text-align: right;">\(\mathsf{\color{blue}{-32}: (\color{blue}{-8})}\)</td>
+								<td class="left">\(\mathsf{\,= \color{red}{4}}\)</td>
+							</tr>
+						</tbody>
+					</table><br></div>
+				<h3>Muista merkkisäännöt:</h3>
+				<div class="editor-indent" style="margin-left: 30px;">
+					<p><img src="https://jannevenhoedu.github.io/ma7/j1/t/ma7j1_teoria_merkkien_sieventaminen2.png" alt="Etumerkkien sieventäminen" width="157" height="157" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+				</div>
+			</div>
+			<h2>9. Desimaaliluvut</h2>
+			<div>
+				<p>Desimaaliluvulla kuvataan niitä lukuja, joissa on kokonaisten lisäksi myös kokonaisen osia. Desimaaliosa erotetaan kokonaisosasta pilkulla. Paikkojen nimeäminen perustuu samaan logiikkaan kuin kokonaisillakin luvuilla.</p>
+				<div class="editor-indent" style="margin-left: 30px;">
+					<p><img src="https://jannevenhoedu.github.io/ma7/j1/t/ma7j1_teoria_desimaaliluku.png" alt="" width="401" height="202" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+				</div>
+				<p><strong>Pilkun vasemmalla puolella</strong> on siis kokonaisosa, joka koostuu tuttuun tapaan ykkösistä, kymmenistä, sadoista, tuhansista jne.</p>
+				<p><strong>Pilkun oikealla puolella</strong> desimaaliosa alkaa vasemmalta luettuna kymmenesosista, sadasosista, tuhannesosista jne.</p>
+				<p>Useissa maissa desimaalierottimena käytetään Suomen tapaan pilkkua, mutta esimerkiksi Yhdysvalloissa desimaalierottimena käytetään pistettä. Tähän törmäät varmasti käyttäessäsi laskinta tai tietokonetta. Hämäävästi pilkulla erotellaan näissä maissa
+					tuhannet, miljoonat, miljardit jne. toisistaan. Jotta sekaannusta ei pääse sattumaan, kannattaa aina laskuja laskimella laskiessasi varmistaa käytetty merkintätapa, ja pohtia jo etukäteen vastauksen suuruusluokkaa.</p>
+				<p>Lukusuoralla desimaalilukuja käytetään kokonaisten välissä kuvaamaan kymmenesosien, sadasosien, jne. avulla kokonaisten osia. Desimaalilukuja on loputtomasti, jokaisen desimaaliluvun välistä voidaan aina löytää uusi desimaaliluku.</p>
+				<div class="editor-indent" style="margin-left: 30px;">
+					<iframe class="gg_upotus" scrolling="no" title="ma7j1_teoria_lukusuoraR" src="https://www.geogebra.org/material/iframe/id/yxyzwbhk/width/778/height/174/border/888888/sfsb/false/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false"
+						width="778px" height="174px" style="border:0px;"> </iframe>
+				</div>
+				<h3>Murtolukujen muuntaminen desimaaliluvuiksi</h3>
+				<p>Murtoluvut, joissa on nimittäjänä jokin kymmenen moninkerta, vastaavat suoraan desimaalilukuja. Esimerkiksi<br></p>
+				<div class="editor-indent" style="margin-left: 30px;">
+					<p>\(\mathsf{\dfrac{8}{10} = 0{,}8\qquad \dfrac{5}{100} = 0{,}05\qquad \dfrac{34}{100} = 0{,}34\qquad \dfrac{93}{1000} = 0{,}093}\)</p>
+				</div>
+				<p>Jos murtoluvun nimittäjä ei ole kymmenen moninkerta, se voidaan yrittää laventaa johonkin niistä. Esimerkiksi<br></p>
+				<div class="editor-indent" style="margin-left: 30px;">
+					<p>\(\mathsf{\rule{0pt}{1.4em}^{2)}\dfrac{3}{5} = \dfrac{6}{10} = 0{,}6 \qquad \rule{0pt}{1.4em}^{25)}\dfrac{1}{4} = \dfrac{25}{100} = 0{,}25 \qquad \rule{0pt}{1.4em}^{5)}\dfrac{1}{20} = \dfrac{5}{100} = 0{,}05}\)</p>
+				</div>
+				<h5 id="paattymattomat">Lisätietoa: Päättymättömät desimaaliluvut</h3>
+				<p>Desimaaliluku voi jatkua loputtomasti. Tällöin desimaaliluvusta kirjoitetaan vain muutama ensimmäinen desimaali, ja luvun loppuun lisätään kolme pistettä kuvaamaan desimaaliluvun jatkumista kirjoitettujen numeroiden jälkeen. Tällaisia desimaalilukuja
+					voi tulla esimerkiksi jakolaskun vastauksena. Esimerkiksi</p>
+				<div class="editor-indent" style="margin-left: 30px;">
+					<p>\(\mathsf{\dfrac{1}{3} = \text{0,3333...}}\)</p>
+				</div>
+				<p>Desimaaliluku voi toistaa samaa numeroa (kuten yllä) tai jotakin numerosarjaa. Tällöin sanotaan, että desimaaliluku on <strong>päättymätön jaksollinen desimaaliluku</strong>. Tällaiset luvut voidaan esittää murtolukuna. Toistuvan jakson päälle voidaan tällöin
+					kirjoittaa viiva, joka kertoo mitkä numerot luvussa toistuvat. Esimerkiksi</p>
+				<div class="editor-indent" style="margin-left: 30px;">
+					<p>\(\mathsf{\dfrac{7}{11} = \text{0,63636363...} = \text{0,}\overline{63}}\)</p>
+					<p>\(\mathsf{\dfrac{5}{12} = \text{0,416666...} = \text{0,41}\overline{6}}\)</p>
+				</div>
+				<p>Desimaaliluku voi olla myös <strong>päättymätön jaksoton desimaaliluku (ns. irrationaaliluku)</strong>. Näitä desimaalilukuja ei voi esittää jakolaskuna (murtolukuna) vaan niitä esiintyy esimerkiksi neliöjuurien, trigonometristen funktioiden ja luonnonvakioiden
+					tapauksissa. Alla muutama esimerkki.</p>
+				<div class="editor-indent" style="margin-left: 30px;">
+					<p>\(\mathsf{\sqrt{2} = \text{1,414213...}}\)</p>
+					<p>\(\mathsf{\text{sin}(45^\circ) = \text{0,707106...}}\)</p>
+					<p>\(\mathsf{\pi = \text{3,14159265...}}\)</p>
+				</div>
+				<p>Näihin pääset tutustumaan tarkemmin 8. ja 9. luokalla.</p>
+			</div>
+			<h2>10. Desimaalilukujen summa ja erotus</h2>
+			<div>
+				<p>Desimaalilukuja voidaan laskea yhteen ja vähentää toisistaan aivan kuten kokonaisiakin lukuja.</p>
+				<h3>Allekkainlasku</h3>
+				<p>Lukuja allekkain asetellessa tulee varmistua, että pilkut ovat samalla kohdalla. Tällöin myös ykköset, kymmenet, kymmenesosat yms. ovat vastaavasti samalla kohtaa ja laskutoimitus onnistuu.</p>
+				<p><strong>Esimerkki: </strong>Laske lukujen \(\textsf{5,04}\) ja \(\textsf{3,88}\) summa ja erotus allekkain.</p>
+				<div class="editor-indent" style="margin-left: 30px;">
+					<p><img src="https://jannevenhoedu.github.io/ma7/j1/t/ma7j1_teoria_desim_summa_erotus_allekkain.png" alt="" width="300" height="128" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+				</div>
+				<p>Jos desimaaliluvuissa on eri määrä desimaaleja, voidaan toiseen lisätä puuttuvien desimaalien paikalle kirjoittaa nollia, jotta allekkainlasku selkeytyy.
+				</p>
+				<h3>Päässälasku</h3>
+				<p>Myös päässälaskiessa kannattaa ennen laskemista lisätä nollia desimaaliosan loppuun, mikäli luvuissa on eri määrä desimaaleja. Tämä helpottaa hahmottamaan paremmin lukujen desimaaliosan suuruutta ja suhdetta toisiinsa. Esimerkiksi:</p>
+				<div class="editor-indent" style="margin-left: 30px;">
+					<p>\( \begin{align}&amp;\mathsf{7{,}5 + 2{,}34}\\=\;&amp;\mathsf{7{,}50 + 2{,}34}\\=\;&amp;\mathsf{9{,}84}\end{align}\)</p>
+				</div>
+				<p>Toinen päässälaskua helpottava ajatusmalli on laskea kokonaisosa ja desimaaliosa erikseen, ja yhdistää ne sitten lopuksi. Esimerkiksi</p>
+				<div class="editor-indent" style="margin-left: 30px;">
+					<p>\( \begin{align}&amp;\mathsf{\color{red}{27}{,}\color{blue}{54} + \color{red}{51}{,}\color{blue}{62}}\\=\;&amp;\mathsf{\color{red}{27 + 51}&nbsp;+ \color{blue}{0{,}54 + 0{,}62}}\\=\;&amp;\mathsf{\color{red}{78} + \color{red}{1}{,}\color{blue}{16}}\\=\;&amp;\mathsf{\color{red}{79}{,}\color{blue}{16}}\end{align}
+						\)
+					</p>
+				</div>
+			</div>
+			<h2>11. Desimaalilukujen tulo ja osamäärä</h2>
+			<div>
+				<p>Desimaalilukuja kerrotaan ja jaetaan keskenään usein esimerkiksi geometriassa, kun lasketaan pituuksia, pinta-aloja tai tilavuuksia. Yksikkömuunnoksia ja prosenttilaskuja laskettaessa päädytään usein kertomaan tai jakamaan kymmenen moninkerroilla
+					(10, 100, 1000, ...). Tarkastellaan näitä kahta tapausta tarkemmin.</p>
+				<h3>Desimaalilukujen kertominen ja jakaminen kymmenen moninkerroilla</h3>
+				<p>Kymmenen moninkerroilla <strong>kerrottaessa</strong> desimaaliluvussa <strong>pilkku siirtyy oikealle</strong> nollien osoittaman määrän verran. Esimerkiksi</p>
+				<div class="editor-indent" style="margin-left: 30px;">
+					<p>​\(\mathsf{3{,}14 \cdot 10 = 31{,}4}\)</p>
+					<p>\(\mathsf{3{,}14 \cdot 100 = 314}\)</p>
+					<p>\(\mathsf{3{,}14 \cdot 1000 = 3140} \)</p>
+				</div>
+				<p>Jos numerot, joiden yli pilkkua voidaan siirtää, loppuvat kesken, lisätään tarvittaessa luvun loppuun nollia.</p>
+				<p><strong>Jaettaessa</strong> kymmenen moninkerroilla <strong>pilkku siirtyy</strong> puolestaan <strong>vasemmalle</strong>. Tällöin saattaa ilmetä tarve lisätä nollia luvun eteen pilkun siirtämisen mahdollistamiseksi. Esimerkiksi</p>
+				<div class="editor-indent" style="margin-left: 30px;">
+					<p>\(\mathsf{78{,}3 : 10 = 7{,}83}\)</p>
+					<p>\(\mathsf{78{,}3 : 100 = 0{,}783}\)</p>
+					<p>\(\mathsf{78{,}3:1000 = 0{,}0783} \)</p>
+				</div>
+				<h3>Desimaalilukujen kerto ja jakolasku allekkain</h3>
+				<p>Tärkeimmät huomionarvoiset seikat myös päässälaskun kannalta, jotka liittyvät desimaalilukujen kerto- ja jakolaskuun nähdään hyvin, kun tarkastellaan laskemista allekkain.</p>
+				<p>Alla olevassa animaatiossa tarkastellaan desimaalilukujen kertolaskua allekkain. Nyt pilkkujen ei tarvitse olla päällekkäin, vaan lopputuloksen desimaalien lukumäärä määräytyy lähtöarvojen desimaalien mukaan.</p>
+				<div class="editor-indent" style="margin-left: 30px;">
+					<iframe class="gg_upotus" scrolling="no" title="ma7j1_teoria_desim_kerto_allekkain" src="https://www.geogebra.org/material/iframe/id/jxr2y2m5/width/421/height/260/border/888888/sfsb/false/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false"
+						width="421px" height="260px" style="border:0px;">
+			  </iframe>
+				</div>
+				<p>Alla olevassa animaatiossa tarkastellaan puolestaan desimaalilukujen jakolaskua allekkain. Jos jakaja on myös desimaaliluku, niin pilkusta päästään eroon siirtämällä pilkkua molemmista luvuista yhtä monta kertaa oikealle, kunnes jakaja on kokonaisluku.</p>
+				<div class="editor-indent" style="margin-left: 30px;">
+					<iframe class="gg_upotus" scrolling="no" title="ma7j1_teoria_desimjako" src="https://www.geogebra.org/material/iframe/id/gdaq7fwc/width/449/height/325/border/888888/sfsb/false/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false"
+						width="449px" height="325px" style="border:0px;"> </iframe>
+				</div>
+			</div>
+		</div>
+		<script>
+			downloadGG();
+		</script>
+	</body>
+</html>
