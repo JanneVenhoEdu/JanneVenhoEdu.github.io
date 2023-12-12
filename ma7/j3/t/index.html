@@ -68,25 +68,46 @@
 			</div>
 			<h2>2. Termi</h2>
 			<div>
-				<p>Usein matematiikan merkinnöissä muuttujalausekkeista <strong>jätetään kertomerkki merkitsemättä</strong>. Tämä on vain merkintäsopimus. Esimerkiksi muuttujalauseke \(\mathsf{5 \cdot x}\) voidaan kirjoittaa siis yksinkertaisesti \(\mathsf{5x}\). Algebrassa tällaista luvun ja kirjaimen välistä kertolaskua kutsutaan <strong>termiksi</strong>. Lukua kutsutaan termin <strong>kertoimeksi</strong> ja kirjainta termin <strong>muuttujaosaksi</strong>.</p>
-				<img src="https://jannevenhoedu.github.io/ma7/j3/t/ma7j3_teoria_termi.png">
-				<p><strong>Esimerkiksi</strong></p>
-				<ul>
-					<li>termin \(\mathsf{4a}\) kerroin on \(\mathsf{4}\) ja muuttujaosa \(\mathsf{a}\)</li>
-					<li>termin \(\mathsf{-3z}\) kerroin on \(\mathsf{-3}\) ja muuttujaosa \(\mathsf{z}\)</li>
-					<li>termin \(\mathsf{x}\) kerroin on \(\mathsf{1}\) ja muuttujaosa \(\mathsf{x}\). Toisin sanoen \(\mathsf{1x = x}\).</li>
-					<li>termin \(\mathsf{-b}\) kerroin on \(\mathsf{-1}\) ja muuttujaosa \(\mathsf{b}\).&nbsp; Toisin sanoen\(\mathsf{-1b = b}\).</li>
-					<li>termi \(\mathsf{-6}\) on ns. <strong>vakiotermi</strong>, jonka kerroin on \(\mathsf{-6}\), mutta jolla ei ole muuttujaosaa</li>
-					<li>lausekkeessa \(\mathsf{-8x+5}\) on kaksi termiä \(\mathsf{-8x}\) ja \(\mathsf{+5}\)</li>
-					<li>Lausekkeessa termit järjestellään muuttujaosan mukaiseen aakkosjärjestykseen. Vakiotermit laitetaan viimeiseksi. Esim. \(\mathsf{3a + 4b - 6c + 7}\)</li>
-				</ul>
-				<h3>Muuttujalauseke koostuu termeistä</h3>
+				<h3>Merkintä</h3>
 				<div>
-					<p>Nyt kun ollaan opittu uusi tapa merkitä luvun ja muuttuja kertolaskua, niin muuttujalausekkeen arvoa laskettaessa tulee osata lisätä kertomerkki omalle paikalleen sijoitusvaiheessa.</p>
+					<p>Usein matematiikan merkinnöissä muuttujalausekkeista <strong>jätetään kertomerkki merkitsemättä</strong>. Tämä on vain merkintäsopimus. Esimerkiksi muuttujalauseke \(\mathsf{5 \cdot x}\) voidaan kirjoittaa siis yksinkertaisesti \(\mathsf{5x}\). Algebrassa tällaista luvun ja kirjaimen välistä kertolaskua kutsutaan <strong>termiksi</strong>. Lukua kutsutaan termin <strong>kertoimeksi</strong> ja kirjainta termin <strong>muuttujaosaksi</strong>.</p>
+					<img src="https://jannevenhoedu.github.io/ma7/j3/t/ma7j3_teoria_termi.png">
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Sievennä.</p>
+						<div class="indent">
+							<p>a) \(\mathsf{4 \cdot a = 4a}\)</p>
+							<p>b) \(\mathsf{-3 \cdot z = -3z}\)</p>
+							<p>c) \(\mathsf{1 \cdot x = x}\)</p>
+							<p>d) \(\mathsf{-1 \cdot b = -b}\)</p>
+						</div>
+					</div>
+					<p>Kuten esimerkistä huomataan, kerrointa 1 ei merkitä näkyviin, ja kertoimesta -1 jää näkyviin ainoastaan miinusmerkki.</p>
+				</div>
+				<h3>Vakiotermi</h3>
+				<div>
+					<p>Myös luku ilman muuttujaosaa on termi. Tällaista termiä kutsutaan vakiotermiksi. Vakiotermejä voi olla esimerkiksi -3, 2 tai 9. Vakiotermi pysyy nimensä mukaisesti aina samana, koska siinä ei ole muuttujaa, joka vaikuttaisi termin arvoon sitä laskettaessa.</p>
+				</div>
+				<h3>Samanmuotoiset ja erimuotoiset termit</h3>
+				<div>
+					<p>Jos kahden tai useamman termin muuttujaosa on täsmälleen sama, kutsutaan termejä samanmuotoisiksi. Jos termien muuttujaosat ovat erilaiset, kutsutaan termejä erimuotoisiksi.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Ovatko termit samanmuotoisia?</p>
+						<div class="indent">
+							<p>a) \(\mathsf{-3x}\), \(\mathsf{x}\) ja \(\mathsf{9x}\)</p>
+							<p class="indent">Termit ovat samanmuotoisia, koska niillä on sama muuttujaosa \(\mathsf{x}\).</p>
+							<p>b) \(\mathsf{-b}\), \(\mathsf{2b}\) ja \(\mathsf{-2}\)</p>
+							<p class="indent">Termit eivät ole samanmuotoisia, koska kolmas termi on vakiotermi, ja muiden muuttujaosa on \(\mathsf{b}\).</p>
+						</div>
+					</div>
+				</div>
+				<h3>Termeistä muuttujalausekkeita</h3>
+				<div>
+					<p>Monet muuttujalausekkeet voidaan kirjoittaa termien summana. Esimerkiksi muuttujalausekkeessa \(\mathsf{-8x+5}\) on kaksi termiä \(\mathsf{-8x}\) ja \(\mathsf{+5}\). Lausekkeessa termit järjestellään muuttujaosan mukaiseen aakkosjärjestykseen. Vakiotermit laitetaan viimeiseksi. Esim. \(\mathsf{3a + 4b - 6c + 7}\).</p>
+					<p>Muuttujalausekkeen arvoa laskettaessa tulee muistaa lisätä kertomerkki omalle paikalleen sijoitusvaiheessa.</p>
 					<div class="example">
 						<p><strong>Esimerkki: </strong>Laske muuttujalausekeen \(\mathsf{-8x+6}\) arvo, kun</p>
 						<div class="indent">
-							<p>a) \(\mathsf{\color{red}{x = 4}}\)</p>
+							<p>a) \(\mathsf{\color{red}x = 4}\)</p>
 							<p class="indent">\(\mathsf{-8{\color{red}x}+6 \;=\; -8 \cdot {\color{red}4} + 6 \;=\; -32 + 6 \;=\; -26}\)</p>
 							<p>b) \(\mathsf{\color{blue}{x = -2}}\)</p>
 							<p class="indent">\(\mathsf{-8{\color{blue}x}+6 \;=\; -8 \cdot {\color{blue}(-2)} + 6 \;=\; 16 + 6 \;=\; 22}\)</p>
