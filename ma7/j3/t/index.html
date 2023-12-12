@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fi">
+	<head>
+		<title>Teoria - Kirjainlaskenta</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+		<script src="../../../teoria.js"></script>
+		<link rel="stylesheet" media="screen and (max-width: 350px)" href="../../../teorialohko.css">
+		<link rel="stylesheet" media="screen and (min-width: 350px)" href="../../../teoriakirja.css">
+	</head>
+	<body>
+		<div id="nav">
+			<div id="button">
+				<div id="bar1"></div>
+				<div id="bar2"></div>
+				<div id="bar3"></div>
+			</div>
+			<div id="links"></div>
+			<div id="caption"></div>
+			<a id="course" href="https://jannevenhoedu.github.io/ma7/j3/t" target="_blank"></a>
+		</div>
+		<div id="main">
+			<h1>MA7 Jakso 3: Kirjainlaskenta</h1>
+			<h2>1. Muuttujalauseke</h2>
+			<div>
+				<h3>Muuttujalausekkeen muodostaminen</h3>
+				<div>
+					<p>Matematiikassa kirjaimia käytetään tuntemattoman tai muuttuvan luvun esittämiseen. Tämän vuoksi niitä kutsutaan <strong>muuttujiksi</strong>. Muuttujien avulla voidaan erilasiia sääntöjä ja riippuvuuksia kirjoittaa matemaattisiksi laskulausekkeiksi eli <strong>muuttujalausekkeiksi</strong>.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Kirjoita kuvausta vastaava muuttujalauseke.</p>
+						<p>a) Muuttujaa \(\mathsf{x}\) kerrotaan luvulla 5 ja tuloon lisätään luku 2.</p>
+						<p class="indent">\(\mathsf{x \cdot 5 + 2}\)</p>
+						<p>b) Suorakulmion pinta-ala \(\mathsf{A}\) lasketaan kertomalla suorakulmion leveys \(\mathsf{a}\) korkeudella \(\mathsf{b}\)</p>
+						<p class="indent">\(\mathsf{A = a \cdot b}\)</p>
+						<p>c) Keskinopeus \(\mathsf{v}\) lasketaan jakamalla matka \(\mathsf{s}\) ajalla \(\mathsf{t}\)</p>
+						<p class="indent">\(\mathsf{v = \dfrac{s}{t}}\)</p>
+						<p>d) Pekka on kolme vuotta vanhempi kuin Tiina</p>
+						<div class="indent">
+							<p>\(\mathsf{p = t + 3}\),</p>
+							<p>missä \(\mathsf{p}\) kuvaa Pekan ikää vuosina, ja \(\mathsf{t}\) kuvaa Tiinan ikää vuosina.</p>
+						</div>
+					</div>
+				</div>
+				<h3>Muuttujalausekkeen arvon laskeminen</h3>
+				<div>
+					<p>Muuttujalausekkeilla voidaan siis kuvata sääntöjä ja asioiden välisiä riippuvuuksia yleisellä tasolla ottamatta kantaa yksittäisiin tilanteisiin. Hyödylliseksi säännöt muuttuvat, kun meille selviää (esim. mittaamalla) muuttujan arvo. Tällöin muuttujalausekkeeseen voidaan sijoittaa muuttujan paikalle saatu arvo, ja laskea lausekkeen arvo.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Laske edellisen esimerkin lausekkeiden arvot annetuilla muuttujien arvoilla.</p>
+						<div class="indent">
+							<p>a) Laske muuttujalausekkeen \(\mathsf{x \cdot 5 + 2}\) arvo, kun \(\mathsf{\color{red}x = 3}\).</p>
+							<p class="indent">\(\mathsf{{\color{red}x} \cdot 5 + 2 = {\color{red}3} \cdot 5 + 2 = 15 + 2 = 17}\)</p>
+							<p><strong>Vastaus:</strong> Muuttulausekkeen arvo on 17.</p>
+							<p>b) Laske suorakulmion pinta-ala, kun suorakulmion leveys \(\mathsf{\color{red}{a = \text{5,4 cm}}}\) ja korkeus \(\mathsf{ \color{blue}{b = \text{2,0 cm}}}\).</p>
+							<p class="indent">\(\mathsf{A = {\color{red}a} \cdot {\color{blue}b} = {\color{red}\text{5,4 cm}} \cdot {\color{blue}\text{2,0 cm}} = \text{10,8 cm}^2}\)</p>
+							<p><strong>Vastaus:</strong> Suorakulmion pinta-ala on 10,8 cm<sup>2</sup>.</p>
+							<p>c) Laske keskinopeus, kun pyöräilijän kulkema matka \(\mathsf{{\color{red}s = \text{72 km}}}\) ja aika \(\mathsf{{\color{blue}t = \text{3 h}}} \).</p>
+							<p class="indent">\(\mathsf{v = \dfrac{\color{red}s}{\color{blue}t} = \dfrac{\color{red}\text{72 km}}{\color{blue}\text{3h}} = \text{24 km/h}}\)</p>
+							<p><strong>Vastaus:</strong> Pyöräilijän keskinopeus on 24 km/h.</p>
+							<p>d) Kuinka vanha Pekka on, kun Tiina on 41-vuotias? (Nyt siis \(\mathsf{\color{red}{t = 41}}\))</p>
+							<p class="indent">\(\mathsf{p = {\color{red}t} + 3 = {\color{red}41} + 3 = 44}\)</p>
+							<p><strong>Vastaus:</strong> Pekka on 44-vuotias.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2>2. Termi</h2>
+			<div>
+				<p>Usein matematiikan merkinnöissä muuttujalausekkeista <strong>jätetään kertomerkki merkitsemättä</strong>. Tämä on vain merkintäsopimus. Esimerkiksi muuttujalauseke \(\mathsf{5 \cdot x}\) voidaan kirjoittaa siis yksinkertaisesti \(\mathsf{5x}\). Algebrassa tällaista luvun ja kirjaimen välistä kertolaskua kutsutaan <strong>termiksi</strong>. Lukua kutsutaan termin <strong>kertoimeksi</strong> ja kirjainta termin <strong>muuttujaosaksi</strong>.</p>
+				<div class="indent">
+					<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/54045671/ma7j3_teoria_termi.gif" alt="" width="161" height="150" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+				</div>
+
+				<p><strong>Esimerkiksi</strong></p>
+
+				<ul>
+					<li>termin \(\mathsf{4a}\) kerroin on \(\mathsf{4}\) ja muuttujaosa \(\mathsf{a}\)</li>
+					<li>termin \(\mathsf{-3z}\) kerroin on \(\mathsf{-3}\) ja muuttujaosa \(\mathsf{z}\)</li>
+					<li>termin \(\mathsf{x}\) kerroin on \(\mathsf{1}\) ja muuttujaosa \(\mathsf{x}\). Toisin sanoen \(\mathsf{1x = x}\).</li>
+					<li>termin \(\mathsf{-b}\) kerroin on \(\mathsf{-1}\) ja muuttujaosa \(\mathsf{b}\).&nbsp; Toisin sanoen\(\mathsf{-1b = b}\).</li>
+					<li>termi \(\mathsf{-6}\) on ns. <strong>vakiotermi</strong>, jonka kerroin on \(\mathsf{-6}\), mutta jolla ei ole muuttujaosaa</li>
+					<li>lausekkeessa \(\mathsf{-8x+5}\) on kaksi termiä \(\mathsf{-8x}\) ja \(\mathsf{+5}\)</li>
+					<li>Lausekkeessa termit järjestellään muuttujaosan mukaiseen aakkosjärjestykseen. Vakiotermit laitetaan viimeiseksi. Esim. \(\mathsf{3a + 4b - 6c + 7}\)</li>
+				</ul>
+				<h3>Muuttujalauseke koostuu termeistä</h3>
+				<p>Nyt kun ollaan opittu uusi tapa merkitä luvun ja muuttuja kertolaskua, niin muuttujalausekkeen arvoa laskettaessa tulee osata lisätä kertomerkki omalle paikalleen sijoitusvaiheessa.</p>
+				<p><strong>Esimerkki: </strong>Laske muuttujalausekeen \(\mathsf{-8x+6}\) arvo, kun</p>
+				<p>a) \(\mathsf{\color{red}{x = 4}}\)</p>
+				<div class="indent">
+					<p>\(\mathsf{-8\color{red}{x}+6 \;=\; -8 \cdot \color{red}{4} + 6 \;=\; -32 + 6 \;=\; -26}\)</p>
+				</div>
+				<p>b) \(\mathsf{\color{blue}{x = -2}}\)</p>
+				<div class="indent">
+					<p>\(\mathsf{-8\color{blue}{x}+6 \;=\; -8 \cdot \color{blue}{(-2)} + 6 \;=\; 16 + 6 \;=\; 22}\)</p>
+				</div>
+			</div>
+			<h2>3. Termien yhteen- ja vähennyslasku</h2>
+			<div>
+				<h3>Samanmuotoiset termit</h3>
+				<p>Termit ovat <strong>samanmuotoisia</strong>, jos niillä on täsmälleen sama muuttujaosa. Esimerkiksi</p>
+				<ul>
+					<li>Termit \(\mathsf{2x}\),&nbsp;&nbsp;\(\mathsf{-3x}\),&nbsp;&nbsp;\(\mathsf{-x}\),&nbsp;&nbsp;\(\mathsf{2x}\),&nbsp;&nbsp;\(\mathsf{x}\)&nbsp;ja&nbsp;\(\mathsf{-6x}\) ovat kaikki keskenään samanmuotoisia.</li>
+					<li>Vakiotermit&nbsp;\(\mathsf{7}\),&nbsp;&nbsp;\(\mathsf{2}\)&nbsp;ja&nbsp;\(\mathsf{0}\) ovat keskenään samanmuotoisia.</li>
+				</ul>
+				<h3>Erimuotoiset termit</h3>
+				<p>Termit, jotka eivät ole samanmuotoisia ovat erimuotoisia. Jos lausekkeessa esiintyy erimuotoisia termejä, ne kirjoitetaan muuttujaosan mukaiseen aakkosjärjestykseen, ja vakiotermit kirjoitetaan viimeiseksi. Esimerkiksi</p>
+				<div class="indent">
+					<p>\(\mathsf{3a + 4b - 6c + 7}\)</p>
+				</div>
+				<h3>Termien yhteen- ja vähennyslasku</h3>
+				<p>Vain samanmuotoisia termejä voidaan laskea yhteen tai vähentää toisistaan. Termien yhteenlaskussa termien kertoimet lasketaan yhteen ja vähennyslaskussa vähennetään tosiistaan. Esimerkiksi</p>
+				<table class="borderless" border="0">
+					<tbody>
+						<tr>
+							<td>\(\mathsf{\color{red}{4}x + \color{red}{3}x = \color{red}{7}x}\)</td>
+							<td>\(\rule{5em}{0pt}\)</td>
+							<td>Termit ovat samanmuotoisia, joten voidaan sieventää.</td>
+						</tr>
+						<tr>
+							<td>\(\mathsf{5a - 3b}\)</td>
+							<td> </td>
+							<td>Termit eivät ole samanmuotoisia, joten ei voida sieventää.</td>
+						</tr>
+						<tr>
+							<td>\(\mathsf{\color{red}{5}a - \color{red}{3}a = \color{red}{2}a}\)</td>
+							<td> </td>
+							<td>Termit ovat samanmuotoisia, joten voidaan sieventää.</td>
+						</tr>
+					</tbody>
+				</table><br>
+				<p>Jos lausekkeessa on useita erimuotoisia termejä, voidaan vain keskenään samanmuotoiset termit sieventää. </p>
+				<table class="borderless" border="0">
+					<tbody>
+						<tr>
+							<td>\(\mathsf{\quad \color{red}{4a} \color{blue}{- 3b} \color{red}{- a} \color{blue}{+ 7b}}\)</td>
+							<td>\(\rule{5em}{0pt}\) </td>
+							<td>Yhdistetään samanmuotoiset termit</td>
+						</tr>
+						<tr>
+							<td>\(\mathsf{= \color{red}{3a} \color{blue}{+ 4b}}\)</td>
+							<td> </td>
+							<td>Näitä ei voi enää yhdistää, sievennys valmis.</td>
+						</tr>
+					</tbody>
+				</table><br>
+				<p>Ennen sieventämistä, samanmuotoiset termit voidaan erotella toisistaan alleviivaamalla, värittämällä tai ympyröimällä.</p>
+				<iframe width="640" height="360" src="https://player.vimeo.com/video/317238775" frameborder="0" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen=""></iframe>​
+				<p>Samanmuotoisuutta voidaan kuvata tilanteella, jossa lasketaan yhteen esimerkiksi appelsiineja ja banaaneja. Appelsiinit lasketaan erikseen ja banaanit erikseen, mutta niitä ei voi yhdistää (emmehän halua babbelsiineja). Samasta syystä erimuotoisia termejä
+					ei voida yhdistää.</p>
+			</div>
+			<h2>4. Termien kerto- ja jakolasku</h2>
+			<div>
+				<p></p>
+				<p>Kaksi termiä voidaan myös kertoa tai jakaa keskenään. <strong>Kertolaskussa</strong> kertoimet kerrotaan keskenään, ja muuttujaosat kerrotaan keskenään. <strong>Jakolaskussa</strong> toimitaan samalla periaatteella kuin kertolaskussakin, eli termien kertoimet
+					jaetaan keskenään, ja muuttujaosat jaetaan keskenään.</p>
+				<p>7. luokalla keskitymme kertomaan ja jakamaan muuttujatermiä vain vakiotermeillä, eli jätetään muuttujaosien käsittely 8. luokalle ja kultapaketin tehtäviin.</p>
+				<p>Otetaan muutamia esimerkkejä, joissa on havainnollistettu, miten kerto- ja jakolasku lasku termeillä toimii.</p>
+				<p><strong>Esimerkki:</strong> Sievennä.</p>
+				<p></p>
+				<div class="indent">
+					<p></p>
+					<p>a) \(\mathsf{\color{red}{4} \cdot \color{red}{5}x = \color{red}{20}x}\)</p>
+					<p>b) \(\mathsf{\color{red}{-3}x \cdot (\color{red}{-5}) = \color{red}{15}x}\)</p>
+					<p></p>
+				</div>
+				<div class="indent">
+					<p></p>
+					<p>c) \(\mathsf{\dfrac{\color{red}{42}x}{\color{red}{7}} = \color{red}{6}x}\)</p>
+					<p>d) \(\mathsf{\dfrac{\color{red}{-32}x}{\color{red}{8}} = \color{red}{-4}x}\)</p>
+				</div>
+				<hr>
+
+				<h3>Lisätietoa: Kertominen ja jakaminen muulla kuin vakiotermillä</h3>
+				<p>Jos molemmissa termeissä on muuttujaosa, tulee ymmärtää mitä kahden muuttujan välinen kerto- ja jakolasku tarkoittavat. Tähän käytetään <strong>potenssimerkintää</strong>, joka on merkintätapa saman luvun (tai muuttujan) toistuvalle kertolaskulle. Esimerkiksi</p>
+				<div class="indent">
+					<p>\(\mathsf{4 \cdot 4 \cdot 4 = 4^3}\)</p>
+				</div>
+				<p>Eli oikeassa ylänurkassa oleva pienempi 3 kuvaa, kuinka monta kertaa luku 4 kerrotaan itsensä kanssa. Muuttujilla vastaavasti</p>
+				<div class="indent">
+					<p>\(\mathsf{x \cdot x \cdot x \cdot x = x^4}\)</p>
+				</div>
+				<p>Nyt kun termejä siis kerrotaan keskenään, kerrotaan erikseen kertoimet (luvut) ja muuttujat (kirjaimet). Esimerkiksi</p>
+				<div class="indent">
+					<p>\(\mathsf{\color{red}{4}\color{blue}{x} \cdot \color{red}{5}\color{blue}{x} = \color{red}{20}\color{blue}{x}^2}\)</p>
+				</div>
+				<p>sillä \(\mathsf{\color{red}{4} \cdot \color{red}{5} = \color{red}{20}}\) ja \(\mathsf{\color{blue}{x} \cdot \color{blue}{x} = \color{blue}{x^2}}\). Jos jakolaskussa on molemmilla termeillä sama muuttujaosa, voidaan ne supistaa pois. Esimerkiksi</p>
+				<div class="indent">
+					<p>\(\mathsf{\require{cancel}\dfrac{24x}{8x} = \dfrac{24 \cdot \cancel{x}}{8 \cdot \cancel{x}} = 3}\)</p>
+				</div>
+			</div>
+			<h2>5. Lukujonot</h2>
+			<div>
+				<p><strong>Lukujono</strong> on järjestykseen asetettujen lukujen luettelo. Yksittäistä lukua kutsutaan jonon <strong>jäseneksi</strong>. Jokaisella jäsenellä on oma järjestysnumeronsa, jota merkitään usein muuttujalla \(\mathsf{n}\).&nbsp;<br><br>Lukujonon sääntö voidaan muodostaa kahdella eri tavalla</p>
+				<ol>
+					<li>Ilmoittamalla lukujonon ensimmäinen jäsen sekä laskutoimitus, jolla seuraava jäsen lasketaan. (Sanallinen)<br><br></li>
+					<li>muuttujalauseke, jolla voidaan laskea lukujonon järjestykseltään \(\mathsf{n}\):s jäsen. (Lauseke)</li>
+				</ol>
+				<p>
+					Tarkastellaan esimerkiksi lukujonoa</p>
+				<div class="indent">
+					<p>\(\mathsf{2, 5, 8, 11, \dots}\)</p>
+				</div>
+				<p><span style="font-size: 0.9375rem;"><strong>Sääntö sanallisesti:</strong> Lukujonon ensimmäinen jäsen on \(\mathsf{2}\), ja seuraava jäsen saadaan lisäämällä edelliseen luku \(\mathsf{3}\).</span></p>
+				<p><span style="font-size: 0.9375rem;"><strong>Sääntö lausekkeena:&nbsp;</strong>Lukujonon \(\mathsf{n}\):s jäsen saadaan laskettua muuttujalausekkeesta \(\mathsf{3n - 1}\).</span></p>Alla olevalla videolla nähdään kuinka säännön avulla voidaan muodostaa lukujonon
+				jäseniä.
+				<br>
+				<iframe width="640" height="360" src="https://player.vimeo.com/video/315110304" frameborder="0" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen=""></iframe><br><br>
+				<h3>Aritmeettinen ja geometrinen lukujono</h3>
+				<p>Lukujono voi olla millainen tahansa. Täysin satunnaisia lukujonoja käytetään, kun halutaan satunnaisuutta matemaattisissa malleissa tai simulaatioissa. Yleensä meitä kuitenkin kiinnostaa jonkin säännön mukaan muodostettu lukujono. Peruskoulun matematiikassa
+					tutustutaan kahteen, jotka on helppo ymmärtää tuttujen peruslaskutoimitusten avulla.</p>
+				<p><strong>Aritmeettinen lukujono</strong>&nbsp;on sellainen lukujono, jonka seuraava jäsen saadaan <strong>lisäämällä tai vähentämällä</strong>&nbsp;edelliseen jäseneen aina sama luku. Esimerkiksi</p>
+				<div class="indent">
+					<p>\(\mathsf{5, 7, 9, 11, 13, ... \quad}\) (Sääntö: Lukujonon 1. jäsen on 5, ja seuraava saadaan lisäämällä edelliseen 2.) (\(\mathsf{2n+3}\))</p>
+				</div>
+				<div class="indent">
+					<p>\(\mathsf{12, 7, 2, -3, -8, -13, ... \quad}\) (Lukujonon 1. jäsen on 12, ja seuraava saadaan vähentämällä edellisestä luku 5.) (\(\mathsf{-5n+17}\))</p>
+				</div>
+				<p><strong>Geometrinen lukujono</strong>&nbsp;on sellainen lukujono, jonka seuraava jäsen saadaan <strong>kertomalla tai jakamalla </strong>edellinen jäsen aina samalla luvulla. Esimerkiksi</p>
+				<div class="indent">
+					<p>\(\mathsf{2, 4, 8, 16, 32, 64, ... \quad}\) (Lukujonon 1. jäsen on 1, ja seuraava saadaan kertomalla edellinen luvulla 2.) (\(\mathsf{2^n}\))</p>
+				</div>
+				<div class="indent">
+					<p>\(\mathsf{10\,000, 1000, 100, 10, 1,...}\) (Lukujonon 1. jäsen on 10 000, ja seuraava jäsen saadaan jakamalla luvulla 10) (\(\mathsf{10^{5-n}}\))</p>
+				</div>
+				<p>Jos lukujonon jäsenissä on desimaalilukuja, tällöin jäsenten väliin kirjoitetaan luettelomerkiksi puolipiste ( ; ) eikä pilkkua ( , ). Esimerkiksi:</p>
+				<div class="indent">
+					<p>\(\mathsf{\text{0,4};\quad\text{0,6};\quad\text{0,8}; ...}\)</p>
+				</div>
+				<hr>
+				<h3>Lisätietoa: Fibonaccin lukujono</h3>
+				<p>Fibonacci eli Leonardo Pisano (s. 1170 - 1180,&nbsp; k. 1250) oli italialainen matemaatikko, joka oli ensimmäisiä länsimaalaisia merkittäviä matemaatikoita. Hän kirjoitti kuuluisan teoksensa&nbsp;<i>Liber abbaci</i>&nbsp;vuonna 1202, joka oli ensimmäisiä
+					kymmenjärjestelmän oppaita. Hän on kuitenkin kaikkein tunnetuin nimeään kantavan lukujonon vuoksi. Lukujono esiteltiin Liber abbacissa kanien lisääntymistehtävän ratkaisuna.</p>
+				<div class="indent">
+					<p><i>Kuinka monta kaniparia syntyy vuodessa, jos vuoden alussa on yksi pari ja jokainen pari synnyttää joka kuukausi uuden parin, joka alkaa synnyttää kahden kuukauden kuluttua?</i></p>
+				</div>
+				<p>Fibonaccin lukujonossa seuraava jäsen saadaan laskemalla kaksi edellistä jäsentä yhteen. Lukujonon kaksi ensimmäistä jäsentä ovat 1 ja 1. Näin ollen lukujonon ensimmäiset jäsenet ovat</p>
+				<div class="indent">
+					<p>\(\mathsf{1, 1, 2, 3, 5, 8, 13, ...}\)</p>
+				</div>
+				<p>3. jäsen on siis \(\mathsf{1+1=2}\), 4. jäsen \(\mathsf{1+2=3}\), 5. jäsen \(\mathsf{2+3=5}\), 6. jäsen \(\mathsf{3+5=8}\) jne.&nbsp;</p>
+				<p>Fibonaccin lukujono on kiinnostava, koska luonnosta on löydettävissä lukujonon mukaista käytöstä mm. puiden oksista ja lehdistä sekä ananaksen ja käpyjen kierteistä. Havainnollistavia kuvia lisääntymistehtävästä ja biologisista sovelluksista mm.
+					<a href="https://en.wikipedia.org/wiki/Fibonacci_number" target="_blank">englanninkielisen Wikipedian artikkelissa</a>.</p>
+			</div>
+			<h2>6. Lisätietoa: Yhtälön ratkaiseminen</h2>
+			<div>
+				<h3>Yhtälö</h3>
+				<p>Yhtälöllä tarkoitetaan tilannetta, jossa kaksi lauseketta on merkitty yhtä suuriksi. Esimerkiksi yhtälössä \(\mathsf{2x-4 = -x + 5}\) lausekkeet \(\mathsf{2x-4}\) ja \(\mathsf{-x+5}\) saavat siis saman arvon jollakin muuttujan \(\mathsf{x}\) arvolla.
+					Muuttujan \(\mathsf{x}\) arvo saadaan selvitettyä ratkaisemalla yhtälö. Tästä lisää otsikon "Yhtälön ratkaiseminen" alla.&nbsp;</p>
+				<p>Yhtälöitä käytetään matemaattisissa aineissa (matematiikkan, fysiikka, kemia, tietotekniikka) paljon. 8. luokalla opiskellaan ns. 1. asteen ja 2. asteen yhtälöitä sekä verrantoja, ja 9. luokalla laajennetaan 8. luokan tietämystä&nbsp; yhtälöpareihin sekä
+					epäyhtälöihin. Fysiikan puolella tutustutaan erilaisiin luonnonlakeihin laskukaavojen avulla, joita voidaan muokata käyttötarkoitukseen sopiviksi yhtälöratkaisun menetelmin.</p>
+				<p>Peruskoulun jälkeen on lukiossa ja eri korkeakouluissa mahdollista opiskella lineaarisia yhtälöryhmiä, joita käytetään esim. GPS-paikannuksessa ja tietokonegrafiikassa tai differentiaali- sekä osittaisdifferentiaaliyhtälöitä, joita käytetään mm. monimutkaisemmissa
+					matemaattisissa malleissa, kuten sään ennustuksessa.</p>
+				<p>7. luokalle sopiva tilanne voisi olla sellainen, että tiedetään lausekkeen arvo, mutta ei tiedetä, millä muuttujan arvolla se on saatu laskettua. Esimerkiksi yhtälön \(\mathsf{2x + 1 = 7}\) ratkaisu saadaan selvittämällä, mikä luku sopii muuttuja \(\mathsf{x}\)
+					paikalle.</p>
+				<h3>Yhtälön ratkaiseminen</h3>
+				<p>Yhtänlönratkaisussa on tavoitteena selvittää muuttujan \(\mathsf{x}\) arvo, jolla yhtälö on tosi, eli yhtäsuuruus pätee. Yhtälöt voidaan ratkaista päättelemällä, mutta varmin ja helpoin tapa on ratkaista yhtälö vaiheittain lisäämällä, vähentämällä, kertomalla
+					tai jakamalla yhtälöä puolittain sopivilla luvuilla. Vaiheittain etenemällä saadaan lisäksi ratkaisulle perustelu ja löydetään kaikki mahdolliset ratkaisut. Tämän vuoksi päättely ei enää käy kuin saadun ratkaisun järkevyyden tarkasteluun.</p>
+				<p>Yhtälöä voidaan siis muokata suorittamalla sama laskutoimitus yhtälön molemmille puolille. Laskutoimitus on tärkeätä suorittaa molemmille puolille yhtälöä, koska tällöin oikean ja vasemman puolen yhtäsuuruus pysyy voimassa. Yhtälön ratkaiseminen loppuu,
+					kun muuttuja \(\mathsf{x}\) on saatu jäämään yksin vain yhtälön toiselle puolelle.</p>
+				<p>Laskutoimitus, joka yhtälön molemmille puolille kullakin rivillä tehdään, merkitään rivin loppuun kahden pystyviivan \(\|\) oikealle puolelle. Laskutoimitusten muokkaama uusi yhtälö kirjoitetaan edellisen alapuolelle siten, että yhtäsuuruusmerkit ovat
+					samassa pysysuorassa linjassa.
+				</p>
+				<h3>Yhtälön ratkaiseminen jakamalla puolittain</h3>
+				<p>Tarkastellaan yhtälöä</p>
+				<div class="indent">
+					<p>\(\mathsf{3x = 24}\)</p>
+				</div>
+				<p>Nyt siis muuttujaa \(\mathsf{x}\) on kerrottu luvulla 3, vastaukseksi on saatu 24. Tästä on toki helppoa päätellä, että muuttujan \(\mathsf{x}\) on oltava 8, koska \(\mathsf{3 \cdot 8 = 24}\). Ratkaisu saadaan käänteisesti jakolaskun avulla: \(\mathsf{24:3=8}\),
+					koska jakolasku on kertolaskun käänteinen laskutoimitus. Yhtälöratkaisun menetelmien avulla ratkaisu näyttäisi seuraavalta.</p>
+				<div class="indent">
+					<p>\(\mathsf{3x = 24 \quad \| \color{red}{:3}\\ \:\,\,x = 8}\)</p>
+				</div>
+				<p>1. rivillä on siis alkuperäinen yhtälö \(\mathsf{3x = 24}\). Pystyviivojen \(\|\) jälkeen on <span class="" style="color: rgb(239, 69, 64);">laskutoimitus</span>, joka yhtälön molemmille puolille tehdään.</p>
+				<p>2. rivillä nähdään laskutoimituksen tulos. Vasemmalla on siis laskettu \(\mathsf{3x \color{red}{: 3} = x}\) ja oikealla \(\mathsf{24\color{red}{: 3}=8}\). Näin yhtälö on saatu ratkaistua, ja ratkaisuksi on saatu edellä päätelty \(\mathsf{x = 8}\).</p>
+				<h3>Yhtälön ratkaiseminen lisäämällä tai vähentämällä puolittain</h3>
+				<p>Tarkastellaan yhtälöä</p>
+				<div class="indent">
+					<p>\(\mathsf{x - 4 = 5}\)</p>
+				</div>
+				<p>Nyt muuttujasta \(\mathsf{x}\) on vähennetty luku 4. Käytetään apuna jälleen käänteistä laskutoimitusta, joka vähennyslaskulle on tietenkin yhteenlasku. Lisäämällä yhtälön molemmille puolille luku 4, saadaan yhtälön vasemmalla puolella -4 häviämään nollaksi.
+					Yhtälönratkaisun merkinnöin saadaan siis</p>
+				<div class="indent">
+					<p>\(\mathsf{x - 4 = 5\quad \| \color{red}{+4}\\&nbsp;\rule{1.7em}{0pt} x = 9}\)</p>
+				</div>
+				<p>Vasemmalla laskettiin nyt \(\mathsf{x - 4 \color{red}{+ 4} = x}\) ja oikealla \(\mathsf{5 \color{red}{+ 4} = 9}\). Ratkaisuksi saatiin siis \(\mathsf{x = 9}\), joka voidaan tarkistaa sijoittamalla ratkaisu alkuperäiseen yhtälöön. \(\mathsf{x-4 = 9-4 =
+					5}\).</p>
+				<p><strong>Myös termejä, joissa esiintyy muuttuja \(\mathsf{x}\) voidaan lisätä ja vähentää puolittain.</strong> Tarkastellaan yhtälöä</p>
+				<div class="indent">
+					<p>\(\mathsf{3x = x + 8}\)</p>
+				</div>
+				<p>Nyt molemmilla puolilla yhtälöä on termi, jossa esiintyy muuttuja \(\mathsf{x}\). Koska tavoitteena oli saada muuttuja \(\mathsf{x}\) jäämään yksin vain yhtälön toiselle puolelle, poistetaan \(\mathsf{x}\) toiselta puolelta. Tehdään se tällä kertaa yhtälön
+					oikealta puolelta.</p>
+				<div class="indent">
+					<p>\(\mathsf{3x = x + 8 \quad \|\color{red}{-x}\\ 2x = 8}\)</p>
+				</div>
+				<p>Vasemmalla saadaan siis \(\mathsf{3x\color{red}{-x} = 2x}\) ja oikealla \(\mathsf{x + 8 \color{red}{-x} = 8}\). Muuttujalle \(\mathsf{x}\) jää vielä kerroin, joka saadaan poistettua aiemmin opitulla jakolaskulla puolittain.</p>
+				<div class="indent">
+					<p>\(\mathsf{3x = x + 8 \quad \|-x\\ 2x = 8 \qquad\ \ \ \|:2\\ \rule{0.5em}{0pt} x = 4}\)</p>
+				</div>
+				<h3>Yhtälönratkaisu kokonaisuutena</h3>
+				<p>Yhtälönratkaisusta opittiin edellä selvittämään kolme hieman erilaista tilannetta. Näitä kolmea menetelmää apuna käyttäen voidaan ratkaista mikä tahansa 1. asteen yhtälö enintään kolmella vaiheella. Alla olevassa vuokaaviossa on esitetty algoritmi yhtälönratkaisuun.
+				</p>
+				<div class="indent">
+					<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/623047457/ma7j4_reppu_yhtalonratkaisukaavio_pieni.png?time=1610993663415" alt="" width="600" height="191" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+				</div>
+				<p>Ratkaistaan algoritmin avulla luvun alussa esitelty yhtälö \(\mathsf{2x-4 = -x + 5}\)</p>
+				<div class="indent">
+					<p>\(\mathsf{2x-4 = -x + 5 \quad \|+x\\ 3x-4 = 5 \rule{3.6em}{0pt}\|+4\\ \rule{1.7em}{0pt}3x = 9 \rule{3.6em}{0pt}\|:3\\ \rule{2.2em}{0pt}x = 3}\)</p>
+				</div>
+				<p>1. rivillä oli molemmilla puolilla yhtälöä x-termi, joten oikealta \(\mathsf{-x}\) poistettiin lisäämällä puolittain \(\mathsf{x}\).<br>2. rivillä oli molemmilla puolilla yhtälöä vakiotermi, joten vasemmalta (x:n puolelta) poistettiin -4 lisäämällä puolittain
+					luku 4.
+					<br>3. rivillä muuttujalla \(\mathsf{x}\) oli vielä kerroin 3, joka poistettiin jakamalla puolittain luvulla 3.</p>
+				<p>Vastaus voidaan tarkistaa laskemalla erikseen vasemman ja oikean puolen lausekkeiden arvot. Niiden pitäisi olla siis yhtä suuret.</p>
+				<div class="indent">
+					<p>Vasen: \(\mathsf{2x-4 = 2 \cdot 3 - 4 = 6 - 4 = 2}\)<br> Oikea: \(\mathsf{-x+5 = -3+5 = 2}\)</p>
+				</div>
+				<p>Ratkaisu on oikein.</p>
+			</div>
+		</div>
+		<script>
+			downloadGG();
+		</script>
+	</body>
+</html>
