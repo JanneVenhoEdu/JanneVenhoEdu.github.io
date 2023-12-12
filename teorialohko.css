@@ -150,3 +150,14 @@ th, td {
 .wide {
 	display: none;
 }
+.summary {
+	padding: 5px;
+	margin: 5px;
+	background-color: var(--purple2);
+	border-radius: 3px;
+	box-shadow: 2px 2px black;
+}
+
+.summary > h4:first-child {
+	margin-top: 0px;
+}
