@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="fi">
+	<head>
+		<title>Teoria - Potenssit ja polynomit</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+		<script src="../../../teoria.js"></script>
+		<link rel="stylesheet" media="screen and (max-width: 350px)" href="../../../teorialohko.css">
+		<link rel="stylesheet" media="screen and (min-width: 350px)" href="../../../teoriakirja.css">
+	</head>
+	<body>
+		<div id="nav">
+			<div id="button">
+				<div id="bar1"></div>
+				<div id="bar2"></div>
+				<div id="bar3"></div>
+			</div>
+			<div id="links"></div>
+			<div id="caption"></div>
+			<a id="course" href="https://jannevenhoedu.github.io/ma8/j4/t" target="_blank"></a>
+		</div>
+		<div id="main">
+			<h1>MA8 Jakso 4: Potenssit ja polynomit</h1>
+			<h2>1. Kertausta</h2>
+			<div>
+				<p>7. luokalla opittiin perusteita kirjainlaskennasta, kun tutustuttiin muuttujiin, muuttujalausekkeisiin sekä niiden sieventämiseen ja arvon laskemiseen. 8. luokalla näitä taitoja kehitetään edelleen tutustumalla yhtälönratkaisuun, polynomeihin sekä potenssilausekkeisiin.</p>
+				<h3>Termi</h3>
+				<div>
+					<p>Termi muodostuu luvun ja muuttujan tulosta. Termiä merkittäessä kertomerkki jätetään merkitsemättä. Lukua kutsutaan termin kertoimeksi ja muuttujaa (sekä myöhemmin sen astetta) muuttujaosaksi.</p>
+					<img src="https://jannevenhoedu.github.io/ma8/j1/t/ma8j1_teoria_termi.gif">
+					<p>Erityisesti termin kertoimista pitää muistaa kertoimet 1 ja -1, joiden tapauksessa <strong>ykköstä ei merkitä näkyviin</strong>, vaan esimerkiksi</p>
+					<div class="indent">
+						<p>\(\mathsf{1a = a}\)</p>
+						<p>\(\mathsf{-1x=-x}\)</p>
+					</div>
+				</div>
+				<h3>Muuttujalauseke</h3>
+				<div>
+					<p>Muuttujalauseke on lauseke, jossa esiintyy vähintään yksi muuttuja. Esimerkiksi matematiikassa ja fysiikassa esiintyy kaikenlaisia muuttujalausekkeita, joiden avulla mallinnetaan esimerkiksi luonnon ilmiöitä, kappaileiden kokoa, muotoa tai prosenttilaskennan laskusääntöjä.
+					</p>
+					<h4>Muuttujalausekkeen arvon laskeminen</h4>
+					<p>Muuttujalausekkeen arvon laskeminen on yksi peruskoulumatematiikan tärkeimmistä opittavista taidoista. Muuttujalausekkeen arvo voidaan laskea, jos tunnetaan <strong>muuttujan arvo</strong>. Muuttujan arvo <strong>sijoitetaan</strong> lausekkeeseen muuttujan paikalle, jonka jälkeen lausekkeen arvo voidaan laskea.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Laske lausekkeen \(\mathsf{3x + 4}\) arvo, kun muuttuja saa arvon \(\mathsf{x = 2}\).</p>
+						<p class="indent">\(\begin{align}\phantom{=}&\mathsf{3x + 4}\\ =\;&\mathsf{3\cdot 2 + 4}\\ =\;&\mathsf{6 + 4}\\ =\;&\mathsf{10}\end{align}\)</p>
+					</div>
+					<p>Sijoitettaessa negatiivista lukua muuttujan paikalle, tulee luku kirjoittaa sulkeiden sisään.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Laske lausekkeen \(\mathsf{3x + 4}\) arvo, kun muuttuja saa arvon \(\mathsf{x = -1}\).</p>
+						<p class="indent">\(\begin{align}\phantom{=}&\mathsf{3x + 4}\\ =\;&\mathsf{3\cdot (-1) + 4}\\ =\;&\mathsf{-3 + 4}\\ =\;&\mathsf{1}\end{align}\)</p>
+					</div>
+				</div>
+				<h3>Lausekkeen sieventäminen</h3>
+				<div>
+					<p>Peräkkäisistä termeistä koostuvaa muuttujalauseketta kutsutaan polynomiksi. Tämä käsite tarkentuu myöhemmässä jaksossa 8. luokalla. 7. luokalla opittiin <strong>sieventämään</strong> muuttujalausekkeessa olevia <strong>samanmuotoisia termejä</strong> (yhteen- ja vähennyslasku). Samanmuotoisilla termeillä on täsmälleen sama muuttujaosa.</p>
+					<img src="https://jannevenhoedu.github.io/ma8/j1/t/ma8j1_teoria_lausekkeen_sieventaminen.gif" style="width: 300px">
+					<p>Lisäksi opittiin sieventämään lausekkeita, joissa termiin kohdistuu kerto- tai jakolasku.</p>
+					<div class="indent">
+						<p>a) \(\mathsf{5 \cdot 6x = 30x}\)</p>
+						<p>b) \(\mathsf{\dfrac{28a}{-7} = -4a}\)</p>
+					</div>
+				</div>
+				<h3>Lausekkeen kertominen luvulla</h3>
+				<div>
+					<p>Kertolaskun yhteydessä 7. luokalla opittiin ns. osittelulakiin perustuva päässälaskumenetelmä, jonka avulla voitiin laskea helposti kertolasku, jonka toisena tekijänä on suuri luku. Suuri luku pilkotaan osiin (ykkösiin, kymmeniin, satoihin, ...), kerrotaan osia, ja yhdistetään uudet osat takaisin yhdeksi luvuksi. Esimerkiksi</p>
+					<p class="indent">\(\begin{array}{l}\mathsf{\quad 9 \cdot 183}\\ \mathsf{=9 \cdot (100 + 80 + 3)}\\ \mathsf{=900 + 720 + 27}\\ \mathsf{=1647}\end{array}\)</p>
+					<p>Tätä menetelmää käytetään myös tilanteessa, jossa muuttujalauseketta kerrotaan luvulla (tai termillä).</p>
+					<img src="https://jannevenhoedu.github.io/ma8/j1/t/ma8j1_teoria_osittelulaki.gif" style="width: 200px">
+					<p>Kertolasku kohdistuu siis kaikkiin muuttujalausekkeen termeihin.</p>
+				</div>
+			</div>
+			<h2>2. Potenssi ja neliöjuuri</h2>
+			<div>
+				<h3>Potenssi</h3>
+				<div>
+					<p>Potenssimerkinnän avulla voidaan lyhentää kertolaskua, missä sama luku esiintyy tulon tekijänä useamman kerran. Potenssimerkinnässä tulon tekijän oikeaan yläkulmaan kirjoitetaan luku, joka kertoo kuinka monta kertaa tekijä kertolaskussa esiintyy. Esimerkiksi</p>
+					<p class="indent">\(\mathsf{2 \cdot 2 \cdot 2 \cdot 2 = 2^4}\)</p>
+					<p>Tulon tekijää (2) kutsutaan <strong>kantaluvuksi</strong>, ja yläkulmassa olevaa lukua (4) kutsutaan <strong>eksponentiksi</strong>. Kyseinen merkintä sanottaisiin "Kaksi potenssiin neljä", "Kaksi neljänteen" tai "Kaksi korotettuna neljänteen potenssiin".</p>
+					<p>Potenssin arvoa laskettaessa potenssimerkintä voidaan kirjoittaa ensin kertolaskuna, ja laskea kertolasku normaalisti tämän jälkeen.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Laske.</p>
+						<div class="indent">
+							<p>a) \(\mathsf{6^2 = 6 \cdot 6 = 36}\)</p>
+							<p>b) \(\mathsf{7^2= 7 \cdot 7 = 49}\)</p>
+							<p>c) \(\mathsf{(-5)^2 = -5 \cdot (-5) = 25}\)</p>
+							<p>d) \(\mathsf{3^4 = 3 \cdot 3 \cdot 3 \cdot 3 = 81}\)</p>
+						</div>
+					</div>
+					<p>Kuten yllä olevasta esimerkistä huomataan, niin kantaluku voi olla myös negatiivinen. Negatiivinen kantaluku tulee kirjoittaa sulkeiden sisään.</p>
+					<p><strong>Laskujärjestyksen osalta</strong> potenssit lasketaan ennen kerto- ja jakolaskuja. Suluilla voidaan potenssienkin kohdalla määrätä laskujärjestystä tarpeen mukaan.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Laske.</p>
+						<div class="indent">
+							<p>a) \(\mathsf{5 \cdot 3^2 = 5 \cdot 9 = 45}\)</p>
+							<p>b) \(\mathsf{6^2 - 11 = 36 - 11 = 35}\)</p>
+							<p>c) \(\mathsf{(-5 \cdot 2)^2 = (-10)^2 = 100}\)</p>
+							<p>d) \(\mathsf{\dfrac{4^2}{2^4} = \dfrac{16}{16} = 1}\)</p>
+						</div>
+					</div>
+				</div>
+				<h3 >Neliöjuuri</h3>
+				<div>
+					<p>Kuten peruslaskutoimituksilla aikaisemmin havaittiin, myös potensseilla on olemassa käänteiset laskutoimitukset. Yleisesti niitä voisi kutsua juuri-laskuiksi, mutta keskitytään nyt toiseen potenssiin korottamisen käänteiseen laskutoimitukseen eli <strong>neliöjuureen</strong>.</p>
+					<div class="indent">
+						<p>\(\mathsf{5^2 = 25 \qquad \Rightarrow \qquad \sqrt{25} = 5}\)</p>
+					</div>
+					<p>Neliöjuuren merkintänä käytetään erityistä juuri-merkkiä \(\sqrt{\rule{1em}{0pt}\rule{0pt}{1em}}\). Merkin alla olevaa lukua kutsutaan <strong>juurrettavaksi</strong>. Neliöjuuri vastaa siis kysymykseen "Mikä luku on kerrottu itsellään, että saadaan vastaukseksi juurrettava?".</p>
+					<p>Yleisesti luvun \(\mathsf{x}\) neliöjuuri \(\mathsf{\sqrt{x} = a}\) on siis ei-negatiivinen luku, joka itsellään kerrottuna on luku \(\mathsf{x}\).</p>
+					<div class="indent">
+						<p>\(\mathsf{x = a \cdot a = a^2 \quad \Leftrightarrow \quad \sqrt{x} = a \quad}\) kun \(\mathsf{a \geq 0}\)</p>
+					</div>
+					<div class="example">
+						<p><strong>Esimerkki: </strong>Laske.</p>
+						<div class="indent">
+							<p>a) \(\mathsf{\sqrt{16} = 4}\)</p>
+							<p>b) \(\mathsf{\sqrt{36} = 6}\)</p>
+							<p>c) \(\mathsf{\sqrt{100} = 10}\)</p>
+							<p>d) \(\mathsf{\sqrt{1} = 1}\)</p>
+						</div>
+					</div>
+				</div>
+				<h3>Laskujärjestys</h3>
+				<div>
+					<p>Uusien laskutoimitusten myötä päivitetään myös listaa laskujärjestyksestä. Koska potenssi on lyhyempi merkintä  voidaan kasvattaa sulkeiden avulla. Neliöjuuren sisään voidaan myös kirjoittaa laskutoimituksia, jolloin neliöjuurimerkkiä venytetään kattamaan kaikki juurrettavaan kuuluvat osat.</p>
+					<ol>
+						<li>Sulkeet</li>
+						<li><strong>Potenssi ja neliöjuuri</strong></li>
+						<li>Kerto- ja jakolasku</li>
+						<li>Yhteen- ja vähennyslasku</li>
+					</ol>
+					<div class="example">
+						<p><strong>Esimerkki: </strong>Laske.</p>
+						<div class="indent">
+							<p>a) \(\mathsf{(12-8)^2 = 4^2 = 16}\)</p>
+							<p>b) \(\mathsf{5 \cdot 2^3 = 5 \cdot 8 = 40}\)</p>
+							<p>c) \(\mathsf{\sqrt{8+17} = \sqrt{25} = 5}\)</p>
+							<p>d) \(\mathsf{\sqrt{3^2} = \sqrt{9} = 3}\)</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2>3. Potenssin laskusääntöjä</h2>
+			<div>
+				<p>Potenssilaskuihin liittyy useita erilaisia laskusääntöjä, joiden tarkoitus on helpottaa ja nopeuttaa potenssien laskemista. Sieventämällä lausekkeita etukäteen varsinainen laskutoimitus muuttuu yleensä helpommaksi. Lisäksi seuraavia laskusääntöjä tarvitaan tulevien sääntöjen pohjana.</p>
+				<div class="summary">
+					<h4>Tulon ja osamäärän korottaminen potenssiin</h4>
+					<div class="indent">
+						<p>\(\mathsf{(ab)^n = a^n b^n}\)</p>
+						<p>\(\mathsf{\left(\dfrac{a}{b}\right)^n = \dfrac{a^n}{b^n}}\)</p>
+					</div>
+					<h4>Samankantaisten potenssien tulo ja osamäärä</h4>
+					<div class="indent">
+						<p>\(\mathsf{a^m \cdot a^n = a^{m+n}}\)</p>
+						<p>\(\mathsf{\dfrac{a^m}{a^n} = a^{m-n}}\)</p>
+					</div>
+					<h4>Eksponenttina negatiivinen luku tai nolla</h4>
+					<div class="indent">
+						<p>\(\mathsf{a^{-n} = \dfrac{1}{a^n}}\)</p>
+						<p>\(\mathsf{a^{0} = 1}\)</p>
+					</div>
+					<h4>Lisätietoa: Potenssin potenssi</h4>
+					<div class="indent">
+						<p>\(\mathsf{(a^n)^m = a^{n \cdot m}}\)</p>
+					</div>
+				</div>
+				<h3>Tulon ja osamäärän potenssi</h3>
+				<div>
+					<p>Johdatellaan aiheeseen esimerkin avulla, jossa sulkulauseke on korotettu potenssiin. Koska potenssi on vain lyhyempi tapa merkitä kertolaskua, voidaan se aina pilkkoa kertolaskuksi, järjestellä tekijät uudelleen ja kasata toiseen muotoon.</p>
+					<div class="indent">
+						<p>\(\begin{align}(\mathsf{3 \cdot 4)^2} &= \mathsf{(3 \cdot 4) \cdot (3 \cdot 4)}\\ &= \mathsf{3 \cdot 4 \cdot 3 \cdot 4}\\ &= \mathsf{3 \cdot 3 \cdot 4 \cdot 4}\\ &= \mathsf{3^2 \cdot 4^2}\end{align}\)</p>
+					</div>
+					<p>Jos potenssimerkinnän kantalukuna on siis tulo, niin sulkeet voidaan poistaa korottamalla kaikki tulon tekijät kyseiseen potenssiin.</p>
+					<div class="indent">
+						<p>\(\mathsf{(ab)^n = a^n b^n}\)</p>
+					</div>
+					<p><strong>Esimerkki: </strong>Sievennä.</p>
+					<div class="indent">
+						<p>a) \(\mathsf{(5x)^2 = 25x^2}\)</p>
+						<p>b) \(\mathsf{(-2a)^3 = -8a^3}\)</p>
+						<p>c) \(\mathsf{(4ab)^2 = 16a^2b^2}\)</p>
+					</div>
+					<p>Vastaava laskusääntö on käytössä myös, kun korotetaan osamäärä potenssin.</p>
+					<div class="indent">
+						<p>\(\mathsf{\left(\dfrac{a}{b}\right)^n = \dfrac{a^n}{b^n}}\)</p>
+					</div>
+					<p><strong>Esimerkki: </strong>Sievennä.</p>
+					<div class="indent">
+						<p>a) \(\mathsf{\left(\dfrac{3}{4}\right)^2 = \dfrac{9}{16}}\)</p>
+						<p>b) \(\mathsf{\left(\dfrac{a}{5}\right)^2 = \dfrac{a^2}{25}}\)</p>
+						<p>c) \(\mathsf{\left(\dfrac{-2x}{y}\right)^2 = \dfrac{4x^2}{y^2}}\)</p>
+					</div>
+				</div>
+				<h3>Samankantaisten potenssiten tulo ja osamäärä</h3>
+				<div>
+					<p>Johdatellaan aiheeseen taas esimerkin avulla, missä kahden samakantaisen potenssin tulo voidaan yhdistää yhdeksi potenssimerkinnäksi.</p>
+
+					<div class="indent">
+						<p>\(\begin{align}\mathsf{\color{red}{3^2} \cdot \color{blue}{3^3}} &= \mathsf{\color{red}{3\cdot 3} \cdot \color{blue}{3 \cdot 3 \cdot 3}}\\ &= \mathsf{3^5}\end{align}\)</p>
+					</div>
+
+					<p>Samankantaisten potenssien tulossa eksponentit voidaan siis laskea yhteen.</p>
+
+					<div class="indent">
+						<p>\(\mathsf{a^m \cdot a^n = a^{m+n}}\)</p>
+					</div>
+
+					<p><strong>Esimerkki:</strong> Sievennä.</p>
+					<div class="indent">
+						<p>a) \(\mathsf{2^4 \cdot 2^2 = 2^6}\)</p>
+						<p>b) \(\mathsf{(-1)^6 \cdot (-1)^7 = (-1)^{13}}\)</p>
+						<p>c) \(\mathsf{a \cdot a^2 \cdot a^3 = a^6}\)</p>
+					</div>
+
+					<p>Samankantaisten potenssien osamäärässä voidaan supistaa jaettavasta ja jakajasta yhtä monta samaa tekijää.</p>
+
+					<div class="indent">
+						<p>\(\require{enclose}\begin{align}\mathsf{\dfrac{5^6}{5^4}} &= \mathsf{\dfrac{5 \cdot 5 \cdot 5 \cdot 5 \cdot 5 \cdot 5}{5 \cdot 5 \cdot 5 \cdot 5}}\\ &= \mathsf{\dfrac{\enclose{horizontalstrike}{5 \cdot 5 \cdot 5 \cdot 5} \cdot 5 \cdot
+							5}{\enclose{horizontalstrike}{5 \cdot 5 \cdot 5 \cdot 5}}}\\ &= \mathsf{5^2}\end{align}\)</p>
+					</div>
+
+					<p>Vastaavasti samankantaisten potenssien jakolaskussa eksponentit vähennetään toisistan.</p>
+
+					<div class="indent">
+						<p>\(\mathsf{\dfrac{a^m}{a^n} = a^{m-n}}\)</p>
+					</div>
+
+					<p><strong>Esimerkki:</strong> Sievennä.</p>
+					<div class="indent">
+						<p>a) \(\mathsf{\dfrac{5^7}{5^5} = 5^2 = 25}\)</p>
+						<p>b) \(\mathsf{\dfrac{p^{11}}{p^7} = p^4}\)</p>
+						<p>c) \(\mathsf{\dfrac{(-3)^5}{-3} = (-3)^4}\)</p>
+					</div>
+				</div>
+				<h3>Eksponenttina negatiivinen luku tai nolla</h3>
+				<div>
+					<p>Eksponentti voi olla myös negatiivinen. Lähdetään tutkimaan asiaa ratkaisemalla esimerkki samankantaisten potenssien osamäärästä. Sievennetään esimerkki kahdella eri tavalla.</p>
+					<p><strong>Esimerkki:</strong> Sievennä.</p>
+					<p>Tapa 1: \(\qquad\mathsf{\dfrac{2^3}{2^5} = a^{3-5} = 2^{-2}}\)</p>
+					<p>Tapa 2: \(\qquad\require{enclose}\mathsf{\dfrac{2^3}{2^5} = \dfrac{\enclose{horizontalstrike}{2 \cdot 2 \cdot 2}}{\enclose{horizontalstrike}{2 \cdot 2 \cdot 2}\!\cdot 2 \cdot 2} = \dfrac{1}{2 \cdot 2} = \dfrac{1}{2^2}}\)</p>
+					<p>Esimerkistä huomataan, että negattivinen eksponentti tarkoittaa vastaavan positiivisen eksponentin potenssimerkintää käänteislukuna. Tästä saadaan sievennyssääntö negatiivisen eksponentin tapaukseen.</p>
+					<div class="indent">
+						<p>\(\mathsf{a^{-n} = \dfrac{1}{a^n}}\)</p>
+					</div>
+					<p><strong>Esimerkki:</strong> Sievennä.</p>
+					<div class="indent">
+						<p>a) \(\mathsf{5^{-2} = \dfrac{1}{5^2} = \dfrac{1}{25} = 0,\!04}\)</p>
+						<p>b) \(\mathsf{3^{-1} = \dfrac{1}{3^1} = \dfrac{1}{3}}\)</p>
+						<p>c) \(\mathsf{10^{-4} = \dfrac{1}{10^4} = \dfrac{1}{10\:000} = 0,\!0001}\)</p>
+					</div>
+					<h4>Eksponenttina nolla</h4>
+					<p>Samalla tavalla voidaan tarkastella tilannetta, jossa eksponenttina on nolla. Sievennetään samankantaisten potenssien osamäärä jälleen kahdella eri tavalla.</p>
+					<p><strong>Esimerkki:</strong> Sievennä.</p>
+					<p>Tapa 1: \(\qquad\mathsf{\dfrac{4^3}{4^3} = 4^{3-3} = 4^0}\)</p>
+					<p>Tapa 2: \(\qquad\require{enclose}\mathsf{\dfrac{4^3}{4^3} = \dfrac{\enclose{horizontalstrike}{4 \cdot 4 \cdot 4}}{\enclose{horizontalstrike}{4 \cdot 4 \cdot 4}} = \dfrac{64}{64} = 1}\)</p>
+					<p>Johtopäätös: \(\mathsf{4^0 = 1}\)</p>
+					<p>Lukujen 4 ja 3 paikalle voidaan kirjoittaa (lähes) mitkä tahansa luvut, ja vastaukseksi saadaan aina yksi. Näin ollen voidaan todeta, että luvun nollas potenssi on aina yksi.</p>
+					<div class="indent">
+						<p>\(\mathsf{a^0 = 1}\)</p>
+					</div>
+				</div>
+				<h3>Lisätietoa: Potenssin potenssi</h3>
+				<div>
+					<p>Potenssin korottaminen potenssiin merkitään kirjoittamalla aikasempi potenssi sulkeisiin ja kirjoittamalla jälkimmäisen potenssin eksponentti sulkeiden ulkopuolle. Sulkeilla on merkitystä laskujärjetsyksen kannalta. Tarkastellaan esimerkkiä, jonka avulla on helpompi hahmottaa tilannetta.</p>
+					<p><strong>Esimerkki: </strong>Kirjoita yhtenä potenssina.</p>
+					<div class="indent">
+						<p>\(\mathsf{(a^2)^3 = a^2 \cdot a^2 \cdot a^2 = a^6}\)</p>
+					</div>
+					<p>Aluksi sulkeiden sisällä ollut \(\mathsf{a^2}\) toimii siis kantalukuna, jota kerrotaan itsellään kolmesti, kuten ulompi eksponentti osoittaa. Tämän jälkeen käytetään samankantaisten potenssien tulon laskusääntöä, jolloin \(\mathsf{a^2 \cdot a^2 \cdot a^2 = a^{2+2+2} = a^6}\). Vastaava tulos saadaan kun eksponentit kerrotaan keskenään. \(\mathsf{a^{2+2+2} = a^{2\cdot 3} = a^6}\). Yleisesti potenssin potenssin laskukaava on muotoa</p>
+					<div class="indent">
+						<p>\(\mathsf{(a^m)^n = a^{m\cdot n}}\)</p>
+					</div>
+					<p>Jos sulkeita ei ole, esimerkin merkintä näyttäisi seuraavalta:</p>
+					<div class="indent">
+						<p>\(\mathsf{a^{2^3}}\),</p>
+					</div>
+					<p>jolloin laskujärjestyksen mukaisesti laskettaisiin ensin eksponenttien muodostama potenssimerkintä \(\mathsf{2^3}\). Tästä saataisiin siis</p>
+					<div class="indent">
+						<p>\(\mathsf{a^{2^3} = a^8}\)</p>
+					</div>
+					<p>Sulkeilla on siis suuri merkitys myös tässä tilanteesa. Jos esimerkiksi laskentaohjelma ei muotoile syötettä on sulkeiden kanssa oltava tarkkana.</p>
+					<div class="indent">
+						<p>\(\texttt{3^3^3 = 7 625 597 484 987}\)</p>
+						<p>\(\texttt{(3^3)^3 = 19 683}\)</p>
+					</div>
+				</div>
+			</div>
+			<h2>4. Kymmenpotenssi</h2>
+			<div>
+				<p>Todella suuret ja pienet luvut ilmoitetaan usein vaivan ja tilan säästämiseksi sekä vertailun helpottamiseksi kymmenpotenssin avulla. Kymmenpotenssimuoto on tulo, joka koostuu kertoimesta sekä kymmenen potenssista.</p>
+				<div class="indent">
+					<p>\(\mathsf{3\:140\:000 = 3,\!14 \cdot 10^6}\)</p>
+				</div>
+				<p>Kertoimen tulee olla vähintään yksi, mutta sen tulee olla pienempi kuin kymmenen. Yleisesti ottaen kymmenpotenssimuoto voidaan määritellä seuraavasti:</p>
+				<div class="indent">
+					<p>\(\mathsf{a \cdot 10^n, \rule{4em}{0pt} \text{missä } 1 \leq a &lt; 10}\)</p>
+				</div>
+				<p>Kymmenpotenssimuodossa luvun 10 eksponentti kertoo pilkunsiirtojen lukumäärän. Positiivinen eksponentti tuottaa suuria lukuja, ja negatiinen eksponentti tuottaa pieniä lukuja.</p>
+				<p><strong>Esimerkki: </strong>Kirjoita luku ilman kymmenpotenssimuotoa.</p>
+				<div class="indent">
+					<p>a) \(\mathsf{5 \cdot 10^3 = 5 \cdot 1000 = 5\:000}\)</p>
+					<p>b) \(\mathsf{5,\!4 \cdot 10^3 = 5,\!4 \cdot 1000 = 5\:400}\)</p>
+					<p>c) \(\mathsf{5 \cdot 10^{-3} = 5 \cdot 0,\!001 = 0,\!005}\)</p>
+					<p>d) \(\mathsf{5,\!4 \cdot 10^{-3} = 5,\!4 \cdot 0,\!001 = 0,\!0054}\)</p>
+				</div>
+				<p><strong>Esimerkki: </strong>Kirjoita luku kymmenpotenssimuodossa.</p>
+				<div class="indent">
+					<p>a) \(\mathsf{4\:000\:000 = 4 \cdot 10^6}\)</p>
+					<p>b) \(\mathsf{120\:000 = 1,\!2 \cdot 10^5}\)</p>
+					<p>c) \(\mathsf{0,\!00007 = 7 \cdot 10^{-5}}\)</p>
+					<p>d) \(\mathsf{0,\!0593 = 5,\!93 \cdot 10^{-2}}\)</p>
+				</div>
+			</div>
+			<h2>5. Polynomi</h2>
+			<div>
+				<p>Polynomi tulee kreikan kielestä, ja tarkoittaa moniosaista. Osalla tarkoitetaan tässä yhteydessä termejä, eli polynomi on monista termeistä koostuva muuttujalauseke. Laajennetaan termin käsitettä 7. luokasta ottamalla mukaan aiemmin tässä jaksossa opitut potenssit.
+				</p>
+				<h3>Termi</h3>
+				<div>
+					<p>Termi on <strong>kertoimen</strong> ja <strong>muuttujaosan</strong> tulo. Kerroin on luku, ja muuttujaosassa on nimensä mukaisesti muuttuja. Muuttuja voi olla korotettuna potenssiin, jolloin sen eksponenttia kutsutaan termin <strong>asteeksi</strong>.</p>
+					<div class="indent">
+						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/134314677/Screenshot%202021-12-22%2000.44.53.png" alt="" width="251" height="114" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+					</div>
+					<p>Termejä luokitellaan niiden asteen mukaan, eli esimerkiksi \(\mathsf{6x^3}\) on kolmannen asteen termi, \(\mathsf{-7x^5}\) on viidennen asteen termi jne.</p>
+					<p>Huomaathan erityisesti seuraavien termien asteet:</p>
+					<ul>
+						<li>Termin \(\mathsf{5x}\) aste on 1, sillä \(\mathsf{5x = 5x^1}\).</li>
+						<li>Vakiotermin \(\mathsf{-2}\) aste on 0, sillä \(\mathsf{-2 = -2x^0}\).</li>
+					</ul>
+					<p>Termit ovat <strong>samanmuotoisia</strong>, jos niillä on täsmälleen sama muuttujaosa, eli siis sama muuttuja sekä aste. Vain samanmuotoisia termejä voidaan laskea yhteen ja vähentää toisistaan.</p>
+					<p><strong>Esimerkki:</strong> Sievennä.</p>
+					<div class="indent">
+						<p>a) \(\mathsf{2x^2 + 3x^2 = 5x^2}\)</p>
+						<p>b) \(\mathsf{4x^3 - 5x^3 = -x^3}\)</p>
+						<p>c) \(\mathsf{6x^2 + 4x^2 + 3x - x = 10x^2 + 2x}\)</p>
+						<p>d) \(\mathsf{\color{red}{5x^3}\color{blue}{-2x^2} + 6 \color{red}{-x^3}\color{blue}{+3x^2} -7 = \color{red}{4x^3}  \color{blue}{+x^2} - 1}\)</p>
+					</div>
+					<p>Termien kerto- ja jakolaskussa kertoimet kerrotaan (jaetaan) erikseen ja muuttujaosat erikseen.</p>
+					<p><strong>Esimerkki:</strong> Sievennä.</p>
+					<div class="indent">
+						<p>a) \(\mathsf{\color{red}{2}\color{blue}{x^2} \cdot \color{red}{3}\color{blue}{x^3} = \color{red}{6}\color{blue}{x^5}}\)</p>
+						<p>b) \(\mathsf{\color{red}{-}\color{blue}{x} \cdot \color{red}{4}\color{blue}{x^2} = \color{red}{-4}\color{blue}{x^3}}\)</p>
+						<p>c) \(\mathsf{\dfrac{\color{red}{12}\color{blue}{x^3}}{\color{red}{4}\color{blue}{x^2}} = \color{red}{3}\color{blue}{x}}\)</p>
+						<p>d) \(\mathsf{\dfrac{\color{red}{-42}\color{blue}{x^7}}{\color{red}{7}\color{blue}{x^3}} = \color{red}{-6}\color{blue}{x^4}}\)</p>
+					</div>
+				</div>
+				<h3>Polynomi</h3>
+				<div>
+					<p>Polynomi koostuu yhdestä tai useammasta termistä. Yhden termin polynomeja kutsutaan erityisesti <strong>monomeiksi</strong>, kahden termin polynomeja <strong>binomeiksi</strong> ja kolmen termin polynomeja <strong>trinomeiksi</strong>. Näistä termeistä on hyötyä myöhemmissä opinnoissa, kun käsitellään esimerkiksi binomin neliötä.</p>
+					<div class="indent">
+						<p>\(\mathsf{4x^3 + x^2 - 5x + 9}\)</p>
+					</div>
+					<p>Polynomissa termit järjestellään aina termien asteluvun mukaiseen suuruusjärjestykseen suuriasteisimmasta termistä pienempään. Polynomin aste on sen korkea-asteisimman termin aste.</p>
+				</div>
+				<h3>Polynomin arvo</h3>
+				<div>
+					<p>Polynomin arvo lasketaan sijoittamalla annettu muuttujan arvo lausekkeeseen.</p>
+					<p><strong>Esimerkki: </strong>Laske polynomin \(\mathsf{5x^3 + 2x}\) arvo, kun</p>
+					<div class="indent">
+						<p>a) \(\mathsf{\color{red}{x} = \color{red}{2}}\)</p>
+						<p>\(\begin{align}\mathsf{5\color{red}{x}^3 + 4\color{red}{x}} &= \mathsf{5 \cdot \color{red}{2}^3 + 4 \cdot \color{red}{2}}\\ &= \mathsf{5 \cdot 8 + 4 \cdot 2}\\ &= \mathsf{40 + 8}\\ &= \mathsf{48}\end{align}\)</p>
+						<p>b) \(\mathsf{\color{blue}{x} = -\color{blue}{2}}\)</p>
+						<p>\(\begin{align}\mathsf{5\color{blue}{x}^3 + 4\color{blue}{x}} &= \mathsf{5 \cdot \color{blue}{(-2)}^3 + 4 \cdot \color{blue}{(-2)}}\\ &= \mathsf{5 \cdot (-8) + 4 \cdot (-2)}\\ &= \mathsf{-40 - 8}\\ &= \mathsf{48}\end{align}\)</p>
+					</div>
+				</div>
+			</div>
+			<h2>6. Polynomien laskusääntöjä</h2>
+			<div>
+				<p>Aiemmin on tutustuttu peruslaskutoimituksiin yksittäisten termien (monomien) tapauksessa. Tässä luvussa laajennetaan peruslaskutoimitukset koskemaan kokonaisia polynomeja.</p>
+				<h3>Polynomien yhteen- ja vähennyslasku</h3>
+				<div>
+					<p>Ennen varsinaista polynomien yhteen- tai vähennyslaskua tutustutaan tilanteeseen, jossa sulkeiden sisässä olevan polynomin edessä on jokin etumerkki (+ tai -). Tämän jälkeen meidän on helpompi sieventää sulkeita pois myös yhteen- ja vähennyslaskun tapauksessa.</p>
+					<p><strong>Esimerkki: </strong>Sievennä.</p>
+					<div class="indent">
+						<p>a) \(\mathsf{+(2x-4) = 2x - 4}\)</p>
+						<p>b) \(\mathsf{-(2x-4) = -2x + 4}\)</p>
+						<p>c) \(\mathsf{+(-4x^2 + 5x - 7) = -4x^2 + 5x - 7}\)</p>
+						<p>d) \(\mathsf{-(-4x^2 + 5x - 7) = 4x^2 - 5x + 7}\)</p>
+					</div>
+					<p>Plusmerkki (+) sulkeiden edessä ei siis vaikuta sulkeiden poistossa termeihin. Miinusmerkki (-) sulkeiden edessä vaihtaa kaikkien polynomin termien etumerkin. Näiden avulla voidaan sieventää myös varsinaiset polynomien yhteen- ja vähennyslaskut. Ensin poistetaan sulkeet polynomien ympäriltä, ja tämän jälkeen sievennetään samanmuotoiset termit.</p>
+					<p><strong>Esimerkki: </strong>Sievennä.</p>
+					<div class="indent">
+						<p>a) \(\mathsf{(\color{red}{5x - 3}) + (\color{blue}{2x + 6}) = \color{red}{5x - 3} \color{blue}{+ 2x + 6} = 7x + 3}\)</p>
+						<p>b) \(\mathsf{\color{red}{-x+6} - (\color{blue}{3x-4}) = \color{red}{-x +6} \color{blue}{-3x +4} = -4x +2}\)</p>
+						<p>c) \(\mathsf{(\color{red}{2x^2+8}) + (\color{blue}{-3x^2-3})= \color{red}{2x^2+8}\color{blue}{-3x^2-3} = -x^2 + 5}\)</p>
+						<p>d) \(\mathsf{\color{red}{-7x^2 + x} - (\color{blue}{-2x^2 + x}) = \color{red}{-7x^2 + x} \color{blue}{+2x^2 - x} = -5x^2}\)</p>
+					</div>
+				</div>
+				<h3>Polynomien kertolasku</h3>
+				<div>
+					<p>Tarkastellaan ensin polynomin ja monomin (termin) kertolaskua, joka on osittain kertausta luvun ja muuttujalausekkeen tulosta. Monomilla kerrotaan kaikki polynomin termit erikseen.</p>
+					<p><strong>Esimerkki: </strong>Sievennä.</p>
+					<div class="indent">
+						<p>a) \(\mathsf{4 \cdot (2x-4) = 8x - 16}\)</p>
+						<p>b) \(\mathsf{4x \cdot (2x-4) = 8x^2 - 16x}\)</p>
+						<p>c) \(\mathsf{-3x^2 \cdot (-7x^3 + x) = 21x^5 -3x^3}\)</p>
+						<p>d) \(\mathsf{(6x^2 - 3x - 7) \cdot 5x = 30x^3 - 15x^2 - 35x}\)</p>
+					</div>
+					<p>Kahden polynomin kertolaskussa kaikilla ensimmäisen polynomin termeillä kerrotaan vuorollaan kaikki toisen polynomin termit.</p>
+					<p><strong>Esimerkki</strong></p>
+					<div class="indent">
+						<iframe scrolling="no" title="ma8j4_teoria_polynomien_tulo" src="https://www.geogebra.org/material/iframe/id/ncmwjvqg/width/442/height/281/border/888888/sfsb/false/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false"
+							width="442px" height="281px" style="border:0px;"> </iframe>
+					</div>
+				</div>
+				<h3>Lisätietoa: Binomin neliö</h3>
+				<div>
+					<p>Binomin neliö ei sinällään ole haastava sievennettävä, mutta laskukaavan käyttö nopeuttaa sievennystä, jos binomin neliöitä on useita. Varsinkin tilanteen tunnistaminen toisin päin muodostuu myöhemmissä opinnoissa hyödylliseksi taidoksi esimerkiksi funktioiden nollakohtia etsittäessä.</p>
+					<p>Johdetaan binomin neliön laskukaava tuttujen laskusääntöjen avulla. Vaiheittainen johdanto löytyy kultapaketin tehtävästä Binomin neliö</a>.</p>
+					<div class="indent">
+						<p>\(\begin{align}\mathsf{(a + b)^2} &= \mathsf{(a+b) \cdot (a+b)}\\ &=\mathsf{a^2 + ab + ab + b^2}\\ &=\mathsf{a^2 + 2ab + b^2}\end{align}\)</p>
+					</div>
+					<p>Laskukaavaa voidaan nyt käyttää kaikenlaisten binomien neliöiden sieventämiseen sijoittamalla muuttujien \(\mathsf{a}\) ja \(\mathsf{b}\) paikalle binomin termit.</p>
+					<p><strong>Esimerkki: </strong>Sievennä.</p>
+					<div class="indent">
+						<p>\(\mathsf{(x+1)^2 = x^2 + 2x + 1}\)</p>
+						<p>\(\mathsf{(x+6)^2 = x^2 + 12x + 36}\)</p>
+						<p>\(\mathsf{(8x+5)^2 = 64x^2 + 80x + 25}\)</p>
+					</div>
+					<p>Binomille \(\mathsf{a-b}\) on myös johdettu oma laskukaavansa, mutta ottamalla etumerkit huomioon aiemmassa laskukaavassa ei toinen laskukaava ole välttämätön muistaa. Ainoastaan 1. asteen termin etumerkki vaihtuu.</p>
+					<div class="indent">
+						<p>\(\begin{align}\mathsf{(a - b)^2} &= \mathsf{(a-b) \cdot (a-b)}\\ &=\mathsf{a^2 - ab - ab + b^2}\\ &=\mathsf{a^2 - 2ab + b^2}\end{align}\)</p>
+					</div>
+					<p><strong>Esimerkki: </strong>Sievennä.</p>
+					<div class="indent">
+						<p>\(\mathsf{(x-1)^2 = x^2 - 2x + 1}\)</p>
+						<p>\(\mathsf{(x-6)^2 = x^2 - 12x + 36}\)</p>
+						<p>\(\mathsf{(8x-5)^2 = 64x^2 - 80x + 25}\)</p>
+					</div>
+				</div>
+			</div>
+			<h2>7. Lisätietoa: Toisen asteen yhtälö</h2>
+			<div>
+				<p>Aikaisemmin ollaan opittu ratkaisemaan ns. ensimmäisen asteen yhtälöitä, joissa on esiintynyt termejä, joiden aste on ollut 1 tai 0 (vakiotermi). Toisen asteen yhtälöllä tarkoitetaan yhtälöä, jossa esiintyy termejä, joiden aste on 2. Toisin sanoen muuttuja (esim. x) on korotettu toiseen potenssiin (neliö). Toisen asteen yhtälöitä ovat esimerkiksi:</p>
+				<div class="indent">
+					<p>\(\textsf{a) }\mathsf{x^2 = 36}\)</p>
+					<p>\(\textsf{b) }\mathsf{5x^2 = 20}\)</p>
+					<p>\(\textsf{c) }\mathsf{-2x^2 + 7 = -11}\)</p>
+					<p>\(\textsf{d) }\mathsf{x^2 = 4x - 3}\)</p>
+				</div>
+				<p>Yhtälön ratkaisemisessa käytetään aina käänteisiä laskutoimituksia puolittain, jotta muuttuja saadaan jäämään yksin toiselle puolelle yhtälöä. Toiseen potenssiin korottamiselle eli neliölle vastakkainen laskutoimitus on tietenkin neliöjuuri.</p>
+				<p><strong>Esimerkki: </strong>Ratkaise yhtälö.</p>
+				<div class="indent">
+					<p>\(\begin{align}\textsf{a) }\mathsf{x^2} &= \mathsf{36} \quad &\mathsf{|| \sqrt{\quad}}\\\mathsf{x} &= \mathsf{\pm6}\end{align}\)</p>
+				</div>
+				<p>Miksi vastauksen edessä on \(\pm\)-merkki? Mitä se tarkoittaa?</p>
+				<p>Jos tarkastellaan esimerkkiä sillä ajatuksella, että "Mikä luku sopii x:n paikalle?" havaitaan, että muuttujan x paikalle sopii sekä positiviinen \(\mathsf{6}\) että negatiivinen \(\mathsf{-6}\). \(\pm\)-merkki on "plusmiinus"-merkki, jolla voidaan ilmoitaa, että molemmat etumerkit (+ tai -) ovat sallittuja. Pidemmin saman voisi merkitä kirjoittamalla ratkaisut erikseen "tai"-sanan avulla.</p>
+				<p><strong>Esimerkki: </strong>Ratkaise yhtälö.</p>
+				<div class="indent">
+					<p>\(\begin{align}\textsf{a) }\mathsf{x^2} &= \mathsf{36} \quad &\mathsf{|| \sqrt{\quad}}\\\mathsf{x} &= \mathsf{6}\\&\textsf{tai}\\\mathsf{x} &= \mathsf{-6}\end{align}\)</p>
+				</div>
+				<p>Laskujärjestys sanoo, että potenssit ja neliöjuuret lasketaan ennen kerto- ja jakolaskuja tai yhteen- ja vähennyslaskuja. Koska yhtälönratkaisussa toimitaan aina käänteisesti myös laskujärjestyksen suhteen, suoritetaan kaikki muut ratkaisun vaiheet ennen neliöjuuren ottamista puolittain.</p>
+				<p><strong>Esimerkki: </strong>Ratkaise yhtälö.</p>
+				<div class="indent">
+					<p>\(\begin{align}\textsf{b) }\mathsf{5x^2} &= \mathsf{20} \quad &&\mathsf{|| :5}\\ \mathsf{x^2} &= \mathsf{4} &&\mathsf{|| \sqrt{\quad}}\\ \mathsf{x} &= \mathsf{\pm2} \end{align}\)</p>
+					<p>\(\begin{align}\textsf{c) }\mathsf{-2x^2 + 7} &= \mathsf{-11} \quad &&\mathsf{|| -7}\\ \mathsf{-2x^2} &= \mathsf{-18} \quad &&\mathsf{|| :(-2)}\\ \mathsf{x^2} &= \mathsf{9} &&\mathsf{|| \sqrt{\quad}}\\ \mathsf{x}
+						&= \mathsf{\pm3} \end{align}\)
+					</p>
+				</div>
+			</div>
+			<h2>8. Lisätietoa: Binääriluvut</h2>
+			<div>
+				<p>Tietokoneiden ja muiden elektronisten laitteiden muisti koostuu <strong>biteistä</strong>. Bittiä kuvataan usein numeroilla 1 ja 0. Erilaiset muistityypit tallentavat bitit hieman eri menetelmin:</p>
+				<ul>
+					<li>Mekaaniset muistit (reikäkortit ja -nauhat)</li>
+					<li>Magneettiset muistit (kiintolevyt, C- ja VHS-kasetit, levykkeet)</li>
+					<li>Optiset levyt (CD, DVD, Blue-ray)</li>
+					<li>Puolijohdemuistit - "Flash"-muistit (SSD-levyt, muistitikut ja -kortit)</li>
+				</ul>
+				<p>Yhteistä kaikilla menetelmillä on kuitenkin se, että tieto on tallennettu biteiksi. Muistin määrää kuvataan usein <strong>tavuina</strong>, joka koostuu kahdeksasta bitistä. Peräkkäin kirjoitettuja bittejä voidaan kuvata lukuina, jolloin muodostuu
+					<strong>binäärilukuja</strong>.</p>
+				<div class="indent">
+					<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/477982828/ma8j4_teoria_binaariluku_tavu.png?time=1643980154003" alt="" width="349" height="190" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+				</div>
+				<h3>Johdatus kantalukujärjestelmiin</h3>
+				<div>
+					<p>Tutustutaan kantalukujärjestelmään tutun kymmenjärjestelmän (desimaalijärjestelmän) avulla. Aiemmin on opittu, että luvussa jokaisella numerolla on oma paikkansa. Jokainen paikka kuvaa jotakin suuruusluokkaa (ykköset, kymmenet, sadat, tuhannet, ...).
+						Näin ollen luku voidaan pilkkoa summaksi käyttäen kyseisiä suuruusluokkia.</p>
+					<div class="indent">
+						<p>\(\mathsf{2845 = 2000 + 800 + 40 + 5}\)</p>
+					</div>
+					<p>Muutetaan summattavat kymmenpotenssimerkinnäksi, jolloin nähdään kunkin numeron paikalla on oma eksponenttinsa.</p>
+					<div class="indent">
+						<p>\(\begin{align}\mathsf{2845} &= \mathsf{2000 + 800 + 40 + 5}\\&= \mathsf{2 \cdot 10^3 + 8 \cdot 10^2 + 4 \cdot 10^1 + 5 \cdot 10^0}\end{align}\)</p>
+					</div>
+					<p>Kun käytössä on kymmenen erilaista numeromerkkiä (0 - 9) voidaan luku pilkkoa potenssien summaksi, jossa kantalukuna on 10 ja kukin potenssi merkitsee yhden numeron paikkaa luvussa. Kyseistä lukujärjestelmää kutsutaan siis <strong>kymmenkantaiseksi järjestelmäksi</strong>.</p>
+				</div>
+				<h3>Binääriluvut (kaksikantaiset luvut)</h3>
+				<div>
+					<p>Binääriluvut ovat vastaavasti kaksikantaisia lukuja, eli ne voidaan ilmoittaa kymmenjärjestelmässä potenssien summana, missä kantalukuna on 2. Jotta erikantaiset luvut erotetaan toisistaan, merkitään käytetty kanta alaindeksinä luvun perään.</p>
+					<p><strong>Esimerkki: </strong>Muuta kymmenkantaiseksi.</p>
+					<div class="indent">
+						<p>a) \(\begin{align}\mathsf{1001_2} &= \mathsf{1 \cdot 2^3 + 0 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0}\\&= \mathsf{1 \cdot 8 + 0 \cdot 4 + 0 \cdot 2 + 1 \cdot 1}\\&= \mathsf{8 + 0 + 0 + 1}\\&=\mathsf{9_{10}}\end{align}\)</p>
+						<p>b) \(\begin{align}\mathsf{10100110_2} &= \mathsf{1 \cdot 2^7 + 0 \cdot 2^6 + 1 \cdot 2^5 + 0 \cdot 2^4 + 0 \cdot 2^3 + 1 \cdot 2^2 + 1 \cdot 2^1 + 0 \cdot 2^0}\\&= \mathsf{1 \cdot 128 + 0 \cdot 64 + 1 \cdot 32 + 0 \cdot 16 + 0 \cdot 8
+							+ 1 \cdot 4 + 1 \cdot 2 + 0 \cdot 1}\\&= \mathsf{128 + 0 + 32 + 0 + 0 + 4 + 2 + 0}\\&= \mathsf{168_{10}}\end{align}\)</p>
+					</div>
+					<p>Kymmenkantaisten lukujen muuntamiseksi binääriluvuiksi on olemassa erilaisia vaiheittaisia toimintaohjeita (algoritmeja), nettimuuntimia sekä ohjelmointikielten funktioita, mutta pienten lukujen muunnokset menevät hyvästä päässälaskusta. Tarkoituksena on siis pilkkoa luku summaksi, jossa käytetään vain kahden potensseja 1, 2, 4, 8, 16, 32, 64, 128, 256, jne. Näitä vastaavien potenssimerkintöjen eksponentit kertovat ykkösten ja nollien paikat binääriluvussa.</p>
+					<p><strong>Esimerkki: </strong>Muuta binääriluvuksi.</p>
+					<div class="indent">
+						<p>c) \(\begin{align}\mathsf{19_{10}} &= \mathsf{16 + 2 + 1}\\&=\mathsf{1\cdot2^4 + 0\cdot2^3 + 0\cdot2^2 + 1\cdot2^1 + 1\cdot2^0}\\&=\mathsf{10011_2}\end{align}\)</p>
+						<p>d) \(\begin{align}\mathsf{45_{10}} &= \mathsf{32 + 8 + 4 + 1}\\&=\mathsf{1\cdot2^5 + 0\cdot2^4 + 1\cdot2^3 + 1\cdot2^2 + 0\cdot2^1 + 1\cdot2^0}\\&=\mathsf{101101_2}\end{align}\)</p>
+					</div>
+				</div>
+				<h3>Yleistä binääriluvuista</h3>
+				<div>
+					<p><strong>Ylivuoto</strong></p>
+					<p>Ylivuodolla tarkoitetaan tilannetta, jossa luvun esittämiseen esimerkiksi tietokoneen muistissa on varattu liian vähän bittejä. Kuinka paljon on liian vähän? Kuinka suuria lukuja voi erilaisiin tavumääriin tallentaa? Oletetaan, että halutaan tallentaa positiivisia kokonaislukuja. Kuinka monta erilaista lukua voidaan tallentaa?</p>
+					<div class="indent">
+						<table>
+							<thead>
+								<tr>
+									<th style="border: 1px solid black; padding-left: 20px; padding-right: 20px;">Tavuja</th>
+									<th style="border: 1px solid black; padding-left: 20px; padding-right: 20px;">Bittejä</th>
+									<th style="border: 1px solid black; padding-left: 20px; padding-right: 20px;">Erilaisia lukuja</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td style="border: 1px solid black; padding-left: 20px; padding-right: 20px; text-align: center;">1</td>
+									<td style="border: 1px solid black; padding-left: 20px; padding-right: 20px; text-align: center;">8</td>
+									<td style="border: 1px solid black; padding-left: 20px; padding-right: 20px;">\(\mathsf{2^8 = 256}\)</td>
+								</tr>
+								<tr>
+									<td style="border: 1px solid black; padding-left: 20px; padding-right: 20px; text-align: center;">2</td>
+									<td style="border: 1px solid black; padding-left: 20px; padding-right: 20px; text-align: center;">16</td>
+									<td style="border: 1px solid black; padding-left: 20px; padding-right: 20px;">\(\mathsf{2^{16} = 65\:536}\)</td>
+								</tr>
+								<tr>
+									<td style="border: 1px solid black; padding-left: 20px; padding-right: 20px; text-align: center;">4</td>
+									<td style="border: 1px solid black; padding-left: 20px; padding-right: 20px; text-align: center;">32</td>
+									<td style="border: 1px solid black; padding-left: 20px; padding-right: 20px;">\(\mathsf{2^{32} = 4\:294\:967\:296}\)</td>
+								</tr>
+								<tr>
+									<td style="border: 1px solid black; padding-left: 20px; padding-right: 20px; text-align: center;">8</td>
+									<td style="border: 1px solid black; padding-left: 20px; padding-right: 20px; text-align: center;">64</td>
+									<td style="border: 1px solid black; padding-left: 20px; padding-right: 20px;">\(\mathsf{2^{64} = 1,\!84... \cdot 10^{19}}\)</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<p>Nämä luvut vielä puolittuvat, jos halutaan esittää negatiivisia kokonaislukuja.</p>
+					<p><strong>Miksi pitäisi ihmisen tällaista osata ja ymmärtää?</strong></p>
+					<ul>
+						<li><strong>Yleissivistys</strong> - Muistin määrä laitteissa ilmoitetaan tavuina (8 bittiä) ja massamuistien suuruudet ovat usein jotain kahden potenssin moninkertoja (64Gt, 128Mt, 4Tt). Lisäksi internetyhteyksien tiedonsiirtonopeudet ilmoitetaan
+							Megabitteinä sekunnissa.
+						</li>
+						<li><strong>Ohjelmointi</strong> - Historiassa on havaittu ohjelmistovirheitä, jotka johtuvat ns. muistin ylivuodosta (overflow), missä luku ei ole mahtunut sille varattuun muistipaikkaan. Virheet voivat maksaa miljoonia euroja (<a href="https://fi.wikipedia.org/wiki/Ariane_5"
+								target="_blank">Ariane 5</a>) tai aiheuttaa ennakoimattomia tilanteita (<a href="https://www.is.fi/viihde/art-2000000844868.html" target="_blank">Gangnam Style rikkoi YouTuben</a>).</li>
+						<li><strong>Laskimet</strong> - Laskettaessa laskimella esimerkiksi suuria potenssilaskuja voi laskimen luvulle käyttämä muisti ylittyä, jolloin tulee joko väärä vastaus tai virheilmoitus.</li>
+						<li><strong>Desimaaliosa</strong> - Digitaaliset laitteet käyttävät binäärilukuja myös desimaalilukujen esittämiseen, jolloin käytössä on ns. liukuluvut (floating point number). Biteillä laskettaettaessa epätarkkuus, pyöristykset ja päättymättömät
+							desimaaliluvut aiheuttavat odottamattomia virheitä.</li>
+					</ul>
+					<p>Lukujen lisäksi binääriluvuilla tallennetaan myös muiden merkkijonojen merkit (kirjaimet, pisteet, pilkut, jne.). Netistä löytyy paljon muuntajia, joiden avulla voi merkkejä muuttaa binääriluvuiksi esimerkiksi <a href="https://onlineutf8tools.com/convert-utf8-to-binary"
+						target="_blank">UTF-8</a>-merkistökoodauksen avulla.</p>
+				</div>
+			</div>
+		</div>
+		<script>
+			downloadGG();
+		</script>
+	</body>
+</html>
