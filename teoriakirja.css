@@ -134,3 +134,14 @@ th, td {
 .wide {
 	display: block;
 }
+.summary {
+	padding: 30px;
+	margin: 30px;
+	background-color: var(--purple2);
+	border-radius: 10px;
+	box-shadow: 5px 5px black;
+}
+
+.summary > h4:first-child {
+	margin-top: 0px;
+}
