@@ -269,7 +269,7 @@
 					<p>Nyt siis muuttujaa \(\mathsf{x}\) on kerrottu luvulla 3, vastaukseksi on saatu 24. Tästä on toki helppoa päätellä, että muuttujan x on oltava 8, koska \(\mathsf{3 \cdot 8 = 24}\). Ratkaisu saadaan käänteisesti jakolaskun avulla: \(\mathsf{24:3=8}\), koska jakolasku on kertolaskun käänteinen laskutoimitus. Yhtälöratkaisun menetelmien avulla ratkaisu näyttäisi seuraavalta.</p>
 					<div class="example">
 						<p><strong>Esimerkki:</strong> Ratkaise yhtälö.</p>
-						<p class="indent">\(\begin{align}\mathsf{3x} &= \mathsf{24} \quad &&\| \mathsf{\color{red}\;:3}\\ \mathsf{x} &= \mathsf{8}\end{align}\)</p>
+						<p class="indent">\(\begin{align}\mathsf{3x} &= \mathsf{24} \quad &&\mathsf{\|\color{red}:3}\\ \mathsf{x} &= \mathsf{8}\end{align}\)</p>
 					</div>
 					<p>1. rivillä on siis alkuperäinen yhtälö \(\mathsf{3x = 24}\). Pystyviivojen \(\|\) jälkeen on <span style="color: red">laskutoimitus</span>, joka yhtälön molemmille puolille tehdään.</p>
 					<p>2. rivillä nähdään laskutoimituksen tulos. Vasemmalla on siis laskettu \(\mathsf{3x\;{\color{red}: 3} = x}\) ja oikealla \(\mathsf{24\;{\color{red}: 3}=8}\). Näin yhtälö on saatu ratkaistua, ja ratkaisuksi on saatu edellä päätelty \(\mathsf{x = 8}\).</p>
@@ -281,7 +281,7 @@
 					<p>Nyt muuttujasta x on vähennetty luku 4. Käytetään apuna jälleen käänteistä laskutoimitusta, joka vähennyslaskulle on tietenkin yhteenlasku. Lisäämällä yhtälön molemmille puolille luku 4, saadaan yhtälön vasemmalla puolella -4 häviämään nollaksi. Yhtälönratkaisun merkinnöin saadaan siis</p>
 					<div class="example">
 						<p><strong>Esimerkki:</strong> Ratkaise yhtälö.</p>
-						<p class="indent">\(\begin{align}\mathsf{x - 4} &= \mathsf{5}\quad &&\| \mathsf{\color{red}\;+\;4}\\ \mathsf{x} &= \mathsf{9}\end{align}\)</p>
+						<p class="indent">\(\begin{align}\mathsf{x - 4} &= \mathsf{5}\quad &&\mathsf{\|\color{red}+4}\\ \mathsf{x} &= \mathsf{9}\end{align}\)</p>
 					</div>
 					<p>Vasemmalla laskettiin nyt \(\mathsf{x - 4 {\color{red}\;+\;4} = x}\) ja oikealla \(\mathsf{5{\color{red}\;+\;4} = 9}\). Ratkaisuksi saatiin siis \(\mathsf{x = 9}\), joka voidaan tarkistaa sijoittamalla ratkaisu alkuperäiseen yhtälöön. \(\mathsf{x-4 = 9-4 = 5}\).</p>
 					<p>Myös termejä, joissa esiintyy muuttuja x voidaan lisätä ja vähentää puolittain. Tarkastellaan yhtälöä</p>
@@ -289,9 +289,9 @@
 					<p>Nyt molemmilla puolilla yhtälöä on termi, jossa esiintyy muuttuja x. Koska tavoitteena oli saada muuttuja x jäämään yksin vain yhtälön toiselle puolelle, poistetaan x toiselta puolelta. Tehdään se tällä kertaa yhtälön oikealta puolelta.</p>
 					<div class="example">
 						<p><strong>Esimerkki:</strong> Ratkaise yhtälö.</p>
-						<p class="indent">\(\begin{align}\mathsf{3x} &= \mathsf{x + 8}\quad &&\|\mathsf{\color{red}\;-\;x}\\\mathsf{2x} &= \mathsf{8}&&\mathsf{\|:2}\\ \mathsf{x} &= \mathsf{4}\end{align}\)</p>
+						<p class="indent">\(\begin{align}\mathsf{3x} &= \mathsf{x + 8}\quad &&\mathsf{\|\color{red}-x}\\\mathsf{2x} &= \mathsf{8}&&\mathsf{\|:2}\\ \mathsf{x} &= \mathsf{4}\end{align}\)</p>
 					</div>
-					<p>Vasemmalla saadaan siis \(\mathsf{3x{\color{red}\;-\;x} = 2x}\) ja oikealla \(\mathsf{x + 8 {\color{red}\;-\;x} = 8}\). Muuttujalle x jää vielä kerroin, joka saadaan poistettua aiemmin opitulla jakolaskulla puolittain.</p>
+					<p>Vasemmalla saadaan siis \(\mathsf{3x{\color{red}\;-\;x} = 2x}\) ja oikealla \(\mathsf{x + 8 {\color{red}-x} = 8}\). Muuttujalle x jää vielä kerroin, joka saadaan poistettua aiemmin opitulla jakolaskulla puolittain.</p>
 				</div>
 				<h3>Yhtälönratkaisu kokonaisuutena</h3>
 				<div>
@@ -302,11 +302,11 @@
 						<p><strong>Esimerkki:</strong> Ratkaise yhtälö \(\mathsf{2x-4 = -x + 5}\) algoritmin avulla.</p>
 						<div class="indent">
 							<p>Onko x molemmilla puolilla? Kyllä on, joten poistetaan x-termi toiselta puolelta yhtälöä.</p>
-							<p class="indent">\(\begin{align}\mathsf{2x-4} &= \mathsf{-x+5}&&\|\mathsf{+x}\\\mathsf{3x-4} &= \mathsf{5}\end{align}\)</p>
+							<p class="indent">\(\begin{align}\mathsf{2x-4} &= \mathsf{-x+5}&&\mathsf{\|+x}\\\mathsf{3x-4} &= \mathsf{5}\end{align}\)</p>
 							<p>Onko vakiotermi molemmilla puolilla? Kyllä on, joten poistetaan vakiotermi x-termin puolelta.</p>
-							<p class="indent">\(\begin{align}\mathsf{3x-4} &= \mathsf{5}&&\|\mathsf{+4}\\\mathsf{3x} &= \mathsf{9}\end{align}\)</p>
+							<p class="indent">\(\begin{align}\mathsf{3x-4} &= \mathsf{5}&&\mathsf{\|+4}\\\mathsf{3x} &= \mathsf{9}\end{align}\)</p>
 							<p>Onko x-termissä kerroin? Kyllä on, joten jaetaan x:n kertoimella.</p>
-							<p class="indent">\(\begin{align}\mathsf{3x} &= \mathsf{9}&&\|\mathsf{:3}\\\mathsf{x} &= \mathsf{3}\end{align}\)</p>
+							<p class="indent">\(\begin{align}\mathsf{3x} &= \mathsf{9}&&\mathsf{\|:3}\\\mathsf{x} &= \mathsf{3}\end{align}\)</p>
 							<p>Valmis!</p>
 						</div>
 					</div>
