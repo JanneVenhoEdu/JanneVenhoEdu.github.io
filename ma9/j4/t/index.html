@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="fi">
+	<head>
+		<title>Teoria - Yhtälöparit ja epäyhtälöt</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+		<script src="../../../teoria.js"></script>
+		<link rel="stylesheet" media="screen and (max-width: 350px)" href="../../../teorialohko.css">
+		<link rel="stylesheet" media="screen and (min-width: 350px)" href="../../../teoriakirja.css">
+	</head>
+	<body>
+		<div id="nav">
+			<div id="button">
+				<div id="bar1"></div>
+				<div id="bar2"></div>
+				<div id="bar3"></div>
+			</div>
+			<div id="links"></div>
+			<div id="caption"></div>
+			<a id="course" href="https://jannevenhoedu.github.io/ma9/j4/t" target="_blank"></a>
+		</div>
+		<div id="main">
+			<h1>MA9 Jakso 4: Yhtälöparit ja epäyhtälöt</h1>
+			<h2>1. Kertausta</h2>
+			<div>
+				<h3>Polynomit</h3>
+				<div>
+					<p><strong>Termi</strong> koostuu kertoimesta sekä muuttujaosasta. Muuttujaosan eksponentti kertoo termin asteen. 0. asteen termiä kutsutaan vakiotermiksi. Samanmuotoisia termejä voidaan laskea yhteen ja vähentää toisistaan eli sieventää.</p>
+					<p class="indent">\(\mathsf{4x^2 + 2x - 5 - 5x + 6 = 4x^2 - 3x + 1}\)</p>
+					<p><strong>Polynomi</strong> koostuu yhdestä tai useammasta termistä. Polynomien <strong>summa ja erotus</strong> merkittäessä jälkimmäinen polynomi on merkittävä sulkeisiin ja laskutoimitusmerkki vaikuttaa siis koko polynomiin.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Sievennä.</p>
+						<div class="indent">
+							<p>a) \(\mathsf{2x + 1 + (-x + 6) = 2x + 1 - x + 6 = x + 7}\)</p>
+							<p>b) \(\mathsf{-x + 5 - (5x - 12) = -x + 5 - 5x + 12 = -6x +17}\)</p>
+						</div>
+					</div>
+					<p>Huomaa, että vähennyslaskussa miinusmerkki vaihtaa kaikkien polynomin termien etumerkin.</p>
+					<p><strong>Polynomien tulossa</strong> kerrottavien polynomien termit kerrotaan keskenään.</p>
+					<div class="example" style="padding-bottom: 20px;">
+						<p><strong>Esimerkki: </strong>Laske.</p>
+						<div class="gg" id="polynomien_tulo" style="width: 300px; height: 281px;">
+							https://jannevenhoedu.github.io/ma8/j4/t/ma8j4_teoria_polynomien_tulo.ggb
+						</div>
+					</div>
+					<p><strong>Polynomin jakaminen vakiolla</strong> kohdistaa jakolaskun erikseen kaikkiin polynomin termeihin.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Sievennä.</p>
+						<p class="indent">\(\mathsf{\dfrac{-4x^2 + 8x + 14}{-2} = \dfrac{-4x^2}{-2} + \dfrac{8x}{-2} + \dfrac{14}{-2} = 2x^2 - 4x - 7}\)</p>
+					</div>
+				</div>
+				<h3>Yhtälönratkaisu</h3>
+				<div>
+					<p><strong>Ensimmäisen asteen yhtälö</strong></p>
+					<p>Ensimmäisen asteen yhtälöitä ratkaistiin vaiheittain lisäämällä, vähentämällä, kertomalla tai jakamalla yhtälöä puolittain tavoitteena saada muuttuja (yleensä x) jäämään yksin yhtälön toiselle puolelle. Puolittain suoritettavaa laskutoimitusta merkittiin yhtälön rivin perään \(||\)-merkkien jälkeen.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Sievennä.</p>
+						<div class="indent">
+							<p>a) \(\begin{align}\mathsf{2x+1} &= \mathsf{7} &&\mathsf{|| -1}\\\mathsf{2x} &= \mathsf{6} &&\mathsf{|| :2}\\\mathsf{x} &= \mathsf{3}\end{align}\)</p>
+							<p>b) \(\begin{align}\mathsf{-3x+2} &= \mathsf{x + 10} &&\mathsf{|| -x}\\\mathsf{-4x+2} &= \mathsf{10} &&\mathsf{|| -2}\\\mathsf{-4x} &= \mathsf{8} &&\mathsf{|| :(-4)}\\\mathsf{x} &= \mathsf{-2}\end{align}\)</p>
+						</div>
+					</div>
+					<p>Yhtälönratkaisun avulla voidaan myös muokata useamman muuttujan yhtälöitä. Suoran yhtälö voidaan esittää ratkaistussa muodossa (esim. \(\mathsf{y = -2x + 3}\) tai yleisessä muodossa (\(\mathsf{2x + y - 3 = 0}\)). Suoran yhtälöä tulee osata muokata näiden muotojen välillä suoran piirtämisen tai muun ratkaisemisen vuoksi.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Sievennä.</p>
+						<p class="indent">\(\begin{align}\mathsf{-6x+2y-8} &= \mathsf{0} &&\mathsf{|| +6x}\\\mathsf{2y-8} &= \mathsf{}6x &&\mathsf{|| +8}\\\mathsf{2y} &= \mathsf{6x + 8} &&\mathsf{|| :2}\\\mathsf{y} &= \mathsf{3x + 4}\end{align}\)</p>
+					</div>
+				</div>
+				<h3>Suora</h3>
+				<div>
+					<p><strong>Suoran yhtälö</strong> on muotoa \(\mathsf{y = kx + b}\), jonka avulla voidaan laskea suoran pisteitä sijoittamalla x-koordinaatin arvoja suoran yhtälöön ja ratkaisemalla niitä vastaavat y-koordinaatit.</p>
+					<p>Suoran yhtälössä kerrointa \(\mathsf{k}\) kutsuttiin <strong>kulmakertoimeksi</strong> (kaltevuus) ja kerrointa \(\mathsf{b}\) <strong>vakiotermiksi</strong> (y-akselin leikkauskohta). Näiden avulla voitiin piirtää suoran kuvaaja ilman erillistä koordinaattien laskemista.</p>
+					<ol>
+						<li>Vakiotermi kertoo suoran ja y-akselin leikkauskohdan.</li>
+						<li>Kulmakerroin kertoo y-akselin suuntaisen muutoksen, kun siirrytään edellisestä suoran pisteestä x-akselin suunnassa yhden verran oikealle.</li>
+					</ol>
+					<div class="indent">
+						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/528183153/ma9j4_teoria_suoran_kk_vt.png" alt="" width="398" height="270" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+					</div>
+					<p><strong>Suorien leikkauspiste</strong> voidaan ratkaista joko graafisesti tai algebrallisesti. <strong>Graafisessa ratkaisussa</strong> suorat piirretään samaan koordinaatistoon, ja leikkaupiste määritetään silmämääräisesti kuvasta. <strong>Algebrallisessa ratkaisussa</strong>        suorien lausekkeet merkitään yhtä suuriksi, ratkaistaan muodostuneesta yhtälöstä x-koordinaatin arvo ja lopuksi selvitetään y-koordinaatin arvo sijoittamalla saatu x-koordinaatti toiseen suoran yhtälöön.</p>
+					<div class="indent">
+						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/528183153/ma9j4_teoria_suorien_leikkauspiste.png?time=1674462315028" alt="" width="398" height="342" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+					</div>
+				</div>
+			</div>
+			<h2>2. Yhtälöpari</h2>
+			<div>
+				<p>Yhtälönratkaisun tarkoituksena on ratkaista tuntemattoman muuttujan arvo. Toistaiseksi muuttujia yhtälöissä on ollut vain yksi, jolloin ollaan selvitty yhden yhtälön ratkaisemisella. Jos yhtälössä on kaksi muuttujaa, tarvitaan yhtälöitäkin kaksi molempien
+					muuttujien ratkaisemiseksi. Tällöin kyseessä on <strong>yhtälöpari</strong>.</p>
+				<p>Yhtälöpari merkitään kirjoittamalla yhtälöt allekkain, ja piirtämällä yhtälöiden vasemmalle puolelle aaltosulje.</p>
+				<div class="indent">
+					<p>\(\left\{\begin{aligned}& \mathsf{2x+y = 4}\\& \mathsf{-x-y = -1}\end{aligned}\right.\)</p>
+				</div>
+				<h3>Ratkaisun tutkiminen</h3>
+				<p>Koska muuttujia yhtälöissä on kaksi, niin ratkaisukin on lukupari \(\mathsf{(x,y)}\). Yhtälöparin ratkaisemista harjoitellaan myöhemmissä luvuissa. Yhtälöparin ratkaisua voidaan tutkia sijoittamalla muuttujien arvot yhtälöihin, ja testaamalla toteuttaako
+					lukupari molemmat yhtälöt.</p>
+				<p><strong>Esimerkki: </strong>Toteuttaako lukupari \(\mathsf{(x,y) = (-2, 8)}\) yhtälöparin \(\left\{\begin{aligned}& \mathsf{2x+y = 4}\\& \mathsf{-x-y = -1}\end{aligned}\right.\)</p>
+				<div class="indent">
+					<table>
+						<tbody>
+							<tr>
+								<td>\(\begin{align}\mathsf{2x+y} &= \mathsf{4}\\ \mathsf{2 \cdot (-2) + 8} &= \mathsf{4}\\ \mathsf{-4+8} &= \mathsf{4}\\ \mathsf{4} &= \mathsf{4}\\\textsf{Yhtälö on tosi.}\end{align}\)</td>
+								<td style="width: 50px;"></td>
+								<td>\(\begin{align}\mathsf{-x-y} &= \mathsf{-1}\\ \mathsf{-(-2) - 8} &= \mathsf{-1}\\ \mathsf{2-8} &= \mathsf{-1}\\ \mathsf{-6} &= \mathsf{-1}\\\textsf{Yhtälö on epätosi.}\end{align}\)</td>
+							</tr>
+						</tbody>
+					</table><br>
+				</div>
+				<p><strong>Vastaus: </strong>Lukupari ei ole yhtälöparin ratkaisu.</p>
+				<p>Jos lukupari toteuttaa molemmat yhtälöt, lukupari on myös yhtälöparin ratkaisu. Jos jompi kumpi yhtälöistä ei toteudu, ei lukupari toteuta myöskään yhtälöparia.</p>
+			</div>
+			<h2>3. Graafinen ratkaisu</h2>
+			<div>
+				<p>Suoran piirtämisen yhteydessä ollaan käsitelty kahden muuttujan yhtälöitä ja harjoiteltu yhtälön ratkaisemista muuttujan y suhteen. Näin ollen kahden muuttujan yhtälöt voidaan myös piirtää koordinaatistoon. Yhtälöparin tapauksessa yhtälöiden kuvaajien
+					leikkauspiste on myös yhtälöparin ratkaisu.</p>
+				<p><strong>Esimerkki </strong>Ratkaise yhtälöpari graafisesti.</p>
+				<p>a) \(\left\{\begin{aligned}& \mathsf{y = 2x - 3}\\& \mathsf{y = -x+3}\end{aligned}\right.\)</p>
+				<div class="indent">
+					<p>Piirretään suorat.</p>
+					<div class="indent">
+						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/329479351/ma9j4_teoria_graafinen_ratkaisu1.png?time=1675119853634" alt="" width="399" height="286" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+					</div>
+					<p><strong>Vastaus: </strong>\(\mathsf{(x,y) = (2,1)}\)</p>
+				</div>
+				<p>b) \(\left\{\begin{aligned}& \mathsf{-x + 2y + 2 = 0}\\& \mathsf{y = 2x+5}\end{aligned}\right.\)</p>
+				<div class="indent">
+					<p>Ratkaistaan ylempi yhtälö muuttujan y suhteen.</p>
+					<div class="indent">
+						<p>\(\begin{align}\mathsf{-x+2y+2} &= \mathsf{0} &\|\mathsf{+x}\\ \mathsf{2y+2} &= \mathsf{x} &\|\mathsf{-2}\\ \mathsf{2y} &= \mathsf{x-2} &\|\mathsf{:2}\\ \mathsf{y} &= \mathsf{\dfrac{1}{2}x-1}\end{align}\)</p>
+					</div>
+					<p>Piirretään suorat.</p>
+					<div class="indent">
+						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/329479351/ma9j4_teoria_graafinen_ratkaisu2.png" alt="" width="400" height="396" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+					</div>
+					<p><strong>Vastaus: </strong>\(\mathsf{(x,y) = (-4,-3)}\)</p>
+				</div>
+			</div>
+			<h2>4. Sijoitusmenetelmä</h2>
+			<div>
+				<p>Sijoitusmenetelmä on algebrallinen tapa ratkaista yhtälöpari. Sijoitusmenetemää on järkevää käyttää silloin, kun vähintään toinen yhtälöistä on ratkaistu joko muuttujan x tai y suhteen. Sijoitusmenetelmää voidaan käyttää kahdella eri tavalla hieman
+					tilanteesta riippuen.
+				</p>
+				<h3>Molemmat yhtälöt ratkaistussa muodossa</h3>
+				<p>Jos molemmat yhtälöt ovat ratkaistussa muodossa saman muuttujan (yleensä y) suhteen, voidaan lausekkeista muodostaa yhtälö ja ratkaista sen avulla toisen muuttujan arvo (yleensä x). Tämän jälkeen pitää vielä ratkaista toisen muuttujan arvo sijoittamalla
+					saatu arvo jompaan kumpaan yhtälöön.</p>
+				<p><strong>Esimerkki: </strong>Ratkaise yhtälöpari sijoitusmenetelmän avulla.</p>
+				<div class="indent">
+					<p>\(\left\{\begin{aligned}& \mathsf{y=2x-8}\\& \mathsf{y=x-6}\end{aligned}\right.\)</p>
+					<p>Koska \(\mathsf{y=y}\), merkitään lausekkeet yhtä suuriksi ja ratkaistaan muuttujan x arvo.</p>
+					<div class="indent">
+						<p>\(\begin{align}\mathsf{2x-8} &= \mathsf{x-6} &&\mathsf{\|-x}\\ \mathsf{x-8} &= \mathsf{-6} &&\mathsf{\|+8}\\ \mathsf{x} &= \mathsf{2}\end{align}\)</p>
+					</div>
+					<p>Ratkaistaan muuttujan y arvo sijoittamalla saatu \(\mathsf{x=2}\) toiseen alkuperäisistä yhtälöistä.</p>
+					<div class="indent">
+						<p>\(\begin{align}\mathsf{y} &= \mathsf{x-6}\\ &= \mathsf{2-6}\\ &= \mathsf{-4}\end{align}\)</p>
+					</div>
+				</div>
+				<p><strong>Vastaus: </strong>\(\mathsf{(x,y) = (2,-4)}\)</p>
+				<h3>Vain toinen yhtälö on ratkaistussa muodossa</h3>
+				<p>Aina yhtälöparin molemmat yhtälöt eivät ole kauniisti ratkaistussa muodossa. Vaihtoehtoja on kaksi: ratkaistaan molemmat yhtälöt saman muuttujan suhteen ja toimitaan kuten edellisessä esimerkissä, tai sijoitetaan ratkaistussa muodossa olevan yhtälön
+					lauseke toiseen yhtälöön kyseisen muuttujan paikalle. Tarkastellaan seuraavassa esimerkissä jälkimmäistä tapaa.</p>
+
+				<p><strong>Esimerkki: </strong>Ratkaise yhtälöpari sijoitusmenetelmän avulla.</p>
+				<div class="indent">
+					<p>\(\left\{\begin{aligned}& \mathsf{y=2x-3}\\& \mathsf{2x+2y=6}\end{aligned}\right.\)</p>
+					<p>Ratkaistaan muuttujan x arvo sijoittamalla lauseke \(\mathsf{2x-3}\) alempaan yhtälöön muuttujan y paikalle ja ratkaisemalla yhtälö.</p>
+					<div class="indent">
+						<p>\(\begin{align}\mathsf{2x+2y} &= \mathsf{6} &&\mathsf{\|\;y=2x-3}\\ \mathsf{2x+2\cdot(2x-3)} &= \mathsf{6}\\ \mathsf{2x+4x-6} &= \mathsf{6}\\ \mathsf{6x-6} &= \mathsf{6} &&\mathsf{\|+6}\\ \mathsf{6x} &=
+							\mathsf{12} &&\mathsf{\|:6}\\ \mathsf{x} &= \mathsf{2}\end{align}\)</p>
+					</div>
+					<p>Ratkaistaan muuttujan y arvo sijoittamalla saatu \(\mathsf{x=2}\) toiseen alkuperäisistä yhtälöistä.</p>
+					<div class="indent">
+						<p>\(\begin{align}\mathsf{y} &= \mathsf{2x-3}\\ &= \mathsf{2 \cdot 2 - 3}\\ &= \mathsf{4-3}\\ &=\mathsf{1}\end{align}\)</p>
+					</div>
+				</div>
+				<p><strong>Vastaus: </strong>\(\mathsf{(x,y) = (2, 1)}\)</p>
+			</div>
+			<h2>5. Yhteenlaskumenetelmä</h2>
+			<div>
+				<p>Toinen algebrallinen tapa yhtälöparin ratkaisemiseen on yhteenlaskumenetelmä. Yhteenlaskumenetelmää on järkevää käyttää silloin, kun molemmat muuttujista x ja y ovat samalla puolella yhtälöä. Lisäksi toisen muuttujista tulisi sieventyä yhteenlaskun
+					jälkeen pois, jotta jäljelle jää yhden muuttujan yhtälö.</p>
+				<p><strong>Esimerkki: </strong>Ratkaise yhtälöpari yhteenlaskumenetelmän avulla.</p>
+				<div class="indent">
+					<iframe class="gg_upotus" scrolling="no" title="ma9j4_teoria_yhteenlaskumenetelma" src="https://www.geogebra.org/material/iframe/id/h69fbbg9/width/392/height/385/border/888888/sfsb/false/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false"
+						width="392px" height="385px" style="border:0px;"> </iframe>
+				</div>
+				<p>Esimerkissä muuttuja y sieveni pois kun yhtälöiden y-termit olivat toistensa vastatermejä (kertoimet vastalukuja). Näin ei suinkaan aina ole, vaan yhtälöitä on joskus muokattava ennen yhteenlaskua, jotta yhteenlaskussa toinen muuttuja sievenee pois.</p>
+				<p><strong>Esimerkki: </strong>Ratkaise yhtälöpari yhteenlaskumenetelmän avulla.</p>
+				<div class="indent">
+					<iframe class="gg_upotus" scrolling="no" title="ma9j4_teoria_yhteenlaskumenetelma2" src="https://www.geogebra.org/material/iframe/id/v6pgwhn3/width/388/height/516/border/888888/sfsb/false/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false"
+						width="388px" height="516px" style="border:0px;"> </iframe>
+				</div>
+			</div>
+			<h2>6. Sanallisia tehtäviä</h2>
+			<div>
+				<p>Matematiikassa sanalliseen muotoon kirjoitettujen "käytännön ongelmien" ratkaisemiseen voidaan käyttää monia eri tapoja ja työkaluja. Koulumatematiikan tarkoitus on tarjota oppilaan työkalupakkiin monia tällaisia työkaluja, joista yhtälöparit ovat
+					yksi konkreettinen esimerkki. Kaikkiin tilanteisiin ne eivät sovi, mutta tutkittaessa kahta kohdetta ja niiden ominaisuuksia, voidaan tunnetuista tiedoista saada yhtälöparien avulla ratkaistua tuntemattomia asioita.</p>
+
+				<h3>Kaksi kohdetta, yksi ominaisuus</h3>
+				<p>Yksi yleinen yhtälöparien avulla ratkaistava tilanne tarkastelee kahta kohdetta (esim. ihmistä) joilla on jokin ominaisuus (ikä, työtunnit, raha,...). Näiden ominaisuuksien tarkkaa määrää ei tunneta, mutta niiden välisestä suhteesta tiedetään jotain.</p>
+				<p><strong>Esimerkki:</strong> Jyrillä ja Jannella on yhteensä 68 lakupötköä. Jyrillä on 20 lakupötköä enemmän kuin Jannella. Kuinka monta lakupötköä Jyrillä ja Jannella on?</p>
+				<div class="indent">
+					<p>Kohteet ja ominaisuudet:</p>
+					<div class="indent">
+						<p>Jyri: \(\mathsf{x}\) lakupötköä<br>Janne: \(\mathsf{y}\) lakupötköä</p>
+					</div>
+					<p>Ominaisuuksien väliset suhteet:</p>
+					<div class="indent">
+						<p>"Jyrillä ja Jannella on yhteensä 68 lakupötköä." eli<br>\(\mathsf{x+y=68}\)</p>
+						<p>"Jyrillä on 20 lakupötköä enemmän kuin Jannella." eli<br>\(\mathsf{x-y=20}\) tai \(\mathsf{x = y + 20}\)</p>
+					</div>
+					<p>Muodostetaan yhtälöpari:</p>
+					<div class="indent">
+						<p>\(\left\{\begin{aligned} \mathsf{x+y}&=\mathsf{68}\\ \mathsf{x-y}&= \mathsf{20}\end{aligned}\right.\)</p>
+					</div>
+					<p>Ratkaistaan yhtälöpari esimerkiksi yhteenlaskumenetelmällä:</p>
+					<div class="indent">
+						<p>\(\underline{+\left\{\begin{aligned} &\mathsf{x+y = 68}\\ &\mathsf{x-y = 20}\end{aligned}\right.}\\ \begin{aligned} \rule{2.9em}{0pt}\mathsf{2x}&= \mathsf{88} &&\|\mathsf{:2}\\ \mathsf{x} &= \mathsf{44} \end{aligned}\)</p>
+						<p>\(\begin{aligned} \mathsf{x+y} &= \mathsf{68}\\ \mathsf{44+y}&= \mathsf{68} &&\|\mathsf{-44}\\ \mathsf{y} &= \mathsf{24}\end{aligned}\)</p>
+					</div>
+					<p><strong>Vastaus:</strong> Jyrillä on 44 lakupötköä ja Jannella on 24 lakupötköä.</p>
+				</div>
+
+				<h3>Kaksi kohdetta, kaksi ominaisuutta</h3>
+				<p>Toinen yleinen yhtälöparien avulla ratkaistava tilanne tarkastelee myös kahta kohdetta (esim. ihmistä, eläintä, elokuvalippua) joilla on jotkin kaksi ominaisuutta (lukumäärä, hinta, aika, massa,...), joiden avulla voidaan muodostaa kaksi yhtälöä.</p>
+				<p><strong>Esimerkki:</strong> Kaupasta ostettiin maitoa (1 € / litra) ja jugurttia (3 € / litra) yhteensä 14 litraa ja ostokset maksoivat 24 euroa. Kuinka monta litran purkkia maitoa ja jugurttia ostettiin?</p>
+				<div class="indent">
+					<p>Kohteet ja ominaisuudet:</p>
+					<div class="indent">
+						<p>Maito: Lukumäärä: \(\mathsf{x}\) kappaletta, hinta: \(\mathsf{1 \cdot x = x}\) euroa.<br>Jugurtti: Lukumäärä: \(\mathsf{y}\) kappaletta, hinta: \(\mathsf{3 \cdot y = 3y}\) euroa.</p>
+					</div>
+					<p>Ominaisuuksien väliset suhteet:</p>
+					<div class="indent">
+						<p>"yhteensä 14 litraa" eli<br>\(\mathsf{x+y=14}\)</p>
+						<p>"ostokset maksoivat 24 euroa" eli<br>\(\mathsf{x+3y=24}\)</p>
+					</div>
+					<p>Muodostetaan yhtälöpari:</p>
+					<div class="indent">
+						<p>\(\left\{\begin{aligned} \mathsf{x+y}&=\mathsf{14}\\ \mathsf{x+3y}&= \mathsf{24}\end{aligned}\right.\)</p>
+					</div>
+					<p>Ratkaistaan yhtälöpari esimerkiksi yhteenlaskumenetelmällä:</p>
+					<div class="indent">
+						<p>\(\left\{\begin{aligned} &\mathsf{x+y = 14} && \mathsf{\|\cdot(-1)}\\ &\mathsf{x+3y = 24}\end{aligned}\right.\)</p>
+						<p>\(\underline{+\left\{\begin{aligned} &\mathsf{-x-y = -14}\\ &\mathsf{x+3y = 24}\end{aligned}\right.}\\ \begin{aligned} \rule{2.9em}{0pt}\mathsf{2y}&= \mathsf{10} &&\|\mathsf{:2}\\ \mathsf{x} &= \mathsf{5} \end{aligned}\)</p>
+						<p>\(\begin{aligned} \mathsf{x+y} &= \mathsf{14}\\ \mathsf{x+5}&= \mathsf{14} &&\|\mathsf{-5}\\ \mathsf{y} &= \mathsf{9}\end{aligned}\)</p>
+					</div>
+					<p><strong>Vastaus:</strong> Maitojapurkkeja ostettiin 9 kappaletta ja jugurttipurkkeja 5 kappaletta.</p>
+				</div>
+			</div>
+			<h2>7. Epäyhtälöt</h2>
+			<div>
+			<p>Epäyhtälö on kuten yhtälö, mutta yhtäsuuruusmerkin sijaan lausekkeiden välissä on jokin suuruusvertailumerkki. Epäyhtälöllä on usein useita, jopa ääretön määrä, ratkaisuja. Niiden avulla voidaan siis rajata ja valita sopivia lukujoukkoja.</p>
+
+			<h3>Suuruusvertailumerkit</h3>
+			<div class="indent">
+				<table>
+					<tbody>
+						<tr>
+							<th style="text-align: center; border: 1px solid black; padding: 0px 5px;">Merkki</th>
+							<th style="text-align: center; border: 1px solid black; padding: 0px 5px;">Selitys</th>
+							<th style="text-align: center; border: 1px solid black; padding: 0px 5px;">Esimerkki</th>
+							<th style="text-align: center; border: 1px solid black; padding: 0px 5px;">Esimerkin ratkaisuja</th>
+							<th style="text-align: center; border: 1px solid black; padding: 0px 10px;">Graafinen ratkaisu</th>
+						</tr>
+						<tr>
+							<td style="border: 1px solid black; text-align: center;">\(=\)</td>
+							<td style="border: 1px solid black; text-align: center;">Yhtä suuri kuin</td>
+							<td style="border: 1px solid black; text-align: center;">\(\mathsf{x=4}\)</td>
+							<td style="border: 1px solid black; text-align: center;">\(\mathsf{4}\)</td>
+							<td style="border: 1px solid black; text-align: center;"><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/537043138/ma9j4_teoria_suuruusvertailu_yhtasuuri.png" alt="" width="285" height="40" role="presentation" class="img-responsive atto_image_button_text-bottom"></td>
+						</tr>
+						<tr>
+							<td style="border: 1px solid black; text-align: center;">\(&lt;\)</td>
+							<td style="border: 1px solid black; text-align: center;">Pienempi kuin</td>
+							<td style="border: 1px solid black; text-align: center;">\(\mathsf{x&lt;4}\)</td>
+							<td style="border: 1px solid black; text-align: center;">\(\mathsf{..., 2, 3}\)</td>
+							<td style="border: 1px solid black; text-align: center;"><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/537043138/ma9j4_teoria_suuruusvertailu_pienempikuin.png" alt="" width="285" height="40" role="presentation" class="atto_image_button_text-bottom"></td>
+						</tr>
+						<tr>
+							<td style="border: 1px solid black; text-align: center;">\(&gt;\)</td>
+							<td style="border: 1px solid black; text-align: center;">Suurempi kuin</td>
+							<td style="border: 1px solid black; text-align: center;">\(\mathsf{x&gt;4}\)</td>
+							<td style="border: 1px solid black; text-align: center;">\(\mathsf{5, 6,...}\)</td>
+							<td style="border: 1px solid black; text-align: center;"><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/537043138/ma9j4_teoria_suuruusvertailu_suurempikuin.png" alt="" width="285" height="40" role="presentation" class="img-responsive atto_image_button_text-bottom"></td>
+						</tr>
+						<tr>
+							<td style="border: 1px solid black; text-align: center;">\(\leq\)</td>
+							<td style="border: 1px solid black; text-align: center; padding: 0px 5px;">Pienempi tai yhtä suuri kuin</td>
+							<td style="border: 1px solid black; text-align: center;">\(\mathsf{x \leq 4}\)</td>
+							<td style="border: 1px solid black; text-align: center;">\(\mathsf{..., 2, 3, 4}\)</td>
+							<td style="border: 1px solid black; text-align: center;"><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/537043138/ma9j4_teoria_suuruusvertailu_pienempitysk.png" alt="" width="285" height="40" role="presentation" class="img-responsive atto_image_button_text-bottom"></td>
+						</tr>
+						<tr>
+							<td style="border: 1px solid black; text-align: center;">\(\geq\)</td>
+							<td style="border: 1px solid black; text-align: center; padding: 0px 5px;">Suurempi tai yhtä suuri kuin</td>
+							<td style="border: 1px solid black; text-align: center;">\(\mathsf{x \geq 4}\)</td>
+							<td style="border: 1px solid black; text-align: center;">\(\mathsf{4, 5, 6,...}\)</td>
+							<td style="border: 1px solid black; text-align: center;"><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/537043138/ma9j4_teoria_suuruusvertailu_suurempitysk.png" alt="" width="285" height="40" role="presentation" class="img-responsive atto_image_button_text-bottom"></td>
+						</tr>
+						<tr>
+							<td style="border: 1px solid black; text-align: center;">\(=\)</td>
+							<td style="border: 1px solid black; text-align: center;">Eri suuri kuin</td>
+							<td style="border: 1px solid black; text-align: center;">\(\mathsf{x \neq 4}\)</td>
+							<td style="border: 1px solid black; text-align: center;">\(\mathsf{...,2, 3,5,6,...}\)</td>
+							<td style="border: 1px solid black; text-align: center;"><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/537043138/ma9j4_teoria_suuruusvertailu_erisuurikuin.png" alt="" width="285" height="40" role="presentation" class="img-responsive atto_image_button_text-bottom"></td>
+						</tr>
+					</tbody>
+				</table><br>
+			</div>
+
+			<h3>Välin merkitseminen</h3>
+			<p>Edellä esitellyt vertailumerkit &lt;, &gt;, ≤ ja ≥ rajaavat muuttujan x arvoa vain yhdestä suunnasta, jolloin ratkaisuja on ääretön määrä. Jos muuttujan x arvo halutaan rajata jollekkin välille ja saada (ainakin kokonaislukujen tapauksessa) äärellinen
+				ratkaisu, voidaan käyttää lukuvälimerkintää.</p>
+			<div class="indent">
+				<p>\(\mathsf{\text{alaraja} &lt; x &lt; \text{yläraja}}\)</p>
+			</div>
+			<p>Lisäksi yhtäsuuruuden hyväksyvillä merkeillä ≤ ja ≥ voidaan määrittää lukuväli <strong>avoimeksi</strong> tai <strong>suljetuksi</strong>. Avoimessa välissä välin päätepisteet eivät kuulu mukaan lukujoukkoon. Suljetussa välissä päätepisteet kuuluvat
+				mukaan lukujoukkoon. Alla olevassa taulukossa on esitetty esimerkit erilaisista lukuväleistä kokonaislukujen tapauksessa.</p>
+
+			<div class="indent">
+				<table>
+					<tbody>
+						<tr>
+							<th style="text-align: center; border: 1px solid black; padding: 0px 20px;">Merkintä</th>
+							<th style="text-align: center; border: 1px solid black; padding: 0px 60px;">Selitys</th>
+							<th style="text-align: center; border: 1px solid black; padding: 0px 10px;">Esimerkki</th>
+							<th style="text-align: center; border: 1px solid black; padding: 0px 10px;">Esimerkin ratkaisut</th>
+							<th style="text-align: center; border: 1px solid black; padding: 0px 10px;">Graafinen ratkaisu</th>
+						</tr>
+						<tr>
+							<td style="border: 1px solid black; text-align: center;">\(\mathsf{a &lt; x &lt; b}\)</td>
+							<td style="border: 1px solid black; text-align: center;">Avoin väli</td>
+							<td style="border: 1px solid black; text-align: center;">\(\mathsf{3 &lt; x &lt; 5}\)</td>
+							<td style="border: 1px solid black; text-align: center;">\(\mathsf{4}\)</td>
+							<td style="border: 1px solid black; text-align: center;"><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/537043138/ma9j4_teoria_lukuvali_avoin.png?time=1675337527956" alt="" width="285" height="40" role="presentation" class="img-responsive atto_image_button_text-bottom"></td>
+						</tr>
+						<tr>
+							<td style="border: 1px solid black; text-align: center;">\(\mathsf{a \leq x \leq b}\)</td>
+							<td style="border: 1px solid black; text-align: center;">Suljettu väli</td>
+							<td style="border: 1px solid black; text-align: center;">\(\mathsf{3 \leq x \leq 5}\)</td>
+							<td style="border: 1px solid black; text-align: center;">\(\mathsf{3, 4, 5}\)</td>
+							<td style="border: 1px solid black; text-align: center;"><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/537043138/ma9j4_teoria_lukuvali_suljettu.png?time=1675337561918" alt="" width="285" height="40" role="presentation" class="img-responsive atto_image_button_text-bottom"></td>
+						</tr>
+						<tr>
+							<td style="border: 1px solid black; text-align: center;">\(\mathsf{a &lt; x \leq b}\)</td>
+							<td style="border: 1px solid black; text-align: center;">Vasemmalta avoin väli</td>
+							<td style="border: 1px solid black; text-align: center;">\(\mathsf{3 &lt; x \leq 5}\)</td>
+							<td style="border: 1px solid black; text-align: center;">\(\mathsf{4,5}\)</td>
+							<td style="border: 1px solid black; text-align: center;"><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/537043138/ma9j4_teoria_lukuvali_vasemmalta_avoin.png?time=1675337741859" alt="" width="285" height="40" role="presentation" class="img-responsive atto_image_button_text-bottom"></td>
+						</tr>
+						<tr>
+							<td style="border: 1px solid black; text-align: center;">\(\mathsf{a \leq x &lt; b}\)</td>
+							<td style="border: 1px solid black; text-align: center;">Oikealta avoin väli</td>
+							<td style="border: 1px solid black; text-align: center;">\(\mathsf{3 \leq x &lt; 5}\)</td>
+							<td style="border: 1px solid black; text-align: center;">\(\mathsf{3, 4}\)</td>
+							<td style="border: 1px solid black; text-align: center;"><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/537043138/ma9j4_teoria_lukuvali_oikealta_avoin.png?time=1675337774665" alt="" width="285" height="40" role="presentation" class="img-responsive atto_image_button_text-bottom"></td>
+						</tr>
+					</tbody>
+				</table><br>
+			</div>
+
+			<h3>Ratkaisun tutkiminen</h3>
+			<p>Ennen varsinaisia epäyhtälön ratkatkaisumenetelmiä tutustutaan epäyhtälön ratkaisun tutkimiseen annetulla muuttujan arvolla. Menetelmä on tuttu yhtälöiden parista, eli sijoitetaan muuttujan arvo epäyhtälöön, lasketaan lausekkeiden arvot ja tehdään
+				johtopäätös yksinkertaisen epäyhtälön perusteella.</p>
+			<p><strong>Esimerkki: </strong>Tutki, onko \(\mathsf{x=1}\) epäyhtälön \(\mathsf{-x+4&gt;0}\) ratkaisu.</p>
+			<div class="indent">
+				<p>\(\begin{align}\mathsf{-x+4} &&gt; \mathsf{0}\\ \mathsf{-1+4} &&gt; \mathsf{0}\\ \mathsf{3} &&gt; \mathsf{0}\end{align}\\ \textsf{Yhtälö on tosi.}\)</p>
+			</div>
+			<p><strong>Vastaus: </strong>\(\mathsf{x=1}\) on epäyhtälön ratkaisu.</p>
+			<hr>
+			<p><strong>Esimerkki: </strong>Tutki, onko \(\mathsf{x=-2}\) epäyhtälön \(\mathsf{-3x-2 \leq 2x+3}\) ratkaisu.</p>
+			<div class="indent">
+				<p>\(\begin{align}\mathsf{-3x-2} &\leq \mathsf{2x+3}\\ \mathsf{-3 \cdot (-2) - 2} &\leq \mathsf{2 \cdot (-2) + 3}\\ \mathsf{4} &\leq \mathsf{-1}\end{align}\\ \textsf{Yhtälö on epätosi.}\)</p>
+			</div>
+			<p><strong>Vastaus: </strong>\(\mathsf{x=-2}\) ei ole epäyhtälön ratkaisu.</p>
+
+			<h3>Algebrallinen ratkaisu</h3>
+			<p>Epäyhtälö voidaan ratkaista lähes samalla tavalla kuin tavallinenkin yhtälö. Ainoa poikkeus on negatiivisilla luvuilla kertominen ja jakaminen, jolloin epäyhtälön vertailumerkki on käännettävä toiseen suuntaan.</p>
+			<p><strong>Esimerkki: </strong>Ratkaise epäyhtälö \(\mathsf{-2x+3 &gt; 1}\) algebrallisesti.</p>
+			<div class="indent">
+				<p>\(\begin{align}\mathsf{-2x+3} &&gt; \mathsf{1} &&\mathsf{\|-3}\\ \mathsf{-2x} &&gt; \mathsf{-2} &&\mathsf{\|:(-2)}\\ \mathsf{x} &&lt; \mathsf{1}\end{align}\)</p>
+			</div>
+			<p><strong>Vastaus: </strong>Epäyhtälön ratkaisuja ovat kaikki muuttujan x arvot, jotka toteuttavat epäyhtälön x &lt; 1.</p>
+
+			<h3>Graafinen ratkaisu</h3>
+			<p>Graafisessa ratkaisussa piirretään epäyhtälön molempien puolien lausekkeita vastaavat kuvaajat koordinaatistoon ja etsitään niiden leikkauspiste. Leikkaupisteen x-koordinaatin ympäristöä tutkimalla voidaan päätellä epäyhtälön ratkaisu.</p>
+			<p><strong>Esimerkki: </strong>Ratkaise epäyhtälö \(\mathsf{-2x+3 &gt; 1}\) graafisesti.</p>
+			<div class="indent">
+				<p>Piirretään koordinaatistoon suorat \(\mathsf{y=-2x+3}\) ja \(\mathsf{y=1}\).
+				</p>
+				<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/537043138/ma9j4_teoria_epayhtalo_%20graafinen_ratkaisu.png" alt="" width="399" height="286" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+				<p>Siirryttäessä leikkauspisteestä vasemmalle epäyhtälö \(\mathsf{-2x+3 &gt; 1}\) toteutuu, eli \(\mathsf{y = -2x+3}\) saa suurempia y:n arvoja (on ylempänä) kuin \(\mathsf{y=1}\).</p>
+			</div>
+			<p><strong>Vastaus: </strong>Epäyhtälön ratkaisu on x &lt; 1.</p>
+		</div>
+		</div>
+		<script>
+			downloadGG();
+		</script>
+	</body>
+</html>
