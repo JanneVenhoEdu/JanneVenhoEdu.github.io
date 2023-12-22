@@ -197,206 +197,222 @@
 			</div>
 			<h2>6. Sanallisia tehtäviä</h2>
 			<div>
-				<p>Matematiikassa sanalliseen muotoon kirjoitettujen "käytännön ongelmien" ratkaisemiseen voidaan käyttää monia eri tapoja ja työkaluja. Koulumatematiikan tarkoitus on tarjota oppilaan työkalupakkiin monia tällaisia työkaluja, joista yhtälöparit ovat
-					yksi konkreettinen esimerkki. Kaikkiin tilanteisiin ne eivät sovi, mutta tutkittaessa kahta kohdetta ja niiden ominaisuuksia, voidaan tunnetuista tiedoista saada yhtälöparien avulla ratkaistua tuntemattomia asioita.</p>
-
+				<p>Matematiikassa sanalliseen muotoon kirjoitettujen "käytännön ongelmien" ratkaisemiseen voidaan käyttää monia eri tapoja ja työkaluja. Koulumatematiikan tarkoitus on tarjota oppilaan työkalupakkiin monia tällaisia työkaluja, joista yhtälöparit ovat yksi konkreettinen esimerkki. Kaikkiin tilanteisiin ne eivät sovi, mutta tutkittaessa kahta kohdetta ja niiden ominaisuuksia, voidaan tunnetuista tiedoista saada yhtälöparien avulla ratkaistua tuntemattomia asioita.</p>
 				<h3>Kaksi kohdetta, yksi ominaisuus</h3>
-				<p>Yksi yleinen yhtälöparien avulla ratkaistava tilanne tarkastelee kahta kohdetta (esim. ihmistä) joilla on jokin ominaisuus (ikä, työtunnit, raha,...). Näiden ominaisuuksien tarkkaa määrää ei tunneta, mutta niiden välisestä suhteesta tiedetään jotain.</p>
-				<p><strong>Esimerkki:</strong> Jyrillä ja Jannella on yhteensä 68 lakupötköä. Jyrillä on 20 lakupötköä enemmän kuin Jannella. Kuinka monta lakupötköä Jyrillä ja Jannella on?</p>
-				<div class="indent">
-					<p>Kohteet ja ominaisuudet:</p>
-					<div class="indent">
-						<p>Jyri: \(\mathsf{x}\) lakupötköä<br>Janne: \(\mathsf{y}\) lakupötköä</p>
+				<div>
+					<p>Yksi yleinen yhtälöparien avulla ratkaistava tilanne tarkastelee kahta kohdetta (esim. ihmistä) joilla on jokin ominaisuus (ikä, työtunnit, raha,...). Näiden ominaisuuksien tarkkaa määrää ei tunneta, mutta niiden välisestä suhteesta tiedetään jotain.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Jyrillä ja Jannella on yhteensä 68 lakupötköä. Jyrillä on 20 lakupötköä enemmän kuin Jannella. Kuinka monta lakupötköä Jyrillä ja Jannella on?</p>
+						<div class="indent">
+							<p><strong>Kohteet ja ominaisuudet:</strong></p>
+							<p class="indent">Jyri: \(\mathsf{x}\) lakupötköä<br>Janne: \(\mathsf{y}\) lakupötköä</p>
+							<p><strong>Ominaisuuksien väliset suhteet:</strong></p>
+							<div class="indent">
+								<p>"Jyrillä ja Jannella on yhteensä 68 lakupötköä." eli<br>\(\mathsf{x+y=68}\)</p>
+								<p>"Jyrillä on 20 lakupötköä enemmän kuin Jannella." eli<br>\(\mathsf{x-y=20}\) tai \(\mathsf{x = y + 20}\)</p>
+							</div>
+							<p><strong>Muodostetaan yhtälöpari:</strong></p>
+							<p class="indent">\(\begin{cases}\mathsf{x+y}=\mathsf{68}\\ \mathsf{x-y} = \mathsf{20}\end{cases}\)</p>
+							<p>Ratkaistaan yhtälöpari esimerkiksi yhteenlaskumenetelmällä:</p>
+							<div class="indent">
+								<p>\(\underline{+\begin{cases}\mathsf{x+y = 68}\\ \mathsf{x-y = 20}\end{cases}}\)<br>\(\begin{aligned} \rule{2.9em}{0pt}\mathsf{2x}&= \mathsf{88} &&\mathsf{\|:2}\\ \mathsf{x} &= \mathsf{44} \end{aligned}\)</p>
+								<p>\(\begin{aligned} \mathsf{x+y} &= \mathsf{68}\\ \mathsf{44+y}&= \mathsf{68} &&\mathsf{\|-44}\\ \mathsf{y} &= \mathsf{24}\end{aligned}\)</p>
+							</div>
+							<p><strong>Vastaus:</strong> Jyrillä on 44 lakupötköä ja Jannella on 24 lakupötköä.</p>
+						</div>
 					</div>
-					<p>Ominaisuuksien väliset suhteet:</p>
-					<div class="indent">
-						<p>"Jyrillä ja Jannella on yhteensä 68 lakupötköä." eli<br>\(\mathsf{x+y=68}\)</p>
-						<p>"Jyrillä on 20 lakupötköä enemmän kuin Jannella." eli<br>\(\mathsf{x-y=20}\) tai \(\mathsf{x = y + 20}\)</p>
-					</div>
-					<p>Muodostetaan yhtälöpari:</p>
-					<div class="indent">
-						<p>\(\left\{\begin{aligned} \mathsf{x+y}&=\mathsf{68}\\ \mathsf{x-y}&= \mathsf{20}\end{aligned}\right.\)</p>
-					</div>
-					<p>Ratkaistaan yhtälöpari esimerkiksi yhteenlaskumenetelmällä:</p>
-					<div class="indent">
-						<p>\(\underline{+\left\{\begin{aligned} &\mathsf{x+y = 68}\\ &\mathsf{x-y = 20}\end{aligned}\right.}\\ \begin{aligned} \rule{2.9em}{0pt}\mathsf{2x}&= \mathsf{88} &&\|\mathsf{:2}\\ \mathsf{x} &= \mathsf{44} \end{aligned}\)</p>
-						<p>\(\begin{aligned} \mathsf{x+y} &= \mathsf{68}\\ \mathsf{44+y}&= \mathsf{68} &&\|\mathsf{-44}\\ \mathsf{y} &= \mathsf{24}\end{aligned}\)</p>
-					</div>
-					<p><strong>Vastaus:</strong> Jyrillä on 44 lakupötköä ja Jannella on 24 lakupötköä.</p>
 				</div>
-
 				<h3>Kaksi kohdetta, kaksi ominaisuutta</h3>
-				<p>Toinen yleinen yhtälöparien avulla ratkaistava tilanne tarkastelee myös kahta kohdetta (esim. ihmistä, eläintä, elokuvalippua) joilla on jotkin kaksi ominaisuutta (lukumäärä, hinta, aika, massa,...), joiden avulla voidaan muodostaa kaksi yhtälöä.</p>
-				<p><strong>Esimerkki:</strong> Kaupasta ostettiin maitoa (1 € / litra) ja jugurttia (3 € / litra) yhteensä 14 litraa ja ostokset maksoivat 24 euroa. Kuinka monta litran purkkia maitoa ja jugurttia ostettiin?</p>
-				<div class="indent">
-					<p>Kohteet ja ominaisuudet:</p>
-					<div class="indent">
-						<p>Maito: Lukumäärä: \(\mathsf{x}\) kappaletta, hinta: \(\mathsf{1 \cdot x = x}\) euroa.<br>Jugurtti: Lukumäärä: \(\mathsf{y}\) kappaletta, hinta: \(\mathsf{3 \cdot y = 3y}\) euroa.</p>
+				<div>
+					<p>Toinen yleinen yhtälöparien avulla ratkaistava tilanne tarkastelee myös kahta kohdetta (esim. ihmistä, eläintä, elokuvalippua) joilla on jotkin kaksi ominaisuutta (lukumäärä, hinta, aika, massa,...), joiden avulla voidaan muodostaa kaksi yhtälöä.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Kaupasta ostettiin maitoa (1 € / litra) ja jugurttia (3 € / litra) yhteensä 14 litraa ja ostokset maksoivat 24 euroa. Kuinka monta litran purkkia maitoa ja jugurttia ostettiin?</p>
+						<div class="indent">
+							<p><strong>Kohteet ja ominaisuudet:</strong></p>
+							<p class="indent">Maito: Lukumäärä: \(\mathsf{x}\) kappaletta, hinta: \(\mathsf{1 \cdot x = x}\) euroa.<br>Jugurtti: Lukumäärä: \(\mathsf{y}\) kappaletta, hinta: \(\mathsf{3 \cdot y = 3y}\) euroa.</p>
+							<p><strong>Ominaisuuksien väliset suhteet:</strong></p>
+							<div class="indent">
+								<p>"yhteensä 14 litraa" eli<br>\(\mathsf{x+y=14}\)</p>
+								<p>"ostokset maksoivat 24 euroa" eli<br>\(\mathsf{x+3y=24}\)</p>
+							</div>
+							<p><strong>Muodostetaan yhtälöpari:</strong></p>
+							<p class="indent">\(\left\{\begin{aligned} \mathsf{x+y}&=\mathsf{14}\\ \mathsf{x+3y}&= \mathsf{24}\end{aligned}\right.\)</p>
+							<p>Ratkaistaan yhtälöpari esimerkiksi yhteenlaskumenetelmällä:</p>
+							<div class="indent">
+								<p>\(\begin{cases} \mathsf{x+y = 14\qquad\|\cdot(-1)}\\ \mathsf{x+3y = 24}\end{cases}\)</p>
+								<p>\(\underline{+\left\{\begin{aligned} \mathsf{-x-y} &= \mathsf{-14}\\ \mathsf{x+3y} &= \mathsf{24}\end{aligned}\right.}\)<br>\(\begin{aligned} \rule{3.7em}{0pt}\mathsf{2y}&= \mathsf{10} &&\mathsf{\|:2}\\ \mathsf{x} &= \mathsf{5} \end{aligned}\)</p>
+								<p>\(\begin{aligned} \mathsf{x+y} &= \mathsf{14}\\ \mathsf{x+5}&= \mathsf{14} &&\|\mathsf{-5}\\ \mathsf{y} &= \mathsf{9}\end{aligned}\)</p>
+							</div>
+							<p><strong>Vastaus:</strong> Maitojapurkkeja ostettiin 9 kappaletta ja jugurttipurkkeja 5 kappaletta.</p>
+						</div>
 					</div>
-					<p>Ominaisuuksien väliset suhteet:</p>
-					<div class="indent">
-						<p>"yhteensä 14 litraa" eli<br>\(\mathsf{x+y=14}\)</p>
-						<p>"ostokset maksoivat 24 euroa" eli<br>\(\mathsf{x+3y=24}\)</p>
-					</div>
-					<p>Muodostetaan yhtälöpari:</p>
-					<div class="indent">
-						<p>\(\left\{\begin{aligned} \mathsf{x+y}&=\mathsf{14}\\ \mathsf{x+3y}&= \mathsf{24}\end{aligned}\right.\)</p>
-					</div>
-					<p>Ratkaistaan yhtälöpari esimerkiksi yhteenlaskumenetelmällä:</p>
-					<div class="indent">
-						<p>\(\left\{\begin{aligned} &\mathsf{x+y = 14} && \mathsf{\|\cdot(-1)}\\ &\mathsf{x+3y = 24}\end{aligned}\right.\)</p>
-						<p>\(\underline{+\left\{\begin{aligned} &\mathsf{-x-y = -14}\\ &\mathsf{x+3y = 24}\end{aligned}\right.}\\ \begin{aligned} \rule{2.9em}{0pt}\mathsf{2y}&= \mathsf{10} &&\|\mathsf{:2}\\ \mathsf{x} &= \mathsf{5} \end{aligned}\)</p>
-						<p>\(\begin{aligned} \mathsf{x+y} &= \mathsf{14}\\ \mathsf{x+5}&= \mathsf{14} &&\|\mathsf{-5}\\ \mathsf{y} &= \mathsf{9}\end{aligned}\)</p>
-					</div>
-					<p><strong>Vastaus:</strong> Maitojapurkkeja ostettiin 9 kappaletta ja jugurttipurkkeja 5 kappaletta.</p>
 				</div>
 			</div>
 			<h2>7. Epäyhtälöt</h2>
 			<div>
-			<p>Epäyhtälö on kuten yhtälö, mutta yhtäsuuruusmerkin sijaan lausekkeiden välissä on jokin suuruusvertailumerkki. Epäyhtälöllä on usein useita, jopa ääretön määrä, ratkaisuja. Niiden avulla voidaan siis rajata ja valita sopivia lukujoukkoja.</p>
+				<p>Epäyhtälö on kuten yhtälö, mutta yhtäsuuruusmerkin sijaan lausekkeiden välissä on jokin suuruusvertailumerkki. Epäyhtälöllä on usein useita, jopa ääretön määrä, ratkaisuja. Niiden avulla voidaan siis rajata ja valita sopivia lukujoukkoja.</p>
+				<h3>Suuruusvertailumerkit</h3>
+				<div>
+					<p></p>
+					<table>
+						<tbody>
+							<tr>
+								<th>Merkki</th>
+								<th>Selitys</th>
+								<th>Esimerkki</th>
+								<th>Esimerkin ratkaisuja</th>
+							</tr>
+							<tr><td style="border: 0px;"> </td></tr>
+							<tr>
+								<td>\(=\)</td>
+								<td>Yhtä suuri kuin</td>
+								<td>\(\mathsf{x=4}\)</td>
+								<td>\(\mathsf{4}\)</td>
+							</tr>
+							<tr>
+								<td colspan="4"><img src="https://jannevenhoedu.github.io/ma9/j4/t/ma9j4_teoria_suuruusvertailu_yhtasuuri.png" style="width: 90%;"></td>
+							</tr>
+							<tr><td style="border: 0px;"> </td></tr>
+							<tr>
+								<td>\(&lt;\)</td>
+								<td>Pienempi kuin</td>
+								<td>\(\mathsf{x&lt;4}\)</td>
+								<td>\(\mathsf{..., 2, 3}\)</td>
+							</tr>
+							<tr>
+								<td colspan="4"><img src="https://jannevenhoedu.github.io/ma9/j4/t/ma9j4_teoria_suuruusvertailu_pienempikuin.png"></td>
+							</tr>
+							<tr><td style="border: 0px;"> </td></tr>
+							<tr>
+								<td>\(&gt;\)</td>
+								<td>Suurempi kuin</td>
+								<td>\(\mathsf{x&gt;4}\)</td>
+								<td>\(\mathsf{5, 6,...}\)</td>
+							</tr>
+							<tr>
+								<td colspan="4"><img src="https://jannevenhoedu.github.io/ma9/j4/t/ma9j4_teoria_suuruusvertailu_suurempikuin.png"></td>
+							</tr>
+							<tr><td style="border: 0px;"> </td></tr>
+							<tr>
+								<td>\(\leq\)</td>
+								<td style="border: 1px solid black; text-align: center; padding: 0px 5px;">Pienempi tai yhtä suuri kuin</td>
+								<td>\(\mathsf{x \leq 4}\)</td>
+								<td>\(\mathsf{..., 2, 3, 4}\)</td>
+							</tr>
+							<tr>
+								<td colspan="4"><img src="https://jannevenhoedu.github.io/ma9/j4/t/ma9j4_teoria_suuruusvertailu_pienempitysk.png"></td>
+							</tr>
+							<tr><td style="border: 0px;"> </td></tr>
+							<tr>
+								<td>\(\geq\)</td>
+								<td style="border: 1px solid black; text-align: center; padding: 0px 5px;">Suurempi tai yhtä suuri kuin</td>
+								<td>\(\mathsf{x \geq 4}\)</td>
+								<td>\(\mathsf{4, 5, 6,...}\)</td>
+							</tr>
+							<tr>
+								<td colspan="4"><img src="https://jannevenhoedu.github.io/ma9/j4/t/ma9j4_teoria_suuruusvertailu_suurempitysk.png"></td>
+							</tr>
+							<tr><td style="border: 0px;"> </td></tr>
+							<tr>
+								<td>\(=\)</td>
+								<td>Eri suuri kuin</td>
+								<td>\(\mathsf{x \neq 4}\)</td>
+								<td>\(\mathsf{...,2, 3,5,6,...}\)</td>
+							</tr>
+							<tr>
+								<td colspan="4"><img src="https://jannevenhoedu.github.io/ma9/j4/t/ma9j4_teoria_suuruusvertailu_erisuurikuin.png"></td>
+							</tr>
+						</tbody>
+					</table><br>
+				</div>
+				<h3>Välin merkitseminen</h3>
+				<div>
+					<p>Edellä esitellyt vertailumerkit &lt;, &gt;, ≤ ja ≥ rajaavat muuttujan x arvoa vain yhdestä suunnasta, jolloin ratkaisuja on ääretön määrä. Jos muuttujan x arvo halutaan rajata jollekkin välille ja saada (ainakin kokonaislukujen tapauksessa) äärellinen
+						ratkaisu, voidaan käyttää lukuvälimerkintää.</p>
+					<div class="indent">
+						<p>\(\mathsf{\text{alaraja} &lt; x &lt; \text{yläraja}}\)</p>
+					</div>
+					<p>Lisäksi yhtäsuuruuden hyväksyvillä merkeillä ≤ ja ≥ voidaan määrittää lukuväli <strong>avoimeksi</strong> tai <strong>suljetuksi</strong>. Avoimessa välissä välin päätepisteet eivät kuulu mukaan lukujoukkoon. Suljetussa välissä päätepisteet kuuluvat
+						mukaan lukujoukkoon. Alla olevassa taulukossa on esitetty esimerkit erilaisista lukuväleistä kokonaislukujen tapauksessa.</p>
 
-			<h3>Suuruusvertailumerkit</h3>
-			<div class="indent">
-				<table>
-					<tbody>
-						<tr>
-							<th style="text-align: center; border: 1px solid black; padding: 0px 5px;">Merkki</th>
-							<th style="text-align: center; border: 1px solid black; padding: 0px 5px;">Selitys</th>
-							<th style="text-align: center; border: 1px solid black; padding: 0px 5px;">Esimerkki</th>
-							<th style="text-align: center; border: 1px solid black; padding: 0px 5px;">Esimerkin ratkaisuja</th>
-							<th style="text-align: center; border: 1px solid black; padding: 0px 10px;">Graafinen ratkaisu</th>
-						</tr>
-						<tr>
-							<td style="border: 1px solid black; text-align: center;">\(=\)</td>
-							<td style="border: 1px solid black; text-align: center;">Yhtä suuri kuin</td>
-							<td style="border: 1px solid black; text-align: center;">\(\mathsf{x=4}\)</td>
-							<td style="border: 1px solid black; text-align: center;">\(\mathsf{4}\)</td>
-							<td style="border: 1px solid black; text-align: center;"><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/537043138/ma9j4_teoria_suuruusvertailu_yhtasuuri.png" alt="" width="285" height="40" role="presentation" class="img-responsive atto_image_button_text-bottom"></td>
-						</tr>
-						<tr>
-							<td style="border: 1px solid black; text-align: center;">\(&lt;\)</td>
-							<td style="border: 1px solid black; text-align: center;">Pienempi kuin</td>
-							<td style="border: 1px solid black; text-align: center;">\(\mathsf{x&lt;4}\)</td>
-							<td style="border: 1px solid black; text-align: center;">\(\mathsf{..., 2, 3}\)</td>
-							<td style="border: 1px solid black; text-align: center;"><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/537043138/ma9j4_teoria_suuruusvertailu_pienempikuin.png" alt="" width="285" height="40" role="presentation" class="atto_image_button_text-bottom"></td>
-						</tr>
-						<tr>
-							<td style="border: 1px solid black; text-align: center;">\(&gt;\)</td>
-							<td style="border: 1px solid black; text-align: center;">Suurempi kuin</td>
-							<td style="border: 1px solid black; text-align: center;">\(\mathsf{x&gt;4}\)</td>
-							<td style="border: 1px solid black; text-align: center;">\(\mathsf{5, 6,...}\)</td>
-							<td style="border: 1px solid black; text-align: center;"><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/537043138/ma9j4_teoria_suuruusvertailu_suurempikuin.png" alt="" width="285" height="40" role="presentation" class="img-responsive atto_image_button_text-bottom"></td>
-						</tr>
-						<tr>
-							<td style="border: 1px solid black; text-align: center;">\(\leq\)</td>
-							<td style="border: 1px solid black; text-align: center; padding: 0px 5px;">Pienempi tai yhtä suuri kuin</td>
-							<td style="border: 1px solid black; text-align: center;">\(\mathsf{x \leq 4}\)</td>
-							<td style="border: 1px solid black; text-align: center;">\(\mathsf{..., 2, 3, 4}\)</td>
-							<td style="border: 1px solid black; text-align: center;"><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/537043138/ma9j4_teoria_suuruusvertailu_pienempitysk.png" alt="" width="285" height="40" role="presentation" class="img-responsive atto_image_button_text-bottom"></td>
-						</tr>
-						<tr>
-							<td style="border: 1px solid black; text-align: center;">\(\geq\)</td>
-							<td style="border: 1px solid black; text-align: center; padding: 0px 5px;">Suurempi tai yhtä suuri kuin</td>
-							<td style="border: 1px solid black; text-align: center;">\(\mathsf{x \geq 4}\)</td>
-							<td style="border: 1px solid black; text-align: center;">\(\mathsf{4, 5, 6,...}\)</td>
-							<td style="border: 1px solid black; text-align: center;"><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/537043138/ma9j4_teoria_suuruusvertailu_suurempitysk.png" alt="" width="285" height="40" role="presentation" class="img-responsive atto_image_button_text-bottom"></td>
-						</tr>
-						<tr>
-							<td style="border: 1px solid black; text-align: center;">\(=\)</td>
-							<td style="border: 1px solid black; text-align: center;">Eri suuri kuin</td>
-							<td style="border: 1px solid black; text-align: center;">\(\mathsf{x \neq 4}\)</td>
-							<td style="border: 1px solid black; text-align: center;">\(\mathsf{...,2, 3,5,6,...}\)</td>
-							<td style="border: 1px solid black; text-align: center;"><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/537043138/ma9j4_teoria_suuruusvertailu_erisuurikuin.png" alt="" width="285" height="40" role="presentation" class="img-responsive atto_image_button_text-bottom"></td>
-						</tr>
-					</tbody>
-				</table><br>
-			</div>
+					<div class="indent">
+						<table>
+							<tbody>
+								<tr>
+									<th>Merkintä</th>
+									<th>Selitys</th>
+									<th>Esimerkki</th>
+									<th>Esimerkin ratkaisut</th>
+									<th>Graafinen ratkaisu</th>
+								</tr>
+								<tr>
+									<td>\(\mathsf{a &lt; x &lt; b}\)</td>
+									<td>Avoin väli</td>
+									<td>\(\mathsf{3 &lt; x &lt; 5}\)</td>
+									<td>\(\mathsf{4}\)</td>
+									<td><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/537043138/ma9j4_teoria_lukuvali_avoin.png?time=1675337527956" alt="" width="285" height="40" role="presentation" class="img-responsive atto_image_button_text-bottom"></td>
+								</tr>
+								<tr>
+									<td>\(\mathsf{a \leq x \leq b}\)</td>
+									<td>Suljettu väli</td>
+									<td>\(\mathsf{3 \leq x \leq 5}\)</td>
+									<td>\(\mathsf{3, 4, 5}\)</td>
+									<td><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/537043138/ma9j4_teoria_lukuvali_suljettu.png?time=1675337561918" alt="" width="285" height="40" role="presentation" class="img-responsive atto_image_button_text-bottom"></td>
+								</tr>
+								<tr>
+									<td>\(\mathsf{a &lt; x \leq b}\)</td>
+									<td>Vasemmalta avoin väli</td>
+									<td>\(\mathsf{3 &lt; x \leq 5}\)</td>
+									<td>\(\mathsf{4,5}\)</td>
+									<td><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/537043138/ma9j4_teoria_lukuvali_vasemmalta_avoin.png?time=1675337741859" alt="" width="285" height="40" role="presentation" class="img-responsive atto_image_button_text-bottom"></td>
+								</tr>
+								<tr>
+									<td>\(\mathsf{a \leq x &lt; b}\)</td>
+									<td>Oikealta avoin väli</td>
+									<td>\(\mathsf{3 \leq x &lt; 5}\)</td>
+									<td>\(\mathsf{3, 4}\)</td>
+									<td><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/537043138/ma9j4_teoria_lukuvali_oikealta_avoin.png?time=1675337774665" alt="" width="285" height="40" role="presentation" class="img-responsive atto_image_button_text-bottom"></td>
+								</tr>
+							</tbody>
+						</table><br>
+					</div>
+				</div>
+				<h3>Ratkaisun tutkiminen</h3>
+				<div>
+					<p>Ennen varsinaisia epäyhtälön ratkatkaisumenetelmiä tutustutaan epäyhtälön ratkaisun tutkimiseen annetulla muuttujan arvolla. Menetelmä on tuttu yhtälöiden parista, eli sijoitetaan muuttujan arvo epäyhtälöön, lasketaan lausekkeiden arvot ja tehdään
+						johtopäätös yksinkertaisen epäyhtälön perusteella.</p>
+					<p><strong>Esimerkki: </strong>Tutki, onko \(\mathsf{x=1}\) epäyhtälön \(\mathsf{-x+4&gt;0}\) ratkaisu.</p>
+					<div class="indent">
+						<p>\(\begin{align}\mathsf{-x+4} &&gt; \mathsf{0}\\ \mathsf{-1+4} &&gt; \mathsf{0}\\ \mathsf{3} &&gt; \mathsf{0}\end{align}\\ \textsf{Yhtälö on tosi.}\)</p>
+					</div>
+					<p><strong>Vastaus: </strong>\(\mathsf{x=1}\) on epäyhtälön ratkaisu.</p>
+					<hr>
+					<p><strong>Esimerkki: </strong>Tutki, onko \(\mathsf{x=-2}\) epäyhtälön \(\mathsf{-3x-2 \leq 2x+3}\) ratkaisu.</p>
+					<div class="indent">
+						<p>\(\begin{align}\mathsf{-3x-2} &\leq \mathsf{2x+3}\\ \mathsf{-3 \cdot (-2) - 2} &\leq \mathsf{2 \cdot (-2) + 3}\\ \mathsf{4} &\leq \mathsf{-1}\end{align}\\ \textsf{Yhtälö on epätosi.}\)</p>
+					</div>
+					<p><strong>Vastaus: </strong>\(\mathsf{x=-2}\) ei ole epäyhtälön ratkaisu.</p>
 
-			<h3>Välin merkitseminen</h3>
-			<p>Edellä esitellyt vertailumerkit &lt;, &gt;, ≤ ja ≥ rajaavat muuttujan x arvoa vain yhdestä suunnasta, jolloin ratkaisuja on ääretön määrä. Jos muuttujan x arvo halutaan rajata jollekkin välille ja saada (ainakin kokonaislukujen tapauksessa) äärellinen
-				ratkaisu, voidaan käyttää lukuvälimerkintää.</p>
-			<div class="indent">
-				<p>\(\mathsf{\text{alaraja} &lt; x &lt; \text{yläraja}}\)</p>
-			</div>
-			<p>Lisäksi yhtäsuuruuden hyväksyvillä merkeillä ≤ ja ≥ voidaan määrittää lukuväli <strong>avoimeksi</strong> tai <strong>suljetuksi</strong>. Avoimessa välissä välin päätepisteet eivät kuulu mukaan lukujoukkoon. Suljetussa välissä päätepisteet kuuluvat
-				mukaan lukujoukkoon. Alla olevassa taulukossa on esitetty esimerkit erilaisista lukuväleistä kokonaislukujen tapauksessa.</p>
+					<h3>Algebrallinen ratkaisu</h3>
+					<p>Epäyhtälö voidaan ratkaista lähes samalla tavalla kuin tavallinenkin yhtälö. Ainoa poikkeus on negatiivisilla luvuilla kertominen ja jakaminen, jolloin epäyhtälön vertailumerkki on käännettävä toiseen suuntaan.</p>
+					<p><strong>Esimerkki: </strong>Ratkaise epäyhtälö \(\mathsf{-2x+3 &gt; 1}\) algebrallisesti.</p>
+					<div class="indent">
+						<p>\(\begin{align}\mathsf{-2x+3} &&gt; \mathsf{1} &&\mathsf{\|-3}\\ \mathsf{-2x} &&gt; \mathsf{-2} &&\mathsf{\|:(-2)}\\ \mathsf{x} &&lt; \mathsf{1}\end{align}\)</p>
+					</div>
+					<p><strong>Vastaus: </strong>Epäyhtälön ratkaisuja ovat kaikki muuttujan x arvot, jotka toteuttavat epäyhtälön x &lt; 1.</p>
 
-			<div class="indent">
-				<table>
-					<tbody>
-						<tr>
-							<th style="text-align: center; border: 1px solid black; padding: 0px 20px;">Merkintä</th>
-							<th style="text-align: center; border: 1px solid black; padding: 0px 60px;">Selitys</th>
-							<th style="text-align: center; border: 1px solid black; padding: 0px 10px;">Esimerkki</th>
-							<th style="text-align: center; border: 1px solid black; padding: 0px 10px;">Esimerkin ratkaisut</th>
-							<th style="text-align: center; border: 1px solid black; padding: 0px 10px;">Graafinen ratkaisu</th>
-						</tr>
-						<tr>
-							<td style="border: 1px solid black; text-align: center;">\(\mathsf{a &lt; x &lt; b}\)</td>
-							<td style="border: 1px solid black; text-align: center;">Avoin väli</td>
-							<td style="border: 1px solid black; text-align: center;">\(\mathsf{3 &lt; x &lt; 5}\)</td>
-							<td style="border: 1px solid black; text-align: center;">\(\mathsf{4}\)</td>
-							<td style="border: 1px solid black; text-align: center;"><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/537043138/ma9j4_teoria_lukuvali_avoin.png?time=1675337527956" alt="" width="285" height="40" role="presentation" class="img-responsive atto_image_button_text-bottom"></td>
-						</tr>
-						<tr>
-							<td style="border: 1px solid black; text-align: center;">\(\mathsf{a \leq x \leq b}\)</td>
-							<td style="border: 1px solid black; text-align: center;">Suljettu väli</td>
-							<td style="border: 1px solid black; text-align: center;">\(\mathsf{3 \leq x \leq 5}\)</td>
-							<td style="border: 1px solid black; text-align: center;">\(\mathsf{3, 4, 5}\)</td>
-							<td style="border: 1px solid black; text-align: center;"><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/537043138/ma9j4_teoria_lukuvali_suljettu.png?time=1675337561918" alt="" width="285" height="40" role="presentation" class="img-responsive atto_image_button_text-bottom"></td>
-						</tr>
-						<tr>
-							<td style="border: 1px solid black; text-align: center;">\(\mathsf{a &lt; x \leq b}\)</td>
-							<td style="border: 1px solid black; text-align: center;">Vasemmalta avoin väli</td>
-							<td style="border: 1px solid black; text-align: center;">\(\mathsf{3 &lt; x \leq 5}\)</td>
-							<td style="border: 1px solid black; text-align: center;">\(\mathsf{4,5}\)</td>
-							<td style="border: 1px solid black; text-align: center;"><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/537043138/ma9j4_teoria_lukuvali_vasemmalta_avoin.png?time=1675337741859" alt="" width="285" height="40" role="presentation" class="img-responsive atto_image_button_text-bottom"></td>
-						</tr>
-						<tr>
-							<td style="border: 1px solid black; text-align: center;">\(\mathsf{a \leq x &lt; b}\)</td>
-							<td style="border: 1px solid black; text-align: center;">Oikealta avoin väli</td>
-							<td style="border: 1px solid black; text-align: center;">\(\mathsf{3 \leq x &lt; 5}\)</td>
-							<td style="border: 1px solid black; text-align: center;">\(\mathsf{3, 4}\)</td>
-							<td style="border: 1px solid black; text-align: center;"><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/537043138/ma9j4_teoria_lukuvali_oikealta_avoin.png?time=1675337774665" alt="" width="285" height="40" role="presentation" class="img-responsive atto_image_button_text-bottom"></td>
-						</tr>
-					</tbody>
-				</table><br>
+					<h3>Graafinen ratkaisu</h3>
+					<p>Graafisessa ratkaisussa piirretään epäyhtälön molempien puolien lausekkeita vastaavat kuvaajat koordinaatistoon ja etsitään niiden leikkauspiste. Leikkaupisteen x-koordinaatin ympäristöä tutkimalla voidaan päätellä epäyhtälön ratkaisu.</p>
+					<p><strong>Esimerkki: </strong>Ratkaise epäyhtälö \(\mathsf{-2x+3 &gt; 1}\) graafisesti.</p>
+					<div class="indent">
+						<p>Piirretään koordinaatistoon suorat \(\mathsf{y=-2x+3}\) ja \(\mathsf{y=1}\).
+						</p>
+						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/537043138/ma9j4_teoria_epayhtalo_%20graafinen_ratkaisu.png" alt="" width="399" height="286" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+						<p>Siirryttäessä leikkauspisteestä vasemmalle epäyhtälö \(\mathsf{-2x+3 &gt; 1}\) toteutuu, eli \(\mathsf{y = -2x+3}\) saa suurempia y:n arvoja (on ylempänä) kuin \(\mathsf{y=1}\).</p>
+					</div>
+					<p><strong>Vastaus: </strong>Epäyhtälön ratkaisu on x &lt; 1.</p>
+				</div>
 			</div>
-
-			<h3>Ratkaisun tutkiminen</h3>
-			<p>Ennen varsinaisia epäyhtälön ratkatkaisumenetelmiä tutustutaan epäyhtälön ratkaisun tutkimiseen annetulla muuttujan arvolla. Menetelmä on tuttu yhtälöiden parista, eli sijoitetaan muuttujan arvo epäyhtälöön, lasketaan lausekkeiden arvot ja tehdään
-				johtopäätös yksinkertaisen epäyhtälön perusteella.</p>
-			<p><strong>Esimerkki: </strong>Tutki, onko \(\mathsf{x=1}\) epäyhtälön \(\mathsf{-x+4&gt;0}\) ratkaisu.</p>
-			<div class="indent">
-				<p>\(\begin{align}\mathsf{-x+4} &&gt; \mathsf{0}\\ \mathsf{-1+4} &&gt; \mathsf{0}\\ \mathsf{3} &&gt; \mathsf{0}\end{align}\\ \textsf{Yhtälö on tosi.}\)</p>
-			</div>
-			<p><strong>Vastaus: </strong>\(\mathsf{x=1}\) on epäyhtälön ratkaisu.</p>
-			<hr>
-			<p><strong>Esimerkki: </strong>Tutki, onko \(\mathsf{x=-2}\) epäyhtälön \(\mathsf{-3x-2 \leq 2x+3}\) ratkaisu.</p>
-			<div class="indent">
-				<p>\(\begin{align}\mathsf{-3x-2} &\leq \mathsf{2x+3}\\ \mathsf{-3 \cdot (-2) - 2} &\leq \mathsf{2 \cdot (-2) + 3}\\ \mathsf{4} &\leq \mathsf{-1}\end{align}\\ \textsf{Yhtälö on epätosi.}\)</p>
-			</div>
-			<p><strong>Vastaus: </strong>\(\mathsf{x=-2}\) ei ole epäyhtälön ratkaisu.</p>
-
-			<h3>Algebrallinen ratkaisu</h3>
-			<p>Epäyhtälö voidaan ratkaista lähes samalla tavalla kuin tavallinenkin yhtälö. Ainoa poikkeus on negatiivisilla luvuilla kertominen ja jakaminen, jolloin epäyhtälön vertailumerkki on käännettävä toiseen suuntaan.</p>
-			<p><strong>Esimerkki: </strong>Ratkaise epäyhtälö \(\mathsf{-2x+3 &gt; 1}\) algebrallisesti.</p>
-			<div class="indent">
-				<p>\(\begin{align}\mathsf{-2x+3} &&gt; \mathsf{1} &&\mathsf{\|-3}\\ \mathsf{-2x} &&gt; \mathsf{-2} &&\mathsf{\|:(-2)}\\ \mathsf{x} &&lt; \mathsf{1}\end{align}\)</p>
-			</div>
-			<p><strong>Vastaus: </strong>Epäyhtälön ratkaisuja ovat kaikki muuttujan x arvot, jotka toteuttavat epäyhtälön x &lt; 1.</p>
-
-			<h3>Graafinen ratkaisu</h3>
-			<p>Graafisessa ratkaisussa piirretään epäyhtälön molempien puolien lausekkeita vastaavat kuvaajat koordinaatistoon ja etsitään niiden leikkauspiste. Leikkaupisteen x-koordinaatin ympäristöä tutkimalla voidaan päätellä epäyhtälön ratkaisu.</p>
-			<p><strong>Esimerkki: </strong>Ratkaise epäyhtälö \(\mathsf{-2x+3 &gt; 1}\) graafisesti.</p>
-			<div class="indent">
-				<p>Piirretään koordinaatistoon suorat \(\mathsf{y=-2x+3}\) ja \(\mathsf{y=1}\).
-				</p>
-				<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/537043138/ma9j4_teoria_epayhtalo_%20graafinen_ratkaisu.png" alt="" width="399" height="286" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
-				<p>Siirryttäessä leikkauspisteestä vasemmalle epäyhtälö \(\mathsf{-2x+3 &gt; 1}\) toteutuu, eli \(\mathsf{y = -2x+3}\) saa suurempia y:n arvoja (on ylempänä) kuin \(\mathsf{y=1}\).</p>
-			</div>
-			<p><strong>Vastaus: </strong>Epäyhtälön ratkaisu on x &lt; 1.</p>
-		</div>
 		</div>
 		<script>
 			downloadGG();
