@@ -52,7 +52,7 @@ p {
 	text-align: justify;
 }
 img, .indent {
-	margin-left: var(--indent);
+	margin-left: 0px;
 }
 img {
 	height: auto;

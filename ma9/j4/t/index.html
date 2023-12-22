@@ -34,8 +34,10 @@
 					<div class="example">
 						<p><strong>Esimerkki:</strong> Sievennä.</p>
 						<div class="indent">
-							<p>a) \(\mathsf{2x + 1 + (-x + 6) = 2x + 1 - x + 6 = x + 7}\)</p>
-							<p>b) \(\mathsf{-x + 5 - (5x - 12) = -x + 5 - 5x + 12 = -6x +17}\)</p>
+							<p>a)</p>
+							<p>\(\begin{align}&\mathsf{2x + 1 + (-x + 6)}\\ =\;&\mathsf{2x + 1 - x + 6}\\ =\;&\mathsf{x + 7}\end{align}\)</p>
+							<p>b)</p>
+							<p>\(\begin{align}&\mathsf{-x + 5 - (5x - 12)}\\ =\;&\mathsf{-x + 5 - 5x + 12}\\ =\;&\mathsf{-6x +17}\end{align}\)</p>
 						</div>
 					</div>
 					<p>Huomaa, että vähennyslaskussa miinusmerkki vaihtaa kaikkien polynomin termien etumerkin.</p>
@@ -49,7 +51,7 @@
 					<p><strong>Polynomin jakaminen vakiolla</strong> kohdistaa jakolaskun erikseen kaikkiin polynomin termeihin.</p>
 					<div class="example">
 						<p><strong>Esimerkki:</strong> Sievennä.</p>
-						<p class="indent">\(\mathsf{\dfrac{-4x^2 + 8x + 14}{-2} = \dfrac{-4x^2}{-2} + \dfrac{8x}{-2} + \dfrac{14}{-2} = 2x^2 - 4x - 7}\)</p>
+						<p class="indent">\(\begin{align}&\mathsf{\dfrac{-4x^2 + 8x + 14}{-2}}\\ =\;&\mathsf{\dfrac{-4x^2}{-2} + \dfrac{8x}{-2} + \dfrac{14}{-2}}\\ =\;&\mathsf{2x^2 - 4x - 7}\end{align}\)</p>
 					</div>
 				</div>
 				<h3>Yhtälönratkaisu</h3>
@@ -57,15 +59,17 @@
 					<p><strong>Ensimmäisen asteen yhtälö</strong></p>
 					<p>Ensimmäisen asteen yhtälöitä ratkaistiin vaiheittain lisäämällä, vähentämällä, kertomalla tai jakamalla yhtälöä puolittain tavoitteena saada muuttuja (yleensä x) jäämään yksin yhtälön toiselle puolelle. Puolittain suoritettavaa laskutoimitusta merkittiin yhtälön rivin perään \(||\)-merkkien jälkeen.</p>
 					<div class="example">
-						<p><strong>Esimerkki:</strong> Sievennä.</p>
+						<p><strong>Esimerkki:</strong> Ratkaise yhtälö.</p>
 						<div class="indent">
-							<p>a) \(\begin{align}\mathsf{2x+1} &= \mathsf{7} &&\mathsf{|| -1}\\\mathsf{2x} &= \mathsf{6} &&\mathsf{|| :2}\\\mathsf{x} &= \mathsf{3}\end{align}\)</p>
-							<p>b) \(\begin{align}\mathsf{-3x+2} &= \mathsf{x + 10} &&\mathsf{|| -x}\\\mathsf{-4x+2} &= \mathsf{10} &&\mathsf{|| -2}\\\mathsf{-4x} &= \mathsf{8} &&\mathsf{|| :(-4)}\\\mathsf{x} &= \mathsf{-2}\end{align}\)</p>
+							<p>a)</p>
+							<p>\(\begin{align}\mathsf{2x+1} &= \mathsf{7} &&\mathsf{|| -1}\\\mathsf{2x} &= \mathsf{6} &&\mathsf{|| :2}\\\mathsf{x} &= \mathsf{3}\end{align}\)</p>
+							<p>b)</p>
+							<p>\(\begin{align}\mathsf{-3x+2} &= \mathsf{x + 10} &&\mathsf{|| -x}\\\mathsf{-4x+2} &= \mathsf{10} &&\mathsf{|| -2}\\\mathsf{-4x} &= \mathsf{8} &&\mathsf{|| :(-4)}\\\mathsf{x} &= \mathsf{-2}\end{align}\)</p>
 						</div>
 					</div>
 					<p>Yhtälönratkaisun avulla voidaan myös muokata useamman muuttujan yhtälöitä. Suoran yhtälö voidaan esittää ratkaistussa muodossa (esim. \(\mathsf{y = -2x + 3}\) tai yleisessä muodossa (\(\mathsf{2x + y - 3 = 0}\)). Suoran yhtälöä tulee osata muokata näiden muotojen välillä suoran piirtämisen tai muun ratkaisemisen vuoksi.</p>
 					<div class="example">
-						<p><strong>Esimerkki:</strong> Sievennä.</p>
+						<p><strong>Esimerkki:</strong> Ratkaise yhtälö muuttujan y suhteen.</p>
 						<p class="indent">\(\begin{align}\mathsf{-6x+2y-8} &= \mathsf{0} &&\mathsf{|| +6x}\\\mathsf{2y-8} &= \mathsf{}6x &&\mathsf{|| +8}\\\mathsf{2y} &= \mathsf{6x + 8} &&\mathsf{|| :2}\\\mathsf{y} &= \mathsf{3x + 4}\end{align}\)</p>
 					</div>
 				</div>
@@ -77,121 +81,118 @@
 						<li>Vakiotermi kertoo suoran ja y-akselin leikkauskohdan.</li>
 						<li>Kulmakerroin kertoo y-akselin suuntaisen muutoksen, kun siirrytään edellisestä suoran pisteestä x-akselin suunnassa yhden verran oikealle.</li>
 					</ol>
-					<div class="indent">
-						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/528183153/ma9j4_teoria_suoran_kk_vt.png" alt="" width="398" height="270" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
-					</div>
-					<p><strong>Suorien leikkauspiste</strong> voidaan ratkaista joko graafisesti tai algebrallisesti. <strong>Graafisessa ratkaisussa</strong> suorat piirretään samaan koordinaatistoon, ja leikkaupiste määritetään silmämääräisesti kuvasta. <strong>Algebrallisessa ratkaisussa</strong>        suorien lausekkeet merkitään yhtä suuriksi, ratkaistaan muodostuneesta yhtälöstä x-koordinaatin arvo ja lopuksi selvitetään y-koordinaatin arvo sijoittamalla saatu x-koordinaatti toiseen suoran yhtälöön.</p>
-					<div class="indent">
-						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/528183153/ma9j4_teoria_suorien_leikkauspiste.png?time=1674462315028" alt="" width="398" height="342" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
-					</div>
+					<img src="https://jannevenhoedu.github.io/ma9/j4/t/ma9j4_teoria_suoran_kk_vt.png">
+					<p><strong>Suorien leikkauspiste</strong> voidaan ratkaista joko graafisesti tai algebrallisesti. <strong>Graafisessa ratkaisussa</strong> suorat piirretään samaan koordinaatistoon, ja leikkaupiste määritetään silmämääräisesti kuvasta. <strong>Algebrallisessa ratkaisussa</strong>   suorien lausekkeet merkitään yhtä suuriksi, ratkaistaan muodostuneesta yhtälöstä x-koordinaatin arvo ja lopuksi selvitetään y-koordinaatin arvo sijoittamalla saatu x-koordinaatti toiseen suoran yhtälöön.</p>
+					<img src="https://jannevenhoedu.github.io/ma9/j4/t/ma9j4_teoria_suorien_leikkauspiste.png">
 				</div>
 			</div>
 			<h2>2. Yhtälöpari</h2>
 			<div>
-				<p>Yhtälönratkaisun tarkoituksena on ratkaista tuntemattoman muuttujan arvo. Toistaiseksi muuttujia yhtälöissä on ollut vain yksi, jolloin ollaan selvitty yhden yhtälön ratkaisemisella. Jos yhtälössä on kaksi muuttujaa, tarvitaan yhtälöitäkin kaksi molempien
-					muuttujien ratkaisemiseksi. Tällöin kyseessä on <strong>yhtälöpari</strong>.</p>
+				<p>Yhtälönratkaisun tarkoituksena on ratkaista tuntemattoman muuttujan arvo. Toistaiseksi muuttujia yhtälöissä on ollut vain yksi, jolloin ollaan selvitty yhden yhtälön ratkaisemisella. Jos yhtälössä on kaksi muuttujaa, tarvitaan yhtälöitäkin kaksi molempien muuttujien ratkaisemiseksi. Tällöin kyseessä on <strong>yhtälöpari</strong>.</p>
 				<p>Yhtälöpari merkitään kirjoittamalla yhtälöt allekkain, ja piirtämällä yhtälöiden vasemmalle puolelle aaltosulje.</p>
-				<div class="indent">
-					<p>\(\left\{\begin{aligned}& \mathsf{2x+y = 4}\\& \mathsf{-x-y = -1}\end{aligned}\right.\)</p>
-				</div>
+				<p class="indent">\(\begin{cases}\mathsf{2x+y = 4}\\ \mathsf{-x-y = -1}\end{cases}\)</p>
 				<h3>Ratkaisun tutkiminen</h3>
-				<p>Koska muuttujia yhtälöissä on kaksi, niin ratkaisukin on lukupari \(\mathsf{(x,y)}\). Yhtälöparin ratkaisemista harjoitellaan myöhemmissä luvuissa. Yhtälöparin ratkaisua voidaan tutkia sijoittamalla muuttujien arvot yhtälöihin, ja testaamalla toteuttaako
-					lukupari molemmat yhtälöt.</p>
-				<p><strong>Esimerkki: </strong>Toteuttaako lukupari \(\mathsf{(x,y) = (-2, 8)}\) yhtälöparin \(\left\{\begin{aligned}& \mathsf{2x+y = 4}\\& \mathsf{-x-y = -1}\end{aligned}\right.\)</p>
-				<div class="indent">
-					<table>
-						<tbody>
-							<tr>
-								<td>\(\begin{align}\mathsf{2x+y} &= \mathsf{4}\\ \mathsf{2 \cdot (-2) + 8} &= \mathsf{4}\\ \mathsf{-4+8} &= \mathsf{4}\\ \mathsf{4} &= \mathsf{4}\\\textsf{Yhtälö on tosi.}\end{align}\)</td>
-								<td style="width: 50px;"></td>
-								<td>\(\begin{align}\mathsf{-x-y} &= \mathsf{-1}\\ \mathsf{-(-2) - 8} &= \mathsf{-1}\\ \mathsf{2-8} &= \mathsf{-1}\\ \mathsf{-6} &= \mathsf{-1}\\\textsf{Yhtälö on epätosi.}\end{align}\)</td>
-							</tr>
-						</tbody>
-					</table><br>
+				<div>
+					<p>Koska muuttujia yhtälöissä on kaksi, niin ratkaisukin on lukupari \(\mathsf{(x,y)}\). Yhtälöparin ratkaisemista harjoitellaan myöhemmissä luvuissa. Yhtälöparin ratkaisua voidaan tutkia sijoittamalla muuttujien arvot yhtälöihin, ja testaamalla toteuttaako lukupari molemmat yhtälöt.</p>
+					<div class="example">
+						<p><strong>Esimerkki: </strong>Toteuttaako lukupari \(\mathsf{(x,y) = (-2, 8)}\) yhtälöparin \(\begin{cases}\mathsf{2x+y = 4}\\ \mathsf{-x-y = -1}\end{cases}\) ?</p>
+						<div class="indent">
+							<p>Ylempi yhtälö:</p>
+							<div class="indent">
+								<p>\(\begin{align}\mathsf{2x+y} &= \mathsf{4}\\ \mathsf{2 \cdot (-2) + 8} &= \mathsf{4}\\ \mathsf{-4+8} &= \mathsf{4}\\ \mathsf{4} &= \mathsf{4}\end{align}\)</p>
+								<p>Yhtälö on tosi.</p>
+							</div>
+							<p>Alempi yhtälö:</p>
+							<div class="indent">
+								<p>\(\begin{align}\mathsf{-x-y} &= \mathsf{-1}\\ \mathsf{-(-2) - 8} &= \mathsf{-1}\\ \mathsf{2-8} &= \mathsf{-1}\\ \mathsf{-6} &= \mathsf{-1}\end{align}\)</p>
+								<p>Yhtälö on epätosi.</p>
+							</div>
+						</div>
+						<p><strong>Vastaus: </strong>Lukupari ei ole yhtälöparin ratkaisu.</p>
+					</div>
+					<p>Jos lukupari toteuttaa molemmat yhtälöt, lukupari on myös yhtälöparin ratkaisu. Jos jompi kumpi yhtälöistä ei toteudu, ei lukupari toteuta myöskään yhtälöparia.</p>
 				</div>
-				<p><strong>Vastaus: </strong>Lukupari ei ole yhtälöparin ratkaisu.</p>
-				<p>Jos lukupari toteuttaa molemmat yhtälöt, lukupari on myös yhtälöparin ratkaisu. Jos jompi kumpi yhtälöistä ei toteudu, ei lukupari toteuta myöskään yhtälöparia.</p>
 			</div>
 			<h2>3. Graafinen ratkaisu</h2>
 			<div>
-				<p>Suoran piirtämisen yhteydessä ollaan käsitelty kahden muuttujan yhtälöitä ja harjoiteltu yhtälön ratkaisemista muuttujan y suhteen. Näin ollen kahden muuttujan yhtälöt voidaan myös piirtää koordinaatistoon. Yhtälöparin tapauksessa yhtälöiden kuvaajien
-					leikkauspiste on myös yhtälöparin ratkaisu.</p>
-				<p><strong>Esimerkki </strong>Ratkaise yhtälöpari graafisesti.</p>
-				<p>a) \(\left\{\begin{aligned}& \mathsf{y = 2x - 3}\\& \mathsf{y = -x+3}\end{aligned}\right.\)</p>
-				<div class="indent">
-					<p>Piirretään suorat.</p>
+				<p>Yhtälöpari voidaan ratkaista graafisesti piirtämällä yhtälöitä vastaavat suorat koordinaatistoon. Suorien leikkuspiste on yhtälöparin ratkaisu.</p>
+				<div class="example">
+					<p><strong>Esimerkki </strong>Ratkaise yhtälöpari graafisesti.</p>
+					<p>\(\begin{cases}\mathsf{y = 2x - 3}\\ \mathsf{y = -x+3}\end{cases}\)</p>
 					<div class="indent">
-						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/329479351/ma9j4_teoria_graafinen_ratkaisu1.png?time=1675119853634" alt="" width="399" height="286" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+						<p>Piirretään suorat.</p>
+						<img src="https://jannevenhoedu.github.io/ma9/j4/t/ma9j4_teoria_graafinen_ratkaisu1.png"></p>
+						<p><strong>Vastaus: </strong>\(\mathsf{(x,y) = (2,1)}\)</p>
 					</div>
-					<p><strong>Vastaus: </strong>\(\mathsf{(x,y) = (2,1)}\)</p>
 				</div>
-				<p>b) \(\left\{\begin{aligned}& \mathsf{-x + 2y + 2 = 0}\\& \mathsf{y = 2x+5}\end{aligned}\right.\)</p>
-				<div class="indent">
-					<p>Ratkaistaan ylempi yhtälö muuttujan y suhteen.</p>
+				<p>Jos yhtälöt eivät ole ratkaistussa muodossa, ne täytyy ennen piirtämistä ratkaista muuttujan y suhteen.</p>
+				<div class="example">
+					<p><strong>Esimerkki </strong>Ratkaise yhtälöpari graafisesti.</p>
+					<p>\(\begin{cases}\mathsf{-x + 2y + 2 = 0}\\ \mathsf{y = 2x+5}\end{cases}\)</p>
 					<div class="indent">
-						<p>\(\begin{align}\mathsf{-x+2y+2} &= \mathsf{0} &\|\mathsf{+x}\\ \mathsf{2y+2} &= \mathsf{x} &\|\mathsf{-2}\\ \mathsf{2y} &= \mathsf{x-2} &\|\mathsf{:2}\\ \mathsf{y} &= \mathsf{\dfrac{1}{2}x-1}\end{align}\)</p>
+						<p>Ratkaistaan ylempi yhtälö muuttujan y suhteen.</p>
+						<div class="indent">
+							<p>\(\begin{align}\mathsf{-x+2y+2} &= \mathsf{0} &&\mathsf{\|+x}\\ \mathsf{2y+2} &= \mathsf{x} &&\mathsf{\|-2}\\ \mathsf{2y} &= \mathsf{x-2} &&\mathsf{\|:2}\\ \mathsf{y} &= \mathsf{\dfrac{1}{2}x-1}\end{align}\)</p>
+						</div>
+						<p>Piirretään suorat.</p>
+						<img src="https://jannevenhoedu.github.io/ma9/j4/t/ma9j4_teoria_graafinen_ratkaisu2.png"></p>
+						<p><strong>Vastaus: </strong>\(\mathsf{(x,y) = (-4,-3)}\)</p>
 					</div>
-					<p>Piirretään suorat.</p>
-					<div class="indent">
-						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/329479351/ma9j4_teoria_graafinen_ratkaisu2.png" alt="" width="400" height="396" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
-					</div>
-					<p><strong>Vastaus: </strong>\(\mathsf{(x,y) = (-4,-3)}\)</p>
 				</div>
 			</div>
 			<h2>4. Sijoitusmenetelmä</h2>
 			<div>
-				<p>Sijoitusmenetelmä on algebrallinen tapa ratkaista yhtälöpari. Sijoitusmenetemää on järkevää käyttää silloin, kun vähintään toinen yhtälöistä on ratkaistu joko muuttujan x tai y suhteen. Sijoitusmenetelmää voidaan käyttää kahdella eri tavalla hieman
-					tilanteesta riippuen.
-				</p>
+				<p>Sijoitusmenetelmä on algebrallinen tapa ratkaista yhtälöpari. Sijoitusmenetemää on järkevää käyttää silloin, kun vähintään toinen yhtälöistä on ratkaistu joko muuttujan x tai y suhteen. Sijoitusmenetelmää voidaan käyttää kahdella eri tavalla hieman tilanteesta riippuen.</p>
 				<h3>Molemmat yhtälöt ratkaistussa muodossa</h3>
-				<p>Jos molemmat yhtälöt ovat ratkaistussa muodossa saman muuttujan (yleensä y) suhteen, voidaan lausekkeista muodostaa yhtälö ja ratkaista sen avulla toisen muuttujan arvo (yleensä x). Tämän jälkeen pitää vielä ratkaista toisen muuttujan arvo sijoittamalla
-					saatu arvo jompaan kumpaan yhtälöön.</p>
-				<p><strong>Esimerkki: </strong>Ratkaise yhtälöpari sijoitusmenetelmän avulla.</p>
-				<div class="indent">
-					<p>\(\left\{\begin{aligned}& \mathsf{y=2x-8}\\& \mathsf{y=x-6}\end{aligned}\right.\)</p>
-					<p>Koska \(\mathsf{y=y}\), merkitään lausekkeet yhtä suuriksi ja ratkaistaan muuttujan x arvo.</p>
-					<div class="indent">
-						<p>\(\begin{align}\mathsf{2x-8} &= \mathsf{x-6} &&\mathsf{\|-x}\\ \mathsf{x-8} &= \mathsf{-6} &&\mathsf{\|+8}\\ \mathsf{x} &= \mathsf{2}\end{align}\)</p>
+				<div>
+					<p>Jos molemmat yhtälöt ovat ratkaistussa muodossa saman muuttujan (yleensä y) suhteen, voidaan lausekkeista muodostaa yhtälö ja ratkaista sen avulla toisen muuttujan arvo (yleensä x). Tämän jälkeen pitää vielä ratkaista toisen muuttujan arvo sijoittamalla saatu arvo jompaan kumpaan yhtälöön.</p>
+					<div class="example">
+						<p><strong>Esimerkki: </strong>Ratkaise yhtälöpari sijoitusmenetelmän avulla.</p>
+						<div class="indent">
+							<p>\(\begin{cases}\mathsf{y=2x-8}\\ \mathsf{y=x-6}\end{cases}\)</p>
+							<p>Koska \(\mathsf{y=y}\), merkitään lausekkeet yhtä suuriksi ja ratkaistaan muuttujan x arvo.</p>
+							<div class="indent">
+								<p>\(\begin{align}\mathsf{2x-8} &= \mathsf{x-6} &&\mathsf{\|-x}\\ \mathsf{x-8} &= \mathsf{-6} &&\mathsf{\|+8}\\ \mathsf{x} &= \mathsf{2}\end{align}\)</p>
+							</div>
+							<p>Ratkaistaan muuttujan y arvo sijoittamalla saatu \(\mathsf{x=2}\) toiseen alkuperäisistä yhtälöistä.</p>
+							<div class="indent">
+								<p>\(\begin{align}\mathsf{y} &= \mathsf{x-6}\\ &= \mathsf{2-6}\\ &= \mathsf{-4}\end{align}\)</p>
+							</div>
+						</div>
+						<p><strong>Vastaus: </strong>\(\mathsf{(x,y) = (2,-4)}\)</p>
 					</div>
-					<p>Ratkaistaan muuttujan y arvo sijoittamalla saatu \(\mathsf{x=2}\) toiseen alkuperäisistä yhtälöistä.</p>
-					<div class="indent">
-						<p>\(\begin{align}\mathsf{y} &= \mathsf{x-6}\\ &= \mathsf{2-6}\\ &= \mathsf{-4}\end{align}\)</p>
 					</div>
-				</div>
-				<p><strong>Vastaus: </strong>\(\mathsf{(x,y) = (2,-4)}\)</p>
 				<h3>Vain toinen yhtälö on ratkaistussa muodossa</h3>
-				<p>Aina yhtälöparin molemmat yhtälöt eivät ole kauniisti ratkaistussa muodossa. Vaihtoehtoja on kaksi: ratkaistaan molemmat yhtälöt saman muuttujan suhteen ja toimitaan kuten edellisessä esimerkissä, tai sijoitetaan ratkaistussa muodossa olevan yhtälön
-					lauseke toiseen yhtälöön kyseisen muuttujan paikalle. Tarkastellaan seuraavassa esimerkissä jälkimmäistä tapaa.</p>
-
-				<p><strong>Esimerkki: </strong>Ratkaise yhtälöpari sijoitusmenetelmän avulla.</p>
-				<div class="indent">
-					<p>\(\left\{\begin{aligned}& \mathsf{y=2x-3}\\& \mathsf{2x+2y=6}\end{aligned}\right.\)</p>
-					<p>Ratkaistaan muuttujan x arvo sijoittamalla lauseke \(\mathsf{2x-3}\) alempaan yhtälöön muuttujan y paikalle ja ratkaisemalla yhtälö.</p>
-					<div class="indent">
-						<p>\(\begin{align}\mathsf{2x+2y} &= \mathsf{6} &&\mathsf{\|\;y=2x-3}\\ \mathsf{2x+2\cdot(2x-3)} &= \mathsf{6}\\ \mathsf{2x+4x-6} &= \mathsf{6}\\ \mathsf{6x-6} &= \mathsf{6} &&\mathsf{\|+6}\\ \mathsf{6x} &=
-							\mathsf{12} &&\mathsf{\|:6}\\ \mathsf{x} &= \mathsf{2}\end{align}\)</p>
-					</div>
-					<p>Ratkaistaan muuttujan y arvo sijoittamalla saatu \(\mathsf{x=2}\) toiseen alkuperäisistä yhtälöistä.</p>
-					<div class="indent">
-						<p>\(\begin{align}\mathsf{y} &= \mathsf{2x-3}\\ &= \mathsf{2 \cdot 2 - 3}\\ &= \mathsf{4-3}\\ &=\mathsf{1}\end{align}\)</p>
+				<div>
+					<p>Aina yhtälöparin molemmat yhtälöt eivät ole kauniisti ratkaistussa muodossa. Vaihtoehtoja on kaksi: ratkaistaan molemmat yhtälöt saman muuttujan suhteen ja toimitaan kuten edellisessä esimerkissä, tai sijoitetaan ratkaistussa muodossa olevan yhtälön lauseke toiseen yhtälöön kyseisen muuttujan paikalle. Tarkastellaan seuraavassa esimerkissä jälkimmäistä tapaa.</p>
+					<div class="example">
+						<p><strong>Esimerkki: </strong>Ratkaise yhtälöpari sijoitusmenetelmän avulla.</p>
+						<div class="indent">
+							<p>\(\begin{cases}\mathsf{y=2x-3}\\ \mathsf{2x+2y=6}\end{cases}\)</p>
+							<p>Ratkaistaan muuttujan x arvo sijoittamalla lauseke \(\mathsf{2x-3}\) alempaan yhtälöön muuttujan y paikalle ja ratkaisemalla yhtälö.</p>
+							<p class="indent">\(\begin{align}\mathsf{2x+2y} &= \mathsf{6} &&\mathsf{\|\;y=2x-3}\\ \mathsf{2x+2\cdot(2x-3)} &= \mathsf{6}\\ \mathsf{2x+4x-6} &= \mathsf{6}\\ \mathsf{6x-6} &= \mathsf{6} &&\mathsf{\|+6}\\ \mathsf{6x} &= \mathsf{12} &&\mathsf{\|:6}\\ \mathsf{x} &= \mathsf{2}\end{align}\)</p>
+							<p>Ratkaistaan muuttujan y arvo sijoittamalla saatu \(\mathsf{x=2}\) toiseen alkuperäisistä yhtälöistä.</p>
+							<p class="indent">\(\begin{align}\mathsf{y} &= \mathsf{2x-3}\\ &= \mathsf{2 \cdot 2 - 3}\\ &= \mathsf{4-3}\\ &=\mathsf{1}\end{align}\)</p>
+						</div>
+						<p><strong>Vastaus: </strong>\(\mathsf{(x,y) = (2, 1)}\)</p>
 					</div>
 				</div>
-				<p><strong>Vastaus: </strong>\(\mathsf{(x,y) = (2, 1)}\)</p>
 			</div>
 			<h2>5. Yhteenlaskumenetelmä</h2>
 			<div>
-				<p>Toinen algebrallinen tapa yhtälöparin ratkaisemiseen on yhteenlaskumenetelmä. Yhteenlaskumenetelmää on järkevää käyttää silloin, kun molemmat muuttujista x ja y ovat samalla puolella yhtälöä. Lisäksi toisen muuttujista tulisi sieventyä yhteenlaskun
-					jälkeen pois, jotta jäljelle jää yhden muuttujan yhtälö.</p>
-				<p><strong>Esimerkki: </strong>Ratkaise yhtälöpari yhteenlaskumenetelmän avulla.</p>
-				<div class="indent">
-					<iframe class="gg_upotus" scrolling="no" title="ma9j4_teoria_yhteenlaskumenetelma" src="https://www.geogebra.org/material/iframe/id/h69fbbg9/width/392/height/385/border/888888/sfsb/false/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false"
-						width="392px" height="385px" style="border:0px;"> </iframe>
+				<p>Toinen algebrallinen tapa yhtälöparin ratkaisemiseen on yhteenlaskumenetelmä. Yhteenlaskumenetelmää on järkevää käyttää silloin, kun molemmat muuttujista x ja y ovat samalla puolella yhtälöä. Lisäksi toisen muuttujista tulisi sieventyä yhteenlaskun jälkeen pois, jotta jäljelle jää yhden muuttujan yhtälö.</p>
+				<div class="example">
+					<p><strong>Esimerkki: </strong>Ratkaise yhtälöpari yhteenlaskumenetelmän avulla.</p>
+					<div class="gg" id="yhteenlaskumenetelma" style="width: 392px; height: 385px;">
+						https://jannevenhoedu.github.io/ma9/j4/t/ma9j4_teoria_yhteenlaskumenetelma.ggb
+					</div><br>
 				</div>
 				<p>Esimerkissä muuttuja y sieveni pois kun yhtälöiden y-termit olivat toistensa vastatermejä (kertoimet vastalukuja). Näin ei suinkaan aina ole, vaan yhtälöitä on joskus muokattava ennen yhteenlaskua, jotta yhteenlaskussa toinen muuttuja sievenee pois.</p>
-				<p><strong>Esimerkki: </strong>Ratkaise yhtälöpari yhteenlaskumenetelmän avulla.</p>
-				<div class="indent">
-					<iframe class="gg_upotus" scrolling="no" title="ma9j4_teoria_yhteenlaskumenetelma2" src="https://www.geogebra.org/material/iframe/id/v6pgwhn3/width/388/height/516/border/888888/sfsb/false/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false"
-						width="388px" height="516px" style="border:0px;"> </iframe>
+				<div class="example">
+					<p><strong>Esimerkki: </strong>Ratkaise yhtälöpari yhteenlaskumenetelmän avulla.</p>
+					<div class="gg" id="yhteenlaskumenetelma2" style="width: 388px; height: 516px;">
+						https://jannevenhoedu.github.io/ma9/j4/t/ma9j4_teoria_yhteenlaskumenetelma2.ggb
+					</div><br>
 				</div>
 			</div>
 			<h2>6. Sanallisia tehtäviä</h2>
