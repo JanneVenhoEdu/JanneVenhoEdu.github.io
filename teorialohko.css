@@ -51,12 +51,13 @@ h3:hover {
 p {
 	text-align: justify;
 }
-img, .indent {
+.indent {
 	margin-left: 0px;
 }
 img {
 	height: auto;
 	max-width: 100%;
+	margin-left: 0px;
 }
 .example {
 	margin-left: 0px;
