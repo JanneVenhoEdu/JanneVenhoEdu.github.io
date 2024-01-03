@@ -253,7 +253,7 @@
 				<p>Epäyhtälö on kuten yhtälö, mutta yhtäsuuruusmerkin sijaan lausekkeiden välissä on jokin suuruusvertailumerkki. Epäyhtälöllä on usein useita, jopa ääretön määrä, ratkaisuja. Niiden avulla voidaan siis rajata ja valita sopivia lukujoukkoja.</p>
 				<h3>Suuruusvertailumerkit</h3>
 				<div>
-					<p>Yhtäsuuruuteen liittyvät vertailumerkit =, &neq; ja &asymp; lienevät jo tuttuja, mutta epäyhtälöissä käytettäviä vertailumerkkejä &lt;, &gt;, ≤ ja ≥ on käytetty vain lyhyesti kahden luvun suuruutta vertailtaessa. Jos toisena vertailun kohteena on muuttuja x, ne rajaavat sopivia muuttujan arvoja yhdestä suunnasta, jolloin ratkaisuja on ääretön määrä. Ratkaisu voidaan ilmoittaa numeerisesti luettelemalla osa ratkaisujoukon luvuista tai graafisesti piirtämällä lukujoukkoa vastaava puolisuora lukusuoralle. Jos käytetään yhtäsuuruuden hyväksyviä vertailumerkkejä ≤ ja ≥ vertailuarvo merkitään täytetyllä ympyrällä. Vastaavasti &lt; ja &gt; merkkien tapauksessa merkki jätetään ontoksi, jolloin korostetaan sitä, että kyseinen vertailuarvo ei kuulu ratkaisujoukkoon.</p>
+					<p>Yhtäsuuruuteen liittyvät vertailumerkit =, &ne; ja &asymp; lienevät jo tuttuja, mutta epäyhtälöissä käytettäviä vertailumerkkejä &lt;, &gt;, ≤ ja ≥ on käytetty vain lyhyesti kahden luvun suuruutta vertailtaessa. Jos toisena vertailun kohteena on muuttuja x, ne rajaavat muuttujan arvoja yhdestä suunnasta, jolloin ratkaisuja on ääretön määrä. Ratkaisu voidaan ilmoittaa numeerisesti luettelemalla osa ratkaisujoukon luvuista tai graafisesti piirtämällä lukujoukkoa vastaava puolisuora lukusuoralle. Jos käytetään yhtäsuuruuden hyväksyviä vertailumerkkejä ≤ ja ≥ vertailuarvo merkitään täytetyllä ympyrällä. Vastaavasti &lt; ja &gt; merkkien tapauksessa merkki jätetään ontoksi, jolloin korostetaan sitä, että kyseinen vertailuarvo ei kuulu ratkaisujoukkoon.</p>
 					<table>
 						<thead>
 							<tr>
@@ -397,35 +397,41 @@
 				</div>
 				<h3>Ratkaisun tutkiminen</h3>
 				<div>
-					<p>Ennen varsinaisia epäyhtälön ratkatkaisumenetelmiä tutustutaan epäyhtälön ratkaisun tutkimiseen annetulla muuttujan arvolla. Menetelmä on tuttu yhtälöiden parista, eli sijoitetaan muuttujan arvo epäyhtälöön, lasketaan lausekkeiden arvot ja tehdään
-						johtopäätös yksinkertaisen epäyhtälön perusteella.</p>
-					<p><strong>Esimerkki: </strong>Tutki, onko \(\mathsf{x=1}\) epäyhtälön \(\mathsf{-x+4&gt;0}\) ratkaisu.</p>
-					<div class="indent">
-						<p>\(\begin{align}\mathsf{-x+4} &&gt; \mathsf{0}\\ \mathsf{-1+4} &&gt; \mathsf{0}\\ \mathsf{3} &&gt; \mathsf{0}\end{align}\\ \textsf{Yhtälö on tosi.}\)</p>
+					<p>Ennen varsinaisia epäyhtälön ratkatkaisumenetelmiä tutustutaan epäyhtälön ratkaisun tutkimiseen annetulla muuttujan arvolla. Menetelmä on tuttu yhtälöiden parista, eli sijoitetaan muuttujan arvo epäyhtälöön, lasketaan lausekkeiden arvot ja tehdään johtopäätös yksinkertaisen epäyhtälön perusteella.</p>
+					<div class="example">
+						<p><strong>Esimerkki: </strong>Tutki, onko \(\mathsf{x=1}\) epäyhtälön \(\mathsf{-x+4&gt;0}\) ratkaisu.</p>
+						<div class="indent">
+							<p>\(\begin{align}\mathsf{-x+4} &&gt; \mathsf{0}\\ \mathsf{-1+4} &&gt; \mathsf{0}\\ \mathsf{3} &&gt; \mathsf{0}\end{align}\)</p>
+							<p>Epäyhtälö on tosi.</p>
+						</div>
+						<p><strong>Vastaus: </strong>\(\mathsf{x=1}\) on epäyhtälön ratkaisu.</p>
+					</div><br>
+					<div class="example">
+						<p><strong>Esimerkki: </strong>Tutki, onko \(\mathsf{x=-2}\) epäyhtälön \(\mathsf{-3x-2 \leq 2x+3}\) ratkaisu.</p>
+						<div class="indent">
+							<p>\(\begin{align}\mathsf{-3x-2} &\leq \mathsf{2x+3}\\ \mathsf{-3 \cdot (-2) - 2} &\leq \mathsf{2 \cdot (-2) + 3}\\ \mathsf{4} &\leq \mathsf{-1}\end{align}\)</p>
+							<p>Epäyhtälö on epätosi.</p>
+						</div>
+						<p><strong>Vastaus: </strong>\(\mathsf{x=-2}\) ei ole epäyhtälön ratkaisu.</p>
 					</div>
-					<p><strong>Vastaus: </strong>\(\mathsf{x=1}\) on epäyhtälön ratkaisu.</p>
-					<hr>
-					<p><strong>Esimerkki: </strong>Tutki, onko \(\mathsf{x=-2}\) epäyhtälön \(\mathsf{-3x-2 \leq 2x+3}\) ratkaisu.</p>
-					<div class="indent">
-						<p>\(\begin{align}\mathsf{-3x-2} &\leq \mathsf{2x+3}\\ \mathsf{-3 \cdot (-2) - 2} &\leq \mathsf{2 \cdot (-2) + 3}\\ \mathsf{4} &\leq \mathsf{-1}\end{align}\\ \textsf{Yhtälö on epätosi.}\)</p>
-					</div>
-					<p><strong>Vastaus: </strong>\(\mathsf{x=-2}\) ei ole epäyhtälön ratkaisu.</p>
-
-					<h3>Algebrallinen ratkaisu</h3>
+				</div>
+				<h3>Algebrallinen ratkaisu</h3>
+				<div>
 					<p>Epäyhtälö voidaan ratkaista lähes samalla tavalla kuin tavallinenkin yhtälö. Ainoa poikkeus on negatiivisilla luvuilla kertominen ja jakaminen, jolloin epäyhtälön vertailumerkki on käännettävä toiseen suuntaan.</p>
-					<p><strong>Esimerkki: </strong>Ratkaise epäyhtälö \(\mathsf{-2x+3 &gt; 1}\) algebrallisesti.</p>
-					<div class="indent">
-						<p>\(\begin{align}\mathsf{-2x+3} &&gt; \mathsf{1} &&\mathsf{\|-3}\\ \mathsf{-2x} &&gt; \mathsf{-2} &&\mathsf{\|:(-2)}\\ \mathsf{x} &&lt; \mathsf{1}\end{align}\)</p>
+					<div class="example">
+						<p><strong>Esimerkki: </strong>Ratkaise epäyhtälö \(\mathsf{-2x+3 &gt; 1}\) algebrallisesti.</p>
+						<p class="indent">\(\begin{align}\mathsf{-2x+3} &&gt; \mathsf{1} &&\mathsf{\|-3}\\ \mathsf{-2x} &&gt; \mathsf{-2} &&\mathsf{\|:(-2)}\\ \mathsf{x} &&lt; \mathsf{1}\end{align}\)</p>
+						<p><strong>Vastaus: </strong>Epäyhtälön ratkaisuja ovat kaikki muuttujan x arvot, jotka toteuttavat epäyhtälön x &lt; 1.</p>
 					</div>
-					<p><strong>Vastaus: </strong>Epäyhtälön ratkaisuja ovat kaikki muuttujan x arvot, jotka toteuttavat epäyhtälön x &lt; 1.</p>
-
-					<h3>Graafinen ratkaisu</h3>
+				</div>
+				<h3>Graafinen ratkaisu</h3>
+				<div>
 					<p>Graafisessa ratkaisussa piirretään epäyhtälön molempien puolien lausekkeita vastaavat kuvaajat koordinaatistoon ja etsitään niiden leikkauspiste. Leikkaupisteen x-koordinaatin ympäristöä tutkimalla voidaan päätellä epäyhtälön ratkaisu.</p>
+					<div class="example">
 					<p><strong>Esimerkki: </strong>Ratkaise epäyhtälö \(\mathsf{-2x+3 &gt; 1}\) graafisesti.</p>
 					<div class="indent">
-						<p>Piirretään koordinaatistoon suorat \(\mathsf{y=-2x+3}\) ja \(\mathsf{y=1}\).
-						</p>
-						<p><img src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/537043138/ma9j4_teoria_epayhtalo_%20graafinen_ratkaisu.png" alt="" width="399" height="286" role="presentation" class="img-responsive atto_image_button_text-bottom"></p>
+						<p>Piirretään koordinaatistoon suorat \(\mathsf{y=-2x+3}\) ja \(\mathsf{y=1}\).</p>
+						<img src="https://jannevenhoedu.github.io/ma9/j4/t/ma9j4_teoria_epayhtalo_graafinen_ratkaisu.png">
 						<p>Siirryttäessä leikkauspisteestä vasemmalle epäyhtälö \(\mathsf{-2x+3 &gt; 1}\) toteutuu, eli \(\mathsf{y = -2x+3}\) saa suurempia y:n arvoja (on ylempänä) kuin \(\mathsf{y=1}\).</p>
 					</div>
 					<p><strong>Vastaus: </strong>Epäyhtälön ratkaisu on x &lt; 1.</p>
