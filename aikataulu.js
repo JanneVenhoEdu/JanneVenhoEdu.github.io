@@ -11,7 +11,7 @@ $(document).ready(function(){
 		var dateText = $(this).attr("id");
 		var date = new Date(dateText);
 		date.setHours(0, 0, 0, 0);
-		$(this).prepend("<h4>" + weekday[date.getUTCDay()] + " " + date.toLocaleDateString() + "</h4>");
+		$(this).prepend("<strong>" + weekday[date.getUTCDay()] + " " + date.toLocaleDateString() + "</strong>");
 		if (date < today){
 			$("#previous").append($(this).html());
 		} else if (date > today){
@@ -34,16 +34,16 @@ $(document).ready(function(){
 	
 	// Lisätään tyylejä
 	$("#aikataulu").css({
-		"font-family": "Lato, sans-serif",
-		"font-size": "12px"
+		"font-family" : "Lato, sans-serif"
 	});
 	$("#aikataulu p").css({
-		"margin-left" : "30px"
+		"margin-left" : "10px",
+		"font-size" : "14px"
 	});
 	$("#aikataulu h3").css({
 		"background-color" : "#60993E",
 		"color" : "white",
-		"margin-bottom" : "-10px",
+		"margin-bottom" : "10px",
 		"cursor" : "pointer",
 		"font-size" : "18px",
 		"border-radius" : "5px",
