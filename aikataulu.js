@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	// Luodaan alkuun otsikointi
-	$("aikataulu").prepend("<h3>Menneet</h3><div id=\"previous\" style=\"display: none;\"></div><h3>Tänään</h3><div id=\"today\"></div><h3>Tulevat</h3><div id=\"coming\" style=\"display: none;\"></div>");
+	$("#aikataulu").prepend("<h3>Menneet</h3><div id=\"previous\" style=\"display: none;\"></div><h3>Tänään</h3><div id=\"today\"></div><h3>Tulevat</h3><div id=\"coming\" style=\"display: none;\"></div>");
 	// Määritetään viikonpäivien nimet ja luodaan tämän päivän päivämäärä
 	var weekday = ["ma", "ti", "ke", "to", "pe", "la", "su"];
 	var today = new Date();
