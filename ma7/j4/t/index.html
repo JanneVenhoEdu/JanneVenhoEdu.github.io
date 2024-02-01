@@ -97,7 +97,7 @@
 				<h3>Pisteen etäisyys suorasta</h3>
 				<div>
 					<p>Pisteen etäisyys suorasta on sen lyhin etäisyys eli sen kohtisuora etäisyys. Kohtisuora etäisyys saadaan piirtämällä suoralle normaali (eli kohtisuora) pisteen kautta, ja mittaamalla muodostuneen janan pituus. Alla olevassa demonstraatiossa on kuvattu esimerkki pisteen ja suoran välisen etäisyyden mittaamisesta piirtokolmion avulla.</p>
-					<div class="gg" id="pisteen_etaisyys_suorasta" style="width: 524px; height: 489px; border: 1px solid black;">
+					<div class="gg" id="pisteen_etaisyys_suorasta" style="width: 420px; height: 450px; border: 1px solid black;">
 						https://jannevenhoedu.github.io/ma7/j4/t/ma7j4_teoria_pisteen_etaisyys_suorasta.ggb
 					</div>
 				</div>
@@ -106,35 +106,21 @@
 					<p>Suora voidaan määritellä myös muuttujalausekkeen avulla. Lähtöajatuksena on muodostaa y-koordinaatille laskukaava, missä muuttujana on x-koordinaatti. Tällä tavoin luodaan x- ja y-koordinaatin välille riippuvuus eli sääntö, jolla x- ja y-koordinaatit riippuvat toisistaan. Suora on riippuvuuksista yksinkertaisin, mutta käyttämällä kerto- ja yhteenlaskun lisäksi muitakin matematiikassa opittavia työkaluja saadaan aikaan monimutkaisempia riippuvuuksia.</p>
 					<img src="https://jannevenhoedu.github.io/ma7/j4/t/ma7j4_teoria_riippuvuuksia.png" style="width: 400px; height: auto;">
 					<p>Suoran yhtälössä on aina kaksi termiä. Ensimmäisen termin kerrointa kutsutaan suoran kulmakertoimeksi. Toista termiä kutsutaan tuttuun tapaan vakiotermiksi. Molemmilla käsitteillä on tärkeä ja havainnollinen rooli suoran sijainnissa koordinaatistossa. Alla olevissa esimerkeissä kulmakerroin on merkitty punaisella ja vakiotermi sinisellä värillä.</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>\(\mathsf{y = \color{red}{2}x \color{blue}{+\:1}}\qquad\)</td>
-								<td>\(\mathsf{y = \color{red}{-5}x \color{blue}{+\:5}}\qquad\)</td>
-								<td>\(\mathsf{y = \color{red}{3}x \color{blue}{-\:2}}\)</td>
-							</tr>
-						</tbody>
-					</table>
-					<p>Erityisesti muistetaan kertoimet 1 ja 0</p>
-					<table>
-						<tbody>
-							<tr>
-								<td style="padding: 10px;">\(\mathsf{y = x \color{blue}{+\:2}}\qquad\)</td>
-								<td style="padding: 10px;">\(\color{red}{\textsf{Kulmakerroin: 1}}\qquad\)</td>
-								<td style="padding: 10px;">\(\color{blue}{\textsf{Vakiotermi: 2}}\)</td>
-							</tr>
-							<tr>
-								<td style="padding: 10px;">\(\mathsf{y = \color{blue}{-3}}\qquad\)</td>
-								<td style="padding: 10px;">\(\color{red}{\textsf{Kulmakerroin: 0}}\qquad\)</td>
-								<td style="padding: 10px;">\(\color{blue}{\textsf{Vakiotermi: -3}}\)</td>
-							</tr>
-							<tr>
-								<td style="padding: 10px;">\(\mathsf{y = \color{red}{4}x}\qquad\)</td>
-								<td style="padding: 10px;">\(\color{red}{\textsf{Kulmakerroin: 4}}\qquad\)</td>
-								<td style="padding: 10px;">\(\color{blue}{\textsf{Vakiotermi: 0}}\)</td>
-							</tr>
-						</tbody>
-					</table>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Määritä  suoran yhtälöstä kulmakerroin ja vakiotermi.</p>
+						<div class="indent">
+							<p>a) \(\mathsf{y = {\color{red}2}x\color{blue}+ 1}\)</p>
+							<p class="indent">Kulmakerroin on <span style="color: red">2</span> ja vakiotermi on <span style="color: blue">1</span>.</p>
+							<p>b) \(\mathsf{y = {\color{red}-4}x\color{blue}+ 5}\)</p>
+							<p class="indent">Kulmakerroin on <span style="color: red">-4</span> ja vakiotermi on <span style="color: blue">5</span>.</p>
+							<p>c) \(\mathsf{y = {\color{red}-}x\color{blue}- 2}\)</p>
+							<p class="indent">Kulmakerroin on <span style="color: red">-1</span> ja vakiotermi on <span style="color: blue">-2</span>.</p>
+							<p>d) \(\mathsf{y = x}\)</p>
+							<p class="indent">Kulmakerroin on <span style="color: red">1</span> ja vakiotermi on <span style="color: blue">0</span>.</p>
+							<p>e) \(\mathsf{y = \color{blue}- 6}\)</p>
+							<p class="indent">Kulmakerroin on <span style="color: red">0</span> ja vakiotermi on <span style="color: blue">-6</span>.</p>
+						</div>
+					</div>
 					<h4>Kulmakerroin</h4>
 					<p>Kulmakerroin kertoo suoran kaltevuuden. Mittayksikkönä voidaan ajatella käytettävän y-akselin suuntaista muutosta, kun x-koordinaatin suuruus kasvaa yhdellä. Toisin sanoen, piirretään suoralle (mihin tahansa) piste, liikutaan yhden verran oikealle, ja lasketaan kuinka paljon tulee siirtyä ylös (tai alas), jotta päästään takaisin suoralle. Alla oleva kuva havainnollistaa kulmakertoimen \(\mathsf{k}\) määrittämistä suoran kuvaajasta.</p>
 					<img src="https://jannevenhoedu.github.io/ma9/j1/t/ma9j1_teoria_kulmakerroin1.png" style="width: 500px; height: auto;">
