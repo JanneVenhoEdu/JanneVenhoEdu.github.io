@@ -1,11 +1,31 @@
 function pyoristaPaikka(luku, tarkkuus){
 	luku = +String(luku).replace(",", ".");
-	var pyoristettyLuku = (luku/Math.pow(10, -tarkkuus)).toFixed() * Math.pow(10, -tarkkuus);
+	var pyoristettyLuku = siirraPilkkua(siirraPilkkua(luku, tarkkuus).toFixed(), -tarkkuus);
 	if (tarkkuus > 0){
 		return pyoristettyLuku.toFixed(tarkkuus);
 	} else {
 		return pyoristettyLuku;
 	}
+}
+function siirraPilkkua(luku, siirto){
+	luku = String(luku).replace(/^0/, "");
+   	var i = luku.indexOf(".");
+    [koko, desi] = luku.split(".");
+    if (desi == undefined) {
+    	desi = "";
+        i = koko.length;
+    }
+    var numerot = koko + desi;
+    uusiPaikka = i + siirto;
+    if (uusiPaikka < 0){
+    	numerot = numerot.padStart(-uusiPaikka+numerot.length+1, "0");
+        return +(numerot[0] + "." + numerot.substring(1));
+    } else if (uusiPaikka >= numerot.length){
+    	numerot = numerot.padEnd(uusiPaikka, "0");
+        return +numerot;
+    } else {
+    	return +(numerot.substring(0, uusiPaikka) + "." + numerot.substring(uusiPaikka));
+    }
 }
 
 function merkitseviaNumeroita(luku){
