@@ -1,4 +1,4 @@
-// Seuraava-painike
+// Seuraava-painike	
 var esim = ggbApplet.getValue("esim");
 if (esim < 10) {
     ggbApplet.setValue("esim", esim + 1);
