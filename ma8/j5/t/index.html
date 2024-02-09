@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fi">
+	<head>
+		<title>Teoria - Geometria</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+		<script src="../../../teoria.js"></script>
+		<link rel="stylesheet" media="screen and (max-width: 350px)" href="../../../teorialohko.css">
+		<link rel="stylesheet" media="screen and (min-width: 350px)" href="../../../teoriakirja.css">
+	</head>
+	<body>
+		<div id="nav">
+			<div id="button">
+				<div id="bar1"></div>
+				<div id="bar2"></div>
+				<div id="bar3"></div>
+			</div>
+			<div id="links"></div>
+			<div id="caption"></div>
+			<a id="course" href="https://jannevenhoedu.github.io/ma8/j5/t" target="_blank"></a>
+		</div>
+		<div id="main">
+			<h1>MA8 Jakso 5: Pythagoraan lause</h1>
+			<h2>1. Kertausta</h2>
+			<div>
+				<h3>Pituusyksiköt</h3>
+				<div>
+					<p>Pituuden perusyksikkö on <strong>metri</strong>, ja se lyhennetään pienellä \(\textsf{m}\)-kirjaimella. Pienempiä ja suurempia pituusyksiköitä saadaan kertomalla tai jakamalla <strong>luvulla 10</strong>, ja käyttämällä määrättyjä etuliitteitä, kuten milli-, sentti- tai kilo. Perusyksikköä metri lähimmät pituusyksiköt lyhenteineen on esitetty alla olevassa taulukossa.</p>
+					<div class="indent shrink">
+						<table>
+							<thead>
+								<tr>
+									<th>km</th>
+									<th>hm</th>
+									<th>dam</th>
+									<th>m</th>
+									<th>dm</th>
+									<th>cm</th>
+									<th>mm</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>kilo&shy;metri</td>
+									<td>hehto&shy;metri</td>
+									<td>deka&shy;metri</td>
+									<td>metri</td>
+									<td>desi&shy;metri</td>
+									<td>sentti&shy;metri</td>
+									<td>milli&shy;metri</td>
+								</tr>
+								<tr>
+									<td>1000 m</td>
+									<td>100 m</td>
+									<td>10 m</td>
+									<td>1 m</td>
+									<td>0,1 m</td>
+									<td>0,01 m</td>
+									<td>0,001 m</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					</div>
+					<p>Kun pituus muutetaan pienempään yksikköön, lukua kerrotaan 10:llä.</p>
+					<div class="indent">
+					<table>
+					<tbody>
+					<tr>
+					<td>\(\textsf{a) 8 cm = 80 mm}\)</td>
+					<td><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/76143072/ma7j6_teoria_pituusyksikot_esim1.png" alt="" width="297" height="67"></td>
+					</tr>
+					<tr>
+					<td>\(\textsf{b) 6,4 m = 640 cm}\)</td>
+					<td><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/76143072/ma7j6_teoria_pituusyksikot_esim2.png" alt="" width="297" height="67"></td>
+					</tr>
+					<tr>
+					<td>\(\textsf{c) 0,2 km = 200 m}\)</td>
+					<td><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/76143072/ma7j6_teoria_pituusyksikot_esim3.png" alt="" width="297" height="67"></td>
+					</tr>
+					<tr>
+					<td>\(\rule{10em}{0pt}\)</td>
+					</tr>
+					</tbody>
+					</table>
+					</div>
+					<p>Kun muutetaan suurempaan yksikköön, luku vastaavasti jaetaan 10:llä.</p>
+					<div class="indent">
+					<table>
+					<tbody>
+					<tr>
+					<td>\(\textsf{d) 2500 dm = 250 m}\)</td>
+					<td><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/76143072/ma7j6_teoria_pituusyksikot_esim4.png" alt="" width="297" height="67"></td>
+					</tr>
+					<tr>
+					<td>\(\textsf{e) 140 dam = 1,4 km}\)</td>
+					<td><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/76143072/ma7j6_teoria_pituusyksikot_esim5.png" alt="" width="297" height="67"></td>
+					</tr>
+					<tr>
+					<td>\(\textsf{f) 952 mm = 0,952 m}\)</td>
+					<td><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/76143072/ma7j6_teoria_pituusyksikot_esim6.png" alt="" width="297" height="67"></td>
+					</tr>
+					<tr>
+					<td>\(\rule{10em}{0pt}\)</td>
+					</tr>
+					</tbody>
+					</table>
+					</div>
+				</div>
+				<h3>Pinta-alayksiköt</h3>
+				<p>Pinta-alan perusyksikkö on <strong>neliömetri</strong>, ja se lyhennetään \(\mathsf{m^2}\)-merkinnällä (\(\mathsf{1\:m \cdot 1\:m = 1\:m^2}\)). Pienempiä ja suurempia pinta-alayksiköitä saadaan kertomalla tai jakamalla <strong>luvulla 100</strong>, ja käyttämällä määrättyjä etuliitteitä, kuten pituusyksiköissä. Poikkeuksena on neliöhehtometri eli <strong>hehtaari</strong> sekä neliödekametri eli <strong>aari</strong>. Tärkeimmät pinta-alayksiköt lyhenteineen on esitetty alla olevassa taulukossa.</p>
+				<div class="indent">
+				<table>
+				<tbody>
+				<tr style="text-align: center;">
+				<td style="border: solid black 1px;">\(\mathsf{km^2}\)</td>
+				<td style="border: solid black 1px;">\(\mathsf{ha}\)</td>
+				<td style="border: solid black 1px;">\(\mathsf{a}\)</td>
+				<td style="border: solid black 1px;">\(\mathsf{m}\)</td>
+				<td style="border: solid black 1px;">\(\mathsf{dm^2}\)</td>
+				<td style="border: solid black 1px;">\(\mathsf{cm^2}\)</td>
+				<td style="border: solid black 1px;">\(\mathsf{mm^2}\)</td>
+				</tr>
+				<tr style="text-align: center;">
+				<td style="border: solid black 1px; padding: 6px;">neliökilometri</td>
+				<td style="border: solid black 1px; padding: 6px;">hehtaari</td>
+				<td style="border: solid black 1px; padding: 6px;">aari</td>
+				<td style="border: solid black 1px; padding: 6px;">metri</td>
+				<td style="border: solid black 1px; padding: 6px;">neliödesimetri</td>
+				<td style="border: solid black 1px; padding: 6px;">neliösenttimetri</td>
+				<td style="border: solid black 1px; padding: 6px;">neliömillimetri</td>
+				</tr>
+				<tr style="text-align: center;">
+				<td style="border: solid black 1px;">\(\textsf{1 000 000 m}\mathsf{^2}\)</td>
+				<td style="border: solid black 1px;">\(\textsf{10 000 m}\mathsf{^2}\)</td>
+				<td style="border: solid black 1px;">\(\textsf{100 m}\mathsf{^2}\)</td>
+				<td style="border: solid black 1px;">\(\textsf{1 m}\mathsf{^2}\)</td>
+				<td style="border: solid black 1px;">\(\textsf{0,01 m}\mathsf{^2}\)</td>
+				<td style="border: solid black 1px;">\(\textsf{0,0001 m}\mathsf{^2}\)</td>
+				<td style="border: solid black 1px;">\(\textsf{0,000001 m}\mathsf{^2}\)</td>
+				</tr>
+				<tr>
+				<td>\(\rule{5em}{0pt}\)</td>
+				<td>\(\rule{5em}{0pt}\)</td>
+				<td>\(\rule{5em}{0pt}\)</td>
+				<td>\(\rule{5em}{0pt}\)</td>
+				<td>\(\rule{5em}{0pt}\)</td>
+				<td>\(\rule{5em}{0pt}\)</td>
+				<td>\(\rule{5em}{0pt}\)</td>
+				</tr>
+				</tbody>
+				</table>
+				</div>
+				<p><strong>Esimerkki:</strong> Kun siirrytään pienempiin yksiköihin, niin jokaisessa vaiheessa kerrotaan luvulla 100.</p>
+				<div class="indent">
+				<table>
+				<tbody>
+				<tr>
+				<td>\(\mathsf{\textsf{a) 8 cm}^2 = \textsf{800 mm}^2}\)</td>
+				<td><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/76143072/ma7j6_teoria_pintaalayksikot_esim1.png" alt="" width="299" height="66"></td>
+				</tr>
+				<tr>
+				<td>\(\mathsf{\textsf{b) 6,4 m}^2 = \textsf{64 000 cm}^2}\)</td>
+				<td><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/76143072/ma7j6_teoria_pintaalayksikot_esim2.png" alt="" width="299" height="66"></td>
+				</tr>
+				<tr>
+				<td>\(\mathsf{\textsf{c) 0,2 km}^2 = \textsf{20 000 m}^2}\)</td>
+				<td><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/76143072/ma7j6_teoria_pintaalayksikot_esim3.png" alt="" width="299" height="66"></td>
+				</tr>
+				<tr>
+				<td>\(\rule{12em}{0pt}\)</td>
+				</tr>
+				</tbody>
+				</table>
+				</div>
+				<p>Kun muutetaan suurempaan yksikköön, luku vastaavasti jaetaan 100:lla.</p>
+				<div class="indent">
+				<table>
+				<tbody>
+				<tr>
+				<td>\(\mathsf{\textsf{d) 2500 dm}^2 = \textsf{25 m}^2}\)</td>
+				<td><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/76143072/ma7j6_teoria_pintaalayksikot_esim4.png" alt="" width="299" height="66"></td>
+				</tr>
+				<tr>
+				<td>\(\mathsf{\textsf{e) 1 400 a} = \textsf{0,14 km}^2}\)</td>
+				<td><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/76143072/ma7j6_teoria_pintaalayksikot_esim5.png" alt="" width="299" height="66"></td>
+				</tr>
+				<tr>
+				<td>\(\mathsf{\textsf{f) 2 195 000 mm}^2 = \textsf{2,195 m}^2}\)</td>
+				<td><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/76143072/ma7j6_teoria_pintaalayksikot_esim6.png" alt="" width="299" height="66"></td>
+				</tr>
+				<tr>
+				<td>\(\rule{12em}{0pt}\)</td>
+				</tr>
+				</tbody>
+				</table>
+				</div>
+				<hr style="color: black; height: 1px; background-color: black;">
+				<h3>Piiri</h3>
+				<p>Monikulmiosta voidaan laskea <strong>piiri</strong>, joka on sen sivujen summa. Piiriä merkitään muuttujalla \(\textsf{p}\).</p>
+				<p><strong>Esimerkki: </strong>Laske monikulmion ABCD piiri.</p>
+				<div class="indent">
+				<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/76143072/ma7j6_teoria_monikulmio3.png" alt="" width="599" height="196"></p>
+				</div>
+				<hr style="color: black; height: 1px; background-color: black;">
+				<h3>Pinta-ala</h3>
+				<p>Pinta-ala kuvaa kaksiulotteisen kuvion suuruutta. Suorakulmion pinta-alan muistamalla pääsee jo melko pitkälle geometrian tehtävissä. Jakson aihe liittyy suorakulmaisiin kolmioihin, joten on järkevää kerrata kolmion pinta-alan laskukaava sekä hyödyllisenä kertauksena myös puolisuunnikkaan pinta-alan laskeminen. </p>
+				<p><strong>Suorakulmion pinta-ala</strong></p>
+				<p>Suorakulmion (ja neliön) pinta-ala on kaikkein selkein pinta-ala laskettavaksi. Pinta-alan laskemista varten suorakulmiosta tulee tuntea sen <strong>kanta</strong> (leveys) ja <strong>korkeus</strong>. Suorakulmion pinta-ala on kannan ja korkeuden tulo.</p>
+				<div class="indent">
+				<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/76143072/ma7j6_teoria_suorakulmion_pinta-ala.png" alt="" width="449" height="141"></p>
+				</div>
+				<p><strong>Esimerkki: </strong>Laske suorakulmion pinta-ala.</p>
+				<div class="indent">
+				<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/76143072/ma7j6_teoria_suorakulmion_pinta-ala_esim.png" alt="" width="399" height="135"></p>
+				</div>
+				<p><strong>Kolmion pinta-ala</strong></p>
+				<p>Kolmion pinta-alaa laskettaessa tarvitaan suorakulmion tapaan kolmion leveys (<strong>kanta</strong>) ja <strong>korkeus</strong>. Leveydeksi eli kannaksi valitaan jokin kolmion sivu, jolloin korkeus on kannan ja kolmannen kärkipisteen välinen kohtisuora etäisyys. Pinta-ala \(\textsf{A}\) lasketaan kertomalla kanta \(\textsf{a}\) ja korkeus \(\textsf{h}\) keskenään, ja jakamalla saatu tulo kahdella. Jos kahdella jakaminen hämmentää, kannattaa tutustua nelikulmioiden pinta-alan laskemiseen, jolloin havaitaan kolmion olevan aina jonkin nelikulmion (suunnikkaan) puolikas.</p>
+				<div class="indent">
+				<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/76143072/ma7j6_teoria_kolmion_pinta-ala.png" alt="" width="698" height="101"></p>
+				</div>
+				<p>Kun kolmion korkeus merkitään näkyviin, sitä kutsutaan <strong>korkeusjanaksi</strong>. Suorakulmaisella kolmiolla kannaksi ja korkeudeksi kannattaa valita kohtisuorat sivut. Tylppäkulmaisen kolmion tapauksessa korkeusjana voi tulla kolmion ulkopuolelle, jolloin se on kohtisuorassa kannalle piirretyn jatkeen kanssa. </p>
+				<p><strong>Esimerkki:</strong> Laske kolmion pinta-ala.</p>
+				<div class="indent"><iframe style="border: 0px;" title="ma7j5_teoria_kolmion_pinta-ala_esim" src="https://www.geogebra.org/material/iframe/id/rkjrvh3v/width/399/height/340/border/888888/sfsb/false/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="399px" height="340px" scrolling="no"> </iframe></div>
+				<p><strong>Suunnikkaan pinta-ala</strong></p>
+				<p>Suunnikkaan pinta-alan laskemista voidaan lähestyä kahdella eri tavalla. Ensiksi, suunnikas voidaan jakaa kahdeksi yhteneväksi (yhtä suureksi) kolmioksi, joiden pinta-alat selvittämällä ja yhteen laskemalla saadaan suunnikkaan pinta-ala. Toisaalta, suunnikas voidaan ajatella suorakulmioksi, jonka yksi kulma on siirtynyt kuvion toiselle puolelle. Tästä voidaan päätellä, että pinta-ala lasketaan kuten vastaavan suorakulmionkin, eli kannan ja korkeuden tulona.</p>
+				<div class="indent"><iframe style="border: 0px;" title="ma7j5_teoria_suunnikkaan_pintaala" src="https://www.geogebra.org/material/iframe/id/rezgagsq/width/444/height/356/border/888888/sfsb/false/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="444px" height="356px" scrolling="no"> </iframe></div>
+				<p><strong>Esimerkki:</strong> Laske suunnikkaan pinta-ala.</p>
+				<div class="indent"><iframe style="border: 0px;" title="ma7j5_teoria_suunnikkaan_pintaala_esim" src="https://www.geogebra.org/material/iframe/id/sfnw3gst/width/407/height/363/border/888888/sfsb/false/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="407px" height="363px" scrolling="no"> </iframe></div>
+				<p>Desimaalilukujen pyöristämistä käsiteltiin 7. luokalla, ja siihen liittyviä käytäntöjä on hyvä kerrata varsinkin geometrian yhteydessä, kun käsitellään mitattuja epätarkkoja arvoja. Pyöristystarkkuuteen vaikuttaa mittaustarkkuuden lisäksi laskutoimitukset, joita "epätarkoilla" arvoilla lasketaan. Vastausta ei voi, eikä kannata antaa liian tarkasti. Tässä vaiheessa ei paneuduta sen tarkemmin mittausvirheen määrittämiseen, vaan todetaan hyvät yleiskäytännöt summan ja erotuksen sekä tulon ja osamäärän pyöristämiseen.<br><br>Desimaalilukujen tapauksessa pyöristäminen tulee ajankohtaiseksi paljon useammin kuin kokonaislukujen tapauksessa. Usein esimerkiksi jakolasku ei mene tasan, ja vastauksena voi olla päättymätön desimaaliluku, joka pitäisi pyöristää järkevään tarkkuuteen. Pyöristyksessä tarkkuus voidaan esittää kolmella eri tavalla:<br><br></p>
+				<ol>
+				<li>Numeron paikan perusteella</li>
+				<li>Desimaalien lukumäärän perusteella (summa ja erotus)</li>
+				<li>Merkitsevien numeroiden perusteella (tulo ja osamäärä)</li>
+				</ol>
+				<p>Valittu tarkkuus määritellään sen mukaan, mistä laskutoimituksesta tai mittalaitteesta pyöristettävä desimaaliluku on peräisin. <strong>Epätarkin lähtöarvo määrittää aina pyöristyksen tarkkuuden.</strong></p>
+				<hr style="color: black; height: 1px; background-color: black;">
+				<h4>1. Pyöristäminen numeron paikan perusteella</h4>
+				<p>Esimerkiksi sadasosien tarkkuuteen pyöristettäessä pyöristysraja tulee siis sadasosia kuvaavan numeron perään.</p>
+				<p><strong>Esim. </strong>Pyöristä luku 3,1415 sadasosien tarkkuuteen.</p>
+				<div class="indent">
+				<p>\( \mathsf{\text{3,14} \color{red}{|}\text{15} \approx \text{3,14}} \)</p>
+				</div>
+				<p>Pyöristyksen tapahtuessa desimaaliosan puolella, pyöristettyjä desimaaleja ei korvata nollilla, vaan viimeinen numero (oikealla) kuvaa pyöristetyn luvun tarkkuuttaa, ja sen on oltava sama kuin haluttu tarkkuus.</p>
+				<hr style="color: black; height: 1px; background-color: black;">
+				<h4 id="desimaalit">2. Pyöristäminen desimaalien lukumäärän perusteella</h4>
+				<p>Yhteen- ja vähennyslaskujen vastausta pyöristettäessä tutkitaan lähtöarvojen desimaalien lukumäärää, jonka perusteella vastauskin pyöristetään. Tästä tarkemmin alempana. Tarkkuuden ilmoittamiseen desimaalien lukumäärä on selkeä.</p>
+				<p><strong>Esim.</strong> Pyöristä luku 9,5297 kolmen desimaalin tarkkuuteen.</p>
+				<div class="indent">
+				<p>\( \mathsf{\text{9,529}\color{red}{|}\text{7} \approx \text{9,530}} \)</p>
+				</div>
+				<p>Jos lasketaan yhteen esimerkiksi kahta metreinä ilmoitettua pituutta, joista toinen on mitattu kahden desimaalin (senttimetrin) tarkkuudella ja toinen kolmen desimaalin (millimetrin) tarkkuudella, joudutaan valitsemaan lähtöarvoista epätarkempi (kaksi desimaalia), jonka mukaisesti vastaus pyöristetään.</p>
+				<p><span id="merkitsevat"></span></p>
+				<p><strong>Esim.</strong> Laske pituuksien 14,39 m ja 3,217 m summa.</p>
+				<div class="indent">
+				<p>\( \mathsf{\text{14,39 m} + \text{3,217 m} = \text{17,607 m} \approx \text{17,61 m}} \)</p>
+				</div>
+				<hr style="color: black; height: 1px; background-color: black;">
+				<h4>3. Pyöristäminen merkitsevien numeroiden perusteella</h4>
+				<p>Esimerkiksi kerto- ja jakolaskujen vastauksia pyöristettäessä tutkitaan lähtöarvojen merkitsevien numeroiden määrää. Tutustutaan ensin merkitseviin numeroihin, jotta niiden avulla pyöristäminen onnistuu.</p>
+				<h3>Merkitsevät numerot</h3>
+				<p><strong>Kokonaislukujen</strong> tapauksessa merkitseviä numeroita ovat kaikki numerot, paitsi luvun lopussa olevat nollat.</p>
+				<p><strong>Esim.</strong> Montako merkitsevää numeroa on luvussa</p>
+				<div class="indent">
+				<p>a) 204 912<br>Luvun lopussa ei ole nollia, joten kaikki numerot ovat merkitseviä.<br><strong>vast.</strong> Luvussa 204 912 on kuusi merkitsevää numeroa.</p>
+				<p>b) 842 500<br>Luvun lopussa on kaksi nollaa, joten vain numerot 8, 4, 2 ja 5 ovat merkitseviä.<br><strong>vast.</strong> Luvussa 842 500 on neljä merkitsevää numeroa.</p>
+				</div>
+				<p><strong>Desimaalilukujen</strong> tapauksessa merkitseviä numeroita ovat kaikki numerot, paitsi luvun alussa olevat nollat.</p>
+				<p><strong>Esim.</strong> Montako merkitsevää numeroa on luvussa</p>
+				<div class="indent">
+				<p>a) 3,1415<br>Luvun alussa ei ole nollia, joten kaikki numerot ovat merkitseviä.<br><strong>vast.</strong> Luvussa 3,1415 on viisi merkitsevää numeroa.</p>
+				<p>b) 0,00280<br>Luvun alussa on kolme nollaa, joten vain numerot 2, 8 ja 0 ovat merkitseviä.<br><strong>vast.</strong> Luvussa 0,00280 on kolme merkitsevää numeroa.</p>
+				</div>
+				<h3>Pyöristäminen merkitsevien numeroiden tarkkuuteen</h3>
+				<p>Pyöristystarkkuus voidaan antaa siis myös haluttujen merkitsevien numeroiden perusteella.</p>
+				<p><strong>Esim.</strong> Pyöristä luku 1,893 kahden merkitsevän numeron tarkkuuteen.</p>
+				<div class="indent">
+				<p>\( \mathsf{\text{1,8}\color{red}{|}\text{93} \approx \text{1,9}} \)</p>
+				</div>
+				<p>Mittaustulosten kerto- ja jakolaskun tapauksessa epätarkkuus saattaisi kertaantua liian suureksi, jos sen vastauksen pyöristämiseen käytettäisiin desimaalien tarkkuutta. Tämän vuoksi tulos pyöristetäänkin merkitsevien numeroiden tarkkuudella.</p>
+				<p><strong>Esim.</strong> Laske A4-paperin pinta-ala, kun sen mitat ovat 29,7 cm ja 21 cm.</p>
+				<div class="indent">
+				<p>\( \mathsf{\text{29,7 cm} \cdot \text{21 cm} = \text{623,7 cm}^2 \approx \text{620 cm}^2} \)<br><strong>vast.</strong> A4-paperin pinta-ala on 620 cm<sup>2</sup>.</p>
+				</div>
+				<p>Lähtöarvoista 29,7 oli siis kolmen merkitsevän ja 21 vain kahden merkitsevän numeron tarkkuudella ilmoitettu. Näistä valitaan vastauksen pyöristystarkkuudeksi epätarkempi, eli kaksi merkitsevää numeroa. Jos oltaisiin varmoja, että 21 cm onkin tarkalleen 21,0 cm, niin tällöin vastaus pyöristettäisiin kolmen merkitsevän numeron tarkkuuteen, ja vastaus olisi 624 cm<sup>2</sup>.</p>
+			</div>
+			<h2>2. Toisen asteen yhtälö</h2>
+			<div>
+				<p>Monet suureiden väliset riippuvuudet eivät rajoitu suoraan tai kääntäen verrannollisuuuteen tai muihin ns. lineaarisiin riippuvuuksiin, jossa suure saadaan kertomalla tai jakamalla toinen suure jollakin luvulla. Suure voi olla riippuvainen toisen suureen neliöstä, jolloin käänteisen ongelman ratkaiseminen vaatii toisen asteen yhtälön ratkaisemista. Tällaisia suureita ovat esimerkiksi neliön sivu ja pinta-ala (\(\mathsf{A = a^2}\)), suorakulmaisen kolmion kateettien pituuksien neliöiden summa ja hypotenuusan neliö (Pythagoraan lause \(\mathsf{a^2 + b^2 = c^2}\)), ympyrän säde ja pinta-ala (\(\mathsf{A \sim r^2}\)) tai fysiikan puolelta ilmanvastus ja nopeus (\(\mathsf{F_v \sim v^2}\)).</p>
+				<hr style="color: black; height: 1px; background-color: black;">
+				<h3>Kertausta: Ensimmäisen asteen yhtälö</h3>
+				<p>Aikaisemmin ollaan opittu ratkaisemaan ns. ensimmäisen asteen yhtälöitä, joissa on esiintynyt termejä, joiden aste on ollut 1 tai 0 (vakiotermi). Ensimmäisen asteen yhtälöitä ovat esimerkiksi:</p>
+				<div class="indent">
+				<p>\(\textsf{a) }\mathsf{2x + 1 = 7}\)</p>
+				<p>\(\textsf{b) }\mathsf{-3x + 2 = x + 10}\)</p>
+				</div>
+				<p>Yhtälöitä ratkaistiin vaiheittain lisäämällä, vähentämällä, kertomalla tai jakamalla yhtälöä puolittain tavoitteena saada muuttuja (yleensä x) jäämään yksin yhtälön toiselle puolelle. Puolittain suoritettavaa laskutoimitusta merkittiin yhtälön rivin perään \(||\)-merkkien jälkeen.</p>
+				<p><strong>Esimerkki: </strong>Ratkaise yhtälö.</p>
+				<div class="indent">
+				<p>\(\begin{align}\textsf{a) }\mathsf{2x+1} &amp;= \mathsf{7} &amp;&amp;\mathsf{|| -1}\\\mathsf{2x} &amp;= \mathsf{6} &amp;&amp;\mathsf{|| :2}\\\mathsf{x} &amp;= \mathsf{3}\end{align}\)</p>
+				<p>\(\begin{align}\textsf{b) }\mathsf{-3x+2} &amp;= \mathsf{x + 10} &amp;&amp;\mathsf{|| -x}\\\mathsf{-4x+2} &amp;= \mathsf{10} &amp;&amp;\mathsf{|| -2}\\\mathsf{-4x} &amp;= \mathsf{8} &amp;&amp;\mathsf{|| :(-4)}\\\mathsf{x} &amp;= \mathsf{-2}\end{align}\)</p>
+				</div>
+				<hr style="color: black; height: 1px; background-color: black;">
+				<h3>Toisen asteen yhtälö</h3>
+				<p>Toisen asteen yhtälöllä tarkoitetaan yhtälöä, jossa esiintyy termejä, joiden aste on 2. Toisin sanoen muuttuja (esim. x) on korotettu toiseen potenssiin (neliö). Toisen asteen yhtälöitä ovat esimerkiksi:</p>
+				<div class="indent">
+				<p>\(\textsf{a) }\mathsf{x^2 = 36}\)</p>
+				<p>\(\textsf{b) }\mathsf{5x^2 = 20}\)</p>
+				<p>\(\textsf{c) }\mathsf{-2x^2 + 7 = -11}\)</p>
+				<p>\(\textsf{d) }\mathsf{x^2 = 4x - 3}\)</p>
+				</div>
+				<p>Yhtälön ratkaisemisessa käytetään aina käänteisiä laskutoimituksia puolittain, jotta muuttuja saadaan jäämään yksin toiselle puolelle yhtälöä. Toiseen potenssiin korottamiselle eli neliölle vastakkainen laskutoimitus on tietenkin neliöjuuri.</p>
+				<p><strong>Esimerkki: </strong>Ratkaise yhtälö.</p>
+				<div class="indent">
+				<p>\(\begin{align}\textsf{a) }\mathsf{x^2} &amp;= \mathsf{36} \quad &amp;\mathsf{|| \sqrt{\quad}}\\\mathsf{x} &amp;= \mathsf{\pm6}\end{align}\)</p>
+				</div>
+				<p>Miksi vastauksen edessä on \(\pm\)-merkki? Mitä se tarkoittaa?</p>
+				<p>Jos tarkastellaan esimerkkiä sillä ajatuksella, että "Mikä luku sopii x:n paikalle?" havaitaan, että muuttujan x paikalle sopii sekä positiviinen \(\mathsf{6}\) että negatiivinen \(\mathsf{-6}\). \(\pm\)-merkki on "plusmiinus"-merkki, jolla voidaan ilmoitaa, että molemmat etumerkit (+ tai -) ovat sallittuja. Pidemmin saman voisi merkitä kirjoittamalla ratkaisut erikseen "tai"-sanan avulla.</p>
+				<p><strong>Esimerkki: </strong>Ratkaise yhtälö.</p>
+				<div class="indent">
+				<p>\(\begin{align}\textsf{a) }\mathsf{x^2} &amp;= \mathsf{36} \quad &amp;\mathsf{|| \sqrt{\quad}}\\\mathsf{x} &amp;= \mathsf{6}\\&amp;\textsf{tai}\\\mathsf{x} &amp;= \mathsf{-6}\end{align}\)</p>
+				</div>
+				<p>Laskujärjestys sanoo, että potenssit ja neliöjuuret lasketaan ennen kerto- ja jakolaskuja tai yhteen- ja vähennyslaskuja. Koska yhtälönratkaisussa toimitaan aina käänteisesti myös laskujärjestyksen suhteen, suoritetaan kaikki muut ratkaisun vaiheet ennen neliöjuuren ottamista puolittain.</p>
+				<p><strong>Esimerkki: </strong>Ratkaise yhtälö.</p>
+				<div class="indent">
+				<p>\(\begin{align}\textsf{b) }\mathsf{5x^2} &amp;= \mathsf{20} \quad &amp;&amp;\mathsf{|| :5}\\ \mathsf{x^2} &amp;= \mathsf{4} &amp;&amp;\mathsf{|| \sqrt{\quad}}\\ \mathsf{x} &amp;= \mathsf{\pm2} \end{align}\)</p>
+				<p>\(\begin{align}\textsf{c) }\mathsf{-2x^2 + 7} &amp;= \mathsf{-11} \quad &amp;&amp;\mathsf{|| -7}\\ \mathsf{-2x^2} &amp;= \mathsf{-18} \quad &amp;&amp;\mathsf{|| :(-2)}\\ \mathsf{x^2} &amp;= \mathsf{9} &amp;&amp;\mathsf{|| \sqrt{\quad}}\\ \mathsf{x} &amp;= \mathsf{\pm3} \end{align}\)</p>
+				</div>
+			</div>
+			<h2>3. Suorakulmainen kolmio</h2>
+			<div>
+				<p>7. luokalla luokteltiin erilaisia kolmioita sen kulmien perusteella. Kolmio voi olla terävä-, suora- tai tylppäkulmainen. Tässä jaksossa (sekä 9. luokan Trigonometria-jaksossa) keskitytään suorakulmaisiin kolmioihin. Suorakulmainen kolmio voidaan ajatella puolikkaana suorakulmiona, jolloin suorakulmaiseen kolmioon liittyvät lainalaisuudet ovat sovellettavissa suorakulmioihin liittyviin käytännön ongelmiin.</p>
+				<h3>Suorakulmaisen kolmion osat</h3>
+				<p>Suoran kulman viereisiä sivuja kutsutaan <strong>kateeteiksi</strong> ja sitä vastassa olevaa sivua <strong>hypotenuusaksi</strong>. Hypotenuusa on sivuista pisin.</p>
+				<div class="indent">
+				<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/821170410/ma8j5_teoria_suorakulmainen_kolmio.png?time=1644828637406" alt="" width="299" height="200"></p>
+				</div>
+				<p>Kateetteja merkitään usein muuttujilla \(\mathsf{a}\) ja \(\mathsf{b}\). Hypotenuusaa merkitään muuttujalla \(\mathsf{c}\).</p>
+				<h3>Suorakulmaisen kolmion pinta-ala</h3>
+				<p>Suorakulmaisen kolmion pinta-ala lasketaan kuten minkä tahansa kolmion pinta-ala, mutta suorakulmaisella kolmiolla kateetit ovat jo lähtökohtaisesti kohtisuorassa toisiaan vastaan, jolloin ne kannattaa valita kannaksi ja korkeudeksi.</p>
+				<div class="indent">
+				<p>\(\mathsf{A = \dfrac{a \cdot b}{2}}\)</p>
+				</div>
+				<p><strong>Esimerkki: </strong>Laske kolmion pinta-ala.</p>
+				<div class="indent">
+				<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/821170410/ma8j5_teoria_suorakulmaisen_kolmion_pinta_ala.png" alt="" width="348" height="190"></p>
+				<p>\(\mathsf{A = \dfrac{a \cdot b}{2} = \dfrac{8,\!5\:cm \cdot3,\!6\:cm}{2} = \dfrac{30,\!6\:cm^2}{2} = 15,\!3\:cm^2}\)</p>
+				</div>
+			</div>
+			<h2>4. Pythagoraan lause</h2>
+			<div>
+				<p>Ensimmäisiä todisteita Pythagoraan lauseen käytöstä löytyy babylonialaisten n. vuosilta 1800-1600 eaa. peräisin olevista savitauluista. Samos-saarelta kotoisin oleva, kreikkalaisen matematiikan yksi tunnetuin edustaja, Pythagoras (572 - 497 eaa.) vaikutti yli tuhat vuotta myöhemmin, mutta sai nimensä lauseen yhteyteen, todennäköisesti todistettuaan sen itse tai seuraajiensa toimesta ensimmäisten joukossa. Ajanlaskun alun ja kreikkalaiset roomalaiset historioitsijat nimesivät teorian Pythagoraan nimiin, vaikka se olikin tunnettu ja keksitty useita kertoja eri puolilla maailmaa. Esimerkiksi Kiinassa lause tunnetaan Gougu-lauseena tai Shang Gao -lauseena. (Lisätietoa Pythagoraan lauseen historiasta löydät <a href="https://en.wikipedia.org/wiki/Pythagorean_theorem#History" target="_blank" rel="noopener">Wikipediasta</a> ja matematiikan historiasta yleensä <a href="https://matematiikkalehtisolmu.fi/2000/mathist/histluennot.pdf" target="_blank" rel="noopener">Matti Lehtisen Matematiikan historian luennoista</a>.)</p>
+				<h3>Pythagoraan lause</h3>
+				<p>Pythagoraan lause on matemaattinen yhtälö, joka kertoo, kuinka suorakulmaisen kolmion sivujen pituudet riippuvat toisistaan. Pythagoraan lauseen mukaan suorakulmaisen kolmion kateettien neliöiden summa on yhtä suuri kuin hypotenuusan neliö.</p>
+				<div class="indent">
+				<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/933173569/ma8j5_teoria_suorakulmainen_kolmio.png" alt="" width="299" height="200"></p>
+				<p>\(\mathsf{a^2 + b^2 = c^2}\)</p>
+				</div>
+				<h3>Pythagoraan käänteislause</h3>
+				<p>Pythagoraan lausetta voidaan soveltaa myös käänteisesti. Jos kolmion sivujen pituuden noudattavat Pythagoraan lausetta, kolmio on suorakulmainen.</p>
+				<p><strong>Esimerkki: </strong>Onko kolmio suorakulmainen?</p>
+				<div class="indent">
+				<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/933173569/ma8j5_teoria_onko_suorakulmainen.png" alt="" width="199" height="161"></p>
+				<p>Lyhyemmät sivut ovat kateetteja, eli \(\mathsf{a = 3}\) ja \(\mathsf{b = 4}\). Hypotenuusa on pisin sivu, eli \(\mathsf{c = 5}\). Sijoitetaan muuttujien arvot Pythagoraan lauseeseen.</p>
+				<p>\(\begin{align}\mathsf{a^2 + b^2} &amp;= \mathsf{c^2}\\\mathsf{3^2 + 4^2} &amp;= \mathsf{5^2}\\\mathsf{9 + 16} &amp;= \mathsf{25}\\\mathsf{25} &amp;= \mathsf{25}\\\end{align}\)</p>
+				<p><strong>Vastaus: </strong>Kolmio on suorakulmainen.</p>
+				</div>
+				<h3>Tuntemattoman sivun ratkaiseminen</h3>
+				<p>Pythagoraan lauseen avulla voidaan ratkaista suorakulmaisen kolmion tuntemattoman sivun pituus, kun kaksi muuta sivua tunnetaan. Tunnetut sivut sijoitetaan Pythagoraan lauseeseen ja ratkaistaan yhtälöstä tuntemattomaksi jäänyt sivu.</p>
+				<p><span><strong><u>Tuntemattoman hypotenuusan ratkaiseminen</u></strong></span></p>
+				<p><strong>Esimerkki: </strong>Ratkaise tuntemattoman sivun \(\mathsf{x}\) pituus.</p>
+				<div class="indent">
+				<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/933173569/ma8j5_teoria_tuntematon_hypotenuusa.png?time=1664771926122" alt="" width="299" height="163"></p>
+				<p>\(\begin{align}\mathsf{a^2 + b^2} &amp;= \mathsf{c^2}\\\mathsf{4,\!9^2 + 7,\!6^2} &amp;= \mathsf{x^2}\\\mathsf{x^2} &amp;= \mathsf{24,\!01 + 57,\!76}\\\mathsf{x^2} &amp;=\mathsf{81,\!77} &amp;&amp;\mathsf{\| \sqrt{\quad}}\\\mathsf{x} &amp;=\pm\mathsf{9,\!042...}\\\mathsf{x} &amp;\approx \mathsf{9,\!0}\end{align}\)</p>
+				<p><strong>Vastaus: </strong>Tuntemattoman sivun pituus on 9,0 cm.</p>
+				</div>
+				<p> </p>
+				<p><strong><u>Tuntemattoman kateetin ratkaiseminen</u></strong></p>
+				<p><strong>Esimerkki: </strong>Ratkaise tuntemattoman sivun \(\mathsf{x}\) pituus.</p>
+				<div class="indent">
+				<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/933173569/ma8j5_teoria_tuntematon_kateetti.png?time=1664771946700" alt="" width="299" height="163"></p>
+				<p>\(\begin{align}\mathsf{a^2 + b^2} &amp;= \mathsf{c^2}\\ \mathsf{x^2 + 7,\!9^2} &amp;= \mathsf{8,\!8^2} &amp;&amp; \mathsf{\| -7,\!9^2}\\ \mathsf{x^2} &amp;= \mathsf{8,\!8^2 - 7,\!9^2}\\ \mathsf{x^2} &amp;= \mathsf{77,\!44 - 62,\!41}\\ \mathsf{x^2} &amp;= \mathsf{15,\!03} &amp;&amp; \mathsf{\| \sqrt{\quad}}\\ \mathsf{x} &amp;= \pm\mathsf{3,\!876...}\\ \mathsf{x} &amp;\approx \mathsf{3,\!9} \end{align}\)</p>
+				<p><strong>Vastaus: </strong>Tuntemattoman sivun pituus on 3,9 cm.</p>
+				</div>
+			</div>
+		</div>
+		<script>
+			downloadGG();
+		</script>
+	</body>
+</html>
