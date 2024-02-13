@@ -292,7 +292,8 @@
 				</div>
 				<h3>Pyöristäminen</h3>
 				<div>
-					<p>Desimaalilukujen pyöristämistä käsiteltiin 7. luokalla, ja siihen liittyviä käytäntöjä on hyvä kerrata varsinkin geometrian yhteydessä, kun käsitellään mitattuja epätarkkoja arvoja. Pyöristystarkkuuteen vaikuttaa mittaustarkkuuden lisäksi laskutoimitukset, joita "epätarkoilla" arvoilla lasketaan. Vastausta ei voi, eikä kannata antaa liian tarkasti. Tässä vaiheessa ei paneuduta sen tarkemmin mittausvirheen määrittämiseen, vaan todetaan hyvät yleiskäytännöt summan ja erotuksen sekä tulon ja osamäärän pyöristämiseen.<br><br>Desimaalilukujen tapauksessa pyöristäminen tulee ajankohtaiseksi paljon useammin kuin kokonaislukujen tapauksessa. Usein esimerkiksi jakolasku ei mene tasan, ja vastauksena voi olla päättymätön desimaaliluku, joka pitäisi pyöristää järkevään tarkkuuteen. Pyöristyksessä tarkkuus voidaan esittää kolmella eri tavalla:<br><br></p>
+					<p>Desimaalilukujen pyöristämistä käsiteltiin 7. luokalla, ja siihen liittyviä käytäntöjä on hyvä kerrata varsinkin geometrian yhteydessä, kun käsitellään mitattuja epätarkkoja arvoja. Pyöristystarkkuuteen vaikuttaa mittaustarkkuuden lisäksi laskutoimitukset, joita "epätarkoilla" arvoilla lasketaan. Vastausta ei voi, eikä kannata antaa liian tarkasti. Tässä vaiheessa ei paneuduta sen tarkemmin mittausvirheen määrittämiseen, vaan todetaan hyvät yleiskäytännöt summan ja erotuksen sekä tulon ja osamäärän pyöristämiseen.</p>
+					<p>Desimaalilukujen tapauksessa pyöristäminen tulee ajankohtaiseksi paljon useammin kuin kokonaislukujen tapauksessa. Usein esimerkiksi jakolasku ei mene tasan, ja vastauksena voi olla päättymätön desimaaliluku, joka pitäisi pyöristää järkevään tarkkuuteen. Pyöristyksessä tarkkuus voidaan esittää kolmella eri tavalla:</p>
 					<ol>
 						<li>Numeron paikan perusteella</li>
 						<li>Desimaalien lukumäärän perusteella (summa ja erotus)</li>
@@ -301,36 +302,65 @@
 					<p>Valittu tarkkuus määritellään sen mukaan, mistä laskutoimituksesta tai mittalaitteesta pyöristettävä desimaaliluku on peräisin. <strong>Epätarkin lähtöarvo määrittää aina pyöristyksen tarkkuuden.</strong></p>
 					<h4>1. Pyöristäminen numeron paikan perusteella</h4>
 					<p>Esimerkiksi sadasosien tarkkuuteen pyöristettäessä pyöristysraja tulee siis sadasosia kuvaavan numeron perään.</p>
-					<p><strong>Esim. </strong>Pyöristä luku 3,1415 sadasosien tarkkuuteen.</p>
-					<div class="indent">
-						<p>\( \mathsf{\text{3,14} \color{red}{|}\text{15} \approx \text{3,14}} \)</p>
+					<div class="example">
+						<p><strong>Esim. </strong>Pyöristä luku 3,1415</p>
+						<div class="indent">
+							<p>a) kokonaisten tarkkuuteen</p>
+							<p class="indent">\( \mathsf{\text{3,} \color{red}{|}\text{1415} \approx \text{3}} \)</p>
+						</div>
+						<div class="indent">
+							<p>b) sadasosien tarkkuuteen</p>
+							<p class="indent">\( \mathsf{\text{3,14} \color{red}{|}\text{15} \approx \text{3,14}} \)</p>
+						</div>
+						<div class="indent">
+							<p>c) tuhannesosien tarkkuuteen.</p>
+							<p class="indent">\( \mathsf{\text{3,141} \color{red}{|}\text{5} \approx \text{3,142}} \)</p>
+						</div>
 					</div>
 					<p>Pyöristyksen tapahtuessa desimaaliosan puolella, pyöristettyjä desimaaleja ei korvata nollilla, vaan viimeinen numero (oikealla) kuvaa pyöristetyn luvun tarkkuuttaa, ja sen on oltava sama kuin haluttu tarkkuus.</p>
-					<h4 id="desimaalit">2. Pyöristäminen desimaalien lukumäärän perusteella</h4>
+					<h4>2. Pyöristäminen desimaalien lukumäärän perusteella</h4>
 					<p>Yhteen- ja vähennyslaskujen vastausta pyöristettäessä tutkitaan lähtöarvojen desimaalien lukumäärää, jonka perusteella vastauskin pyöristetään. Tästä tarkemmin alempana. Tarkkuuden ilmoittamiseen desimaalien lukumäärä on selkeä.</p>
-					<p><strong>Esim.</strong> Pyöristä luku 9,5297 kolmen desimaalin tarkkuuteen.</p>
+					<div class="example">
+					<p><strong>Esim.</strong> Pyöristä luku 9,5297</p>
 					<div class="indent">
-						<p>\( \mathsf{\text{9,529}\color{red}{|}\text{7} \approx \text{9,530}} \)</p>
+						<p>a) kolmen desimaalin tarkkuuteen</p>
+						<p style="indent">\( \mathsf{\text{9,529}\color{red}{|}\text{7} \approx \text{9,530}} \)</p>
+						<p>b) yhden desimaalin tarkkuuteen</p>
+						<p style="indent">\( \mathsf{\text{9,5}\color{red}{|}\text{297} \approx \text{9,5}} \)</p>
+						<p>c) kokonaisten tarkkuuteen</p>
+						<p style="indent">\( \mathsf{\text{9,}\color{red}{|}\text{5297} \approx \text{10}} \)</p>
 					</div>
 					<p>Jos lasketaan yhteen esimerkiksi kahta metreinä ilmoitettua pituutta, joista toinen on mitattu kahden desimaalin (senttimetrin) tarkkuudella ja toinen kolmen desimaalin (millimetrin) tarkkuudella, joudutaan valitsemaan lähtöarvoista epätarkempi (kaksi desimaalia), jonka mukaisesti vastaus pyöristetään.</p>
-					<p><strong>Esim.</strong> Laske pituuksien 14,39 m ja 3,217 m summa.</p>
-					<div class="indent">
-						<p>\( \mathsf{\text{14,39 m} + \text{3,217 m} = \text{17,607 m} \approx \text{17,61 m}} \)</p>
+					<div class="example">
+						<p><strong>Esim.</strong> Laske pituuksien 14,39 m ja 3,217 m summa.</p>
+						<p class="indent">\( \mathsf{\text{14,39 m} + \text{3,217 m} = \text{17,607 m} \approx \text{17,61 m}} \)</p>
 					</div>
 					<h4>3. Pyöristäminen merkitsevien numeroiden perusteella</h4>
 					<p>Esimerkiksi kerto- ja jakolaskujen vastauksia pyöristettäessä tutkitaan lähtöarvojen merkitsevien numeroiden määrää. Tutustutaan ensin merkitseviin numeroihin, jotta niiden avulla pyöristäminen onnistuu.</p>
 					<h4>Merkitsevät numerot</h4>
 					<p><strong>Kokonaislukujen</strong> tapauksessa merkitseviä numeroita ovat kaikki numerot, paitsi luvun lopussa olevat nollat.</p>
-					<p><strong>Esim.</strong> Montako merkitsevää numeroa on luvussa</p>
-					<div class="indent">
-						<p>a) 204 912<br>Luvun lopussa ei ole nollia, joten kaikki numerot ovat merkitseviä.<br><strong>vast.</strong> Luvussa 204 912 on kuusi merkitsevää numeroa.</p>
-						<p>b) 842 500<br>Luvun lopussa on kaksi nollaa, joten vain numerot 8, 4, 2 ja 5 ovat merkitseviä.<br><strong>vast.</strong> Luvussa 842 500 on neljä merkitsevää numeroa.</p>
+					<div class="example">
+						<p><strong>Esim.</strong> Montako merkitsevää numeroa on luvussa</p>
+						<div class="indent">
+							<p>a) 204 912</p>
+							<p class="indent">Luvun lopussa ei ole nollia, joten kaikki numerot ovat merkitseviä.</p>
+							<p><strong>Vastaus:</strong> Luvussa 204 912 on kuusi merkitsevää numeroa.</p>
+							<p>b) 842 500</p>
+							<p class="indent">Luvun lopussa on kaksi nollaa, joten vain numerot 8, 4, 2 ja 5 ovat merkitseviä.</p>
+							<p><strong>Vastaus:</strong> Luvussa 842 500 on neljä merkitsevää numeroa.</p>
+						</div>
 					</div>
 					<p><strong>Desimaalilukujen</strong> tapauksessa merkitseviä numeroita ovat kaikki numerot, paitsi luvun alussa olevat nollat.</p>
-					<p><strong>Esim.</strong> Montako merkitsevää numeroa on luvussa</p>
-					<div class="indent">
-						<p>a) 3,1415<br>Luvun alussa ei ole nollia, joten kaikki numerot ovat merkitseviä.<br><strong>vast.</strong> Luvussa 3,1415 on viisi merkitsevää numeroa.</p>
-						<p>b) 0,00280<br>Luvun alussa on kolme nollaa, joten vain numerot 2, 8 ja 0 ovat merkitseviä.<br><strong>vast.</strong> Luvussa 0,00280 on kolme merkitsevää numeroa.</p>
+					<div class="example">
+						<p><strong>Esim.</strong> Montako merkitsevää numeroa on luvussa</p>
+						<div class="indent">
+							<p>a) 3,1415</p>
+							<p class="indent">Luvun alussa ei ole nollia, joten kaikki numerot ovat merkitseviä.</p>
+							<p><strong>Vastaus:</strong> Luvussa 3,1415 on viisi merkitsevää numeroa.</p>
+							<p>b) 0,00280</p>
+							<p class="indent">Luvun alussa on kolme nollaa, joten vain numerot 2, 8 ja 0 ovat merkitseviä.</p>
+							<p><strong>Vastaus:</strong> Luvussa 0,00280 on kolme merkitsevää numeroa.</p>
+						</div>
 					</div>
 					<h4>Pyöristäminen merkitsevien numeroiden tarkkuuteen</h4>
 					<p>Pyöristystarkkuus voidaan antaa siis myös haluttujen merkitsevien numeroiden perusteella.</p>
