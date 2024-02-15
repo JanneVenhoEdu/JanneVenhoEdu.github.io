@@ -58,10 +58,6 @@ img {
 	height: auto;
 	max-width: 95%;
 	margin-left: 0px;
-	transition: transform 0.2s;
-}
-img:hover{
-	transform: scale(1.5);
 }
 .example {
 	margin-left: 0px;
