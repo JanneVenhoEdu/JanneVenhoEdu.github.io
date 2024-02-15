@@ -16,6 +16,9 @@
 	--orange25: #F1710525;
 	--indent: 5px;
 }
+html {
+	scrollbar-width: thin;
+}
 body {
 	font-family: Lato, sans-serif;
 	margin-bottom: 100px;
