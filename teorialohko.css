@@ -17,7 +17,7 @@
 	--indent: 5px;
 }
 html {
-	scrollbar-width: thin;
+	scrollbar-width: none;
 }
 body {
 	font-family: Lato, sans-serif;
