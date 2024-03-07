@@ -135,6 +135,12 @@ th, td {
 .wide {
 	display: block;
 }
+.compact {
+	display: block;
+}
+.extended {
+	display: none;
+}
 .summary {
 	padding: 30px;
 	margin: 30px;

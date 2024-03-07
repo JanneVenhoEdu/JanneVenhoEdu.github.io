@@ -102,4 +102,13 @@ $(document).ready(function() {
 		navOpen = false;
 		window.dispatchEvent(resizeEvent);
 	});
+	$(".compact, .extended").parent().prepend("<button class='info' style='padding: 0px 5px; border-radius: 5px; height: 20px; font-size: 12px; background-color: #00990032; border: none'>Laajenna</button>&nbsp;");
+	$(".info").click(function(){
+		$(this).siblings().toggle();
+		if ($(".compact").css("display") == "none"){
+			$(this).html("Tiivistä");
+		} else {
+			$(this).html("Laajenna");
+		}
+	});
 });

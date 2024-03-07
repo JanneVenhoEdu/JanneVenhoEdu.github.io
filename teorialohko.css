@@ -155,6 +155,12 @@ th, td {
 .wide {
 	display: none;
 }
+.compact {
+	display: block;
+}
+.extended {
+	display: none;
+}
 .summary {
 	padding: 5px;
 	margin: 5px;
