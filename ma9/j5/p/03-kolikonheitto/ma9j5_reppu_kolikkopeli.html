@@ -1,78 +1,78 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="ma9j5_reppu_kolikkopeli.js"></script>
-	<style>
-		body {
-			font-family: "Open sans", sans-serif;
-			color: white;
-		}
-		button {
-			color: white;
-		}
-		#tausta {
-			background-color: #00990099;
-			width: 415px;
-			height: 250px;
-			padding: 20px;
-		}
-		#pelaa {
-			background-color: #009900;
-			border-radius: 10px;
-			font-size: 30px;
-			border: 5px outset black;
-			padding: 5px;
-		}
-		#kolikko1, #kolikko2, #kolikko3, #kolikko4 {
-			width: 100 px;
-			height: 100 px;
-		}
-		#saldopanos {
-			margin-top: 20px;
-			display: grid;
-			grid-template-columns: 60px 100px 65px 100px auto;
-		}
-		.teksti_suuri {
-			width: 172px;
-			height: 104px;
-			text-align: center;
-			font-size: 30px;
-		}
-		.teksti_pieni {
-			font-size: 20px;
-			width: 60px;
-			padding-left: 5px;
-		}
-		.panosnappi {
-			padding: 0px;
-			border-radius: 0%;
-			width: 20px;
-			height: 20px;
-			font-size: 15px;
-			background-color: #0000FF;
-			border: none;
-		}
-	</style>
-</head>
-<body>
-	<div id="tausta">
-		<div class="kolikot">
-			<img id="kolikko1" src="https://jannevenhoedu.github.io/ma9/j5/p/03-kolikonheitto/kruuna.png"></td>
-			<img id="kolikko2" src="https://jannevenhoedu.github.io/ma9/j5/p/03-kolikonheitto/kruuna.png"></td>
-			<img id="kolikko3" src="https://jannevenhoedu.github.io/ma9/j5/p/03-kolikonheitto/kruuna.png"></td>
-			<img id="kolikko4" src="https://jannevenhoedu.github.io/ma9/j5/p/03-kolikonheitto/kruuna.png"></td>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="ma9j5_reppu_kolikkopeli.js"></script>
+		<style>
+			body {
+				font-family: "Open sans", sans-serif;
+				color: white;
+			}
+			button {
+				color: white;
+			}
+			#tausta {
+				background-color: #00990099;
+				width: 415px;
+				height: 250px;
+				padding: 20px;
+			}
+			#pelaa {
+				background-color: #009900;
+				border-radius: 10px;
+				font-size: 30px;
+				border: 5px outset black;
+				padding: 5px;
+			}
+			#kolikko1, #kolikko2, #kolikko3, #kolikko4 {
+				width: 100 px;
+				height: 100 px;
+			}
+			#saldopanos {
+				margin-top: 20px;
+				display: grid;
+				grid-template-columns: 60px 100px 65px 100px auto;
+			}
+			.teksti_suuri {
+				width: 172px;
+				height: 104px;
+				text-align: center;
+				font-size: 30px;
+			}
+			.teksti_pieni {
+				font-size: 20px;
+				width: 60px;
+				padding-left: 5px;
+			}
+			.panosnappi {
+				padding: 0px;
+				border-radius: 0%;
+				width: 20px;
+				height: 20px;
+				font-size: 15px;
+				background-color: #0000FF;
+				border: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="tausta">
+			<div class="kolikot">
+				<img id="kolikko1" src="kruuna.png"></td>
+				<img id="kolikko2" src="kruuna.png"></td>
+				<img id="kolikko3" src="kruuna.png"></td>
+				<img id="kolikko4" src="kruuna.png"></td>
+			</div>
+			<div id="saldopanos">
+				<div class="teksti_pieni">Saldo: </div>
+				<div id="saldo" class="teksti_pieni">10</div>
+				<div class="teksti_pieni">Panos: </div>
+				<div id="panos" class="teksti_pieni">1</div>
+				<div><button class="panosnappi" id="panosAlas">-</button> <button class="panosnappi" id="panosYlos" style="background-color: #FF0000;">+</button></div>
+			</div>
+			<div style="margin-top: 20px; text-align: center;"><button id="pelaa" style="">Pelaa</button></div>
+			<div id="palaute" style="text-align: center; padding: 10px 0px;"></div>
+			<div id="yhteenveto" style="display: none;">Kierroksia: <span id="kierroksia">0</span><br>Saldo suurimmillaan: <span id="saldoMax">10</span></div>
 		</div>
-		<div id="saldopanos">
-			<div class="teksti_pieni">Saldo: </div>
-			<div id="saldo" class="teksti_pieni">10</div>
-			<div class="teksti_pieni">Panos: </div>
-			<div id="panos" class="teksti_pieni">1</div>
-			<div><button class="panosnappi" id="panosAlas">-</button> <button class="panosnappi" id="panosYlos" style="background-color: #FF0000;">+</button></div>
-		</div>
-		<div style="margin-top: 20px; text-align: center;"><button id="pelaa" style="">Pelaa</button></div>
-		<div id="palaute" style="text-align: center; padding: 10px 0px;"></div>
-		<div id="yhteenveto" style="display: none;">Kierroksia: <span id="kierroksia">0</span><br>Saldo suurimmillaan: <span id="saldoMax">10</span></div>
-	</div>
-</body>
+	</body>
 </html>
