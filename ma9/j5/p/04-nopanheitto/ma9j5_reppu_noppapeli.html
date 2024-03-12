@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="ma9j5_reppu_noppapeli.js"></script>
+		<style>
+			body {
+				font-family: "Open sans", sans-serif;
+				color: white;
+			}
+			button {
+				color: white;
+			}
+			#tausta {
+				background-color: #00990099;
+				width: 410px;
+				height: 260px;
+				padding: 20px;
+			}
+			#pelaa {
+				background-color: #009900;
+				border-radius: 10px;
+				font-size: 30px;
+				border: 5px outset black;
+				padding: 5px;
+			}
+			#nopat {
+				display: grid;
+				grid-template-columns: auto auto auto;
+			}
+			#noppa1, #noppa2 {
+				background-color: white;
+				width: 104px;
+				height: 104px;
+				padding: 0px;
+			}
+			#saldopanos {
+				margin-top: 20px;
+				display: grid;
+				grid-template-columns: 60px 100px 65px 100px auto;
+			}
+			.teksti_suuri {
+				width: 172px;
+				height: 104px;
+				text-align: center;
+				font-size: 30px;
+			}
+			.teksti_pieni {
+				font-size: 20px;
+				width: 60px;
+				padding-left: 5px;
+			}
+			.panosnappi {
+				padding: 0px;
+				border-radius: 0%;
+				width: 20px;
+				height: 20px;
+				font-size: 15px;
+				background-color: #0000FF;
+				border: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="tausta">
+			<div class="nopat">
+				<img id="noppa1" src="arpakuutio_5.png"></td>
+				<img id="noppa2" src="arpakuutio_6.png"></td>
+				<span class="teksti_suuri">Tulo: <span id="tulo">30</span></span>
+			</div>
+			<div id="saldopanos">
+				<div class="teksti_pieni">Saldo: </div>
+				<div id="saldo" class="teksti_pieni">10</div>
+				<div class="teksti_pieni">Panos: </div>
+				<div id="panos" class="teksti_pieni">1</div>
+				<div><button class="panosnappi" id="panosAlas">-</button> <button class="panosnappi" id="panosYlos" style="background-color: #FF0000;">+</button></div>
+			</div>
+			<div style="margin-top: 20px; text-align: center;"><button id="pelaa" style="">Pelaa</button></div>
+			<div id="palaute" style="text-align: center; padding: 10px 0px;"></div>
+			<div id="yhteenveto" style="display: none;">Kierroksia: <span id="kierroksia">0</span><br>Saldo suurimmillaan: <span id="saldoMax">10</span></div>
+		</div>
+	</body>
+</html>
