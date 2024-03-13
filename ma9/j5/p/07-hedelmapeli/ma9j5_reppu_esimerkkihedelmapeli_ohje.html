@@ -1,133 +1,137 @@
 <style>
 	table {
 		text-align: center;
-	}
-	#voittotaulukko {
-		margin-right: 100px;
+		border-collapse: collapse;
 	}
 	#voittotaulukko td {
 		border: 1px solid black;
 	}
-	#.rullaa {
-		border: solid;
+	#voittotaulukko {
+		margin-right: 100px;
+	}
+	.rullaa {
+		border-style: solid;
+		border-color: black;
 		border-width: 0px 1px 0px 1px;
 		padding: 0px 5px;
 	}
 </style>
-<table id="voittotaulukko">
-	<thead>
-		<tr>
-			<th colspan="2">Voittotaulukko</th>
-		</tr>
-		<tr>
-			<th style="padding: 0px 10px; border: 1px solid;">Yhdistelmä</th>
-			<th style="padding: 0px 10px; border: 1px solid;">Kerroin</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>🍀🍀🍀</td>
-			<td>24</td>
-		</tr>
-		<tr>
-			<td>🔔🔔🔔</td>
-			<td>20</td>
-		</tr>
-		<tr>
-			<td>🔔🔔🍀</td>
-			<td>20</td>
-		</tr>
-		<tr>
-			<td>🍇🍇🍇</td>
-			<td>16</td>
-		</tr>
-		<tr>
-			<td>🍇🍇🍀</td>
-			<td>16</td>
-		</tr>
-		<tr>
-			<td>🍊🍊🍊</td>
-			<td>12</td>
-		</tr>
-		<tr>
-			<td>🍊🍊🍀</td>
-			<td>12</td>
-		</tr>
-		<tr>
-			<td>🍒🍒🔔</td>
-			<td>8</td>
-		</tr>
-		<tr>
-			<td>🍒🍒🍋</td>
-			<td>8</td>
-		</tr>
-		<tr>
-			<td>🍒🍒    </td>
-			<td>4</td>
-		</tr>
-	</tbody>
-</table>
-<table id="rullat">
-	<thead>
-		<tr>
-			<th colspan="3">Rullat</th>
-		</tr>
-		<tr>
-			<th>1</th>
-			<th>2</th>
-			<th>3</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td style="border: solid; border-width: 1px 1px 0px 1px; padding: 2px 5px 0px 5px;">🍀</td>
-			<td style="border-top: 1px solid black; padding: 2px 5px 0px 5px;">🍀</td>
-			<td style="border: solid; border-width: 1px 1px 0px 1px; padding: 2px 5px 0px 5px;">🍀</td>
-		</tr>
-		<tr>
-			<tdclass="rullaa">🍒</td>
-			<td style="padding: 0px 5px;">🍒</td>
-			<tdclass="rullaa">🍇</td>
-		</tr>
-		<tr>
-			<tdclass="rullaa">🍊</td>
-			<td style="padding: 0px 5px;">🍊</td>
-			<tdclass="rullaa">🔔</td>
-		</tr>
-		<tr>
-			<tdclass="rullaa">🍋</td>
-			<td style="padding: 0px 5px;">🍒</td>
-			<tdclass="rullaa">🍋</td>
-		</tr>
-		<tr>
-			<tdclass="rullaa">🍇</td>
-			<td style="padding: 0px 5px;">🍇</td>
-			<tdclass="rullaa">🍊</td>
-		</tr>
-		<tr>
-			<tdclass="rullaa">🍒</td>
-			<td style="padding: 0px 5px;">🍒</td>
-			<tdclass="rullaa">🍇</td>
-		</tr>
-		<tr>
-			<tdclass="rullaa">🍊</td>
-			<td style="padding: 0px 5px;">🍊</td>
-			<tdclass="rullaa">🍋</td>
-		</tr>
-		<tr>
-			<tdclass="rullaa">🍋</td>
-			<td style="padding: 0px 5px;">🍒</td>
-			<tdclass="rullaa">🍇</td>
-		</tr>
-		<tr>
-			<tdclass="rullaa">🔔</td>
-			<td style="padding: 0px 5px;">🔔</td>
-			<tdclass="rullaa">🍋</td>
-		</tr>
-		<tr>
-			<td style="border: solid; border-width: 0px 1px 1px 1px; padding: 0px 5px 2px 5px;">🍋</td>
-			<td style="border-bottom: 1px solid black; padding: 0px 5px 2px 5px;">🍒</td>
-			<td style="border: solid; border-width: 0px 1px 1px 1px; padding: 0px 5px 2px 5px;">🍊</td>
-		</tr>
-	</tbody>
-</table>
+<div style="display: flex; flex-wrap: wrap;">
+	<table id="voittotaulukko">
+		<thead>
+			<tr>
+				<th colspan="2">Voittotaulukko</th>
+			</tr>
+			<tr>
+				<th style="padding: 0px 10px; border: 1px solid;">Yhdistelmä</th>
+				<th style="padding: 0px 10px; border: 1px solid;">Kerroin</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>🍀🍀🍀</td>
+				<td>24</td>
+			</tr>
+			<tr>
+				<td>🔔🔔🔔</td>
+				<td>20</td>
+			</tr>
+			<tr>
+				<td>🔔🔔🍀</td>
+				<td>20</td>
+			</tr>
+			<tr>
+				<td>🍇🍇🍇</td>
+				<td>16</td>
+			</tr>
+			<tr>
+				<td>🍇🍇🍀</td>
+				<td>16</td>
+			</tr>
+			<tr>
+				<td>🍊🍊🍊</td>
+				<td>12</td>
+			</tr>
+			<tr>
+				<td>🍊🍊🍀</td>
+				<td>12</td>
+			</tr>
+			<tr>
+				<td>🍒🍒🔔</td>
+				<td>8</td>
+			</tr>
+			<tr>
+				<td>🍒🍒🍋</td>
+				<td>8</td>
+			</tr>
+			<tr>
+				<td>🍒🍒    </td>
+				<td>4</td>
+			</tr>
+		</tbody>
+	</table>
+	<table id="rullat">
+		<thead>
+			<tr>
+				<th colspan="3">Rullat</th>
+			</tr>
+			<tr>
+				<th>1</th>
+				<th>2</th>
+				<th>3</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td style="border: solid; border-width: 1px 1px 0px 1px; padding: 2px 5px 0px 5px;">🍀</td>
+				<td style="border-top: 1px solid black; padding: 2px 5px 0px 5px;">🍀</td>
+				<td style="border: solid; border-width: 1px 1px 0px 1px; padding: 2px 5px 0px 5px;">🍀</td>
+			</tr>
+			<tr>
+				<td class="rullaa">🍒</td>
+				<td style="padding: 0px 5px;">🍒</td>
+				<td class="rullaa">🍇</td>
+			</tr>
+			<tr>
+				<td class="rullaa">🍊</td>
+				<td style="padding: 0px 5px;">🍊</td>
+				<td class="rullaa">🔔</td>
+			</tr>
+			<tr>
+				<td class="rullaa">🍋</td>
+				<td style="padding: 0px 5px;">🍒</td>
+				<td class="rullaa">🍋</td>
+			</tr>
+			<tr>
+				<td class="rullaa">🍇</td>
+				<td style="padding: 0px 5px;">🍇</td>
+				<td class="rullaa">🍊</td>
+			</tr>
+			<tr>
+				<td class="rullaa">🍒</td>
+				<td style="padding: 0px 5px;">🍒</td>
+				<td class="rullaa">🍇</td>
+			</tr>
+			<tr>
+				<td class="rullaa">🍊</td>
+				<td style="padding: 0px 5px;">🍊</td>
+				<td class="rullaa">🍋</td>
+			</tr>
+			<tr>
+				<td class="rullaa">🍋</td>
+				<td style="padding: 0px 5px;">🍒</td>
+				<td class="rullaa">🍇</td>
+			</tr>
+			<tr>
+				<td class="rullaa">🔔</td>
+				<td style="padding: 0px 5px;">🔔</td>
+				<td class="rullaa">🍋</td>
+			</tr>
+			<tr>
+				<td style="border: solid; border-width: 0px 1px 1px 1px; padding: 0px 5px 2px 5px;">🍋</td>
+				<td style="border-bottom: 1px solid black; padding: 0px 5px 2px 5px;">🍒</td>
+				<td style="border: solid; border-width: 0px 1px 1px 1px; padding: 0px 5px 2px 5px;">🍊</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
