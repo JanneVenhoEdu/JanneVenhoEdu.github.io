@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="ma9j5_reppu_hedelmapeli.js"></script>
+		<style>
+			body {
+				font-family: "Open sans", sans-serif;
+				color: white;
+			}
+			table {
+				border-collapse: collapse;
+			}
+			button {
+				color: white;
+			}
+			#tausta {
+				background-color: #00990099;
+				width: 470px;
+				height: 400px;
+				padding: 20px;
+			}
+			#pelaa, #pelaa2 {
+				background-color: #009900;
+				border-radius: 10px;
+				font-size: 30px;
+				border: 5px outset black;
+				padding: 5px;
+			}
+			#rulla1_yla, #rulla2_yla, #rulla3_yla, #rulla1_ala, #rulla2_ala, #rulla3_ala {
+				opacity: 0.5;
+			}
+			.rulla {
+				width: 75px;
+				height: 50px;
+				font-size: 50px;
+				padding: 0px;
+				border: solid black;
+				border-width: 0px 1px 0px 1px;
+				background-color: white;
+				text-align: center;
+			}
+			.rulla_yla {
+				height: 30px;
+				font-size: 30px;
+				padding: 0px;
+				text-align: center;
+				border: solid black;
+				border-width: 1px 1px 0px 1px;
+				background-color: white;
+			}
+			.rulla_ala {
+				height: 30px;
+				font-size: 30px;
+				padding: 0px;
+				text-align: center;
+				border: solid black;
+				border-width: 0px 1px 1px 1px;
+				background-color: white;
+			}
+			.teksti_suuri {
+				width: 172px;
+				height: 104px;
+				text-align: center;
+				font-size: 30px;
+			}
+			.teksti_pieni {
+				font-size: 20px;
+				width: 60px;
+				padding-left: 5px;
+			}
+			.panosnappi {
+				padding: 0px;
+				border-radius: 0%;
+				width: 20px;
+				height: 20px;
+				font-size: 15px;
+				background-color: #0000FF;
+				border: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="tausta">
+			<table style="text-align: center; border-collapse: collapse;">
+				<tbody>
+					<tr>
+						<td rowspan="3" colspan="2" style="font-size: 20px; border: 5px inset #009900; background-color: yellow; color: black;">JACKPOT<br>🍀🍀🍀<br>x 24</td>
+						<td style="padding-left: 20px;">🔔🔔🔔</td>
+						<td style="padding-right: 30px;">20</td>
+						<td>🍇🍇🍀</td>
+						<td style="padding-right: 30px;">16</td>
+						<td>🍒🍒🔔</td>
+						<td style="padding-right: 30px;">8</td>
+					</tr>
+					<tr>
+						<td style="padding-left: 20px;">🔔🔔🍀</td>
+						<td style="padding-right: 30px;">20</td>
+						<td>🍊🍊🍊</td>
+						<td style="padding-right: 30px;">12</td>
+						<td>🍒🍒🍋</td>
+						<td style="padding-right: 30px;">8</td>
+					</tr>
+					<tr>
+						<td style="padding-left: 20px;">🍇🍇🍇</td>
+						<td style="padding-right: 30px;">16</td>
+						<td>🍊🍊🍀</td>
+						<td style="padding-right: 30px;">12</td>
+						<td>🍒🍒&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td style="padding-right: 30px;">4</td>
+					</tr>
+				</tbody>
+			</table><br>
+			<table style="margin-left: 20px;">
+				<tbody>
+					<tr>
+						<td></td>
+						<td class="rulla_yla"><span id="rulla1_yla">🍊</span></td>
+						<td style="width: 10px;"></td>
+						<td class="rulla_yla"><span id="rulla2_yla">🍒</span></td>
+						<td style="width: 10px;"></td>
+						<td class="rulla_yla"><span id="rulla3_yla">🍋</span></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td style="padding-right: 5px;">Voittolinja&nbsp;-</td>
+						<td class="rulla"><span id="rulla1">🍊</span></td>
+						<td style="text-align: center;">-</td>
+						<td class="rulla"><span id="rulla2">🍒</span></td>
+						<td style="text-align: center;">-</td>
+						<td class="rulla"><span id="rulla3">🍋</span></td>
+						<td style="padding-left: 5px;">-&nbsp;Voittolinja</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td class="rulla_ala"><span id="rulla1_ala">🍊</span></td>
+						<td></td>
+						<td class="rulla_ala"><span id="rulla2_ala">🍒</span></td>
+						<td></td>
+						<td class="rulla_ala"><span id="rulla3_ala">🍋</span></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+			<table style="margin-top: 20px;">
+				<tbody>
+					<tr>
+						<td class="teksti_pieni">Saldo: </td>
+						<td id="saldo" class="teksti_pieni">20</td>
+						<td style="width: 80px;"></td>
+						<td class="teksti_pieni">Panos: </td>
+						<td id="panos" class="teksti_pieni">1</td>
+						<td><button class="panosnappi" id="panosAlas">-</button> <button class="panosnappi" id="panosYlos" style="background-color: #FF0000;">+</button></td>
+					</tr>
+				</tbody>
+			</table>
+			<div style="margin-top: 20px; text-align: center;"><button id="pelaa">Pelaa</button><button id="pelaa2" style="display: none;">Pelaa</button></div>
+			<div id="palaute" style="text-align: center; padding: 10px 0px;"></div>
+			<div id="yhteenveto" style="display: none;">Kierroksia: <span id="kierroksia">0</span><br>Saldo suurimmillaan: <span id="saldoMax">20</span></div>
+		</div>
+	</body>
+</html>
