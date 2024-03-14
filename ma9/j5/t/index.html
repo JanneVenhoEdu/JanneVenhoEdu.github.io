@@ -17,7 +17,24 @@
 			.tilasto td:last-child, .tilasto th:last-child {
 				text-align: right;
 			}
-			.ristiintaulukointi td, .ristiintaulukoint th {
+			.ristiintaulukointi td, .ristiintaulukointi th {
+				border: 0px;
+			}
+			.ristiintaulukointi td {
+				border: 1px solid black;
+				width: 40px;
+			}
+			.ristiintaulukointi .riviotsikko {
+				border-right: 2px solid black !important;
+				border-bottom: 1px solid black;
+				width: 40px;
+			}
+			.ristiintaulukointi .sarakeotsikko {
+				border-bottom: 2px solid black !important;
+				border-right: 1px solid black;
+				width: 40px;
+			}
+			.no-border td, .no-border th {
 				border: 0px;
 			}
 		</style>
@@ -239,7 +256,7 @@
 						<p><strong>Esimerkki:</strong> Käytettävissä on vihreää (V), oranssia (O) ja lilaa (L) lahjapaperia sekä sinistä (S), kultaista (K), punaista (P) ja hopeista (H) lahjanauhaa. Kuinka monta erilaista yhdistelmää lahjapakettiin voidaan valita.</p>
 						<div class="indent">
 							<p>Kaikkien vaihtoehtojen luetteleminen:</p>
-							<table>
+							<table class="no-border">
 								<tbody>
 									<tr>
 										<td>VS</td>
@@ -274,15 +291,15 @@
 						<p><strong>Esimerkki:</strong> Neljä lasta saavat virvottuaan valita pussista tikkarin. Pussissa on neljä tikkaria, ja ne ovat kaikki eri värisiä: punainen (P), keltainen (K), vihreä (V) ja sininen (S). Kuinka monella eri tavalla tikkarit voidaan valita.</p>
 						<div class="indent">
 							<p>Kaikkien vaihtoehtojen luetteleminen:</p>
-							<table>
+							<table class="no-border">
 								<tbody>
 									<tr>
-										<td style="width: 50px;">PKVS</td>
-										<td style="width: 50px;">PKSV</td>
-										<td style="width: 50px;">PVKS</td>
-										<td style="width: 50px;">PVSK</td>
-										<td style="width: 50px;">PSKV</td>
-										<td style="width: 50px;">PSVK</td>
+										<td>PKVS</td>
+										<td>PKSV</td>
+										<td>PVKS</td>
+										<td>PVSK</td>
+										<td>PSKV</td>
+										<td>PSVK</td>
 									</tr>
 									<tr>
 										<td>KPVS</td>
@@ -325,66 +342,63 @@
 					<div class="example">
 						<p><strong>Esimerkki:</strong> Koulun hiihtokilpailussa on 5 osallistujaa: Aada, Ben, Cecilia, Doris ja Eetu. Kuinka monella eri tavalla kulta- ja hopeamitalit voidaan jakaa?</p>
 						<div class="indent">
-							<p>Kaikkien vaihtoehtojen luetteleminen: Ristiintaulukointi</p>
+							<p>Kaikkien vaihtoehtojen luetteleminen:</p>
+							<p>Ristiintaulukointi</p>
 							<table class="ristiintaulukointi">
-								<thead>
-									<tr>
-										<td> </td>
-										<td> </td>
-										<td colspan="5">HOPEAMITALI</td>
-									</tr>
-								</thead>
 								<tbody>
 									<tr>
+										<th> </th>
+										<th> </th>
+										<th colspan="5">HOPEAMITALI</th>
+									</tr>
+									<tr>
+										<th> </th>
+										<th class="sarakeotsikko riviotsikko"> </th>
+										<th class="sarakeotsikko">A</th>
+										<th class="sarakeotsikko">B</th>
+										<th class="sarakeotsikko">C</th>
+										<th class="sarakeotsikko">D</th>
+										<th class="sarakeotsikko">E</th>
+									</tr>
+									<tr>
+										<th rowspan="5"><div style="writing-mode: vertical-lr; text-orientation: upright;">KULTAMITALI</div></th>
+										<th class="riviotsikko">A</th>
 										<td> </td>
-										<td style="border-right: 2px solid black; border-bottom: 2px solid black;"> </td>
-										<td style="border-right: 1px solid black; border-bottom: 2px solid black;">A</td>
-										<td style="border-right: 1px solid black; border-bottom: 2px solid black;">B</td>
-										<td style="border-right: 1px solid black; border-bottom: 2px solid black;">C</td>
-										<td style="border-right: 1px solid black; border-bottom: 2px solid black;">D</td>
-										<td style="border-bottom: 2px solid black;">E</td>
+										<td>AB</td>
+										<td>AC</td>
+										<td>AD</td>
+										<td>AE</td>
 									</tr>
 									<tr>
-									<td rowspan="5">
-									<div style="writing-mode: vertical-lr; text-orientation: upright;">KULTAMITALI</div>
-									</td>
-										<td style="border-right: 2px solid black; border-bottom: 1px solid black; width: 30px;">A</td>
-										<td style="border-right: 1px solid black; width: 40px; border-bottom: 1px solid black;"> </td>
-										<td style="border-right: 1px solid black; width: 40px; border-bottom: 1px solid black;">AB</td>
-										<td style="border-right: 1px solid black; width: 40px; border-bottom: 1px solid black;">AC</td>
-										<td style="border-right: 1px solid black; width: 40px; border-bottom: 1px solid black;">AD</td>
-										<td style="width: 40px; border-bottom: 1px solid black;">AE</td>
+										<th class="riviotsikko">B</th>
+										<td>BA</td>
+										<td> </td>
+										<td>BC</td>
+										<td>BD</td>
+										<td>BE</td>
 									</tr>
 									<tr>
-										<td style="border-right: 2px solid black; border-bottom: 1px solid black;">B</td>
-										<td style="border-right: 1px solid black; border-bottom: 1px solid black;">BA</td>
-										<td style="border-right: 1px solid black; border-bottom: 1px solid black;"> </td>
-										<td style="border-right: 1px solid black; border-bottom: 1px solid black;">BC</td>
-										<td style="border-right: 1px solid black; border-bottom: 1px solid black;">BD</td>
-										<td style="border-bottom: 1px solid black;">BE</td>
+										<th class="riviotsikko">C</th>
+										<td>CA</td>
+										<td>CB</td>
+										<td> </td>
+										<td>CD</td>
+										<td>CE</td>
 									</tr>
 									<tr>
-										<td style="border-right: 2px solid black; border-bottom: 1px solid black;">C</td>
-										<td style="border-right: 1px solid black; border-bottom: 1px solid black;">CA</td>
-										<td style="border-right: 1px solid black; border-bottom: 1px solid black;">CB</td>
-										<td style="border-right: 1px solid black; border-bottom: 1px solid black;"> </td>
-										<td style="border-right: 1px solid black; border-bottom: 1px solid black;">CD</td>
-										<td style="border-bottom: 1px solid black;">CE</td>
+										<th class="riviotsikko">D</th>
+										<td>DA</td>
+										<td>DB</td>
+										<td>DC</td>
+										<td> </td>
+										<td>DE</td>
 									</tr>
 									<tr>
-										<td style="border-right: 2px solid black; border-bottom: 1px solid black;">D</td>
-										<td style="border-right: 1px solid black; border-bottom: 1px solid black;">DA</td>
-										<td style="border-right: 1px solid black; border-bottom: 1px solid black;">DB</td>
-										<td style="border-right: 1px solid black; border-bottom: 1px solid black;">DC</td>
-										<td style="border-right: 1px solid black; border-bottom: 1px solid black;"> </td>
-										<td style="border-bottom: 1px solid black;">DE</td>
-									</tr>
-									<tr>
-										<td style="border-right: 2px solid black;">E</td>
-										<td style="border-right: 1px solid black;">EA</td>
-										<td style="border-right: 1px solid black;">EB</td>
-										<td style="border-right: 1px solid black;">EC</td>
-										<td style="border-right: 1px solid black;">ED</td>
+										<th class="riviotsikko">E</th>
+										<td>EA</td>
+										<td>EB</td>
+										<td>EC</td>
+										<td>ED</td>
 									<td> </td>
 									</tr>
 								</tbody>
@@ -400,49 +414,49 @@
 					</div>
 					<h4>Valitaan vain osa, järjestyksellä ei ole väliä</h4>
 					<p>Valitaan jostakin joukosta vain tietty määrä yksilöitä. Yksilöiden järjestyksellä ei ole merkitystä. Lasketaan kertolasku kuten edellä, mutta jaetaan tulos samanlaisten valintojen lukumäärällä.</p>
-					<p><strong>Esimerkki:</strong> Jääkiekkojoukkueeseen pyrkii kuusi maalivahtia, joista kolme valitaan lopulliseen joukkueeseen. Kuinka monella eri tavalla maalivahdit voidaan valita?</p>
-					<div class="indent">
-					<p>Kaikkien vaihtoehtojen luetteleminen: (maalivahdit A, B, C, D, E ja F)</p>
-					<div class="indent">
-					<table style="text-align: center;">
-					<tbody>
-					<tr>
-					<td style="padding-right: 5px; padding-left: 5px;">ABC</td>
-					<td style="padding-right: 5px; padding-left: 5px;">ABD</td>
-					<td style="padding-right: 5px; padding-left: 5px;">ABE</td>
-					<td style="padding-right: 5px; padding-left: 5px;">ABF</td>
-					<td style="padding-right: 5px; padding-left: 5px;">ACD</td>
-					<td style="padding-right: 5px; padding-left: 5px;">ACE</td>
-					<td style="padding-right: 5px; padding-left: 5px;">ACF</td>
-					<td style="padding-right: 5px; padding-left: 5px;">ADE</td>
-					<td style="padding-right: 5px; padding-left: 5px;">ADF</td>
-					<td style="padding-right: 5px; padding-left: 5px;">AEF</td>
-					</tr>
-					<tr>
-					<td>BCD</td>
-					<td>BCE</td>
-					<td>BCF</td>
-					<td>BDE</td>
-					<td>BDF</td>
-					<td>BEF</td>
-					<td>CDE</td>
-					<td>CDF</td>
-					<td>CEF</td>
-					<td>DEF</td>
-					</tr>
-					</tbody>
-					</table>
-					</div>
-					<p>Laskeminen:</p>
-					<div class="indent">
-					<p>Valitaan kolme maalivahtia järjestyksessä:</p>
-					<p>\(\mathsf{6 \cdot 5 \cdot 4 = 120}\)</p>
-					<p>Samat kolme maalivahtia esiintyvät useammassa eri valinnassa (esimerkiksi ABC, ACB, BAC, BCA, CAB, CBA).</p>
-					<p>\(\mathsf{3 \cdot 2 \cdot 1 = 6}\)</p>
-					<p>Jaetaan kaikkien vaihtoehtojen määrä samojen valintojen määrällä.</p>
-					<p>\(\mathsf{\dfrac{120}{6} = 20}\)</p>
-					</div>
-					<p><strong>Vastaus: </strong>Maalivahdit voidaan valita 20 eri tavalla lopulliseen joukkueeseen.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Jääkiekkojoukkueeseen pyrkii kuusi maalivahtia, joista kolme valitaan lopulliseen joukkueeseen. Kuinka monella eri tavalla maalivahdit voidaan valita?</p>
+						<div class="indent">
+							<p>Kaikkien vaihtoehtojen luetteleminen: (maalivahdit A, B, C, D, E ja F)</p>
+							<table class="no-border">
+								<tbody>
+									<tr>
+										<td>ABC</td>
+										<td>ABD</td>
+										<td>ABE</td>
+										<td>ABF</td>
+										<td>ACD</td>
+										<td>ACE</td>
+										<td>ACF</td>
+										<td>ADE</td>
+										<td>ADF</td>
+										<td>AEF</td>
+									</tr>
+									<tr>
+										<td>BCD</td>
+										<td>BCE</td>
+										<td>BCF</td>
+										<td>BDE</td>
+										<td>BDF</td>
+										<td>BEF</td>
+										<td>CDE</td>
+										<td>CDF</td>
+										<td>CEF</td>
+										<td>DEF</td>
+									</tr>
+								</tbody>
+							</table>
+							<p>Laskeminen:</p>
+							<div class="indent">
+								<p>Valitaan kolme maalivahtia järjestyksessä:</p>
+								<p class="indent">\(\mathsf{6 \cdot 5 \cdot 4 = 120}\)</p>
+								<p>Samat kolme maalivahtia esiintyvät useammassa eri valinnassa (esimerkiksi ABC, ACB, BAC, BCA, CAB, CBA).</p>
+								<p class="indent">\(\mathsf{3 \cdot 2 \cdot 1 = 6}\)</p>
+								<p>Jaetaan kaikkien vaihtoehtojen määrä samojen valintojen määrällä.</p>
+								<p class="indent">\(\mathsf{\dfrac{120}{6} = 20}\)</p>
+							</div>
+						</div>
+						<p><strong>Vastaus: </strong>Maalivahdit voidaan valita 20 eri tavalla lopulliseen joukkueeseen.</p>
 					</div>
 				</div>
 				<h3>Peräkkäiset tapahtumat</h3>
@@ -450,141 +464,118 @@
 					<h4>Kertolaskusääntö</h4>
 					<p>Peräkkäisten tapahtumien todennäköisyys saadaan kertomalla todennäköisyydet keskenään.</p>
 					<div class="example">
-					<p><strong>Esimerkki 1a:</strong> Pussissa on 5 palloa: 2 punaista ja 3 sinistä. Pussista nostetaan kaksi palloa. Millä todennäköisyydellä ensimmäisenä nostettu pallo on punainen ja toisena nostettu pallo sininen?</p>
-					<div class="indent">
-					<p>Ennen ensimmäistä nostoa pussissa on 2 punaista ja 3 sinistä palloa eli yhteensä 5 palloa:</p>
-					<div class="indent">
-					<p>\(\mathsf{P(\text{1. punainen}) = \dfrac{2}{5}}\)</p>
+						<p><strong>Esimerkki:</strong> Pussissa on 5 palloa: 2 punaista ja 3 sinistä. Pussista nostetaan kaksi palloa. Millä todennäköisyydellä ensimmäisenä nostettu pallo on punainen ja toisena nostettu pallo sininen?</p>
+						<div class="indent">
+							<p>Ennen ensimmäistä nostoa pussissa on 2 punaista ja 3 sinistä palloa eli yhteensä 5 palloa:</p>
+							<p class="indent">\(\mathsf{P(\text{1. punainen}) = \dfrac{2}{5}}\)</p>
+							<p>Ennen toista nostoa pussissa on 1 punainen ja 3 sinistä palloa eli yhteensä 4 palloa:</p>
+							<p class="indent">\(\mathsf{P(\text{2. sininen}) = \dfrac{3}{4}}\)</p>
+							<p>Todennäköisyys, että molemmat tapahtuvat saadaa kertolaskulla:</p>
+							<p class="indent">\(\mathsf{P(\text{1. punainen ja 2. sininen}) = P(\text{1. punainen}) \cdot P(\text{2. sininen}) = \dfrac{2}{5} \cdot \dfrac{3}{4} = \dfrac{6}{20} = \text{0,3} = 30\:\%}\)</p>
+						</div>
+						<p><strong>Vastaus:</strong> Todennäköisyys, että ensimmäisellä nostolla tulee punainen ja toisella nostolla sininen pallo on 30 prosenttia.</p>
 					</div>
-					<p>Ennen toista nostoa pussissa on 1 punainen ja 3 sinistä palloa eli yhteensä 4 palloa:</p>
-					<div class="indent">
-					<p>\(\mathsf{P(\text{2. sininen}) = \dfrac{3}{4}}\)</p>
-					</div>
-					<p>Todennäköisyys, että molemmat tapahtuvat saadaa kertolaskulla:</p>
-					<div class="indent">
-					<p>\(\mathsf{P(\text{1. punainen ja 2. sininen}) = P(\text{1. punainen}) \cdot P(\text{2. sininen}) = \dfrac{2}{5} \cdot \dfrac{3}{4} = \dfrac{6}{20} = \text{0,3} = 30\:\%}\)</p>
-					</div>
-					<p><strong>Vastaus:</strong> Todennäköisyys, että ensimmäisellä nostolla tulee punainen ja toisella nostolla sininen pallo on 30 prosenttia.</p>
-					</div>
-					</div>
-					<br>
 					<p>Vaihtoehtoisesti voidaan laskea kaikkien tapausten ja suotuisten tapausten vaihtoehtojen lukumäärät perättäisistä tapahtumista, ja laskea todennäköisyys niiden avulla.</p>
 					<div class="example">
-					<p><strong>Esimerkki 1b:</strong> Pussissa on 5 palloa: 2 punaista ja 3 sinistä. Pussista nostetaan kaksi palloa. Millä todennäköisyydellä ensimmäisenä nostettu pallo on punainen ja toisena nostettu pallo sininen?</p>
-					<div class="indent">
-					<p>Taulukoidaan kaikki alkeistapaukset. Samanväriset pallot on numeroitu alaindeksiin. Suotuisat alkeistapaukset on merkitty lihavoituna.</p>
-					<div class="indent">
-					<table>
-					<tbody>
-					<tr>
-					<td style="padding-right: 10px;"><span>P<sub>1</sub>P<sub>2</sub></span></td>
-					<td style="padding-right: 10px;"><strong>P<sub>1</sub>S<sub>1</sub></strong></td>
-					<td style="padding-right: 10px;"><strong>P<sub>1</sub>S<sub>2</sub></strong></td>
-					<td style="padding-right: 10px;"><strong>P<sub>1</sub>S<sub>3</sub></strong></td>
-					</tr>
-					<tr>
-					<td><span>P<sub>2</sub>P<sub>1</sub></span></td>
-					<td><strong>P<sub>2</sub>S<sub>1</sub></strong></td>
-					<td><strong>P<sub>2</sub>S<sub>2</sub></strong></td>
-					<td><strong>P<sub>2</sub>S<sub>3</sub></strong></td>
-					</tr>
-					<tr>
-					<td>S<sub>1</sub>P<sub>1</sub></td>
-					<td>S<sub>1</sub>P<sub>2</sub></td>
-					<td>S<sub>1</sub>S<sub>2</sub></td>
-					<td>S<sub>1</sub>S<sub>3</sub></td>
-					</tr>
-					<tr>
-					<td>S<sub>2</sub>P<sub>1</sub></td>
-					<td>S<sub>2</sub>P<sub>2</sub></td>
-					<td>S<sub>2</sub>S<sub>1</sub></td>
-					<td>S<sub>2</sub>S<sub>3</sub></td>
-					</tr>
-					<tr>
-					<td>S<sub>3</sub>P<sub>1</sub></td>
-					<td>S<sub>3</sub>P<sub>2</sub></td>
-					<td>S<sub>3</sub>S<sub>1</sub></td>
-					<td>S<sub>3</sub>S<sub>2</sub></td>
-					</tr>
-					</tbody>
-					</table>
+						<p><strong>Esimerkki:</strong> Pussissa on 5 palloa: 2 punaista (P<sub>1</sub> ja P<sub>2</sub>) ja 3 sinistä (S<sub>1</sub>, S<sub>2</sub> ja S<sub>3</sub>). Pussista nostetaan kaksi palloa. Millä todennäköisyydellä ensimmäisenä nostettu pallo on punainen ja toisena nostettu pallo sininen?</p>
+						<div class="indent">
+							<p>Taulukoidaan kaikki alkeistapaukset. Samanväriset pallot on numeroitu alaindeksiin. Suotuisat alkeistapaukset on merkitty lihavoituna.</p>
+							<table class="no-border">
+								<tbody>
+									<tr>
+										<td>P<sub>1</sub>P<sub>2</sub></td>
+										<td><strong>P<sub>1</sub>S<sub>1</sub></strong></td>
+										<td><strong>P<sub>1</sub>S<sub>2</sub></strong></td>
+										<td><strong>P<sub>1</sub>S<sub>3</sub></strong></td>
+									</tr>
+									<tr>
+										<td>P<sub>2</sub>P<sub>1</sub></td>
+										<td><strong>P<sub>2</sub>S<sub>1</sub></strong></td>
+										<td><strong>P<sub>2</sub>S<sub>2</sub></strong></td>
+										<td><strong>P<sub>2</sub>S<sub>3</sub></strong></td>
+									</tr>
+									<tr>
+										<td>S<sub>1</sub>P<sub>1</sub></td>
+										<td>S<sub>1</sub>P<sub>2</sub></td>
+										<td>S<sub>1</sub>S<sub>2</sub></td>
+										<td>S<sub>1</sub>S<sub>3</sub></td>
+									</tr>
+									<tr>
+										<td>S<sub>2</sub>P<sub>1</sub></td>
+										<td>S<sub>2</sub>P<sub>2</sub></td>
+										<td>S<sub>2</sub>S<sub>1</sub></td>
+										<td>S<sub>2</sub>S<sub>3</sub></td>
+									</tr>
+									<tr>
+										<td>S<sub>3</sub>P<sub>1</sub></td>
+										<td>S<sub>3</sub>P<sub>2</sub></td>
+										<td>S<sub>3</sub>S<sub>1</sub></td>
+										<td>S<sub>3</sub>S<sub>2</sub></td>
+									</tr>
+								</tbody>
+							</table>
+							<p>Todennäköisyys, että molemmat tapahtuvat saadaan laskemalla:</p>
+							<p class="indent">\(\mathsf{P(\text{1. punainen ja 2. sininen}) = \dfrac{suotuisat\,alkeistapaukset}{kaikki\,alkeistapaukset} = \dfrac{6}{20} = \text{0,3} = 30\:\%}\)</p>
+						</div>
+						<p><strong>Vastaus:</strong> Todennäköisyys, että ensimmäisellä nostolla tulee punainen ja toisella nostolla sininen pallo on 30 prosenttia.</p>
 					</div>
-					<p>Todennäköisyys, että molemmat tapahtuvat saadaan laskemalla:</p>
-					<div class="indent">
-					<p>\(\mathsf{P(\text{1. punainen ja 2. sininen}) = \dfrac{suotuisat\,alkeistapaukset}{kaikki\,alkeistapaukset} = \dfrac{6}{20} = \text{0,3} = 30\:\%}\)</p>
-					</div>
-					<p><strong>Vastaus:</strong> Todennäköisyys, että ensimmäisellä nostolla tulee punainen ja toisella nostolla sininen pallo on 30 prosenttia.</p>
-					</div>
-					</div>
-					<br>
 					<h4>Yhteenlaskusääntö</h4>
 					<p>Jos suotuisia tapahtumia on useita, todennäköisyydet lasketaan yhteen.</p>
 					<div class="example">
-					<p><strong>Esimerkki 2a:</strong> Pussissa on 5 palloa: 2 punaista ja 3 sinistä. Pussista nostetaan kaksi palloa. Millä todennäköisyydellä pallot ovat eriväriset?</p>
-					<div class="indent">
-					<p>Suotuisa tapahtuma 1: 1. pallo on punainen ja 2. pallo on sininen:</p>
-					<div class="indent">
-					<p>\(\mathsf{P(\text{1. punainen ja 2. sininen}) = \dfrac{2}{5} \cdot \dfrac{3}{4} = \dfrac{6}{20}}\)</p>
+						<p><strong>Esimerkki:</strong> Pussissa on 5 palloa: 2 punaista ja 3 sinistä. Pussista nostetaan kaksi palloa. Millä todennäköisyydellä pallot ovat eriväriset?</p>
+						<div class="indent">
+							<p><strong>Suotuisa tapahtuma 1:</strong> 1. pallo on punainen ja 2. pallo on sininen:</p>
+							<p class="indent">\(\mathsf{P(\text{1. punainen ja 2. sininen}) = \dfrac{2}{5} \cdot \dfrac{3}{4} = \dfrac{6}{20}}\)</p>
+							<p><strong>Suotuisa tapahtuma 2:</strong> 1. pallo on sininen ja 2. pallo on punainen:</p>
+							<p class="indent">\(\mathsf{P(\text{1. sininen ja 2. punainen}) = \dfrac{3}{5} \cdot \dfrac{2}{4} = \dfrac{6}{20}}\)</p>
+							<p>Todennäköisyys, että jompi kumpi tapahtuu, saadaan yhteenlaskulla:</p>
+							<p class="indent">\(\mathsf{P(\text{eriväriset}) = P(\text{1. punainen ja 2. sininen}) + P(\text{1. sininen ja 2. punainen}) = \dfrac{6}{20} + \dfrac{6}{20} = \dfrac{12}{20} = \text{0,6} = 60\:\%}\)</p>
+						</div>
+						<p><strong>Vastaus:</strong> Todennäköisyys, että pallot ovat erivärisiä on 60 prosenttia.</p>
 					</div>
-					<p>Suotuisa tapahtuma 2: 1. pallo on sininen ja 2. pallo on punainen:</p>
-					<div class="indent">
-					<p>\(\mathsf{P(\text{1. sininen ja 2. punainen}) = \dfrac{3}{5} \cdot \dfrac{2}{4} = \dfrac{6}{20}}\)</p>
-					</div>
-					<p>Todennäköisyys, että jompi kumpi tapahtuu, saadaan yhteenlaskulla:</p>
-					<div class="indent">
-					<p>\(\mathsf{P(\text{eriväriset}) = P(\text{1. punainen ja 2. sininen}) + P(\text{1. sininen ja 2. punainen}) = \dfrac{6}{20} + \dfrac{6}{20} = \dfrac{12}{20} = \text{0,6} = 60\:\%}\)</p>
-					</div>
-					<p><strong>Vastaus:</strong> Todennäköisyys, että pallot ovat erivärisiä on 60 prosenttia.</p>
-					</div>
-					</div>
-					<br>
 					<p>Vaihtoehtoisesti voidaan laskea kaikkien ja suotuisten vaihtoehtojen lukumäärät perättäisistä tapahtumista, ja laskea todennäköisyys niiden avulla.</p>
 					<div class="example">
-					<p><strong>Esimerkki 2b:</strong> Pussissa on 5 palloa: 2 punaista ja 3 sinistä. Pussista nostetaan kaksi palloa. Millä todennäköisyydellä pallot ovat eriväriset?</p>
-					<div class="indent">
-					<p>Taulukoidaan kaikki alkeistapaukset. Samanväriset pallot on numeroitu alaindeksiin. Suotuisat alkeistapaukset on merkitty lihavoituna.</p>
-					<div class="indent">
-					<table>
-					<tbody>
-					<tr>
-					<td style="padding-right: 10px;">P<sub>1</sub>P<sub>2</sub></td>
-					<td style="padding-right: 10px;"><strong>P<sub>1</sub>S<sub>1</sub></strong></td>
-					<td style="padding-right: 10px;"><strong>P<sub>1</sub>S<sub>2</sub></strong></td>
-					<td style="padding-right: 10px;"><strong>P<sub>1</sub>S<sub>3</sub></strong></td>
-					</tr>
-					<tr>
-					<td>P<sub>2</sub>P<sub>1</sub></td>
-					<td><strong>P<sub>2</sub>S<sub>1</sub></strong></td>
-					<td><strong>P<sub>2</sub>S<sub>2</sub></strong></td>
-					<td><strong>P<sub>2</sub>S<sub>3</sub></strong></td>
-					</tr>
-					<tr>
-					<td><strong>S<sub>1</sub>P<sub>1</sub></strong></td>
-					<td><strong>S<sub>1</sub>P<sub>2</sub></strong></td>
-					<td>S<sub>1</sub>S<sub>2</sub></td>
-					<td>S<sub>1</sub>S<sub>3</sub></td>
-					</tr>
-					<tr>
-					<td><strong>S<sub>2</sub>P<sub>1</sub></strong></td>
-					<td><strong>S<sub>2</sub>P<sub>2</sub></strong></td>
-					<td>S<sub>2</sub>S<sub>1</sub></td>
-					<td>S<sub>2</sub>S<sub>3</sub></td>
-					</tr>
-					<tr>
-					<td><strong>S<sub>3</sub>P<sub>1</sub></strong></td>
-					<td><strong>S<sub>3</sub>P<sub>2</sub></strong></td>
-					<td>S<sub>3</sub>S<sub>1</sub></td>
-					<td>S<sub>3</sub>S<sub>2</sub></td>
-					</tr>
-					</tbody>
-					</table>
-					</div>
-					<p>Lasketaan todennäköisyys:</p>
-					<div class="indent">
-					<p>\(\mathsf{P(\text{eriväriset}) = \dfrac{12}{20} = \text{0,6} = 60\:\%}\)</p>
-					</div>
-					<p><strong>Vastaus:</strong> Todennäköisyys, että pallot ovat erivärisiä on 60 prosenttia.</p>
-					</div>
+						<p><strong>Esimerkki:</strong> Pussissa on 5 palloa: 2 punaista (P<sub>1</sub> ja P<sub>2</sub>) ja 3 sinistä (S<sub>1</sub>, S<sub>2</sub> ja S<sub>3</sub>). Pussista nostetaan kaksi palloa. Millä todennäköisyydellä pallot ovat eriväriset?</p>
+						<div class="indent">
+							<p>Taulukoidaan kaikki alkeistapaukset. Samanväriset pallot on numeroitu alaindeksiin. Suotuisat alkeistapaukset on merkitty lihavoituna.</p>
+							<table class="no-border">
+								<tbody>
+									<tr>
+										<td>P<sub>1</sub>P<sub>2</sub></td>
+										<td><strong>P<sub>1</sub>S<sub>1</sub></strong></td>
+										<td><strong>P<sub>1</sub>S<sub>2</sub></strong></td>
+										<td><strong>P<sub>1</sub>S<sub>3</sub></strong></td>
+									</tr>
+									<tr>
+										<td>P<sub>2</sub>P<sub>1</sub></td>
+										<td><strong>P<sub>2</sub>S<sub>1</sub></strong></td>
+										<td><strong>P<sub>2</sub>S<sub>2</sub></strong></td>
+										<td><strong>P<sub>2</sub>S<sub>3</sub></strong></td>
+									</tr>
+									<tr>
+										<td><strong>S<sub>1</sub>P<sub>1</sub></strong></td>
+										<td><strong>S<sub>1</sub>P<sub>2</sub></strong></td>
+										<td>S<sub>1</sub>S<sub>2</sub></td>
+										<td>S<sub>1</sub>S<sub>3</sub></td>
+									</tr>
+									<tr>
+										<td><strong>S<sub>2</sub>P<sub>1</sub></strong></td>
+										<td><strong>S<sub>2</sub>P<sub>2</sub></strong></td>
+										<td>S<sub>2</sub>S<sub>1</sub></td>
+										<td>S<sub>2</sub>S<sub>3</sub></td>
+									</tr>
+									<tr>
+										<td><strong>S<sub>3</sub>P<sub>1</sub></strong></td>
+										<td><strong>S<sub>3</sub>P<sub>2</sub></strong></td>
+										<td>S<sub>3</sub>S<sub>1</sub></td>
+										<td>S<sub>3</sub>S<sub>2</sub></td>
+									</tr>
+								</tbody>
+							</table>
+							<p>Lasketaan todennäköisyys:</p>
+							<p class="indent">\(\mathsf{P(\text{eriväriset}) = \dfrac{12}{20} = \text{0,6} = 60\:\%}\)</p>
+						</div>
+						<p><strong>Vastaus:</strong> Todennäköisyys, että pallot ovat erivärisiä on 60 prosenttia.</p>
 					</div>
 				</div>
 			</div>
@@ -593,329 +584,224 @@
 				<p>Todennäköisyyslaskentaa sovelletaan kaikenlaisten tieteiden lisäksi monilla arkielämän aloilla. Sen avulla voidaan simuloida ja ennustaa erilaisia tapahtumia. Monissa peleissä satunnaisuus ja sitä kautta erilaiset todennäköisyydet ovat suuressa roolissa pelin etenemisen kannalta. Uhkapeleissä (casinopelit, vedonlyönti) voittojen todennäköisyydet ja niistä laskettavat palautusprosentit määrittävät, kuinka nopeasti pelaaja häviää rahaa. </p>
 				<h3>Palautusprosentti</h3>
 				<div>
-					<h5>Palautusprosentti</h5>
 					<p><strong>Palautusprosentti</strong> kertoo kuinka paljon pelaaja keskimäärin panoksestaan saa takaisin yhdellä pelikierroksella. Jos palautusprosentti on pienempi kuin 100 % pelaaja häviää rahansa ajan kuluessa. Jos palautusprosentti on 90 %, niin jokaisella pelikierroksella saadaan 0,9 kertaisesti panostettu rahamäärä takaisin. Yhden euron panoksella hävitään joka kierroksella siis</p>
-					<div class="indent">
-					<p>\(\mathsf{\text{1,00 €} -\text{0,90 €} = \text{0,10 €}}\)</p>
-					</div>
+					<p class="indent">\(\mathsf{\text{1,00 €} -\text{0,90 €} = \text{0,10 €}}\)</p>
 					<p>Jos alkupanostus on 10 euroa ja peliä pelataan 1 euron panoksella, pelikierroksia voidaan pelata keskimäärin</p>
-					<div class="indent">
-					<p>\(\mathsf{\dfrac{\text{10 €}}{\text{0,10 €}} = 100 \text{ kierrosta.}}\)</p>
-					</div>
+					<p class="indent">\(\mathsf{\dfrac{\text{10 €}}{\text{0,10 €}} = 100 \text{ kierrosta.}}\)</p>
 					<p>Missään rahapelissä ei palautusprosentti ole suurempi kuin 100 prosenttia. Mitä lähempänä se sataa prosenttia on, sitä pidempään peli voi jatkua. Pitkässä juoksussa rahat häviää kuitenkin varmasti.</p>
-					<h5>Palautusprosentin laskeminen</h5>
+					<h4>Palautusprosentin laskeminen</h4>
 					<p>Palautusprosentti voidaan laskea seuraavien vaiheiden kautta:</p>
 					<ol>
-					<li>Taulukoidaan kaikki erilaiset tapaukset, niiden kertoimet ja todennäköisyydet.</li>
-					<li>Lasketaan kullekkin tapaukselle voitto, joka saadaan vähentämällä panos kertoimesta.</li>
-					<li>Kerrotaan voitto ja todennäköisyys keskenään.</li>
-					<li>Lasketaan kertolaskujen tulokset yhteen.</li>
-					<li>Lisätään (vähenetään) saatu prosenttiluku 100 prosentista.</li>
+						<li>Taulukoidaan kaikki erilaiset tapaukset, niiden palautuskertoimet ja todennäköisyydet.</li>
+						<li>Lasketaan kullekkin tapaukselle voitto, joka saadaan vähentämällä panos kertoimesta.</li>
+						<li>Kerrotaan voitto ja todennäköisyys keskenään.</li>
+						<li>Lasketaan kertolaskujen tulokset yhteen.</li>
+						<li>Lisätään (vähenetään) saatu prosenttiluku 100 prosentista.</li>
 					</ol>
 					<div class="example">
-					<p><strong>Esimerkki 1:</strong> Laske pelin palautusprosentti, kun peliä pelataan yhden panoksella ja voitot sekä todennäköisyydet on ilmoitettu alla olevassa taulukossa.</p>
-					<div class="indent">
-					<table>
-					<tbody>
-					<tr>
-					<td style="padding: 5px 10px; text-align: center; border: 1px solid black;"><strong>Tapahtuma</strong></td>
-					<td style="padding: 5px 10px; text-align: center; border: 1px solid black;"><strong>Kerroin</strong></td>
-					<td style="padding: 5px 10px; text-align: center; border: 1px solid black;"><strong>Voitto</strong></td>
-					<td style="padding: 5px 10px; text-align: center; border: 1px solid black;"><strong>Todennäköisyys</strong></td>
-					</tr>
-					<tr>
-					<td style="padding: 5px 10px; text-align: center; border: 1px solid black;">3 oikein</td>
-					<td style="padding: 5px 10px; text-align: center; border: 1px solid black;">5</td>
-					<td style="padding: 5px 10px; text-align: center; border: 1px solid black;">4</td>
-					<td style="padding: 5px 10px; text-align: center; border: 1px solid black;">\(\mathsf{7\:\%}\)</td>
-					</tr>
-					<tr>
-					<td style="padding: 5px 10px; text-align: center; border: 1px solid black;">2 oikein</td>
-					<td style="padding: 5px 10px; text-align: center; border: 1px solid black;">3</td>
-					<td style="padding: 5px 10px; text-align: center; border: 1px solid black;">2</td>
-					<td style="padding: 5px 10px; text-align: center; border: 1px solid black;">\(\mathsf{10\:\%}\)</td>
-					</tr>
-					<tr>
-					<td style="padding: 5px 10px; text-align: center; border: 1px solid black;">1 oikein</td>
-					<td style="padding: 5px 10px; text-align: center; border: 1px solid black;">2</td>
-					<td style="padding: 5px 10px; text-align: center; border: 1px solid black;">1</td>
-					<td style="padding: 5px 10px; text-align: center; border: 1px solid black;">\(\mathsf{12\:\%}\)</td>
-					</tr>
-					<tr>
-					<td style="padding: 5px 10px; text-align: center; border: 1px solid black;">0 oikein</td>
-					<td style="padding: 5px 10px; text-align: center; border: 1px solid black;">0</td>
-					<td style="padding: 5px 10px; text-align: center; border: 1px solid black;">-1</td>
-					<td style="padding: 5px 10px; text-align: center; border: 1px solid black;">\(\mathsf{71\:\%}\)</td>
-					</tr>
-					</tbody>
-					</table>
-					</div>
-					<p><strong>Ratkaisu:</strong> Summataan riveittäin Voitto · Todennäköisyys</p>
-					<div class="indent">
-					<p>\(\mathsf{4 \cdot 7\:\% + 2 \cdot 10\:\% + 1 \cdot 12\:\% - 1 \cdot 71\:\% = 28\:\% + 20\:\% + 12\:\% - 71\:\% = -11\:\%}\)</p>
-					<p>\(\mathsf{100\:\% - 11\:\% = 89\:\%}\)</p>
-					</div>
-					<p><strong>Vastaus:</strong> Pelin palautusprosentti on 89 prosenttia.</p>
+						<p><strong>Esimerkki:</strong> Laske pelin palautusprosentti, kun peliä pelataan yhden panoksella ja voitot sekä todennäköisyydet on ilmoitettu alla olevassa taulukossa.</p>
+						<table>
+							<thead>
+								<tr>
+									<th>Tapahtuma</th>
+									<th>Kerroin</th>
+									<th>Voitto</th>
+									<th>Todennäköisyys</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>3 oikein</td>
+									<td>5</td>
+									<td>4</td>
+									<td>\(\mathsf{7\:\%}\)</td>
+								</tr>
+								<tr>
+									<td>2 oikein</td>
+									<td>3</td>
+									<td>2</td>
+									<td>\(\mathsf{10\:\%}\)</td>
+								</tr>
+								<tr>
+									<td>1 oikein</td>
+									<td>2</td>
+									<td>1</td>
+									<td>\(\mathsf{12\:\%}\)</td>
+								</tr>
+								<tr>
+									<td>0 oikein</td>
+									<td>0</td>
+									<td>-1</td>
+									<td>\(\mathsf{71\:\%}\)</td>
+								</tr>
+							</tbody>
+						</table>
+						<p><strong>Ratkaisu:</strong> Summataan riveittäin Voitto · Todennäköisyys</p>
+						<div class="indent">
+							<p>\(\mathsf{4 \cdot 7\:\% + 2 \cdot 10\:\% + 1 \cdot 12\:\% - 1 \cdot 71\:\% = 28\:\% + 20\:\% + 12\:\% - 71\:\% = -11\:\%}\)</p>
+							<p>\(\mathsf{100\:\% - 11\:\% = 89\:\%}\)</p>
+						</div>
+						<p><strong>Vastaus:</strong> Pelin palautusprosentti on 89 prosenttia.</p>
 					</div>
 				</div>
 				<h3>Kolikko</h3>
 				<div>
 					<p>Kolikkoa käytetään päätöksenteon apuvälineenä mm. urheilussa, kun halutaan arpoa kahden vaihtoehdon välillä. Kolikossa on kaksi puolta: kuvapuoli eli <strong>kruuna</strong> (ruots. krona, eng. heads) ja arvopuoli <strong>klaava</strong> (ruots. klave, eng. tails).</p>
-					<div class="indent">
-					<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/366705680/ma9j5_teoria_kolikot.png" alt="" width="265" height="142"></p>
-					</div>
+					<img src="https://jannevenhoedu.github.io/ma9/j5/t/ma9j5_teoria_kolikot.png">
 					<p>Oletetaan, että kolikko kääntyy aina toiselle kyljelleen eikä voi jäädä pystyyn. Lisäksi oletetaan kolikon olevan symmetrinen sekä painottamaton, jolloin kruunan ja klaavan todennäköisyydet ovat</p>
-					<div class="indent">
-					<p>\(\mathsf{\dfrac{1}{2} = \text{0,5} = 50\:\%}\).</p>
-					</div>
+					<p class="indent">\(\mathsf{\dfrac{1}{2} = \text{0,5} = 50\:\%}\).</p>
 					<div class="example">
-					<p><strong>Esimerkki 1:</strong> Kolikkoa heitetään kaksi kertaa. Millä todennäköisyydellä saadaan kaksi kruunaa?</p>
-					<div class="indent">
-					<p>\(\mathsf{P(\text{kaksi kruunaa}) = \dfrac{1}{2} \cdot \dfrac{1}{2} = \dfrac{1}{4} = \text{0,25} = 25\:\%}\)</p>
-					<p><strong>Vastaus:</strong> Kaksi kruunaa saadaan 25 prosentin todennäköisyydellä.</p>
-					</div>
+						<p><strong>Esimerkki:</strong> Kolikkoa heitetään kaksi kertaa. Millä todennäköisyydellä saadaan kaksi kruunaa?</p>
+						<p class="indent">\(\mathsf{P(\text{kaksi kruunaa}) = \dfrac{1}{2} \cdot \dfrac{1}{2} = \dfrac{1}{4} = \text{0,25} = 25\:\%}\)</p>
+						<p><strong>Vastaus:</strong> Kaksi kruunaa saadaan 25 prosentin todennäköisyydellä.</p>
 					</div>
 					<br>
 					<div class="example">
-					<p><strong>Esimerkki 2:</strong> Kolikkoa heitetään kaksi kertaa. Millä todennäköisyydellä saadaan vähintään yksi kruuna?</p>
-					<div class="indent">
-					<p>Tapa 1: Vastatodennäköisyys</p>
-					<div class="indent">
-					<p>\(\mathsf{P(\text{vähintään 1 kruuna}) = 1 - P(\text{ei yhtään kruunaa}) = 1 - \dfrac{1}{2} \cdot \dfrac{1}{2} = 1-\dfrac{1}{4} = \dfrac{3}{4} = \text{0,75} = 75\:\%}\)</p>
-					</div>
-					<p>Tapa 2: Yhteenlaskuperiaate</p>
-					<div class="indent">
-					<p>\(\mathsf{P(\text{vähintään 1 kruuna}) = P(\text{1 kruuna}) + P(\text{kaksi kruunaa}) = \dfrac{1}{2} \cdot \dfrac{2}{2} + \dfrac{1}{2} \cdot \dfrac{1}{2} = \dfrac{2}{4} + \dfrac{1}{4} = \dfrac{3}{4} = \text{0,75} = 75\:\%}\)</p>
-					</div>
-					<p><strong>Vastaus:</strong> Vähintään yksi kruuna saadaan 75 prosentin todennäköisyydellä.</p>
-					</div>
+						<p><strong>Esimerkki:</strong> Kolikkoa heitetään kaksi kertaa. Millä todennäköisyydellä saadaan vähintään yksi kruuna?</p>
+						<div class="indent">
+							<p>Tapa 1: Vastatodennäköisyys</p>
+							<p class="indent">\(\mathsf{P(\text{vähintään 1 kruuna}) = 1 - P(\text{ei yhtään kruunaa}) = 1 - \dfrac{1}{2} \cdot \dfrac{1}{2} = 1-\dfrac{1}{4} = \dfrac{3}{4} = \text{0,75} = 75\:\%}\)</p>
+							<p>Tapa 2: Yhteenlaskuperiaate</p>
+							<p class="indent">\(\mathsf{P(\text{vähintään 1 kruuna}) = P(\text{1 kruuna}) + P(\text{kaksi kruunaa}) = \dfrac{1}{2} \cdot \dfrac{2}{2} + \dfrac{1}{2} \cdot \dfrac{1}{2} = \dfrac{2}{4} + \dfrac{1}{4} = \dfrac{3}{4} = \text{0,75} = 75\:\%}\)</p>
+						</div>
+						<p><strong>Vastaus:</strong> Vähintään yksi kruuna saadaan 75 prosentin todennäköisyydellä.</p>
 					</div>
 				</div>
 				<h3>Noppa</h3>
 				<div>
 					<p>Noppaa käytetään arvontavälineenä esimerkiksi lautapeleissä tai erityisissä noppapeleissä. Yleisin noppamalli on kuusitahkoinen <strong>arpakuutio</strong>, jossa kuhunkin tahkoon on merkitty jokin silmäluku. Myös muun muotoisia säännöllisiä monitahokkaita käytetään noppina esimerkiksi roolipeleissä. Silmäluvut voivat olla myös muita kuin lukuja yhdestä alkaen.</p>
-					<div class="indent">
-					<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/331815818/ma9j5_teoria_arpakuutio.png" alt="" width="494" height="67"></p>
-					</div>
+					<img src="https://jannevenhoedu.github.io/ma9/j5/t/ma9j5_teoria_arpakuutio.png">
 					<p>Käsitellään jatkossa aina arpakuutiota, jollei toisin mainita. Oletetaan nopan olevan symmetrinen ja painottamaton, jolloin jonkin tietyn silmäluvun todennäköisyys on.</p>
-					<div class="indent">
-					<p>\(\mathsf{\dfrac{1}{6} = \text{0,16666...} \approx 17\:\%}\).</p>
-					</div>
+					<p class="indent">\(\mathsf{\dfrac{1}{6} = \text{0,16666...} \approx 17\:\%}\).</p>
 					<div class="example">
-					<p><strong>Esimerkki 1:</strong> Noppaa heitetään kerran. Millä todennäköisyydellä silmäluku on pariton (1, 3 tai 5).</p>
-					<div class="indent">
-					<p>\(\mathsf{P(\text{pariton}) = \dfrac{3}{6} = \text{0,5} = 50\:\%}\)</p>
-					<p><strong>Vastaus:</strong> Pariton silmäluku saadaan 50 prosentin todennäköisyydellä.</p>
+						<p><strong>Esimerkki:</strong> Noppaa heitetään kerran. Millä todennäköisyydellä silmäluku on pariton (1, 3 tai 5).</p>
+						<p class="indent">\(\mathsf{P(\text{pariton}) = \dfrac{3}{6} = \text{0,5} = 50\:\%}\)</p>
+						<p><strong>Vastaus:</strong> Pariton silmäluku saadaan 50 prosentin todennäköisyydellä.</p>
 					</div>
-					</div>
-					<p> </p>
+					<br>
 					<div class="example">
-					<p><strong>Esimerkki 2:</strong> Noppaa heitetään kaksi kertaa. Millä todennäköisyydellä saadaan kaksi kuutosta?</p>
-					<div class="indent">
-					<p>\(\mathsf{P(\text{kaksi kuutosta}) = \dfrac{1}{6} \cdot \dfrac{1}{6} = \dfrac{1}{36} = \text{0,2777...} \approx 2,8\:\%}\)</p>
-					<p><strong>Vastaus:</strong> Kaksi kuutosta saadaan 2,8 prosentin todennäköisyydellä.</p>
+						<p><strong>Esimerkki:</strong> Noppaa heitetään kaksi kertaa. Millä todennäköisyydellä saadaan kaksi kuutosta?</p>
+						<p class="indent">\(\mathsf{P(\text{kaksi kuutosta}) = \dfrac{1}{6} \cdot \dfrac{1}{6} = \dfrac{1}{36} = \text{0,2777...} \approx 2,8\:\%}\)</p>
+						<p><strong>Vastaus:</strong> Kaksi kuutosta saadaan 2,8 prosentin todennäköisyydellä.</p>
 					</div>
-					</div>
-					<p> </p>
+					<br>
 					<div class="example">
-					<p><strong>Esimerkki 3:</strong> Noppaa heitetään kaksi kertaa. Millä todennäköisyydellä silmäluvut eivät ole samat?</p>
-					<div class="indent">
-					<p>Erilaisia tapauksia yhteensä \(\mathsf{6 \cdot 6 = 36}\) kappaletta.</p>
-					<div class="indent">
-					<table>
-					<tbody>
-					<tr>
-					<td style="padding-right: 15px;">11,</td>
-					<td style="padding-right: 15px;"><strong>12,</strong></td>
-					<td style="padding-right: 15px;"><strong>13,</strong></td>
-					<td style="padding-right: 15px;"><strong>14,</strong></td>
-					<td style="padding-right: 15px;"><strong>15,</strong></td>
-					<td><strong>16,</strong></td>
-					</tr>
-					<tr>
-					<td><strong>21,</strong></td>
-					<td>22,</td>
-					<td><strong>23,</strong></td>
-					<td><strong>24,</strong></td>
-					<td><strong>25,</strong></td>
-					<td><strong>26,</strong></td>
-					</tr>
-					<tr>
-					<td><strong>31,</strong></td>
-					<td><strong>32,</strong></td>
-					<td>33,</td>
-					<td><strong>34,</strong></td>
-					<td><strong>35,</strong></td>
-					<td><strong>36,</strong></td>
-					</tr>
-					<tr>
-					<td><strong>41,</strong></td>
-					<td><strong>42,</strong></td>
-					<td><strong>43,</strong></td>
-					<td>44,</td>
-					<td><strong>45,</strong></td>
-					<td><strong>46,</strong></td>
-					</tr>
-					<tr>
-					<td><strong>51,</strong></td>
-					<td><strong>52,</strong></td>
-					<td><strong>53,</strong></td>
-					<td><strong>54,</strong></td>
-					<td>55,</td>
-					<td><strong>56,</strong></td>
-					</tr>
-					<tr>
-					<td><strong>61,</strong></td>
-					<td><strong>62,</strong></td>
-					<td><strong>63,</strong></td>
-					<td><strong>64,</strong></td>
-					<td><strong>65,</strong></td>
-					<td>66</td>
-					</tr>
-					</tbody>
-					</table>
-					</div>
-					<p>Suotuisia tapaksia (lihavoitu): 30</p>
-					<p>Todennäköisyys</p>
-					<div class="indent">
-					<p>\(\mathsf{P(\text{eri luvut}) = \dfrac{30}{36} = \text{0,833...} \approx 83\:\%}\)</p>
-					</div>
-					<p><strong>Vastaus:</strong> Silmäluvut eivät ole samoja 83 prosentin todennäköisyydellä.</p>
-					</div>
+						<p><strong>Esimerkki 3:</strong> Noppaa heitetään kaksi kertaa. Millä todennäköisyydellä silmäluvut eivät ole samat?</p>
+						<div class="indent">
+							<p>Erilaisia tapauksia yhteensä \(\mathsf{6 \cdot 6 = 36}\) kappaletta.</p>
+							<table class="no-border">
+								<tbody>
+									<tr>
+										<td>11,</td>
+										<td><strong>12,</strong></td>
+										<td><strong>13,</strong></td>
+										<td><strong>14,</strong></td>
+										<td><strong>15,</strong></td>
+										<td><strong>16,</strong></td>
+									</tr>
+									<tr>
+										<td><strong>21,</strong></td>
+										<td>22,</td>
+										<td><strong>23,</strong></td>
+										<td><strong>24,</strong></td>
+										<td><strong>25,</strong></td>
+										<td><strong>26,</strong></td>
+									</tr>
+									<tr>
+										<td><strong>31,</strong></td>
+										<td><strong>32,</strong></td>
+										<td>33,</td>
+										<td><strong>34,</strong></td>
+										<td><strong>35,</strong></td>
+										<td><strong>36,</strong></td>
+									</tr>
+									<tr>
+										<td><strong>41,</strong></td>
+										<td><strong>42,</strong></td>
+										<td><strong>43,</strong></td>
+										<td>44,</td>
+										<td><strong>45,</strong></td>
+										<td><strong>46,</strong></td>
+									</tr>
+									<tr>
+										<td><strong>51,</strong></td>
+										<td><strong>52,</strong></td>
+										<td><strong>53,</strong></td>
+										<td><strong>54,</strong></td>
+										<td>55,</td>
+										<td><strong>56,</strong></td>
+									</tr>
+									<tr>
+										<td><strong>61,</strong></td>
+										<td><strong>62,</strong></td>
+										<td><strong>63,</strong></td>
+										<td><strong>64,</strong></td>
+										<td><strong>65,</strong></td>
+										<td>66</td>
+									</tr>
+								</tbody>
+							</table>
+							<p>Suotuisia tapaksia (lihavoitu): 30</p>
+							<p>Todennäköisyys:</p>
+							<p class="indent">\(\mathsf{P(\text{eri luvut}) = \dfrac{30}{36} = \text{0,833...} \approx 83\:\%}\)</p>
+						</div>
+						<p><strong>Vastaus:</strong> Silmäluvut eivät ole samoja 83 prosentin todennäköisyydellä.</p>
 					</div>
 				</div>
 				<h3>Pelikortit</h3>
 				<div>
-					<p>Pelikorttipakassa on 52 korttia. Pelikortit on jaettu kahteen väriin (punainen ja musta) sekä neljään maahan: hertta <span style="color: red; font-size: 20px;">♥</span>, ruutu <span style="color: red; font-size: 20px;">♦</span>, risti <span style="font-size: 20px;">♣</span> ja pata <span style="font-size: 20px;">♠</span>. Jokaisessa maassa on kolmetoista korttia, jotka on luokiteltu arvoin 1-13. Kirjaimella <strong>A</strong> (engl. <em>ace</em>, "ässä") kuvataan arvoa 1 (tai 14 joissakin korttipeleissä), kirjaimella <strong>J</strong> (engl. <em>jack</em>, "jätkä") arvoa 11, kirjaimella <strong>Q</strong> (engl. <em>queen</em>, "kuningatar", "akka", "rouva") arvoa 12 sekä kirjaimella <strong>K</strong> (engl. <em>king</em>, "kuningas", "kunkku", "kurko", "kalle") arvoa 13. Kortteja J, Q ja K kutsutaan <strong>kuvakorteiksi</strong>.</p>
-					<div class="indent">
-					<p style="font-size: 100px; line-height: 100px;"><span style="color: red;">🂱🂲🂳🂴🂵🂶🂷🂸🂹🂺🂻🂽🂾</span><br><span style="color: red;">🃁🃂🃃🃄🃅🃆🃇🃈🃉🃊🃋🃍🃎</span><br><span style="color: black;">🃑🃒🃓🃔🃕🃖🃗🃘🃙🃚🃛🃝🃞</span><br><span style="color: black;">🂡🂢🂣🂤🂥🂦🂧🂨🂩🂪🂫🂭🂮</span></p>
+					<p>Pelikorttipakassa on 52 korttia. Pelikortit on jaettu kahteen väriin (punainen ja musta) sekä neljään maahan: 
+					<ul>
+						<li>hertta <span style="color: red; font-size: 20px;">♥</span></li>
+						<li>ruutu <span style="color: red; font-size: 20px;">♦</span></li>
+						<li>risti <span style="font-size: 20px;">♣</span></li>
+						<li>pata <span style="font-size: 20px;">♠</span>
+					</ul>
+					<p>Jokaisessa maassa on kolmetoista korttia, jotka on luokiteltu arvoin 1-13. Kirjaimella <strong>A</strong> (engl. <em>ace</em>, "ässä") kuvataan arvoa 1 (tai 14 joissakin korttipeleissä), kirjaimella <strong>J</strong> (engl. <em>jack</em>, "jätkä") arvoa 11, kirjaimella <strong>Q</strong> (engl. <em>queen</em>, "kuningatar", "akka", "rouva") arvoa 12 sekä kirjaimella <strong>K</strong> (engl. <em>king</em>, "kuningas", "kunkku", "kurko", "kalle") arvoa 13. Kortteja J, Q ja K kutsutaan <strong>kuvakorteiksi</strong>.</p>
+					<div class="indent wide">
+						<p style="margin: 0px; font-size: 100px; line-height: 100px;"><span style="color: red;">🂱🂲🂳🂴🂵🂶🂷🂸🂹🂺🂻🂽🂾</span><br><span style="color: red;">🃁🃂🃃🃄🃅🃆🃇🃈🃉🃊🃋🃍🃎</span><br><span style="color: black;">🃑🃒🃓🃔🃕🃖🃗🃘🃙🃚🃛🃝🃞</span><br><span style="color: black;">🂡🂢🂣🂤🂥🂦🂧🂨🂩🂪🂫🂭🂮</span></p>
+					</div>
+					<div class="indent narrow">
+						<p style="margin: 0px; font-size: 55px; line-height: 55px;"><span style="color: red;">🂱🂲🂳🂴🂵🂶🂷🂸🂹🂺🂻🂽🂾</span><br><span style="color: red;">🃁🃂🃃🃄🃅🃆🃇🃈🃉🃊🃋🃍🃎</span><br><span style="color: black;">🃑🃒🃓🃔🃕🃖🃗🃘🃙🃚🃛🃝🃞</span><br><span style="color: black;">🂡🂢🂣🂤🂥🂦🂧🂨🂩🂪🂫🂭🂮</span></p>
 					</div>
 					<p>Joissakin korttipakoissa voi olla näiden 52 kortin lisäksi erikoiskortteja, esimerkiksi jokereita, joita voidaan käyttää tietyissä korttipeleissä. Käytetään jatkossa oletuksena 52 kortin pakkaa, ellei toisin mainita.</p>
 					<div class="example">
-					<p><strong>Esimerkki 1:</strong> Millä todennäköisyydellä satunnaisesti valittu pelikortti on</p>
-					<div class="indent">
-					<p>a) hertta 7</p>
-					<p>b) risti</p>
-					<p>c) kutonen</p>
-					<p>d) punainen jätkä?</p>
-					</div>
-					<p><strong>Ratkaisu:</strong></p>
-					<div class="indent">
-					<p>a) \(\mathsf{P(\text{hertta 7}) = \dfrac{1}{52} = \text{0,0192...} \approx \text{1,9}\:\%}\)</p>
-					<p>b) \(\mathsf{P(\text{risti}) = \dfrac{13}{52} = \text{0,25} = 25\:\%}\)</p>
-					<p>c) \(\mathsf{P(\text{kutonen}) = \dfrac{4}{52} = \text{0,0769...} \approx \text{7,7}\:\%}\)</p>
-					<p>d) \(\mathsf{P(\text{punainen}) = \dfrac{26}{52} = \text{0,5} = 50\:\%}\)</p>
-					</div>
+						<p><strong>Esimerkki:</strong> Millä todennäköisyydellä satunnaisesti valittu pelikortti on</p>
+						<div class="indent">
+							<p>a) hertta 7</p>
+							<p class="indent">\(\mathsf{P(\text{hertta 7}) = \dfrac{1}{52} = \text{0,0192...} \approx \text{1,9}\:\%}\)</p>
+							<p>b) risti</p>
+							<p class="indent">\(\mathsf{P(\text{risti}) = \dfrac{13}{52} = \text{0,25} = 25\:\%}\)</p>
+							<p>c) kutonen</p>
+							<p class="indent">\(\mathsf{P(\text{kutonen}) = \dfrac{4}{52} = \text{0,0769...} \approx \text{7,7}\:\%}\)</p>
+							<p>d) punainen jätkä?</p>
+							<p class="indent">\(\mathsf{P(\text{punainen}) = \dfrac{26}{52} = \text{0,5} = 50\:\%}\)</p>
+						</div>
 					</div>
 					<br>
 					<div class="example">
-					<p><strong>Esimerkki 2:</strong> <a href="https://fi.wikipedia.org/wiki/Ventti" target="_blank" rel="noopener">Ventissä</a> on tavoitteena pakasta kortteja nostamalla saada korttien arvojen summa mahdollisimman lähelle lukua 21. Pelaaja voi valita onko ässä (A) arvoltaan 1 vai 14. Jos summa on suurempi kuin 21, pelaaja häviää. Jos pelin lopettaa summaan, joka on alle 21, voivat muut pelaajat ja jakaja yrittää päästä lähemmäksi lukua 21.</p>
-					<p>Henri on saanut kolmella ensimmäisellä nostolla seuraavat kortit.</p>
-					<div class="indent">
-					<p style="font-size: 100px; line-height: 100px;"><span style="color: red;">🂵🃉</span><span style="color: black;">🂢</span></p>
-					</div>
-					<p>Millä todennäköisyydellä Henrin korttien summa menee yli 21 seuraavalla nostolla?</p>
-					<p><strong>Ratkaisu:</strong></p>
-					<div class="indent">
-					<p>Summa nyt: \(\mathsf{5+9+2=16}\)</p>
-					<p>Pelin voittamiseen tarvittavan kortin arvo: \(\mathsf{21 - 16 = 5}\)</p>
-					<p>Todennäköisyys, että kortti on suurempi kuin 5:</p>
-					<div class="indent">
-					<p>\(\mathsf{P(&gt;5) = \dfrac{31}{49} = \text{0,632...} = 63\:\%}\)</p>
-					</div>
-					<p><strong>Vastaus:</strong> Seuraavalla nostolla on 63 prosentin todennäköisyys, että korttien summa menee yli luvun 21.</p>
-					</div>
+						<p><strong>Esimerkki:</strong> <a href="https://fi.wikipedia.org/wiki/Ventti" target="_blank">Ventissä</a> on tavoitteena pakasta kortteja nostamalla saada korttien arvojen summa mahdollisimman lähelle lukua 21. Pelaaja voi valita onko ässä (A) arvoltaan 1 vai 14. Jos summa on suurempi kuin 21, pelaaja häviää. Jos pelin lopettaa summaan, joka on alle 21, voivat muut pelaajat ja jakaja yrittää päästä lähemmäksi lukua 21.</p>
+						<p>Henri on saanut kolmella ensimmäisellä nostolla seuraavat kortit.</p>
+						<div class="indent">
+							<p style="margin: 0px; font-size: 100px; line-height: 100px;"><span style="color: red;">🂵🃉</span><span style="color: black;">🂢</span></p>
+						</div>
+						<p>Millä todennäköisyydellä Henrin korttien summa menee yli 21 seuraavalla nostolla?</p>
+						<p><strong>Ratkaisu:</strong></p>
+						<div class="indent">
+							<p>Summa nyt: \(\mathsf{5+9+2=16}\)</p>
+							<p>Pelin voittamiseen tarvittavan kortin arvo: \(\mathsf{21 - 16 = 5}\)</p>
+							<p>Todennäköisyys, että kortti on suurempi kuin 5:</p>
+							<p class="indent">\(\mathsf{P(&gt;5) = \dfrac{31}{49} = \text{0,632...} = 63\:\%}\)</p>
+						</div>
+						<p><strong>Vastaus:</strong> Seuraavalla nostolla on 63 prosentin todennäköisyys, että korttien summa menee yli luvun 21.</p>
 					</div>
 				</div>
 				<h3>Ruletti</h3>
 				<div>
 					<p>Ruletissa pelaaja pyrkii veikkaamaan lukua, johon rulettipyörässä oleva pallo pysähtyy. Pelaajalla on valittavanaan myös monenlaisia lukujen yhdistelmiä sekä punainen ja musta väri, joihin luvut on jaettu.</p>
-					<div class="indent">
-					<table style="background-color: #00cc00; text-align: center; font-size: 20px; border: 1px solid white;">
-					<tbody>
-					<tr>
-					<td style="border: 1px solid white; background-color: white;" colspan="2"> </td>
-					<td style="border: 1px solid white; color: white;" colspan="3"><strong>0</strong></td>
-					<td style="background-color: white; border-bottom: 1px;" rowspan="14"> </td>
-					<td style="background-color: white; border-bottom: 1px;" rowspan="14"><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/73439312/ma9j5_teoria_rulettipyora%20_varit.png?time=1680004775787" alt="" width="400" height="396"></td>
-					</tr>
-					<tr>
-					<td style="writing-mode: vertical-lr; border: 1px solid white; color: white; font-size: 15px;" rowspan="2"><strong>1 - 18</strong></td>
-					<td style="writing-mode: vertical-lr; border: 1px solid white; color: white;" rowspan="4"><strong>1 - 12</strong></td>
-					<td style="border: 1px solid white; color: #cc0000; height: 20px; width: 50px;"><strong>1</strong></td>
-					<td style="border: 1px solid white; width: 50px;"><strong>2</strong></td>
-					<td style="border: 1px solid white; color: #cc0000; width: 50px;"><strong>3</strong></td>
-					</tr>
-					<tr>
-					<td style="border: 1px solid white;"><strong>4</strong></td>
-					<td style="border: 1px solid white; color: #cc0000;"><strong>5</strong></td>
-					<td style="border: 1px solid white;"><strong>6</strong></td>
-					</tr>
-					<tr>
-					<td style="writing-mode: vertical-lr; border: 1px solid white; color: white; font-size: 15px;" rowspan="2"><strong>EVEN</strong></td>
-					<td style="border: 1px solid white; color: #cc0000;"><strong>7</strong></td>
-					<td style="border: 1px solid white;"><strong>8</strong></td>
-					<td style="border: 1px solid white; color: #cc0000;"><strong>9</strong></td>
-					</tr>
-					<tr>
-					<td style="border: 1px solid white;"><strong>10</strong></td>
-					<td style="border: 1px solid white;"><strong>11</strong></td>
-					<td style="border: 1px solid white; color: #cc0000;"><strong>12</strong></td>
-					</tr>
-					<tr>
-					<td style="border: 1px solid white; color: #cc0000;" rowspan="2"><strong>◆</strong></td>
-					<td style="writing-mode: vertical-lr; border: 1px solid white; color: white;" rowspan="4"><strong>13 - 24</strong></td>
-					<td style="border: 1px solid white;"><strong>13</strong></td>
-					<td style="border: 1px solid white; color: #cc0000;"><strong>14</strong></td>
-					<td style="border: 1px solid white;"><strong>15</strong></td>
-					</tr>
-					<tr>
-					<td style="border: 1px solid white; color: #cc0000;"><strong>16</strong></td>
-					<td style="border: 1px solid white;"><strong>17</strong></td>
-					<td style="border: 1px solid white; color: #cc0000;"><strong>18</strong></td>
-					</tr>
-					<tr>
-					<td style="writing-mode: vertical-lr; border: 1px solid white;" rowspan="2"><strong>◆</strong></td>
-					<td style="border: 1px solid white; color: #cc0000;"><strong>19</strong></td>
-					<td style="border: 1px solid white;"><strong>20</strong></td>
-					<td style="border: 1px solid white; color: #cc0000;"><strong>21</strong></td>
-					</tr>
-					<tr>
-					<td style="border: 1px solid white;"><strong>22</strong></td>
-					<td style="border: 1px solid white; color: #cc0000;"><strong>23</strong></td>
-					<td style="border: 1px solid white;"><strong>24</strong></td>
-					</tr>
-					<tr>
-					<td style="writing-mode: vertical-lr; border: 1px solid white; color: white; font-size: 15px;" rowspan="2"><strong>ODD</strong></td>
-					<td style="writing-mode: vertical-lr; border: 1px solid white; color: white;" rowspan="4"><strong>25 - 36</strong></td>
-					<td style="border: 1px solid white; color: #cc0000;"><strong>25</strong></td>
-					<td style="border: 1px solid white;"><strong>26</strong></td>
-					<td style="border: 1px solid white; color: #cc0000;"><strong>27</strong></td>
-					</tr>
-					<tr>
-					<td style="border: 1px solid white;"><strong>28</strong></td>
-					<td style="border: 1px solid white;"><strong>29</strong></td>
-					<td style="border: 1px solid white; color: #cc0000;"><strong>30</strong></td>
-					</tr>
-					<tr>
-					<td style="writing-mode: vertical-lr; border: 1px solid white; color: white; font-size: 15px;" rowspan="2"><strong>19 - 36</strong></td>
-					<td style="border: 1px solid white;"><strong>31</strong></td>
-					<td style="border: 1px solid white; color: #cc0000;"><strong>32</strong></td>
-					<td style="border: 1px solid white;"><strong>33</strong></td>
-					</tr>
-					<tr>
-					<td style="border: 1px solid white; color: #cc0000;"><strong>34</strong></td>
-					<td style="border: 1px solid white;"><strong>35</strong></td>
-					<td style="border: 1px solid white; color: #cc0000;"><strong>36</strong></td>
-					</tr>
-					<tr>
-					<td style="border: 1px solid white; background-color: white;" colspan="2"> </td>
-					<td style="border: 1px solid white; height: 32.8px;"> </td>
-					<td style="border: 1px solid white;"> </td>
-					<td style="border: 1px solid white;"> </td>
-					</tr>
-					</tbody>
-					</table>
+					<div class="flex">
+						<iframe style="width: 300px; height: 400px; border: 0px;" src="https://jannevenhoedu.github.io/ma9/j5/t/ma9j5_teoria_rulettipoyta.html"></iframe>
+						<img style="width: 400px;" src="https://jannevenhoedu.github.io/ma9/j5/t/ma9j5_teoria_rulettipyora _varit.png">
 					</div>
 					<p>Panos (pelimerkki tms.) asetetaan pelipöydälle haluttuun ruutuun tai ruutujen reunoille, ja voiton osuessa kohdalle panos saadaan takaisin seuraavan taulukon mukaisesti.</p>
 					<div class="indent">
