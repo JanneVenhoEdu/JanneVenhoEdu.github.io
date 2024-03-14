@@ -10,6 +10,14 @@
 		<script src="../../../teoria.js"></script>
 		<link rel="stylesheet" media="screen and (max-width: 350px)" href="../../../teorialohko.css">
 		<link rel="stylesheet" media="screen and (min-width: 350px)" href="../../../teoriakirja.css">
+		<style>
+			.tilasto td:first-child, .tilasto th:first-child {
+				text-align: left;
+			}
+			.tilasto td:last-child, .tilasto th:last-child {
+				text-align: right;
+			}
+		</style>
 	</head>
 	<body>
 		<div id="nav">
@@ -98,12 +106,18 @@
 					<p><strong>Tapahtuma</strong> tarkoittaa jonkin ehdon määrittämää joukkoa alkeistapauksia. Esimerkiksi nopanheitossa tapahtuma "Silmäluku on pienempi kuin 3" sisältää alkeistapaukset 1 ja 2.</p>
 					<p><strong>Todennäköisyys</strong> on jonkin tapahtuman alkeistapausten lukumäärän suhde perusjoukon alkeistapausten lukumäärään. Jonkin tapahtuman todennäköisyyttä merkitään isolla kirjaimella \(\mathsf{P}\) (engl. probability), jonka jälkeen tulee lyhyt kuvaus tapahtumasta sulkeiden sisään kirjoitettuna, esimerkiksi \(\textsf{P(kruuna)}\), \(\textsf{P(pienempi kuin 3)}\) tai \(\textsf{P(Jaana)}\).</p>
 					<p>Todennäköisyys voidaan ilmoittaa prosenttilukuna, murtolukuna tai desimaalilukuna. Mitä suurempi todennäköisyys on, sitä varmemmin tapahtuma tapahtuu. Jos todennäköisyys on 100 %, tapahtuma tapahtuu varmasti. Jos todennäköisyys on 0 %, tapahtuma ei tapahdu lainkaan. Jos todennäköisyys on suurempi kuin 50 %, niin tapahtuma tapahtuu ennemin kuin jää tapahtumatta.</p>
-					<p class="indent">\(\mathsf{\text{Tapahtuman todennäköisyys: } \text{P(tapahtuma)} = \dfrac{\text{Suotuisat alkeistapaukset}}{\text{Kaikki alkeistapaukset}}}\)</p>
+					<div class="indent">
+						<p>Tapahtuman todennäköisyys:</p>
+						<p>\(\mathsf{\text{P(tapahtuma)} = \dfrac{\text{Suotuisat alkeistapaukset}}{\text{Kaikki alkeistapaukset}}}\)</p>
+					</div>
 				</div>
 				<h3>Klassinen todennäköisyys</h3>
 				<div>
 					<p>Jos satunnaisilmiön perusjoukon alkeistapaukset ovat symmetriset eli yhtä todennäköiset, voidaan tapahtumalle laskea klassinen todennäköisyys. Tarkasteltavan tapahtuman alkeispatauksia voidaan kutsua myös suotuisiksi alkeistapauksiksi.</p>
-					<p class="indent">\(\mathsf{\text{Tapahtuman todennäköisyys: } \text{P(tapahtuma)} = \dfrac{\text{Suotuisat alkeistapaukset}}{\text{Kaikki alkeistapaukset}}}\)</p>
+					<div class="indent">
+						<p>Tapahtuman todennäköisyys:</p>
+						<p>\(\mathsf{\text{P(tapahtuma)} = \dfrac{\text{Suotuisat alkeistapaukset}}{\text{Kaikki alkeistapaukset}}}\)</p>
+					</div>
 					<div class="example">
 						<p><strong>Esimerkki:</strong> Pussissa on 5 sinistä (S), 3 punaista (P) ja 2 vihreää (V) palloa. Millä todennäköisyydellä pussista satunnaisesti nostettu pallo on punainen?</p>
 						<div class="indent">
@@ -121,147 +135,137 @@
 					<p class="indent">\(\mathsf{P(\text{A tai B}) = P(A) + P(B) - P(\text{A ja B})}\)</p>
 					<div class="example">
 						<p><strong>Esimerkki:</strong> Jounilla on laukussaan 8 <a href="https://frisbeegolfliitto.fi/aloittelijat/" target="_blank">frisbeegolf</a>-kiekkoa: 1 <abbr title="putter, lähipelikiekko">putteri (P)</abbr>, 3 <abbr title="mid-range, lähestymiskiekko">midaria (M)</abbr> ja 4 <abbr title="driver, pitkän matkan kiekko">draiveria (D)</abbr>.</p>
-						<img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/226524719/ma9j5_teoria_frisbeegolfkiekot.png" alt="" width="555" height="59">
+						<img src="https://jannevenhoedu.github.io/ma9/j5/t/ma9j5_teoria_frisbeegolfkiekot.png">
 						<p>Millä todennäköisyydellä satunnaisesti valittu kiekko on</p>
 						<p>a) keltainen ja draiveri</p>
 						<p>b) keltainen tai draiveri.</p>
 						<div class="indent">
-						<p>a) Käytetään kertolaskusääntöä:</p>
-						<div class="indent">
-						<p>\(\mathsf{P(\text{keltainen ja draiveri}) = P(\text{keltainen}) \cdot P(\text{draiveri}) = \dfrac{4}{8} \cdot \dfrac{4}{8} = \dfrac{16}{64} = \text{0,25} = 25\:\%}\)</p>
-						</div>
-						<p><strong>Vastaus:</strong> Kiekko on keltainen draiveri 25 prosentin todennäköisyydellä.</p>
-						<p>b) Käytetään yhteenlaskusääntöä:</p>
-						<div class="indent">
-						<p>\(\mathsf{P(\text{keltainen tai draiveri}) = P(\text{keltainen}) + P(\text{draiveri}) - P(\text{keltainen ja draiveri}) = \dfrac{4}{8} + \dfrac{4}{8} - \dfrac{16}{64} = \text{0,75} = 75\:\%}\)</p>
-						</div>
-						<p><strong>Vastaus:</strong> Kiekko on keltainen tai draiveri 75 prosentin todennäköisyydellä.</p>
+							<p>a) Käytetään kertolaskusääntöä:</p>
+							<p class="indent">\(\mathsf{P(\text{keltainen ja draiveri}) = P(\text{keltainen}) \cdot P(\text{draiveri}) = \dfrac{4}{8} \cdot \dfrac{4}{8} = \dfrac{16}{64} = \text{0,25} = 25\:\%}\)</p>
+							<p><strong>Vastaus:</strong> Kiekko on keltainen draiveri 25 prosentin todennäköisyydellä.</p>
+							<p>b) Käytetään yhteenlaskusääntöä:</p>
+							<p class="indent">\(\mathsf{P(\text{keltainen tai draiveri}) = P(\text{keltainen}) + P(\text{draiveri}) - P(\text{keltainen ja draiveri}) = \dfrac{4}{8} + \dfrac{4}{8} - \dfrac{16}{64} = \text{0,75} = 75\:\%}\)</p>
+							<p><strong>Vastaus:</strong> Kiekko on keltainen tai draiveri 75 prosentin todennäköisyydellä.</p>
 						</div>
 					</div>
 					<h4>Vastatapahtuma</h4>
 					<p>Vastatapahtuma (komplementtitapahtuma) tarkoittaa tilannetta, missä tarkasteltava tapahtuma ei tapahdu. Vastatapahtuman todennäköisyys voidaan laskea vähentämällä tapahtuman todennäköisyys 100 prosentista eli luvusta 1.</p>
-					<div class="indent">
-					<p>\(\mathsf{P(\text{A ei tapahdu}) = 1 - P(\text{A tapahtuu})}\)</p>
-					</div>
+					<p class="indent">\(\mathsf{P(\text{A ei tapahdu}) = 1 - P(\text{A tapahtuu})}\)</p>
 					<p>Ongelman ratkaisemista vastatapahtuman avulla voi käyttää esimerkiksi silloin, kun ehto tapahtuman todennäköisyydelle on määritetty muodossa "muu kuin A", "ainakin yksi" tai kun sen vastatapahtuman todennäköisyys tunnetaan ennalta.</p>
 					<div class="example">
-					<p><strong>Esimerkki 3:</strong> Ulrikan penaalissa on kolme lyijykynää, kaksi mustekynää ja neljä tussia. Millä todennäköisyydellä satunnaisesti penaalista valittu kynä on muu kuin tussi?</p>
-					<div class="indent">
-					<p>Ratkaistaan tehtävä vastatapahtuman avulla.</p>
-					<div class="indent">
-					<p>\(\mathsf{P(\text{ei tussi}) = 1 - P(\text{tussi}) = 1 - \dfrac{4}{9} = \dfrac{9}{9} - \dfrac{4}{9} = \dfrac{5}{9} = \text{0,555...} \approx 56\:\%}\)</p>
-					</div>
-					<p><strong>Vastaus:</strong> Kynä on 56 prosentin todennäköisyydellä muu kuin tussi.</p>
-					</div>
+						<p><strong>Esimerkki:</strong> Ulrikan penaalissa on kolme lyijykynää, kaksi mustekynää ja neljä tussia. Millä todennäköisyydellä satunnaisesti penaalista valittu kynä on muu kuin tussi?</p>
+						<div class="indent">
+							<p>Ratkaistaan tehtävä vastatapahtuman avulla.</p>
+							<p class="indent">\(\mathsf{P(\text{ei tussi}) = 1 - P(\text{tussi}) = 1 - \dfrac{4}{9} = \dfrac{9}{9} - \dfrac{4}{9} = \dfrac{5}{9} = \text{0,555...} \approx 56\:\%}\)</p>
+						</div>
+						<p><strong>Vastaus:</strong> Kynä on 56 prosentin todennäköisyydellä muu kuin tussi.</p>
 					</div>
 				</div>
 				<h3>Tilastollinen todennäköisyys</h3>
 				<div>
 					<p>Jos alkeistapausten todennäköisyyttä ei voida ennalta tietää, voidaan kerätä tilasto tai suorittaa toistokoe, jonka avulla määritetään tapauksille tilastollinen todennäköisyys. Tilastollinen todennäköisyys on aina likiarvo ja sen tarkkuus paranee mitä useamman kerran koetta toistetaan tai mitä suurempi otos tilastoon kerätään.</p>
 					<div class="example">
-					<p><strong>Esimerkki:</strong> Millä todennäköisyydellä tiellä vastaan tuleva ajoneuvo on mopo?</p>
-					<div class="indent">
-					<table style="border-collapse: collapse;">
-					<tbody>
-					<tr>
-					<th style="border: 1px solid black;">Ajoneuvo</th>
-					<th style="border: 1px solid black; padding-right: 20px;">Lukumäärä</th>
-					</tr>
-					<tr>
-					<td style="border: 1px solid black;">Henkilöautot</td>
-					<td style="border: 1px solid black; text-align: right;">3 699 634</td>
-					</tr>
-					<tr>
-					<td style="border: 1px solid black;">Pakettiautot</td>
-					<td style="border: 1px solid black; text-align: right;">524 672</td>
-					</tr>
-					<tr>
-					<td style="border: 1px solid black;">Kuorma-autot</td>
-					<td style="border: 1px solid black; text-align: right;">173 769</td>
-					</tr>
-					<tr>
-					<td style="border: 1px solid black;">Linja-autot</td>
-					<td style="border: 1px solid black; text-align: right;">19 649</td>
-					</tr>
-					<tr>
-					<td style="border: 1px solid black;">Moottoripyörät</td>
-					<td style="border: 1px solid black; text-align: right;">239 872</td>
-					</tr>
-					<tr>
-					<td style="border: 1px solid black;">Kevytmoottoripyörät</td>
-					<td style="border: 1px solid black; text-align: right;">52 373</td>
-					</tr>
-					<tr>
-					<td style="border: 1px solid black;">Mopot</td>
-					<td style="border: 1px solid black; text-align: right;">363 455</td>
-					</tr>
-					<tr>
-					<td style="border: 1px solid black;">Mopoautot</td>
-					<td style="border: 1px solid black; text-align: right;">12 777</td>
-					</tr>
-					<tr>
-					<td style="border: 1px solid black;">Muut kolmi- ja nelipyörät</td>
-					<td style="border: 1px solid black; text-align: right;">20 459</td>
-					</tr>
-					<tr>
-					<td style="padding-right: 20px; border: 1px solid black;">Moottorityökoneet ja traktorit</td>
-					<td style="border: 1px solid black; text-align: right;">572 276</td>
-					</tr>
-					<tr>
-					<td style="border: 1px solid black;"><strong>Yhteensä</strong></td>
-					<td style="border: 1px solid black; text-align: right;"><strong>5 678 936</strong></td>
-					</tr>
-					</tbody>
-					</table>
-					<p>Rekisterissä olleiden ajoneuvojen lukumäärä 31.12.2022 (ml. Ahvenanmaa)<br>Lähde: <a href="https://stat.fi/" target="_blank" rel="noopener">stat.fi</a></p>
-					<p>\(\mathsf{P(\text{mopo}) = \dfrac{363\:455}{5\:678\:936} = \text{0,0640...} \approx \text{6,4 %}}\)</p>
-					<p><strong>Vastaus: </strong>Mopo tulee vastaan 6,4 prosentin todennäköisyydellä.</p>
-					</div>
+						<p><strong>Esimerkki:</strong> Millä todennäköisyydellä tiellä vastaan tuleva ajoneuvo on mopo?</p>
+						<table class="tilasto">
+							<thead>
+								<tr>
+									<th>Ajoneuvo</th>
+									<th>Lukumäärä</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Henkilöautot</td>
+									<td>3 699 634</td>
+								</tr>
+								<tr>
+									<td>Pakettiautot</td>
+									<td>524 672</td>
+								</tr>
+								<tr>
+									<td>Kuorma-autot</td>
+									<td>173 769</td>
+								</tr>
+								<tr>
+									<td>Linja-autot</td>
+									<td>19 649</td>
+								</tr>
+								<tr>
+									<td>Moottoripyörät</td>
+									<td>239 872</td>
+								</tr>
+								<tr>
+									<td>Kevytmoottoripyörät</td>
+									<td>52 373</td>
+								</tr>
+								<tr>
+									<td>Mopot</td>
+									<td>363 455</td>
+								</tr>
+								<tr>
+									<td>Mopoautot</td>
+									<td>12 777</td>
+								</tr>
+								<tr>
+									<td>Muut kolmi- ja nelipyörät</td>
+									<td>20 459</td>
+								</tr>
+								<tr>
+									<td>Moottorityökoneet ja traktorit</td>
+									<td>572 276</td>
+								</tr>
+								<tr>
+									<td><strong>Yhteensä</strong></td>
+									<td><strong>5 678 936</strong></td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="indent">
+							<p>Rekisterissä olleiden ajoneuvojen lukumäärä 31.12.2022 (ml. Ahvenanmaa)<br>Lähde: <a href="https://stat.fi/" target="_blank">stat.fi</a></p>
+							<p>\(\mathsf{P(\text{mopo}) = \dfrac{363\:455}{5\:678\:936} = \text{0,0640...} \approx \text{6,4 %}}\)</p>
+						</div>
+						<p><strong>Vastaus: </strong>Mopo tulee vastaan 6,4 prosentin todennäköisyydellä.</p>
 					</div>
 				</div>
 				<h3>Vaihtoehtojen lukumäärä</h3>
 				<div>
 					<p>Ennen todennäköisyyden laskemista tulee tuntea kaikkien mahdollisten alkeistapausten lukumäärä sekä suotuisten alkeistapausten lukumäärä. Kaikki erilaiset vaihtoehdot voidaan saada selville esimerkiksi luettelemalla, piirtämällä valintapuu tai laskemalla. <strong>Yksittäisen tapahtuman</strong> vaihtoehtojen lukumäärä on helppo laskea, jos kyseessä on jokin järkevän kokoinen kohde, esimerkiksi kolikko, noppa, korttipakka, luokan oppilaat, kirjaimet, numerot, tms. Jos tarkastellaan <strong>perättäisiä tapahtumia</strong>, vaihtoehtojen lukumäärä saadaan kertomalla eri vaiheissa olevien tapahtumien vaihtoehtojen lukumäärät keskenään. Tätä kutsutaan tuloperiaatteeksi.</p>
-					<h5>Toisistaan riippumattomat tapahtumat</h5>
+					<h4>Toisistaan riippumattomat tapahtumat</h4>
 					<p>Jos edellisen tapahtuman tulos ei vaikuta seuraavien tapahtumien lukumääriin, ovat tapahtumat toisistaan riippumattomia.</p>
-					<p><strong>Esimerkki:</strong> Käytettävissä on vihreää (V), oranssia (O) ja lilaa (L) lahjapaperia sekä sinistä (S), kultaista (K), punaista (P) ja hopeista (H) lahjanauhaa. Kuinka monta erilaista yhdistelmää lahjapakettiin voidaan valita.</p>
-					<div class="indent">
-					<p>Kaikkien vaihtoehtojen luetteleminen:</p>
-					<div class="indent">
-					<table>
-					<tbody>
-					<tr>
-					<td>VS</td>
-					<td>VK</td>
-					<td>VP</td>
-					<td>VH</td>
-					</tr>
-					<tr>
-					<td>OS</td>
-					<td>OK</td>
-					<td>OP</td>
-					<td>OH</td>
-					</tr>
-					<tr>
-					<td>LS</td>
-					<td>LK</td>
-					<td>LP</td>
-					<td>LH</td>
-					</tr>
-					</tbody>
-					</table>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Käytettävissä on vihreää (V), oranssia (O) ja lilaa (L) lahjapaperia sekä sinistä (S), kultaista (K), punaista (P) ja hopeista (H) lahjanauhaa. Kuinka monta erilaista yhdistelmää lahjapakettiin voidaan valita.</p>
+						<div class="indent">
+							<p>Kaikkien vaihtoehtojen luetteleminen:</p>
+							<table>
+								<tbody>
+									<tr>
+										<td>VS</td>
+										<td>VK</td>
+										<td>VP</td>
+										<td>VH</td>
+									</tr>
+									<tr>
+										<td>OS</td>
+										<td>OK</td>
+										<td>OP</td>
+										<td>OH</td>
+									</tr>
+									<tr>
+										<td>LS</td>
+										<td>LK</td>
+										<td>LP</td>
+										<td>LH</td>
+									</tr>
+								</tbody>
+							</table>
+							<p>Valintapuu:</p>
+							<img src="https://jannevenhoedu.github.io/ma9/j5/t/ma9j5_teoria_valintapuu_lahjat.png">
+							<p>Laskeminen tuloperiaatteen avulla: 3 paperia ja 4 nauhaa.</p>
+							<p class="indent">\(\mathsf{3 \cdot 4 = 12}\)</p>
+						</div>
+						<p><strong>Vastaus: </strong>Lahjapakettiin voidaan valita 12 erilaista yhdistelmää.</p>
 					</div>
-					<p>Valintapuu:</p>
-					<div class="indent">
-					<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/268377956/ma9j5_teoria_valintapuu_lahjat.png?time=1678099724045" alt="" width="399" height="116"></p>
-					</div>
-					<p>Laskeminen tuloperiaatteen avulla: 3 paperia ja 4 nauhaa.</p>
-					<div class="indent">
-					<p>\(\mathsf{3 \cdot 4 = 12}\)</p>
-					</div>
-					<p><strong>Vastaus: </strong>Lahjapakettiin voidaan valita 12 erilaista yhdistelmää.</p>
-					</div>
-					<h5>Toisistaan riippuvat tapahtumat</h5>
+					<h4>Toisistaan riippuvat tapahtumat</h4>
 					<p>Jos edellisen tapahtuman tulos muuttaa seuraavien tapahtumien vaihtoehtojen lukumääriä, ovat tapahtumat toisistaan riippuvia.</p>
 					<p><strong>Esimerkki:</strong> Neljä lasta saavat virvottuaan valita pussista tikkarin. Pussissa on neljä tikkaria, ja ne ovat kaikki eri värisiä: punainen (P), keltainen (K), vihreä (V) ja sininen (S). Kuinka monella eri tavalla tikkarit voidaan valita.</p>
 					<div class="indent">
@@ -1057,7 +1061,7 @@
 					<th>3</th>
 					</tr>
 					</thead>
-					<tbody style="border: 1px solid black;">
+					<tbody>
 					<tr>
 					<td style="border-right: 1px solid black; padding: 2px 5px 0px 5px;">🍀</td>
 					<td style="border-right: 1px solid black; padding: 2px 5px 0px 5px;">🍀</td>
