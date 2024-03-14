@@ -156,15 +156,19 @@
 					<div class="example">
 						<p><strong>Esimerkki:</strong> Jounilla on laukussaan 8 <a href="https://frisbeegolfliitto.fi/aloittelijat/" target="_blank">frisbeegolf</a>-kiekkoa: 1 <abbr title="putter, lähipelikiekko">putteri (P)</abbr>, 3 <abbr title="mid-range, lähestymiskiekko">midaria (M)</abbr> ja 4 <abbr title="driver, pitkän matkan kiekko">draiveria (D)</abbr>.</p>
 						<img src="https://jannevenhoedu.github.io/ma9/j5/t/ma9j5_teoria_frisbeegolfkiekot.png">
-						<p>Millä todennäköisyydellä satunnaisesti valittu kiekko on</p>
-						<p>a) keltainen ja draiveri</p>
-						<p>b) keltainen tai draiveri.</p>
 						<div class="indent">
-							<p>a) Käytetään kertolaskusääntöä:</p>
-							<p class="indent">\(\mathsf{P(\text{keltainen ja draiveri}) = P(\text{keltainen}) \cdot P(\text{draiveri}) = \dfrac{4}{8} \cdot \dfrac{4}{8} = \dfrac{16}{64} = \text{0,25} = 25\:\%}\)</p>
+							<p>Millä todennäköisyydellä satunnaisesti valittu kiekko on</p>
+							<p>a) keltainen ja draiveri</p>
+							<div class="indent">
+								<p>Käytetään kertolaskusääntöä:</p>
+								<p>\(\begin{align}\mathsf{P(\text{kelt ja draiveri})} &= \mathsf{P(\text{kelt}) \cdot P(\text{draiveri})}\\ &= \mathsf{\dfrac{4}{8} \cdot \dfrac{4}{8}}\\ &= \mathsf{\dfrac{16}{64}}\\ &= \mathsf{\text{0,25}}\\ &= \mathsf{25\:\%}\end{align}\)</p>
+							</div>
 							<p><strong>Vastaus:</strong> Kiekko on keltainen draiveri 25 prosentin todennäköisyydellä.</p>
-							<p>b) Käytetään yhteenlaskusääntöä:</p>
-							<p class="indent">\(\mathsf{P(\text{keltainen tai draiveri}) = P(\text{keltainen}) + P(\text{draiveri}) - P(\text{keltainen ja draiveri}) = \dfrac{4}{8} + \dfrac{4}{8} - \dfrac{16}{64} = \text{0,75} = 75\:\%}\)</p>
+							<p>b) keltainen tai draiveri.</p>
+							<div class="indent">
+								<p>Käytetään yhteenlaskusääntöä:</p>
+								<p>\(\begin{align}\mathsf{P(\text{kelt tai D})} &= \mathsf{P(\text{kelt}) + P(\text{D}) - P(\text{kelt ja D})}\\ &= \mathsf{\dfrac{4}{8} + \dfrac{4}{8} - \dfrac{16}{64}}\\ &= \mathsf{\text{0,75}}\\ &= \mathsf{75\:\%}\end{align}\)</p>
+							</div>
 							<p><strong>Vastaus:</strong> Kiekko on keltainen tai draiveri 75 prosentin todennäköisyydellä.</p>
 						</div>
 					</div>
@@ -176,7 +180,7 @@
 						<p><strong>Esimerkki:</strong> Ulrikan penaalissa on kolme lyijykynää, kaksi mustekynää ja neljä tussia. Millä todennäköisyydellä satunnaisesti penaalista valittu kynä on muu kuin tussi?</p>
 						<div class="indent">
 							<p>Ratkaistaan tehtävä vastatapahtuman avulla.</p>
-							<p class="indent">\(\mathsf{P(\text{ei tussi}) = 1 - P(\text{tussi}) = 1 - \dfrac{4}{9} = \dfrac{9}{9} - \dfrac{4}{9} = \dfrac{5}{9} = \text{0,555...} \approx 56\:\%}\)</p>
+							<p class="indent">\(\begin{align}\mathsf{P(\text{ei tussi})} &= \mathsf{1 - P(\text{tussi})}\\ &= \mathsf{1 - \dfrac{4}{9}}\\ &= \mathsf{\dfrac{9}{9} - \dfrac{4}{9}}\\ &= \mathsf{\dfrac{5}{9}}\\ &= \textsf{0,555...}\\ &\approx \mathsf{56\:\%}\end{align}\)</p>
 						</div>
 						<p><strong>Vastaus:</strong> Kynä on 56 prosentin todennäköisyydellä muu kuin tussi.</p>
 					</div>
@@ -426,6 +430,8 @@
 										<td>ABE</td>
 										<td>ABF</td>
 										<td>ACD</td>
+									</tr>
+									<tr>
 										<td>ACE</td>
 										<td>ACF</td>
 										<td>ADE</td>
@@ -438,6 +444,8 @@
 										<td>BCF</td>
 										<td>BDE</td>
 										<td>BDF</td>
+									</tr>
+									<tr>
 										<td>BEF</td>
 										<td>CDE</td>
 										<td>CDF</td>
@@ -471,7 +479,7 @@
 							<p>Ennen toista nostoa pussissa on 1 punainen ja 3 sinistä palloa eli yhteensä 4 palloa:</p>
 							<p class="indent">\(\mathsf{P(\text{2. sininen}) = \dfrac{3}{4}}\)</p>
 							<p>Todennäköisyys, että molemmat tapahtuvat saadaa kertolaskulla:</p>
-							<p class="indent">\(\mathsf{P(\text{1. punainen ja 2. sininen}) = P(\text{1. punainen}) \cdot P(\text{2. sininen}) = \dfrac{2}{5} \cdot \dfrac{3}{4} = \dfrac{6}{20} = \text{0,3} = 30\:\%}\)</p>
+							<p class="indent">\(\begin{align}\mathsf{P(\text{1. pun. ja 2. sin.})} &= \mathsf{P(\text{1. pun.}) \cdot P(\text{2. sin.})}\\ &= \mathsf{\dfrac{2}{5} \cdot \dfrac{3}{4}}\\ &= \mathsf{\dfrac{6}{20}}\\ &= \mathsf{\text{0,3}} &= \mathsf{30\:\%}\end{align}\)</p>
 						</div>
 						<p><strong>Vastaus:</strong> Todennäköisyys, että ensimmäisellä nostolla tulee punainen ja toisella nostolla sininen pallo on 30 prosenttia.</p>
 					</div>
@@ -515,7 +523,7 @@
 								</tbody>
 							</table>
 							<p>Todennäköisyys, että molemmat tapahtuvat saadaan laskemalla:</p>
-							<p class="indent">\(\mathsf{P(\text{1. punainen ja 2. sininen}) = \dfrac{suotuisat\,alkeistapaukset}{kaikki\,alkeistapaukset} = \dfrac{6}{20} = \text{0,3} = 30\:\%}\)</p>
+							<p class="indent">\(\begin{align}\mathsf{P(\text{1. pun. ja 2. sin.})} &= \mathsf{\dfrac{suotuisat\,tapaukset}{kaikki\,tapaukset}}\\ &= \mathsf{\dfrac{6}{20}}\\ &= \mathsf{\text{0,3}}\\ &= \mathsf{30\:\%}\end{align}\)</p>
 						</div>
 						<p><strong>Vastaus:</strong> Todennäköisyys, että ensimmäisellä nostolla tulee punainen ja toisella nostolla sininen pallo on 30 prosenttia.</p>
 					</div>
@@ -529,7 +537,7 @@
 							<p><strong>Suotuisa tapahtuma 2:</strong> 1. pallo on sininen ja 2. pallo on punainen:</p>
 							<p class="indent">\(\mathsf{P(\text{1. sininen ja 2. punainen}) = \dfrac{3}{5} \cdot \dfrac{2}{4} = \dfrac{6}{20}}\)</p>
 							<p>Todennäköisyys, että jompi kumpi tapahtuu, saadaan yhteenlaskulla:</p>
-							<p class="indent">\(\mathsf{P(\text{eriväriset}) = P(\text{1. punainen ja 2. sininen}) + P(\text{1. sininen ja 2. punainen}) = \dfrac{6}{20} + \dfrac{6}{20} = \dfrac{12}{20} = \text{0,6} = 60\:\%}\)</p>
+							<p class="indent">\(\begin{align}\mathsf{P(\text{eriväriset})} &= \mathsf{P(\text{1. pun. ja 2. sin.}) + P(\text{1. sin. ja 2. pun.})}\\ &= \mathsf{\dfrac{6}{20} + \dfrac{6}{20}}\\ &= \mathsf{\dfrac{12}{20}}\\ &= \mathsf{\text{0,6}}\\ &= \mathsf{60\:\%}\end{align}\)</p>
 						</div>
 						<p><strong>Vastaus:</strong> Todennäköisyys, että pallot ovat erivärisiä on 60 prosenttia.</p>
 					</div>
