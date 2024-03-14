@@ -23,8 +23,9 @@
 			<a id="course" href="https://jannevenhoedu.github.io/ma9/j5/t" target="_blank"></a>
 		</div>
 		<div id="main">
-			<h1>MA9 Jakso 5: Todennäköisyyslaskenta</h1>
+			<h1>MA9 Jakso 5: Todennäköisyys&shy;laskenta</h1>
 			<h2>1. Kertausta</h2>
+			<div>
 				<h3>Murtoluvut</h3>
 				<div>
 					<p><strong>Murtolukujen yhteen- ja vähennyslaskussa</strong> murtolukujen tulee olla samannimisiä.</p>
@@ -84,6 +85,7 @@
 					<div class="indent">
 						<p>\(\mathsf{\text{3,04} \cdot 10^5 = 304\:000}\) (positiivinen eksponentti, pilkku siirtyy oikealle)</p>
 						<p>\(\mathsf{\text{3,04} \cdot 10^{-5} = \text{0,0000304}}\) (negatiivinen eksponentti, pilkku siirtyy vasemmalle)</p>
+					</div>
 				</div>
 			</div>
 			<h2>2. Todennäköisyyslaskennan perusteet</h2>
@@ -96,57 +98,45 @@
 					<p><strong>Tapahtuma</strong> tarkoittaa jonkin ehdon määrittämää joukkoa alkeistapauksia. Esimerkiksi nopanheitossa tapahtuma "Silmäluku on pienempi kuin 3" sisältää alkeistapaukset 1 ja 2.</p>
 					<p><strong>Todennäköisyys</strong> on jonkin tapahtuman alkeistapausten lukumäärän suhde perusjoukon alkeistapausten lukumäärään. Jonkin tapahtuman todennäköisyyttä merkitään isolla kirjaimella \(\mathsf{P}\) (engl. probability), jonka jälkeen tulee lyhyt kuvaus tapahtumasta sulkeiden sisään kirjoitettuna, esimerkiksi \(\textsf{P(kruuna)}\), \(\textsf{P(pienempi kuin 3)}\) tai \(\textsf{P(Jaana)}\).</p>
 					<p>Todennäköisyys voidaan ilmoittaa prosenttilukuna, murtolukuna tai desimaalilukuna. Mitä suurempi todennäköisyys on, sitä varmemmin tapahtuma tapahtuu. Jos todennäköisyys on 100 %, tapahtuma tapahtuu varmasti. Jos todennäköisyys on 0 %, tapahtuma ei tapahdu lainkaan. Jos todennäköisyys on suurempi kuin 50 %, niin tapahtuma tapahtuu ennemin kuin jää tapahtumatta.</p>
-					<div class="indent">
-					<p>\(\mathsf{\text{Tapahtuman todennäköisyys: } \text{P(tapahtuma)} = \dfrac{\text{Suotuisat alkeistapaukset}}{\text{Kaikki alkeistapaukset}}}\)</p>
-					</div>
+					<p class="indent">\(\mathsf{\text{Tapahtuman todennäköisyys: } \text{P(tapahtuma)} = \dfrac{\text{Suotuisat alkeistapaukset}}{\text{Kaikki alkeistapaukset}}}\)</p>
 				</div>
 				<h3>Klassinen todennäköisyys</h3>
 				<div>
 					<p>Jos satunnaisilmiön perusjoukon alkeistapaukset ovat symmetriset eli yhtä todennäköiset, voidaan tapahtumalle laskea klassinen todennäköisyys. Tarkasteltavan tapahtuman alkeispatauksia voidaan kutsua myös suotuisiksi alkeistapauksiksi.</p>
-					<div class="indent">
-					<p>\(\mathsf{\text{Tapahtuman todennäköisyys: } \text{P(tapahtuma)} = \dfrac{\text{Suotuisat alkeistapaukset}}{\text{Kaikki alkeistapaukset}}}\)</p>
-					</div>
+					<p class="indent">\(\mathsf{\text{Tapahtuman todennäköisyys: } \text{P(tapahtuma)} = \dfrac{\text{Suotuisat alkeistapaukset}}{\text{Kaikki alkeistapaukset}}}\)</p>
 					<div class="example">
-					<p><strong>Esimerkki 1:</strong> Pussissa on 5 sinistä (S), 3 punaista (P) ja 2 vihreää (V) palloa. Millä todennäköisyydellä pussista satunnaisesti nostettu pallo on punainen?</p>
-					<div class="indent">
-					<p>Kaikki alkeistapaukset (perusjoukko): S, S, S, S, S, P, P, P, V ja V, eli 10 vaihtoehtoa.</p>
-					<p>Suotuisat alkeistapaukset: P, P ja P, eli 3 vaihtoehtoa.</p>
-					<p>Todennäköisyys:</p>
-					<div class="indent">
-					<p>\(\mathsf{P(\text{punainen}) = \dfrac{3}{10} = \text{0,3} = 30\:\%}\)</p>
-					</div>
-					<p><strong>Vastaus:</strong> Pallo on 30 prosentin todennäköisyydellä punainen.</p>
-					</div>
+						<p><strong>Esimerkki:</strong> Pussissa on 5 sinistä (S), 3 punaista (P) ja 2 vihreää (V) palloa. Millä todennäköisyydellä pussista satunnaisesti nostettu pallo on punainen?</p>
+						<div class="indent">
+							<p>Kaikki alkeistapaukset (perusjoukko): S, S, S, S, S, P, P, P, V ja V, eli 10 vaihtoehtoa.</p>
+							<p>Suotuisat alkeistapaukset: P, P ja P, eli 3 vaihtoehtoa.</p>
+							<p>Todennäköisyys:</p>
+							<p class="indent">\(\mathsf{P(\text{punainen}) = \dfrac{3}{10} = \text{0,3} = 30\:\%}\)</p>
+						</div>
+						<p><strong>Vastaus:</strong> Pallo on 30 prosentin todennäköisyydellä punainen.</p>
 					</div>
 					<h4>Kertolaskusääntö ja yhteenlaskusääntö</h4>
 					<p>Tarkastellaan kahta todennäköisyyttä \(\mathsf{P(A)}\) ja \(\mathsf{P(B)}\). Jos halutaan, että molemmat tapahtuvat, todennäköisyydet kerrotaan keskenään.</p>
-					<div class="indent">
-					<p>\(\mathsf{P(\text{A ja B}) = P(A) \cdot P(B)}\)</p>
-					</div>
+					<p class="indent">\(\mathsf{P(\text{A ja B}) = P(A) \cdot P(B)}\)</p>
 					<p>Jos halutaan, että ainakin toinen tapahtuu, todennäköisyydet lasketaan yhteen ja niistä vähennetään tilanne, jossa molemmat tapahtuvat.</p>
-					<div class="indent">
-					<p>\(\mathsf{P(\text{A tai B}) = P(A) + P(B) - P(\text{A ja B})}\)</p>
-					</div>
+					<p class="indent">\(\mathsf{P(\text{A tai B}) = P(A) + P(B) - P(\text{A ja B})}\)</p>
 					<div class="example">
-					<p><strong>Esimerkki 2:</strong> Jounilla on laukussaan 8 <a href="https://frisbeegolfliitto.fi/aloittelijat/" target="_blank" rel="noopener">frisbeegolf</a>-kiekkoa: 1 <abbr title="putter, lähipelikiekko">putteri (P)</abbr>, 3 <abbr title="mid-range, lähestymiskiekko">midaria (M)</abbr> ja 4 <abbr title="driver, pitkän matkan kiekko">draiveria (D)</abbr>.</p>
-					<div class="indent">
-					<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/226524719/ma9j5_teoria_frisbeegolfkiekot.png" alt="" width="555" height="59"></p>
-					</div>
-					<p>Millä todennäköisyydellä satunnaisesti valittu kiekko on</p>
-					<p>a) keltainen ja draiveri</p>
-					<p>b) keltainen tai draiveri.</p>
-					<div class="indent">
-					<p>a) Käytetään kertolaskusääntöä:</p>
-					<div class="indent">
-					<p>\(\mathsf{P(\text{keltainen ja draiveri}) = P(\text{keltainen}) \cdot P(\text{draiveri}) = \dfrac{4}{8} \cdot \dfrac{4}{8} = \dfrac{16}{64} = \text{0,25} = 25\:\%}\)</p>
-					</div>
-					<p><strong>Vastaus:</strong> Kiekko on keltainen draiveri 25 prosentin todennäköisyydellä.</p>
-					<p>b) Käytetään yhteenlaskusääntöä:</p>
-					<div class="indent">
-					<p>\(\mathsf{P(\text{keltainen tai draiveri}) = P(\text{keltainen}) + P(\text{draiveri}) - P(\text{keltainen ja draiveri}) = \dfrac{4}{8} + \dfrac{4}{8} - \dfrac{16}{64} = \text{0,75} = 75\:\%}\)</p>
-					</div>
-					<p><strong>Vastaus:</strong> Kiekko on keltainen tai draiveri 75 prosentin todennäköisyydellä.</p>
-					</div>
+						<p><strong>Esimerkki:</strong> Jounilla on laukussaan 8 <a href="https://frisbeegolfliitto.fi/aloittelijat/" target="_blank">frisbeegolf</a>-kiekkoa: 1 <abbr title="putter, lähipelikiekko">putteri (P)</abbr>, 3 <abbr title="mid-range, lähestymiskiekko">midaria (M)</abbr> ja 4 <abbr title="driver, pitkän matkan kiekko">draiveria (D)</abbr>.</p>
+						<img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/226524719/ma9j5_teoria_frisbeegolfkiekot.png" alt="" width="555" height="59">
+						<p>Millä todennäköisyydellä satunnaisesti valittu kiekko on</p>
+						<p>a) keltainen ja draiveri</p>
+						<p>b) keltainen tai draiveri.</p>
+						<div class="indent">
+						<p>a) Käytetään kertolaskusääntöä:</p>
+						<div class="indent">
+						<p>\(\mathsf{P(\text{keltainen ja draiveri}) = P(\text{keltainen}) \cdot P(\text{draiveri}) = \dfrac{4}{8} \cdot \dfrac{4}{8} = \dfrac{16}{64} = \text{0,25} = 25\:\%}\)</p>
+						</div>
+						<p><strong>Vastaus:</strong> Kiekko on keltainen draiveri 25 prosentin todennäköisyydellä.</p>
+						<p>b) Käytetään yhteenlaskusääntöä:</p>
+						<div class="indent">
+						<p>\(\mathsf{P(\text{keltainen tai draiveri}) = P(\text{keltainen}) + P(\text{draiveri}) - P(\text{keltainen ja draiveri}) = \dfrac{4}{8} + \dfrac{4}{8} - \dfrac{16}{64} = \text{0,75} = 75\:\%}\)</p>
+						</div>
+						<p><strong>Vastaus:</strong> Kiekko on keltainen tai draiveri 75 prosentin todennäköisyydellä.</p>
+						</div>
 					</div>
 					<h4>Vastatapahtuma</h4>
 					<p>Vastatapahtuma (komplementtitapahtuma) tarkoittaa tilannetta, missä tarkasteltava tapahtuma ei tapahdu. Vastatapahtuman todennäköisyys voidaan laskea vähentämällä tapahtuman todennäköisyys 100 prosentista eli luvusta 1.</p>
@@ -403,7 +393,7 @@
 					</div>
 					<p><strong>Vastaus: </strong>Kulta- ja hopeamitalit voidaan jakaa 20 eri tavalla.</p>
 					</div>
-					<h5>Valitaan vain osa, järjestyksellä ei ole väliä</h5>
+					<h4>Valitaan vain osa, järjestyksellä ei ole väliä</h4>
 					<p>Valitaan jostakin joukosta vain tietty määrä yksilöitä. Yksilöiden järjestyksellä ei ole merkitystä. Lasketaan kertolasku kuten edellä, mutta jaetaan tulos samanlaisten valintojen lukumäärällä.</p>
 					<p><strong>Esimerkki:</strong> Jääkiekkojoukkueeseen pyrkii kuusi maalivahtia, joista kolme valitaan lopulliseen joukkueeseen. Kuinka monella eri tavalla maalivahdit voidaan valita?</p>
 					<div class="indent">
