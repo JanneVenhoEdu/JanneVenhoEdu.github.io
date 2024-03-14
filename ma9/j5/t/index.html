@@ -116,7 +116,7 @@
 					</div>
 				</div>
 			</div>
-			<h2>2. Todennäköisyyslaskennan perusteet</h2>
+			<h2>2. Todennäköisyys&shy;laskennan perusteet</h2>
 			<div>
 				<h3>Käsitteitä</h3>
 				<div>
@@ -686,7 +686,7 @@
 					</div>
 					<br>
 					<div class="example">
-						<p><strong>Esimerkki 3:</strong> Noppaa heitetään kaksi kertaa. Millä todennäköisyydellä silmäluvut eivät ole samat?</p>
+						<p><strong>Esimerkki:</strong> Noppaa heitetään kaksi kertaa. Millä todennäköisyydellä silmäluvut eivät ole samat?</p>
 						<div class="indent">
 							<p>Erilaisia tapauksia yhteensä \(\mathsf{6 \cdot 6 = 36}\) kappaletta.</p>
 							<table class="no-border">
@@ -800,8 +800,8 @@
 				<div>
 					<p>Ruletissa pelaaja pyrkii veikkaamaan lukua, johon rulettipyörässä oleva pallo pysähtyy. Pelaajalla on valittavanaan myös monenlaisia lukujen yhdistelmiä sekä punainen ja musta väri, joihin luvut on jaettu.</p>
 					<div class="flex">
-						<iframe style="width: 212px; height: 450px; border: 0px;" src="https://jannevenhoedu.github.io/ma9/j5/t/ma9j5_teoria_rulettipoyta.html"></iframe>
-						<img style="height: 400px;" src="https://jannevenhoedu.github.io/ma9/j5/t/ma9j5_teoria_rulettipyora_varit.png">
+						<div><iframe style="width: 212px; height: 450px; border: 0px;" src="https://jannevenhoedu.github.io/ma9/j5/t/ma9j5_teoria_rulettipoyta.html"></iframe></div>
+						<div><img style="width: 350px; height: auto;" src="https://jannevenhoedu.github.io/ma9/j5/t/ma9j5_teoria_rulettipyora_varit.png"></div>
 					</div>
 					<p>Panos (pelimerkki tms.) asetetaan pelipöydälle haluttuun ruutuun tai ruutujen reunoille, ja voiton osuessa kohdalle panos saadaan takaisin seuraavan taulukon mukaisesti.</p>
 					<table style="text-align: left;">
@@ -866,155 +866,146 @@
 						</tbody>
 					</table>
 					<div class="example">
-					<p><strong>Esimerkki 1:</strong> Millä todennäköisyydellä ruletista tulee</p>
-					<div class="indent">
-					<p>a) punainen</p>
-					<p>b) oikeanpuoleisin sarake</p>
-					<p>c) 4, 5, 7 tai 8?</p>
-					</div>
-					<p><strong>Ratkaisut:</strong></p>
-					<div class="indent">
-					<p>a) \(\mathsf{P(\text{punainen}) = \dfrac{18}{37} = \text{0,486...} \approx 49\:\%}\)</p>
-					<p>b) \(\mathsf{P(\text{sarake}) = \dfrac{12}{37} = \text{0,324...} \approx 32\:\%}\)</p>
-					<p>c) \(\mathsf{P(\text{4,5,7 tai 8}) = \dfrac{4}{37} = \text{0,108...} \approx 11\:\%}\)</p>
-					</div>
-					<div style="display: none;">\( \def\euro{{\;\unicode{0x20AC}}}\)</div>
+						<p><strong>Esimerkki:</strong> Millä todennäköisyydellä ruletista tulee</p>
+						<div class="indent">
+							<p>a) punainen</p>
+							<p class="indent">\(\mathsf{P(\text{punainen}) = \dfrac{18}{37} = \text{0,486...} \approx 49\:\%}\)</p>
+							<p>b) oikeanpuoleisin sarake</p>
+							<p class="indent">\(\mathsf{P(\text{sarake}) = \dfrac{12}{37} = \text{0,324...} \approx 32\:\%}\)</p>
+							<p>c) 4, 5, 7 tai 8?</p>
+							<p class="indent">\(\mathsf{P(\text{4,5,7 tai 8}) = \dfrac{4}{37} = \text{0,108...} \approx 11\:\%}\)</p>
+						</div>
+						<p><strong>Ratkaisut:</strong></p>
 					</div>
 					<br>
 					<div class="example">
-					<p><strong>Esimerkki 2:</strong> Tiina panostaa yhden pelimerkin punaiselle ja toisen parittomalle (ODD).</p>
-					<div class="indent">
-					<p>a) Millä todennäköisyydellä molemmat osuvat?</p>
-					<p>b) Mikä on Tiinan panostuksen palautusprosentti?</p>
-					</div>
-					<p><strong>Ratkaisut:</strong></p>
-					<div class="indent">
-					<p>a) \(\mathsf{P(\text{pariton punainen}) = \dfrac{10}{37} = \text{0,270...} \approx 27\:\%}\)</p>
-					<p>b) Listataan kaikki mahdolliset tapahtumat, kertoimet, voitot / tappiot panoksen vähentämisen jälkeen (panos on nyt 2) sekä tapahtuman todennäköisyys.</p>
-					<table>
-					<tbody>
-					<tr>
-					<td style="border: 1px solid black; padding: 0px 10px;"><strong>Tapahtuma</strong></td>
-					<td style="border: 1px solid black; padding: 0px 10px;"><strong>Kerroin</strong></td>
-					<td style="border: 1px solid black; padding: 0px 10px;"><strong>Voitto</strong></td>
-					<td style="border: 1px solid black; padding: 0px 10px;"><strong>Todennäköisyys</strong></td>
-					</tr>
-					<tr>
-					<td style="border: 1px solid black; padding: 0px 10px;">Punainen (ei pariton)<br>12, 14, 16, 18, 30, 32, 34, 36</td>
-					<td style="border: 1px solid black; padding: 0px 10px;">2</td>
-					<td style="border: 1px solid black; padding: 0px 10px;">0</td>
-					<td style="border: 1px solid black; padding: 0px 10px;">\(\mathsf{\dfrac{8}{37} \approx 22\:\%}\)</td>
-					</tr>
-					<tr>
-					<td style="border: 1px solid black; padding: 0px 10px;">Pariton (ei punainen)<br>11, 13, 15, 17, 29, 31, 33, 35</td>
-					<td style="border: 1px solid black; padding: 0px 10px;">2</td>
-					<td style="border: 1px solid black; padding: 0px 10px;">0</td>
-					<td style="border: 1px solid black; padding: 0px 10px;">\(\mathsf{\dfrac{8}{37} \approx 22\:\%}\)</td>
-					</tr>
-					<tr>
-					<td style="border: 1px solid black; padding: 0px 10px;">Pariton punainen<br>1, 3, 5, 7, 9, 19, 21, 23, 25, 27</td>
-					<td style="border: 1px solid black; padding: 0px 10px;">4</td>
-					<td style="border: 1px solid black; padding: 0px 10px;">2</td>
-					<td style="border: 1px solid black; padding: 0px 10px;">\(\mathsf{\dfrac{10}{37} \approx 27\:\%}\)</td>
-					</tr>
-					<tr>
-					<td style="border: 1px solid black; padding: 0px 10px;">Ei kumpikaan<br>0, 2, 4, 6, 8, 10, 20, 22, 24, 26, 28</td>
-					<td style="border: 1px solid black; padding: 0px 10px;">0</td>
-					<td style="border: 1px solid black; padding: 0px 10px;">-2</td>
-					<td style="border: 1px solid black; padding: 0px 10px;">\(\mathsf{\dfrac{11}{37} \approx 30\:\%}\)</td>
-					</tr>
-					</tbody>
-					</table>
-					<br>
-					<p>Palautusprosentti:</p>
-					<div class="indent">
-					<p>\(\mathsf{0 \cdot \dfrac{8}{37} + 0 \cdot \dfrac{8}{37} + 2 \cdot \dfrac{10}{37} - 2 \cdot \dfrac{11}{37} = \dfrac{20}{37} - \dfrac{22}{37} = -\dfrac{2}{37}}\)</p>
-					<p>\(\mathsf{100\:\% - \dfrac{2}{37} = 100\:\% - \text{5,405...}\:\% = \text{94,59...}\:\% \approx \text{94,6}\:\%}\)</p>
-					</div>
-					<p><strong>Vastaus:</strong> Tiinan panostuksen palautusprosentti on 94,6 prosenttia.</p>
-					</div>
+						<p><strong>Esimerkki:</strong> Tiina panostaa yhden pelimerkin punaiselle ja toisen parittomalle (ODD).</p>
+						<div class="indent">
+							<p>a) Millä todennäköisyydellä molemmat osuvat?</p>
+							<p>b) Mikä on Tiinan panostuksen palautusprosentti?</p>
+						</div>
+						<p><strong>Ratkaisut:</strong></p>
+						<div class="indent">
+							<p>a) \(\mathsf{P(\text{pariton punainen}) = \dfrac{10}{37} = \text{0,270...} \approx 27\:\%}\)</p>
+							<p>b) Listataan kaikki mahdolliset tapahtumat, kertoimet, voitot / tappiot panoksen vähentämisen jälkeen (panos on nyt 2) sekä tapahtuman todennäköisyys.</p>
+							<table>
+								<tbody>
+									<tr>
+										<th>Tapahtuma</th>
+										<th>Kerroin</th>
+										<th>Voitto</th>
+										<th>Todennäköisyys</th>
+									</tr>
+									<tr>
+										<td>Punainen (ei pariton)<br>12, 14, 16, 18, 30, 32, 34, 36</td>
+										<td>2</td>
+										<td>0</td>
+										<td>\(\mathsf{\dfrac{8}{37} \approx 22\:\%}\)</td>
+									</tr>
+									<tr>
+										<td>Pariton (ei punainen)<br>11, 13, 15, 17, 29, 31, 33, 35</td>
+										<td>2</td>
+										<td>0</td>
+										<td>\(\mathsf{\dfrac{8}{37} \approx 22\:\%}\)</td>
+									</tr>
+									<tr>
+										<td>Pariton punainen<br>1, 3, 5, 7, 9, 19, 21, 23, 25, 27</td>
+										<td>4</td>
+										<td>2</td>
+										<td>\(\mathsf{\dfrac{10}{37} \approx 27\:\%}\)</td>
+									</tr>
+									<tr>
+										<td>Ei kumpikaan<br>0, 2, 4, 6, 8, 10, 20, 22, 24, 26, 28</td>
+										<td>0</td>
+										<td>-2</td>
+										<td>\(\mathsf{\dfrac{11}{37} \approx 30\:\%}\)</td>
+									</tr>
+								</tbody>
+							</table>
+							<p>Palautusprosentti:</p>
+							<div class="indent">
+								<p>\(\mathsf{0 \cdot \dfrac{8}{37} + 0 \cdot \dfrac{8}{37} + 2 \cdot \dfrac{10}{37} - 2 \cdot \dfrac{11}{37} = \dfrac{20}{37} - \dfrac{22}{37} = -\dfrac{2}{37}}\)</p>
+								<p>\(\mathsf{100\:\% - \dfrac{2}{37} = 100\:\% - \text{5,405...}\:\% = \text{94,59...}\:\% \approx \text{94,6}\:\%}\)</p>
+							</div>
+							<p><strong>Vastaus:</strong> Tiinan panostuksen palautusprosentti on 94,6 prosenttia.</p>
+						</div>
 					</div>
 				</div>
 				<h3>Hedelmäpeli</h3>
 				<div>
 					<p>Hedelmäpeli on rahapeliautomaatti, joka koostuu useammasta rullasta, joissa on erilaisia kuvioita (alunperin hedelmiä, siitä nimitys hedelmäpeli). Rullia pyöritetään ja rullista näkyvät kuviot arvotaan satunnaisesti. Pelin tavoitteena on saada jokin ennalta määritelty kuvioyhdistelmä, josta voittaa jonkin kertoimen mukaisesti panoksensa takaisin. Kuvioiden asettelemisella rulliin, voidaan vaikuttaa kuvioyhdistelmien todennäköisyyksiin ja määrittää (peliyhtiön kannalta) sopivat kertoimet.</p>
 					<p>Käytetään esimerkeissä (ja useimmissa tehtävissä) hedelmäpeliä, jossa on kolme rullaa. Rullissa on seuraavanlaiset kuviot.</p>
-					<div class="editor-indent" style="margin-left: 30px; text-align: center;">
 					<table>
-					<thead>
-					<tr>
-					<th>1</th>
-					<th>2</th>
-					<th>3</th>
-					</tr>
-					</thead>
-					<tbody>
-					<tr>
-					<td style="border-right: 1px solid black; padding: 2px 5px 0px 5px;">🍀</td>
-					<td style="border-right: 1px solid black; padding: 2px 5px 0px 5px;">🍀</td>
-					<td style="padding: 2px 5px 0px 5px;">🍀</td>
-					</tr>
-					<tr>
-					<td style="border-right: 1px solid black; padding: 0px 5px;">🍒</td>
-					<td style="border-right: 1px solid black; padding: 0px 5px;">🍒</td>
-					<td style="padding: 0px 5px;">🍇</td>
-					</tr>
-					<tr>
-					<td style="border-right: 1px solid black; padding: 0px 5px;">🍊</td>
-					<td style="border-right: 1px solid black; padding: 0px 5px;">🍊</td>
-					<td style="padding: 0px 5px;">🔔</td>
-					</tr>
-					<tr>
-					<td style="border-right: 1px solid black; padding: 0px 5px;">🍋</td>
-					<td style="border-right: 1px solid black; padding: 0px 5px;">🍒</td>
-					<td style="padding: 0px 5px;">🍋</td>
-					</tr>
-					<tr>
-					<td style="border-right: 1px solid black; padding: 0px 5px;">🍇</td>
-					<td style="border-right: 1px solid black; padding: 0px 5px;">🍇</td>
-					<td style="padding: 0px 5px;">🍊</td>
-					</tr>
-					<tr>
-					<td style="border-right: 1px solid black; padding: 0px 5px;">🍒</td>
-					<td style="border-right: 1px solid black; padding: 0px 5px;">🍒</td>
-					<td style="padding: 0px 5px;">🍇</td>
-					</tr>
-					<tr>
-					<td style="border-right: 1px solid black; padding: 0px 5px;">🍊</td>
-					<td style="border-right: 1px solid black; padding: 0px 5px;">🍊</td>
-					<td style="padding: 0px 5px;">🍋</td>
-					</tr>
-					<tr>
-					<td style="border-right: 1px solid black; padding: 0px 5px;">🍋</td>
-					<td style="border-right: 1px solid black; padding: 0px 5px;">🍒</td>
-					<td style="padding: 0px 5px;">🍇</td>
-					</tr>
-					<tr>
-					<td style="border-right: 1px solid black; padding: 0px 5px;">🔔</td>
-					<td style="border-right: 1px solid black; padding: 0px 5px;">🔔</td>
-					<td style="padding: 0px 5px;">🍋</td>
-					</tr>
-					<tr>
-					<td style="border-right: 1px solid black; padding: 0px 5px 2px 5px;">🍋</td>
-					<td style="border-right: 1px solid black; padding: 0px 5px 2px 5px;">🍒</td>
-					<td style="padding: 0px 5px 2px 5px;">🍊</td>
-					</tr>
-					</tbody>
+						<thead>
+							<tr>
+							<th>1</th>
+							<th>2</th>
+							<th>3</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td style="border-right: 1px solid black; padding: 2px 5px 0px 5px;">🍀</td>
+								<td style="border-right: 1px solid black; padding: 2px 5px 0px 5px;">🍀</td>
+								<td style="padding: 2px 5px 0px 5px;">🍀</td>
+							</tr>
+							<tr>
+								<td style="border-right: 1px solid black; padding: 0px 5px;">🍒</td>
+								<td style="border-right: 1px solid black; padding: 0px 5px;">🍒</td>
+								<td style="padding: 0px 5px;">🍇</td>
+							</tr>
+							<tr>
+								<td style="border-right: 1px solid black; padding: 0px 5px;">🍊</td>
+								<td style="border-right: 1px solid black; padding: 0px 5px;">🍊</td>
+								<td style="padding: 0px 5px;">🔔</td>
+							</tr>
+							<tr>
+								<td style="border-right: 1px solid black; padding: 0px 5px;">🍋</td>
+								<td style="border-right: 1px solid black; padding: 0px 5px;">🍒</td>
+								<td style="padding: 0px 5px;">🍋</td>
+							</tr>
+							<tr>
+								<td style="border-right: 1px solid black; padding: 0px 5px;">🍇</td>
+								<td style="border-right: 1px solid black; padding: 0px 5px;">🍇</td>
+								<td style="padding: 0px 5px;">🍊</td>
+							</tr>
+							<tr>
+								<td style="border-right: 1px solid black; padding: 0px 5px;">🍒</td>
+								<td style="border-right: 1px solid black; padding: 0px 5px;">🍒</td>
+								<td style="padding: 0px 5px;">🍇</td>
+							</tr>
+							<tr>
+								<td style="border-right: 1px solid black; padding: 0px 5px;">🍊</td>
+								<td style="border-right: 1px solid black; padding: 0px 5px;">🍊</td>
+								<td style="padding: 0px 5px;">🍋</td>
+							</tr>
+							<tr>
+								<td style="border-right: 1px solid black; padding: 0px 5px;">🍋</td>
+								<td style="border-right: 1px solid black; padding: 0px 5px;">🍒</td>
+								<td style="padding: 0px 5px;">🍇</td>
+							</tr>
+							<tr>
+								<td style="border-right: 1px solid black; padding: 0px 5px;">🔔</td>
+								<td style="border-right: 1px solid black; padding: 0px 5px;">🔔</td>
+								<td style="padding: 0px 5px;">🍋</td>
+							</tr>
+							<tr>
+								<td style="border-right: 1px solid black; padding: 0px 5px 2px 5px;">🍋</td>
+								<td style="border-right: 1px solid black; padding: 0px 5px 2px 5px;">🍒</td>
+								<td style="padding: 0px 5px 2px 5px;">🍊</td>
+							</tr>
+						</tbody>
 					</table>
-					</div>
 					<div class="example">
-					<p><strong>Esimerkki 1:</strong> Millä todennäköisyydellä</p>
-					<div class="indent">
-					<p>a) ensimmäisestä rullasta saadaan sitruuna</p>
-					<p>b) kahdesta ensimmäisestä rullasta saadaan appelsiinit</p>
-					<p>c) saadaan kuvioyhdistelmä 🍒🍒🍊?</p>
-					</div>
-					<p><strong>Ratkaisu:</strong></p>
-					<div class="indent">
-					<p>a) \(\mathsf{P(\text{1. sitruuna}) = \dfrac{3}{10} = \text{0,3} = 30\:\%}\)</p>
-					<p>b) \(\mathsf{P(\text{1. ja 2. appelsiini}) = \dfrac{2}{10} \cdot \dfrac{2}{10} = \dfrac{4}{100} = \text{0,04} = 4\:\%}\)</p>
-					<p>c) \(\mathsf{P(\text{2 kirsikkaa ja appelsiini}) = \dfrac{2}{10} \cdot \dfrac{5}{10} \cdot \dfrac{2}{10} = \dfrac{20}{1000} = \text{0,02} = \text{2}\:\%}\)</p>
-					</div>
+						<p><strong>Esimerkki:</strong> Millä todennäköisyydellä</p>
+						<div class="indent">
+							<p>a) ensimmäisestä rullasta saadaan sitruuna</p>
+							<p class="indent">a) \(\mathsf{P(\text{1. sitruuna}) = \dfrac{3}{10} = \text{0,3} = 30\:\%}\)</p>
+							<p>b) kahdesta ensimmäisestä rullasta saadaan appelsiinit</p>
+							<p class="indent">a) \(\mathsf{P(\text{1. ja 2. appelsiini}) = \dfrac{2}{10} \cdot \dfrac{2}{10} = \dfrac{4}{100} = \text{0,04} = 4\:\%}\)</p>
+							<p>c) saadaan kuvioyhdistelmä 🍒🍒🍊?</p>
+							<p class="indent">a) \(\mathsf{P(\text{2 kirsikkaa ja appelsiini}) = \dfrac{2}{10} \cdot \dfrac{5}{10} \cdot \dfrac{2}{10} = \dfrac{20}{1000} = \text{0,02} = \text{2}\:\%}\)</p>
+						</div>
 					</div>
 				</div>
 			</div>
