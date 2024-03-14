@@ -17,6 +17,9 @@
 			.tilasto td:last-child, .tilasto th:last-child {
 				text-align: right;
 			}
+			.ristiintaulukointi td, .ristiintaulukoint th {
+				border: 0px;
+			}
 		</style>
 	</head>
 	<body>
@@ -259,7 +262,7 @@
 								</tbody>
 							</table>
 							<p>Valintapuu:</p>
-							<img src="https://jannevenhoedu.github.io/ma9/j5/t/ma9j5_teoria_valintapuu_lahjat.png">
+							<img style="width: 400px;" src="https://jannevenhoedu.github.io/ma9/j5/t/ma9j5_teoria_valintapuu_lahjat.png">
 							<p>Laskeminen tuloperiaatteen avulla: 3 paperia ja 4 nauhaa.</p>
 							<p class="indent">\(\mathsf{3 \cdot 4 = 12}\)</p>
 						</div>
@@ -267,135 +270,133 @@
 					</div>
 					<h4>Toisistaan riippuvat tapahtumat</h4>
 					<p>Jos edellisen tapahtuman tulos muuttaa seuraavien tapahtumien vaihtoehtojen lukumääriä, ovat tapahtumat toisistaan riippuvia.</p>
-					<p><strong>Esimerkki:</strong> Neljä lasta saavat virvottuaan valita pussista tikkarin. Pussissa on neljä tikkaria, ja ne ovat kaikki eri värisiä: punainen (P), keltainen (K), vihreä (V) ja sininen (S). Kuinka monella eri tavalla tikkarit voidaan valita.</p>
-					<div class="indent">
-					<p>Kaikkien vaihtoehtojen luetteleminen:</p>
-					<div class="indent">
-					<table style="text-align: center;">
-					<tbody>
-					<tr>
-					<td style="width: 50px;">PKVS</td>
-					<td style="width: 50px;">PKSV</td>
-					<td style="width: 50px;">PVKS</td>
-					<td style="width: 50px;">PVSK</td>
-					<td style="width: 50px;">PSKV</td>
-					<td style="width: 50px;">PSVK</td>
-					</tr>
-					<tr>
-					<td>KPVS</td>
-					<td>KPSV</td>
-					<td>KVPS</td>
-					<td>KVSP</td>
-					<td>KSPV</td>
-					<td>KSVP</td>
-					</tr>
-					<tr>
-					<td>VPKS</td>
-					<td>VPSK</td>
-					<td>VKPS</td>
-					<td>VKSP</td>
-					<td>VSPK</td>
-					<td>VSKP</td>
-					</tr>
-					<tr>
-					<td>SPKV</td>
-					<td>SPVK</td>
-					<td>SKPV</td>
-					<td>SKVP</td>
-					<td>SVPK</td>
-					<td>SVKP</td>
-					</tr>
-					</tbody>
-					</table>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Neljä lasta saavat virvottuaan valita pussista tikkarin. Pussissa on neljä tikkaria, ja ne ovat kaikki eri värisiä: punainen (P), keltainen (K), vihreä (V) ja sininen (S). Kuinka monella eri tavalla tikkarit voidaan valita.</p>
+						<div class="indent">
+							<p>Kaikkien vaihtoehtojen luetteleminen:</p>
+							<table>
+								<tbody>
+									<tr>
+										<td style="width: 50px;">PKVS</td>
+										<td style="width: 50px;">PKSV</td>
+										<td style="width: 50px;">PVKS</td>
+										<td style="width: 50px;">PVSK</td>
+										<td style="width: 50px;">PSKV</td>
+										<td style="width: 50px;">PSVK</td>
+									</tr>
+									<tr>
+										<td>KPVS</td>
+										<td>KPSV</td>
+										<td>KVPS</td>
+										<td>KVSP</td>
+										<td>KSPV</td>
+										<td>KSVP</td>
+									</tr>
+									<tr>
+										<td>VPKS</td>
+										<td>VPSK</td>
+										<td>VKPS</td>
+										<td>VKSP</td>
+										<td>VSPK</td>
+										<td>VSKP</td>
+									</tr>
+									<tr>
+										<td>SPKV</td>
+										<td>SPVK</td>
+										<td>SKPV</td>
+										<td>SKVP</td>
+										<td>SVPK</td>
+										<td>SVKP</td>
+									</tr>
+								</tbody>
+							</table>
+							<p>Valintapuu:</p>
+							<img style="width: 800px;" src="https://jannevenhoedu.github.io/ma9/j5/t/ma9j5_teoria_valintapuu_tikkarit.png">
+							<p>Laskeminen tuloperiaatteen avulla:</p>
+							<div class="indent">
+								<p>Ensimmäinen lapsi valitsee neljästä tikkarista, toinen kolmesta tikkarista, kolmas valitsee kahdesta tikkarista ja neljännellä lapsella on jäljellä enää yksi tikkari.</p>
+								<p>\(\mathsf{4 \cdot 3 \cdot 2 \cdot 1 = 24}\)</p>
+							</div>
+						</div>
+						<p><strong>Vastaus: </strong>Tikkarit voidaan valita 24 erilaisella tavalla.</p>
 					</div>
-					<p>Valintapuu:</p>
-					<div class="indent">
-					<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/268377956/ma9j5_teoria_valintapuu_tikkarit.png" alt="" width="797" height="242"></p>
-					</div>
-					<p>Laskeminen tuloperiaatteen avulla:</p>
-					<div class="indent">
-					<p>Ensimmäinen lapsi valitsee neljästä tikkarista, toinen kolmesta tikkarista, kolmas valitsee kahdesta tikkarista ja neljännellä lapsella on jäljellä enää yksi tikkari.</p>
-					<p>\(\mathsf{4 \cdot 3 \cdot 2 \cdot 1 = 24}\)</p>
-					</div>
-					<p><strong>Vastaus: </strong>Tikkarit voidaan valita 24 erilaisella tavalla.</p>
-					</div>
-					<h5>Valitaan vain osa, järjestyksellä on väliä</h5>
+					<h4>Valitaan vain osa, järjestyksellä on väliä</h4>
 					<p>Valitaan jostakin joukosta vain tietty määrä yksilöitä ja asetetaan ne järjestykseen. Erilaisten järjestysten lukumäärä saadaan kertomalla jäljellä olevien yksilöiden määrällä kussakin valinnan vaiheessa.</p>
-					<p><strong>Esimerkki:</strong> Koulun hiihtokilpailussa on 5 osallistujaa: Aada, Ben, Cecilia, Doris ja Eetu. Kuinka monella eri tavalla kulta- ja hopeamitalit voidaan jakaa?</p>
-					<div class="indent">
-					<p>Kaikkien vaihtoehtojen luetteleminen: Ristiintaulukointi</p>
-					<div class="indent">
-					<table style="border-collapse: collapse; text-align: center;">
-					<tbody>
-					<tr>
-					<td> </td>
-					<td> </td>
-					<td style="text-align: center;" colspan="5">HOPEAMITALI</td>
-					</tr>
-					<tr>
-					<td> </td>
-					<td style="border-right: 2px solid black; border-bottom: 2px solid black;"> </td>
-					<td style="border-right: 1px solid black; border-bottom: 2px solid black;">A</td>
-					<td style="border-right: 1px solid black; border-bottom: 2px solid black;">B</td>
-					<td style="border-right: 1px solid black; border-bottom: 2px solid black;">C</td>
-					<td style="border-right: 1px solid black; border-bottom: 2px solid black;">D</td>
-					<td style="border-bottom: 2px solid black;">E</td>
-					</tr>
-					<tr>
-					<td rowspan="5">
-					<div style="writing-mode: vertical-lr; text-orientation: upright;">KULTAMITALI</div>
-					</td>
-					<td style="border-right: 2px solid black; border-bottom: 1px solid black; width: 30px;">A</td>
-					<td style="border-right: 1px solid black; width: 40px; border-bottom: 1px solid black;"> </td>
-					<td style="border-right: 1px solid black; width: 40px; border-bottom: 1px solid black;">AB</td>
-					<td style="border-right: 1px solid black; width: 40px; border-bottom: 1px solid black;">AC</td>
-					<td style="border-right: 1px solid black; width: 40px; border-bottom: 1px solid black;">AD</td>
-					<td style="width: 40px; border-bottom: 1px solid black;">AE</td>
-					</tr>
-					<tr>
-					<td style="border-right: 2px solid black; border-bottom: 1px solid black;">B</td>
-					<td style="border-right: 1px solid black; border-bottom: 1px solid black;">BA</td>
-					<td style="border-right: 1px solid black; border-bottom: 1px solid black;"> </td>
-					<td style="border-right: 1px solid black; border-bottom: 1px solid black;">BC</td>
-					<td style="border-right: 1px solid black; border-bottom: 1px solid black;">BD</td>
-					<td style="border-bottom: 1px solid black;">BE</td>
-					</tr>
-					<tr>
-					<td style="border-right: 2px solid black; border-bottom: 1px solid black;">C</td>
-					<td style="border-right: 1px solid black; border-bottom: 1px solid black;">CA</td>
-					<td style="border-right: 1px solid black; border-bottom: 1px solid black;">CB</td>
-					<td style="border-right: 1px solid black; border-bottom: 1px solid black;"> </td>
-					<td style="border-right: 1px solid black; border-bottom: 1px solid black;">CD</td>
-					<td style="border-bottom: 1px solid black;">CE</td>
-					</tr>
-					<tr>
-					<td style="border-right: 2px solid black; border-bottom: 1px solid black;">D</td>
-					<td style="border-right: 1px solid black; border-bottom: 1px solid black;">DA</td>
-					<td style="border-right: 1px solid black; border-bottom: 1px solid black;">DB</td>
-					<td style="border-right: 1px solid black; border-bottom: 1px solid black;">DC</td>
-					<td style="border-right: 1px solid black; border-bottom: 1px solid black;"> </td>
-					<td style="border-bottom: 1px solid black;">DE</td>
-					</tr>
-					<tr>
-					<td style="border-right: 2px solid black;">E</td>
-					<td style="border-right: 1px solid black;">EA</td>
-					<td style="border-right: 1px solid black;">EB</td>
-					<td style="border-right: 1px solid black;">EC</td>
-					<td style="border-right: 1px solid black;">ED</td>
-					<td> </td>
-					</tr>
-					</tbody>
-					</table>
-					</div>
-					<p>Valintapuu:</p>
-					<div class="indent">
-					<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://reppu.mmg.fi/draftfile.php/50563/user/draft/268377956/ma9j5_teoria_valintapuu_mitalit.png" alt="" width="600" height="131"></p>
-					</div>
-					<p>Laskeminen tuloperiaatteen avulla: Voittajaehdokkaita 5, jonka jälkeen hopealle voi päästä joku neljästä jäljelle jääneestä.</p>
-					<div class="indent">
-					<p>\(\mathsf{5 \cdot 4 = 20}\)</p>
-					</div>
-					<p><strong>Vastaus: </strong>Kulta- ja hopeamitalit voidaan jakaa 20 eri tavalla.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Koulun hiihtokilpailussa on 5 osallistujaa: Aada, Ben, Cecilia, Doris ja Eetu. Kuinka monella eri tavalla kulta- ja hopeamitalit voidaan jakaa?</p>
+						<div class="indent">
+							<p>Kaikkien vaihtoehtojen luetteleminen: Ristiintaulukointi</p>
+							<table class="ristiintaulukointi">
+								<thead>
+									<tr>
+										<td> </td>
+										<td> </td>
+										<td colspan="5">HOPEAMITALI</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td> </td>
+										<td style="border-right: 2px solid black; border-bottom: 2px solid black;"> </td>
+										<td style="border-right: 1px solid black; border-bottom: 2px solid black;">A</td>
+										<td style="border-right: 1px solid black; border-bottom: 2px solid black;">B</td>
+										<td style="border-right: 1px solid black; border-bottom: 2px solid black;">C</td>
+										<td style="border-right: 1px solid black; border-bottom: 2px solid black;">D</td>
+										<td style="border-bottom: 2px solid black;">E</td>
+									</tr>
+									<tr>
+									<td rowspan="5">
+									<div style="writing-mode: vertical-lr; text-orientation: upright;">KULTAMITALI</div>
+									</td>
+										<td style="border-right: 2px solid black; border-bottom: 1px solid black; width: 30px;">A</td>
+										<td style="border-right: 1px solid black; width: 40px; border-bottom: 1px solid black;"> </td>
+										<td style="border-right: 1px solid black; width: 40px; border-bottom: 1px solid black;">AB</td>
+										<td style="border-right: 1px solid black; width: 40px; border-bottom: 1px solid black;">AC</td>
+										<td style="border-right: 1px solid black; width: 40px; border-bottom: 1px solid black;">AD</td>
+										<td style="width: 40px; border-bottom: 1px solid black;">AE</td>
+									</tr>
+									<tr>
+										<td style="border-right: 2px solid black; border-bottom: 1px solid black;">B</td>
+										<td style="border-right: 1px solid black; border-bottom: 1px solid black;">BA</td>
+										<td style="border-right: 1px solid black; border-bottom: 1px solid black;"> </td>
+										<td style="border-right: 1px solid black; border-bottom: 1px solid black;">BC</td>
+										<td style="border-right: 1px solid black; border-bottom: 1px solid black;">BD</td>
+										<td style="border-bottom: 1px solid black;">BE</td>
+									</tr>
+									<tr>
+										<td style="border-right: 2px solid black; border-bottom: 1px solid black;">C</td>
+										<td style="border-right: 1px solid black; border-bottom: 1px solid black;">CA</td>
+										<td style="border-right: 1px solid black; border-bottom: 1px solid black;">CB</td>
+										<td style="border-right: 1px solid black; border-bottom: 1px solid black;"> </td>
+										<td style="border-right: 1px solid black; border-bottom: 1px solid black;">CD</td>
+										<td style="border-bottom: 1px solid black;">CE</td>
+									</tr>
+									<tr>
+										<td style="border-right: 2px solid black; border-bottom: 1px solid black;">D</td>
+										<td style="border-right: 1px solid black; border-bottom: 1px solid black;">DA</td>
+										<td style="border-right: 1px solid black; border-bottom: 1px solid black;">DB</td>
+										<td style="border-right: 1px solid black; border-bottom: 1px solid black;">DC</td>
+										<td style="border-right: 1px solid black; border-bottom: 1px solid black;"> </td>
+										<td style="border-bottom: 1px solid black;">DE</td>
+									</tr>
+									<tr>
+										<td style="border-right: 2px solid black;">E</td>
+										<td style="border-right: 1px solid black;">EA</td>
+										<td style="border-right: 1px solid black;">EB</td>
+										<td style="border-right: 1px solid black;">EC</td>
+										<td style="border-right: 1px solid black;">ED</td>
+									<td> </td>
+									</tr>
+								</tbody>
+							</table>
+							<p>Valintapuu:</p>
+							<img style="width: 600px;" src="https://jannevenhoedu.github.io/ma9/j5/t/ma9j5_teoria_valintapuu_mitalit.png">
+							<p>Laskeminen tuloperiaatteen avulla: Voittajaehdokkaita 5, jonka jälkeen hopealle voi päästä joku neljästä jäljelle jääneestä.</p>
+							<div class="indent">
+							<p>\(\mathsf{5 \cdot 4 = 20}\)</p>
+							</div>
+						</div>
+						<p><strong>Vastaus: </strong>Kulta- ja hopeamitalit voidaan jakaa 20 eri tavalla.</p>
 					</div>
 					<h4>Valitaan vain osa, järjestyksellä ei ole väliä</h4>
 					<p>Valitaan jostakin joukosta vain tietty määrä yksilöitä. Yksilöiden järjestyksellä ei ole merkitystä. Lasketaan kertolasku kuten edellä, mutta jaetaan tulos samanlaisten valintojen lukumäärällä.</p>
