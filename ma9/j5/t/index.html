@@ -154,22 +154,23 @@
 					<p>Jos halutaan, että ainakin toinen tapahtuu, todennäköisyydet lasketaan yhteen ja niistä vähennetään tilanne, jossa molemmat tapahtuvat.</p>
 					<p class="indent">\(\mathsf{P(\text{A tai B}) = P(A) + P(B) - P(\text{A ja B})}\)</p>
 					<div class="example">
-						<p><strong>Esimerkki:</strong> Jounilla on laukussaan 8 <a href="https://frisbeegolfliitto.fi/aloittelijat/" target="_blank">frisbeegolf</a>-kiekkoa: 1 <abbr title="putter, lähipelikiekko">putteri (P)</abbr>, 3 <abbr title="mid-range, lähestymiskiekko">midaria (M)</abbr> ja 4 <abbr title="driver, pitkän matkan kiekko">draiveria (D)</abbr>.</p>
-						<img src="https://jannevenhoedu.github.io/ma9/j5/t/ma9j5_teoria_frisbeegolfkiekot.png">
+						<p><strong>Esimerkki:</strong> Jounilla on laukussaan kuusi paitaa ja kolmet housut. Paidoista kolme on keltaista, kaksi mustaa ja yksi punainen. Housuista kahdet ovat mustat ja yhdet siniset.
 						<div class="indent">
-							<p>Millä todennäköisyydellä satunnaisesti valittu kiekko on</p>
-							<p>a) keltainen ja draiveri</p>
+							<p>Millä todennäköisyydellä satunnaisesti valitaan</p>
+							<p>a) musta paita <span class="narrow">(mP)</span> ja mustat housut <span class="narrow">(mH)</span></p>
 							<div class="indent">
 								<p>Käytetään kertolaskusääntöä:</p>
-								<p>\(\begin{align}\mathsf{P(\text{kelt ja draiveri})} &= \mathsf{P(\text{kelt}) \cdot P(\text{draiveri})}\\ &= \mathsf{\dfrac{4}{8} \cdot \dfrac{4}{8}}\\ &= \mathsf{\dfrac{16}{64}}\\ &= \mathsf{\text{0,25}}\\ &= \mathsf{25\:\%}\end{align}\)</p>
+								<p class="wide">\(\begin{align}&\mathsf{P(\text{musta paita ja mustat housut})}\\ &= \mathsf{P(\text{musta paita}) \cdot P(\text{mustat housut})}\\ &= \mathsf{\dfrac{2}{6} \cdot \dfrac{2}{3}}\\ &= \mathsf{\dfrac{4}{18}}\\ &= \mathsf{\text{0,222...}}\\ &\approx \mathsf{22\:\%}\end{align}\)</p>
+								<p class="narrow">\(\begin{align}&\mathsf{P(\text{mP ja mH})}\\ &= \mathsf{P(\text{mP}) \cdot P(\text{mH})}\\ &= \mathsf{\dfrac{2}{6} \cdot \dfrac{2}{3}}\\ &= \mathsf{\dfrac{4}{18}}\\ &= \textsf{0,222...}\\ &\approx\mathsf{22\:\%}\end{align}\)</p>
 							</div>
-							<p><strong>Vastaus:</strong> Kiekko on keltainen draiveri 25 prosentin todennäköisyydellä.</p>
-							<p>b) keltainen tai draiveri.</p>
+							<p><strong>Vastaus:</strong> Musta paita ja housut valitaan 22 prosentin todennäköisyydellä.</p>
+							<p>b) musta paita <span class="narrow">(mP)</span> tai mustat housut<span class="narrow"> (mH)</span>?</p>
 							<div class="indent">
 								<p>Käytetään yhteenlaskusääntöä:</p>
-								<p>\(\begin{align}\mathsf{P(\text{kelt tai D})} &= \mathsf{P(\text{kelt}) + P(\text{D}) - P(\text{kelt ja D})}\\ &= \mathsf{\dfrac{4}{8} + \dfrac{4}{8} - \dfrac{16}{64}}\\ &= \mathsf{\text{0,75}}\\ &= \mathsf{75\:\%}\end{align}\)</p>
+								<p class="wide">\(\begin{align}&\mathsf{P(\text{musta paita tai mustat housut})}\\ &= \mathsf{P(\text{musta paita}) + P(\text{mustat housut}) - P(\text{musta paita ja mustat housut})}\\ &= \mathsf{\dfrac{2}{6} + \dfrac{2}{3} - \dfrac{4}{18}}\\ &= \mathsf{\text{0,777...}}\\ &\approx \mathsf{78\:\%}\end{align}\)</p>
+								<p class="narrow">\(\begin{align}&\textsf{P(mP tai mH)}\\ &= \mathsf{P(\text{mP}) + P(\text{mH}) - P(\text{mP ja mH})}\\ &= \mathsf{\dfrac{2}{6} + \dfrac{2}{3} - \dfrac{4}{18}}\\ &= \mathsf{\text{0,777...}}\\ &\approx \mathsf{78\:\%}\end{align}\)</p>
 							</div>
-							<p><strong>Vastaus:</strong> Kiekko on keltainen tai draiveri 75 prosentin todennäköisyydellä.</p>
+							<p><strong>Vastaus:</strong> Musta paita tai mustat housut valitaan 78 prosentin todennäköisyydellä.</p>
 						</div>
 					</div>
 					<h4>Vastatapahtuma</h4>
@@ -180,7 +181,8 @@
 						<p><strong>Esimerkki:</strong> Ulrikan penaalissa on kolme lyijykynää, kaksi mustekynää ja neljä tussia. Millä todennäköisyydellä satunnaisesti penaalista valittu kynä on muu kuin tussi?</p>
 						<div class="indent">
 							<p>Ratkaistaan tehtävä vastatapahtuman avulla.</p>
-							<p class="indent">\(\begin{align}\mathsf{P(\text{ei tussi})} &= \mathsf{1 - P(\text{tussi})}\\ &= \mathsf{1 - \dfrac{4}{9}}\\ &= \mathsf{\dfrac{9}{9} - \dfrac{4}{9}}\\ &= \mathsf{\dfrac{5}{9}}\\ &= \textsf{0,555...}\\ &\approx \mathsf{56\:\%}\end{align}\)</p>
+							<p class="indent wide">\(\mathsf{P(\text{ei tussi}) = 1 - P(\text{tussi}) = 1 - \dfrac{4}{9} = \dfrac{9}{9} - \dfrac{4}{9} = \dfrac{5}{9} = \text{0,555...} \approx 56\:\%}\)</p>
+							<p class="indent narrow">\(\begin{align}&\mathsf{P(\text{ei tussi})}\\ &= \mathsf{1 - P(\text{tussi})}\\ &= \mathsf{1 - \dfrac{4}{9}}\\ &= \mathsf{\dfrac{9}{9} - \dfrac{4}{9}}\\ &= \mathsf{\dfrac{5}{9}}\\ &= \textsf{0,555...}\\ &\approx \mathsf{56\:\%}\end{align}\)</p>
 						</div>
 						<p><strong>Vastaus:</strong> Kynä on 56 prosentin todennäköisyydellä muu kuin tussi.</p>
 					</div>
@@ -478,8 +480,9 @@
 							<p class="indent">\(\mathsf{P(\text{1. punainen}) = \dfrac{2}{5}}\)</p>
 							<p>Ennen toista nostoa pussissa on 1 punainen ja 3 sinistä palloa eli yhteensä 4 palloa:</p>
 							<p class="indent">\(\mathsf{P(\text{2. sininen}) = \dfrac{3}{4}}\)</p>
-							<p>Todennäköisyys, että molemmat tapahtuvat saadaa kertolaskulla:</p>
-							<p class="indent">\(\begin{align}\mathsf{P(\text{1. pun. ja 2. sin.})} &= \mathsf{P(\text{1. pun.}) \cdot P(\text{2. sin.})}\\ &= \mathsf{\dfrac{2}{5} \cdot \dfrac{3}{4}}\\ &= \mathsf{\dfrac{6}{20}}\\ &= \mathsf{\text{0,3}} &= \mathsf{30\:\%}\end{align}\)</p>
+							<p>Todennäköisyys, että molemmat tapahtuvat saadaan kertolaskulla:</p>
+							<p class="indent wide">\(\begin{align}&\mathsf{P(\text{1. punainen ja 2. sininen})}\\ &= \mathsf{P(\text{1. punainen}) \cdot P(\text{2. sininen})}\\ &= \mathsf{\dfrac{2}{5} \cdot \dfrac{3}{4}}\\ &= \mathsf{\dfrac{6}{20}}\\ &= \mathsf{\text{0,3}}\\ &= \mathsf{30\:\%}\end{align}\)</p>
+							<p class="indent narrow">\(\begin{align}&\mathsf{P(\text{1. pun. ja 2. sin.})}\\ &= \mathsf{P(\text{1. pun.}) \cdot P(\text{2. sin.})}\\ &= \mathsf{\dfrac{2}{5} \cdot \dfrac{3}{4}}\\ &= \mathsf{\dfrac{6}{20}}\\ &= \mathsf{\text{0,3}}\\ &= \mathsf{30\:\%}\end{align}\)</p>
 						</div>
 						<p><strong>Vastaus:</strong> Todennäköisyys, että ensimmäisellä nostolla tulee punainen ja toisella nostolla sininen pallo on 30 prosenttia.</p>
 					</div>
@@ -523,7 +526,8 @@
 								</tbody>
 							</table>
 							<p>Todennäköisyys, että molemmat tapahtuvat saadaan laskemalla:</p>
-							<p class="indent">\(\begin{align}\mathsf{P(\text{1. pun. ja 2. sin.})} &= \mathsf{\dfrac{suotuisat\,tapaukset}{kaikki\,tapaukset}}\\ &= \mathsf{\dfrac{6}{20}}\\ &= \mathsf{\text{0,3}}\\ &= \mathsf{30\:\%}\end{align}\)</p>
+							<p class="indent wide">\(\mathsf{P(\text{1. punainen ja 2. sininen}) = \dfrac{suotuisat\,tapaukset}{kaikki\,tapaukset} = \dfrac{6}{20} = \text{0,3} = 30\:\%}\)</p>
+							<p class="indent narrow">\(\begin{align}&\mathsf{P(\text{1. pun. ja 2. sin.})}\\ &= \mathsf{\dfrac{suotuisat\,tapaukset}{kaikki\,tapaukset}}\\ &= \mathsf{\dfrac{6}{20}}\\ &= \mathsf{\text{0,3}}\\ &= \mathsf{30\:\%}\end{align}\)</p>
 						</div>
 						<p><strong>Vastaus:</strong> Todennäköisyys, että ensimmäisellä nostolla tulee punainen ja toisella nostolla sininen pallo on 30 prosenttia.</p>
 					</div>
@@ -537,7 +541,8 @@
 							<p><strong>Suotuisa tapahtuma 2:</strong> 1. pallo on sininen ja 2. pallo on punainen:</p>
 							<p class="indent">\(\mathsf{P(\text{1. sininen ja 2. punainen}) = \dfrac{3}{5} \cdot \dfrac{2}{4} = \dfrac{6}{20}}\)</p>
 							<p>Todennäköisyys, että jompi kumpi tapahtuu, saadaan yhteenlaskulla:</p>
-							<p class="indent">\(\begin{align}\mathsf{P(\text{eriväriset})} &= \mathsf{P(\text{1. pun. ja 2. sin.}) + P(\text{1. sin. ja 2. pun.})}\\ &= \mathsf{\dfrac{6}{20} + \dfrac{6}{20}}\\ &= \mathsf{\dfrac{12}{20}}\\ &= \mathsf{\text{0,6}}\\ &= \mathsf{60\:\%}\end{align}\)</p>
+							<p class="indent wide">\(\begin{align}&\mathsf{P(\text{eriväriset})}\\ &= \mathsf{P(\text{1. punainen ja 2. sininen}) + P(\text{1. sininen ja 2. punainen})}\\ &= \mathsf{\dfrac{6}{20} + \dfrac{6}{20}}\\ &= \mathsf{\dfrac{12}{20}}\\ &= \mathsf{\text{0,6}}\\ &= \mathsf{60\:\%}\end{align}\)</p>
+							<p class="indent narrow">\(\begin{align}&\mathsf{P(\text{eriväriset})}\\ &= \mathsf{P(\text{1. pun. ja 2. sin.}) + P(\text{1. sin. ja 2. pun.})}\\ &= \mathsf{\dfrac{6}{20} + \dfrac{6}{20}}\\ &= \mathsf{\dfrac{12}{20}}\\ &= \mathsf{\text{0,6}}\\ &= \mathsf{60\:\%}\end{align}\)</p>
 						</div>
 						<p><strong>Vastaus:</strong> Todennäköisyys, että pallot ovat erivärisiä on 60 prosenttia.</p>
 					</div>
@@ -646,7 +651,8 @@
 						</table>
 						<p><strong>Ratkaisu:</strong> Summataan riveittäin Voitto · Todennäköisyys</p>
 						<div class="indent">
-							<p>\(\mathsf{4 \cdot 7\:\% + 2 \cdot 10\:\% + 1 \cdot 12\:\% - 1 \cdot 71\:\% = 28\:\% + 20\:\% + 12\:\% - 71\:\% = -11\:\%}\)</p>
+							<p class="wide">\(\mathsf{4 \cdot 7\:\% + 2 \cdot 10\:\% + 1 \cdot 12\:\% - 1 \cdot 71\:\% = 28\:\% + 20\:\% + 12\:\% - 71\:\% = -11\:\%}\)</p>
+							<p class="narrow">\(\begin{align}&\mathsf{4 \cdot 7\:\% + 2 \cdot 10\:\% + 1 \cdot 12\:\% - 1 \cdot 71\:\%}\\ &= \mathsf{28\:\% + 20\:\% + 12\:\% - 71\:\%}\\ &= \mathsf{-11\:\%}\end{align}\)</p>
 							<p>\(\mathsf{100\:\% - 11\:\% = 89\:\%}\)</p>
 						</div>
 						<p><strong>Vastaus:</strong> Pelin palautusprosentti on 89 prosenttia.</p>
@@ -660,7 +666,7 @@
 					<p class="indent">\(\mathsf{\dfrac{1}{2} = \text{0,5} = 50\:\%}\).</p>
 					<div class="example">
 						<p><strong>Esimerkki:</strong> Kolikkoa heitetään kaksi kertaa. Millä todennäköisyydellä saadaan kaksi kruunaa?</p>
-						<p class="indent">\(\mathsf{P(\text{kaksi kruunaa}) = \dfrac{1}{2} \cdot \dfrac{1}{2} = \dfrac{1}{4} = \text{0,25} = 25\:\%}\)</p>
+						<p class="indent">\(\mathsf{P(\text{2 kruunaa}) = \dfrac{1}{2} \cdot \dfrac{1}{2} = \dfrac{1}{4} = \text{0,25} = 25\:\%}\)</p>
 						<p><strong>Vastaus:</strong> Kaksi kruunaa saadaan 25 prosentin todennäköisyydellä.</p>
 					</div>
 					<br>
@@ -668,9 +674,11 @@
 						<p><strong>Esimerkki:</strong> Kolikkoa heitetään kaksi kertaa. Millä todennäköisyydellä saadaan vähintään yksi kruuna?</p>
 						<div class="indent">
 							<p>Tapa 1: Vastatodennäköisyys</p>
-							<p class="indent">\(\mathsf{P(\text{vähintään 1 kruuna}) = 1 - P(\text{ei yhtään kruunaa}) = 1 - \dfrac{1}{2} \cdot \dfrac{1}{2} = 1-\dfrac{1}{4} = \dfrac{3}{4} = \text{0,75} = 75\:\%}\)</p>
+							<p class="indent wide">\(\mathsf{P(\text{vähintään 1 kruuna}) = 1 - P(\text{ei yhtään kruunaa}) = 1 - \dfrac{1}{2} \cdot \dfrac{1}{2} = 1-\dfrac{1}{4} = \dfrac{3}{4} = \text{0,75} = 75\:\%}\)</p>
+							<p class="indent narrow">\(\begin{align}&\mathsf{P(\text{vähintään 1 kruuna})}\\ &= \mathsf{1 - P(\text{ei yhtään kruunaa})}\\ &= \mathsf{1 - \dfrac{1}{2} \cdot \dfrac{1}{2}}\\ &= \mathsf{1-\dfrac{1}{4}}\\ &= \mathsf{\dfrac{3}{4}}\\ &= \textsf{0,75}\\ &= \mathsf{75\:\%}\end{align}\)</p>
 							<p>Tapa 2: Yhteenlaskuperiaate</p>
-							<p class="indent">\(\mathsf{P(\text{vähintään 1 kruuna}) = P(\text{1 kruuna}) + P(\text{kaksi kruunaa}) = \dfrac{1}{2} \cdot \dfrac{2}{2} + \dfrac{1}{2} \cdot \dfrac{1}{2} = \dfrac{2}{4} + \dfrac{1}{4} = \dfrac{3}{4} = \text{0,75} = 75\:\%}\)</p>
+							<p class="indent wide">\(\mathsf{P(\text{vähintään 1 kruuna}) = P(\text{1 kruuna}) + P(\text{kaksi kruunaa}) = \dfrac{1}{2} \cdot \dfrac{2}{2} + \dfrac{1}{2} \cdot \dfrac{1}{2} = \dfrac{2}{4} + \dfrac{1}{4} = \dfrac{3}{4} = \text{0,75} = 75\:\%}\)</p>
+							<p class="indent narrow">\(\begin{align}&\mathsf{P(\text{vähintään 1 kruuna})}\\ &= \mathsf{P(\text{1 kruuna}) + P(\text{kaksi kruunaa})}\\ &= \mathsf{\dfrac{1}{2} \cdot \dfrac{2}{2} + \dfrac{1}{2} \cdot \dfrac{1}{2}}\\ &= \mathsf{\dfrac{2}{4} + \dfrac{1}{4}}\\ &= \mathsf{\dfrac{3}{4}}\\ &= \textsf{0,75}\\ &= \mathsf{75\:\%}\end{align}\)</p>
 						</div>
 						<p><strong>Vastaus:</strong> Vähintään yksi kruuna saadaan 75 prosentin todennäköisyydellä.</p>
 					</div>
@@ -689,7 +697,8 @@
 					<br>
 					<div class="example">
 						<p><strong>Esimerkki:</strong> Noppaa heitetään kaksi kertaa. Millä todennäköisyydellä saadaan kaksi kuutosta?</p>
-						<p class="indent">\(\mathsf{P(\text{kaksi kuutosta}) = \dfrac{1}{6} \cdot \dfrac{1}{6} = \dfrac{1}{36} = \text{0,2777...} \approx 2,8\:\%}\)</p>
+						<p class="indent wide">\(\mathsf{P(\text{kaksi kuutosta}) = \dfrac{1}{6} \cdot \dfrac{1}{6} = \dfrac{1}{36} = \text{0,2777...} \approx \text{2,8}\:\%}\)</p>
+						<p class="indent narrow">\(\begin{align}&\mathsf{P(\text{kaksi kuutosta})}\\ &= \mathsf{\dfrac{1}{6} \cdot \dfrac{1}{6}}\\ &= \mathsf{\dfrac{1}{36}}\\ &= \textsf{0,2777...}\\ &\approx \textsf{2,8 %}\end{align}\)</p>
 						<p><strong>Vastaus:</strong> Kaksi kuutosta saadaan 2,8 prosentin todennäköisyydellä.</p>
 					</div>
 					<br>
@@ -808,7 +817,7 @@
 				<div>
 					<p>Ruletissa pelaaja pyrkii veikkaamaan lukua, johon rulettipyörässä oleva pallo pysähtyy. Pelaajalla on valittavanaan myös monenlaisia lukujen yhdistelmiä sekä punainen ja musta väri, joihin luvut on jaettu.</p>
 					<div class="flex">
-						<div><iframe style="width: 212px; height: 450px; border: 0px;" src="https://jannevenhoedu.github.io/ma9/j5/t/ma9j5_teoria_rulettipoyta.html"></iframe></div>
+						<div><iframe style="width: 230px; height: 450px; border: 0px;" src="https://jannevenhoedu.github.io/ma9/j5/t/ma9j5_teoria_rulettipoyta.html"></iframe></div>
 						<div><img style="width: 350px; height: auto;" src="https://jannevenhoedu.github.io/ma9/j5/t/ma9j5_teoria_rulettipyora_varit.png"></div>
 					</div>
 					<p>Panos (pelimerkki tms.) asetetaan pelipöydälle haluttuun ruutuun tai ruutujen reunoille, ja voiton osuessa kohdalle panos saadaan takaisin seuraavan taulukon mukaisesti.</p>
@@ -883,7 +892,6 @@
 							<p>c) 4, 5, 7 tai 8?</p>
 							<p class="indent">\(\mathsf{P(\text{4,5,7 tai 8}) = \dfrac{4}{37} = \text{0,108...} \approx 11\:\%}\)</p>
 						</div>
-						<p><strong>Ratkaisut:</strong></p>
 					</div>
 					<br>
 					<div class="example">
@@ -896,44 +904,52 @@
 						<div class="indent">
 							<p>a) \(\mathsf{P(\text{pariton punainen}) = \dfrac{10}{37} = \text{0,270...} \approx 27\:\%}\)</p>
 							<p>b) Listataan kaikki mahdolliset tapahtumat, kertoimet, voitot / tappiot panoksen vähentämisen jälkeen (panos on nyt 2) sekä tapahtuman todennäköisyys.</p>
-							<table>
-								<tbody>
-									<tr>
-										<th>Tapahtuma</th>
-										<th>Kerroin</th>
-										<th>Voitto</th>
-										<th>Todennäköisyys</th>
-									</tr>
-									<tr>
-										<td>Punainen (ei pariton)<br>12, 14, 16, 18, 30, 32, 34, 36</td>
-										<td>2</td>
-										<td>0</td>
-										<td>\(\mathsf{\dfrac{8}{37} \approx 22\:\%}\)</td>
-									</tr>
-									<tr>
-										<td>Pariton (ei punainen)<br>11, 13, 15, 17, 29, 31, 33, 35</td>
-										<td>2</td>
-										<td>0</td>
-										<td>\(\mathsf{\dfrac{8}{37} \approx 22\:\%}\)</td>
-									</tr>
-									<tr>
-										<td>Pariton punainen<br>1, 3, 5, 7, 9, 19, 21, 23, 25, 27</td>
-										<td>4</td>
-										<td>2</td>
-										<td>\(\mathsf{\dfrac{10}{37} \approx 27\:\%}\)</td>
-									</tr>
-									<tr>
-										<td>Ei kumpikaan<br>0, 2, 4, 6, 8, 10, 20, 22, 24, 26, 28</td>
-										<td>0</td>
-										<td>-2</td>
-										<td>\(\mathsf{\dfrac{11}{37} \approx 30\:\%}\)</td>
-									</tr>
-								</tbody>
-							</table>
+						</div>
+						<table>
+							<tbody>
+								<tr>
+									<th>Tapahtuma</th>
+									<th>Kerroin</th>
+									<th>Voitto</th>
+									<th>Todennäköisyys</th>
+								</tr>
+								<tr>
+									<td>Punainen (ei pariton)<br>12, 14, 16, 18, 30, 32, 34, 36</td>
+									<td>2</td>
+									<td>0</td>
+									<td>\(\mathsf{\dfrac{8}{37} \approx 22\:\%}\)</td>
+								</tr>
+								<tr>
+									<td>Pariton (ei punainen)<br>11, 13, 15, 17, 29, 31, 33, 35</td>
+									<td>2</td>
+									<td>0</td>
+									<td>\(\mathsf{\dfrac{8}{37} \approx 22\:\%}\)</td>
+								</tr>
+								<tr>
+									<td>Pariton punainen<br>1, 3, 5, 7, 9, 19, 21, 23, 25, 27</td>
+									<td>4</td>
+									<td>2</td>
+									<td>\(\mathsf{\dfrac{10}{37} \approx 27\:\%}\)</td>
+								</tr>
+								<tr>
+									<td>Ei kumpikaan<br>0, 2, 4, 6, 8, 10, 20, 22, 24, 26, 28</td>
+									<td>0</td>
+									<td>-2</td>
+									<td>\(\mathsf{\dfrac{11}{37} \approx 30\:\%}\)</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="indent">
 							<p>Palautusprosentti:</p>
 							<div class="indent">
-								<p>\(\mathsf{0 \cdot \dfrac{8}{37} + 0 \cdot \dfrac{8}{37} + 2 \cdot \dfrac{10}{37} - 2 \cdot \dfrac{11}{37} = \dfrac{20}{37} - \dfrac{22}{37} = -\dfrac{2}{37}}\)</p>
-								<p>\(\mathsf{100\:\% - \dfrac{2}{37} = 100\:\% - \text{5,405...}\:\% = \text{94,59...}\:\% \approx \text{94,6}\:\%}\)</p>
+								<div class="wide">
+									<p>\(\mathsf{0 \cdot \dfrac{8}{37} + 0 \cdot \dfrac{8}{37} + 2 \cdot \dfrac{10}{37} - 2 \cdot \dfrac{11}{37} = \dfrac{20}{37} - \dfrac{22}{37} = -\dfrac{2}{37}}\)</p>
+									<p>\(\mathsf{100\:\% - \dfrac{2}{37} = 100\:\% - \text{5,405...}\:\% = \text{94,59...}\:\% \approx \text{94,6}\:\%}\)</p>
+								</div>
+								<div class="narrow">
+									<p>\(\begin{align}&\mathsf{0 \cdot \dfrac{8}{37} + 0 \cdot \dfrac{8}{37} + 2 \cdot \dfrac{10}{37} - 2 \cdot \dfrac{11}{37}}\\ &= \mathsf{\dfrac{20}{37} - \dfrac{22}{37}}\\ &= \mathsf{-\dfrac{2}{37}}\end{align}\)</p>
+									<p>\(\begin{align}&\mathsf{100\:\% - \dfrac{2}{37}}\\ &= \mathsf{100\:\% - \text{5,405...}\:\%}\\ &= \textsf{94,59... %}\\ &\approx \textsf{94,6 %}\end{align}\)</p>
+								</div>
 							</div>
 							<p><strong>Vastaus:</strong> Tiinan panostuksen palautusprosentti on 94,6 prosenttia.</p>
 						</div>
@@ -1008,11 +1024,13 @@
 						<p><strong>Esimerkki:</strong> Millä todennäköisyydellä</p>
 						<div class="indent">
 							<p>a) ensimmäisestä rullasta saadaan sitruuna</p>
-							<p class="indent">a) \(\mathsf{P(\text{1. sitruuna}) = \dfrac{3}{10} = \text{0,3} = 30\:\%}\)</p>
+							<p class="indent">\(\mathsf{P(\text{1. sitruuna}) = \dfrac{3}{10} = \text{0,3} = 30\:\%}\)</p>
 							<p>b) kahdesta ensimmäisestä rullasta saadaan appelsiinit</p>
-							<p class="indent">a) \(\mathsf{P(\text{1. ja 2. appelsiini}) = \dfrac{2}{10} \cdot \dfrac{2}{10} = \dfrac{4}{100} = \text{0,04} = 4\:\%}\)</p>
+							<p class="indent wide">\(\mathsf{P(\text{1. ja 2. appelsiini}) = \dfrac{2}{10} \cdot \dfrac{2}{10} = \dfrac{4}{100} = \text{0,04} = 4\:\%}\)</p>
+							<p class="indent narrow">\(\begin{align}&\mathsf{P(\text{1. ja 2. appelsiini})}\\ &= \mathsf{\dfrac{2}{10} \cdot \dfrac{2}{10}}\\ &= \mathsf{\dfrac{4}{100}}\\ &= \textsf{0,04}\\ &= \textsf{4 %}\end{align}\)</p>
 							<p>c) saadaan kuvioyhdistelmä 🍒🍒🍊?</p>
-							<p class="indent">a) \(\mathsf{P(\text{2 kirsikkaa ja appelsiini}) = \dfrac{2}{10} \cdot \dfrac{5}{10} \cdot \dfrac{2}{10} = \dfrac{20}{1000} = \text{0,02} = \text{2}\:\%}\)</p>
+							<p class="indent wide">\(\mathsf{P(\text{2 kirsikkaa ja appelsiini}) = \dfrac{2}{10} \cdot \dfrac{5}{10} \cdot \dfrac{2}{10} = \dfrac{20}{1000} = \text{0,02} = \text{2}\:\%}\)</p>
+							<p class="indent narrow">\(\begin{align}&\mathsf{P(\text{2 kirsikkaa ja appelsiini})}\\ &= \mathsf{\dfrac{2}{10} \cdot \dfrac{5}{10} \cdot \dfrac{2}{10}}\\ &= \mathsf{\dfrac{20}{1000}}\\ &= \textsf{0,02}\\ &= \textsf{2 %}\end{align}\)</p>
 						</div>
 					</div>
 				</div>

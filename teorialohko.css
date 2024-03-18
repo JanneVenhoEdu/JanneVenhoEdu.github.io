@@ -155,6 +155,9 @@ th, td {
 .wide {
 	display: none;
 }
+span.narrow {
+	display: inline;
+}
 .compact {
 	display: block;
 }
