@@ -43,10 +43,10 @@ $(document).ready(function() {
 			kolikot.push(kolikko);
 			var selector = "#kolikko" + String(i + 1);
 			if (kolikko == 0) {
-				$(selector).attr("src", "https://jannevenhoedu.github.io/ma9/j5/p/03-kolikonheitto/kruuna.png");
+				$(selector).attr("src", "kruuna.png");
 				kruunat++;
 			} else {
-				$(selector).attr("src", "https://jannevenhoedu.github.io/ma9/j5/p/03-kolikonheitto/klaava.png");
+				$(selector).attr("src", "klaava.png");
 			}
 
 		}
