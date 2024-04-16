@@ -175,3 +175,11 @@ span.narrow {
 .summary > h4:first-child {
 	margin-top: 0px;
 }
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	padding-bottom: 10px;
+}
