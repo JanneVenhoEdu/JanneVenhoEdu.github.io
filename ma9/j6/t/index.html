@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="fi">
+	<head>
+		<title>Teoria - Tilastomatematiikka</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+		<script src="../../../teoria.js"></script>
+		<link rel="stylesheet" media="screen and (max-width: 350px)" href="../../../teorialohko.css">
+		<link rel="stylesheet" media="screen and (min-width: 350px)" href="../../../teoriakirja.css">
+		<style>
+			.originalTable button{
+				padding: 5px;
+				margin-left: 5px;
+				margin-bottom: 10px;
+				background-color: #00990032;
+				border: none;
+			}
+			div.originalTable {
+				padding: 10px 10px 5px 10px;
+			}
+			.originalTable td, .originalTable th {
+				border: 1px solid black;
+			}
+			.originalTable table {
+				display: none;
+				border-collapse: collapse;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="nav">
+			<div id="button">
+				<div id="bar1"></div>
+				<div id="bar2"></div>
+				<div id="bar3"></div>
+			</div>
+			<div id="links"></div>
+			<div id="caption"></div>
+			<a id="course" href="https://jannevenhoedu.github.io/ma9/j7/t" target="_blank"></a>
+		</div>
+		<div id="main">
+			<h1>MA9 Jakso 6: Tilasto&shy;matematiikka</h1>
+			<h2>1. Tilastotiede yleisesti</h2>
+			<div>
+				<p>Tilastotiede voidaan jakaa kahteen osaan: kuvailevaan ja päättelevään tilastotieteeseen. <strong>Kuvailevaa tilastotiedettä</strong> käytetään usein tutkimuksen alussa, kun halutaan saada yhteenveto ja yleiskatsaus mitatusta tiedosta eli aineistosta. Kuvailevan tilastotieteen työkaluja ovat erilaiset taulukot, kuvaajat ja diagrammit sekä erilaiset aineistosta laskettavat tunnusluvut. <strong>Päättelevää tilastotiedettä</strong> käytetään, jos halutaan aineiston vastaavan johonkin ennalta määrättyyn tutkimuskysymykseen tai tekemään aineistosta muita johtopäätöksiä. Päättelevään tilastotieteeseen kuuluu myös olennaisena osana luotettavuuden arviointi, jotta johtopäätökset voitaisiin todeta merkittäviksi, eikä vain tilastopoikkeamiksi. Tämän jakson osalta pysytellään pääosin kuvailevan tilastotieteen parissa.</p>
+				<h3>Käsitteitä</h3>
+				<div>
+					<dl class="indent">
+						<dt>Tilastoyksikkö, Havainto</dt>
+							<dd>Tilastointia ja mittaamista koskeva perusyksikkö, joka tuottaa tietoa, esimerkiksi oppilas.</dd>
+						<dt>Otos</dt>
+							<dd>Tutkimukseen osallistuvien tilastoyksiköiden joukko, esimerkiksi kaikki koulun oppilaat. Otoksen kokoa merkitään usein muuttujalla \(\mathsf{n}\).</dd>
+						<dt>Populaatio</dt>
+							<dd>Kaikkien tilastoyksiköiden joukko, esimerkiksi kaikki oppilaat.</dd>
+						<dt>Muuttuja</dt>
+							<dd>Tieto, jota tilastoyksiköstä kerätään, esimerkiksi syntymävuosi, luokka tai koearvosana</dd>
+						<dt>Havaintoaineisto</dt>
+							<dd>Kaikki tieto mitä muuttujiin on tilastoyksiköistä kerätty. Katso alla oleva esimerkki.</dd>
+						<dt>Havaintoarvo</dt>
+							<dd>Tietyn muuttujan arvot kaikista otoksen tilastoyksiköistä, esimerkiksi koulun oppilaiden syntymävuodet.</dd>
+					</dl>
+				</div>
+				<h3>Mitta-asteikko</h3>
+				<div>
+					<p>Muuttujia käsiteltäessä on huomioitava millaisella mitta-asteikolla muuttujia on mitattu, ja miten niitä kuvataan. Mitta-asteikkoja on yleisesti neljä erilaista.</p>
+					<dl class="indent">
+						<dt>Luokitteluasteikko</dt>
+							<dd>Luokitteluasteikolla mitattavan muuttujan havaintoarvoja ei voida järjestää suuruus- tai paremmuusjärjestykseen. Tällaisia muuttujia voivat olla esimerkiksi sukupuoli, silmien väri, asuinpaikka tai suosikkielokuva.</dd>
+						<dt>Järjestysasteikko</dt>
+							<dd>Järjestysasteikolla kuvataan havaintoarvojen välistä yksinkertaista järjestystä, mutta arvojen väliltä ei voida mitata etäisyyttä tai suhdetta. Tällaisia muuttujia ovat esimerkiksi armeijan arvojärjestys, koulutustausta tai erilaiset mielipiteisiin pohjautuvat välit, kuten "Täysin eri mieltä" ... "Täysin samaa mieltä".</dd>
+						<dt>Välimatka-asteikko</dt>
+							<dd>Välimatka-asteikolla mittavan muuttujan havaintoarvojen välillä on järjestyksen lisäksi mitattava etäisyys (erotus). Välimatka-asteikon arvoilla ei välttämättä ole yksikäsitteistä nollapistettä, joten sitä käytetään esimerkiksi lämpötilan ja ajan mittaamiseen.</dd>
+						<dt>Suhdeasteikko</dt>
+							<dd>Suhdeasteikko on tarkennus välimatka-asteikosta. Suhdeasteikon havaintoarvoilla on absoluuttinen nollapiste, eli voidaan määrittää mitattavan ominaisuuden loppuminen. Esimerkkejä suhdeasteikosta ovat pituus, paino ja erilaiset lukumäärät.</dd>
+					</dl>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Taulukossa on esitetty kuvitteellisten oppilaiden tietoja. Mitä mitta-asteikkoa taulukon muuttujissa on käytetty?</p>
+						<table>
+							<thead>
+								<tr>
+									<td class="wide" style="border: 0px;"> </td>
+									<td style="border: 0px; text-align: center;" colspan="4">MUUTTUJAT</td>
+								</tr>
+								<tr>
+									<th class="wide" style="border: 0px;"> </th>
+									<th>Oppilas&shy;numero</th>
+									<th>Luokka-aste</th>
+									<th>Koe&shy;pisteet</th>
+									<th>Koe&shy;arvo&shy;sana</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="wide" style="border: 0px;">
+									<td>25881</td>
+									<td>8</td>
+									<td>25</td>
+									<td>9-</td>
+								</tr>
+								<tr>
+									<td class="wide" style="border: 0px;">
+									<td>26753</td>
+									<td>8</td>
+									<td>13</td>
+									<td>6</td>
+								</tr>
+								<tr>
+									<td class="wide" style="border: 0px;">
+									<td>30478</td>
+									<td>9</td>
+									<td>26</td>
+									<td>9</td>
+								</tr>
+								<tr>
+									<td class="wide" style="border: 0px;">
+									<td>42567</td>
+									<td>9</td>
+									<td>29</td>
+									<td>10-</td>
+								</tr>
+								<tr>
+									<td class="wide" style="border: 0px;">
+									<td>43344</td>
+									<td>9</td>
+									<td>21</td>
+									<td>8-</td>
+								</tr>
+								<tr>
+									<td class="wide" style="border: 0px;">
+									<td>48509</td>
+									<td>9</td>
+									<td>23</td>
+									<td>8+</td>
+								</tr>
+								<tr>
+									<td class="wide" style="border: 0px;">
+									<td>49283</td>
+									<td>8</td>
+									<td>24</td>
+									<td>8½</td>
+								</tr>
+								<tr>
+									<td class="wide" style="border: 0px;">
+									<td>50900</td>
+									<td>9</td>
+									<td>18</td>
+									<td>7+</td>
+								</tr>
+								<tr>
+									<td class="wide" style="border: 0px;">
+									<td>64683</td>
+									<td>9</td>
+									<td>25</td>
+									<td>9-</td>
+								</tr>
+								<tr>
+									<td class="wide" style="border: 0px;">
+									<td>85793</td>
+									<td>9</td>
+									<td>20</td>
+									<td>7½</td>
+								</tr>
+								<tr>
+									<td class="wide" style="border: 0px;"><strong>Mitta-asteikko:</strong></td>
+									<td>Luokittelu&shy;asteikko</td>
+									<td>Järjestys&shy;asteikko</td>
+									<td>Suhde&shy;asteikko</td>
+									<td>Välimatka-asteikko</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>Jokainen rivi kuvaa siis yhtä tilastoyksikköä eli oppilasta. Jokainen sarake kuvaa yhden muuttujan havaintoarvoja. Aineiston otos n = 10 oppilasta.</p>
+					</div>
+				</div>
+			</div>
+			<h2>2. Frekvenssi</h2>
+			<div>
+				<p>Mitta-asteikon valinnan jälkeen aineiston kuvaaminen voidaan aloittaa laskemalla muuttujien eri havaintoarvojen esiintymisten lukumärää. Tätä kutsutaan <strong>frekvenssiksi</strong> (\(f\)), josta voidaan käyttää myös nimitystä esiintymistiheys tai -taajuus. Frekvenssi voidaan esittää joko suoraan lukumääränä tai suhteellisena prosenttiosuutena koko aineistosta, jolloin puhutaan <strong>suhteellisesta frekvenssistä</strong> (\(f\%\)).</p>
+				<p>Suhteellinen frekvenssi \(f\%\) lasketaan jakamalla frekvenssi (\(f\)) otoskoolla (\(\mathsf{n}\)).</p>
+				<p class="indent">\(f\% = \dfrac{f}{\mathsf{n}}\)</p>
+				<div id="copyable" class="originalTable">
+					<button>Alkuperäinen taulukko</button>
+					<table>
+						<thead>
+							<tr>
+								<th>Oppilas&shy;numero</th>
+								<th>Luokka-aste</th>
+								<th>Koe&shy;pisteet</th>
+								<th>Koe&shy;arvo&shy;sana</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>25881</td>
+								<td>8</td>
+								<td>25</td>
+								<td>9-</td>
+							</tr>
+							<tr>
+								<td>26753</td>
+								<td>8</td>
+								<td>13</td>
+								<td>6</td>
+							</tr>
+							<tr>
+								<td>30478</td>
+								<td>9</td>
+								<td>26</td>
+								<td>9</td>
+							</tr>
+							<tr>
+								<td>42567</td>
+								<td>9</td>
+								<td>29</td>
+								<td>10-</td>
+							</tr>
+							<tr>
+								<td>43344</td>
+								<td>9</td>
+								<td>21</td>
+								<td>8-</td>
+							</tr>
+							<tr>
+								<td>48509</td>
+								<td>9</td>
+								<td>23</td>
+								<td>8+</td>
+							</tr>
+							<tr>
+								<td>49283</td>
+								<td>8</td>
+								<td>24</td>
+								<td>8½</td>
+							</tr>
+							<tr>
+								<td>50900</td>
+								<td>9</td>
+								<td>18</td>
+								<td>7+</td>
+							</tr>
+							<tr>
+								<td>64683</td>
+								<td>9</td>
+								<td>25</td>
+								<td>9-</td>
+							</tr>
+							<tr>
+								<td>85793</td>
+								<td>9</td>
+								<td>20</td>
+								<td>7½</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="example">
+					<p><strong>Esimerkki:</strong> Esimerkkiaineiston (n = 10) luokka-asteen jakautuminen.</p>
+					<table style="text-align: center;">
+						<thead>
+							<tr>
+								<th>Luokka-aste</th>
+								<th>\(f\)</th>
+								<th>\(f\%\)</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>8</td>
+								<td>3</td>
+								<td>\(\mathsf{\dfrac{3}{10} = 0{,}3 = 30 \%}\)</td>
+							</tr>
+							<tr>
+								<td>9</td>
+								<td>7</td>
+								<td>\(\mathsf{\dfrac{7}{10} = 0{,}7 = 70 \%}\)</td>
+							</tr>
+						</tbody>
+					</table>
+				</div><br>
+				<div class="example">
+					<p><strong>Esimerkki:</strong> Varusmiesten kengänkokoja tutkittaessa saatiin taulukon mukaiset frekvenssit. Laske kokojen suhteelliset frekvenssit.</p>
+					<p class="indent">Otoskoko: \(\mathsf{n = 23+97+145+258+312+401+354+240+88 = 1918}\)</p>
+					<table>
+						<tr>
+							<th>Koko</th>
+							<th>\(f\)</th>
+							<th>\(f\%\)</th>
+						</tr>
+						<tr>
+							<td>39</td>
+							<td>23</td>
+							<td>\(\mathsf{\dfrac{23}{1918} = 0{,}0119... \approx 1{,}2 \%}\)</td>
+						</tr>
+						<tr>
+							<td>40</td>
+							<td>97</td>
+							<td>\(\mathsf{\dfrac{97}{1918} = 0{,}0505... \approx 5{,}1 \%}\)</td>
+						</tr>
+						<tr>
+							<td>41</td>
+							<td>145</td>
+							<td>\(\mathsf{\dfrac{145}{1918} = 0{,}0755... \approx 7{,}6 \%}\)</td>
+						</tr>
+						<tr>
+							<td>42</td>
+							<td>258</td>
+							<td>\(\mathsf{\dfrac{258}{1918} = 0{,}1345... \approx 13{,}5 \%}\)</td>
+						</tr>
+						<tr>
+							<td>43</td>
+							<td>312</td>
+							<td>\(\mathsf{\dfrac{312}{1918} = 0{,}1626... \approx 16{,}3 \%}\)</td>
+						</tr>
+						<tr>
+							<td>44</td>
+							<td>401</td>
+							<td>\(\mathsf{\dfrac{401}{1918} = 0{,}2090... \approx 20{,}1 \%}\)</td>
+						</tr>
+						<tr>
+							<td>45</td>
+							<td>354</td>
+							<td>\(\mathsf{\dfrac{354}{1918} = 0{,}1845... \approx 18{,}5 \%}\)</td>
+						</tr>
+						<tr>
+							<td>46</td>
+							<td>240</td>
+							<td>\(\mathsf{\dfrac{240}{1918} = 0{,}1251... \approx 12{,}5 \%}\)</td>
+						</tr>
+						<tr>
+							<td>47</td>
+							<td>88</td>
+							<td>\(\mathsf{\dfrac{88}{1918} = 0{,}0458... \approx 4{,}6 \%}\)</td>
+						</tr>
+					</table>
+				</div>
+				<p>Jos muuttujan arvojen vaihteluväli on suuri verrattuna tilastoalkioiden lukumäärään, ei jokaiselle havaintoarvolle laskettu frekvenssi kuvaa aineistoa mielekkäästi. Tällöin aineistoa tiivistetään luokittelemalla eli ryhmittelemällä sitä sopivan kokoisiin luokkiin.</p>
+				<div class="originalTable"></div>
+				<div class="example">
+					<p><strong>Esimerkki:</strong> Esimerkkiaineiston koepisteiden luokat ja niiden jakautuminen.</p>
+					<table style="text-align: center;">
+						<thead>
+						<tr>
+							<th>Koepisteet</th>
+							<th>\(f\)</th>
+							<th>\(f\%\)</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>11-15</td>
+							<td>1</td>
+							<td>\(\mathsf{\dfrac{1}{10} = 0{,}1 = 10 \%}\)</td>
+						</tr>
+						<tr>
+							<td>16-20</td>
+							<td>2</td>
+							<td>\(\mathsf{\dfrac{2}{10} = 0{,}2 = 20 \%}\)</td>
+						</tr>
+						<tr>
+							<td>21-25</td>
+							<td>5</td>
+							<td>\(\mathsf{\dfrac{5}{10} = 0{,}5 = 50 \%}\)</td>
+						</tr>
+						<tr>
+							<td>26-30</td>
+							<td>2</td>
+							<td>\(\mathsf{\dfrac{2}{10} = 0{,}2 = 20 \%}\)</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<h2>3. Kuvaajat</h2>
+			<div>
+				<p>Tiedon kuvaamisen tärkeimpiä työkaluja ovat erilaiset kuvaajat eli diagrammit. Diagrammien avulla saadaan kattava yleiskuva joko koko aineistosta tai tietyistä muuttujista sekä niiden välisistä suhteista. Erilaisia diagrammeja on paljon, mutta tässä teoriassa keskitytään muutamaan yleisimpään: pylväsdiagrammiin, ympyrädiagrammiin sekä viivadiagrammiin.</p>
+				<h3>Pylväsdiagrammi</h3>
+				<div>
+					<p>Frekvenssitaulukon muodostamisen jälkeen havaintoarvojen lukumäärät voidaan kuvata pylväsdiagrammin avulla, jolloin lukumäärien väliset suhteet saadaan helposti visualisoitua. Pylväskuvaajalla voidaan helposti havainnollistaa lukumääriä tai niiden kehitystä ajan suhteen.</p>
+					<div class="originalTable"></div>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Piirrä pylväsdiagrammi koepisteiden frekvenssitaulukon avulla.</p>
+						<table style="text-align: center;">
+							<thead>
+								<tr>
+									<th>Koepisteet</th>
+									<th>\(f\)</th>
+									<th>\(f\%\)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>11-15</td>
+									<td>1</td>
+									<td>10 %</td>
+								</tr>
+								<tr>
+									<td>16-20</td>
+									<td>2</td>
+									<td>20 %</td>
+								</tr>
+								<tr>
+									<td>21-25</td>
+									<td>5</td>
+									<td>50 %</td>
+								</tr>
+								<tr>
+									<td>26-30</td>
+									<td>2</td>
+									<td>20 %</td>
+								</tr>
+							</tbody>
+						</table>
+						<p><strong>Ratkaisu:</strong></p>
+						<img style="width: 400px;" src="https://jannevenhoedu.github.io/ma9/j6/t/ma9j6_teoria_pylvasdiagrammi_koepisteet.png">
+					</div>
+					<p>Pylväät voivat olla myös vaakasuunnassa tai niitä voidaan koristella kuvattavan aiheen mukaisesti.</p>
+				</div>
+				<h3>Ympyrädiagrammi</h3>
+				<div>
+					<p>Ympyrädiagrammi on pylväsdiagrammille vaihtoehtoinen esitysmuoto, kun halutaan esittää jonkin kokonaisuuden osia suhteellisena osuutena ja verrata niitä karkeasti toisiinsa.</p>
+					<div class="originalTable"></div>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Piirrä ympyrädiagrammi luokka-asteen suhteellisten frekvenssien avulla.</p>
+						<table style="text-align: center;">
+							<thead>
+								<tr>
+									<th>Luokka-aste</th>
+									<th>\(f\)</th>
+									<th>\(f\%\)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>8</td>
+									<td>3</td>
+									<td>30 %</td>
+								</tr>
+								<tr>
+									<td>9</td>
+									<td>7</td>
+									<td>70 %</td>
+								</tr>
+							</tbody>
+						</table>
+						<p><strong>Ratkaisu:</strong></p>
+						<img style="width: 335px;" src="https://jannevenhoedu.github.io/ma9/j6/t/ma9j6_teoria_pylvasdiagrammi_luokka_asteet.png">
+					</div>
+				</div>
+				<h3>Viivadiagrammi</h3>
+				<div>
+					<p>Viivadiagrammin avulla voidaan kuvata muuttujan arvon kehittymistä esimerkiksi ajan suhteen.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Piirrä viivadiagrammi kuntoilijan hiihto- ja juoksukilometrien kehityksestä vuositasolla.</p>
+						<table style="text-align: center;">
+							<thead>
+								<tr>
+									<th>Vuosi</th>
+									<th>Hiihto (km)</th>
+									<th>Juoksu (km)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>2011</td>
+									<td>0</td>
+									<td>265</td>
+								</tr>
+								<tr>
+									<td>2012</td>
+									<td>0</td>
+									<td>240</td>
+								</tr>
+								<tr>
+									<td>2013</td>
+									<td>210</td>
+									<td>422</td>
+								</tr>
+								<tr>
+									<td>2014</td>
+									<td>413</td>
+									<td>126</td>
+								</tr>
+								<tr>
+									<td>2015</td>
+									<td>830</td>
+									<td>433</td>
+								</tr>
+								<tr>
+									<td>2016</td>
+									<td>1040</td>
+									<td>389</td>
+								</tr>
+								<tr>
+									<td>2017</td>
+									<td>601</td>
+									<td>203</td>
+								</tr>
+								<tr>
+									<td>2018</td>
+									<td>847</td>
+									<td>337</td>
+								</tr>
+								<tr>
+									<td>2019</td>
+									<td>585</td>
+									<td>326</td>
+								</tr>
+								<tr>
+									<td>2020</td>
+									<td>458</td>
+									<td>781</td>
+								</tr>
+								<tr>
+									<td>2021</td>
+									<td>1248</td>
+									<td>522</td>
+								</tr>
+								<tr>
+									<td>2022</td>
+									<td>1060</td>
+									<td>797</td>
+								</tr>
+							</tbody>
+						</table>
+						<p><strong>Ratkaisu:</strong></p>
+						<a class="narrow" href="https://jannevenhoedu.github.io/ma9/j6/t/ma9j6_teoria_viivadiagrammi_juoksu_hiihto.png" target="_blank"><img style="width: 760px;" src="https://jannevenhoedu.github.io/ma9/j6/t/ma9j6_teoria_viivadiagrammi_juoksu_hiihto.png"></a>
+					</div>
+				</div>
+			</div>
+			<h2>4. Keskiluvut</h2>
+			<div>
+				<h3>Keskiarvo</h3>
+				<div>
+					<p>Jos muuttujaa on mitattu vähintään välimatka-asteikolla, sille voidaan määrittää keskiarvo. Keskiarvosta puhuttaessa tarkoitetaan yleensä aritmeettista keskiarvoa, joka saadaan kun havaintoarvojen summa jaetaan niiden lukumäärällä.</p>
+					<div class="originalTable"></div>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Laske esimerkkiaineiston muuttujien keskiarvot</p>
+						<div class="indent">
+							<p>a) koepisteiden keskiarvo</p>
+							<p class="indent narrow">\(\begin{align}&\mathsf{\small\dfrac{25+13+26+29+21+23+24+18+25+20}{10}}\\ &= \mathsf{\dfrac{224}{10} = \text{22,4}}\end{align}\)</p>
+							<p class="indent wide">\(\mathsf{\small\dfrac{25+13+26+29+21+23+24+18+25+20}{10} = \dfrac{224}{10} = \text{22,4}}\)</p>
+							<p><strong>Vastaus:</strong> Koepisteiden keskiarvo on 22,4 pistettä.</p>
+							<p>b) koearvosanojen keskiarvo.</p>
+							<p class="narrow indent">\(\begin{align}&\mathsf{\scriptsize\dfrac{\text{8,75 + 6 + 9 + 9,75 + 7,75 + 8,25 + 8,5 + 7,25 + 8,75 + 7,5}}{10}}\\ &= \mathsf{\dfrac{\text{81,5}}{10} = \text{8,15}}\end{align}\)</p>
+							<p class="wide indent">\(\mathsf{\dfrac{\text{8,75 + 6 + 9 + 9,75 + 7,75 + 8,25 + 8,5 + 7,25 + 8,75 + 7,5}}{10} = \dfrac{\text{81,5}}{10} = \text{8,15}}\)</p>
+							<p><strong>Vastaus:</strong> Koearvosanojen keskiarvo on 8,15, joka vastaa likimain koearvosanaa 8+.</p>
+						</div>
+					</div>
+				</div>
+				<h3>Mediaani</h3>
+				<div>
+					<p>Jos muuttujaa on mitattu vähintään järjestysasteikolla, sille voidaan määrittää mediaani. Mediaani saadaan järjestämällä muuttujan havaintoarvot kasvavaan järjestykseen ja valitsemalla aineistosta keskimmäinen havaintoarvo. Jos otos on parillinen, ilmoitetaan joko kahden keskimmäisimmän keskiarvo tai tarvittaessa molemmat arvot. Mediaania käytetään keskiarvon rinnalla, jos aineisto on jotenkin vinoutunutta ja keskiarvo antaa vääristyneen kuvan koko otoksesta. Mediaani on usein myös paras vaihtoehto järjestysasteikolla mitatun muuttujan keskiluvuksi.</p>
+					<div class="originalTable"></div>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Määritä esimerkkiaineiston muuttujien mediaanit.</p>
+						<div class="indent">
+							<p>a) koepisteet</p>
+							<p class="indent">13, 18, 20, 21, <strong>23</strong>, <strong>24</strong>, 25, 25, 26, 29</p>
+							<p><strong>Vastaus:</strong> Koepisteiden mediaani on 23,5 pistettä.</p>
+							<p>b) koearvosanat</p>
+							<p class="indent">6, 7+, 7½, 8-, <strong>8+</strong>, <strong>8½</strong>, 9-, 9-, 9, 10-</p>
+							<p><strong>Vastaus:</strong> Koearvosanojen mediaani on arvosanat 8+ ja 8½.</p>
+							<p>c) luokka-aste</p>
+							<p class="indent">8, 8, 8, 9, <strong>9</strong>, <strong>9</strong>, 9, 9, 9, 9</p>
+							<p><strong>Vastaus:</strong> Luokka-asteen mediaani on 9.</p>
+						</div>
+					</div>
+				</div>
+				<h3>Moodi</h3>
+				<div>
+					<p>Jos muuttujaa on mitattu luokitteluasteikolla, sille ei voida määrittää keskiarvoa tai mediaania. Tällöin ainoa vaihtoehto on moodi eli tyyppiarvo, joka tarkoittaa useimmin toistuvaa arvoa. Yksilöllisille tunnisteille (oppilaskoodit, nimet yms.) moodin määrittäminen on kyseenalaista, mutta muutoin luokitteluasteikolla mitatun muuttujan arvoista voidaan saada jo jonkinlainen käsitys.</p>
+					<div class="originalTable"></div>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Määritä esimerkkiaineiston muuttujien moodit.</p>
+						<div class="editor">
+							<p>a) koepisteet</p>
+							<p class="indent">13, 18, 20, 21, 23, 24, <strong>25</strong>, <strong>25</strong>, 26, 29</p>
+							<p><strong>Vastaus:</strong> Koepisteiden moodi on 25 pistettä.</p>
+							<p>b) luokka-aste</p>
+							<p class="indent">8, 8, 8, <strong>9</strong>, <strong>9</strong>, <strong>9</strong>, <strong>9</strong>, <strong>9</strong>, <strong>9</strong>, <strong>9</strong></p>
+							<p><strong>Vastaus:</strong> Luokka-asteen moodi on 9.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			downloadGG();
+			$(document).ready(function() {
+				var tableCopy = $("#copyable").html();
+				$(".originalTable").html(tableCopy);
+				$(".originalTable button").click(function() {
+					$(this).next().slideToggle();
+				});
+				$("img").click(function() {
+				
+				});
+			});
+		</script>
+	</body>
+</html>
