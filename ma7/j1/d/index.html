@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="fi">
+	<head>
+		<title>Malliratkaisut: MA7J1</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+		<script src="../../../teoria.js"></script>
+		<link rel="stylesheet" media="screen and (max-width: 350px)" href="../../../teorialohko.css">
+		<link rel="stylesheet" media="screen and (min-width: 350px)" href="../../../teoriakirja.css">
+	</head>
+	<body>
+		<div id="nav">
+			<div id="button">
+				<div id="bar1"></div>
+				<div id="bar2"></div>
+				<div id="bar3"></div>
+			</div>
+			<div id="links"></div>
+			<div id="caption"></div>
+			<a id="course" href="https://jannevenhoedu.github.io/ma7/j1/d" target="_blank"></a>
+		</div>
+		<div id="main">
+			<h1>MA7 Jakso 1: Malliratkaisut</h1>
+			<h2>1. Lukujärjestelmä</h2>
+			<div>
+				<h3>Tehtävä 1.1: Johdatus kymmenjärjestelmään</h3>
+				<div>
+					<h4>Kysymys 1 (Vedä kohde kuvan päälle)</h4>
+					<img src="ma7j1_malli_suuruusluokka.png">
+					<h4>Kysymys 2 (Aukkotehtävä, NM)</h4>
+					<div class="indent">
+						<p>a) 547</p>
+						<p>b) 1 205</p>
+						<p>c) 200 090</p>
+						<p>d) 1 053 007</p>
+					</div>
+					<h4>Kysymys 3 (Aukkotehtävä, SA)</h4>
+					<div class="indent">
+						<p>neljäkymmentäkolmetuhattaviisikymmentäviisi</p>
+						<p>neljäkymmentäkolmetuhatta viisikymmentäviisi</p>
+					</div>
+				</div>
+				<h3>Tehtävä 1.4: Suuruusluokan arviointi</h3>
+				<div>
+					<h4>Kysymys 1 (Aukkotehtävä, MCS)</h4>
+					<div class="indent">
+						<p>a) yksittäisille</p>
+						<p>b) tuhansia</p>
+						<p>c) kymmeniä</p>
+						<p>d) kymmeniä</p>
+						<p>e) satoja</p>
+						<p>f) kymmeniä</p>
+					</div>
+					<h4>Kysymys 2 (Vedä sanat tekstiin)</h4>
+					<div class="indent">
+						<p>a) 3 050 kg</p>
+						<p>b) 3 500 g</p>
+						<p>c) 55 000 kg</p>
+						<p>d) 425 kg</p>
+						<p>e) 1500 kg</p>
+						<p>f) 180 g</p>
+					</div>
+				</div>
+				<h3>Tehtävä 1.5: Luvun kirjoittaminen</h3>
+				<div>
+					<h4>Kysymys 1 (Aukkotehtävä, NM)</h4>
+					<div class="indent">
+						<p>a) 408</p>
+						<p>b) 5 240</p>
+						<p>c) 70 012</p>
+						<p>d) 302 695</p>
+					</div>
+					<h4>Kysymys 2 (Aukkotehtävä, NM)</h4>
+					<div class="indent">
+						<p>a) 5 015</p>
+						<p>b) 6 214</p>
+						<p>c) 32 517 000</p>
+						<p>d) 2 202 022</p>
+					</div>
+					<h4>Kysymys 3 (Aukkotehtävä, SA)</h4>
+					<div class="indent">
+						<p>a) neljäsataaneljäkymmentäviisi</p>
+						<p>b) kuusituhattakahdeksantoista <strong>TAI</strong> kuusituhatta kahdeksantoista</p>
+						<p>c) yhdeksänkymmentäyhdeksäntuhattaneljä <strong>TAI</strong> yhdeksänkymmentäyhdeksäntuhatta neljä</p>
+						<p>d) neljämiljoonaakaksisataaviisikymmentätuhatta <strong>TAI</strong> neljämiljoonaa kaksisataaviisikymmentätuhatta</p>
+					</div>
+				</div>
+				<h3>Tehtävä 1.6: Suuruusluokan arviointi</h3>
+				<div>
+					<h4>Kysymys 1 (Aukkotehtävä, MCS)</h4>
+					<div class="indent">
+						<p>a) yksittäisiä</p>
+						<p>b) kymmeniä tuhansia</p>
+						<p>c) satoja</p>
+						<p>d) satoja tuhansia</p>
+						<p>e) satoja</p>
+						<p>f) kymmeniä</p>
+					</div>
+					<h4>Kysymys 2 (Vedä sanat tekstiin)</h4>
+					<div class="indent">
+						<p>a) 8 848 m</p>
+						<p>b) 164 cm</p>
+						<p>c) 42 195 m</p>
+						<p>d) 11 km</p>
+						<p>e) 400 m</p>
+						<p>f) 161 km</p>
+					</div>
+				</div>
+			</div>
+			<h2>2. Lukusuora</h2>
+			<div>
+				<h3>Tehtävä 2.1: Johdatus lukusuoraan</h3>
+				<div>
+					<h4>Kysymys 1 (Vedä kohde kuvan päälle)</h4>
+					<img src="ma7j1_malli_lukusuora.png">
+				</div>
+				<h3>Tehtävä 2.5: Lukusuoran piirtäminen</h3>
+				<div>
+					<p>Piirrä lukusuora vihkoon, merkitse jako, ja lisää seuraavat luvut. Piirrä jokasielle kohdalle (a-c) oma lukusuora.</p>
+					<div class="indent">
+						<p>a) 5, 20, 35, 45 ja 50</p>
+						<p>b) 2, 6, 12, 18 ja 24</p>
+						<p>c) 90, 92, 95, 99 ja 102</p>
+					</div>
+					<p><img src="ma7j1_malli_lukusuoran_piirtoN.png"></p>
+				</div>
+			</div>
+			<h2>3. Peruslaskutoimitukset</h2>
+			<div>
+				<h3>Tehtävä 3.1: Johdatus peruslaskutoimituksiin</h3>
+				<div>
+					<h4>Kysymys 1 (Yhdistämistehtävä)</h4>
+					<div class="indent">
+						<p>Erotus</p>
+						<p>Osamäärä</p>
+						<p>Tulo</p>
+						<p>Summa</p>
+					</div>
+					<h4>Kysymys 2 (Aukkotehtävä, SA)</h4>
+					<div class="indent">
+						<p>a) 4+4+4 <strong>TAI</strong> 3+3+3+3</p>
+						<p>b) 5+5 <strong>TAI</strong> 2+2+2+2+2</p>
+						<p>c) 5*6 <strong>TAI</strong> 6*5</p>
+						<p>d) 3*7 <strong>TAI</strong> 7*3</p>
+						<p>e) 6*3 <strong>TAI</strong> 3*6</p>
+						<p>f) 7*5 <strong>TAI</strong> 5*7</p>
+						<p>g) 40/8</p>
+						<p>h) 63/9</p>
+					</div>
+				</div>
+				<h3>Tehtävä 3.6: Sanallisia tehtäviä</h3>
+				<div>
+					<p>a) Pekka ostaa kaupasta pussillisen leipää (3 €/pussi), litran maitoa (1 €/litra) sekä juuston (5 €/kpl). Kuinka paljon ostokset maksavat yhteensä?</p>
+					<div class="indent">
+						<p>\(\mathsf{3 \euro + 1 \euro + 5 \euro = 9 \euro}\)</p>
+						<p><strong>Vastaus: </strong>Ostokset maksavat yhteensä 9 euroa.</p>
+					</div>
+					<p>b) Pekka maksaa a-kohdan ostokset 20 euron setelillä. Kuinka paljon Pekka saa rahaa takaisin?</p>
+					<div class="indent">
+						<p>\(\mathsf{20 \euro - 9 \euro = 11 \euro}\)</p>
+						<p><strong>Vastaus: </strong>Rahaa saa takaisin 11 euroa.</p>
+					</div>
+					<p>c) Pauliina ostaa 6 jäätelöä (2 €/kpl). Kuinka paljon jäätelöt maksavat yhteensä?</p>
+					<div class="indent">
+						<p>\(\mathsf{6 \cdot 2 \euro = 12 \euro}\)</p>
+						<p><strong>Vastaus: </strong>Jäätelöt maksavat yhteensä 12 euroa.</p>
+					</div>
+					<p>d) Kisastudion ruokaostokset maksavat 56 euroa. Kustannukset jaetaan seitsemän kaverin kesken tasan. Kuinka paljon kukin maksaa?</p>
+					<div class="indent">
+						<p>\(\mathsf{56 \euro : 7 = 8 \euro}\)</p>
+						<p><strong>Vastaus: </strong>Kukin maksaa 8 euroa.</p>
+					</div>
+				</div>
+				<h3>Tehtävä 3.9: Merkitse ja laske</h3>
+				<div>
+					<p>Merkitse ja laske lukujen 15 ja 3</p>
+					<div class="indent">
+						<p>a) summa</p>
+						<p class="indent">\(\mathsf{15 + 3 = 18}\)</p>
+						<p>b) erotus</p>
+						<p class="indent">\(\mathsf{15 - 3 = 12}\)</p>
+						<p>c) tulo</p>
+						<p class="indent">\(\mathsf{15 \cdot 3 = 45}\)</p>
+						<p>d) osamäärä</p>
+						<p class="indent">\(\mathsf{15 : 3 = 5}\)</p>
+					</div>
+				</div>
+				<h3>Tehtävä 3.10: Laske osittain jakamalla</h3>
+				<div>
+					<p>Laske osittain jakamalla.</p>
+					<div class="indent">
+						<p>a) \(\mathsf{\dfrac{72}{3} = \dfrac{60}{3} + \dfrac{12}{3} = 20 + 4 = 24}\)</p>
+						<p>b) \(\mathsf{\dfrac{126}{3} = \dfrac{120}{3} + \dfrac{6}{3} = 40 + 2 = 42}\)</p>
+						<p>c) \(\mathsf{\dfrac{615}{5} = \dfrac{500}{5} + \dfrac{100}{5} + \dfrac{15}{5} = 100 + 20 + 3 = 123}\)</p>
+						<p>d) \(\mathsf{\dfrac{1519}{7} = \dfrac{1400}{7} + \dfrac{70}{7} + \dfrac{49}{7} = 200 + 10 + 7 = 217}\)</p>
+					</div>
+					<p>Jaon voi ensimmäisessä vaiheessa suorittaa monella eri tavalla.</p>
+				</div>
+				<h3>Tehtävä 3.12: Laske allekkain (summa ja erotus)</h3>
+				<div>
+					<p>Laske allekkain.</p>
+					<div class="indent">
+						<p>a) \(\mathsf{2003 + 198}\)</p>
+						<p>b) \(\mathsf{764 + 248}\)</p>
+						<p>c) \(\mathsf{854 - 472}\)</p>
+						<p>d) \(\mathsf{704 - 248}\)</p>
+					</div>
+					<img src="ma7j1_malli_allekkain.png"></img>
+				</div>
+				<h3>Tehtävä 3.13: Laske allekkain (tulo ja osamäärä)</h3>
+				<div>
+					<p>Laske allekkain.</p>
+					<div class="indent">
+						<p>a) \(\mathsf{37 \cdot 4}\)</p>
+						<p>b) \(\mathsf{629 \cdot 25}\)</p>
+						<p>c) \(\mathsf{965:5}\)</p>
+						<p>d) \(\mathsf{8406:9}\)</p>
+					</div>
+					<img src="ma7j1_malli_allekkain2.png"></img>
+				</div>
+			</div>
+			<h2>4. Laskujärjestys</h2>
+			<div>
+				<h3>Tehtävä 4.1: Johdatus laskujärjestykseen</h3>
+				<div>
+					<h4>Kysymys 1 (Ordering)</h4>
+					<ol>
+						<li>Sulkeet</li>
+						<li>Tulo ja osamäärä</li>
+						<li>Summa ja erotus</li>
+					</ol>
+					<h4>Kysymys 2 (Aukkotehtävät, MCV)</h4>
+					<div class="indent">
+						<p>a) oikein</p>
+						<p>b) väärin</p>
+						<p>c) oikein</p>
+						<p>d) oikein</p>
+						<p>e) väärin</p>
+					</div>
+				</div>
+				<h3>Tehtävä 4.4: Sanallisia tehtäviä</h3>
+				<div>
+					<p>a) Ulla ostaa rautakaupasta vasaran (30 €), kolme ruuvimeisseliä (8 €/kpl) sekä seitsemän rullaa teippiä (2 €/rulla). Kuinka paljon ostokset maksavat yhteensä?</p>
+					<div class="indent">
+						<p>\(\mathsf{30 \euro + 3 \cdot 8 \euro + 7 \cdot 2 \euro = 68 \euro}\)</p>
+						<p><strong>Vastaus: </strong>Ostokset maksavat yhteensä 68 euroa.</p>
+					</div>
+					<p>b) Tauno saa kokeista arvosanat 6, 10 ja 5. Mikä on kokeiden keskiarvo?</p>
+					<div class="indent">
+						<p>\(\mathsf{\dfrac{6 + 10 + 5}{3} = \dfrac{21}{3} = 7}\)</p>
+						<p><strong>Vastaus: </strong>Kokeiden keskiarvo on 7.</p>
+					</div>
+				</div>
+				<h3>Tehtävä 4.5: Päässälaskuja</h3>
+				<div>
+					<h4>Kysymys 1 (Aukkotehtävä, NM)</h4>
+					<div class="indent">
+						<p>a) 65</p>
+						<p>b) 14</p>
+						<p>c) 36</p>
+						<p>d) 155</p>
+					</div>
+				</div>
+				<h3>Tehtävä 4.6: Murtolausekkeita</h3>
+				<div>
+					<p>Laske.</p>
+					<div class="indent">
+						<p>a) \(\mathsf{\dfrac{8+16}{3} = \dfrac{24}{3} = 8}\)</p>
+						<p>b) \(\mathsf{\dfrac{8 \cdot 5}{13-9} = \dfrac{40}{4} = 10}\)</p>
+						<p>c) \(\mathsf{\dfrac{55}{5 + 2 \cdot 3} = \dfrac{55}{11} = 5}\)</p>
+						<p>d) \(\mathsf{\dfrac{9 \cdot (14-6)}{34 - 4 \cdot 8} = \dfrac{9 \cdot 8}{34-32} = \dfrac{72}{2} = 36}\)</p>
+					</div>
+				</div>
+				<h3>Tehtävä 4.7: Laske laskimella</h3>
+				<div>
+					<p>Laske laskimella.</p>
+					<div class="indent">
+						<p>a) \(\mathsf{17+25 \cdot 48 = 1217}\)</p>
+						<p>b) \(\mathsf{(17+25) \cdot 48 = 2016}\)</p>
+						<p>c) \(\mathsf{\dfrac{348 + 774}{6} = 187}\)</p>
+						<p>d) \(\mathsf{\dfrac{66{,}78}{2{,}1 \cdot 10{,}6} = 3}\)</p>
+						<p>e) \(\mathsf{\dfrac{345 + 987}{2{,}5 \cdot 3{,}6} = 148}\)</p>
+						<p>f) \(\mathsf{12 \cdot 24 - 11 \cdot 19 = 79}\)</p>
+					</div>
+				</div>
+			</div>
+			<h2>5. Suuruusvertailu</h2>
+			<div>
+				<h3>Tehtävä 5.1: Johdatus suuruusvertailumerkkeihin</h3>
+				<div>
+					<h4>Kysymys 1 (Vedä kohde kuvan päälle)</h4>
+					<img src="ma7j1_malli_vertailumerkit.png">
+					<h4>Kysymys 2 (Aukkotehtävä, MCV)</h4>
+					<div class="indent">
+						<p>a) tosi</p>
+						<p>b) epätosi</p>
+						<p>c) epätosi</p>
+						<p>d) tosi</p>
+						<p>e) tosi</p>
+					</div>
+				</div>
+				<h3>Tehtävä 5.2: Mikä luku sopii x:n paikalle?</h3>
+				<div>
+					<p>Luettele kaikki kokonaisluvut, jotka sopivat \(\mathsf{x}\):n paikalle.</p>
+					<div class="indent">
+						<p>a) \( \mathsf{4 &lt; x &lt; 7} \)</p>
+						<p class="indent">5, 6</p>
+						<p>b) \( \mathsf{5 \leq x \leq 8} \)</p>
+						<p class="indent">5, 6, 7, 8</p>
+						<p>c) \( \mathsf{2 &lt; x ≤ 4} \)</p>
+						<p class="indent">3, 4</p>
+						<p>d) \( \mathsf{0 \leq x &lt; 3} \)</p>
+						<p class="indent">0, 1, 2</p>
+					</div>
+				</div>
+				<h3>Tehtävä 5.3: Mikä luku sopii x:n paikalle? (Kokonaislukuväli)</h3>
+				<div>
+					<p>Luettele kaikki kokonaisluvut, jotka sopivat \(\mathsf{x}\):n paikalle.</p>
+					<div class="indent">
+						<p>a) \( \mathsf{5 &lt; x &lt; 7} \)</p>
+						<p class="indent">6</p>
+						<p>b) \( \mathsf{5 \leq x \leq 7} \)</p>
+						<p class="indent">5, 6, 7</p>
+						<p>c) \( \mathsf{-2 &lt; x &lt; 3} \)</p>
+						<p class="indent">-1, 0, 1, 2</p>
+						<p>d) \( \mathsf{-5 \leq x &lt; 0} \)</p>
+						<p class="indent">-5, -4, -3, -2, -1</p>
+						<p>e) \( \mathsf{-11 &lt; x \leq -6} \)</p>
+						<p class="indent">-10, -9, -8, -7, -6</p>
+						<p>f) \( \mathsf{-1 \leq x \leq 2} \)</p>
+						<p class="indent">-1, 0, 1, 2</p>
+					</div>
+				</div>
+				<h3>Tehtävä 5.4: Mikä luku sopii x:n paikalle? (Desimaalilukuväli)</h3>
+				<div>
+					<p>Luettele kaikki <strong>kaksidesimaaliset</strong> luvut, jotka sopivat \(\mathsf{x}\):n paikalle.</p>
+					<div class="indent">
+						<p>a) \( \textsf{3,48} &lt; \mathsf{x} &lt;  \textsf{3,52} \)</p>
+						<p class="indent">3,49; 3,50; 3,51</p>
+						<p>b) \( \textsf{0,17} \leq \mathsf{x} \leq \textsf{0,2} \)</p>
+						<p class="indent">0,17; 0,18; 0,19; 0,20</p>
+						<p>c) \( \textsf{6,489} &lt; \mathsf{x} &lt; \textsf{6,522} \)</p>
+						<p class="indent">6,49; 6,50; 6,51; 6,52</p>
+						<p>d) \( \textsf{11,87} \leq \mathsf{x} &lt; \textsf{11,9} \)</p>
+						<p class="indent">11,87; 11,88; 11,89</p>
+					</div>
+				</div>
+			</div>
+			<h2>6. Kokonaisluvut</h2>
+			<div>
+				<h3>Tehtävä 6.1: Johdatus kokonaislukuihin</h3>
+				<div>
+					<h4>Kysymys 1 (Raahaa merkki kuvan päälle)</h4>
+					<img src="ma7j1_malli_lukujen_luokittelu.png">
+					<h4>Kysymys 2 (Vedä kohde kuvan päälle)</h4>
+					<img src="ma7j1_malli_lukusuoraZ.png">
+				</div>
+				<h3>Tehtävä 6.3: Johdatus vastalukuun ja itseisarvoon</h3>
+				<div>
+					<h4>Kysymys 1 (Aukkotehtävä, MC+NM)</h4>
+					<div class="indent">
+						<p>vastalukua</p>
+						<p>itseisarvoa</p>
+						<p>Itseisarvo</p>
+						<p>Vastaluku</p>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<th>Luku</th>
+								<th>Vastaluku</th>
+								<th>Itseisarvo</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>\(\mathsf{4}\)</td>
+								<td>\(\mathsf{-4}\)</td>
+								<td>\(\mathsf{4}\)</td>
+							</tr>
+							<tr>
+								<td>\(\mathsf{-6}\)</td>
+								<td>\(\mathsf{6}\)</td>
+								<td>\(\mathsf{6}\)</td>
+							</tr>
+							<tr>
+								<td>\(\mathsf{+7}\)</td>
+								<td>\(\mathsf{-7}\)</td>
+								<td>\(\mathsf{7}\)</td>
+							</tr>
+							<tr>
+								<td>\(\mathsf{0}\)</td>
+								<td>\(\mathsf{0}\)</td>
+								<td>\(\mathsf{0}\)</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<h3>Tehtävä 6.7: Lukusuoran piirtäminen</h3>
+				<div>
+					<p>Piirrä lukusuora vihkoon, ja merkitse siihen jako sekä seuraavat luvut. Piirrä jokaiselle kohdalle (a-c) oma lukusuora.</p>
+					<div class="indent">
+						<p>a) -1, 2, 4, 7 ja 11</p>
+						<p>b) -6, -3, 2, 5 ja 8</p>
+						<p>c) -10, -4, 0, 6 ja 12</p>
+					</div>
+					<img src="ma7j1_malli_lukusuoran_piirtoZ.png">
+				</div>
+				<h3>Tehtävä 6.8: Merkitse ja sievennä</h3>
+				<div>
+					<p>Merkitse ja sievennä.</p>
+					<div class="indent">
+						<p>a) luvun \(\mathsf{-2}\) itseisarvo</p>
+						<p class="indent">\(\mathsf{|-2| = 2}\)</p>
+						<p>b) luvun \(\mathsf{8}\) itseisarvo</p>
+						<p class="indent">\(\mathsf{|8| = 8}\)</p>
+						<p>c) luvun \(\mathsf{10}\) vastaluku</p>
+						<p class="indent">\(\mathsf{-10}\)</p>
+						<p>d) luvun \(\mathsf{-7}\) vastaluku</p>
+						<p class="indent">\(\mathsf{-(-7) = 7}\)</p>
+					</div>
+				</div>
+				<h3>Tehtävä 6.9: Erotuksen itseisarvo</h3>
+				<div>
+					<p>Laske.</p>
+					<div class="indent">
+						<p>a) \(\mathsf{|6-9| = |-3| = 3}\)</p>
+						<p>b) \(\mathsf{|8-(-12)| = |8+12| = |20| = 20}\)</p>
+					</div>
+					<p>Laske suuruusero erotuksen itseisarvon avulla, kun luvut ovat</p>
+					<div class="indent">
+						<p>c) \(\mathsf{-11}\) ja \(\mathsf{26}\)</p>
+						<p class="indent">\(\mathsf{|-11 - 26| = |-37| = 37}\)</p>
+						<p>d) \(\mathsf{-5}\) ja \(\mathsf{-13}\)</p>
+						<p class="indent">\(\mathsf{|-5-(-13)| = |-5+13| = |8| = 8}\)</p>
+					</div>
+					<p>Sanallisia tehtäviä:</p>
+					<div class="indent">
+						<p>e) Lämpötila on aamulla \(\mathsf{-8{}^\circ C}\) ja päivällä \(\mathsf{12{}^\circ C}\). Mikä on lämpötilojen suuruusero?</p>
+						<div class="indent">
+							<p>\(\mathsf{|-8-12| = |-20| = 20}\)</p>
+							<p><strong>Vastaus:</strong> Lämpötilojen välinen suuruusero on 20 &deg;C.</p>
+						</div>
+						<p>f) Etanolin sulamispiste on \(\mathsf{-114{}^\circ C}\) ja elohopean \(\mathsf{-39{}^\circ C}\). Mikä on sulamispisteiden suuruusero?</p>
+						<div class="indent">
+							<p>\(\mathsf{|-114-(-39)| = |-114+39| = |-75| = 75}\)</p>
+							<p><strong>Vastaus:</strong> Sulamispisteiden välinen suuruusero on 75 &deg;C.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2>7. Kokonaislukujen summa ja erotus</h2>
+			<div>
+				<h3>Tehtävä 7.1: Johdatus merkkisääntöihin</h3>
+				<div>
+					<h4>Kysymys 1 (Vedä kohde kuvan päälle)</h4>
+					<img src="ma7j1_malli_merkkisaannot.png">
+					<h4>Kysymys 2 (Aukkotehtävä, SA)</h4>
+					<div class="indent">
+						<p>a) -4</p>
+						<p>b) 6</p>
+						<p>c) 7</p>
+						<p>d) -3</p>
+						<p>Vastauksessa hyväksytään myös +-merkki sekä välilyönti etumerkin ja luvun välissä.</p>
+					</div>
+				</div>
+				<h3>Tehtävä 7.3: Johdatus kokonaislukujen summaan ja erotukseen</h3>
+				<div>
+					<h4>Kysymys 1 (Aukkotehtävä, NM)</h4>
+					<div class="indent">
+						<p>a) 2</p>
+						<p>b) -4</p>
+						<p>c) -2</p>
+						<p>d) -9</p>
+					</div>
+					<h4>Kysymys 2 (Aukkotehtävä, SA)</h4>
+					<div class="indent">
+						<p>a) 4-6</p>
+						<p>b) 9+2</p>
+						<p>c) -5+12</p>
+						<p>d) -7-1</p>
+						<p>Vastauksessa hyväksytään myös välilyönti välimerkin kummallakin puolella.</p>
+					</div>
+				</div>
+				<h3>Tehtävä 7.11: Vihkotehtäviä</h3>
+				<div>
+					<p>Sievennä ja laske.</p>
+					<div class="indent">
+						<p>a) \(\mathsf{12+(-8) = 12-8 = 4}\)</p>
+						<p>b) \(\mathsf{-12-(-8) = -12+8 = -4}\)</p>
+						<p>c) \(\mathsf{10-(6-3) = 10-3 = 7}\)</p>
+						<p>d) \(\mathsf{10-(3-6) = 10-(-3) = 10+3 = 13}\)</p>
+						<p>e) \(\mathsf{-14+(5-9) = -14+(-4) = -14-4 = -18}\)</p>
+						<p>f) \(\mathsf{-14-(5-9) = -14-(-4) = -14+4 = -10}\)</p>
+						<p>g) \(\mathsf{11-(-15)+(-12) = 11+15-12 = 14}\)</p>
+						<p>h) \(\mathsf{(5-8) - (9-13) = -3-(-4) = -3+4 = 1}\)</p>
+					</div>
+				</div>
+			</div>
+			<h2>8. Kokonaislukujen tulo ja osamäärä</h2>
+			<div>
+				<h3>Tehtävä 8.1: Johdatus kokonaislukujen tuloon ja osamäärään</h3>
+				<div>
+					<h4>Kysymys 1 (Aukkotehtävä, SA)</h4>
+					<div class="indent">
+						<p>a) 4*3</p>
+						<p>b) 3*(-2)</p>
+						<p>c) 7*6</p>
+						<p>d) 5*(-4)</p>
+						<p>Vastauksessa hyväksytään myös vaihdannaiset versiot.</p>
+					</div>
+					<h4>Kysymys 2 (Aukkotehtävä, NM)</h4>
+					<div class="indent">
+						<p>a) 24</p>
+						<p>b) -24</p>
+						<p>c) -24</p>
+						<p>d) 24</p>
+					</div>
+				</div>
+				<h3>Tehtävä 8.6: Laskujärjestystehtäviä</h3>
+				<div>
+					<p>Laske.</p>
+					<div class="indent">
+						<p>a) \(\mathsf{(3 - 9) \cdot 7 = -6 \cdot 7 = -42}\)</p>
+						<p>b) \(\mathsf{3 - 9 \cdot 7 = 3 - 63 = - 60}\)</p>
+						<p>c) \(\mathsf{(-16 + 12) \cdot (8 - 14) = -4 \cdot (-6) = 24}\)</p>
+						<p>d) \(\mathsf{(-16 + 12) \cdot 8 - 14 = -4 \cdot 8 - 14 = -32 - 14 = -46}\)</p>
+					</div>
+				</div>
+				<h3>Tehtävä 8.10: Sanallisia tehtäviä</h3>
+				<div>
+					<p>a) Laske annettujen lämpötilojen keskiarvo.</p>
+					<div class="indent">
+						<p>-2 &deg;C, -5 &deg;C, +3 &deg;C, +5 &deg;C, +6 &deg;C, -1 &deg;C, -5 &deg;C, -9 &deg;C</p>
+						<p class="indent">\(\mathsf{\dfrac{-2 + (-5) + 3 + 5 + 6 + (-1) + (-5) + (-9)}{8} = \dfrac{-2-5+3+5+6-1-5-9}{8} = \dfrac{-8}{8} = -1}\)</p>
+						<p><strong>Vastaus:</strong> Lämpötilojen keskiarvo on -1 &deg;C.</p>
+					</div>
+					<p>b) Lämpötila on aamulla \(\mathsf{-6{\:}^\circ\text{C}}\). Päivällä pakkanen kiristyy siten, että pakkasta on kolme kertaa niin paljon kuin aamulla. Illalla lämpötila laskee vielä \(\mathsf{5{\:}^\circ\text{C}}\). Mikä on lämpötila illalla?</p>
+					<div class="indent">
+						<p>\(\mathsf{3 \cdot (-6) - 5 = -18 - 5 = -23}\)</p>
+						<p><strong>Vastaus:</strong> Lämpötila on illalla -23 &deg;C.</p>
+					</div>
+					<p>c) Elohopean sulamispiste on n. \(\mathsf{-39{\:}^\circ\text{C}}\), ja kiehumispiste on n. \(\mathsf{357{\:}^\circ\text{C}}\). Kuinka monta celsiusastetta sulamis- ja kiehumispisteen ero on?</p>
+					<div class="indent">
+						<p>\(\mathsf{|-39-357| = |-396| = 396}\)</p>
+						<p><strong>Vastaus:</strong> Sulamis- ja kiehumispisteiden välinen ero on 396 &deg;C.</p>
+					</div>
+					<p>d) Himalajan vuoristossa sijaitsee maailman korkein vuori Mount Everest, joka kohoaa 8 849 m merenpinnan yläpuolelle. Vastaavasti maailman syvin merenpohjan kohta Challengerin syvänne löytyy Mariaanien haudasta, ja se on 10 994 m merenpinnan alapuolella. Mikä on Mount Everestin ja Challengerin syvänteen korkeusero?</p>
+					<div class="indent">
+						<p>d) \(\mathsf{8\:849 + 10\:994 = 19\:843}\)</p>
+						<p><strong>Vastaus:</strong> Mount Everestin ja Challengerin syvänteen välinen korkeusero on 19 843 metriä.</p>
+					</div>
+				</div>
+			</div>
+			<h2>9. Desimaaliluvut</h2>
+			<div>
+				<h3>Tehtävä 9.1: Numeron paikka desimaaliluvussa</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 9.2: Lue desimaaliluku lukusuoralta</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 9.3: Desimaalilukujen suuruusjärjestys</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 9.4: Desimaaliluvun muodostaminen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 9.5: Desimaaliluvun sanallinen muutos</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 9.6: Desimaaliluvun muodostaminen numeroista</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 9.7: Lukusuoran piirtäminen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 9.8: Päättymättömät jaksolliset desimaaliluvut</h3>
+				<div>
+				</div>
+			</div>
+			<h2>10. Desimaalilukujen summa ja erotus</h2>
+			<div>
+				<h3>Tehtävä 10.1: Johdatus desimaalilukujen summaan ja erotukseen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 10.2: Desimaalilukujen summa ja erotus</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 10.3: Desimaalilukujen summa ja erotus allekkain</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 10.4: Summapyramidi</h3>
+				<div>
+				</div>
+			</div>
+			<h2>11. Desimaalilukujen tulo ja osamäärä</h2>
+			<div>
+				<h3>Tehtävä 11.1: Johdatus desimaalilukujen tuloon</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 11.2: Desimaalilukujen tulo</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 11.3: 10:n moninkerralla kertominen ja jakaminen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 11.4: Desimaalilukujen tulo</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 11.5: Desimaalilukujen tuloja vihkoon</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 11.6: 10:n moninkerralla kertominen ja jakaminen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 11.7: Desimaalilukujen kertolasku allekkain</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 11.8: Desimaalilukujen jakolasku allekkain</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 11.9: Sanallisia tehtäviä (Yksikköhintoja)</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 11.10: Sanallisia tehtäviä (Yksikköhintoja)</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 11.11: Sanallisia tehtäviä (Polttoaineen hinta)</h3>
+				<div>
+				</div>
+			</div>
+			<h2>12. Lisätietoa: Potenssi ja neliöjuuri</h2>
+			<div>
+				<h3>Tehtävä 12.1: Johdatus potenssimerkintään</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 12.2: Potenssi</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 12.3: Potensseja päässälaskuina</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 12.4: Johdatus neliöjuureen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 12.5: Neliöjuuri</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 12.6: Potenssi- ja neliöjuurilaskuja</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 12.7: Kantalukuna negatiivinen luku</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 12.8: Potenssi</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 12.9: Potenssien laskujärjestys</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 12.10: Neliöjuuren laskujärjetys</h3>
+				<div>
+				</div>
+			</div>
+			<h2>13. Lisätietoa: Desimaalilukujen pyöristäminen</h2>
+			<div>
+				<h3>Tehtävä 13.1: Pyöristäminen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 13.2: Yhteen- ja vähennyslaskun pyöristäminen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 13.3: Pituuslaskuja ja pyöristämistä</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 13.4: Merkitsevät numerot</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 13.5: Pyöristäminen merkitsevien numeroiden perusteella</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 13.6: Kerto- ja jakolaskun pyöristäminen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 13.7: Suurten tai päättymättömien lukujen pyöristäminen</h3>
+				<div>
+				</div>
+			</div>
+		</div>
+		<script>
+			downloadGG();
+		</script>
+	</body>
+</html>
