@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="fi">
+	<head>
+		<title>Malliratkaisut - MA7J3</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+		<script src="../../../teoria.js"></script>
+		<link rel="stylesheet" media="screen and (max-width: 350px)" href="../../../teorialohko.css">
+		<link rel="stylesheet" media="screen and (min-width: 350px)" href="../../../teoriakirja.css">
+	</head>
+	<body>
+		<div id="nav">
+			<div id="button">
+				<div id="bar1"></div>
+				<div id="bar2"></div>
+				<div id="bar3"></div>
+			</div>
+			<div id="links"></div>
+			<div id="caption"></div>
+			<a id="course" href="https://jannevenhoedu.github.io/ma7/j3/d" target="_blank"></a>
+		</div>
+		<div id="main">
+			<h1>MA7 Jakso 3: Malliratkaisut</h1>
+			<h2>1. Muuttujalauseke</h2>
+			<div>
+				<h3>Tehtävä 1.1: Käsitteet tutuiksi</h3>
+				<div>
+					<h4>Kysymys 1 (Vedä kohde kuvan päälle)</h4>
+					<img srcset="ma7j3_malli_kasitteet_tutuksi.png 1.5x">
+				</div>
+				<h3>Tehtävä 1.4: Sanallinen tehtävä (keskinopeus)</h3>
+				<div>
+					<p>Keskinopeus \(\mathsf{v}\) saadaan jakamalla matka \(\mathsf{s}\) ajalla \(\mathsf{t}\).</p>
+					<div class="indent">
+					<p>\(\mathsf{v = \dfrac{s}{t}}\)</p>
+					</div>
+					<p>a) Laske keskinopeus, kun matka \(\mathsf{s = \text{20 km}}\) ja aika \(\mathsf{t=\text{2 h}}\).</p>
+					<p class="indent">\(\mathsf{v = \dfrac{s}{t} = \dfrac{\text{20 km}}{\text{2 h}} = 10\dfrac{km}{h}}\)</p>
+					<p>b) Laske keskinopeus, kun matka \(\mathsf{s = \text{60 km}} \) ja aika \(\mathsf{t=\text{4 h}}\).</p>
+					<p class="indent">\(\mathsf{v = \dfrac{s}{t} = \dfrac{\text{60 km}}{\text{4 h}} = 15\dfrac{km}{h}}\)</p>
+				</div>
+				<h3>Tehtävä 1.5: Muuttujalausekkeita</h3>
+				<div>
+					<h4>Kysymys 1 (Vedä kohde kuvan päälle)</h4>
+					<img src="ma7j3_malli_muuttujalausekkeita.png">
+				</div>
+				<h3>Tehtävä 1.8: Sanallinen tehtävä (liittymämyyjä)</h3>
+				<div>
+					<p>Saara myy kesätyönään puhelinliittymiä. Saara saa palkkaa 80 euroa päivältä ja 5 euroa jokaista myytyä liittymää kohti.</p>
+					<div class="indent">
+						<p>a) Kirjoita muuttujalauseke Saaran päiväpalkasta, kun hän myy x liittymää päivässä.</p>
+						<div class="indent">
+							<p>\(\mathsf{5x + 80}\)</p>
+						</div>
+						<p>b) Laske lausekkeen avulla, kuinka paljon Saara tienaa yhden päivän aikana, kun hän myy 15 liittymää päivän aikana.</p>
+						<div class="indent">
+							<p>\(\mathsf{x = 15}\)</p>
+							<p>\(\mathsf{5x + 80 = 5 \cdot 15 + 80 = 75 + 80 = 155}\)</p>
+							<p><strong>Vastaus:</strong> Saara tienaa yhden päivän aikana 155 euroa.</p>
+						</div>
+						<p>c) Laske, kuinka paljon Saara tällöin tienaa kuukauden (20 työpäivää) aikana.</p>
+						<div class="indent">
+							<p>\(\mathsf{20 \cdot 155 = 3100}\)</p>
+							<p><strong>Vastaus:</strong> Saara tienaa kuukaudessa 3100 euroa.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2>2. Termi</h2>
+			<div>
+				<h3>Tehtävä 2.2: Termin kerroin ja muuttujaosa</h3>
+				<div>
+					<h4>Kysymys 1 (Vedä kohde kuvan päälle)</h4>
+					<img src="ma7j3_malli_termi.png">
+					<h4>Kysymys 2 (Vedä kohde kuvan päälle)</h4>
+					<img src="ma7j3_malli_termi.png">
+				</div>
+				<h3>Tehtävä 2.3: Muuttujalausekkeen termit</h3>
+				<div>
+					<h4>Kysymys 1 (Aukkotehtävät)</h4>
+					<p>Lausekkeessa on <strong>2</strong> termiä. Lausekkeen ensimmäisen termin muuttujaosa on <strong>x</strong>, ja lausekkeessa esiintyy vakiotermi <strong>5</strong>.</p>
+					<h4>Kysymys 2 (Aukkotehtävät)</h4>
+					<p>Lausekkeessa on <strong>3</strong> termiä.</p>
+					<p>Luettele lausekkeen termit: \(\mathsf{-2x}\), \(\mathsf{3y}\) ja \(\mathsf{-6}\)</p>
+					<h4>Kysymys 3 (Aukkotehtävät)</h4>
+					<p>Lausekkeessa on <strong>3</strong> termiä.</p>
+					<p>Lausekkeen ensimmäisen termin kerroin on <strong>1</strong>.</p>
+					<p>Lausekkeen viimeisen termin kerroin on <strong>-1</strong>.</p>
+					<p>Jos \(\mathsf{a = 3}\), \(\mathsf{b = 7}\) ja \(\mathsf{c = 8}\) saadaan lausekkeen arvoksi <strong>2</strong>.</p> 
+				</div>
+				<h3>Tehtävä 2.5: Termin kerroin ja muuttujaosa</h3>
+				<div>
+					<h4>Kysymys 1 (Vedä kohde kuvan päälle)</h4>
+					<img src="ma7j3_malli_termi3.png">
+				</div>
+				<h3>Tehtävä 2.6: Muuttujalausekkeen termit</h3>
+				<div>
+					<h4>Kysymys 1 (Vedä kohde kuvan päälle)</h4>
+					<img src="ma7j3_malli_termi4.png">
+				</div>
+				<h3>Tehtävä 2.7: Sanallisia tehtäviä (Piirin lauseke)</h3>
+				<div>
+					<p>Muodosta tasokuvion piirin lauseke, ja laske piirin pituus, kun x = 3 ja y = 2.</p>
+					<p>a)</p>
+					<div class="indent">
+						<p>Muuttujalauseke: \(\mathsf{3x}\)</p>
+						<p>\(\mathsf{p = 3x = 3 \cdot 3 = 9}\)</p>
+					</div>
+					<p>b)</p>
+					<div class="indent">
+						<p>Muuttujalauseke: \(\mathsf{4x}\)</p>
+						<p>\(\mathsf{p = 4x = 4 \cdot 3 = 12}\)</p>
+					</div>
+					<p>c)</p>
+					<div class="indent">
+						<p>Muuttujalauseke: \(\mathsf{2x+y}\)</p>
+						<p>\(\mathsf{p = 2x+y = 2 \cdot 3 + 2 = 8}\)</p>
+					</div>
+					<p>d)</p>
+					<div class="indent">
+						<p>Muuttujalauseke: \(\mathsf{2x+2y}\)</p>
+						<p>\(\mathsf{p = 2x+2y = 2 \cdot 3 + 2 \cdot 2 = 10}\)</p>
+					</div>
+				</div>
+			</div>
+			<h2>3. Termien yhteen- ja vähennyslasku</h2>
+			<div>
+				<h3>Tehtävä 3.1: Samanmuotoiset termit</h3>
+				<div>
+					<h4>Kysymys 1 (Raahaa merkki kuvan päälle)</h4>
+					<img src="ma7j3_malli_samanmuotoiset_termit.png">
+				</div>
+				<h3>Tehtävä 3.3: Erimuotoisten termien järjestys</h3>
+				<div>
+					<h4>Kysymys 1 (Ordering)</h4>
+					<p class="indent">\(\mathsf{+5a-8b+4c}\)</p>
+					<h4>Kysymys 2 (Ordering)</h4>
+					<p class="indent">\(\mathsf{-x+8y-2z}\)</p>
+					<h4>Kysymys 3 (Ordering)</h4>
+					<p class="indent">\(\mathsf{+5a-3b+15c+6}\)</p>
+					<h4>Kysymys 4 (Ordering)</h4>
+					<p class="indent">\(\mathsf{-9x+3y-z-1}\)</p>
+				</div>
+				<h3>Tehtävä 3.6: Termien sievennyksiä vihkoon</h3>
+				<div>
+					<p>Sievennä.</p>
+					<div class="indent">
+					<p>a) \(\mathsf{4x + 5x = 9x}\)</p>
+					<p>b) \(\mathsf{8a - 12a = -4a}\)</p>
+					<p>c) \(\mathsf{-4x + x - 5x = -8x}\)</p>
+					<p>d) \(\mathsf{9a + 4a + 6b - b = 13a + 5b}\)</p>
+					<p>e) \(\mathsf{-x + x - 1 - 1 = -2}\)</p>
+					<p>f) \(\mathsf{5a - b + 5 - 6a + 2b + 16 = -a + b + 21}\)</p>
+					</div>
+				</div>
+			</div>
+			<h2>4. Termien kerto- ja jakolasku</h2>
+			<div>
+				<h3>Tehtävä 4.4: Termien sievennyksiä vihkoon</h3>
+				<div>
+					<p>Sievennä.</p>
+					<div class="indent">
+						<p>a) \(\mathsf{7 \cdot 5x = 35x}\)</p>
+						<p>b) \(\mathsf{-12a \cdot 2 = -24a}\)</p>
+						<p>c) \(\mathsf{\dfrac{63x}{9} = 7x}\)</p>
+						<p>d) \(\mathsf{\dfrac{-24k}{8} = -3k}\)</p>
+						<p>e) \(\mathsf{4 \cdot 3a - 5 \cdot 4a = 12a - 20a = -8a}\)</p>
+						<p>f) \(\mathsf{\dfrac{6 \cdot 3x}{2} = \dfrac{18x}{2} = 9x}\)</p>
+					</div>
+				</div>
+				<h3>Tehtävä 4.8: Sievennä ja laske</h3>
+				<div>
+					<p>Sievennä muuttujalauseke, ja laske sen arvo, kun muuttuja \(\mathsf{x = -1}\).</p>
+					<div class="indent">
+						<p>a)</p>
+						<p class="indent">\(\begin{align}\mathsf{4 \cdot 4x - 5 \cdot 3x} &= \mathsf{16x - 15x}\\ &= \mathsf{x}\\ &= \mathsf{-1}\end{align}\)</p>
+						<p>b)</p>
+						<p class="indent">\(\begin{align}\mathsf{3x \cdot 2 + 7} &= \mathsf{6x + 7}\\ &= \mathsf{6 \cdot (-1) + 7}\\ &= \mathsf{-6+7}\\ &= \mathsf{1}\end{align}\)</p>
+						<p>c)</p>
+						<p class="indent">\(\begin{align}\mathsf{-x -8x -26 + 9x +8} &= \mathsf{-18}\end{align}\)</p>
+						<p>d)</p>
+						<p class="indent">\(\begin{align}\mathsf{\dfrac{55x - 19x}{-2 \cdot 3}} &= \mathsf{\dfrac{36x}{-6}}\\ &= \mathsf{-6x}\\ &= \mathsf{-6 \cdot (-1)}\\ &= \mathsf{6}\end{align}\)</p>
+					</div>
+				</div>
+				<h3>Tehtävä 4.9: Sanallinen tehtävä (Muodosta lauseke ja laske)</h3>
+				<div>
+					<p>Muodosta annetusta tilanteesta muuttujalauseke, ja laske lausekkeen arvo annetuilla muuttujien arvoilla.</p>
+					<div class="indent">
+						<p>a) Lämpötilan Kelvin-asteet \(\mathsf{k}\) saadaan lisäämällä celsiusasteisiin \c luku 273. Laske lämpötila 25 °C kelvineinä.</p>
+						<div class="indent">
+							<p>Muuttujalauseke</p>
+							<p class="indent">\(\mathsf{k = c + 273}\)</p>
+							<p>Sijoitetaan muuttujalausekkeeseen \(\mathsf{c = 25}\)</p>
+							<p class="indent">\(\mathsf{k = c + 273 = 25 + 273 = 298}\)</p>
+							<p><strong>Vastaus:</strong> Lämpötila on 298 kelviniä.</p>
+						</div>
+						<p>b) Kuljettu matka s on keskinopeuden v ja ajan t tulo. Laske kuljettu matka, kun nopeus v = 45 km/h ja aika t = 1,2 tuntia.</p>
+						<div class="indent">
+							<p>Muuttujalauseke</p>
+							<p class="indent">\(\mathsf{s = vt}\)</p>
+							<p>Sijoitetaan muuttujalausekkeeseen \(\mathsf{v = 45}\) ja \(\mathsf{t = 1{,}2}\)</p>
+							<p class="indent">\(\mathsf{s = vt = 45 \cdot 1{,}2 = 54}\)</p>
+							<p><strong>Vastaus:</strong> Kuljettu matka on 54 kilometriä.</p>
+						</div>
+						<p>c) Taksimatkan hinta h koostuu 5 euron kiinteästä maksusta sekä 1,50 euron maksusta jokaiselta kuljetulta kilometriltä. Merkitse kuljettuja kilometrejä muuttujalla x. Laske taksimatkan hinta, kun kuljetaan taksilla Viljakkalasta 40 km matka Särkänniemeen.</p>
+						<div class="indent">
+							<p>Muuttujalauseke</p>
+							<p class="indent">\(\mathsf{h = 1{,}5x + 5}\)</p>
+							<p>Sijoitetaan muuttujalausekkeeseen \(\mathsf{x = 40}\)</p>
+							<p class="indent">\(\mathsf{h = 1{,}5x + 5 = 1{,}5 \cdot 40 + 5 = 65}\)</p>
+							<p><strong>Vastaus:</strong> Hinta on 65 euroa.</p>
+						</div>
+						<p>d) Tuulian Instagram-tilillä on 4 356 seuraajaa (f), ja joka päivä tulee 16 seuraajaa lisää. Laske seuraajien määrä vuoden kuluttua. Merkitse päivien lukumäärää muuttujalla d.</p>
+						<div class="indent">
+							<p>Muuttujalauseke</p>
+							<p class="indent">\(\mathsf{f = 16d + 4\;356}\)</p>
+							<p>Sijoitetaan muuttujalausekkeeseen \(\mathsf{d = 365}\)</p>
+							<p class="indent">\(\mathsf{f = 16d + 4\;356 = 16 \cdot 365 + 4\;356 = 10\;196}\)</p>
+							<p><strong>Vastaus:</strong> Vuoden kuluttua Tuulialla on 10 196 seuraajaa.</p>
+						</div>
+					</div>
+				</div>
+				<h3>Tehtävä 4.10: Sanallisia tehtäviä (Jääkiekko-ottelun liput)</h3>
+				<div>
+					<p>Jääkiekko-ottelun liput maksavat aikuisilta 15 euroa ja lapsilta 10 euroa.</p>
+					<div class="indent">
+						<p>a) Seurueessa on x aikuista ja y lasta. Muodosta muuttujalauseke jääkiekko-ottelun lippujen kokonaishinnasta.</p>
+						<p class="indent">\(\mathsf{h = 15x+10y}\)</p>
+						<p>b) Laske lausekkeen avulla, kuinka paljon maksaa 8 aikuisen ja 12 lapsen käynti jääkiekko-ottelussa.</p>
+						<div class="indent">
+							<p>Sijoitetaan muuttujalausekkeeseen \(\mathsf{x = 8}\) ja \(\mathsf{y = 12}\).</p>
+							<p class="indent">\(\mathsf{h = 15x+10y = 15 \cdot 8 + 10 \cdot 12 = 120 + 120 = 240}\)</p>
+							<p><strong>Vastaus:</strong> Liput maksavat yhteensä 240 euroa.</p>
+						</div>
+						<p>c) Ottelussa järjestetään joululoman kunniaksi perhepeli, jossa myydään tavallisten lippujen lisäksi perhelippua, joka maksaa 45 euroa. Perhelipulla pääsee peliin enimillään kaksi aikuista ja kolme lasta. Kuinka paljon perhelipulla voi parhaimmillaan säästää?</p>
+						<div class="indent">
+							<p>Lasketaan lippujen hinta ilman tarjousta sijoittamalla muuttujalausekkeeseen \(\mathsf{x = 2}\) ja \(\mathsf{y = 3}\).</p>
+							<p class="indent">\(\mathsf{h = 15x+10y = 15 \cdot 2 + 10 \cdot 3 = 30 + 30 = 60}\)</p>
+							<p>Lasketaan lippujen hinnan ja perhelipun hinnan erotus.</p>
+							<p class="indent">\(\mathsf{\text{60 €} - \text{45 €} = \text{15 €}}\)</p>
+							<p><strong>Vastaus:</strong> Perhelipulla voi säästää 15 euroa.</p>
+						</div>
+					</div>
+				</div>
+				<h3>Tehtävä 4.11: Sievennä ja laske</h3>
+				<div>
+					<p>Sievennä muuttujalauseke, ja laske sen arvo, kun muuttuja \(\mathsf{x = -2}\).</p>
+					<div class="indent">
+						<p>a)</p>
+						<p class="indent">\(\begin{align}\mathsf{-8 \cdot 3x + 19x} &= \mathsf{-24x + 19x}\\ &= \mathsf{-5x}\\ &= \mathsf{-5 \cdot (-2)}\\ &= \mathsf{10}\end{align}\)</p>
+						<p>b)</p>
+						<p class="indent">\(\begin{align}\mathsf{6 + 27x + 13x\cdot(-2) - 6} &= \mathsf{6 + 27x -26x - 6}\\ &= \mathsf{x}\\ &= \mathsf{-2}\end{align}\)</p>
+						<p>c)</p>
+						<p class="indent">\(\begin{align}\mathsf{\dfrac{x + 21 - 5 - 7x}{-x+2+x}} &= \mathsf{\dfrac{-6x+16}{2}}\\ &= \mathsf{-3x+8}\\ &= \mathsf{-3 \cdot (-2) + 8}\\ &= \mathsf{6+8}\\ &= \mathsf{14}\end{align}\)</p>
+						<p>d)</p>
+						<p class="indent">\(\begin{align}\mathsf{\dfrac{-3x\cdot 6}{-8-(-17)}} &= \mathsf{\dfrac{-18x}{-8+17}}\\ &= \mathsf{\dfrac{-18x}{9}}\\ &= \mathsf{-2x}\\ &= \mathsf{-2 \cdot (-2)}\\ &= \mathsf{4}\end{align}\)</p>
+					</div>
+				</div>
+				<h3>Tehtävä 4.13: Luvun ja muuttujalausekkeen tulo</h3>
+				<div>
+					<p>Sievennä.</p>
+					<div style="margin-left: 30px; padding-bottom: 10px;">
+						<p>a) \(\mathsf{\quad 2 \cdot (x+1) = 2x + 2}\)</p>
+						<p>b) \(\mathsf{\quad -1 \cdot (2x+3) = -2x - 3}\)</p>
+						<p>c) \(\mathsf{\quad (3x - 8) \cdot 4 = 12x - 32}\)</p>
+						<p>d) \(\mathsf{\quad (7x - 2) \cdot (-3) = -21x + 6}\)</p>
+						<p>e) \(\mathsf{\quad 5 \cdot (-x + 3) = -5x + 15}\)</p>
+						<p>f) \(\mathsf{\quad -10 \cdot (-6x-9) = 60x + 90}\)</p>
+					</div>
+				</div>
+			</div>
+			<h2>5. Lukujonot</h2>
+			<div>
+				<h3>Tehtävä 5.1: Aritmeettisen ja geometrisen lukujonon tunnistaminen</h3>
+				<div>
+					<h4>Kysymys 1 (Aukkotehtävä)</h4>
+					<div class="indent">
+						<p>Lukujono on järjestykseen asetettujen lukujen luettelo. Yksittäistä lukua kutsutaan lukujonon <strong>jäseneksi</strong>. Jokaisella jäsenellä on oma järjestysnumeronsa, jota merkitään usein muuttujalla <strong>n</strong>.</p>
+						<p>Lukujono voi olla täysin satunnainen, mutta yleensä meitä kiinnostavat vain jonkin säännön mukaan muodostetut lukujonot. Sääntö voidaan antaa joko sanallisesti tai lausekkeena.</p>
+						<p>Aritmeettinen lukujono on sellainen lukujono, jonka seuraava jäsen saadaan <strong>lisäämällä tai vähentämällä</strong> edelliseen jäseneen aina sama luku.</p>
+						<p>Geometrinen lukujono on sellainen lukujono, jonka seuraava jäsen saadaan <strong>kertomalla tai jakamalla</strong> edellinen jäsen aina samalla luvulla.</p>
+					</div>
+					<h4>Kysymys 2 (Aukkotehtävä)</h4>
+					<div class="indent">
+						<p>a) Tarkastellaan lukujonoa \(\mathsf{1, 2, 3, ...}\)</p>
+						<div style="margin-left: 30px; padding-bottom: 10px;">
+							<p>Lukujonon seuraava jäsen on: <strong>4</strong>.</p>
+							<p>Lukujono on <strong>geometrinen</strong>.</p>
+						</div>
+						<p>b) Tarkastellaan lukujonoa \(\mathsf{1, 2, 4, 8, ...}\)</p>
+						<div style="margin-left: 30px; padding-bottom: 10px;">
+							<p>Lukujonon seuraava jäsen on: <strong>16</strong>.</p>
+							<p>Lukujono on <strong>geometrinen</strong>.</p>
+						</div>
+						<p>c) Tarkastellaan lukujonoa \(\mathsf{8, 6, 4, ...}\)</p>
+						<div style="margin-left: 30px; padding-bottom: 10px;">
+							<p>Lukujonon seuraava jäsen on: <strong>2</strong>.</p>
+							<p>Lukujono on <strong>aritmeettinen</strong>.</p>
+						</div>
+						<p>d) Tarkastellaan lukujonoa \(\mathsf{10, 15, 20...}\)</p>
+						<div style="margin-left: 30px; padding-bottom: 10px;">
+							<p>Lukujonon seuraava jäsen on: <strong>5</strong>.</p>
+							<p>Lukujono on <strong>aritmeettinen</strong>.</p>
+						</div>
+						<p>e) Tarkastellaan lukujonoa \(\mathsf{1000, 100, 10...}\)</p>
+						<div style="margin-left: 30px; padding-bottom: 10px;">
+							<p>Lukujonon seuraava jäsen on: <strong>1</strong>.</p>
+							<p>Lukujono on <strong>geometrinen</strong>.</p>
+						</div>
+					</div>
+				</div>
+				<h3>Tehtävä 5.2: Aritmeettisen lukujonon jatkaminen ja sääntö</h3>
+				<div>
+					<h4>Kysymys 1 (Aukkotehtävä)</h4>
+					<div class="indent">
+						<p>Kirjoita lukujonon neljä seuraavaa jäsentä, ja kirjoita lukujonon sääntö.</p>
+						<p>\(\mathsf{2, 4, 6, 8,}\) <strong>10</strong>, <strong>12</strong>, <strong>14</strong>, <strong>16</strong>, ...</p>
+						<p><strong>Sääntö:</strong> Lukujonon ensimmäinen jäsen on <strong>2</strong>, ja seuraava jäsen saadaan <strong>lisäämällä edelliseen jäseneen</strong> luku <strong>2</strong>.</p>
+					</div>
+					<h4>Kysymys 2 (Aukkotehtävä)</h4>
+					<div class="indent">
+						<p>Kirjoita lukujonon neljä seuraavaa jäsentä, ja kirjoita lukujonon sääntö.</p>
+						<p>\(\mathsf{25, 22, 19, 16,}\) <strong>13</strong>, <strong>10</strong>, <strong>7</strong>, <strong>4</strong>, ...</p>
+						<p><strong>Sääntö:</strong> Lukujonon ensimmäinen jäsen on <strong>25</strong>, ja seuraava jäsen saadaan <strong>vähentämällä edellisestä jäsenestä</strong> luku <strong>3</strong>.</p>
+					</div>
+					<h4>Kysymys 3 (Aukkotehtävä)</h4>
+					<div class="indent">
+						<p>Kirjoita lukujonon neljä seuraavaa jäsentä, ja kirjoita lukujonon sääntö.</p>
+						<p>\(\mathsf{5, 3, 1, -1,}\) <strong>-3</strong>, <strong>-5</strong>, <strong>-7</strong>, <strong>-9</strong>, ...</p>
+						<p><strong>Sääntö:</strong> Lukujonon ensimmäinen jäsen on <strong>5</strong>, ja seuraava jäsen saadaan <strong>vähentämällä edellisestä jäsenestä</strong> luku <strong>2</strong>.</p>
+					</div>
+					<h4>Kysymys 4 (Aukkotehtävä)</h4>
+					<div class="indent">
+						<p>Kirjoita lukujonon neljä seuraavaa jäsentä, ja kirjoita lukujonon sääntö. Kun lukujono koostuu desimaaliluvuista, käytetään lukujen erottamiseen pilkun ( , ) sijasta puolipistettä ( ; ).</p>
+						<p>\(\mathsf{\text{1,5}; \text{ 1,6}; \text{ 1,7}; \text{ 1,8};}\) <strong>1,9</strong>; <strong>2,0</strong>; <strong>2,1</strong>; <strong>2,2</strong>; ...</p>
+						<p><strong>Sääntö:</strong> Lukujonon ensimmäinen jäsen on <strong>1,5</strong>, ja seuraava jäsen saadaan <strong>lisäämällä edelliseen jäseneen</strong> luku <strong>0,1</strong>.</p>
+					</div>
+				</div>
+				<h3>Tehtävä 5.3: Geometrisen lukujonon jatkaminen ja sääntö</h3>
+				<div>
+					<h4>Kysymys 1 (Aukkotehtävä)</h4>
+					<div class="indent">
+						<p>Kirjoita lukujonon kaksi seuraavaa jäsentä, ja kirjoita lukujonon sääntö.</p>
+						<p>\(\mathsf{1, 2, 4, 8,}\) <strong>16</strong>, <strong>32</strong>, ...</p>
+						<p><strong>Sääntö:</strong> Lukujonon ensimmäinen jäsen on <strong>1</strong>, ja seuraava jäsen saadaan <strong>kertomalla edellinen jäsen</strong> luvulla <strong>2</strong>.</p>
+					</div>
+					<h4>Kysymys 2 (Aukkotehtävä)</h4>
+					<div class="indent">
+						<p>Kirjoita lukujonon kaksi seuraavaa jäsentä, ja kirjoita lukujonon sääntö.</p>
+						<p>\(\mathsf{1, 10, 100,}\) <strong>1000</strong>, <strong>10000</strong>, ...</p>
+						<p><strong>Sääntö:</strong> Lukujonon ensimmäinen jäsen on <strong>1</strong>, ja seuraava jäsen saadaan <strong>kertomalla edellinen jäsen</strong> luvulla <strong>10</strong>.</p>
+					</div>
+					<h4>Kysymys 3 (Aukkotehtävä)</h4>
+					<div class="indent">
+						<p>Kirjoita lukujonon kaksi seuraavaa jäsentä, ja kirjoita lukujonon sääntö.</p>
+						<p>\(\mathsf{256, 128, 64, 32}\) <strong>16</strong>, <strong>8</strong>, ...</p>
+						<p><strong>Sääntö:</strong> Lukujonon ensimmäinen jäsen on <strong>256</strong>, ja seuraava jäsen saadaan <strong>jakamalla edellinen jäsen</strong> luvulla <strong>2</strong>.</p>
+					</div>
+				</div>
+				<h3>Tehtävä 5.6: Kuviojono</h3>
+				<div>
+					<p>Kuviojono 1</p>
+					<img srcset="ma7j3_malli_kuviojonot_1.png 1.5x">
+					<p>Kuviojono 2</p>
+					<img srcset="ma7j3_malli_kuviojonot_2.png 1.5x">
+					<p>Kuviojono 3</p>
+					<img srcset="ma7j3_malli_kuviojonot_3.png 1.5x">
+					<p>Kuviojono 4</p>
+					<img srcset="ma7j3_malli_kuviojonot_4.png 1.5x">
+					<p>Pisteiden lukumäärät</p>
+					<table>
+						<thead>
+							<tr>
+								<th colspan="2">Kuviojono 1</th>
+								<th style="border: 0px;"></th>
+								<th colspan="2">Kuviojono 2</th>
+								<th style="border: 0px;"></th>
+								<th colspan="2">Kuviojono 3</th>
+								<th style="border: 0px;"></th>
+								<th colspan="2">Kuviojono 4</th>
+							</tr>
+							<tr>
+								<th>Jäsen</th>
+								<th>Pisteet</th>
+								<th style="border: 0px;"></th>
+								<th>Jäsen</th>
+								<th>Pisteet</th>
+								<th style="border: 0px;"></th>
+								<th>Jäsen</th>
+								<th>Pisteet</th>
+								<th style="border: 0px;"></th>
+								<th>Jäsen</th>
+								<th>Pisteet</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>1</td>
+								<td style="border: 0px;"></td>
+								<td>1</td>
+								<td>1</td>
+								<td style="border: 0px;"></td>
+								<td>1</td>
+								<td>1</td>
+								<td style="border: 0px;"></td>
+								<td>1</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>3</td>
+								<td style="border: 0px;"></td>
+								<td>2</td>
+								<td>5</td>
+								<td style="border: 0px;"></td>
+								<td>2</td>
+								<td>4</td>
+								<td style="border: 0px;"></td>
+								<td>2</td>
+								<td>3</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>5</td>
+								<td style="border: 0px;"></td>
+								<td>3</td>
+								<td>9</td>
+								<td style="border: 0px;"></td>
+								<td>3</td>
+								<td>9</td>
+								<td style="border: 0px;"></td>
+								<td>3</td>
+								<td>6</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>7</td>
+								<td style="border: 0px;"></td>
+								<td>4</td>
+								<td>13</td>
+								<td style="border: 0px;"></td>
+								<td>4</td>
+								<td>16</td>
+								<td style="border: 0px;"></td>
+								<td>4</td>
+								<td>10</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>9</td>
+								<td style="border: 0px;"></td>
+								<td>5</td>
+								<td>17</td>
+								<td style="border: 0px;"></td>
+								<td>5</td>
+								<td>25</td>
+								<td style="border: 0px;"></td>
+								<td>5</td>
+								<td>15</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<h3>Tehtävä 5.10: Aritmeettisen lukujonon säännön muodostaminen</h3>
+				<div>
+					<p>Tarkastellaan aritmeettista lukujonoa, jonka kolme ensimmäistä jäsentä ovat \(\mathsf{2,5,8,...}\)</p>
+					<div class="indent">
+						<p>a) Kirjoita lukujonon sääntö ilmoittamalla jonon ensimmäinen jäsen sekä laskutoimitus, jolla seuraava jäsen lasketaan.</p>
+						<p class="indent">Lukujonon ensimmäinen jäsen on 2 ja seuraava jäsen saadaan lisäämällä edelliseen jäseneen luku 3.</p>
+						<p>b) Kirjoita lukujonon sääntö ilmoittamalla laskutoimitus, jolla voidaan laskea lukujonon järjestykseltään \(\mathsf{n}\):s jäsen.</p>
+						<p class="indent">\(\mathsf{3n-1}\)</p>
+						<p>c) Laske lukujonon 10. jäsen.</p>
+						<p class="indent">\(\mathsf{a_{10} = 3 \cdot 10 - 1 = 30 - 1 = 29}\)</p>
+						<p>d) Laske lukujonon 115. jäsen.</p>
+						<p class="indent">\(\mathsf{a_{115} = 3 \cdot 115 - 1 = 345 - 1 = 344}\)</p>
+					</div>
+				</div>
+				<h3>Tehtävä 5.11: Lukujonon jatkaminen</h3>
+				<div>
+					<p>Kirjoita lukujonon neljä seuraavaa jäsentä.</p>
+					<div class="indent">
+						<p>a) \(\mathsf{55, 46, 37, 28, 19, 10, 1, ...}\)</p>
+						<p>b) \(\mathsf{1, \dfrac{1}{2}, \dfrac{1}{3}, \dfrac{1}{4}, \dfrac{1}{5}, \dfrac{1}{6}, \dfrac{1}{7},...}\)</p>
+						<p>c) \(\mathsf{\text{1,5}; \text{1,6}; \text{1,7}; \text{1,8}; \text{1,9}; \text{2,0}; \text{2,1}; ...}\)</p>
+						<p>d) \(\mathsf{\text{0,53}; \text{0,42}; \text{0,31}; \text{0,20}; \text{0,09}; -0{,}02; -0{,}13; ...}\)</p>
+						<p>e) \(\mathsf{1, -2, 4, -8, 16, -32, 64, -128,...}\)</p>
+						<p>f) \(\mathsf{\text{0,04}; \text{0,2}; 1; 5; 25; 125; 625;...}\)</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			downloadGG();
+		</script>
+	</body>
+</html>
