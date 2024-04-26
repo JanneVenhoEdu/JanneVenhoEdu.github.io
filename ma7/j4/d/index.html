@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="fi">
+	<head>
+		<title>Malliratkaisut - MA7J4</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+		<script src="../../../teoria.js"></script>
+		<link rel="stylesheet" media="screen and (max-width: 350px)" href="../../../teorialohko.css">
+		<link rel="stylesheet" media="screen and (min-width: 350px)" href="../../../teoriakirja.css">
+	</head>
+	<body>
+		<div id="nav">
+			<div id="button">
+				<div id="bar1"></div>
+				<div id="bar2"></div>
+				<div id="bar3"></div>
+			</div>
+			<div id="links"></div>
+			<div id="caption"></div>
+			<a id="course" href="https://jannevenhoedu.github.io/ma7/j4/d" target="_blank"></a>
+		</div>
+		<div id="main">
+			<h1>MA7 Jakso 4: Malliratkaisut</h1>
+			<h2>1. Koordinaatisto ja piste</h2>
+			<div>
+				<h3>Tehtävä 1.1: Koordinaatistolämmittely</h3>
+				<div>
+					<h4>Kysymys 1 (Vedä kohde kuvan päälle)</h4>
+					<img srcset="ma7j4_malli_koordinaatisto1.png 1.5x">
+					<h4>Kysymys 2 (Vedä kohde kuvan päälle)</h4>
+					<img srcset="ma7j4_malli_koordinaatisto2.png 1.5x">
+					<h4>Kysymys 3 (Vedä kohde kuvan päälle)</h4>
+					<img srcset="ma7j4_malli_koordinaatisto3.png 1.5x">
+				</div>
+				<h3>Tehtävä 1.4: Koordinaatiston piirto</h3>
+				<div>
+					<p>Piirrä koordinaatisto, ja merkitse siihen seuraavat pisteet:</p>
+					<div class="flex indent">
+						<div style="width: 200px;">
+							<p>\(\mathsf{A = (-4, 3)}\)</p>
+							<p>\(\mathsf{B = (-2, 0)}\)</p>
+						</div>
+						<div style="width: 200px;">
+							<p>\(\mathsf{C = (2, 2)}\)</p>
+							<p>\(\mathsf{D = (0, -3)}\)</p>
+						</div>
+						<div style="width: 200px;">
+							<p>\(\mathsf{E = (3, -4)}\)</p>
+							<p>\(\mathsf{F = (5, 0)}\)</p>
+						</div>
+						<div>
+							<p>\(\mathsf{G = (-3, -2)}\)</p>
+							<p>\(\mathsf{H = (0, 2)}\)</p>
+						</div>
+					</div>
+					<img srcset="ma7j4_malli_koordinaatiston_piirto.png 1.5x">
+				</div>
+				<h3>Tehtävä 1.6: Koordinaatiston piirto</h3>
+				<div>
+					<p>Piirrä koordinaatisto, ja merkitse siihen seuraavat pisteet:</p>
+					<div class="flex indent">
+						<div style="width: 200px;">
+							<p>\(\mathsf{A = (0, 5)}\)</p>
+							<p>\(\mathsf{B = (3, -1)}\)</p>
+						</div>
+						<div style="width: 200px;">
+							<p>\(\mathsf{C = (-1, 1)}\)</p>
+							<p>\(\mathsf{D = (1, -3)}\)</p>
+						</div>
+						<div>
+							<p>\(\mathsf{E = (3, 3)}\)</p>
+							<p>\(\mathsf{F = (-3, 0)}\)</p>
+						</div>
+					</div>
+					<img srcset="ma7j4_malli_koordinaatiston_piirto2.png 1.5x">
+				</div>
+				<h3>Tehtävä 1.7: Käytännön koordinaatistoja (arvojen lukeminen)</h3>
+				<div>
+					<p><button class="image">Tehtävänannon kuva</button></p>
+					<div>
+						<img style="width: 800px;" src="https://jannevenhoedu.github.io/ma7/j4/p/01-koordinaatisto-ja-piste/ma7j4_reppu_lumen_syvyys_2021.png">
+					</div>
+					<p>Vastaa seuraaviin kysymyksiin yllä olevan koordinaatiston, ja siihen piirrettyjen pisteiden avulla.</p>
+					<div class="indent">
+					<p>a) Mikä on lumen syvyys, kun vuoden alusta on kulunut 15 päivää?</p>
+					<p class="indent"><strong>Vastaus:</strong> Lumen syvyys on <strong>20</strong> cm.</p>
+					<p>b) Mikä on lumen syvyys, kun vuoden alusta on kulunut 30 päivää?</p>
+					<p class="indent"><strong>Vastaus:</strong> Lumen syvyys on <strong>40</strong> cm.</p>
+					<p>c) Montako päivää vuoden alusta on kulunut, kun lumen syvyys on ollut tasan 10 cm?</p>
+					<p class="indent"><strong>Vastaus:</strong> Vuoden alusta on kulunut <strong>10</strong> päivää.</p>
+					<p>d) Montako päivää vuoden alusta on kulunut, kun lumen syvyys on saavuttanut suurimman arvonsa?</p>
+					<p class="indent"><strong>Vastaus:</strong> Vuoden alusta on kulunut <strong>52</strong> päivää.</p>
+					<p>e) Kuinka monta päivää lumen syvyys oli yli 36 cm?</p>
+					<p class="indent"><strong>Vastaus:</strong> Lumen syvyys oli yli 36 cm <strong>29</strong> päivän ajan.</p>
+					<p>f) Kuinka monta senttimetriä lumen syvyys väheni 57. päivän ja 84. päivän välillä?</p>
+					<p class="indent"><strong>Vastaus:</strong> Lumen syvyys väheni <strong>15</strong> cm.</p>
+					</div>
+				</div>
+			</div>
+			<h2>2. Erilaisia viivoja</h2>
+			<div>
+				<h3>Tehtävä 2.1: Viivalämmittely</h3>
+				<div>
+					<h4>Kysymys 1 (Aukkotehtävä)</h4>
+					<dl class="indent">
+						<dt>Viiva</dt>
+						<dd>Äärettömän ohut ja äärettömän tiheä peräkkäisten pisteiden muodostama jono.</dd>
+						<dt>Suora</dt>
+						<dd>Äärettömän pitkä suora viiva, joka nimetään kauttakulkupisteidensä avulla.</dd>
+						<dt>Puolisuora</dt>
+						<dd>Äärettömän pitkä suora viiva, joka on rajoitettu toisesta päästä. Nimetään alkupisteen ja kauttakulkupisteen avulla.</dd>
+						<dt>Jana</dt>
+						<dd>Kahden pisteen välinen suora viiva.</dd>
+						<dt>Yhdensuuntainen</dt>
+						<dd>Kaksi suoraa, jotka eivät koskaan leikkaa toisiaan.</dd>
+						<dt>Kohtisuora</dt>
+						<dd>Kaksi suoraa, jotka leikkaavat toisensa \(\mathsf{90\deg}\) kulmassa.</dd>
+					</dl>
+					<h4>Kysymys 2 (Vedä kohde kuvan päälle)</h4>
+					<img src="ma7j4_malli_viivalammittely.png">
+				</div>
+				<h3>Tehtävä 2.2: Viivat koordinaatistossa</h3>
+				<div>
+					<p>a) Piirrä koordinaatisto, ja merkitse siihen seuraavat pisteet:</p>
+					<div class="flex indent">
+						<div style="width: 200px;">
+							<p>\(\mathsf{A = (-4, 1)}\)</p>
+							<p>\(\mathsf{B = (2, 2)}\)</p>
+						</div>
+						<div style="width: 200px;">
+							<p>\(\mathsf{C = (1, 0)}\)</p>
+							<p>\(\mathsf{D = (0, 3)}\)</p>
+						</div>
+						<div style="width: 200px;">
+							<p>\(\mathsf{E = (-3, -2)}\)</p>
+							<p>\(\mathsf{F = (3, -4)}\)</p>
+						</div>
+					</div>
+					<p>b) Piirrä a-kohdan koordinaatistoon</p>
+					<div class="flex indent">
+						<div style="width: 200px;">
+							<p>\(\textsf{Suora AD}\)</p>
+							<p>\(\textsf{Suora EF}\)</p>
+						</div>
+						<div style="width: 200px;">
+							<p>\(\textsf{Puolisuora BD}\)</p>
+							<p>\(\textsf{Puolisuora CF}\)</p>
+						</div>
+						<div style="width: 200px;">
+							<p>\(\textsf{Jana BC}\)</p>
+							<p>\(\textsf{Jana AE}\)</p>
+						</div>
+					</div>
+					<img srcset="ma7j4_malli_viivat_koordinaatistossa.png 1.5x">
+				</div>
+				<h3>Tehtävä 2.3: Janat koordinaatistossa</h3>
+				<div>
+					<p>Piirrä tehtävän 1.4 koordinaatistoon seuraavat janat</p>
+					<div class="flex indent">
+						<div style="width: 200px;">
+							<p>\(\textsf{Jana AH}\)</p>
+							<p>\(\textsf{Jana CF}\)</p>
+						</div>
+						<div style="width: 200px;">
+							<p>\(\textsf{Jana BG}\)</p>
+							<p>\(\textsf{Jana DE}\)</p>
+						</div>
+						<div style="width: 200px;">
+							<p>\(\textsf{Jana AB}\)</p>
+							<p>\(\textsf{Jana EF}\)</p>
+						</div>
+						<div style="width: 200px;">
+							<p>\(\textsf{Jana CH}\)</p>
+							<p>\(\textsf{Jana DG}\)</p>
+						</div>
+					</div>
+					<img srcset="ma7j4_malli_janat_koordinaatistossa.png 1.5x">
+				</div>
+				<h3>Tehtävä 2.4: Suorien leikkauspisteet</h3>
+				<div>
+					<p>a) Piirrä koordinaatisto, ja siihen suora \(\textsf{s}\), joka kulkee pisteiden \(\mathsf{A = (-1, 4)}\) ja \(\mathsf{B = (3, -4)}\) kautta.</p>
+					<img srcset="ma7j4_malli_suorien_leikkauspisteet.png 1.5x">
+					<p>b) Missä pisteissä suora leikkaa koordinaattiakselit?</p>
+					<div class="indent">
+						<p>Suoran s ja x-akselin leikkaupiste: \(\mathsf{(1,0)}\)</p>
+						<p>Suoran s ja y-akselin leikkaupiste: \(\mathsf{(0,2)}\)</p>
+					</div>
+					<p>c) Piirrä samaan koordinaatistoon suora \(\textsf{k}\), joka kulkee origon ja pisteen \(\mathsf{C = (-3,3)}\) kautta.</p>
+					<p>d) Missä pisteessä suorat \(\textsf{s}\) ja \(\textsf{k}\) leikkaavat toisensa?</p>
+					<p class="indent">Suorien s ja k leikkauspiste: \(\mathsf{(2,-2)}\)</p>
+				</div>
+				<h3>Tehtävä 2.5: Viivat koordinaatistossa</h3>
+				<div>
+					<p>Piirrä tehtävän 1.6 koordinaatistoon</p>
+					<div class="indent">
+						<p>a) suora s, joka kulkee pisteiden A ja B kautta</p>
+						<p>b) suora k, joka kulkee pisteiden C ja D kautta</p>
+						<p>c) suora n, joka kulkee pisteiden E ja F kautta</p>
+						<p>d) suora p, joka kulkee pisteiden B ja D kautta</p>
+					</div>
+					<img srcset="ma7j4_malli_viivat_koordinaatistossa2.png 1.5x">
+					<div class="indent">
+						<p>e) Miten suorat s ja k ovat toisiinsa nähden?</p>
+						<p class="indent">Suorat s ja k ovat yhdensuuntaisia.</p>
+						<p>f) Miten suorat s ja n ovat toisiinsa nähden?</p>
+						<p class="indent">Suorat s ja n ovat kohtisuorassa toisiaan vastaan.</p>
+					</div>
+				</div>
+				<h3>Tehtävä 2.6: Yhdensuuntaisen suoran piirtäminen</h3>
+				<div>
+					<p>a) Piirrä suora \(\textsf{r}\), joka on yhdensuuntainen suoran \(\textsf{s}\) kanssa, ja kulkee pisteen \(\textsf{A}\) kautta.</p>
+					<p>b) Piirrä suora \(\textsf{p}\), joka on yhdensuuntainen suoran \(\textsf{t}\) kanssa, ja kulkee pisteen \(\textsf{B}\) kautta.</p>
+					<p>c) Piirrä suora \(\textsf{q}\), joka on yhdensuuntainen suoran \(\textsf{k}\) kanssa, ja kulkee pisteen \(\textsf{C}\) kautta.</p>
+					<img srcset="ma7j4_malli_yhdensuuntainen_normaali.png 1.2x">
+				</div>
+				<h3>Tehtävä 2.7: Normaalin piirtäminen</h3>
+				<div>
+					<p>a) Piirrä suora \(\textsf{n}\), joka kulkee pisteen \(\textsf{A}\) kautta, ja on suoran \(\textsf{s}\) normaali.</p>
+					<p>b) Piirrä suora \(\textsf{m}\), joka kulkee pisteen \(\textsf{B}\) kautta, ja on suoran \(\textsf{t}\) normaali.</p>
+					<p>c) Piirrä suora \(\textsf{f}\), joka kulkee pisteen \(\textsf{C}\) kautta, ja on suoran \(\textsf{k}\) normaali.</p>
+					<img srcset="ma7j4_malli_yhdensuuntainen_normaali2.png 1.2x">
+				</div>
+				<h3>Tehtävä 2.8: Viivat koordinaatistossa</h3>
+				<div>
+					<p>Piirrä koordinaatisto.</p>
+					<p>a) Piirrä suora \(\textsf{s}\), joka kulkee pisteiden \(\mathsf{A = (-3, 5)}\) ja \(\mathsf{B = (1, 3)}\) kautta.</p>
+					<p>b) Piirrä suora \(\textsf{n}\), joka kulkee pisteen \(\mathsf{C = (-2, 0)}\) kautta, ja on suoran \(\mathsf{s}\) normaali.</p>
+					<p>d) Piirrä suora \(\textsf{t}\), joka kulkee pisteen \(\mathsf{C}\) kautta, ja on suoran \(\mathsf{s}\) kanssa yhdensuuntainen.</p>
+					<p>f) Piirrä suora \(\textsf{m}\), joka kulkee pisteen \(\mathsf{D = (2, -5)}\) kautta, ja on suoran \(\mathsf{t}\) normaali.</p>
+					<img srcset="ma7j4_malli_viivat_koordinaatistossa3.png 1.5x">
+					<p>c) Missä pisteessä suora \(\textsf{n}\) leikkaa y-akselin?</p>
+					<p class="indent">Suora n leikkaa y-akselin pisteessä \(\mathsf{0,4)}\)</p>
+					<p>e) Missä pisteessä suora \(\textsf{t}\) leikkaa y-akselin?</p>
+					<p class="indent">Suora t leikkaa y-akselin pisteessä \(\mathsf{0,-1)}\)</p>
+					<p>g) Missä pisteessä suora \(\textsf{m}\) leikkaa suoran \(\textsf{s}\)?</p>
+					<p class="indent">Suora m leikkaa suoran s pisteessä \(\mathsf{5,1)}\)</p>
+				</div>
+				<h3>Tehtävä 2.9: Pisteen etäisyys suorasta</h3>
+				<div>
+					<p>Mittaa pisteen A etäisyys suorasta</p>
+					<div class="flex indent">
+						<div style="width: 50px;">a) s</div>
+						<div style="width: 50px;">b) k</div>
+						<div style="width: 50px;">c) p</div>
+						<div>d) t</div>
+					</div>
+					<img srcset="ma7j4_malli_pisteen_etaisyys_suorasta.png 1.5x">
+					<p>Tarkistuskenttä hyväksyy 1 mm virheen.</p>
+				</div>
+				<h3>Tehtävä 2.10: Muuttujalauseke koordinaatistossa</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 2.11: Suoran piirtäminen taulukoinnin avulla</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 2.12: Kulmakertoimen ja vakiotermin määrittäminen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 2.13: Suoran piirtäminen kulmakertoimen avulla</h3>
+				<div>
+				</div>
+			</div>
+			<h2>3. Kulma</h2>
+			<div>
+				<h3>Tehtävä 3.1: Kulmalämmittely</h3>
+				<div>
+					<h4>Kysymys 1 (Vedä kohde kuvan päälle)</h4>
+					<img src="ma7j4_malli_kulmalammittely1.png">
+					<h4>Kysymys 2 (Vedä kohde kuvan päälle)</h4>
+					<img src="ma7j4_malli_kulmalammittely2.png">
+					<h4>Kysymys 3 (Vedä kohde kuvan päälle)</h4>
+					<img src="ma7j4_malli_kulmalammittely3.png">
+				</div>
+				<h3>Tehtävä 3.5: Suorien välinen kulma</h3>
+				<div>
+					<p>Piirrä koordinaatisto.</p>
+					<p>a) Piirrä suora \(\textsf{s}\), joka kulkee pisteiden \(\mathsf{A = (-3, 5)}\) ja \(\mathsf{B = (2, 0)}\) kautta.</p>
+					<p>b) Piirrä suora \(\textsf{k}\), joka kulkee pisteen \(\mathsf{C = (-5, -1)}\) kautta ja \(\mathsf{D = (5, 5)}\) kautta.</p>
+					<p>d) Suorat muodostavat leikkauspisteen ympärille neljä kulmaa. Mittaa kulmien suuruudet.</p>
+					<img srcset="ma7j4_malli_suorien_valinen_kulma.png 1.5x">
+					<p>c) Mikä on suorien leikkauspiste?</p>
+					<p class="indent">Suorien leikkauspiste on \(\mathsf{(0, 2)}\).</p>
+					<p>e) Mitä erikoista huomaat?</p>
+					<p class="indent">Suorien leikkauspisteen ympärille muodostuneista kulmista toisiaan vastassa olevat kulmat (ristikulmat) ovat yhtä suuret.</p>
+				</div>
+				<h3>Tehtävä 3.7: Kulmalaskuja</h3>
+				<div>
+					<p><button class="image">Alkuperäinen kuva</button></p>
+					<div>
+						<img src="https://jannevenhoedu.github.io/ma7/j4/p/03-kulma/ma7j5_reppu_risti_ja_vieruskulmia.png">
+					</div>
+					<p>Laske kulmien \(\alpha\), \(\beta\), \(\gamma\) ja \(\delta\) arvot.</p>
+					<div class="indent">
+						<p>&alpha;, suora kulma ja 52&deg; kulma muodostavat yhdessä oikokulman.</p>
+						<p class="indent">\(\alpha = \mathsf{180^\circ - 90^\circ - 52^\circ = 38^\circ}\)</p>
+						<p>Kaksi &beta;:a ja 64&deg; kulma muodostavat yhdessä oikokulman.</p>
+						<p class="indent">\(\beta = \mathsf{\dfrac{180^\circ - 64^\circ}{2} = 58^\circ}\)</p>
+						<p>&gamma; ja 48&deg; kulma ovat 147&deg; kulman ristikulma.</p>
+						<p class="indent">\(\gamma = \mathsf{147^\circ - 48^\circ = 99^\circ}\)</p>
+						<p>&delta; ja 147&deg; kulma muodostavat yhdessä oikokulman.</p>
+						<p class="indent">\(\delta = \mathsf{180^\circ - 147^\circ = 33^\circ}\)</p>
+					</div>
+				</div>
+				<h3>Tehtävä 3.8: Suorien välinen kulma</h3>
+				<div>
+					<p>Suorien välinen kulma on niiden leikkauspisteeseen muodostuvista kulmista pienempi. Mittaa suorien</p>
+					<div class="indent">
+						<p>a) s ja p välinen kulma.</p>
+						<p class="indent">&angsph;(s,p) = 71&deg;</p>
+						<p>b) p ja t välinen kulma.</p>
+						<p class="indent">&angsph;(p,t) = 90&deg;</p>
+						<p>c) s ja k välinen kulma.</p>
+						<p class="indent">&angsph;(s,k) = 82&deg;</p>
+						<p>d) k ja t välinen kulma.</p>
+						<p class="indent">&angsph;(k,t) = 63&deg;</p>
+					</div>
+					<img srcset="ma7j4_malli_suorien_valinen_kulma2.png 1.5x">
+				</div>
+				<h3>Tehtävä 3.9: Suorien välinen kulma</h3>
+				<div>
+					<p>a) Piirrä kaksi keskenään yhdensuuntaista suoraa.</p>
+					<p>b) Piirrä kolmas suora, joka leikkaa molempia a-kohdassa piirrettyjä suoria. Suora ei saa olla kohtisuorassa aiempia suoria vastaan.</p>
+					<p>c) Mittaa molempien leikkauspisteiden ympärille muodostuneet neljä kulmaa.</p>
+					<p>d) Mitä erikoista huomaat?</p>
+					<p class="indent">Samankohtaiset kulmat ovat yhtä suuret.</p>
+					<img srcset="ma7j4_malli_suorien_valinen_kulma3.png 1.5x">
+				</div>
+				<h3>Tehtävä 3.10: Samankohtaiset kulmat</h3>
+				<div>
+					<p>a) Laske kulmien \(\alpha\), \(\beta\), \(\gamma\) ja \(\delta\) suuruudet, kun suorat \(\textsf{k}\) ja \(\textsf{t}\) ovat yhdensuuntaiset. <button class="image">Alkuperäinen kuva</button></p>
+					<div>
+						<img style="width: 500px;" src="https://jannevenhoedu.github.io/ma7/j4/p/03-kulma/ma7j5_reppu_samankohtaiset_1.png">
+					</div>
+					<div class="indent">
+						<p>\(\mathsf{\alpha = 115^\circ}\) (115&deg; kulman kanssa samankohtainen kulma)</p>
+						<p>\(\mathsf{\beta = 180^\circ - 115^\circ = 65^\circ}\) (&alpha;:n vieruskulma)</p>
+						<p>\(\mathsf{\gamma = 65^\circ}\) (&beta;:n ristikulma)</p>
+						<p>\(\mathsf{\delta = 115^\circ}\) (&alpha;:n ristikulma)</p>
+					</div>
+					<p>b) Ovatko suorat \(\textsf{k}\) ja \(\textsf{t}\) yhdensuuntaiset? Perustele. <button class="image">Alkuperäinen kuva</button></p>
+					<div>
+						<img style="width: 500px;" src="https://jannevenhoedu.github.io/ma7/j4/p/03-kulma/ma7j5_reppu_samankohtaiset_2.png">
+					</div>
+					<p class="indent">Suorat k ja t eivät ole yhdensuuntaisia, koska 91&deg; kulman samankohtainen kulma on 91&deg; kulman vieruskulma eli 89&deg;.</p>
+					<p>c) Laske kulmien \(\alpha\), \(\beta\), \(\gamma\) ja \(\delta\) suuruudet, kun suorat \(\textsf{s}\) ja \(\textsf{t}\) ovat yhdensuuntaiset. <button class="image">Alkuperäinen kuva</button></p>
+					<div>
+						<img style="width: 500px;" src="https://jannevenhoedu.github.io/ma7/j4/p/03-kulma/ma7j5_reppu_samankohtaiset_3.png">
+					</div>
+					<div class="indent">
+						<p>\(\mathsf{\alpha = 61^\circ}\) (61&deg; kulman ristikulma)</p>
+						<p>\(\mathsf{\beta = 180^\circ - 61^\circ - 73^\circ = 46^\circ}\) (&alpha;:n ja 73&deg; kulman vieruskulma)</p>
+						<p>\(\mathsf{\gamma = 46^\circ}\) (samankohtainen kulma kuin &beta;)</p>
+						<p>\(\mathsf{\delta = 73^\circ}\) (samankohtainen kulma 73&deg; kulman ristikulman kanssa)</p>
+					</div>
+				</div>
+			</div>
+			<h2>4. Kulman mittaaminen ja piirtäminen</h2>
+			<div>
+				<h3>Tehtävä 4.1: Kulman piirtäminen ja mittaaminen</h3>
+				<div>
+					<p>Piirrä</p>
+					<div class="indent flex">
+						<p>a) terävä kulma</p>
+						<p>b) tylppä kulma</p>
+						<p>c) oikokulma</p>
+						<p>d) suora kulma</p>
+						<p>e) kupera kulma</p>
+						<p>f) täysi kulma.</p>
+						<p>h) Mittaa a-, b- ja e-kohdissa piirtämiesi kulmien suuruudet ja merkitse ne kuvaan.</p>
+					</div>
+					<p>Muista merkitä kulmaan kaari.</p>
+					<img srcset="ma7j4_malli_kulman_piirto_ja_mittaus.png 1.5x">
+				</div>
+				<h3>Tehtävä 4.2: Kulman piirtäminen</h3>
+				<div>
+					<p>Piirrä kulma, jonka suuruus on</p>
+					<div class="indent flex">
+						<p>a) 25°</p>
+						<p>b) 134°</p>
+						<p>c) 45°</p>
+						<p>d) 90°</p>
+						<p>e) 115°</p>
+						<p>f) 200°</p>
+					</div>
+					<p>Muista merkitä kulman kaari ja kulman suuruus kuvaan.</p>
+					<img srcset="ma7j4_malli_kulman_piirtaminen.png 1.5x">
+				</div>
+				<h3>Tehtävä 4.3: Kulman mittaaminen</h3>
+				<div>
+					<p>a) α = 32&deg;</p>
+					<p>b) β = 143&deg;</p>
+					<p>c) γ = 188&deg;</p>
+					<p>d) δ = 88&deg;</p>
+					<p>e) &angsph;ABC = 58&deg;</p>
+					<p>f) &angsph;VYK = 246&deg;</p>
+					<p>g) &angsph;PQR = 115&deg;</p>
+					<img srcset="ma7j4_malli_kulmia.png 1.5x">
+				</div>
+				<h3>Tehtävä 4.5: Kulman mittaaminen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 4.6: Kulman piirtäminen 2</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 4.7: Mallikuvan piirtäminen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 4.8: Sormien kulmat</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 4.9: Kellon viisarit</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 4.10: Pekka ja Marjatta</h3>
+				<div>
+				</div>
+			</div>
+			<h2>5. Ympyrä</h2>
+			<div>
+				<h3>Tehtävä 5.1: Ympyrälämmittely</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 5.2: Ympyrän piirtäminen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 5.3: Kehä- ja keskuskulma -tutkimus</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 5.4: Kehä- ja keskuskulman laskeminen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 5.5: Kulmalaskuja</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 5.6: Tangentti</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 5.7: Viisareiden välinen kulma</h3>
+				<div>
+				</div>
+			</div>
+			<h2>6. Geometrinen piirtäminen</h2>
+			<div>
+				<h3>Tehtävä 6.1: Harppiharjoitus (kukka)</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 6.2: Keskinormaalin piirtäminen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 6.3: Kulmanpuolittajan piirtäminen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 6.4: Janan siirtäminen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 6.5: Kulman siirtäminen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 6.6: Tangentin piirtäminen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 6.7: Kolmiot ja ympyrät</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 6.8: Ympyrän keskipisteen etsiminen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä: Viisareiden välinen kulma 2</h3>
+				<div>
+				</div>
+			</div>
+		</div>
+		<script>
+			downloadGG();
+			$(document).ready(function(){
+				$(".image").css({
+					"padding": "5px",
+					"background-color": "#00990032",
+					"border": "hidden",
+					"border-radius": "5px"
+				});
+				$(".image").parent().next().css({
+					"margin": "0px 0px 10px 30px",
+					"display": "none",
+					"padding": "10px 10px 5px 10px"
+				});
+				$(".image").click(function() {
+					$(this).parent().next().slideToggle();
+				});
+			});
+		</script>
+	</body>
+</html>
