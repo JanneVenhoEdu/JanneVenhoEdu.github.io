@@ -111,4 +111,16 @@ $(document).ready(function() {
 			$(this).html("Laajenna");
 		}
 	});
+	$(".reuse").each(function(){
+		var id = $(this).attr("id");
+		[grade, period, chapter, assignment] = id.split("_");
+		$.get("https://jannevenhoedu.github.io/" + grade + "/" + period + "/d/index.html", function(data){
+			var content = $(data).find("h3:contains('Tehtävä " + chapter + "." + assignment + "')").next("div").html();
+			var target = $("#" + id).next();
+			target.html(content);
+			if (window.MathJax){
+				MathJax.typesetPromise([target[0]]);
+			}
+		});
+	});
 });
