@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="fi">
+	<head>
+		<title>Malliratkaisut - MA7J5</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+		<script src="../../../teoria.js"></script>
+		<link rel="stylesheet" media="screen and (max-width: 350px)" href="../../../teorialohko.css">
+		<link rel="stylesheet" media="screen and (min-width: 350px)" href="../../../teoriakirja.css">
+	</head>
+	<body>
+		<div id="nav">
+			<div id="button">
+				<div id="bar1"></div>
+				<div id="bar2"></div>
+				<div id="bar3"></div>
+			</div>
+			<div id="links"></div>
+			<div id="caption"></div>
+			<a id="course" href="https://jannevenhoedu.github.io/ma7/j5/d" target="_blank"></a>
+		</div>
+		<div id="main">
+			<h1>MA7 Jakso 5: Malliratkaisut</h1>
+			<h2>1. Kertausta: Desimaaliluvut</h2>
+			<div>
+				<h3 class="reuse" id="ma7_j1_9_5">Tehtävä 1.3: Desimaaliluvun sanallinen muutos</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 1.7: Laskuja desimaaliluvuilla</h3>
+				<div>
+					<p>Laske ilman laskinta.</p>
+					<div class="indent">
+						<p>a) \(\mathsf{4{,}3 + 5{,}6 = 9{,}9}\)</p>
+						<p>b) \(\mathsf{0{,}75 + 1{,}07 = 1{,}82}\)</p>
+						<p>c) \(\mathsf{8{,}7 - 3{,}85 = 4{,}85}\)</p>
+						<p>d) \(\mathsf{9{,}05 \cdot 10 = 90{,}5}\)</p>
+						<p>e) \(\mathsf{0{,}5 \cdot 0{,}9 = 0{,}45}\)</p>
+						<p>f) \(\mathsf{3{,}2 \cdot 0{,}3 = 0{,}96}\)</p>
+					</div>
+				</div>
+			</div>
+			<h2>2. Pituusyksiköt</h2>
+			<div>
+				<h3>Tehtävä 2.1: Pituusyksikkölämmittely</h3>
+				<div>
+					<h4>Kysymys 1 (Vedä kohde kuvan päälle)</h4>
+					<img src="ma7j5_malli_pituusyksikkolammittely.png">
+				</div>
+				<h3>Tehtävä 2.4: Pituustehtäviä</h3>
+				<div>
+					<p>Muunna samaan yksikköön, ja laske</p>
+					<div class="indent">
+						<p>a) \(\mathsf{\text{15,3 cm} + \text{452 mm} = \text{15,3 cm} + \text{45,2 cm} = \text{60,5 cm}}\)</p>
+						<p>b) \(\mathsf{2 \cdot (\text{1 250 m} - \text{0,35 km}) = 2 \cdot (\text{1 250 m} - \text{350 m}) = 2 \cdot \text{900 m} = \text{1 800 m}}\)</p>
+						<p>c) kolmion piiri, kun sen sivujen pituudet ovat 4,3 cm, 25 mm ja 1,04 dm.</p>
+						<p class="indent">\(\begin{align}\mathsf{p} &= \mathsf{\text{4,3 cm} + \text{25 mm} + \text{1,04 dm}}\\ &= \mathsf{\text{4,3 cm} + \text{2,5 cm} + \text{10,4 cm}}\\ &= \mathsf{17,2 cm}\end{align}\)</p>
+						<p>d) suunnikkaan piiri, kun sen sivujen pituudet ovat 800 m ja 1,3 km.</p>
+						<p class="indent">\(\begin{align}\mathsf{p} &= \mathsf{2 \cdot \text{800 m} + 2 \cdot \text{1,3 km}}\\ &= \mathsf{2 \cdot \text{0,8 km} + 2 \cdot \text{1,3 km}}\\ &= \mathsf{\text{1,6 km} + \text{2,6 km}}\\ &= \mathsf{\text{4,2 km}}\end{align}\)</p>
+					</div>
+					<p>Laske, muuta vastauksen yksikkö metreiksi ja pyöristä vastaus yhden desimaalin tarkkuuteen.</p>
+					<div class="indent">
+						<p>e) \(\mathsf{\text{12,3 dm} - \text{3,4 dm} = \text{8,9 dm} = \text{0,89 m} \approx \text{0,9 m}}\)</p>
+						<p>f) \(\mathsf{8 \cdot \text{250 cm}  + \text{212 cm} = \text{2 212 cm} = \text{22,12 m} \approx \text{22,1 m}}\)</p>
+					</div>
+				</div>
+			</div>
+			<h2>3. Pinta-alayksiköt</h2>
+			<div>
+				<h3>Tehtävä 3.1: Pinta-alayksikkölämmittely</h3>
+				<div>
+					<h4>Kysymys 1 (Vedä kohde kuvan päälle)</h4>
+					<img src="ma7j5_malli_pinta_alayksikkolammittely.png">
+				</div>
+				<h3>Tehtävä 3.4: Urheilukenttien pinta-aloja</h3>
+				<div>
+					<p>Harri mittasi ja laski eri urheilulajeissa käytettyjen kenttien pinta-aloja. Harri sai kentät suuruusjärjestykseen, mutta sotki pinta-alat. Lisäksi ne ovat eri yksiköissä. Muunna kaikki pinta-alat aareiksi (a) ja järjestä ne oikean lajin kohdalle (suuruusjärjestykseen).</p>
+					<table>
+						<tbody>
+							<tr>
+								<td>0,0008 km<sup>2</sup> = 8 a</td>
+								<td>8200 dm<sup>2</sup> = 0,82 a</td>
+								<td>0,156 ha = 15,6 a</td>
+								<td>162 m<sup>2</sup> = 1,62 a</td>
+							</tr>
+							<tr>
+								<td>327 600 dm<sup>2</sup> = 32,76 a</td>
+								<td>0,02 ha = 2 a</td>
+								<td>7140 m<sup>2</sup> = 71,4 a</td>
+								<td>0,00026 km<sup>2</sup> = 2,6 a</td>
+							</tr>
+							<tr>
+								<td>62 m<sup>2</sup> = 0,62 a</td>
+								<td>0,0078 ha = 0,78 a</td>
+								<td>12 800 dm<sup>2</sup> = 1,28 a</td>
+								<td>6,7 m<sup>2</sup> = 0,067 a</td>
+							</tr>
+						</tbody>
+					</table>
+					<p>Kentät suuruusjärjestyksessä:</p>
+					<table>
+						<tbody>
+							<tr>
+								<td>1.</td>
+								<td>Jalkapallo:</td>
+								<td>71,4 a</td>
+							</tr>
+							<tr>
+								<td>2.</td>
+								<td>Pesäpallo:</td>
+								<td>32,76 a</td>
+							</tr>
+							<tr>
+								<td>3.</td>
+								<td>Jääkiekko:</td>
+								<td>15,6 a</td>
+							</tr>
+							<tr>
+								<td>4.</td>
+								<td>Salibandy:</td>
+								<td>8 a</td>
+							</tr>
+							<tr>
+								<td>5.</td>
+								<td>Tennis:</td>
+								<td>2,6 a</td>
+							</tr>
+							<tr>
+								<td>6.</td>
+								<td>Padel:</td>
+								<td>2 a</td>
+							</tr>
+							<tr>
+								<td>7.</td>
+								<td>Lentopallo:</td>
+								<td>1,62 a</td>
+							</tr>
+							<tr>
+								<td>8.</td>
+								<td>Rantalentopallo:</td>
+								<td>1,28 a</td>
+							</tr>
+							<tr>
+								<td>9.</td>
+								<td>Sulkapallo:</td>
+								<td>0,82 a</td>
+							</tr>
+							<tr>
+								<td>10.</td>
+								<td>Pickelball:</td>
+								<td>0,78 a</td>
+							</tr>
+							<tr>
+								<td>11.</td>
+								<td>Squash:</td>
+								<td>0,62 a</td>
+							</tr>
+							<tr>
+								<td>12.</td>
+								<td>Snooker:</td>
+								<td>0,067 a</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<h2>4. Pyöristäminen</h2>
+			<div>
+				<h3>Tehtävä 4.3: Pituuslaskuja ja pyöristämistä</h3>
+				<div>
+					<p>Laske ja pyöristä vastaus epätarkimman lähtöarvon desimaalien lukumäärän mukaisesti.</p>
+					<div class="indent">
+						<p>a) \(\mathsf{\text{4,3 m} + \text{2,05 m} + \text{5,42 m} = \text{11,77 m} \approx \text{11,8 m}}\)</p>
+						<p>b) \(\mathsf{\text{20 km} - \text{5,2 km} - \text{8,5 km} = \text{6,3 km} \approx \text{6 km}}\)</p>
+						<p>c) Tiina mittasi matkan puistosta koululle polkupyörän mittarilla ja sai tulokseksi 1,4 km. Jaana mittasi matkan koululta kaupalle puhelimen GPS-sovelluksen avulla ja sai tulokseksi 2,85 km. Kuinka pitkä matka on puistosta koulun kautta kaupalle?</p>
+						<div class="indent">
+							<p>\(\mathsf{\text{1,4 km} + \text{2,85 km} = \text{4,25 km} \approx \text{4,3 km}}\)</p>
+							<p><strong>Vastaus:</strong> Matka puistosta koulun kautta kaupalle on 4,3 kilmetriä.</p>
+						</div>
+					</div>
+				</div>
+				<h3>Tehtävä 4.7: Pinta-alatehtäviä ja pyöristämistä</h3>
+				<div>
+					<p>Laske monikulmon pinta-ala. Pyöristä vastaus.</p>
+					<div class="indent">
+					<p>a) <button class="image">Alkuperinen kuva</button></p>
+					<div>
+						<img style="width: 300px;" src="https://jannevenhoedu.github.io/ma8/j5/p/01-kertausta/ma8j5_reppu_pintaala_pyoristys1.png">
+					</div>
+					<p class="indent">\(\mathsf{A = \text{9,4 cm} \cdot \text{4,7 cm} = \text{44,18 cm}^2 \approx \text{44 cm}^2}\)</p>
+					<p>b) <button class="image">Alkuperinen kuva</button></p>
+					<div>
+						<img style="width: 350px;" src="https://jannevenhoedu.github.io/ma8/j5/p/01-kertausta/ma8j5_reppu_pintaala_pyoristys2.png">
+					</div>
+					<p class="indent">\(\mathsf{A = \dfrac{\text{5,6 m} \cdot \text{12,3 m}}{2} = \text{34,44 m}^2 \approx \text{34 m}^2}\)</p>
+					<p>c) Suorakulmaisen kolmion sivujen pituudet ovat 4,6 cm, 13,2 cm ja 14 cm. Laske kolmion pinta-ala.</p>
+					<p class="indent">\(\mathsf{A = \dfrac{\text{4,6 cm} \cdot \text{13,2 cm}}{2} = \text{30,36 cm}^2 \approx \text{30 cm}^2}\)</p>
+					</div>
+				</div>
+				<h3>Tehtävä 4.8: Suurten tai päättymättömien lukujen pyöristäminen</h3>
+				<div>
+					<p>Selvitä luku internetistä, ja pyöristä luku kolmen merkitsevän numeron tarkkuuteen.</p>
+					<div class="indent">
+						<p>a) Ympyrän kehän pituuden ja halkaisijan suhteen, eli piin (\(\pi\)) likiarvo</p>
+						<p class="indent">\(\mathsf{\pi = \text{3,1415926535...} \approx \text{3,14}}\)</p>
+						<p>b) Valon nopeus tyhjiössä (m/s), eli \(\mathsf{c}\)</p>
+						<p class="indent">\(\mathsf{c = \text{299 792 458 m/s} \approx \text{300 000 000 m/s}}\)</p>
+						<p>c) Maapallon ympärysmitta (päiväntasaajan kohdalta) (km)</p>
+						<p class="indent">\(\mathsf{\text{40 075 km} \approx \text{40 100 km}}\)</p>
+						<p>d) Marathon-juoksu (km)</p>
+						<p class="indent">\(\mathsf{\text{42,195 km} \approx \text{42,2 km}}\)</p>
+						<p>e) Maapallon keskietäisyys kuusta (km)</p>
+						<p class="indent">\(\mathsf{\text{384 400 km} \approx \text{384 000 km}}\)</p>
+						<p>f) Kultaisen leikkauksen suhteen, eli fiin \(\phi\) likiarvo</p>
+						<p class="indent">\(\mathsf{\phi = \dfrac{1 + \sqrt{5}}{2} = \text{1,61803...} \approx \text{1,62}}\)</p>
+					</div>
+				</div>
+			</div>
+			<h2>5. Monikulmiot</h2>
+			<div>
+				<h3>Tehtävä 5.1: Monikulmiolämmittely</h3>
+				<div>
+					<h4>Kysymys 1 (Vedä kohde kuvan päälle)</h4>
+					<img srcset="ma7j5_malli_monikulmiolammittely.png 1.5x">
+					<h4>Kysymys 2 (Aukkotehtävä)</h4>
+					<p>Nimeä monikulmiot, esimerkiksi "Kolmio ABC". Aloita nimeäminen punaisesta kirjaimesta.<br>Vastaa myös monikulmion kulmien ja sivujen lukumäärää koskeviin kysymyksiin.</p>
+					<div class="flex">
+						<img style="width: 200px;" src="https://jannevenhoedu.github.io/ma7/j5/p/05-monikulmiot/monikulmiolammittely/ma7j5_reppu_monikulmiolammittely_kolmio.png">
+						<div>
+							<p>Nimi: kolmio HPK</p>
+							<p>Kulmia: 3</p>
+							<p>Sivuja: 3</p>
+						</div>
+					</div>
+					<div class="flex">
+						<img style="width: 200px;" src="https://jannevenhoedu.github.io/ma7/j5/p/05-monikulmiot/monikulmiolammittely/ma7j5_reppu_monikulmiolammittely_nelikulmio.png">
+						<div>
+							<p>Nimi: nelikulmio LUMI</p>
+							<p>Kulmia: 4</p>
+							<p>Sivuja: 4</p>
+						</div>
+					</div>
+					<div class="flex">
+						<img style="width: 200px;" src="https://jannevenhoedu.github.io/ma7/j5/p/05-monikulmiot/monikulmiolammittely/ma7j5_reppu_monikulmiolammittely_viisikulmio.png">
+						<div>
+							<p>Nimi: viisikulmio KOIRA</p>
+							<p>Kulmia: 5</p>
+							<p>Sivuja: 5</p>
+						</div>
+					</div>
+					<div class="flex">
+						<img style="width: 200px;" src="https://jannevenhoedu.github.io/ma7/j5/p/05-monikulmiot/monikulmiolammittely/ma7j5_reppu_monikulmiolammittely_kuusikulmio.png">
+						<div>
+							<p>Nimi: kuusikulmio TASURI</p>
+							<p>Kulmia: 6</p>
+							<p>Sivuja: 6</p>
+						</div>
+					</div>
+				</div>
+				<h3>Tehtävä 5.3: Monikulmio koordinaatistossa</h3>
+				<div>
+					<p>a) Piirrä koordinaatisto, ja siihen pisteet</p>
+					<div class="flex indent">
+						<p style="padding-right: 10px;">\(\mathsf{A=(-5,-2)}\)</p>
+						<p style="padding-right: 10px;">\(\mathsf{B=(-1,-5)}\)</p>
+						<p style="padding-right: 10px;">\(\mathsf{C=(5,3)}\)</p>
+						<p style="padding-right: 10px;">\(\mathsf{D=(-5, 3)}\)</p>
+					</div>
+					<p>b) Piirrä nelikulmio ABCD</p>
+					<p>c) Mittaa monikulmion sivujen pituudet ja merkitse ne kuvaan.</p>
+					<p>d) Laske nelikulmion ABCD piiri.</p>
+					<p class="indent">\(\mathsf{p = \text{3,5 cm} + \text{3,5 cm} + \text{7,0 cm} + \text{7,0 cm} = \text{21,0 cm}}\)</p>
+					<img srcset="ma7j5_malli_monikulmio_koordinaatistossa.png 1.5x">
+				</div>
+				<h3>Tehtävä 5.4: Monikulmion kulmien summa</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 5.5: Monikulmion piiri ja pinta-ala</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 5.6: Säännöllisen monikulmion kulmat</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 5.7: Säännöllisen monikulmion keskuskulma</h3>
+				<div>
+				</div>
+			</div>
+			<h2>6. Kolmio</h2>
+			<div>
+				<h3>Tehtävä 6.1: Kolmioiden luokittelu</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 6.2: Kolmion kulmien summa</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 6.4: Kolmion tuntemattoman kulman laskeminen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 6.5: Kolmion piirtäminen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 6.7: Kolmiolaskuja</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 6.8: Kolmion puuttuvat palaset</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 6.9: Kolmion tuntemattoman kulman laskeminen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 6.11: Kolmion piirtäminen</h3>
+				<div>
+				</div>
+			</div>
+			<h2>7. Nelikulmio</h2>
+			<div>
+				<h3>Tehtävä 7.1: Nelikulmiolämmittely</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 7.2: Nelikulmion kulmien summa</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 7.4: Nelikulmion tuntemattoman kulman laskeminen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 7.5: Nelikulmion piirtäminen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 7.7: Suorakulmion piiri ja pinta-ala</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 7.8: Piirejä ja pinta-aloja (mittausvihko)</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 7.9: Nelikulmion tuntemattoman kulman laskeminen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 7.10: Suunnikkaan piirtäminen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 7.11: Piirejä ja pinta-aloja (mittausvihko)</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 7.12: Aidan rakentaminen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 7.13: Suorakulmion muodostaminen ruuduista</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 7.14: Neljäkkään piirtäminen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 7.15: Piiri- ja pinta-alatehtäviä</h3>
+				<div>
+				</div>
+			</div>
+			<h2>8. Yhtenevyys</h2>
+			<div>
+				<h3>Tehtävä 8.1: Johdatus yhtenevyyteen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 8.2: Peilaus suoran suhteen (mittausvihko)</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 8.3: Peilaus suoran suhteen (koordinaatisto)</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 8.4: Symmetria-akseli (mittausvihko)</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 8.5: Liikennemerkkien symmetria-akselit</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 8.6: Siirto (mittausvihko)</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 8.7: Peilaus pisteen suhteen (mittausvihko)</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 8.8: Symmetriakeskus (mittausvihko)</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 8.9: Liikennemerkkien symmetrisyys</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 8.10: Kierto (mittausvihko)</h3>
+				<div>
+				</div>
+			</div>
+			<h2>9. Yhdenmuotoisuus</h2>
+			<div>
+				<h3>Tehtävä 9.1: Johdatus yhdenmuotoisuuteen</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 9.2: Suhde</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 9.3: Suurennoksia ja pienennöksiä</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 9.4: Kartan mittakaavan käyttö (mittausvihko)</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 9.5: Kartan mittakaavan määrittäminen (mittausvihko)</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 9.6: Karttatehtäviä</h3>
+				<div>
+				</div>
+				<h3>Tehtävä 9.7: Karttatehtäviä 2 (mittausvihko)</h3>
+				<div>
+				</div>
+			</div>
+		</div>
+		<script>
+			downloadGG();
+			$(document).ready(function(){
+				$(".image").css({
+					"padding": "5px",
+					"background-color": "#00990032",
+					"border": "hidden",
+					"border-radius": "5px"
+				});
+				$(".image").parent().next().css({
+					"margin": "0px 0px 10px 30px",
+					"display": "none",
+					"padding": "10px 10px 5px 10px"
+				});
+				$(".image").click(function() {
+					$(this).parent().next().slideToggle();
+				});
+			});
+		</script>
+	</body>
+</html>
