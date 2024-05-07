@@ -107,6 +107,7 @@ $(document).ready(function() {
 		navOpen = false;
 		window.dispatchEvent(resizeEvent);
 	});
+	// Tiivistetyn ja laajennetun kaavavaihtoehdon napin luominen ja vaihtokoodi
 	$(".compact, .extended").parent().prepend("<button class='info' style='padding: 0px 5px; border-radius: 5px; height: 20px; font-size: 12px; background-color: #00990032; border: none'>Laajenna</button>&nbsp;");
 	$(".info").click(function(){
 		$(this).siblings().toggle();
@@ -116,6 +117,7 @@ $(document).ready(function() {
 			$(this).html("Laajenna");
 		}
 	});
+	// Tehtävän uudelleenkäyttö
 	$(".reuse").each(function(){
 		var id = $(this).attr("id");
 		[grade, period, chapter, assignment] = id.split("_");
@@ -127,5 +129,9 @@ $(document).ready(function() {
 				MathJax.typesetPromise([target[0]]);
 			}
 		});
+	});
+	// Kuvan piilottamiseen liittyvät toiminnallisuudet
+	$(".image").click(function() {
+		$(this).parent().next().slideToggle();
 	});
 });
