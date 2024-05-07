@@ -163,3 +163,16 @@ dt {
 dd {
 	padding-bottom: 10px;
 }
+
+.image {
+	padding: 5px;
+	background-color: #00990032;
+	border: hidden;
+	border-radius: 5px;
+}
+
+p:has(button.image) + div {
+	margin: 0px 0px 10px 30px;
+	display: none;
+	padding: 10px 10px 5px 10px;
+}
