@@ -57,11 +57,16 @@ $(document).ready(function() {
 		title.attr("class", i);
 		chapter.hide();
 	}
-	// Näytetään ensimmäinen luku (otsikko + sisältö)
-	titles.first().addClass("activeChapter");
-	titles.first().next().show();
+	// Näytetään haluttu luku (otsikko + sisältö)
+	var active = 0;
+    var searchParams = new URLSearchParams(window.location.search);
+	if (searchParams.has("chapter")){
+		active = searchParams.get("chapter");
+	}
+	titles.eq(active).addClass("activeChapter");
+	titles.eq(active).next().show();
 	// Lisätään ensimmäisen luvun otsikko ja kurssin nimi navigointipalkkiin
-	$("#caption").html(titles.first().html());
+	$("#caption").html(titles.eq(active).html());
 	$("#course").html($("h1").html());
 	// Alaotsikoiden piilottaminen ja toiminta klikattaessa
 	$("h3").next().hide();
