@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fi">
+	<head>
+		<title>Teoria - Yhtälönratkaisu</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+		<script src="../../../teoria.js"></script>
+		<link rel="stylesheet" media="screen and (max-width: 350px)" href="../../../teorialohko.css">
+		<link rel="stylesheet" media="screen and (min-width: 350px)" href="../../../teoriakirja.css">
+	</head>
+	<body>
+		<div id="nav">
+			<div id="button">
+				<div id="bar1"></div>
+				<div id="bar2"></div>
+				<div id="bar3"></div>
+			</div>
+			<div id="links"></div>
+			<div id="caption"></div>
+			<a id="course" href="https://jannevenhoedu.github.io/ma8/j1/t" target="_blank"></a>
+		</div>
+		<div id="main">
+			<h1>MA8 Jakso 1: Yhtälönratkaisu</h1>
+			<h2>1. Kertausta</h2>
+			<div>
+				<p>7. luokalla opittiin perusteita kirjainlaskennasta, kun tutustuttiin muuttujiin, muuttujalausekkeisiin sekä niiden sieventämiseen ja arvon laskemiseen. 8. luokalla näitä taitoja kehitetään edelleen tutustumalla yhtälönratkaisuun, polynomeihin sekä potenssilausekkeisiin.</p>
+				<h3>Termi</h3>
+				<div>
+					<p>Termi muodostuu luvun ja muuttujan tulosta. Termiä merkittäessä kertomerkki jätetään merkitsemättä. Lukua kutsutaan termin kertoimeksi ja muuttujaa (sekä myöhemmin sen astetta) muuttujaosaksi.</p>
+					<img src="https://jannevenhoedu.github.io/ma7/j3/t/ma7j3_teoria_termi.png">
+					<p>Jos kerroin on 1 tai -1, <strong>ykköstä ei merkitä näkyviin</strong>: \(\mathsf{1a = a}\) ja \(\mathsf{-1x = -x}\).</p>
+					<p>Lisäksi termiä, jossa ei ole muuttujaosaa, kutsutaan <strong>vakiotermiksi</strong>. Vakiotermi on siis pelkkä luku.</p>
+				</div>
+				<h3>Muuttujalauseke</h3>
+				<div>
+					<p>Muuttujalauseke on lauseke, jossa esiintyy vähintään yksi muuttuja. Esimerkiksi matematiikassa ja fysiikassa esiintyy kaikenlaisia muuttujalausekkeita, joiden avulla mallinnetaan esimerkiksi luonnon ilmiöitä, kappaileiden kokoa, muotoa tai prosenttilaskennan laskusääntöjä.</p>
+					<p><strong>Muuttujalausekkeen arvon laskeminen</strong> on yksi peruskoulumatematiikan tärkeimmistä opittavista taidoista. Muuttujalausekkeen arvo voidaan laskea, jos tunnetaan <strong>muuttujan arvo</strong>. Muuttujan arvo <strong>sijoitetaan</strong> lausekkeeseen muuttujan paikalle, jonka jälkeen lausekkeen arvo voidaan laskea. Lasketaan esimerkiksi lausekkeen \(\mathsf{3x + 4}\) arvo, kun muuttuja saa arvon \(\mathsf{x = 2}\).</p>
+					<div class="indent">
+					<p>\(\begin{align}\phantom{=}&amp;\mathsf{3x + 4}\\ =\;&amp;\mathsf{3\cdot 2 + 4}\\ =\;&amp;\mathsf{6 + 4}\\ =\;&amp;\mathsf{10}\end{align}\)</p>
+					</div>
+					<p>Sijoitettaessa negatiivista lukua muuttujan paikalle, tulee luku kirjoittaa sulkeiden sisään. Lasketaan esimerkiksi edellisen esimerkin lausekkeen arvo muuttujan arvolla \(\mathsf{x=-1}\).</p>
+					<div class="indent">
+					<p>\(\begin{align}\phantom{=}&amp;\mathsf{3x + 4}\\ =\;&amp;\mathsf{3\cdot (-1) + 4}\\ =\;&amp;\mathsf{-3 + 4}\\ =\;&amp;\mathsf{1}\end{align}\)</p>
+					</div>
+				</div>
+				<h3>Lausekkeen sieventäminen</h3>
+				<div>
+					<p>Peräkkäisistä termeistä koostuvaa muuttujalauseketta kutsutaan polynomiksi. Tämä käsite tarkentuu myöhemmässä jaksossa 8. luokalla. 7. luokalla opittiin <strong>sieventämään</strong> muuttujalausekkeessa olevia <strong>samanmuotoisia termejä</strong> (yhteen- ja vähennyslasku). Samanmuotoisilla termeillä on täsmälleen sama muuttujaosa.</p>
+					<div class="indent">
+					<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://jannevenhoedu.github.io/ma8/j1/t/ma8j1_teoria_lausekkeen_sieventaminen.gif" alt="" width="254" height="28"></p>
+					</div>
+					<p>Lisäksi opittiin sieventämään lausekkeita, joissa termiin kohdistuu kerto- tai jakolasku.</p>
+					<div class="indent">
+					<p>\(\mathsf{5 \cdot 6x = 30x}\)</p>
+					<p>\(\mathsf{\dfrac{28a}{-7} = -4a}\)</p>
+					</div>
+				</div>
+				<h3>Lausekkeen kertominen luvulla</h3>
+				<div>
+					<p>Kertolaskun yhteydessä 7. luokalla opittiin ns. osittelulakiin perustuva päässälaskumenetelmä, jonka avulla voitiin laskea helposti kertolasku, jonka toisena tekijänä on suuri luku. Suuri luku pilkotaan osiin (ykkösiin, kymmeniin, satoihin, ...), kerrotaan osia, ja yhdistetään uudet osat takaisin yhdeksi luvuksi. Esimerkiksi</p>
+					<div class="indent">
+					<p>\(\begin{array}{l}\mathsf{\quad 9 \cdot 183}\\ \mathsf{=9 \cdot (100 + 80 + 3)}\\ \mathsf{=900 + 720 + 27}\\ \mathsf{=1647}\end{array}\)</p>
+					</div>
+					<p>Tätä menetelmää käytetään myös tilanteessa, jossa muuttujalauseketta kerrotaan luvulla (tai termillä).</p>
+					<div class="indent">
+					<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://jannevenhoedu.github.io/ma8/j1/t/ma8j1_teoria_osittelulaki.gif" alt="" width="180" height="100"></p>
+					</div>
+					<p>Kertolasku kohdistuu siis kaikkiin muuttujalausekkeen termeihin.</p>
+					<p><strong>Lisätietoa: Yhteisen tekijän etsiminen</strong></p>
+					<p>Edellä opittua lausekkeen kertomista luvulla voidaan soveltaa myös toiseen suuntaan, ja selvittää lausekkeessa esiintyvien termien yhteiset osat. Tätä voidaan hyödyntää tietynlaisissa yhtälöiden ratkaisemisessa sekä murtolausekkeiden sieventämisessä.</p>
+					<div class="indent">
+					<p>\(\mathsf{5x + 10 = \color{red}{5} \cdot x + \color{red}{5} \cdot 2 = \color{red}{5} \cdot (x + 2)}\)</p>
+					</div>
+					<p>Jos edellä sievennettyä lauseketta esimerkiksi jaetaan, voidaan nyt jakolasku kohdistaa yhteiseen tekijään.</p>
+					<div class="indent">
+					<p>\(\mathsf{\dfrac{5x+10}{5} = \dfrac{5 \cdot (x+2)}{5} = x+2}\)</p>
+					</div>
+					<p>Tällä tavoin vältetään yleinen virhe, jossa supistus kohdistuu vain yhteen lausekkeen termiin.</p>
+					<p>Murtoyhtälöllä tarkoitetaan tilannetta, jossa yhtälössä esiintyy murtolukumerkintä. 7. luokalta muistetaan, että murtoluku kuvaa jakolaskua, joten käytännössä ollaan siis tekemisissä jakolaskun kanssa. Kerrataan aluksi hieman murtolukujen laskutoimituksia, ja tutustutaan erilaisiin merkintävaihtoehtoihin.</p>
+				</div>
+				<h3>Murtoluvut</h3>
+				<div>
+					<p>Murtoluku koostuu osoittajasta sekä nimittäjästä, ja niitä erottavasta murtoviivasta. Murtoluku on jakolasku, jonka laskeminen on tarkoituksella jätetty kesken, jotta voidaan kuvata selkeästi kokonaisen osia ilman desimaalilukuja. Laskemalla murtoluvun osoittama jakolasku eli murtoluvun arvo, saadaan murtoluku muutettua desimaaliluvuksi.</p>
+					<div class="indent">
+					<p>\(\mathsf{\dfrac{2}{5} = 0,\!4}\)</p>
+					<p>\(\mathsf{\dfrac{1}{3} = 0,\!333...}\)</p>
+					</div>
+					<p>Murtolukua voidaan muokata supistamalla ja laventamalla. Supistamisessa murtoluvun osoittaja sekä nimittäjä jaetaan samalla luvulla, ja laventamisessa molemmat puolestaan kerrotaan samalla luvulla. Supistaminen ja laventaminen eivät muuta murtoluvun arvoa.</p>
+					<div class="indent">
+					<p>\(\mathsf{{\dfrac{6}{8}}^{(2} = \dfrac{3}{4}}\)</p>
+					<p>\(\mathsf{\rule{0pt}{1.2em}^{3)}\!\dfrac{5}{6} = \dfrac{15}{18}}\)</p>
+					</div>
+					<p>Murtolukuja voidaan laskea yhteen ja vähentää toisistaan. Tällöin murtolukujen tulee olla samannimisiä, eli niillä on oltava sama nimittäjä. Jos nimittäjät eivät ole samat, ne voidaan laventaa samannimisiksi.</p>
+					<div class="indent">
+					<p>\(\mathsf{\dfrac{2}{7} + \dfrac{3}{7} = \dfrac{5}{7}}\)</p>
+					<p>\(\mathsf{\rule{0pt}{1.2em}^{2)}\!\dfrac{3}{5} + \dfrac{1}{10} = \dfrac{6}{10} + \dfrac{1}{10} = \dfrac{7}{10}}\)</p>
+					</div>
+					<p>Murtolukua voidaan kertoa ja jakaa kokonaisluvulla tai toisella murtoluvulla. Murtolukujen kertolaskussa osoittajat kerrotaan keskenään, ja nimittäjät kerrotaan keskenään.</p>
+					<div class="indent">
+					<p>\(\mathsf{4 \cdot \dfrac{3}{7} = \dfrac{4 \cdot 3}{7} = \dfrac{12}{7} = 1\dfrac{5}{7}}\)</p>
+					<p>\(\mathsf{\dfrac{2}{3} \cdot \dfrac{5}{6} = \dfrac{2 \cdot 5}{3 \cdot 6} = {\dfrac{10}{18}}^{(2} = \dfrac{5}{9}}\)</p>
+					</div>
+					<p>Murtolukujen jakolasku kannattaa muuttaa aina ensin kertolaskuksi kääntämällä jakaja käänteisluvukseen.</p>
+					<div class="indent">
+					<p>\(\mathsf{\dfrac{3}{4} : \dfrac{1}{8} = \dfrac{3}{4} \cdot \dfrac{8}{1} = \dfrac{3 \cdot 8}{4 \cdot 1} = \dfrac{24}{4} = 6}\)</p>
+					</div>
+					<p>Tällä tavoin voidaan kuvata myös murtoluvun jakamista kokonaisluvulla, jolloin osoittajan jakamisen sijaan voidaankin tarvittaessa kertoa nimittäjää. </p>
+					<div class="indent">
+					<p>\(\mathsf{\dfrac{1}{2} : 3 = \dfrac{1}{2} \cdot \dfrac{1}{3} = \dfrac{1 \cdot 1}{2 \cdot 3} = \dfrac{1}{6}}\)</p>
+					</div>
+				</div>
+			</div>
+			<h2>2. Yhtälö</h2>
+			<div>
+				<p>Yhtälöllä tarkoitetaan matematiikan ongelmaa, jossa kaksi lauseketta on merkitty yhtä suuriksi. Esimerkiksi yhtälössä \(\mathsf{2x-4 = -x + 5}\) on lausekkeet \(\mathsf{2x-4}\) ja \(\mathsf{-x+5}\) merkitty yhtä suuriksi. Merkintä tarkoittaa sitä, että lausekkeet saavat saman arvon jollakin muuttujan \(\mathsf{x}\) arvolla. <strong>Yhtälön ratkaisu</strong>, eli muuttujan \(\mathsf{x}\) arvo saadaan selvitettyä ratkaisemalla yhtälö. Tästä lisää luvussa "Yhtälön ratkaiseminen".</p>
+				<h3>Yhtälön ratkaisun tutkiminen</h3>
+				<p>Jos halutaan testata, onko jokin tietty muuttujan arvo yhtälön ratkaisu, voidaan muuttujan arvo sijoittaa yhtälön molempiin lausekkeisiin, ja tutkia lausekkeiden arvojen yhtäsuuruutta. Tutkitaan esimerkkinä väitettä, että \(\mathsf{x=2}\) on aiemman esimerkkiyhtälön \(\mathsf{2x-4 = -x + 5}\) ratkaisu.</p>
+				<div class="indent">
+				<p>\(\begin{align}\mathsf{2x-4} &amp;= \mathsf{-x + 5}\\\mathsf{2 \cdot 2 - 4} &amp;= \mathsf{-2+5}\\\mathsf{0} &amp;= \mathsf{3}\end{align}\)</p>
+				</div>
+				<p>Koska \(\mathsf{0 \neq 3}\) voidaan todeta, että \(\mathsf{x=2}\) ei ole yhtälön ratkaisu.</p>
+				<h3>Yhtälöön liittyviä käsitteitä ja merkintöjä</h3>
+				<p>Yhtäsuuruusmerkki jakaa yhtälön kahteen osaan, joita kutsutaan <strong>vasemmaksi puoleksi</strong> ja <strong>oikeaksi puoleksi</strong>.</p>
+				<div class="indent">
+				<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://jannevenhoedu.github.io/ma8/j1/t/ma8j1_teoria_yhtalon_osat.gif" alt="" width="201" height="57"></p>
+				</div>
+				<p>Kuten yhtälön ratkaisua tutkittaessa aikaisemmassa esimerkissä havaittiin, yhtälöä muokattaessa muokattu yhtälö kirjoitetaan aina edellisen alapuolelle siten, että yhtäsuuruusmerkit tulevat allekkain. Tällöin yhtälön vasen ja oikea puoli ovat helpommin erotettavissa toisistaan.</p>
+				<h3>Lisää yhtälöistä</h3>
+				<p>Yhtälöitä käytetään matemaattisissa aineissa (matematiikkan, fysiikka, kemia, tietotekniikka) paljon. 8. luokalla opiskellaan ns. 1. asteen yhtälöitä, vaillinaisia 2. asteen yhtälöitä sekä verrantoja, ja 9. luokalla laajennetaan 8. luokan tietämystä 2. asteen yhtälöihin, yhtälöpareihin sekä epäyhtälöihin. Matematiikassa ja fysiikassa tutustutaan erilaisiin säännönmukaisuuksiin ja luonnonlakeihin laskukaavojen (yhtälöiden) avulla, joita voidaan muokata käyttötarkoitukseen sopiviksi yhtälöratkaisun menetelmin. Esimerkiksi keskinopeuden laskukaavaa kuvataan yhtälöllä</p>
+				<div class="indent">
+				<p>\(\mathsf{\text{nopeus} = \dfrac{\text{matka}}{\text{aika}}}\),</p>
+				</div>
+				<p>josta voidaan johtaa yhtälönratkaisun avulla laskukaavat matkalle ja ajalle:</p>
+				<div class="indent">
+				<p>\(\mathsf{\text{matka} = \text{nopeus} \cdot \text{aika}}\)</p>
+				<p>\(\mathsf{\text{aika} = \dfrac{\text{matka}}{\text{nopeus}}}\)</p>
+				</div>
+				<p>Peruskoulun jälkeen on lukiossa ja eri korkeakouluissa mahdollista opiskella lineaarisia yhtälöryhmiä, joita käytetään esim. GPS-paikannuksessa ja tietokonegrafiikassa tai differentiaali- sekä osittaisdifferentiaaliyhtälöitä, joita käytetään mm. monimutkaisemmissa matemaattisissa malleissa, kuten sään ennustuksessa.</p>
+			</div>
+			<h2>3. Yhtälönratkaisu</h2>
+			<div>
+				<p>Yhtänlönratkaisussa on tavoitteena selvittää muuttujan \(\mathsf{x}\) arvo, jolla yhtälö on tosi, eli yhtäsuuruus pätee. Jokin yhtälön ratkaisuista voidaa saada päättelemällä, mutta varmin, helpoin ja oikea tapa on ratkaista yhtälö vaiheittain lisäämällä, vähentämällä, kertomalla tai jakamalla yhtälöä puolittain sopivilla luvuilla. Vaiheittain etenemällä saadaan ratkaisulle perustelu ja löydetään kaikki mahdolliset ratkaisut. Tämän vuoksi päättely ei enää käy kuin saadun ratkaisun järkevyyden tarkasteluun.</p>
+				<p>Yhtälöä voidaan siis muokata suorittamalla sama laskutoimitus yhtälön molemmille puolille. Laskutoimitus on tärkeätä suorittaa molemmille puolille yhtälöä, koska tällöin oikean ja vasemman puolen yhtäsuuruus pysyy voimassa. Yhtälön ratkaiseminen loppuu, kun muuttuja \(\mathsf{x}\) on saatu jäämään yksin vain yhtälön toiselle puolelle.</p>
+				<p>Laskutoimitus, joka yhtälön molemmille puolille kullakin rivillä tehdään, merkitään rivin loppuun kahden pystyviivan \(\|\) oikealle puolelle. Laskutoimitusten muokkaama uusi yhtälö kirjoitetaan edellisen alapuolelle siten, että yhtäsuuruusmerkit ovat samassa pysysuorassa linjassa.</p>
+				<h3>Yhtälön ratkaiseminen jakamalla puolittain</h3>
+				<p>Tarkastellaan yhtälöä</p>
+				<div class="indent">
+				<p>\(\mathsf{3x = 24}\)</p>
+				</div>
+				<p>Nyt siis muuttujaa \(\mathsf{x}\) on kerrottu luvulla 3, vastaukseksi on saatu 24. Tästä on toki helppoa päätellä, että muuttujan \(\mathsf{x}\) on oltava 8, koska \(\mathsf{3 \cdot 8 = 24}\). Ratkaisu saadaan käänteisesti jakolaskun avulla: \(\mathsf{24:3=8}\), koska jakolasku on kertolaskun käänteinen laskutoimitus. Yhtälöratkaisun menetelmien avulla ratkaisu näyttäisi seuraavalta.</p>
+				<div class="indent">
+				<p>\(\begin{align}\mathsf{3x} &amp;= \mathsf{24} \quad &amp;\mathsf{\| \color{red}{:3}}\\ \mathsf{x} &amp;= \mathsf{8}\end{align}\)</p>
+				</div>
+				<p>1. rivillä on siis alkuperäinen yhtälö \(\mathsf{3x = 24}\). Pystyviivojen \(\|\) jälkeen on <span class="" style="color: rgb(239, 69, 64);">laskutoimitus</span>, joka yhtälön molemmille puolille tehdään.</p>
+				<p>2. rivillä nähdään laskutoimituksen tulos. Vasemmalla on siis laskettu \(\mathsf{3x \color{red}{: 3} = x}\) ja oikealla \(\mathsf{24\color{red}{: 3}=8}\). Näin yhtälö on saatu ratkaistua, ja ratkaisuksi on saatu edellä päätelty \(\mathsf{x = 8}\).</p>
+				<h3>Yhtälön ratkaiseminen lisäämällä tai vähentämällä puolittain</h3>
+				<p>Tarkastellaan yhtälöä</p>
+				<div class="indent">
+				<p>\(\mathsf{x - 4 = 5}\)</p>
+				</div>
+				<p>Nyt muuttujasta \(\mathsf{x}\) on vähennetty luku 4. Käytetään apuna jälleen käänteistä laskutoimitusta, joka vähennyslaskulle on tietenkin yhteenlasku. Lisäämällä yhtälön molemmille puolille luku 4, saadaan yhtälön vasemmalla puolella -4 häviämään nollaksi. Yhtälönratkaisun merkinnöin saadaan siis</p>
+				<div class="indent">
+				<p>\(\begin{align}\mathsf{x - 4} &amp;= \mathsf{5}\quad &amp;\mathsf{\| \color{red}{+4}}\\ \mathsf{x} &amp;= \mathsf{9}\end{align}\)</p>
+				</div>
+				<p>Vasemmalla laskettiin nyt \(\mathsf{x - 4 \color{red}{+ 4} = x}\) ja oikealla \(\mathsf{5 \color{red}{+ 4} = 9}\). Ratkaisuksi saatiin siis \(\mathsf{x = 9}\), joka voidaan tarkistaa sijoittamalla ratkaisu alkuperäiseen yhtälöön. \(\mathsf{x-4 = 9-4 = 5}\).</p>
+				<p><strong>Myös termejä, joissa esiintyy muuttuja \(\mathsf{x}\) voidaan lisätä ja vähentää puolittain.</strong> Tarkastellaan yhtälöä</p>
+				<div class="indent">
+				<p>\(\mathsf{3x = x + 8}\)</p>
+				</div>
+				<p>Nyt molemmilla puolilla yhtälöä on termi, jossa esiintyy muuttuja \(\mathsf{x}\). Koska tavoitteena oli saada muuttuja \(\mathsf{x}\) jäämään yksin vain yhtälön toiselle puolelle, poistetaan \(\mathsf{x}\) toiselta puolelta. Tehdään se tällä kertaa yhtälön oikealta puolelta.</p>
+				<div class="indent">
+				<p>\(\begin{align}\mathsf{3x} &amp;= \mathsf{x + 8} \quad &amp;\mathsf{\|\color{red}{-x}}\\ \mathsf{2x} &amp;= \mathsf{8}\end{align}\)</p>
+				</div>
+				<p>Vasemmalla saadaan siis \(\mathsf{3x\color{red}{-x} = 2x}\) ja oikealla \(\mathsf{x + 8 \color{red}{-x} = 8}\). Muuttujalle \(\mathsf{x}\) jää vielä kerroin, joka saadaan poistettua aiemmin opitulla jakolaskulla puolittain.</p>
+				<div class="indent">
+				<p>\(\begin{align}\mathsf{3x} &amp;= \mathsf{x + 8} \quad &amp;\mathsf{\|-x}\\ \mathsf{2x} &amp;= \mathsf{8} &amp;\mathsf{\|:2}\\ \mathsf{x} &amp;= \mathsf{4}\end{align}\)</p>
+				</div>
+				<h3>Yhtälönratkaisu kokonaisuutena</h3>
+				<p>Yhtälönratkaisusta opittiin edellä selvittämään kolme hieman erilaista tilannetta. Näitä kolmea menetelmää apuna käyttäen voidaan ratkaista mikä tahansa 1. asteen yhtälö enintään kolmella vaiheella. Alla olevassa vuokaaviossa on esitetty algoritmi yhtälönratkaisuun.</p>
+				<div class="indent">
+				<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://jannevenhoedu.github.io/ma8/j1/t/ma8j1_reppu_yhtalonratkaisukaavio_pieni.png" alt="" width="600" height="191"></p>
+				</div>
+				<p>Ratkaistaan algoritmin avulla luvun alussa esitelty yhtälö \(\mathsf{2x-4 = -x + 5}\)</p>
+				<div class="indent">
+				<p>\(\begin{align}\mathsf{2x-4} &amp;= \mathsf{-x + 5} \quad &amp;\mathsf{\|+x}\\ \mathsf{3x-4} &amp;= \mathsf{5} &amp;\mathsf{\|+4}\\ \mathsf{3x} &amp;= \mathsf{9} &amp;\mathsf{\|:3}\\ \mathsf{x} &amp;= \mathsf{3}\end{align}\)</p>
+				</div>
+				<p>1. rivillä oli molemmilla puolilla yhtälöä x-termi, joten oikealta \(\mathsf{-x}\) poistettiin lisäämällä puolittain \(\mathsf{x}\).<br>2. rivillä oli molemmilla puolilla yhtälöä vakiotermi, joten vasemmalta (x:n puolelta) poistettiin -4 lisäämällä puolittain luku 4. <br>3. rivillä muuttujalla \(\mathsf{x}\) oli vielä kerroin 3, joka poistettiin jakamalla puolittain luvulla 3.</p>
+				<p>Vastaus voidaan tarkistaa laskemalla erikseen vasemman ja oikean puolen lausekkeiden arvot. Niiden pitäisi olla siis yhtä suuret.</p>
+				<div class="indent">
+				<p>Vasen: \(\mathsf{2x-4 = 2 \cdot 3 - 4 = 6 - 4 = 2}\)<br>Oikea: \(\mathsf{-x+5 = -3+5 = 2}\)</p>
+				</div>
+				<p>Ratkaisu on oikein.</p>
+				<h3>Yhtälönratkaisun esivalmistelut</h3>
+				<p>Nyt kun yhtälönratkaisun perusperiaatteet ovat hallussa, kannattaa käyttää muutama ajatus yhtälön tarkastelulle ennen varsinaisten ratkaisutoimien aloittamista. Joskus yhtälön lausekkeita joudutaan sieventämään ennen puolittaisten laskutoimitusten (sukset) tekemistä.</p>
+				<div class="indent">
+				<p>\(\begin{align}\mathsf{2x+3x} &amp;= \mathsf{3+7}\\\mathsf{5x} &amp;= \mathsf{10} &amp;&amp; \mathsf{\|:5}\\\mathsf{x} &amp;= \mathsf{2}\end{align}\)</p>
+				</div>
+				<p>Yllä olevassa yhtälössä sievennettiin ensin vasemmalla \(\mathsf{2x+3x=5x}\) ja oikealla \(\mathsf{3+7=10}\). Tämän jälkeen päästiin vasta suorittamaan puolittainen jakolasku.</p>
+				<p>Mielenkiintoisempi tilanne syntyy, kun toisessa (tai molemmissa) lausekkeissa on luvulla kerrottu lauseketta. Tällaiseen tilanteeseen on olemassa kaksi tapaa lähestyä ongelmaa</p>
+				<p><strong>Tapa 1: </strong>Poistetaan sulut sieventämällä, ja jatketaan yhtälönratkaisua normaalisti.</p>
+				<div class="indent">
+				<p>\(\begin{align}\mathsf{2 \cdot (x+3)} &amp;= \mathsf{18}\\\mathsf{2x+6} &amp;= \mathsf{18} &amp;&amp; \mathsf{\|-6}\\\mathsf{2x} &amp;= \mathsf{12} &amp;&amp;\mathsf{\|:2}\\\mathsf{x} &amp;= \mathsf{6}\end{align}\)</p>
+				</div>
+				<p><strong>Tapa 2:</strong> Jaetaan sulkeiden kertoimella, jos oikealla on sopivasti jaollinen luku.</p>
+				<div class="indent">
+				<p>\(\begin{align}\mathsf{2 \cdot (x+3)} &amp;= \mathsf{18} &amp;&amp;\mathsf{\|:2}\\\mathsf{x+3} &amp;= \mathsf{9} &amp;&amp; \mathsf{\|-3}\\\mathsf{x} &amp;= \mathsf{6}\end{align}\)</p>
+				</div>
+			</div>
+			<h2>4. Murtoyhtälöt</h2>
+			<div>
+				<p>Murtoyhtälöllä tarkoitetaan tilannetta, jossa yhtälössä esiintyy murtolukumerkintä.</p>
+				<h3>Yksinkertaiset murtoyhtälöt</h3>
+				<p>Yksinkertaisimmillaan muuttujalla \(\mathsf{x}\) on jakaja, josta pyritään pääsemään eroon. Jakolaskun vastakkainen laskutoimitus on kertolasku, joten <strong>kertomalla \(\mathsf{x}\):n jakajalla</strong>, päästää jakajasta eroon.</p>
+				<div class="indent">
+				<p>\(\begin{align}\mathsf{\dfrac{x}{4}} &amp;= \mathsf{3} &amp;&amp;\|\cdot \mathsf{4}\\\mathsf{x} &amp;= \mathsf{12}\end{align}\)</p>
+				</div>
+				<p>Yhtälön vasemmalla puolella olevaa lauseketta voidaan merkitä myös siten, että muuttujalla \(\mathsf{x}\) on murtolukukerroin. </p>
+				<div class="indent">
+				<p>\(\begin{align}\mathsf{\dfrac{1}{4}x} &amp;= \mathsf{3} &amp;&amp;\|\cdot \mathsf{4}\\\mathsf{x} &amp;= \mathsf{12}\end{align}\)</p>
+				</div>
+				<h3>Hieman monimutkaisemmat murtoyhtälöt</h3>
+				<p>Yhtälössä voi olla tuttuun tapaan myös vakiotermejä, jolloin vakiotermit kannattaa poistaa x:n puolelta kuten aiemmin on opittu.</p>
+				<div class="indent">
+				<p>\(\begin{align}\mathsf{\dfrac{x}{2} + 3} &amp;= \mathsf{2} &amp;&amp;\mathsf{\|-3}\\\mathsf{\dfrac{x}{2}} &amp;= \mathsf{-1} &amp;&amp;\|\cdot \mathsf{2}\\\mathsf{x} &amp;= \mathsf{-2}\end{align}\)</p>
+				</div>
+				<p>Muuttujalla \(\mathsf{x}\) voi olla myös kerroin, jolloin kertolaskun lisäksi pitää myös jakaa \(\mathsf{x}\):n kertoimella.</p>
+				<div class="indent">
+				<p>\(\begin{align}\mathsf{\dfrac{3x}{4}} &amp;= \mathsf{6} &amp;&amp;\|\cdot \mathsf{4}\\\mathsf{3x} &amp;= \mathsf{24} &amp;&amp; \mathsf{\|:3}\\\mathsf{x} &amp;= \mathsf{8}\end{align}\)</p>
+				</div>
+				<p>Joissain tilanteissa voi hyödyllistä laskea jakolasku ennen kertolaskua, jolloin laskettavat luvut pysyvät pienempinä.</p>
+				<div class="indent">
+				<p>\(\begin{align}\mathsf{\dfrac{3x}{4}} &amp;= \mathsf{6} &amp;&amp; \mathsf{\|:3}\\\mathsf{\dfrac{x}{4}} &amp;= \mathsf{2} &amp;&amp; \|\cdot \mathsf{4}\\\mathsf{x} &amp;= \mathsf{8}\end{align}\)</p>
+				</div>
+				<h3>Vielä hieman monimutkaisemmat murtoyhtälöt</h3>
+				<p>Murtolausekkeen osoittajassa voi olla myös kokonainen lauseke, jolloin jakajalla kertominen kannattaa suorittaa ehdottomasti ensin.</p>
+				<div class="indent">
+				<p>\(\begin{align}\mathsf{\dfrac{-x+5}{3}} &amp;= \mathsf{-1} &amp;&amp;\|\cdot \mathsf{3}\\\mathsf{-x+5} &amp;= \mathsf{-3} &amp;&amp; \mathsf{\|-5}\\\mathsf{-x} &amp;= \mathsf{-8} &amp;&amp; \mathsf{\|:(-1)}\\\mathsf{x} &amp;= \mathsf{8}\end{align}\)</p>
+				</div>
+			</div>
+			<h2>5. Lisätietoa: Suoran yhtälö</h2>
+			<div>
+				<p id="suora">Suora voidaan määritellä myös muuttujalausekkeen avulla. Lähtöajatuksena on muodostaa y-koordinaatille laskukaava, missä muuttujana on x-koordinaatti. Tällä tavoin luodaan x- ja y-koordinaatin välille riippuvuus eli sääntö, jolla x- ja y-koordinaatit riippuvat toisistaan. Suora on riippuvuuksista yksinkertaisin, mutta käyttämällä kerto- ja yhteenlaskun lisäksi muitakin matematiikassa opittavia työkaluja saadaan aikaan monimutkaisempia riippuvuuksia.</p>
+				<div class="indent">
+				<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://jannevenhoedu.github.io/ma9/j1/t/ma9j1_teoria_riippuvuuksia.png" alt="" width="400" height="380"></p>
+				</div>
+				<p><strong>Suoran yhtälössä</strong> on aina kaksi termiä. Ensimmäisen termin kerrointa kutsutaan suoran <strong>kulmakertoimeksi</strong>. Toista termiä kutsutaan tuttuun tapaan <strong>vakiotermiksi</strong>. Molemmilla käsitteillä on tärkeä ja havainnollinen rooli suoran sijainnissa koordinaatistossa. Alla olevissa esimerkeissä <span class="" style="color: rgb(255, 0, 0);">kulmakerroin</span> on merkitty punaisella ja <span class="" style="color: rgb(0, 0, 255);">vakiotermi</span> sinisellä värillä.</p>
+				<table>
+				<tbody>
+				<tr>
+				<td>\(\mathsf{y = \color{red}{2}x \color{blue}{+\:1}}\qquad\)</td>
+				<td>\(\mathsf{y = \color{red}{-5}x \color{blue}{+\:5}}\qquad\)</td>
+				<td>\(\mathsf{y = \color{red}{3}x \color{blue}{-\:2}}\)</td>
+				</tr>
+				</tbody>
+				</table>
+				<br>
+				<p>Erityisesti muistetaan kertoimet 1 ja 0</p>
+				<table>
+				<tbody>
+				<tr>
+				<td style="padding: 10px;">\(\mathsf{y = x \color{blue}{+\:2}}\qquad\)</td>
+				<td style="padding: 10px;">\(\color{red}{\textsf{Kulmakerroin: 1}}\qquad\)</td>
+				<td style="padding: 10px;">\(\color{blue}{\textsf{Vakiotermi: 2}}\)</td>
+				</tr>
+				<tr>
+				<td style="padding: 10px;">\(\mathsf{y = \color{blue}{-3}}\qquad\)</td>
+				<td style="padding: 10px;">\(\color{red}{\textsf{Kulmakerroin: 0}}\qquad\)</td>
+				<td style="padding: 10px;">\(\color{blue}{\textsf{Vakiotermi: -3}}\)</td>
+				</tr>
+				<tr>
+				<td style="padding: 10px;">\(\mathsf{y = \color{red}{4}x}\qquad\)</td>
+				<td style="padding: 10px;">\(\color{red}{\textsf{Kulmakerroin: 4}}\qquad\)</td>
+				<td style="padding: 10px;">\(\color{blue}{\textsf{Vakiotermi: 0}}\)</td>
+				</tr>
+				</tbody>
+				</table>
+				<br>
+				<h3><span>Kulmakerroin</span></h3>
+				<p><strong>Kulmakerroin kertoo suoran kaltevuuden.</strong> Mittayksikkönä voidaan ajatella käytettävän y-akselin suuntaista muutosta, kun x-koordinaatin suuruus kasvaa yhdellä. Toisin sanoen, piirretään suoralle (mihin tahansa) piste, liikutaan yhden verran oikealle, ja lasketaan kuinka paljon tulee siirtyä ylös (tai alas), jotta päästään takaisin suoralle. Alla oleva kuva havainnollistaa kulmakertoimen \(\mathsf{k}\) määrittämistä suoran kuvaajasta.</p>
+				<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://jannevenhoedu.github.io/ma9/j1/t/ma9j1_teoria_kulmakerroin1.png" alt="" width="500" height="357"></p>
+				<p>Tarkalleen ottaen kulmakerroin määritellään y-akselin suuntaisen siirtymän \(\mathsf{\Delta y}\) ja x-akselin suuntaisen siirtymän \(\mathsf{\Delta x}\) osamääränä. Alla olevasta kuvassa on esimerkkinä kulmakertoimen \(\textsf{k}\) määrittäminen tällä tavoin.</p>
+				<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://jannevenhoedu.github.io/ma9/j1/t/ma9j1_teoria_kulmakerroin2.png" alt="" width="499" height="265"></p>
+				<p>Jos kulmakerroin on positiivinen, sanotaan että suora on <strong>nouseva</strong>. Vastaavasti kulmakertoimen ollessa negatiivinen, suora on <strong>laskeva</strong>.</p>
+				<h3><span>Vakiotermi</span></h3>
+				<p>Vakiotermi kertoo suoran ja y-akselin leikkauskohdan. Toisin sanoen vakiotermi on suoran ja y-akselin leikkauspisteen y-koordinaatti, sillä x-koordinaattihan on tällöin aina 0. Vakiotermiä muuttamalla voidaan siis muuttaa suoran sijaintia y-akselin suunnassa. Alla olevassa kuvassa on esitetty yhdensuuntaisia suoria, joiden vakiotermi on eri.</p>
+				<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://jannevenhoedu.github.io/ma9/j1/t/ma9j1_teoria_vakiotermi.png" alt="" width="500" height="360"></p>
+			</div>
+		</div>
+		<script>
+			downloadGG();
+		</script>
+	</body>
+</html>
