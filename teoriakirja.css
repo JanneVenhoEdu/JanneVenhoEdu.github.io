@@ -172,7 +172,7 @@ dd {
 }
 
 p:has(button.image) + div {
-	margin: 0px 0px 10px 30px;
+	margin-left: var(--indent);
 	display: none;
-	padding: 10px 10px 5px 10px;
+	padding: 5px;
 }
