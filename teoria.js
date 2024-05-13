@@ -144,4 +144,7 @@ $(document).ready(function() {
 			}
 		});
 	});
+	function naytaKuva(element){
+		$(element).parent().next().slideToggle();
+	};
 });
