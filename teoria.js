@@ -118,20 +118,27 @@ $(document).ready(function() {
 		}
 	});
 	// Tehtävän uudelleenkäyttö
+	var ajaxRequests = [];
+	
 	$(".reuse").each(function(){
-		var id = $(this).attr("id");
-		[grade, period, chapter, assignment] = id.split("_");
-		$.get("https://jannevenhoedu.github.io/" + grade + "/" + period + "/d/index.html", function(data){
-			var content = $(data).find("h3:contains('Tehtävä " + chapter + "." + assignment + "')").next("div").html();
-			var target = $("#" + id).next();
-			target.html(content);
-			if (window.MathJax){
-				MathJax.typesetPromise([target[0]]);
+		var [grade, period, chapter, assignment] = $(this).attr("id").split("_");
+		
+		ajaxRequests.push($.ajax({
+			url: "https://jannevenhoedu.github.io/" + grade + "/" + period + "/d/index.html",
+			data: { chapter: chapter, assignment: assignment },
+			success: function(data){
+				var content = $(data).find("h3:contains('Tehtävä " + chapter + "." + assignment + "')").next("div").html();
+				$("#" + grade + "_" + period + "_" + chapter + "_" + assignment).next().html(content);
 			}
-		});
+		}));
 	});
-	// Kuvan piilottamiseen liittyvät toiminnallisuudet
-	$(".image").click(function() {
-		$(this).parent().next().slideToggle();
+	$.when.apply($, ajaxRequests).then(function() {
+		if (window.MathJax){
+			MathJax.typeset();
+		}
+		// Kuvan piilottamiseen liittyvät toiminnallisuudet
+		$(".image").click(function() {
+			$(this).parent().next().slideToggle();
+		});
 	});
 });
