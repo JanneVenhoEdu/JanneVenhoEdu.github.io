@@ -138,9 +138,9 @@ $(document).ready(function() {
 		if (window.MathJax){
 			MathJax.typeset();
 		}
-		// Kuvan piilottamiseen liittyvät toiminnallisuudet
-		$(".image").one("click", function() {
-			$(this).parent().next().slideToggle();
-		});
+		$("p:has(button)").next("div").hide();
+		$("p:has(button)").one("click", function() {
+            $(this).parent().next("div").slideToggle();
+        });
 	});
 });
