@@ -139,7 +139,7 @@ $(document).ready(function() {
 			MathJax.typeset();
 		}
 		// Kuvan piilottamiseen liittyvät toiminnallisuudet
-		$(".image").click(function() {
+		$(".image").one("click", function() {
 			$(this).parent().next().slideToggle();
 		});
 	});
