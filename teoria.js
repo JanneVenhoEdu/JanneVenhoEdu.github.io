@@ -132,7 +132,9 @@ $(document).ready(function() {
 			}
 		}));
 	});
+	// Suoritettavat koodit, kun uudelleenkäytetyt tehtävät on ladattu.
 	$.when.apply($, ajaxRequests).then(function() {
+		// Prosessoidaan MathJax-koodit uudelleen
 		if (window.MathJax){
 			MathJax.typeset();
 		}
