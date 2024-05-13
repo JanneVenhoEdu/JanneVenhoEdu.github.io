@@ -321,51 +321,45 @@
 			</div>
 			<h2>5. Lisätietoa: Suoran yhtälö</h2>
 			<div>
-				<p id="suora">Suora voidaan määritellä myös muuttujalausekkeen avulla. Lähtöajatuksena on muodostaa y-koordinaatille laskukaava, missä muuttujana on x-koordinaatti. Tällä tavoin luodaan x- ja y-koordinaatin välille riippuvuus eli sääntö, jolla x- ja y-koordinaatit riippuvat toisistaan. Suora on riippuvuuksista yksinkertaisin, mutta käyttämällä kerto- ja yhteenlaskun lisäksi muitakin matematiikassa opittavia työkaluja saadaan aikaan monimutkaisempia riippuvuuksia.</p>
-				<div class="indent">
-				<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://jannevenhoedu.github.io/ma9/j1/t/ma9j1_teoria_riippuvuuksia.png" alt="" width="400" height="380"></p>
+				<p>Suora voidaan määritellä myös muuttujalausekkeen avulla. Lähtöajatuksena on muodostaa y-koordinaatille laskukaava, missä muuttujana on x-koordinaatti. Tällä tavoin luodaan x- ja y-koordinaatin välille riippuvuus eli sääntö, jolla x- ja y-koordinaatit riippuvat toisistaan. Suora on riippuvuuksista yksinkertaisin, mutta käyttämällä kerto- ja yhteenlaskun lisäksi muitakin matematiikassa opittavia työkaluja saadaan aikaan monimutkaisempia riippuvuuksia.</p>
+				<img style="width: 400px;" src="https://jannevenhoedu.github.io/ma9/j1/t/ma9j1_teoria_riippuvuuksia.png">
+				<p>Suoran yhtälössä on aina kaksi termiä. Ensimmäisen termin kerrointa kutsutaan suoran kulmakertoimeksi. Toista termiä kutsutaan tuttuun tapaan vakiotermiksi . Molemmilla käsitteillä on tärkeä ja havainnollinen rooli suoran sijainnissa koordinaatistossa.</p>
+				<div class="example">
+					<p><strong>Esimerkki:</strong> Määritä suoran yhtälöstä kulmakerroin ja vakiotermi.</p>
+					<div class="indent">
+						<p>a) \(\mathsf{y = 2x+1}\)</p>
+						<p class="indent">Kulmakerroin: 2<br>Vakiotermi: 1</p>
+						<p>b) \(\mathsf{y = -5x+5}\)</p>
+						<p class="indent">Kulmakerroin: -5<br>Vakiotermi: 5</p>
+						<p>c) \(\mathsf{y = 3x-2}\)</p>
+						<p class="indent">Kulmakerroin: 3<br>Vakiotermi: -2</p>
+					</div>
 				</div>
-				<p><strong>Suoran yhtälössä</strong> on aina kaksi termiä. Ensimmäisen termin kerrointa kutsutaan suoran kulmakertoimeksi</strong>. Toista termiä kutsutaan tuttuun tapaan <strong>vakiotermiksi . Molemmilla käsitteillä on tärkeä ja havainnollinen rooli suoran sijainnissa koordinaatistossa. Alla olevissa esimerkeissä <span class="" style="color: rgb(255, 0, 0);">kulmakerroin</span> on merkitty punaisella ja <span class="" style="color: rgb(0, 0, 255);">vakiotermi</span> sinisellä värillä.</p>
-				<table>
-				<tbody>
-				<tr>
-				<td>\(\mathsf{y = \color{red}{2}x \color{blue}{+\:1}}\qquad\)</td>
-				<td>\(\mathsf{y = \color{red}{-5}x \color{blue}{+\:5}}\qquad\)</td>
-				<td>\(\mathsf{y = \color{red}{3}x \color{blue}{-\:2}}\)</td>
-				</tr>
-				</tbody>
-				</table>
-				<br>
 				<p>Erityisesti muistetaan kertoimet 1 ja 0</p>
-				<table>
-				<tbody>
-				<tr>
-				<td style="padding: 10px;">\(\mathsf{y = x \color{blue}{+\:2}}\qquad\)</td>
-				<td style="padding: 10px;">\(\color{red}{\textsf{Kulmakerroin: 1}}\qquad\)</td>
-				<td style="padding: 10px;">\(\color{blue}{\textsf{Vakiotermi: 2}}\)</td>
-				</tr>
-				<tr>
-				<td style="padding: 10px;">\(\mathsf{y = \color{blue}{-3}}\qquad\)</td>
-				<td style="padding: 10px;">\(\color{red}{\textsf{Kulmakerroin: 0}}\qquad\)</td>
-				<td style="padding: 10px;">\(\color{blue}{\textsf{Vakiotermi: -3}}\)</td>
-				</tr>
-				<tr>
-				<td style="padding: 10px;">\(\mathsf{y = \color{red}{4}x}\qquad\)</td>
-				<td style="padding: 10px;">\(\color{red}{\textsf{Kulmakerroin: 4}}\qquad\)</td>
-				<td style="padding: 10px;">\(\color{blue}{\textsf{Vakiotermi: 0}}\)</td>
-				</tr>
-				</tbody>
-				</table>
-				<br>
-				<h3><span>Kulmakerroin</span></h3>
-				<p><strong>Kulmakerroin kertoo suoran kaltevuuden.</strong> Mittayksikkönä voidaan ajatella käytettävän y-akselin suuntaista muutosta, kun x-koordinaatin suuruus kasvaa yhdellä. Toisin sanoen, piirretään suoralle (mihin tahansa) piste, liikutaan yhden verran oikealle, ja lasketaan kuinka paljon tulee siirtyä ylös (tai alas), jotta päästään takaisin suoralle. Alla oleva kuva havainnollistaa kulmakertoimen \(\mathsf{k}\) määrittämistä suoran kuvaajasta.</p>
-				<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://jannevenhoedu.github.io/ma9/j1/t/ma9j1_teoria_kulmakerroin1.png" alt="" width="500" height="357"></p>
-				<p>Tarkalleen ottaen kulmakerroin määritellään y-akselin suuntaisen siirtymän \(\mathsf{\Delta y}\) ja x-akselin suuntaisen siirtymän \(\mathsf{\Delta x}\) osamääränä. Alla olevasta kuvassa on esimerkkinä kulmakertoimen \(\textsf{k}\) määrittäminen tällä tavoin.</p>
-				<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://jannevenhoedu.github.io/ma9/j1/t/ma9j1_teoria_kulmakerroin2.png" alt="" width="499" height="265"></p>
-				<p>Jos kulmakerroin on positiivinen, sanotaan että suora on nouseva</strong>. Vastaavasti kulmakertoimen ollessa negatiivinen, suora on <strong>laskeva .</p>
-				<h3><span>Vakiotermi</span></h3>
-				<p>Vakiotermi kertoo suoran ja y-akselin leikkauskohdan. Toisin sanoen vakiotermi on suoran ja y-akselin leikkauspisteen y-koordinaatti, sillä x-koordinaattihan on tällöin aina 0. Vakiotermiä muuttamalla voidaan siis muuttaa suoran sijaintia y-akselin suunnassa. Alla olevassa kuvassa on esitetty yhdensuuntaisia suoria, joiden vakiotermi on eri.</p>
-				<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://jannevenhoedu.github.io/ma9/j1/t/ma9j1_teoria_vakiotermi.png" alt="" width="500" height="360"></p>
+				<div class="example">
+					<p><strong>Esimerkki:</strong> Määritä suoran yhtälöstä kulmakerroin ja vakiotermi.</p>
+					<div class="indent">
+						<p>a) \(\mathsf{y = x+2}\)</p>
+						<p class="indent">Kulmakerroin: 1<br>Vakiotermi: 2</p>
+						<p>b) \(\mathsf{y = -3}\)</p>
+						<p class="indent">Kulmakerroin: 0<br>Vakiotermi: -3</p>
+						<p>c) \(\mathsf{y = 4x}\)</p>
+						<p class="indent">Kulmakerroin: 4<br>Vakiotermi: 0</p>
+					</div>
+				</div>
+				<h3>Kulmakerroin</h3>
+				<div>
+					<p>Kulmakerroin kertoo suoran kaltevuuden. Mittayksikkönä voidaan ajatella käytettävän y-akselin suuntaista muutosta, kun x-koordinaatin suuruus kasvaa yhdellä. Toisin sanoen, piirretään suoralle (mihin tahansa) piste, liikutaan yhden verran oikealle, ja lasketaan kuinka paljon tulee siirtyä ylös (tai alas), jotta päästään takaisin suoralle. Alla oleva kuva havainnollistaa kulmakertoimen \(\mathsf{k}\) määrittämistä suoran kuvaajasta.</p>
+					<img style="width: 400px;" src="https://jannevenhoedu.github.io/ma9/j1/t/ma9j1_teoria_kulmakerroin1.png">
+					<p>Tarkalleen ottaen kulmakerroin määritellään y-akselin suuntaisen siirtymän \(\mathsf{\Delta y}\) ja x-akselin suuntaisen siirtymän \(\mathsf{\Delta x}\) osamääränä. Alla olevasta kuvassa on esimerkkinä kulmakertoimen \(\textsf{k}\) määrittäminen tällä tavoin.</p>
+					<img style="width: 400px;" src="https://jannevenhoedu.github.io/ma9/j1/t/ma9j1_teoria_kulmakerroin2.png">
+					<p>Jos kulmakerroin on positiivinen, sanotaan että suora on nouseva. Vastaavasti kulmakertoimen ollessa negatiivinen, suora on laskeva.</p>
+				</div>
+				<h3>Vakiotermi</h3>
+				<div>
+					<p>Vakiotermi kertoo suoran ja y-akselin leikkauskohdan. Toisin sanoen vakiotermi on suoran ja y-akselin leikkauspisteen y-koordinaatti, sillä x-koordinaattihan on tällöin aina 0. Vakiotermiä muuttamalla voidaan siis muuttaa suoran sijaintia y-akselin suunnassa. Alla olevassa kuvassa on esitetty yhdensuuntaisia suoria, joiden vakiotermi on eri.</p>
+					<img style="width: 400px;" src="https://jannevenhoedu.github.io/ma9/j1/t/ma9j1_teoria_vakiotermi.png">
+				</div>
 			</div>
 		</div>
 		<script>
