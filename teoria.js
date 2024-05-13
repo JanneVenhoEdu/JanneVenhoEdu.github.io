@@ -138,8 +138,10 @@ $(document).ready(function() {
 		if (window.MathJax){
 			MathJax.typeset();
 		}
-	});
-	$(".image").click(function() {
-		$(this).parent().next().slideToggle();
+		$("button").click(function() {
+			if ($(this).attr("class") == "image"){
+				$(this).parent().next().slideToggle();
+			}
+		});
 	});
 });
