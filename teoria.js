@@ -138,9 +138,8 @@ $(document).ready(function() {
 		if (window.MathJax){
 			MathJax.typeset();
 		}
-		$("p:has(button)").next("div").hide();
-		$("p:has(button)").one("click", function() {
-            $(this).parent().next("div").slideToggle();
-        });
+	});
+	$(".image").click(function() {
+		$(this).parent().next().slideToggle();
 	});
 });
