@@ -135,7 +135,7 @@ $(document).ready(function() {
 	// Suoritettavat koodit, kun uudelleenkäytetyt tehtävät on ladattu.
 	$.when.apply($, ajaxRequests).then(function() {
 		// Prosessoidaan MathJax-koodit uudelleen
-		if (window.MathJax){
+		if (window.MathJax && ajaxRequests.length != 0){
 			MathJax.typeset();
 		}
 		$("button").click(function() {
