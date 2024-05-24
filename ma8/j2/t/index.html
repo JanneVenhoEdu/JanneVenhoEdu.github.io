@@ -650,16 +650,104 @@
 							<p><strong>Vastaus:</strong> Talletukselle maksetaan korkoa 53,25 euroa.</p>
 						</div>
 					</div>
+					<h4>Korkoa korolle</h4>
+					<p>Säästötilin summa kasvaa vuosittain talletuskoron verran, jolloin seuraavana vuonna korkotuotto on aina edellistä suurempi. Korkoa vastaavalla prosenttikertoimella kerrotaan siis aina edellisen vuoden saldoa uudestaan ja uudestaan.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Kuinka paljon edellisen esimerkin Matilla on säästötilillään rahaa 10 vuoden kuluttua?</p>
+						<p><button class="image">Tapa 1: Taulukointi</button></p>
+						<div>
+							<table>
+								<thead>
+									<tr>
+										<th>Vuosi</th>
+										<th>Tilin saldo (€)</th>
+										<th>Korko (€)</th>
+										<th>Uusi saldo (€)</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>1 500,00</td>
+										<td style="text-align: left;">\(\mathsf{\text{0,0355} \cdot \text{1 500,00} = \text{53,25}}\)</td>
+										<td style="text-align: left;">\(\mathsf{\text{1 500,00} + \text{53,25} = \text{1 553,25}}\)</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>1 553,25</td>
+										<td>\(\mathsf{\text{0,0355} \cdot \text{1 553,25} = \text{55,140...} \approx \text{55,14}}\)</td>
+										<td>\(\mathsf{\text{1 553,25} + \text{55,14} = \text{1 608,39}}\)</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>1 608,39</td>
+										<td>\(\mathsf{\text{0,0355} \cdot \text{1 608,39} = \text{57,097...} \approx \text{57,10}}\)</td>
+										<td>\(\mathsf{\text{1 608,39} + \text{57,10} = \text{1 664,49}}\)</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>1 664,49</td>
+										<td>\(\mathsf{\text{0,0355} \cdot \text{1 664,49} = \text{59,124...} \approx \text{59,12}}\)</td>
+										<td>\(\mathsf{\text{1 664,49} + \text{59,12} = \text{1 724,61}}\)</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>1 724,61</td>
+										<td>\(\mathsf{\text{0,0355} \cdot \text{1 724,61} = \text{61,223...} \approx \text{61,23}}\)</td>
+										<td>\(\mathsf{\text{1 724,61} + \text{61,23} = \text{1 785,83}}\)</td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td>1 785,83</td>
+										<td>\(\mathsf{\text{0,0355} \cdot \text{1 785,84} = \text{63,396...} \approx \text{63,40}}\)</td>
+										<td>\(\mathsf{\text{1 785,83} + \text{63,40} = \text{1 849,23}}\)</td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td>1 849,23</td>
+										<td>\(\mathsf{\text{0,0355} \cdot \text{1 849,23} = \text{65,647...} \approx \text{65,65}}\)</td>
+										<td>\(\mathsf{\text{1 849,23} + \text{65,65} = \text{1 914,88}}\)</td>
+									</tr>
+									<tr>
+										<td>8</td>
+										<td>1 914,88</td>
+										<td>\(\mathsf{\text{0,0355} \cdot \text{1 914,88} = \text{67,978...} \approx \text{67,98}}\)</td>
+										<td>\(\mathsf{\text{1 914,88} + \text{67,98} = \text{1 982,86}}\)</td>
+									</tr>
+									<tr>
+										<td>9</td>
+										<td>1 982,86</td>
+										<td>\(\mathsf{\text{0,0355} \cdot \text{1 982,86} = \text{70,391...} \approx \text{70,39}}\)</td>
+										<td>\(\mathsf{\text{1 982,86} + \text{70,39} = \text{2 053,25}}\)</td>
+									</tr>
+									<tr>
+										<td>10</td>
+										<td>2 053,25</td>
+										<td>\(\mathsf{\text{0,0355} \cdot \text{2 053,25} = \text{72,890...} \approx \text{72,89}}\)</td>
+										<td>\(\mathsf{\text{2 053,25} + \text{72,89} = \text{2 126,14}}\)</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<p><button class="image">Tapa 2: Potenssi</button></p>
+						<div>
+							<p>Potenssi on lyhyempi tapa merkitä toistuvaa kertolaskua. Potensseja opiskellaan 8. luokalla myöhemmin, mutta nyt riittää tieto, että esimerkiksi kertolasku \(\mathsf{2 \cdot 2 \cdot 2 \cdot 2 = 2^4}\).</p>
+							<p>Prosenttikerroin: \(\mathsf{\text{100 %} + \text{3,55 %} = \text{103,55 %} = \text{1,0355}}\)</p>
+							<p>Saldo kymmenen vuoden kuluttua:</p>
+							<p class="indent">\(\mathsf{\text{1 500 €} \cdot \text{1,0355}^{10} = \text{2 126,14 €}}\)</p>
+						</div>
+						<p><strong>Vastaus:</strong> Tilin saldo on 10 vuoden kuluttua 2 126,14 euroa.</p>
+					</div>
 				</div>
 				<h3>Lainat</h3>
 				<div>
-					<p>Jos olet ostamassa asuntoa, ja lainaat rahaa pankista, joudut maksamaan lainasta korkoa. Korko sidotaan usein euromaiden yhteiseen viitekorkoon Euriboriin, joten sen suuruus riippuu ajankohdasta. 2000-luvulla Euribor on vaihdellut 0 % ja 5 % välillä. Vuodesta 2016 vuoteen 2021 Euribor oli (alle) 0 prosenttia, mutta Venäjän hyökkäyssodan ja siitä seuranneiden talouspakotteiden johdosta se nousi noin 4 prosenttiin. Lainasta maksetaan koron lisäksi muitakin maksuja, jolloin yleensä ilmoitetaan vain ns. todellinen vuosikorko. Korko lasketaan jäljellä olevata lainan määrästä vuosittain.</p>
+					<p>Jos olet ostamassa asuntoa, ja lainaat rahaa pankista, joudut maksamaan lainasta korkoa. Korko sidotaan usein euromaiden yhteiseen viitekorkoon Euriboriin, joten sen suuruus riippuu ajankohdasta. 2000-luvulla Euribor on vaihdellut 0 % ja 5 % välillä. Vuodesta 2016 vuoteen 2021 Euribor oli (alle) 0 prosenttia, mutta Venäjän hyökkäyssodan vuoksi asetettujen talouspakotteiden myötä monet hinnat lähtivät nousuun ja Euribor noustettiin noin 4 prosenttiin. Lainasta maksetaan koron lisäksi muitakin maksuja, jolloin yleensä ilmoitetaan vain ns. todellinen vuosikorko. Korko lasketaan jäljellä olevata lainan määrästä vuosittain.</p>
 					<div class="example">
 						<p><strong>Esimerkki:</strong> Helinä ostaa asunnon, ja saa pankista siihen 230 000 euron asuntolainan. Lainan todellinen vuosikorko on 5,2 %. Kuinka paljon Helinä maksaa korkoja ensimmäisen vuoden aikana?</p>
 						<div class="indent">
 							<p>Prosenttikerroin: \(\mathsf{\text{5,2 %} = \text{0,052}}\)</p>
 							<p>Korko: \(\mathsf{\text{0,052} \cdot \text{230 000 €} = \text{11 960 €}}\)</p>
-							<p><strong>Vastaus:</strong> Korkoja maksetaan 11 960 euroa.</p>
+							<p><strong>Vastaus:</strong> Korkoja maksetaan ensimmäisenä vuonna 11 960 euroa.</p>
 						</div>
 					</div>
 					<p>Jotta lainan suuruus pienenisi ajan kuluessa, niin korkojen maksamisen lisäksi lainaa lyhennetään kuukausittain tietyllä summalla.</p>
@@ -668,7 +756,7 @@
 						<div class="indent">
 							<p>Lyhennys: \(\mathsf{\text{230 000 €} - \text{12 000 €} = \text{218 000 €}}\)</p>
 							<p>Korko: \(\mathsf{\text{0,052} \cdot \text{218 000 €} = \text{11 336 €}}\)</p>
-							<p><strong>Vastaus:</strong> Korkoja maksetaan 11 336 euroa.</p>
+							<p><strong>Vastaus:</strong> Korkoja maksetaan toisena vuonna 11 336 euroa.</p>
 						</div>
 					</div>
 				</div>
