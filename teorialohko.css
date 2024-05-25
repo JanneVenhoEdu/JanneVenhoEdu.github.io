@@ -183,3 +183,16 @@ dt {
 dd {
 	padding-bottom: 10px;
 }
+
+.image {
+	padding: 5px;
+	background-color: #00990032;
+	border: hidden;
+	border-radius: 5px;
+}
+
+p:has(button.image) + div {
+	margin-left: var(--indent);
+	display: none;
+	padding: 5px;
+}
