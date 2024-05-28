@@ -122,7 +122,7 @@ $(document).ready(function() {
 	
 	$(".reuse").each(function(){
 		var [grade, period, chapter, assignment] = $(this).attr("id").split("_");
-		
+		//alert("Ladataan uudelleen " + grade + "" + period + "-kurssilta tehtävä " + chapter + "." + assignment);
 		ajaxRequests.push($.ajax({
 			url: "https://jannevenhoedu.github.io/" + grade + "/" + period + "/d/index.html",
 			data: { chapter: chapter, assignment: assignment },
@@ -136,7 +136,7 @@ $(document).ready(function() {
 	$.when.apply($, ajaxRequests).then(function() {
 		// Prosessoidaan MathJax-koodit uudelleen
 		if (window.MathJax && ajaxRequests.length != 0){
-			MathJax.typeset();
+			MathJax.typesetPromise();
 		}
 		$("button").click(function() {
 			if ($(this).attr("class") == "image"){
