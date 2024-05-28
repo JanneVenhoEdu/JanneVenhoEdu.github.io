@@ -129,6 +129,26 @@ th, td {
 	border: 1px solid black;
 	padding: 5px;
 }
+.proportionalTable th {
+	border-width: 0px 0px 1px 0px;
+	padding: 5px 10px;
+	text-align: center;
+}
+
+.proportionalTable td {
+	padding: 5px 10px;
+	text-align: center;
+}
+
+.proportionalTable td:first-of-type {
+	border-width: 0px 1px 0px 0px;
+}
+.proportionalTable th:first-of-type {
+	border-width: 0px 1px 1px 0px;
+}
+.proportionalTable td:last-of-type {
+	border-width: 0px;
+}
 .narrow {
 	display: none;
 }
