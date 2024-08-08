@@ -71,21 +71,37 @@
 				</div>
 				<h3>Termit ja polynomit</h3>
 				<div>
-					<p>Termi muodostuu luvun ja muuttujan tulosta. Termiä merkittäessä kertomerkki jätetään merkitsemättä. Lukua kutsutaan termin kertoimeksi ja muuttujaa (sekä myöhemmin sen astetta) muuttujaosaksi.</p>
-					<img src="https://jannevenhoedu.github.io/ma8/j1/t/ma8j1_teoria_termi.gif">
-					<p>Erityisesti termin kertoimista pitää muistaa kertoimet 1 ja -1, joiden tapauksessa <strong>ykköstä ei merkitä näkyviin</strong>, vaan esimerkiksi</p>
-					<div class="indent">
-						<p>\(\mathsf{1a = a}\)</p>
-						<p>\(\mathsf{-1x=-x}\)</p>
+					<p>Termi on <strong>kertoimen</strong> ja <strong>muuttujaosan</strong> tulo. Kerroin on luku, ja muuttujaosassa on nimensä mukaisesti muuttuja. Muuttuja voi olla korotettuna potenssiin, jolloin sen eksponenttia kutsutaan termin <strong>asteeksi</strong>.</p>
+					<img src="https://jannevenhoedu.github.io/ma8/j4/t/ma8j4_teoria_termi.png">
+					<p>Termejä luokitellaan niiden asteen mukaan, eli esimerkiksi \(\mathsf{6x^3}\) on kolmannen asteen termi, \(\mathsf{-7x^5}\) on viidennen asteen termi jne.</p>
+					<p>Huomaathan erityisesti seuraavien termien asteet:</p>
+					<ul>
+						<li>Termin \(\mathsf{5x}\) aste on 1, sillä \(\mathsf{5x = 5x^1}\).</li>
+						<li>Vakiotermin \(\mathsf{-2}\) aste on 0, sillä \(\mathsf{-2 = -2x^0}\).</li>
+					</ul>
+					<p>Termit ovat <strong>samanmuotoisia</strong>, jos niillä on täsmälleen sama muuttujaosa, eli siis sama muuttuja sekä aste. Vain samanmuotoisia termejä voidaan laskea yhteen ja vähentää toisistaan.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Sievennä.</p>
+						<div class="indent">
+							<p>a) \(\mathsf{2x^2 + 3x^2 = 5x^2}\)</p>
+							<p>b) \(\mathsf{4x^3 - 5x^3 = -x^3}\)</p>
+							<p>c) \(\mathsf{6x^2 + 4x^2 + 3x - x = 10x^2 + 2x}\)</p>
+							<p>d) \(\begin{align}&\mathsf{{\color{red}5x^3}\;{\color{blue}-\;2x^2} + 6 \;{\color{red}-\;x^3}\;{\color{blue}+\;3x^2} -7}\\ =\;&\mathsf{{\color{red}4x^3}  \;{\color{blue}+\;x^2} - 1}\end{align}\)</p>
+						</div>
 					</div>
-					<p>Peräkkäisistä termeistä koostuvaa muuttujalauseketta kutsutaan polynomiksi. Polynomissa olevia samanmuotoisia termejä voidaan sieventään laskemalla niitä yhteen tai vähentämällä niitä toisistaan. Samanmuotoisilla termeillä on täsmälleen sama muuttujaosa.</p>
-					<img src="https://jannevenhoedu.github.io/ma8/j1/t/ma8j1_teoria_lausekkeen_sieventaminen.gif" style="width: 300px">
-					<p>Jos termeihin kohdistuu kerto- tai jakolaskuja, nekin voidaan sieventää.</p>
-					<div class="indent">
-						<p>a) \(\mathsf{5 \cdot 6x = 30x}\)</p>
-						<p>b) \(\mathsf{\dfrac{28a}{-7} = -4a}\)</p>
+					<p>Termien kerto- ja jakolaskussa kertoimet kerrotaan (jaetaan) erikseen ja muuttujaosat erikseen.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Sievennä.</p>
+						<div class="indent">
+							<p>a) \(\mathsf{{\color{red}2}{\color{blue}x^2} \cdot {\color{red}3}{\color{blue}x^3} = {\color{red}6}{\color{blue}x^5}}\)</p>
+							<p>b) \(\mathsf{{\color{red}-}{\color{blue}x} \cdot {\color{red}4}{\color{blue}x^2} = {\color{red}-4}{\color{blue}x^3}}\)</p>
+							<p>c) \(\mathsf{\dfrac{{\color{red}12}{\color{blue}x^3}}{{\color{red}4}{\color{blue}x^2}} = {\color{red}3}{\color{blue}x}}\)</p>
+							<p>d) \(\mathsf{\dfrac{{\color{red}-42}{\color{blue}x^7}}{{\color{red}7}{\color{blue}x^3}} = {\color{red}-6}{\color{blue}x^4}}\)</p>
+						</div>
 					</div>
-					<p>Jos muuttujan arvo tunnettaan, voidaan laskea polynomin arvo sijoittamalla arvo lausekkeeseen muuttujan paikalle.</p>
+					<p>Termillä voidaan kertoa myös kokonaista polynomia. Kertolasku kohdistuu kaikkiin polynomin termeihin.</p>
+					<img src="https://jannevenhoedu.github.io/ma8/j1/t/ma8j1_teoria_osittelulaki.gif" style="width: 200px">
+					<p>Jos muuttujan arvo tunnettaan, voidaan polynomin arvo laskea sijoittamalla arvo lausekkeeseen muuttujan paikalle.</p>
 					<div class="example">
 						<p><strong>Esimerkki:</strong> Laske lausekkeen \(\mathsf{3x + 4}\) arvo, kun muuttuja saa arvon \(\mathsf{x = 2}\).</p>
 						<p class="indent">\(\begin{align}\phantom{=}&\mathsf{3x + 4}\\ =\;&\mathsf{3\cdot 2 + 4}\\ =\;&\mathsf{6 + 4}\\ =\;&\mathsf{10}\end{align}\)</p>
@@ -95,14 +111,6 @@
 						<p><strong>Esimerkki:</strong> Laske lausekkeen \(\mathsf{3x + 4}\) arvo, kun muuttuja saa arvon \(\mathsf{x = -1}\).</p>
 						<p class="indent">\(\begin{align}\phantom{=}&\mathsf{3x + 4}\\ =\;&\mathsf{3\cdot (-1) + 4}\\ =\;&\mathsf{-3 + 4}\\ =\;&\mathsf{1}\end{align}\)</p>
 					</div>
-				</div>
-				<h3>Lausekkeen kertominen luvulla</h3>
-				<div>
-					<p>Kertolaskun yhteydessä 7. luokalla opittiin ns. osittelulakiin perustuva päässälaskumenetelmä, jonka avulla voitiin laskea helposti kertolasku, jonka toisena tekijänä on suuri luku. Suuri luku pilkotaan osiin (ykkösiin, kymmeniin, satoihin, ...), kerrotaan osia, ja yhdistetään uudet osat takaisin yhdeksi luvuksi. Esimerkiksi</p>
-					<p class="indent">\(\begin{array}{l}\mathsf{\quad 9 \cdot 183}\\ \mathsf{=9 \cdot (100 + 80 + 3)}\\ \mathsf{=900 + 720 + 27}\\ \mathsf{=1647}\end{array}\)</p>
-					<p>Tätä menetelmää käytetään myös tilanteessa, jossa muuttujalauseketta kerrotaan luvulla (tai termillä).</p>
-					<img src="https://jannevenhoedu.github.io/ma8/j1/t/ma8j1_teoria_osittelulaki.gif" style="width: 200px">
-					<p>Kertolasku kohdistuu siis kaikkiin muuttujalausekkeen termeihin.</p>
 				</div>
 				<h3>Koordinaatisto ja piste</h3>
 				<div>
@@ -151,161 +159,199 @@
 						</div>
 					</div>
 				</div>
+				<h3>Toisen asteen yhtälö</h3>
+				<div>
+					<p>Toisen asteen yhtälöllä tarkoitetaan yhtälöä, jossa esiintyy termejä, joiden aste on 2. Toisin sanoen muuttuja (esim. x) on korotettu toiseen potenssiin (neliö). Toisen asteen yhtälöitä ovat esimerkiksi:</p>
+					<div class="indent">
+						<p>\(\mathsf{x^2 = 36}\)</p>
+						<p>\(\mathsf{5x^2 = 20}\)</p>
+						<p>\(\mathsf{-2x^2 + 7 = -11}\)</p>
+						<p>\(\mathsf{x^2 = 4x - 3}\)</p>
+					</div>
+					<p>Yhtälön ratkaisemisessa käytetään aina käänteisiä laskutoimituksia puolittain, jotta muuttuja saadaan jäämään yksin toiselle puolelle yhtälöä. Toiseen potenssiin korottamiselle eli neliölle vastakkainen laskutoimitus on tietenkin neliöjuuri.</p>
+					<div class="example">
+						<p><strong>Esimerkki: </strong>Ratkaise yhtälö.</p>
+						<div class="indent">
+							<p>a) Ratkaise yhtälö \(\mathsf{x^2 = 36}\)</p>
+							<p class="indent">\(\begin{align}\mathsf{x^2} &amp;= \mathsf{36} \quad &amp;\mathsf{|| \sqrt{\quad}}\\\mathsf{x} &amp;= \mathsf{6}\\&amp;\textsf{tai}\\\mathsf{x} &amp;= \mathsf{-6}\end{align}\)</p>
+							<p>b) Ratkaise yhtälö \(\mathsf{x^2 = 25}\)</p>
+							<p class="indent">\(\begin{align}\mathsf{x^2} &amp;= \mathsf{25} \quad &amp;\mathsf{|| \sqrt{\quad}}\\\mathsf{x} &amp;= \mathsf{\pm5}\end{align}\)</p>
+						</div>
+					</div>
+					<p>Laskujärjestys sanoo, että potenssit ja neliöjuuret lasketaan ennen kerto- ja jakolaskuja tai yhteen- ja vähennyslaskuja. Koska yhtälönratkaisussa toimitaan aina käänteisesti myös laskujärjestyksen suhteen, suoritetaan kaikki muut ratkaisun vaiheet ennen neliöjuuren ottamista puolittain.</p>
+					<div class="example">
+						<p><strong>Esimerkki: </strong></p>
+						<div class="indent">
+							<p>a) Ratkaise yhtälö \(\mathsf{5x^2 = 20}\)</p>
+							<p class="indent">\(\begin{align}\mathsf{5x^2} &amp;= \mathsf{20} \quad &amp;&amp;\mathsf{|| :5}\\ \mathsf{x^2} &amp;= \mathsf{4} &amp;&amp;\mathsf{|| \sqrt{\quad}}\\ \mathsf{x} &amp;= \mathsf{\pm2} \end{align}\)</p>
+							<p>b) Ratkaise yhtälö \(\mathsf{-2x^2 + 7 = -11}\)</p>
+							<p class="indent">\(\begin{align}\mathsf{-2x^2 + 7} &amp;= \mathsf{-11} \quad &amp;&amp;\mathsf{|| -7}\\ \mathsf{-2x^2} &amp;= \mathsf{-18} \quad &amp;&amp;\mathsf{|| :(-2)}\\ \mathsf{x^2} &amp;= \mathsf{9} &amp;&amp;\mathsf{|| \sqrt{\quad}}\\ \mathsf{x} &amp;= \mathsf{\pm3} \end{align}\)</p>
+						</div>
+					</div>
+				</div>
 			</div>
 			<h2>2. Funktio</h2>
 			<div>
-				<p><strong>Funktio</strong> on matemaattinen tapa merkitä sääntöä tai riippuvuutta. Funktio yhdistää <strong>muuttujan arvon</strong> ja <strong>funktion arvon</strong> toisiinsa tietyn säännön mukaan. Sääntö ilmaistaan muuttujalausekkeena. Jos funktio \(\mathsf{f}\) kuvaisi sääntöä, jossa funktion arvo saadaan kertomalla muuttujan arvo kahdella ja lisäämällä tuloon yksi, funktion sääntö merkittäisiin seuraavasti:</p>
-				<div class="indent">
-				<p>\(\mathsf{f(x)=2x+1}\)</p>
-				</div>
+				<p>Funktio on matemaattinen tapa merkitä sääntöä tai riippuvuutta. Funktio yhdistää <strong>muuttujan arvon</strong> ja <strong>funktion arvon</strong> toisiinsa tietyn säännön mukaan. Sääntö ilmaistaan muuttujalausekkeena. Jos funktio \(\mathsf{f}\) kuvaisi sääntöä, jossa funktion arvo saadaan kertomalla muuttujan arvo kahdella ja lisäämällä tuloon yksi, funktion sääntö merkittäisiin</p>
+				<p class="indent">\(\mathsf{f(x)=2x+1}\)</p>
 				<p>Kirjain \(\mathsf{f}\) on siis <strong>funktion nimi</strong>, suluissa oleva \(\mathsf{x}\) on <strong>muuttuja</strong> ja \(\mathsf{2x+1}\) on <strong>funktion lauseke</strong>.</p>
 				<h3>Funktion arvo</h3>
-				<p>Sijoittamalla funktion lausekkeeseen jokin muuttujan arvo, saadaan laskettua funktion arvo. Tällöin myös funktion merkinnässä muuttuja korvataan muuttujan arvolla.</p>
-				<p><strong>Esimerkki:</strong> Merkitse ja laske funktion \(\mathsf{f(x)=2x+1}\) arvo, kun</p>
-				<p>a) \(\mathsf{x = 2}\)</p>
-				<div class="indent">
-				<p>\(\begin{align}\mathsf{f(2)} &amp;= \mathsf{2 \cdot 2 + 1}\\ &amp;= \mathsf{4+1}\\ &amp;= \mathsf{5}\end{align}\)</p>
-				</div>
-				<p>b) \(\mathsf{x = -1}\)</p>
-				<div class="indent">
-				<p>\(\begin{align}\mathsf{f(-1)} &amp;= \mathsf{2 \cdot (-1) + 1}\\ &amp;= \mathsf{-2 + 1}\\ &amp;= \mathsf{-1}\end{align}\)</p>
-				<p> </p>
+				<div>
+					<p>Sijoittamalla funktion lausekkeeseen jokin muuttujan arvo, saadaan laskettua funktion arvo. Tällöin myös funktion merkinnässä muuttuja korvataan muuttujan arvolla.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Merkitse ja laske funktion \(\mathsf{f(x)=2x+1}\) arvo, kun</p>
+						<p>a) \(\mathsf{x = 2}\)</p>
+						<p class="indent">\(\begin{align}\mathsf{f(2)} &amp;= \mathsf{2 \cdot 2 + 1}\\ &amp;= \mathsf{4+1}\\ &amp;= \mathsf{5}\end{align}\)</p>
+						<p>b) \(\mathsf{x = -1}\)</p>
+						<p class="indent">\(\begin{align}\mathsf{f(-1)} &amp;= \mathsf{2 \cdot (-1) + 1}\\ &amp;= \mathsf{-2 + 1}\\ &amp;= \mathsf{-1}\end{align}\)</p>
+					</div>
 				</div>
 				<h3>Muuttujan arvo</h3>
-				<p>Jos kysytään, millä muuttujan arvolla funktio saa tietyn arvon, tarvitaan yhtälönratkaisua.</p>
-				<p><strong>Esimerkki:</strong> Millä muuttujan \(\mathsf{x}\) arvolla funktion \(\mathsf{f(x)=2x-1}\) arvo on \(\mathsf{3}\)?</p>
-				<div class="indent">
-				<p>Ratkaisu: Tiedetään, että \(\mathsf{f(x) = 3}\). Koska funktion arvot \(\mathsf{f(x)}\) saadaan lausekkeesta \(\mathsf{2x-1}\), voidaan merkitä:</p>
-				<p>\( \begin{align}\mathsf{f(x)} &amp;= \mathsf{3} \\ \mathsf{2x-1} &amp;= \mathsf{3} &amp;&amp;\mathsf{|| +1} \\ \mathsf{2x} &amp;= \mathsf{4} &amp;&amp;\mathsf{|| : 2} \\ \mathsf{x} &amp;= \mathsf{2}\end{align} \)</p>
-				<p>Vastaus: \(\mathsf{f(x) = 3}\) muuttujan arvolla \(\mathsf{x = 2}\).</p>
+				<div>
+					<p>Jos kysytään, millä muuttujan arvolla funktio saa tietyn arvon, tarvitaan yhtälönratkaisua.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Millä muuttujan \(\mathsf{x}\) arvolla funktion \(\mathsf{f(x)=2x-1}\) arvo on \(\mathsf{3}\)?</p>
+						<div class="indent">
+							<p>Ratkaisu: Tiedetään, että \(\mathsf{f(x) = 3}\). Koska funktion arvot \(\mathsf{f(x)}\) saadaan lausekkeesta \(\mathsf{2x-1}\), voidaan merkitä:</p>
+							<p>\( \begin{align}\mathsf{f(x)} &amp;= \mathsf{3} \\ \mathsf{2x-1} &amp;= \mathsf{3} &amp;&amp;\mathsf{|| +1} \\ \mathsf{2x} &amp;= \mathsf{4} &amp;&amp;\mathsf{|| : 2} \\ \mathsf{x} &amp;= \mathsf{2}\end{align} \)</p>
+						</div>
+						<p>Vastaus: \(\mathsf{f(x) = 3}\) muuttujan arvolla \(\mathsf{x = 2}\).</p>
+					</div>
 				</div>
 			</div>
 			<h2>3. Funktion kuvaaja</h2>
 			<div>
 				<p>Funktion määrittämä sääntö voidaan esittää myös koordinaatistossa, jolloin sitä kutsutaan <strong>funktion kuvaajaksi</strong>. Kuvaaja koostuu pisteistä \(\mathsf{(x,y)}\), missä \(\mathsf{x}\) on muuttujan arvo, ja \(\mathsf{y}\) on funktion arvo, eli \(\mathsf{y = f(x)}\). Funktioita ja kuvaajia on lukemattomia erilaisia, mutta peruskoulussa keskitytään <strong>lineaarisiin funktioihin</strong>, joiden lausekkeet ovat 1. asteen polynomeja ja kuvaajat ovat <strong>suoria</strong>.</p>
 				<h3>Lineaarisen funktion kuvaajan piirtäminen</h3>
-				<p>Lineaarisen funktion kuvaajan eli suoran piirtämiseksi taulukoidaan vähintään kolme muuttujan arvoa, ja lasketaan niitä vastaavat funktion arvot.</p>
-				<p><strong>Esimerkki:</strong> Piirrä funktion \(\mathsf{f(x) = 2x + 1}\) kuvaaja.</p>
-				<div class="indent"><iframe class="gg_upotus" style="border: 0px;" title="ma9j1_teoria_kuvaajan_piirto_animaatio" src="https://www.geogebra.org/material/iframe/id/cxbxuwej/width/672/height/453/border/888888/sfsb/false/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="672px" height="453px" scrolling="no"> </iframe></div>
+				<div>
+					<p>Lineaarisen funktion kuvaajan eli suoran piirtämiseksi taulukoidaan vähintään kolme muuttujan arvoa, ja lasketaan niitä vastaavat funktion arvot.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Piirrä funktion \(\mathsf{f(x) = 2x + 1}\) kuvaaja.</p>
+						<div class="gg" id="kuvaajan_piirto_animaatio" style="width: 672px; height: 453px;">
+							https://jannevenhoedu.github.io/ma9/j1/t/ma9j1_teoria_kuvaajan_piirto_animaatio.ggb
+						</div>
+					</div>
+				</div>
 				<h3>Paraabelin piirtäminen</h3>
-				<p>Jos funktion lauseke on 2. asteen polynomi, sen kuvaaja ei ole suora vaan <strong>paraabeli</strong>. Paraabeli on käyrä, joten pisteitä kannattaa valita useita.</p>
-				<p><strong>Esimerkki:</strong> Piirrä funktion \(\mathsf{g(x) = x^2}\) kuvaaja.</p>
-				<div class="indent">
-				<p><img class="img-responsive atto_image_button_text-bottom" style="border: 1px solid black;" role="presentation" src="https://jannevenhoedu.github.io/ma9/j1/t/ma9j1_teoria_paraabelin_piirto.png" alt="" width="598" height="331"></p>
+				<div>
+					<p>Jos funktion lauseke on 2. asteen polynomi, sen kuvaaja ei ole suora vaan <strong>paraabeli</strong>. Paraabeli on käyrä, joten pisteitä kannattaa valita useita.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Piirrä funktion \(\mathsf{g(x) = x^2}\) kuvaaja.</p>
+						<img src="https://jannevenhoedu.github.io/ma9/j1/t/ma9j1_teoria_paraabelin_piirto.png">
+					</div>
 				</div>
 			</div>
 			<h2>4. Suoran yhtälö</h2>
 			<div>
-				<p><strong>Suoran yhtälö</strong> on laskusääntö, jolla suoran pisteiden x-koordinaateista voidaan laskea niitä vastaavat y-koordinaatit (tai toisinpäin). Suoran yhtälö voidaan esittää monella tavalla, mutta peruskoulussa tutustutaan ns. <strong>ratkaistuun muotoon</strong></p>
-				<div class="indent">
-				<p>\(\mathsf{y = \color{red}{k}x + \color{blue}{b}}\),</p>
-				</div>
+				<p>Suoran yhtälö on laskusääntö, jolla suoran pisteiden x-koordinaateista voidaan laskea niitä vastaavat y-koordinaatit (tai toisinpäin). Suoran yhtälö voidaan esittää monella tavalla, mutta peruskoulussa tutustutaan ns. <strong>ratkaistuun muotoon</strong></p>
+				<p class="indent">\(\mathsf{y = \color{red}{k}x + \color{blue}{b}}\),</p>
 				<p>missä muuttujan x kerrointa \(\mathsf{\color{red}k}\) kutsutaan <strong>kulmakertoimeksi</strong>. Toista termiä \(\mathsf{\color{blue}b}\) kutsutaan tuttuun tapaan <strong>vakiotermiksi</strong>. Molemmilla käsitteillä on tärkeä ja havainnollinen rooli suoran sijainnissa koordinaatistossa. Alla olevassa taulukossa on esimerkkejä erilaisista suorien yhtälöistä, ja niiden kulmakertoimista ja vakiotermeistä.</p>
 				<table>
-				<thead>
-				<tr style="text-align: center;">
-				<th style="border: solid black 1px; padding-left: 10px; padding-right: 10px;">Suoran yhtälö</th>
-				<th style="border: solid black 1px; padding-left: 10px; padding-right: 10px;">Kulmakerroin k</th>
-				<th style="border: solid black 1px; padding-left: 10px; padding-right: 10px;">Vakiotermi b</th>
-				</tr>
-				</thead>
-				<tbody>
-				<tr style="text-align: center;">
-				<td style="border: solid black 1px; text-align: left; padding-left: 10px;">\(\mathsf{y = \color{red}{2}x \color{blue}{+\:1}}\)</td>
-				<td style="border: solid black 1px;">\(\mathsf{\color{red}{2}}\)</td>
-				<td style="border: solid black 1px;">\(\mathsf{\color{blue}{1}}\)</td>
-				</tr>
-				<tr style="text-align: center;">
-				<td style="border: solid black 1px; text-align: left; padding-left: 10px;">\(\mathsf{y = \color{red}{-5}x \color{blue}{+\:5}}\)</td>
-				<td style="border: solid black 1px;">\(\mathsf{\color{red}{-5}}\)</td>
-				<td style="border: solid black 1px;">\(\mathsf{\color{blue}{5}}\)</td>
-				</tr>
-				<tr style="text-align: center;">
-				<td style="border: solid black 1px; text-align: left; padding-left: 10px;">\(\mathsf{y = \color{red}{3}x \color{blue}{-\:2}}\)</td>
-				<td style="border: solid black 1px;">\(\mathsf{\color{red}{3}}\)</td>
-				<td style="border: solid black 1px;">\(\mathsf{\color{blue}{-2}}\)</td>
-				</tr>
-				<tr style="text-align: center;">
-				<td style="border: solid black 1px; text-align: left; padding-left: 10px;">\(\mathsf{y = x \color{blue}{+\:2}}\)</td>
-				<td style="border: solid black 1px;">\(\mathsf{\color{red}{1}}\)</td>
-				<td style="border: solid black 1px;">\(\mathsf{\color{blue}{2}}\)</td>
-				</tr>
-				<tr style="text-align: center;">
-				<td style="border: solid black 1px; text-align: left; padding-left: 10px;">\(\mathsf{y = \color{blue}{-3}}\)</td>
-				<td style="border: solid black 1px;">\(\mathsf{\color{red}{0}}\)</td>
-				<td style="border: solid black 1px;">\(\mathsf{\color{blue}{-3}}\)</td>
-				</tr>
-				<tr style="text-align: center;">
-				<td style="border: solid black 1px; text-align: left; padding-left: 10px;">\(\mathsf{y = \color{red}{4}x}\)</td>
-				<td style="border: solid black 1px;">\(\mathsf{\color{red}{4}}\)</td>
-				<td style="border: solid black 1px;">\(\mathsf{\color{blue}{0}}\)</td>
-				</tr>
-				</tbody>
+					<thead>
+						<tr>
+							<th>Suoran yhtälö</th>
+							<th>Kulmakerroin k</th>
+							<th>Vakiotermi b</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>\(\mathsf{y = {\color{red}2}x {\color{blue}+\:1}}\)</td>
+							<td>\(\mathsf{\color{red}2}\)</td>
+							<td>\(\mathsf{\color{blue}1}\)</td>
+						</tr>
+						<tr>
+							<td>\(\mathsf{y = {\color{red}-5}x {\color{blue}+\:5}}\)</td>
+							<td>\(\mathsf{\color{red}-5}\)</td>
+							<td>\(\mathsf{\color{blue}5}\)</td>
+						</tr>
+						<tr>
+							<td>\(\mathsf{y = {\color{red}3}x {\color{blue}-\:2}}\)</td>
+							<td>\(\mathsf{\color{red}3}\)</td>
+							<td>\(\mathsf{\color{blue}-2}\)</td>
+						</tr>
+						<tr>
+							<td>\(\mathsf{y = x \color{blue}+\:2}\)</td>
+							<td>\(\mathsf{\color{red}1}\)</td>
+							<td>\(\mathsf{\color{blue}2}\)</td>
+						</tr>
+						<tr>
+							<td>\(\mathsf{y = \color{blue}-3}\)</td>
+							<td>\(\mathsf{\color{red}0}\)</td>
+							<td>\(\mathsf{\color{blue}-3}\)</td>
+						</tr>
+						<tr>
+							<td>\(\mathsf{y = {\color{red}4}x}\)</td>
+							<td>\(\mathsf{\color{red}4}\)</td>
+							<td>\(\mathsf{\color{blue}0}\)</td>
+						</tr>
+					</tbody>
 				</table>
-				<br>
-				<h3><span>Kulmakerroin</span></h3>
-				<p><strong>Kulmakerroin kertoo suoran kaltevuuden.</strong> Mittayksikkönä voidaan ajatella käytettävän y-akselin suuntaista muutosta, kun x-koordinaatin suuruus kasvaa yhdellä. Toisin sanoen, piirretään suoralle (mihin tahansa) piste, liikutaan yhden verran oikealle, ja lasketaan kuinka paljon tulee siirtyä ylös (tai alas), jotta päästään takaisin suoralle. Alla oleva kuva havainnollistaa kulmakertoimen \(\mathsf{k}\) määrittämistä suoran kuvaajasta.</p>
-				<div class="indent">
-				<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://jannevenhoedu.github.io/ma9/j1/t/ma9j1_teoria_kulmakerroin1.png" alt="" width="500" height="357"></p>
+				<h3>Kulmakerroin</h3>
+				<div>
+					<p><strong>Kulmakerroin kertoo suoran kaltevuuden.</strong> Mittayksikkönä voidaan ajatella käytettävän y-akselin suuntaista muutosta, kun x-koordinaatin suuruus kasvaa yhdellä. Toisin sanoen, piirretään suoralle (mihin tahansa) piste, liikutaan yhden verran oikealle, ja lasketaan kuinka paljon tulee siirtyä ylös (tai alas), jotta päästään takaisin suoralle. Alla oleva kuva havainnollistaa kulmakertoimen \(\mathsf{k}\) määrittämistä suoran kuvaajasta.</p>
+					<img src="https://jannevenhoedu.github.io/ma9/j1/t/ma9j1_teoria_kulmakerroin1.png">
+					<p>Tarkalleen ottaen kulmakerroin määritellään y-akselin suuntaisen siirtymän \(\mathsf{\Delta y}\) ja x-akselin suuntaisen siirtymän \(\mathsf{\Delta x}\) osamääränä. Alla olevasta kuvassa on esimerkkinä kulmakertoimen \(\textsf{k}\) määrittäminen tällä tavoin.</p>
+					<img src="https://jannevenhoedu.github.io/ma9/j1/t/ma9j1_teoria_kulmakerroin2.png">
+					<p>Jos kulmakerroin on positiivinen, sanotaan että suora on <strong>nouseva</strong>. Vastaavasti kulmakertoimen ollessa negatiivinen, suora on <strong>laskeva</strong>.</p>
 				</div>
-				<p>Tarkalleen ottaen kulmakerroin määritellään y-akselin suuntaisen siirtymän \(\mathsf{\Delta y}\) ja x-akselin suuntaisen siirtymän \(\mathsf{\Delta x}\) osamääränä. Alla olevasta kuvassa on esimerkkinä kulmakertoimen \(\textsf{k}\) määrittäminen tällä tavoin.</p>
-				<div class="indent">
-				<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://jannevenhoedu.github.io/ma9/j1/t/ma9j1_teoria_kulmakerroin2.png" alt="" width="499" height="265"></p>
-				</div>
-				<p>Jos kulmakerroin on positiivinen, sanotaan että suora on <strong>nouseva</strong>. Vastaavasti kulmakertoimen ollessa negatiivinen, suora on <strong>laskeva</strong>.</p>
-				<h3><span>Vakiotermi</span></h3>
-				<p>Vakiotermi kertoo suoran ja y-akselin leikkauskohdan. Toisin sanoen vakiotermi on suoran ja y-akselin leikkauspisteen y-koordinaatti, sillä x-koordinaattihan on tällöin aina 0. Vakiotermiä muuttamalla voidaan siis muuttaa suoran sijaintia y-akselin suunnassa. Alla olevassa kuvassa on esitetty yhdensuuntaisia suoria, joiden vakiotermi on eri.</p>
-				<div class="indent">
-				<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://jannevenhoedu.github.io/ma9/j1/t/ma9j1_teoria_vakiotermi.png" alt="" width="500" height="360"></p>
+				<h3>Vakiotermi</h3>
+				<div>
+					<p>Vakiotermi kertoo suoran ja y-akselin leikkauskohdan. Toisin sanoen vakiotermi on suoran ja y-akselin leikkauspisteen y-koordinaatti, sillä x-koordinaattihan on tällöin aina 0. Vakiotermiä muuttamalla voidaan siis muuttaa suoran sijaintia y-akselin suunnassa. Alla olevassa kuvassa on esitetty yhdensuuntaisia suoria, joiden vakiotermi on eri.</p>
+					<img src="https://jannevenhoedu.github.io/ma9/j1/t/ma9j1_teoria_vakiotermi.png">
 				</div>
 			</div>
 			<h2>5. Graafinen ja algebrallinen ratkaisu</h2>
 			<div>
 				<p>Monia funktioiden kulkuun ja sijaintiin liittyviä ongelmia voidaan ratkaista sekä kuvaajasta katsomalla että ratkaisemalla yhtälöitä. Kuvaajasta katsomista kutsutaan <strong>graafiseksi ratkaisuksi</strong>, joka on erittäin hyvä menetelmä selvittää ratkaisu karkeasti. Graafisella ratkaisulla ei saada täysin tarkkoja vastauksia, mutta se helpottaa usein haastavien tehtävien ongelman rajaamista. Jos tehtävä ratkaistaan laskemalla tai ratkaisemalla yhtälö, sitä kutsutaan <strong>algebralliseksi ratkaisuksi</strong>. Algebrallisella ratkaisulla saadaan ratkaisuksi usein tarkka arvo tai ainakin riittävän tarkka likiarvo.</p>
 				<h3>Funktion nollakohta</h3>
-				<p>Funktion nollakohta eli <strong>juuri</strong> tarkoittaa muuttujan arvoa, jolla funktion arvo on nolla. Nollakohtia voi olla yksi, useampi tai ei yhtään. Funktion nollakohtien ratkaiseminen on suuressa roolissa peruskoulun jälkeisissä opinnoissa, kun funktioita aletaan analysoida tarkemmin. Se antaa myöskin uuden työkalun vaikeampien yhtälöiden ja funktoiden ratkaisemiseen, jolloin ongelmaa voidaan rajata nollakohtien avulla. Peruskoulussa funktion nollakohdan ratkaiseminen toimii monipuolisena harjoituksena ja vahvistaa ymmärrystä opiskeltavasta asiasta.</p>
-				<p><strong>Esimerkki:</strong> Ratkaise funktion \(\mathsf{f(x) = 2x - 4}\) nollakohta.</p>
-				<div class="indent">
-				<p><strong>Graafinen ratkaisu:</strong> Piirretään funktion kuvaaja, ja etsitään kuvaajan ja x-akselin leikkauskohta.</p>
-				<div class="indent">
-				<p><img class="img-responsive atto_image_button_text-bottom" role="presentation" src="https://jannevenhoedu.github.io/ma9/j1/t/ma9j1_teoria_nollakohta.png" alt="" width="399" height="398"></p>
-				</div>
-				</div>
-				<div class="indent">
-				<p><strong>Algebrallinen ratkaisu:</strong> Etsitään muuttujan x arvo, jolla funktio saa arvon 0, eli muodostetaan ja ratkaistaan yhtälö \(\mathsf{f(x) = 0}\).</p>
-				<div class="indent">
-				<p>\(\begin{align}\mathsf{f(x)} &amp;= \mathsf{0}\\ \mathsf{2x-4} &amp;= \mathsf{0} &amp;&amp;\mathsf{\| +4}\\ \mathsf{2x} &amp;= \mathsf{4} &amp;&amp;\mathsf{\| :2}\\ \mathsf{x} &amp;= \mathsf{2}\end{align}\)</p>
-				</div>
-				<p><strong>Vastaus:</strong> Funktion nollakohta on x = 2.</p>
+				<div>
+					<p>Funktion nollakohta eli <strong>juuri</strong> tarkoittaa muuttujan arvoa, jolla funktion arvo on nolla. Nollakohtia voi olla yksi, useampi tai ei yhtään. Funktion nollakohtien ratkaiseminen on suuressa roolissa peruskoulun jälkeisissä opinnoissa, kun funktioita aletaan analysoida tarkemmin. Se antaa myöskin uuden työkalun vaikeampien yhtälöiden ja funktoiden ratkaisemiseen, jolloin ongelmaa voidaan rajata nollakohtien avulla. Peruskoulussa funktion nollakohdan ratkaiseminen toimii monipuolisena harjoituksena ja vahvistaa ymmärrystä opiskeltavasta asiasta.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Ratkaise funktion \(\mathsf{f(x) = 2x - 4}\) nollakohta.</p>
+						<div class="indent">
+							<p>Graafinen ratkaisu: Piirretään funktion kuvaaja, ja etsitään kuvaajan ja x-akselin leikkauskohta.</p>
+							<img src="https://jannevenhoedu.github.io/ma9/j1/t/ma9j1_teoria_nollakohta.png">
+						<p>Algebrallinen ratkaisu: Etsitään muuttujan x arvo, jolla funktio saa arvon 0, eli muodostetaan ja ratkaistaan yhtälö \(\mathsf{f(x) = 0}\).</p>
+						<p class="indent">\(\begin{align}\mathsf{f(x)} &amp;= \mathsf{0}\\ \mathsf{2x-4} &amp;= \mathsf{0} &amp;&amp;\mathsf{\| +4}\\ \mathsf{2x} &amp;= \mathsf{4} &amp;&amp;\mathsf{\| :2}\\ \mathsf{x} &amp;= \mathsf{2}\end{align}\)</p>
+						<p><strong>Vastaus:</strong> Funktion nollakohta on x = 2.</p>
+						</div>
+					</div>
 				</div>
 				<h3>Piste kuvaajalla</h3>
-				<p>"Onko piste funktion kuvaajalla?" -tehtävä voidaan ajatella myös muodossa "Toteuttaako lukupari funktion säännön?" Tätä tietoa voidaan käyttää esimerkiksi funktion säännön tutkimisessa, monimutkaisten funktioiden analysoinnissa tai tietokonegrafiikassa valonsäteiden mallinnuksessa.</p>
-				<p><strong>Esimerkki:</strong> Onko piste \(\mathsf{(1, -3)}\) funktion \(\mathsf{f(x)=x^2-5}\) kuvaajalla?</p>
-				<div class="indent">
-				<p><strong>Graafinen ratkaisu:</strong> Piirretään funktion kuvaaja ja piste samaan koordinaatistoon, ja katsotaan onko piste kuvaajalla.<img class="img-responsive atto_image_button_text-bottom" style="font-size: 0.9375rem;" role="presentation" src="https://jannevenhoedu.github.io/ma9/j1/t/ma9j1_teoria_piste_kuvaajalla.png" alt="" width="399" height="398"></p>
-				</div>
-				<div class="indent">
-				<p><strong>Algebrallinen ratkaisu:</strong> Lasketaan funktion arvo pisteen x-koordinaatin arvolla ja verrataan funktion arvo y-koordinaatin arvoon.</p>
-				<div class="indent">
-				<p>\(\begin{align}\mathsf{f(x)} &amp;= \mathsf{x^2-5}\\ \mathsf{f(1)} &amp;= \mathsf{1^2-5}\\ &amp;= \mathsf{1-5}\\ &amp;= \mathsf{-4}\end{align}\)</p>
-				</div>
-				<p><strong>Vastaus:</strong> Piste (1, -3) ei ole funktion f kuvaajalla.</p>
+				<div>
+					<p>"Onko piste funktion kuvaajalla?" -tehtävä voidaan ajatella myös muodossa "Toteuttaako lukupari funktion säännön?" Tätä tietoa voidaan käyttää esimerkiksi funktion säännön tutkimisessa, monimutkaisten funktioiden analysoinnissa tai tietokonegrafiikassa valonsäteiden mallinnuksessa.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Onko piste \(\mathsf{(1, -3)}\) funktion \(\mathsf{f(x)=x^2-5}\) kuvaajalla?</p>
+						<div class="indent">
+							<p>Graafinen ratkaisu: Piirretään funktion kuvaaja ja piste samaan koordinaatistoon, ja katsotaan onko piste kuvaajalla.</p>
+							<img src="https://jannevenhoedu.github.io/ma9/j1/t/ma9j1_teoria_piste_kuvaajalla.png">
+							<p>Algebrallinen ratkaisu: Lasketaan funktion arvo pisteen x-koordinaatin arvolla ja verrataan funktion arvo y-koordinaatin arvoon.</p>
+							<div class="indent">
+								<p>\(\begin{align}\mathsf{f(x)} &amp;= \mathsf{x^2-5}\\ \mathsf{f(1)} &amp;= \mathsf{1^2-5}\\ &amp;= \mathsf{1-5}\\ &amp;= \mathsf{-4}\end{align}\)</p>
+							</div>
+							<p><strong>Vastaus:</strong> Piste (1, -3) ei ole funktion f kuvaajalla.</p>
+						</div>
+					</div>
 				</div>
 				<h3>Kuvaajien leikkauspiste</h3>
-				<p>Kuvaajien leikkaupisteen etsiminen voidaan ajatella graafisena yhtälön ratkaisemisena. Yhtälön molempien puolien lausekkeet piirretään koordinaatistoon ja leikkauspisteen x-koordinaatti on yhtälön ratkaisu. Toisaalta leikkauspisteen y-koordinaatti kertoo leikkauspisteestä saatavan yhteisen funktion arvon. Myöhemmin 9. luokalla tätä menetelmää käytetään yhtälöparien ratkaisemiseen. Muistutuksena jälleen, että graafinen ratkaisu antaa usein epätarkan arvon, jonka avulla voidaan toki tarkistalla algebrallisella menetelmällä saadun ratkaisun järkevyyttä.</p>
-				<p><strong>Esimerkki:</strong> Missä pisteessä funktioiden \(\mathsf{f(x)=2x+2}\) ja \(\mathsf{g(x)=x-1}\) kuvaajat leikkaavat toisensa?</p>
-				<div class="indent">
-				<p><strong>Graafinen ratkaisu:</strong> Piirretään funktioiden kuvaajat samaan koordinaatistoon, ja katsotaan missä pisteessä kuvaajat leikkavat.<img class="img-responsive atto_image_button_text-bottom" style="font-size: 0.9375rem;" role="presentation" src="https://jannevenhoedu.github.io/ma9/j1/t/ma9j1_teoria_kuvaajien_leikkaupiste.png" alt="" width="399" height="398"></p>
-				</div>
-				<div class="indent">
-				<p><strong>Algebrallinen ratkaisu:</strong> Merkitään funktioiden lausekkeet yhtä suuriksi ja ratkaistaan muodostuneesta yhtälöstä x. Ratkaistaan leikkauspisteen y-koordinaatti tämän jälkeen laskemalla toisen funktion arvo saadulla muuttujan x arvolla.</p>
-				<div class="indent">
-				<p>Ratkaistaan x-koordinaatti:</p>
-				<p>\(\begin{align}\mathsf{f(x)} &amp;= \mathsf{g(x)}\\ \mathsf{2x+2} &amp;= \mathsf{x-1} &amp;\|\mathsf{-x}\\ \mathsf{x+2} &amp;= \mathsf{-1} &amp;\|\mathsf{-2}\\ \mathsf{x}&amp;= \mathsf{-3}\end{align}\)</p>
-				<p>Ratkaistaan y-koordinaatti:</p>
-				<p>\(\mathsf{y = g(-3) = -3-1 = -4}\)</p>
-				</div>
-				<p><strong>Vastaus:</strong> Funktiot leikkaavat pisteessä \(\mathsf{(-3,-4)}\).</p>
+				<div>
+					<p>Kuvaajien leikkaupisteen etsiminen voidaan ajatella graafisena yhtälön ratkaisemisena. Yhtälön molempien puolien lausekkeet piirretään koordinaatistoon ja leikkauspisteen x-koordinaatti on yhtälön ratkaisu. Toisaalta leikkauspisteen y-koordinaatti kertoo leikkauspisteestä saatavan yhteisen funktion arvon. Myöhemmin 9. luokalla tätä menetelmää käytetään yhtälöparien ratkaisemiseen. Muistutuksena jälleen, että graafinen ratkaisu antaa usein epätarkan arvon, jonka avulla voidaan toki tarkistalla algebrallisella menetelmällä saadun ratkaisun järkevyyttä.</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Missä pisteessä funktioiden \(\mathsf{f(x)=2x+2}\) ja \(\mathsf{g(x)=x-1}\) kuvaajat leikkaavat toisensa?</p>
+						<div class="indent">
+							<p>Graafinen ratkaisu: Piirretään funktioiden kuvaajat samaan koordinaatistoon, ja katsotaan missä pisteessä kuvaajat leikkavat.</p>
+							<img src="https://jannevenhoedu.github.io/ma9/j1/t/ma9j1_teoria_kuvaajien_leikkaupiste.png">
+							<p>Algebrallinen ratkaisu: Merkitään funktioiden lausekkeet yhtä suuriksi ja ratkaistaan muodostuneesta yhtälöstä x. Ratkaistaan leikkauspisteen y-koordinaatti tämän jälkeen laskemalla toisen funktion arvo saadulla muuttujan x arvolla.</p>
+							<div class="indent">
+								<p>Ratkaistaan x-koordinaatti:</p>
+								<p class="indent">\(\begin{align}\mathsf{f(x)} &amp;= \mathsf{g(x)}\\ \mathsf{2x+2} &amp;= \mathsf{x-1} &amp;\|\mathsf{-x}\\ \mathsf{x+2} &amp;= \mathsf{-1} &amp;\|\mathsf{-2}\\ \mathsf{x}&amp;= \mathsf{-3}\end{align}\)</p>
+								<p>Ratkaistaan y-koordinaatti:</p>
+								<p class="indent">\(\mathsf{y = g(-3) = -3-1 = -4}\)</p>
+							</div>
+						</div>
+						<p><strong>Vastaus:</strong> Funktiot leikkaavat pisteessä \(\mathsf{(-3,-4)}\).</p>
+					</div>
 				</div>
 			</div>
 		</div>
