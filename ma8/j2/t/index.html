@@ -30,20 +30,33 @@
 				<div>
 					<p>Murtoluvulla esitetään kokonaisen osia. Murtoluvussa merkitään kaksi kokonaislukua allekkain, ja niiden väliin laitetaan viiva. Ylempää lukua kutsutaan osoittajaksi ja alempaa nimittäjäksi. Nimittäjä nimittää osien suuruuden ja osoittaja osoittaa kyseisten osien lukumäärän.</p>
 					<img src="https://jannevenhoedu.github.io/ma7/j2/t/ma7j2_teoria_murtoluku.png" style="width: 600px">
-					<p>Murtoluku voidaan muuttaa desimaaliluvuksi, jota kutsutaan myös murtoluvun arvoksi. Murtoluku on jakolasku, joka näkyy myös yhtenevästä merkintätavastakin. Murtolukujen avulla voidaan esittää selkeästi sellaisia kokonaisen osia, jotka desimaalilukuna olisivat pitkiä tai jopa päättymättömiä. Esimerkiksi</p>
+					<p>Murtoluku voidaan muuttaa desimaaliluvuksi, jota kutsutaan myös murtoluvun arvoksi. Murtoluku on jakolasku, joka näkyy myös yhtenevästä merkintätavastakin. Murtolukujen avulla voidaan esittää selkeästi sellaisia kokonaisen osia, jotka desimaalilukuna olisivat pitkiä tai jopa päättymättömiä.</p>
 					<p class="indent">\( \mathsf{\dfrac{1}{3} = \text{0,3333}...} \)</p>
 					<p>Näin ollen murtolukuja käytetään usein tarkkojen arvojen merkitsemiseen desimaalilukujen kärsiessä epätarkkuuden epäilyksistä mahdollisen mittaustarkkuuden tai pyöristämisen seurauksena.</p>
 				</div>
 				<h3>Supistaminen ja laventaminen</h3>
 				<div>
 					<p>Supistamisessa murtoluvun osoittaja ja nimittäjä jaetaan samalla luvulla, jolloin murtoluku saadaan yksinkertaisempaan muotoon. Supistettaessa murtoluvun arvo ei muutu. Supistaja merkitään kaarella murtoluvun oikeaan yläkulmaan.</p>
-					<p class="indent">\(\mathsf{\dfrac{9}{12}^{(3} = \dfrac{3}{4}}\)</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Supista yksinkertaisimpaan muotoon.</p>
+						<div class="indent">
+							<p>a) \(\mathsf{\dfrac{9}{12}^{(3} = \dfrac{3}{4}}\)</p>
+							<p>b) \(\mathsf{\dfrac{28}{36}^{(4} = \dfrac{7}{9}}\)</p>
+						</div>
+					</div>
 					<p>Laventamisessa murtoluvun osoittaja ja nimittäjä kerrotaan samalla luvulla. Lavennettaessa murtoluvun arvo ei muutu. Laventaja merkitään kaarella murtoluvun vasempaan yläkulmaan.</p>
-					<p class="indent">\(\mathsf{\rule{0pt}{1.4em}^{5)}\!\dfrac{3}{20} = \dfrac{15}{100}}\)</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Lavenna.</p>
+						<div class="indent">
+							<p>a) \(\mathsf{\rule{0pt}{1.4em}^{5)}\!\dfrac{3}{20} = \dfrac{15}{100}}\)</p>
+							<p>b) \(\mathsf{\rule{0pt}{1.4em}^{10)}\!\dfrac{5}{12} = \dfrac{50}{120}}\)</p>
+						</div>
+					</div>
 					<p>Ennen murtolukujen yhteen- tai vähennyslaskua murtolukujen tulee olla samannimiset, eli niiden nimittäjien tulee olla samat.</p>
 					<p>Vinkkejä samannimiseksi laventamiseen:</p>
 					<ul>
-						<li>Lavenna vain toista murtolukua, jos toinen nimittäjä on toisen moninkerta.<br>\(\mathsf{\rule{0pt}{1.4em}^{2)}\!\dfrac{2}{3} - \dfrac{1}{6} = \dfrac{4}{6} - \dfrac{1}{6} = \dfrac{3}{6}^{(3}\!\! = \dfrac{1}{2}}\)</li>
+						<li>Lavenna vain toista murtolukua, jos toinen nimittäjä on toisen moninkerta.</li>
+						<div style="padding: 0px; 10px; 0px; 10px;">\(\mathsf{\rule{0pt}{1.4em}^{2)}\!\dfrac{2}{3} - \dfrac{1}{6} = \dfrac{4}{6} - \dfrac{1}{6} = \dfrac{3}{6}^{(3}\!\! = \dfrac{1}{2}}\)</div>
 						<li>Selvitä mahdollisimman pieni luku, johon molemmat nimittäjät voidaan laventaa.<br>\(\mathsf{\rule{0pt}{1.4em}^{2)}\!\!\dfrac{2}{15} + \!\!\rule{0pt}{1.4em}^{5)}\!\dfrac{1}{6} = \dfrac{4}{30} + \dfrac{5}{30} = \dfrac{9}{30}^{\!(3}\!\! = \dfrac{3}{10}}\)</li>
 						<li>Lavenna ristiin, jos luvut ovat pieniä tai mikään muu ei auta.<br>\(\mathsf{\rule{0pt}{1.4em}^{\color{red}{2})}\!\dfrac{2}{\color{blue}{3}} - \rule{0pt}{1.4em}^{\color{blue}{3})}\dfrac{1}{\color{red}{2}} = \dfrac{4}{6} - \dfrac{3}{6} = \dfrac{1}{6}}\)</li>
 					</ul>
@@ -51,7 +64,13 @@
 				<h3>Summa ja erotus</h3>
 				<div>
 					<p>Laskettaessa murtolukuja yhteen, murtolukujen tulee olla samannimiset. Yhteenlaskussa osoittaja lasketaan yhteen, mutta nimittäjät pysyvät samana. Tämä on ilmeistä, sillä laskettaessa esimerkiksi viidesosia yhteen, saadaan vastaukseksi tietenkin viidesosia.</p>
-					<p class="indent">\(\mathsf{\dfrac{2}{5} + \dfrac{1}{5} = \dfrac{3}{5}} \\ \mathsf{\rule{0pt}{1.4em}^{2)}\!\color{blue}{\dfrac{1}{5}} + \color{red}{\dfrac{7}{10}} = \color{blue}{\dfrac{2}{10}} + \color{red}{\dfrac{7}{10}} = \dfrac{9}{10}}\)</p>
+					<div class="example">
+						<p><strong>Esimerkki:</strong> Laske.</p>
+						<div class="indent">
+							<p>a) \(\mathsf{\dfrac{2}{5} + \dfrac{1}{5} = \dfrac{3}{5}}\)</p>
+							<p>b) \(\mathsf{\rule{0pt}{1.4em}^{2)}\!\color{blue}{\dfrac{1}{5}} + \color{red}{\dfrac{7}{10}} = \color{blue}{\dfrac{2}{10}} + \color{red}{\dfrac{7}{10}} = \dfrac{9}{10}}\)</p>
+						</div>
+					</div>
 					<p>Toimintaohje murtolukujen yhteen- ja vähennyslaskuun:</p>
 					<ol>
 						<li>Muunna murtoluvut samannimisiksi, jos on tarpeen.</li>
