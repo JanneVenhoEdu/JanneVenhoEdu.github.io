@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var correctAnswers = ["9", "15", "25", "4 1/2"];
+	//var correctAnswers = ["9", "15", "25", "4 1/2"];
 	$(".tarkista").keydown(function(e) {
 		if (e.key == "Enter" || e.key == "Tab") {
 			var item = +$(this).attr("id");
