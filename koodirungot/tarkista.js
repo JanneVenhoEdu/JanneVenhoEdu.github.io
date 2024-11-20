@@ -18,4 +18,8 @@ $(document).ready(function() {
 	$(".vihje").click(function() {
 		$(this).parent().next().slideToggle();
 	});
+	$("#bonus").click(function() {
+		$(this).parent().next().slideToggle();
+		$("#bonus_tarkistus").slideToggle();
+	});
 });
