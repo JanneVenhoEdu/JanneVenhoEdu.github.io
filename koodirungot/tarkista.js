@@ -6,10 +6,10 @@ $(document).ready(function() {
 			var user = $(this).val();
 			if (user == corr) {
 				$(this).css("background-color", "#80FF80");
-				$(this).next("span").hide();
+				//$(this).next("span").hide();
 			} else {
 				if (user != "") {
-					$(this).next("span").show();
+					//$(this).next("span").show();
 					$(this).css("background-color", "#FFCCCC");
 				}
 			}
