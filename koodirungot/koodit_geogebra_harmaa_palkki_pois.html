@@ -1,0 +1,28 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var targetElement = document.getElementById("page-mod-geogebra-view");
+
+        // Aseta padding-bottom ensimmäisen kerran
+        $(targetElement).css("padding-bottom", "0px");
+
+        // Luo MutationObserver tarkkailemaan inline-tyylien muutoksia
+        var observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.type === "attributes" && mutation.attributeName === "style") {
+                    // Tarkista, onko padding-bottom muuttunut
+                    if ($(targetElement).css("padding-bottom") !== "0px") {
+                        console.log("padding-bottom muuttui, korjataan takaisin 0px");
+                        $(targetElement).css("padding-bottom", "0px");
+                    }
+                }
+            });
+        });
+
+        // Aloita tarkkailu kohde-elementissä
+        observer.observe(targetElement, {
+            attributes: true, // Tarkkailee attribuuttien muutoksia (mukaan lukien style)
+            attributeFilter: ["style"] // Seuraa vain style-attribuuttia
+        });
+    });
+</script>
