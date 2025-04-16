@@ -4,7 +4,7 @@ $(document).ready(function() {
 			var item = +$(this).attr("id");
 			var corr0 = correctAnswers[item][0];
 			var corr1 = correctAnswers[item][1];
-			var user = +$(this).val().replace(/\s/g, "");
+			var user = +$(this).val().replace(/\s/g, "").replace(",",".");
 			if (user >= corr0 && user <= corr1) {
 				$(this).css("background-color", "#80FF80");
 				//$(this).next("span").hide();
