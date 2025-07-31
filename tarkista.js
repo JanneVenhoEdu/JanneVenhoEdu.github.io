@@ -3,9 +3,8 @@ $(document).ready(function() {
 		if (e.key == "Enter" || e.key == "Tab") {
 			var item = +$(this).attr("id");
 			var corr = correctAnswers[item];
-			var user = $(this).val().replace(/\s/g, "");
-			var user = $(this).val().replace(/\s/g, "");
-			if (user == corr) {
+			var user = $(this).val().replace(/\s/g, "").replace(".",",");
+			if (user == corr || corr.includes(user)) {
 				$(this).css("background-color", "#80FF80");
 				//$(this).next("span").hide();
 			} else {
