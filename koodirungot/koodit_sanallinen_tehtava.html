@@ -37,7 +37,7 @@
                     $(this).css("background-color", "#80FF80");
                     $(this).nextAll("span").hide();
                 } else {
-                    if (user.length > 0) {
+                    if (user != "") {
                         $(this).nextAll("span").show();
                         $(this).css("background-color", "#FFCCCC");
                     }
@@ -74,7 +74,7 @@
                     $(this).css("background-color", "#80FF80");
                     $(this).nextAll("span").hide();
                 } else {
-                    if (user.length > 0) {
+                    if (user != "") {
                         $(this).nextAll("span").show();
                         $(this).css("background-color", "#FFCCCC");
                     }
@@ -127,7 +127,7 @@
                     $(this).css("background-color", "#80FF80");
                     $(this).nextAll("span").hide();
                 } else {
-                    if (user.length > 0) {
+                    if (user != "") {
                         $(this).nextAll("span").show();
                         $(this).css("background-color", "#FFCCCC");
                     }
@@ -215,7 +215,7 @@
                     $(this).css("background-color", "#80FF80");
                     $(this).nextAll("span").hide();
                 } else {
-                    if (user.length > 0) {
+                    if (user.length != "") {
                         $(this).nextAll("span").show();
                         $(this).css("background-color", "#FFCCCC");
                     }
@@ -356,4 +356,14 @@
 <script>
 	var correctAnswers = [];
 </script>
-<script src="https://jannevenhoedu.github.io/tarkista.js">
+<script src="https://jannevenhoedu.github.io/tarkista.js"></script>
+
+<ol>
+  <li>Ota rajattu ja tarkka kuva vihkosta.</li>
+  <li>Valitse verkkotekstieditorin valikosta "Lisää kuva"</li>
+  <li>Etsi kuva koneeltasi: Lataa tiedosto --&gt; Valitse tiedosto --&gt; Lataa
+    tämä tiedosto</li>
+  <li>Klikkaa "Kuva on vain koristeellinen"</li>
+  <li>Muuta kuvan leveydeksi 600 px</li>
+  <li>Tallenna</li>
+</ol>
