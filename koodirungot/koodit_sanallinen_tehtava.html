@@ -267,7 +267,7 @@
                     $(this).css("background-color", "#80FF80");
                     $(this).next("span").hide();
                 } else {
-                    if (user.length > 0) {
+                    if (user.length != "") {
                         $(this).next("span").show();
                         $(this).css("background-color", "#FFCCCC");
                     }
