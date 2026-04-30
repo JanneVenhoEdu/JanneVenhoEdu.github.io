@@ -1165,6 +1165,11 @@
 		</div>
 		<script>
 			downloadGG();
+			$("button").click(function(){
+				if ($(this).attr("class") == "image"){
+					$(this).parent().next().slideToggle();
+				}
+			}};
 		</script>
 	</body>
 </html>
