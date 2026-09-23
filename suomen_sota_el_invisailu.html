@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suomen sota 1808–1809 - Eläinvisailu</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Cinzel', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            nordic: {
+              900: '#0F172A',
+              800: '#1E293B',
+              700: '#334155',
+              accent: '#3B82F6',
+              gold: '#F59E0B',
+              goldDark: '#D97706',
+              snow: '#F8FAFC',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: radial-gradient(circle at top center, #1e293b 0%, #0f172a 100%);
+      color: #f8fafc;
+      min-height: 100vh;
+      user-select: none;
+    }
+
+    .font-serif-title {
+      font-family: 'Cinzel', serif;
+    }
+
+    /* Custom Glassmorphism */
+    .glass-card {
+      background: rgba(30, 41, 59, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .glass-card-interactive {
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glass-card-interactive:hover {
+      transform: translateY(-4px) scale(1.02);
+      border-color: rgba(245, 158, 11, 0.5);
+      box-shadow: 0 12px 28px rgba(245, 158, 11, 0.15);
+    }
+
+    /* Button Animations */
+    .btn-choice {
+      transition: all 0.18s ease-out;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-choice:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(59, 130, 246, 0.25);
+    }
+    .btn-choice:active:not(:disabled) {
+      transform: translateY(1px);
+    }
+
+    /* Keyframes */
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 15px rgba(245, 158, 11, 0.3); }
+      50% { box-shadow: 0 0 30px rgba(245, 158, 11, 0.7); }
+    }
+    .pulse-glow {
+      animation: pulseGlow 2s infinite;
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-8px); }
+      40%, 80% { transform: translateX(8px); }
+    }
+    .shake-anim {
+      animation: shake 0.4s ease-in-out;
+    }
+
+    @keyframes bounceUp {
+      0% { transform: scale(0.9) translateY(10px); opacity: 0; }
+      100% { transform: scale(1) translateY(0); opacity: 1; }
+    }
+    .bounce-in {
+      animation: bounceUp 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #475569;
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen text-slate-100 antialiased selection:bg-amber-500 selection:text-slate-900">
+
+  <header class="w-full border-b border-slate-800 bg-slate-900/80 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-amber-300 text-slate-950 flex items-center justify-center font-bold text-xl shadow-lg">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <div>
+          <h1 class="font-serif-title font-bold text-lg md:text-xl tracking-wide text-amber-400">Suomen Sota</h1>
+          <p class="text-xs text-slate-400 hidden sm:block">1808–1809 Historiallinen Eläinvisailu</p>
+        </div>
+      </div>
+
+      <div class="flex items-center space-x-4">
+        <!-- Mute/Unmute audio button -->
+        <button id="soundToggleBtn" onclick="toggleAudio()" class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition flex items-center justify-center border border-slate-700" title="Äänet Päälle/Pois">
+          <i id="soundIcon" class="fa-solid fa-volume-high text-amber-400"></i>
+        </button>
+
+        <!-- High score display -->
+        <div class="bg-slate-800/80 border border-slate-700 rounded-lg px-3 py-1.5 flex items-center space-x-2 text-xs sm:text-sm">
+          <i class="fa-solid fa-trophy text-amber-400"></i>
+          <span class="text-slate-400 font-medium hidden sm:inline">Ennätyksesi:</span>
+          <span id="topScoreDisplay" class="font-bold text-amber-300">0</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1 max-w-6xl w-full mx-auto px-4 py-6 flex flex-col justify-center">
+
+    <section id="characterSelectScreen" class="w-full max-w-5xl mx-auto">
+      <div class="text-center mb-8">
+        <span class="px-3.5 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 uppercase tracking-widest inline-block mb-3">
+          Askel 1 / 2
+        </span>
+        <h2 class="font-serif-title text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-2">
+          Valitse Historiahahmosi
+        </h2>
+        <p class="text-slate-300 max-w-xl mx-auto text-sm sm:text-base">
+          Valitse eläintoverisi, joka johdattaa sinut läpi Suomen sodan ratkaisevien käänteiden, taisteluiden ja historiallisen tietovisan!
+        </p>
+      </div>
+
+      <!-- Character Grid -->
+      <div id="characterGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mb-8">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+
+      <!-- Start Game Action Bar -->
+      <div class="glass-card rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4 border border-amber-500/30">
+        <div id="selectedCharPreview" class="flex items-center space-x-4">
+          <div id="previewAvatarContainer" class="w-16 h-16 rounded-xl bg-slate-800 border border-slate-700 p-1 flex items-center justify-center shrink-0">
+            <!-- Selected Avatar SVG inserted here -->
+          </div>
+          <div>
+            <div class="text-xs text-amber-400 font-semibold tracking-wide uppercase">Valittu Hahmo</div>
+            <div id="previewCharName" class="font-serif-title font-bold text-lg text-white">---</div>
+            <div id="previewCharRole" class="text-xs text-slate-400">Valitse eläinhahmo yltä</div>
+          </div>
+        </div>
+
+        <button id="startGameBtn" onclick="startGame()" disabled class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold text-lg shadow-lg hover:shadow-amber-500/20 disabled:opacity-50 disabled:cursor-not-allowed transition transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center space-x-3">
+          <span>Aloita Visailu</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <section id="quizScreen" class="hidden w-full max-w-4xl mx-auto">
+      
+      <!-- Top Status Bar -->
+      <div class="glass-card rounded-2xl p-4 sm:p-5 mb-6 flex flex-wrap items-center justify-between gap-4 border border-slate-700">
+        <!-- Character status -->
+        <div class="flex items-center space-x-3">
+          <div id="gameCharAvatar" class="w-12 h-12 rounded-xl bg-slate-800 border border-amber-500/40 p-1 flex items-center justify-center relative">
+            <!-- Active SVG avatar -->
+          </div>
+          <div>
+            <div id="gameCharName" class="font-serif-title font-bold text-sm sm:text-base text-amber-300">Hahmo</div>
+            <div id="questionCounter" class="text-xs text-slate-400 font-medium">Kysymys 1 / 20</div>
+          </div>
+        </div>
+
+        <!-- Streak Multiplier -->
+        <div id="streakBadge" class="hidden px-3 py-1 rounded-full bg-gradient-to-r from-amber-500/20 to-orange-500/20 border border-amber-500/40 text-amber-300 font-bold text-xs sm:text-sm items-center space-x-1">
+          <i class="fa-solid fa-fire text-amber-400"></i>
+          <span id="streakText">Putki x1.2</span>
+        </div>
+
+        <!-- Score & Timer -->
+        <div class="flex items-center space-x-6">
+          <div class="text-right">
+            <div class="text-xs text-slate-400 font-medium">Pisteet</div>
+            <div id="currentScore" class="text-xl sm:text-2xl font-black text-amber-400">0</div>
+          </div>
+
+          <div class="text-right pl-4 border-l border-slate-700">
+            <div class="text-xs text-slate-400 font-medium">Aikaa</div>
+            <div id="timerText" class="text-xl sm:text-2xl font-black text-emerald-400">15s</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Time Progress Bar -->
+      <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden mb-6 border border-slate-700/50">
+        <div id="timerBar" class="bg-emerald-400 h-full w-full transition-all duration-100 ease-linear rounded-full"></div>
+      </div>
+
+      <!-- Question Card -->
+      <div id="questionCard" class="glass-card rounded-2xl p-6 sm:p-8 mb-6 relative border border-slate-700">
+        <!-- Category Pill -->
+        <div class="flex items-center justify-between mb-4">
+          <span id="questionCategory" class="px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20">
+            Historiallinen Tausta
+          </span>
+          <span id="timeBonusTag" class="text-xs text-amber-400/80 font-mono font-medium">
+            Nopeusbonus: +<span id="possibleBonus">1000</span>
+          </span>
+        </div>
+
+        <!-- Question Text -->
+        <h3 id="questionText" class="text-xl sm:text-2xl font-bold text-white mb-6 leading-relaxed">
+          Kysymysteksti ladataan...
+        </h3>
+
+        <!-- Options Grid -->
+        <div id="optionsGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+          <!-- 4 choice buttons generated dynamically -->
+        </div>
+
+        <!-- Feedback & Explanation Box (hidden until answered) -->
+        <div id="feedbackBox" class="hidden mt-6 p-4 rounded-xl border transition-all duration-300">
+          <div class="flex items-start space-x-3">
+            <div id="feedbackIcon" class="text-2xl mt-0.5"></div>
+            <div class="flex-1">
+              <h4 id="feedbackTitle" class="font-bold text-base mb-1">Oikein!</h4>
+              <p id="feedbackExplanation" class="text-sm text-slate-300 leading-relaxed"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Button (Next Question) -->
+      <div class="flex justify-end">
+        <button id="nextQuestionBtn" onclick="nextQuestion()" disabled class="px-8 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-base shadow-lg transition opacity-50 cursor-not-allowed flex items-center space-x-2">
+          <span>Seuraava Kysymys</span>
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <section id="resultsScreen" class="hidden w-full max-w-4xl mx-auto">
+      
+      <!-- Trophy Card -->
+      <div class="glass-card rounded-3xl p-6 sm:p-10 text-center mb-8 border border-amber-500/30 relative overflow-hidden">
+        <div class="absolute -top-12 -left-12 w-40 h-40 bg-amber-500/10 rounded-full blur-2xl"></div>
+        <div class="absolute -bottom-12 -right-12 w-40 h-40 bg-blue-500/10 rounded-full blur-2xl"></div>
+
+        <div id="resultAvatarBox" class="w-24 h-24 mx-auto mb-4 rounded-2xl bg-slate-800 border-2 border-amber-400 p-2 shadow-xl flex items-center justify-center">
+          <!-- Character SVG -->
+        </div>
+
+        <h2 class="font-serif-title text-3xl sm:text-4xl font-extrabold text-white mb-1">
+          Visailu Päätöksessä!
+        </h2>
+        <p id="resultRankTitle" class="text-lg font-bold text-amber-400 mb-6">
+          Suomen Sodan Suurmarsalkka
+        </p>
+
+        <!-- Main Stats Summary Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto mb-8">
+          <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700">
+            <div class="text-xs text-slate-400 mb-1">Kokonaispisteet</div>
+            <div id="finalScore" class="text-2xl sm:text-3xl font-black text-amber-400">0</div>
+          </div>
+          <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700">
+            <div class="text-xs text-slate-400 mb-1">Oikeat Vastaukset</div>
+            <div id="finalCorrectCount" class="text-2xl sm:text-3xl font-black text-emerald-400">0 / 20</div>
+          </div>
+          <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700">
+            <div class="text-xs text-slate-400 mb-1">Tarkkuus</div>
+            <div id="finalAccuracy" class="text-2xl sm:text-3xl font-black text-blue-400">0%</div>
+          </div>
+          <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700">
+            <div class="text-xs text-slate-400 mb-1">Paras Putki</div>
+            <div id="finalMaxStreak" class="text-2xl sm:text-3xl font-black text-orange-400">0x</div>
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <button onclick="restartGame()" class="px-6 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-base shadow-lg transition flex items-center space-x-2">
+            <i class="fa-solid fa-rotate-right"></i>
+            <span>Pelaa Uudelleen</span>
+          </button>
+          <button onclick="changeCharacter()" class="px-6 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-base border border-slate-700 transition flex items-center space-x-2">
+            <i class="fa-solid fa-paw"></i>
+            <span>Vaihda Hahmoa</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Question Review Accordion / List -->
+      <div class="glass-card rounded-2xl p-6 border border-slate-700">
+        <h3 class="font-serif-title text-xl font-bold text-amber-300 mb-4 flex items-center space-x-2">
+          <i class="fa-solid fa-book-open"></i>
+          <span>Kysymysten Historiallinen Kertaus</span>
+        </h3>
+        <p class="text-xs text-slate-400 mb-6">Tarkastele vastauksiasi ja opi lisää Suomen sodan ratkaisevista vaiheista.</p>
+
+        <div id="reviewList" class="space-y-4 max-h-96 overflow-y-auto pr-2">
+          <!-- Filled by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="w-full border-t border-slate-800 py-4 mt-auto text-center text-xs text-slate-500">
+    Suomen sota 1808–1809 Historiallinen Oppimisvisailu &bull; Ruotsin ja Venäjän välinen sota
+  </footer>
+
+  <script>
+    // Web Audio Synthesizer for self-contained sound effects
+    class SoundSynth {
+      constructor() {
+        this.ctx = null;
+        this.enabled = true;
+      }
+
+      init() {
+        if (!this.ctx) {
+          const AudioContext = window.AudioContext || window.webkitAudioContext;
+          this.ctx = new AudioContext();
+        }
+      }
+
+      playClick() {
+        if (!this.enabled) return;
+        this.init();
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(600, this.ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(200, this.ctx.currentTime + 0.05);
+        gain.gain.setValueAtTime(0.15, this.ctx.currentTime);
+        gain.gain.linearRampToValueAtTime(0.01, this.ctx.currentTime + 0.05);
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+        osc.start();
+        osc.stop(this.ctx.currentTime + 0.05);
+      }
+
+      playCorrect() {
+        if (!this.enabled) return;
+        this.init();
+        const now = this.ctx.currentTime;
+        const notes = [523.25, 659.25, 783.99, 1046.50]; // C5, E5, G5, C6
+        notes.forEach((freq, idx) => {
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = 'triangle';
+          osc.frequency.value = freq;
+          gain.gain.setValueAtTime(0.2, now + idx * 0.08);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.08 + 0.25);
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
+          osc.start(now + idx * 0.08);
+          osc.stop(now + idx * 0.08 + 0.25);
+        });
+      }
+
+      playWrong() {
+        if (!this.enabled) return;
+        this.init();
+        const now = this.ctx.currentTime;
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(180, now);
+        osc.frequency.linearRampToValueAtTime(110, now + 0.3);
+        gain.gain.setValueAtTime(0.2, now);
+        gain.gain.linearRampToValueAtTime(0.01, now + 0.3);
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+        osc.start(now);
+        osc.stop(now + 0.3);
+      }
+
+      playFanfare() {
+        if (!this.enabled) return;
+        this.init();
+        const now = this.ctx.currentTime;
+        const arpeggio = [392.00, 523.25, 659.25, 783.99, 1046.50];
+        arpeggio.forEach((freq, idx) => {
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.value = freq;
+          gain.gain.setValueAtTime(0.2, now + idx * 0.1);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.1 + 0.4);
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
+          osc.start(now + idx * 0.1);
+          osc.stop(now + idx * 0.1 + 0.4);
+        });
+      }
+    }
+
+    const sound = new SoundSynth();
+
+    function toggleAudio() {
+      sound.enabled = !sound.enabled;
+      const soundIcon = document.getElementById('soundIcon');
+      if (sound.enabled) {
+        soundIcon.className = 'fa-solid fa-volume-high text-amber-400';
+      } else {
+        soundIcon.className = 'fa-solid fa-volume-xmark text-slate-500';
+      }
+    }
+
+    // 10 Animal Characters Data with Embedded Vector SVGs
+    const CHARACTERS = [
+      {
+        id: 'karhu',
+        name: 'Ohto Karhu',
+        title: 'Metsän Suurmarsalkka',
+        desc: 'Rohkea ja vakaa taistelija, joka ei helpolla peräänny.',
+        color: '#D97706',
+        svg: `<svg viewBox="0 0 100 100" class="w-full h-full">
+          <!-- Bear ears -->
+          <circle cx="25" cy="28" r="14" fill="#92400E"/>
+          <circle cx="25" cy="28" r="8" fill="#FDBA74"/>
+          <circle cx="75" cy="28" r="14" fill="#92400E"/>
+          <circle cx="75" cy="28" r="8" fill="#FDBA74"/>
+          <!-- Head -->
+          <circle cx="50" cy="50" r="32" fill="#B45309"/>
+          <!-- Muzzle -->
+          <ellipse cx="50" cy="60" rx="16" ry="12" fill="#FDBA74"/>
+          <ellipse cx="50" cy="54" rx="7" ry="5" fill="#1E293B"/>
+          <!-- Eyes -->
+          <circle cx="38" cy="45" r="4" fill="#1E293B"/>
+          <circle cx="62" cy="45" r="4" fill="#1E293B"/>
+          <circle cx="39" cy="43" r="1.5" fill="#FFF"/>
+          <circle cx="63" cy="43" r="1.5" fill="#FFF"/>
+          <!-- Officer Hat -->
+          <path d="M 28 28 C 35 15, 65 15, 72 28 Z" fill="#1E3A8A"/>
+          <rect x="25" y="27" width="50" height="6" rx="3" fill="#F59E0B"/>
+        </svg>`
+      },
+      {
+        id: 'susi',
+        name: 'Sisu Susi',
+        title: 'Sitkeä Sissiluutnantti',
+        desc: 'Kärsivällinen ja tarkkanäköinen taktiikko Pohjolan lumissa.',
+        color: '#64748B',
+        svg: `<svg viewBox="0 0 100 100" class="w-full h-full">
+          <!-- Wolf ears -->
+          <polygon points="20,15 38,40 12,40" fill="#475569"/>
+          <polygon points="24,20 34,38 16,38" fill="#CBD5E1"/>
+          <polygon points="80,15 62,40 88,40" fill="#475569"/>
+          <polygon points="76,20 66,38 84,38" fill="#CBD5E1"/>
+          <!-- Head -->
+          <polygon points="50,85 20,40 80,40" fill="#64748B"/>
+          <!-- Muzzle/Cheeks -->
+          <polygon points="50,85 32,45 68,45" fill="#E2E8F0"/>
+          <ellipse cx="50" cy="78" rx="5" ry="4" fill="#0F172A"/>
+          <!-- Eyes -->
+          <circle cx="36" cy="46" r="4" fill="#F59E0B"/>
+          <circle cx="64" cy="46" r="4" fill="#F59E0B"/>
+          <circle cx="36" cy="46" r="2" fill="#0F172A"/>
+          <circle cx="64" cy="46" r="2" fill="#0F172A"/>
+          <!-- Tricorn band -->
+          <rect x="25" y="38" width="50" height="4" fill="#D97706"/>
+        </svg>`
+      },
+      {
+        id: 'kettu',
+        name: 'Kettu Repolainen',
+        title: 'Nokkela Tiedustelija',
+        desc: 'Salamannopea älykkö, joka tuntee jokaisen metsätien.',
+        color: '#EA580C',
+        svg: `<svg viewBox="0 0 100 100" class="w-full h-full">
+          <!-- Ears -->
+          <polygon points="15,12 36,38 10,42" fill="#C2410C"/>
+          <polygon points="85,12 64,38 90,42" fill="#C2410C"/>
+          <polygon points="18,18 32,36 14,38" fill="#1E293B"/>
+          <polygon points="82,18 68,36 86,38" fill="#1E293B"/>
+          <!-- Head -->
+          <polygon points="50,88 18,40 82,40" fill="#EA580C"/>
+          <polygon points="50,88 30,45 70,45" fill="#FFF"/>
+          <ellipse cx="50" cy="80" rx="5" ry="4" fill="#0F172A"/>
+          <!-- Eyes -->
+          <ellipse cx="36" cy="48" rx="4" ry="5" fill="#0F172A"/>
+          <ellipse cx="64" cy="48" rx="4" ry="5" fill="#0F172A"/>
+          <circle cx="37" cy="46" r="1.5" fill="#FFF"/>
+          <circle cx="65" cy="46" r="1.5" fill="#FFF"/>
+        </svg>`
+      },
+      {
+        id: 'ilves',
+        name: 'Ilves Ilmari',
+        title: 'Tarkka-ampuja',
+        desc: 'Hiljainen hiipijä, jonka tupsukorvat kuulevat kaiken.',
+        color: '#F59E0B',
+        svg: `<svg viewBox="0 0 100 100" class="w-full h-full">
+          <!-- Ear tufts -->
+          <path d="M 22 10 L 22 30" stroke="#0F172A" stroke-width="3"/>
+          <path d="M 78 10 L 78 30" stroke="#0F172A" stroke-width="3"/>
+          <!-- Ears -->
+          <polygon points="15,20 35,42 10,45" fill="#D97706"/>
+          <polygon points="85,20 65,42 90,45" fill="#D97706"/>
+          <!-- Head -->
+          <circle cx="50" cy="52" r="30" fill="#F59E0B"/>
+          <!-- White ruff -->
+          <polygon points="50,82 25,60 75,60" fill="#FEF3C7"/>
+          <!-- Nose -->
+          <polygon points="50,68 44,60 56,60" fill="#991B1B"/>
+          <!-- Eye patch -->
+          <circle cx="36" cy="48" r="8" fill="#1E293B"/>
+          <!-- Other Eye -->
+          <circle cx="64" cy="48" r="5" fill="#10B981"/>
+          <circle cx="64" cy="48" r="2" fill="#0F172A"/>
+        </svg>`
+      },
+      {
+        id: 'janis',
+        name: 'Jänis Jussi',
+        title: 'Nopea Kuriiri',
+        desc: 'Toimittaa käskyt ja viestit rintamalta toiselle ennätysajassa.',
+        color: '#94A3B8',
+        svg: `<svg viewBox="0 0 100 100" class="w-full h-full">
+          <!-- Long Ears -->
+          <ellipse cx="32" cy="22" rx="8" ry="20" fill="#CBD5E1"/>
+          <ellipse cx="32" cy="22" rx="4" ry="14" fill="#F472B6"/>
+          <ellipse cx="68" cy="22" rx="8" ry="20" fill="#CBD5E1"/>
+          <ellipse cx="68" cy="22" rx="4" ry="14" fill="#F472B6"/>
+          <!-- Head -->
+          <circle cx="50" cy="58" r="28" fill="#E2E8F0"/>
+          <!-- Cheeks -->
+          <circle cx="42" cy="66" r="10" fill="#FFF"/>
+          <circle cx="58" cy="66" r="10" fill="#FFF"/>
+          <ellipse cx="50" cy="62" rx="4" ry="3" fill="#F472B6"/>
+          <!-- Eyes -->
+          <circle cx="36" cy="50" r="4" fill="#0F172A"/>
+          <circle cx="64" cy="50" r="4" fill="#0F172A"/>
+          <!-- Courier Scarf -->
+          <path d="M 28 78 Q 50 90 72 78" stroke="#DC2626" stroke-width="8" fill="none" stroke-linecap="round"/>
+        </svg>`
+      },
+      {
+        id: 'hirvi',
+        name: 'Hirvi Heikki',
+        title: 'Raskaan Tykistön Päällikkö',
+        desc: 'Metsän jättiläinen, jonka voima murtaa vihollisen rivit.',
+        color: '#78350F',
+        svg: `<svg viewBox="0 0 100 100" class="w-full h-full">
+          <!-- Antlers -->
+          <path d="M 25 25 L 10 15 M 25 25 L 12 28 M 25 25 L 20 5 M 75 25 L 90 15 M 75 25 L 88 28 M 75 25 L 80 5" stroke="#D97706" stroke-width="4" stroke-linecap="round"/>
+          <!-- Head -->
+          <polygon points="50,88 28,30 72,30" fill="#78350F"/>
+          <ellipse cx="50" cy="74" rx="18" ry="12" fill="#B45309"/>
+          <circle cx="42" cy="74" r="3" fill="#1E293B"/>
+          <circle cx="58" cy="74" r="3" fill="#1E293B"/>
+          <!-- Eyes -->
+          <circle cx="36" cy="42" r="3.5" fill="#FEF3C7"/>
+          <circle cx="64" cy="42" r="3.5" fill="#FEF3C7"/>
+          <circle cx="36" cy="42" r="2" fill="#0F172A"/>
+          <circle cx="64" cy="42" r="2" fill="#0F172A"/>
+        </svg>`
+      },
+      {
+        id: 'pollo',
+        name: 'Pöllö Pentti',
+        title: 'Historiantutkija & Kartoittaja',
+        desc: 'Tuntee tarkan historian, taistelut sekä tärkeät sotastrategiat.',
+        color: '#A16207',
+        svg: `<svg viewBox="0 0 100 100" class="w-full h-full">
+          <!-- Body/Head -->
+          <ellipse cx="50" cy="55" rx="32" ry="30" fill="#854D0E"/>
+          <!-- Belly Feather pattern -->
+          <ellipse cx="50" cy="65" rx="20" ry="16" fill="#FEF08A"/>
+          <!-- Eye Rings / Glasses -->
+          <circle cx="35" cy="45" r="14" fill="#FFF" stroke="#D97706" stroke-width="3"/>
+          <circle cx="65" cy="45" r="14" fill="#FFF" stroke="#D97706" stroke-width="3"/>
+          <!-- Glasses Bridge -->
+          <line x1="49" y1="45" x2="51" y2="45" stroke="#D97706" stroke-width="3"/>
+          <!-- Pupils -->
+          <circle cx="35" cy="45" r="6" fill="#0F172A"/>
+          <circle cx="65" cy="45" r="6" fill="#0F172A"/>
+          <!-- Beak -->
+          <polygon points="50,52 45,62 55,62" fill="#F59E0B"/>
+        </svg>`
+      },
+      {
+        id: 'kuukkeli',
+        name: 'Kuukkeli Kalle',
+        title: 'Lippuelementin Henki',
+        desc: 'Metsäläisten onnenlintu, joka nostaa joukkojen taistelutahtoa.',
+        color: '#C2410C',
+        svg: `<svg viewBox="0 0 100 100" class="w-full h-full">
+          <!-- Bird Head -->
+          <circle cx="45" cy="50" r="28" fill="#78350F"/>
+          <path d="M 20 50 Q 10 70 45 80" fill="#EA580C"/>
+          <!-- Beak -->
+          <polygon points="70,48 90,54 70,58" fill="#1E293B"/>
+          <!-- Eye -->
+          <circle cx="55" cy="42" r="5" fill="#FFF"/>
+          <circle cx="55" cy="42" r="2.5" fill="#0F172A"/>
+          <!-- Feathers Cap -->
+          <path d="M 30 25 C 40 10, 60 20, 50 30 Z" fill="#EA580C"/>
+        </svg>`
+      },
+      {
+        id: 'majava',
+        name: 'Majava Matti',
+        title: 'Pioneerimestari',
+        desc: 'Rakenne- ja siltainsinööri, joka voittaa vaikeat vesistöt.',
+        color: '#B45309',
+        svg: `<svg viewBox="0 0 100 100" class="w-full h-full">
+          <!-- Head -->
+          <ellipse cx="50" cy="50" rx="30" ry="26" fill="#78350F"/>
+          <!-- Muzzle -->
+          <ellipse cx="50" cy="60" rx="16" ry="12" fill="#FDBA74"/>
+          <!-- Teeth -->
+          <rect x="45" y="66" width="4" height="8" fill="#FFF" rx="1"/>
+          <rect x="51" y="66" width="4" height="8" fill="#FFF" rx="1"/>
+          <ellipse cx="50" cy="56" rx="6" ry="4" fill="#0F172A"/>
+          <!-- Eyes -->
+          <circle cx="36" cy="44" r="4" fill="#0F172A"/>
+          <circle cx="64" cy="44" r="4" fill="#0F172A"/>
+          <!-- Pioneer Helmet -->
+          <path d="M 22 40 C 25 20, 75 20, 78 40 Z" fill="#F59E0B"/>
+          <rect x="18" y="38" width="64" height="5" fill="#B45309" rx="2"/>
+        </svg>`
+      },
+      {
+        id: 'joutsen',
+        name: 'Joutsen Jalmari',
+        title: 'Laivaston Amiraali',
+        desc: 'Jalo ja rohkea johtaja, joka hallitsee Saaristomeren aaltoja.',
+        color: '#38BDF8',
+        svg: `<svg viewBox="0 0 100 100" class="w-full h-full">
+          <!-- Neck & Head -->
+          <path d="M 35 85 C 35 50, 40 35, 55 35" stroke="#F8FAFC" stroke-width="18" stroke-linecap="round" fill="none"/>
+          <circle cx="58" cy="35" r="14" fill="#F8FAFC"/>
+          <!-- Beak -->
+          <polygon points="70,32 90,38 70,42" fill="#F97316"/>
+          <polygon points="68,32 74,37 68,40" fill="#0F172A"/>
+          <!-- Eye -->
+          <circle cx="58" cy="31" r="2.5" fill="#0F172A"/>
+          <!-- Admiral Hat -->
+          <path d="M 38 24 L 78 24 L 68 10 Z" fill="#1E3A8A"/>
+          <rect x="42" y="22" width="32" height="4" fill="#F59E0B"/>
+        </svg>`
+      }
+    ];
+
+    // 20 Historical Questions about Suomen sota (1808–1809)
+    const QUESTIONS = [
+      {
+        category: "Ajoitus & Aikakausi",
+        question: "Vuosina 1808–1809 käytiin Suomen sota. Mitkä kaksi valtakuntaa olivat sodan osapuolina?",
+        options: [
+          "Ruotsi ja Venäjä",
+          "Suomi ja Venäjä",
+          "Ruotsi ja Tanska",
+          "Venäjä ja Englanti"
+        ],
+        correct: 0,
+        explanation: "Suomen sota käytiin Ruotsin ja Venäjän keisarikunnan välillä. Suomi oli tuolloin osa Ruotsin valtakuntaa."
+      },
+      {
+        category: "Rauhansopimus",
+        question: "Mikä kuuluisa rauhansopimus päätti Suomen sodan syyskuussa 1809?",
+        options: [
+          "Turun rauha",
+          "Haminan rauha",
+          "Pähkinäsaaren rauha",
+          "Täyssinän rauha"
+        ],
+        correct: 1,
+        explanation: "Haminan rauha allekirjoitettiin 17. syyskuuta 1809. Siinä Ruotsi luovutti Suomen alueen sekä Ahvenanmaan Venäjälle."
+      },
+      {
+        category: "Hallitsijat",
+        question: "Kuka oli Venäjän keisari (tsaari) Suomen sodan syttyessä ja sen aikana?",
+        options: [
+          "Pietari Suuri",
+          "Nikolai I",
+          "Aleksanteri I",
+          "Aleksanteri II"
+        ],
+        correct: 2,
+        explanation: "Keisari Aleksanteri I hallitsi Venäjää sodan aikana. Hän takasi Suomelle autonoomisen aseman Porvoon valtiopäivillä 1809."
+      },
+      {
+        category: "Hallitsijat",
+        question: "Kuka oli Ruotsin kuningas sodan alkaessa vuonna 1808?",
+        options: [
+          "Kustaa IV Aadolf",
+          "Kaarle XII",
+          "Kustaa III",
+          "Kaarle XIV Juhana"
+        ],
+        correct: 0,
+        explanation: "Kustaa IV Aadolf oli Ruotsin kuningas. Sodan tappioiden seurauksena hänet syöstiin vallasta vallankappauksessa keväällä 1809."
+      },
+      {
+        category: "Linnoitukset",
+        question: "Mikä \"Pohjolan Gibraltariksi\" kutsuttu merilinnoitus antautui venäläisille toukokuussa 1808?",
+        options: [
+          "Olavinlinna",
+          "Hämeen linna",
+          "Viapori (Suomenlinna)",
+          "Turun linna"
+        ],
+        correct: 2,
+        explanation: "Viapori (nyk. Suomenlinna) antautui toukokuussa 1808 komendantti Cronstedtin johdolla. Antautumista on pidetty yhtenä sodan suurimmista käännekohdista."
+      },
+      {
+        category: "Historialliset Henkilöt",
+        question: "Kuka oli Viaporin (Suomenlinnan) komendantti, joka allekirjoitti linnoituksen antautumissopimuksen?",
+        options: [
+          "Carl Olof Cronstedt",
+          "Carl Johan Adlercreutz",
+          "Johan August Sandels",
+          "Georg Carl von Döbeln"
+        ],
+        correct: 0,
+        explanation: "Varatoveri Carl Olof Cronstedt teki kiistellyn päätöksen antautua venäläisille, vaikka linnoituksella oli runsaasti tarvikkeita ja ammuksia."
+      },
+      {
+        category: "Kuuluisat Taistelut",
+        question: "Missä Pohjois-Savon taistelussa lokakuussa 1808 Johan August Sandels saavutti kuuluisan voiton alivoimalla?",
+        options: [
+          "Siikajoen taistelussa",
+          "Koljonvirran taistelussa",
+          "Lapuan taistelussa",
+          "Oravaisten taistelussa"
+        ],
+        correct: 1,
+        explanation: "Koljonvirran taistelussa Iisalmen lähellä Sandelsin johtamat joukot voittivat moninkertaisen venäläisylivoiman taitavan puolustustaktiikan ansiosta."
+      },
+      {
+        category: "Sotilassankarit",
+        question: "Kuka ruotsalainen kenraali tunnettiin otsassaan olevasta mustasta siteestä (saamastaan haavasta) ja voitostaan Juttaan taistelussa?",
+        options: [
+          "Georg Carl von Döbeln",
+          "Wilhelm Mauritz Klingspor",
+          "Carl Johan Adlercreutz",
+          "Barclay de Tolly"
+        ],
+        correct: 0,
+        explanation: "Georg Carl von Döbeln nousi sairassängystä johtamaan joukkonsa voittoon Juttaan taistelussa syyskuussa 1808. Hän käytti otsasidettä aiemman kallovamman vuoksi."
+      },
+      {
+        category: "Ylipäälliköt",
+        question: "Kuka oli Ruotsi-Suomen armeijan ylipäällikkö sodan alussa, jota arvosteltiin jatkuvasta perääntymisestä?",
+        options: [
+          "Wilhelm Mauritz Klingspor",
+          "Johan August Sandels",
+          "Carl Olof Cronstedt",
+          "Otto von Fieandt"
+        ],
+        correct: 0,
+        explanation: "Field marsalkka Wilhelm Mauritz Klingspor johti Ruotsin armeijan pitkää perääntymistä Pohjanmaalle talvella ja keväällä 1808."
+      },
+      {
+        category: "Valtiollinen Käännekohta",
+        question: "Mikä historiaalinen kokous järjestettiin keväällä 1809, jossa Suomen säädyt vannoivat uskonvalan keisari Aleksanteri I:lle?",
+        options: [
+          "Vaasan valtiopäivät",
+          "Porvoon valtiopäivät",
+          "Helsingin valtiopäivät",
+          "Turun akatemiakokous"
+        ],
+        correct: 1,
+        explanation: "Porvoon valtiopäivillä 1809 Aleksanteri I antoi hallitsijanvakuutuksen, jossa luvattiin säilyttää Suomen vanhat ruotsalaiset lait ja uskontojärjestelmä."
+      },
+      {
+        category: "Kuuluisat Taistelut",
+        question: "Mikä huhtikuussa 1808 käyty taistelu oli Ruotsi-Suomen armeijan ensimmäinen merkittävä voitto perääntymisvaiheen jälkeen?",
+        options: [
+          "Siikajoen taistelu",
+          "Oravaisten taistelu",
+          "Ruonan taistelu",
+          "Haminan taistelu"
+        ],
+        correct: 0,
+        explanation: "Siikajoen taistelussa 18. huhtikuuta 1808 Adlercreutzin ja Döbelnin komennuksessa ollut armeija pysäytti venäläisten hyökkäyksen ja saavutti henkisesti tärkeän voiton."
+      },
+      {
+        category: "Sodan Käännekohta",
+        question: "Mikä syyskuussa 1808 käyty verinen taistelu käänsi sodan kulun lopullisesti Venäjän eduksi?",
+        options: [
+          "Oravaisten taistelu",
+          "Pulkkilan taistelu",
+          "Revolahden taistelu",
+          "Kokkolan taistelu"
+        ],
+        correct: 0,
+        explanation: "Oravaisten taistelu 14. syyskuuta 1808 oli sodan verisin ja ratkaisevin taistelu. Tappion jälkeen Ruotsi-Suomen armeija joutui vetäytymään Pohjois-Suomeen."
+      },
+      {
+        category: "Kansalliskirjallisuus",
+        question: "Kuka Suomen kansallisrunoilija kirjoitti kuuluisan eepoksen \"Vänrikki Stoolin tarinat\", joka kuvaa Suomen sodan tapahtumia?",
+        options: [
+          "Elias Lönnrot",
+          "Johan Ludvig Runeberg",
+          "Aleksis Kivi",
+          "Zacharias Topelius"
+        ],
+        correct: 1,
+        explanation: "J. L. Runeberg kirjoitti Vänrikki Stoolin tarinat (1848 ja 1860). Teos loi monia suomalaisia sankarimyyttejä ja ihanteita."
+      },
+      {
+        category: "Sotilasoperaatiot",
+        question: "Minkä maantieteellisen esteen yli venäläisjoukot marssivat maaliskuussa 1809 yllättääkseen Ruotsin emämaan?",
+        options: [
+          "Merenkurkun jään yli Ruotsin puolelle",
+          "Laatokan poikki laivoilla",
+          "Suomenlahden pohjan läpi",
+          "Saimaan saariston läpi"
+        ],
+        correct: 0,
+        explanation: "Barclay de Tollyn johtamat venäläisjoukot tekivät uskomattoman marssin Merenkurkun jään yli Vaasasta Uumajaan maaliskuussa 1809."
+      },
+      {
+        category: "Sodan Seuraukset",
+        question: "Mitä tapahtui Suomen alueelle Haminan rauhansopimuksen seurauksena vuonna 1809?",
+        options: [
+          "Siitä tuli Suomen autonominen suuriruhtinaskunta osana Venäjää",
+          "Siitä tuli itsenäinen kuningaskunta",
+          "Se jaettiin tasan Ruotsin ja Venäjän kesken",
+          "Se liitettiin suoraan Venäjän tavalliseksi kuvernementiksi"
+        ],
+        correct: 0,
+        explanation: "Suomesta muodostettiin autonominen suuriruhtinaskunta, joka säilytti ruotsalaiset lakinsa, lakisääteisen uskontonsa ja sai oman hallituksensa (senaatin)."
+      },
+      {
+        category: "Runous & Hymnit",
+        question: "Mikä nykyinen Suomen kansallislaulu on peräisin Runebergin Vänrikki Stoolin tarinoiden avausrunosta?",
+        options: [
+          "Porilaisten marssi",
+          "Maamme-laulu (Vårt land)",
+          "Jääkärimarssi",
+          "Lipun innostus"
+        ],
+        correct: 1,
+        explanation: "Maamme-laulu (alkuperäiskielellä Vårt land) toimi Runebergin Vänrikki Stoolin tarinoiden runomuotoisena esipuheena."
+      },
+      {
+        category: "Sankarihahmot",
+        question: "Kuka Runebergin runoissa esiintyvä sotilas puolusti yksin Virran siltaa vailla pelkoa?",
+        options: [
+          "Sven Dufva",
+          "Juho Vesainen",
+          "Wilhelm von Schwerin",
+          "Otto Fieandt"
+        ],
+        correct: 0,
+        explanation: "Sven Dufva on Vänrikki Stoolin tarinoiden kuolematon hahmo, joka miellettiin yksinkertaiseksi mutta rohkeaksi sotilaaksi, joka estää yksin vihollisen pääsyn sillan yli."
+      },
+      {
+        category: "Pääkaupunki",
+        question: "Mihin kaupunkiin Suomen pääkaupunki siirrettiin Turusta vuonna 1812 keisari Aleksanteri I:n päätöksellä?",
+        options: [
+          "Helsinkiin",
+          "Porvooseen",
+          "Tampereelle",
+          "Vaasaan"
+        ],
+        correct: 0,
+        explanation: "Aleksanteri I päätti siirtää pääkaupungin Helsinkiin vuonna 1812, koska Turku sijaitsi liian lähellä Ruotsia ja Viaporin linnoitus tarjosi Helsingille suojaa."
+      },
+      {
+        category: "Syyt & Tausta",
+        question: "Mikä eurooppalainen suurvaltasopimus vuonna 1807 (Tilsitin sopimus) johti Suomen sotaan?",
+        options: [
+          "Napoleonin ja Aleksanteri I:n välinen sopimus",
+          "Wienin kongressi",
+          "Saksan ja Venäjän liitto",
+          "Lontoon rauhansopimus"
+        ],
+        correct: 0,
+        explanation: "Tilsitin sopimuksessa Ranskan keisari Napoleon ja Venäjän Aleksanteri I sopivat, että Venäjä pakottaa Ruotsin liittymään Englannin vastaiseen kauppasaartoon."
+      },
+      {
+        category: "Historialliset Henkilöt",
+        question: "Kuka suomalainen kenraali komensi keskiaaltoa Lapuan ja Siikajoen voitokkaissa taisteluissa 1808?",
+        options: [
+          "Carl Johan Adlercreutz",
+          "G. M. Armfelt",
+          "Carl Olof Cronstedt",
+          "Pehr Evind Svinhufvud"
+        ],
+        correct: 0,
+        explanation: "Kenraali Carl Johan Adlercreutz oli yksi sodan tunnetuimmista ruotsalais-suomalaisista komentajista, joka kunnostautui kesän 1808 vastahyökkäyksessä."
+      }
+    ];
+
+    // Global Game State
+    let selectedCharacter = null;
+    let currentQuestionIndex = 0;
+    let score = 0;
+    let streak = 0;
+    let maxStreak = 0;
+    let correctAnswersCount = 0;
+    let timerInterval = null;
+    let timeRemaining = 15; // 15 seconds per question
+    const QUESTION_MAX_TIME = 15;
+    let userAnswers = []; // Records user responses for the final review
+
+    // On Load Initializer
+    window.onload = function() {
+      loadTopScore();
+      renderCharacterGrid();
+    };
+
+    function loadTopScore() {
+      const topScore = localStorage.getItem('suomenSotaQuizTopScore') || 0;
+      document.getElementById('topScoreDisplay').textContent = topScore;
+    }
+
+    function saveTopScore(newScore) {
+      const currentTop = parseInt(localStorage.getItem('suomenSotaQuizTopScore') || 0, 10);
+      if (newScore > currentTop) {
+        localStorage.setItem('suomenSotaQuizTopScore', newScore);
+        document.getElementById('topScoreDisplay').textContent = newScore;
+      }
+    }
+
+    function renderCharacterGrid() {
+      const grid = document.getElementById('characterGrid');
+      grid.innerHTML = '';
+
+      CHARACTERS.forEach(char => {
+        const card = document.createElement('div');
+        card.className = `glass-card glass-card-interactive rounded-2xl p-4 cursor-pointer text-center border flex flex-col items-center justify-between transition-all duration-200 border-slate-700`;
+        card.id = `char-card-${char.id}`;
+        card.onclick = () => selectCharacter(char);
+
+        card.innerHTML = `
+          <div class="w-16 h-16 sm:w-20 sm:h-20 mb-3 rounded-xl bg-slate-800/90 p-2 border border-slate-600 flex items-center justify-center">
+            ${char.svg}
+          </div>
+          <h4 class="font-serif-title font-bold text-sm sm:text-base text-white mb-0.5">${char.name}</h4>
+          <p class="text-xs text-amber-400 font-medium mb-2">${char.title}</p>
+          <p class="text-[11px] text-slate-400 leading-tight hidden sm:block">${char.desc}</p>
+        `;
+
+        grid.appendChild(card);
+      });
+    }
+
+    function selectCharacter(char) {
+      sound.playClick();
+      selectedCharacter = char;
+
+      // Update UI selection highlight
+      CHARACTERS.forEach(c => {
+        const card = document.getElementById(`char-card-${c.id}`);
+        if (c.id === char.id) {
+          card.classList.add('border-amber-400', 'bg-slate-800/90', 'ring-2', 'ring-amber-400/50');
+          card.classList.remove('border-slate-700');
+        } else {
+          card.classList.remove('border-amber-400', 'bg-slate-800/90', 'ring-2', 'ring-amber-400/50');
+          card.classList.add('border-slate-700');
+        }
+      });
+
+      // Update preview bar below
+      document.getElementById('previewAvatarContainer').innerHTML = char.svg;
+      document.getElementById('previewCharName').textContent = char.name;
+      document.getElementById('previewCharRole').textContent = char.title;
+
+      // Enable start button
+      const startBtn = document.getElementById('startGameBtn');
+      startBtn.disabled = false;
+      startBtn.classList.add('pulse-glow');
+    }
+
+    function startGame() {
+      if (!selectedCharacter) return;
+      sound.playClick();
+
+      // Reset state
+      currentQuestionIndex = 0;
+      score = 0;
+      streak = 0;
+      maxStreak = 0;
+      correctAnswersCount = 0;
+      userAnswers = [];
+
+      // Update active header character avatar
+      document.getElementById('gameCharAvatar').innerHTML = selectedCharacter.svg;
+      document.getElementById('gameCharName').textContent = selectedCharacter.name;
+      document.getElementById('currentScore').textContent = '0';
+
+      // Switch screens
+      document.getElementById('characterSelectScreen').classList.add('hidden');
+      document.getElementById('resultsScreen').classList.add('hidden');
+      document.getElementById('quizScreen').classList.remove('hidden');
+
+      loadQuestion(currentQuestionIndex);
+    }
+
+    function loadQuestion(index) {
+      const q = QUESTIONS[index];
+      timeRemaining = QUESTION_MAX_TIME;
+
+      // Reset feedback UI
+      const feedbackBox = document.getElementById('feedbackBox');
+      feedbackBox.classList.add('hidden');
+      feedbackBox.className = 'hidden mt-6 p-4 rounded-xl border transition-all duration-300';
+
+      const nextBtn = document.getElementById('nextQuestionBtn');
+      nextBtn.disabled = true;
+      nextBtn.classList.add('opacity-50', 'cursor-not-allowed');
+
+      // Set Q text and tags
+      document.getElementById('questionCategory').textContent = q.category;
+      document.getElementById('questionText').textContent = q.question;
+      document.getElementById('questionCounter').textContent = `Kysymys ${index + 1} / ${QUESTIONS.length}`;
+
+      // Render Options
+      const grid = document.getElementById('optionsGrid');
+      grid.innerHTML = '';
+
+      q.options.forEach((optText, optIdx) => {
+        const btn = document.createElement('button');
+        btn.id = `opt-btn-${optIdx}`;
+        btn.onclick = () => handleAnswer(optIdx);
+        btn.className = `btn-choice w-full p-4 rounded-xl text-left bg-slate-800/90 hover:bg-slate-700/90 border border-slate-700 text-slate-100 font-medium text-sm sm:text-base flex items-center justify-between group transition`;
+
+        btn.innerHTML = `
+          <div class="flex items-center space-x-3">
+            <span class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-700 text-slate-300 font-bold text-xs flex items-center justify-center group-hover:border-amber-400 group-hover:text-amber-400 transition">
+              ${String.fromCharCode(65 + optIdx)}
+            </span>
+            <span>${optText}</span>
+          </div>
+          <i class="fa-regular fa-circle text-slate-500 group-hover:text-amber-400 transition"></i>
+        `;
+        grid.appendChild(btn);
+      });
+
+      updateTimerUI();
+      startTimer();
+    }
+
+    function startTimer() {
+      clearInterval(timerInterval);
+      timerInterval = setInterval(() => {
+        timeRemaining -= 0.1;
+        if (timeRemaining <= 0) {
+          timeRemaining = 0;
+          clearInterval(timerInterval);
+          handleAnswer(-1); // Timeout
+        }
+        updateTimerUI();
+      }, 100);
+    }
+
+    function updateTimerUI() {
+      const timerText = document.getElementById('timerText');
+      const timerBar = document.getElementById('timerBar');
+      const bonusDisplay = document.getElementById('possibleBonus');
+
+      const roundedSec = Math.ceil(timeRemaining);
+      timerText.textContent = `${roundedSec}s`;
+
+      const pct = (timeRemaining / QUESTION_MAX_TIME) * 100;
+      timerBar.style.width = `${pct}%`;
+
+      // Calculate real-time speed score preview
+      const potentialPoints = Math.max(100, Math.round(1000 * (timeRemaining / QUESTION_MAX_TIME)));
+      bonusDisplay.textContent = potentialPoints;
+
+      // Color coding based on remaining time
+      if (pct > 50) {
+        timerBar.className = 'bg-emerald-400 h-full transition-all duration-100 ease-linear rounded-full';
+        timerText.className = 'text-xl sm:text-2xl font-black text-emerald-400';
+      } else if (pct > 20) {
+        timerBar.className = 'bg-amber-400 h-full transition-all duration-100 ease-linear rounded-full';
+        timerText.className = 'text-xl sm:text-2xl font-black text-amber-400';
+      } else {
+        timerBar.className = 'bg-rose-500 h-full transition-all duration-100 ease-linear rounded-full';
+        timerText.className = 'text-xl sm:text-2xl font-black text-rose-500 animate-pulse';
+      }
+    }
+
+    function handleAnswer(selectedIndex) {
+      clearInterval(timerInterval);
+
+      const q = QUESTIONS[currentQuestionIndex];
+      const isCorrect = (selectedIndex === q.correct);
+
+      // Disable all choice buttons
+      q.options.forEach((_, idx) => {
+        const btn = document.getElementById(`opt-btn-${idx}`);
+        if (btn) btn.disabled = true;
+      });
+
+      // Calculate score
+      let pointsEarned = 0;
+      let multiplier = 1.0;
+
+      if (isCorrect) {
+        sound.playCorrect();
+        streak++;
+        if (streak > maxStreak) maxStreak = streak;
+        correctAnswersCount++;
+
+        // Calculate speed points: Max 1000, Min 100
+        const speedBonus = Math.max(100, Math.round(1000 * (timeRemaining / QUESTION_MAX_TIME)));
+        
+        // Multiplier bonus: +10% for every streak, capped at 2.0x
+        multiplier = Math.min(2.0, 1.0 + (streak - 1) * 0.1);
+        pointsEarned = Math.round(speedBonus * multiplier);
+        score += pointsEarned;
+
+        // Visual streak badge
+        if (streak >= 2) {
+          const streakBadge = document.getElementById('streakBadge');
+          streakBadge.classList.remove('hidden');
+          streakBadge.classList.add('flex');
+          document.getElementById('streakText').textContent = `Putki x${multiplier.toFixed(1)} (${streak} peräkkäin)`;
+        }
+      } else {
+        sound.playWrong();
+        streak = 0; // Reset streak
+        document.getElementById('streakBadge').classList.add('hidden');
+        document.getElementById('streakBadge').classList.remove('flex');
+      }
+
+      // Update global score display
+      document.getElementById('currentScore').textContent = score;
+
+      // Save answer record for final review
+      userAnswers.push({
+        question: q.question,
+        userIndex: selectedIndex,
+        correctIndex: q.correct,
+        isCorrect: isCorrect,
+        explanation: q.explanation,
+        points: pointsEarned
+      });
+
+      // Highlight options
+      q.options.forEach((_, idx) => {
+        const btn = document.getElementById(`opt-btn-${idx}`);
+        if (!btn) return;
+
+        if (idx === q.correct) {
+          // Highlight correct answer in green
+          btn.className = `btn-choice w-full p-4 rounded-xl text-left bg-emerald-950/80 border-2 border-emerald-500 text-emerald-100 font-bold text-sm sm:text-base flex items-center justify-between`;
+          btn.querySelector('i').className = 'fa-solid fa-circle-check text-emerald-400 text-lg';
+        } else if (idx === selectedIndex && !isCorrect) {
+          // Highlight incorrect answer in red
+          btn.className = `btn-choice w-full p-4 rounded-xl text-left bg-rose-950/80 border-2 border-rose-500 text-rose-100 font-bold text-sm sm:text-base flex items-center justify-between shake-anim`;
+          btn.querySelector('i').className = 'fa-solid fa-circle-xmark text-rose-400 text-lg';
+        } else {
+          // Fade other choices
+          btn.className = `btn-choice w-full p-4 rounded-xl text-left bg-slate-900/50 border border-slate-800 text-slate-500 text-sm sm:text-base flex items-center justify-between opacity-50`;
+        }
+      });
+
+      // Display feedback box & explanation
+      const feedbackBox = document.getElementById('feedbackBox');
+      const feedbackTitle = document.getElementById('feedbackTitle');
+      const feedbackIcon = document.getElementById('feedbackIcon');
+      const feedbackExplanation = document.getElementById('feedbackExplanation');
+
+      feedbackBox.classList.remove('hidden');
+
+      if (isCorrect) {
+        feedbackBox.className = 'mt-6 p-4 rounded-xl border bg-emerald-950/40 border-emerald-500/40 text-emerald-200 bounce-in';
+        feedbackIcon.innerHTML = `<i class="fa-solid fa-circle-check text-emerald-400"></i>`;
+        feedbackTitle.textContent = `Oikein! (+${pointsEarned} pistettä)`;
+      } else if (selectedIndex === -1) {
+        feedbackBox.className = 'mt-6 p-4 rounded-xl border bg-amber-950/40 border-amber-500/40 text-amber-200 bounce-in';
+        feedbackIcon.innerHTML = `<i class="fa-solid fa-clock text-amber-400"></i>`;
+        feedbackTitle.textContent = `Aika loppui!`;
+      } else {
+        feedbackBox.className = 'mt-6 p-4 rounded-xl border bg-rose-950/40 border-rose-500/40 text-rose-200 bounce-in';
+        feedbackIcon.innerHTML = `<i class="fa-solid fa-circle-xmark text-rose-400"></i>`;
+        feedbackTitle.textContent = `Väärin!`;
+      }
+
+      feedbackExplanation.textContent = q.explanation;
+
+      // Enable "Next" button
+      const nextBtn = document.getElementById('nextQuestionBtn');
+      nextBtn.disabled = false;
+      nextBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+      nextBtn.focus();
+    }
+
+    function nextQuestion() {
+      sound.playClick();
+      currentQuestionIndex++;
+
+      if (currentQuestionIndex < QUESTIONS.length) {
+        loadQuestion(currentQuestionIndex);
+      } else {
+        finishQuiz();
+      }
+    }
+
+    function finishQuiz() {
+      saveTopScore(score);
+      sound.playFanfare();
+
+      // Hide quiz screen, show results
+      document.getElementById('quizScreen').classList.add('hidden');
+      document.getElementById('resultsScreen').classList.remove('hidden');
+
+      // Avatar icon
+      document.getElementById('resultAvatarBox').innerHTML = selectedCharacter.svg;
+
+      // Final score calculation & Rank Title
+      document.getElementById('finalScore').textContent = score;
+      document.getElementById('finalCorrectCount').textContent = `${correctAnswersCount} / ${QUESTIONS.length}`;
+      
+      const accuracyPct = Math.round((correctAnswersCount / QUESTIONS.length) * 100);
+      document.getElementById('finalAccuracy').textContent = `${accuracyPct}%`;
+      document.getElementById('finalMaxStreak').textContent = `${maxStreak}x`;
+
+      // Rank Title determination
+      const rankTitleElem = document.getElementById('resultRankTitle');
+      if (score >= 18000) {
+        rankTitleElem.textContent = ' Suomen Sodan Suurmarsalkka';
+        rankTitleElem.className = 'text-lg font-bold text-amber-400 mb-6';
+      } else if (score >= 14000) {
+        rankTitleElem.textContent = ' Kenraalimajuri & Taktiikan Mestari';
+        rankTitleElem.className = 'text-lg font-bold text-emerald-400 mb-6';
+      } else if (score >= 10000) {
+        rankTitleElem.textContent = ' Eversti & Rintamakomentaja';
+        rankTitleElem.className = 'text-lg font-bold text-blue-400 mb-6';
+      } else if (score >= 6000) {
+        rankTitleElem.textContent = ' Vänrikki & Rohkea Upseeri';
+        rankTitleElem.className = 'text-lg font-bold text-indigo-300 mb-6';
+      } else {
+        rankTitleElem.textContent = ' Rekryytti & Historian Opiskelija';
+        rankTitleElem.className = 'text-lg font-bold text-slate-400 mb-6';
+      }
+
+      // Render Historical Review List
+      const reviewList = document.getElementById('reviewList');
+      reviewList.innerHTML = '';
+
+      userAnswers.forEach((ans, idx) => {
+        const item = document.createElement('div');
+        item.className = `p-4 rounded-xl border ${ans.isCorrect ? 'bg-slate-800/60 border-emerald-500/30' : 'bg-slate-800/60 border-rose-500/30'}`;
+
+        const statusBadge = ans.isCorrect
+          ? `<span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20"><i class="fa-solid fa-check mr-1"></i> Oikein (+${ans.points}p)</span>`
+          : `<span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-rose-500/10 text-rose-400 border border-rose-500/20"><i class="fa-solid fa-xmark mr-1"></i> Väärin</span>`;
+
+        item.innerHTML = `
+          <div class="flex items-start justify-between gap-2 mb-2">
+            <h4 class="font-bold text-sm text-slate-100">${idx + 1}. ${ans.question}</h4>
+            ${statusBadge}
+          </div>
+          <p class="text-xs text-slate-300 mb-2 leading-relaxed">${ans.explanation}</p>
+        `;
+
+        reviewList.appendChild(item);
+      });
+    }
+
+    function restartGame() {
+      sound.playClick();
+      startGame();
+    }
+
+    function changeCharacter() {
+      sound.playClick();
+      document.getElementById('resultsScreen').classList.add('hidden');
+      document.getElementById('characterSelectScreen').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
