@@ -8,16 +8,24 @@ $(document).ready(function(){
 	
 	// Lajitellaan kaikki tehtävät päivämäärittäin
 	$(".date").each(function() {
-		var dateText = $(this).attr("id");
-		var date = new Date(dateText);
-		date.setHours(0, 0, 0, 0);
-		$(this).prepend("<strong>" + weekday[date.getUTCDay()] + " " + date.toLocaleDateString() + "</strong>");
-		if (date < today){
-			$("#previous").append($(this).html());
-		} else if (date > today){
-			$("#coming").append($(this).html());
+		var classID = "";
+		if ($("p").text().indexOf("Olet luokalla 9A") !== -1){
+			classID = "A";
 		} else {
-			$("#today").append($(this).html());
+			classID = "B";
+		}
+		if ($this).attr("class").indexOf(classID) != -1){
+			var dateText = $(this).attr("id");
+			var date = new Date(dateText);
+			date.setHours(0, 0, 0, 0);
+			$(this).prepend("<strong>" + weekday[date.getUTCDay()] + " " + date.toLocaleDateString() + "</strong>");
+			if (date < today){
+				$("#previous").append($(this).html());
+			} else if (date > today){
+				$("#coming").append($(this).html());
+			} else {
+				$("#today").append($(this).html());
+			}
 		}
 		$(this).remove();
 	});
