@@ -14,7 +14,8 @@ $(document).ready(function(){
 	
 	// Lajitellaan kaikki tehtävät päivämäärittäin
 	$(".date").each(function() {
-		if ($(this).attr("class").indexOf(classID) != -1){
+		var luokka = $(this).attr("class");
+		if (luokka == "date" || luokka.indexOf(classID) != -1){
 			var dateText = $(this).attr("id");
 			var date = new Date(dateText);
 			date.setHours(0, 0, 0, 0);
