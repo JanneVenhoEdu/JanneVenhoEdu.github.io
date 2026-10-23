@@ -13,7 +13,8 @@ $(document).ready(function(){
 			classID = "A";
 		} else {
 			classID = "B";
-		}
+		}'
+		alert(classID);
 		if ($this).attr("class").indexOf(classID) != -1){
 			var dateText = $(this).attr("id");
 			var date = new Date(dateText);
