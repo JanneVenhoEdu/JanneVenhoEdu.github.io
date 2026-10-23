@@ -5,16 +5,16 @@ $(document).ready(function(){
 	var weekday = ["ma", "ti", "ke", "to", "pe", "la", "su"];
 	var today = new Date();
 	today.setHours(0, 0, 0, 0);
+	var classID = "";
+	if ($("p").text().indexOf("Olet luokalla 9A") !== -1){
+		classID = "A";
+	} else {
+		classID = "B";
+	}
 	
 	// Lajitellaan kaikki tehtävät päivämäärittäin
 	$(".date").each(function() {
-		var classID = "";
-		if ($("p").text().indexOf("Olet luokalla 9A") !== -1){
-			classID = "A";
-		} else {
-			classID = "B";
-		}
-		if ($this).attr("class").indexOf(classID) != -1){
+		if ($(this).attr("class").indexOf(classID) != -1){
 			var dateText = $(this).attr("id");
 			var date = new Date(dateText);
 			date.setHours(0, 0, 0, 0);
