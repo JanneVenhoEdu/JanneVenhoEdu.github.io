@@ -19,7 +19,6 @@ $(document).ready(function(){
 		} else {
 			$("#today").append($(this));
 		}
-		$(this).remove();
 	});
 	
 	// Jos nykyiselle päivämäärälle ei ole tehtäviä, niin lisätään teksti.
