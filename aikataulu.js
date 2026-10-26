@@ -5,28 +5,19 @@ $(document).ready(function(){
 	var weekday = ["ma", "ti", "ke", "to", "pe", "la", "su"];
 	var today = new Date();
 	today.setHours(0, 0, 0, 0);
-	var classID = "";
-	if ($("p").text().indexOf("Olet luokalla 9A") !== -1){
-		classID = "A";
-	} else {
-		classID = "B";
-	}
 	
 	// Lajitellaan kaikki tehtävät päivämäärittäin
 	$(".date").each(function() {
-		var luokka = $(this).attr("class");
-		if (luokka == "date" || luokka.indexOf(classID) != -1){
-			var dateText = $(this).attr("id");
-			var date = new Date(dateText);
-			date.setHours(0, 0, 0, 0);
-			$(this).prepend("<strong>" + weekday[date.getUTCDay()] + " " + date.toLocaleDateString() + "</strong>");
-			if (date < today){
-				$("#previous").append($(this).html());
-			} else if (date > today){
-				$("#coming").append($(this).html());
-			} else {
-				$("#today").append($(this).html());
-			}
+		var dateText = $(this).attr("id");
+		var date = new Date(dateText);
+		date.setHours(0, 0, 0, 0);
+		$(this).prepend("<strong>" + weekday[date.getUTCDay()] + " " + date.toLocaleDateString() + "</strong>");
+		if (date < today){
+			$("#previous").append($(this));
+		} else if (date > today){
+			$("#coming").append($(this));
+		} else {
+			$("#today").append($(this));
 		}
 		$(this).remove();
 	});
